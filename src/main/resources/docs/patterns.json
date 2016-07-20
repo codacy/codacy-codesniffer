@@ -1,0 +1,121 @@
+{
+  "name": "PHP Code Sniffer",
+  "patterns": [
+    {
+      "patternId": "Generic_ControlStructures_InlineControlStructure",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Generic_Files_LineEndings",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Generic_Files_LineLength",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "lineLimit",
+          "default": 120
+        },
+        {
+          "name": "absoluteLineLimit",
+          "default": 0
+        }
+      ]
+    },
+    {
+      "patternId": "Generic_Functions_FunctionCallArgumentSpacing",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Generic_Formatting_DisallowMultipleStatements",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Generic_NamingConventions_UpperCaseConstantName",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Generic_PHP_LowerCaseConstant",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Generic_PHP_LowerCaseKeyword",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Generic_WhiteSpace_ScopeIndent",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "PEAR_Functions_ValidDefaultValue",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "PSR1_Classes_ClassDeclaration_MultipleClasses",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "PSR1_Classes_ClassDeclaration_MissingNamespace",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Squiz_Classes_ValidClassName",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Squiz_ControlStructures_ControlSignature",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Squiz_Functions_LowercaseFunctionKeywords",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Squiz_Functions_FunctionDeclarationArgumentSpacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "equalsSpacing",
+          "default": 1
+        }
+      ]
+    },
+    {
+      "patternId": "Squiz_Scope_MethodScope",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Squiz_WhiteSpace_SuperfluousWhitespace",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Squiz_WhiteSpace_ScopeKeywordSpacing",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Zend_Files_ClosingTag",
+      "level": "Info",
+      "category": "CodeStyle"
+    }
+  ]
+}

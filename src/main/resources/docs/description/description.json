@@ -1,0 +1,122 @@
+[
+  {
+    "patternId": "Generic_ControlStructures_InlineControlStructure",
+    "title": "Prohibit inline control structures",
+    "description": "The body of each control structure must be enclosed by braces",
+    "timeToFix": 10
+  },
+  {
+    "patternId": "Generic_Files_LineEndings",
+    "title": "Enforce '\n' in line ending",
+    "description": "Lines must end with \n",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Generic_Files_LineLength",
+    "title": "Prohibit long lines",
+    "description": "Lines must have at most 120 characters",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Generic_Functions_FunctionCallArgumentSpacing",
+    "title": "Function call formatting",
+    "description": "Code formatting rules for function calls",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Generic_Formatting_DisallowMultipleStatements",
+    "title": "Prohibit multiple statements",
+    "description": "Each line must have only one statement",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Generic_NamingConventions_UpperCaseConstantName",
+    "title": "Enforce uppercase in constants",
+    "description": "Class constants must be named in all upper case with underscore separators",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Generic_PHP_LowerCaseConstant",
+    "title": "Enforce lowercase in PHP's constants",
+    "description": "TRUE, FALSE and NULL must be lowercase",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Generic_PHP_LowerCaseKeyword",
+    "title": "Enforce lowercase in keywords",
+    "description": "PHP keywords must be in lower case",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Generic_WhiteSpace_ScopeIndent",
+    "title": "Enforce space indentation",
+    "description": "Code must use an indentation of 4 spaces without tabs",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "PEAR_Functions_ValidDefaultValue",
+    "title": "Default arguments position",
+    "description": "Method arguments with default values must go at the end of the argument list",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "PSR1_Classes_ClassDeclaration_MultipleClasses",
+    "title": "Enforce single class in file",
+    "description": "Each class must be declared in a different file",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "PSR1_Classes_ClassDeclaration_MissingNamespace",
+    "title": "Enforce namespace in class",
+    "description": "Each class must be in a namespace of at least one level",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Squiz_Classes_ValidClassName",
+    "title": "Enforce StudlyCaps in class",
+    "description": "Classes should be named in StudlyCaps",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Squiz_ControlStructures_ControlSignature",
+    "title": "Control structure formatting",
+    "description": "Enforce consistent formatting of the control structures",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Squiz_Functions_LowercaseFunctionKeywords",
+    "title": "Enforce lowercase in function keywords",
+    "description": "Function keywords (function, public, private, etc.) must be named in lowercase",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Squiz_Functions_FunctionDeclarationArgumentSpacing",
+    "title": "Enforce argument spacing",
+    "description": "Function arguments must be correctly spaced",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Squiz_Scope_MethodScope",
+    "title": "Enforce method visibility",
+    "description": "Visibility must be declared in all methods",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Squiz_WhiteSpace_SuperfluousWhitespace",
+    "title": "Prohibit trailing white space",
+    "description": "Prohibit trailing white spaces at the end of non blank lines",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Squiz_WhiteSpace_ScopeKeywordSpacing",
+    "title": "Enforce single white space",
+    "description": "There must be a single space after keywords",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Zend_Files_ClosingTag",
+    "title": "Prohibit closing tag",
+    "description": "The closing tag ?> must be omitted from files containing only PHP",
+    "timeToFix": 5
+  }
+]
