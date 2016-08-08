@@ -19,11 +19,12 @@ object CodeSniffer extends Tool {
           paths.map(_.toString).toList
       }
       val configFile = generateConfig(fullConfig)
-      val command = getCommandFor(configFile, filesToLint)
+      val outputFile = FileHelper.createTmpFile("", "tool-result-", ".xml")
+      val command = getCommandFor(configFile, outputFile, filesToLint)
 
       CommandRunner.exec(command.toList) match {
         case Right(resultFromTool) if resultFromTool.exitCode < 2 =>
-          parseToolResult(resultFromTool.stdout.mkString)
+          parseToolResult(outputFile)
         case Right(resultFromTool) =>
           val msg =
             s"""
@@ -38,8 +39,8 @@ object CodeSniffer extends Tool {
     }
   }
 
-  private def parseToolResult(result: String)(implicit spec: Spec): List[Result] = {
-    val xmlResult = XML.loadString(result)
+  private def parseToolResult(outputFile: Path)(implicit spec: Spec): List[Result] = {
+    val xmlResult = XML.loadFile(outputFile.toFile)
     (xmlResult \ "file").flatMap {
       file =>
         file.child.collect {
@@ -62,13 +63,13 @@ object CodeSniffer extends Tool {
     }.toList
   }
 
-  private def getCommandFor(configFile: Option[Path], filesToLint: List[String]): List[String] = {
+  private def getCommandFor(configFile: Option[Path], outputFile: Path, filesToLint: List[String]): List[String] = {
     val configurationFile = configFile.map {
       config =>
         "--standard=" + config.toString
     }
 
-    List("php", "phpcs.phar", "--report=xml") ++ configurationFile ++ filesToLint
+    List("phpcs", "--report=xml", s"--report-file=$outputFile") ++ configurationFile ++ filesToLint
   }
 
   private def generateConfig(configurationOpt: Option[List[PatternDef]]): Option[Path] = {

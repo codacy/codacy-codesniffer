@@ -16,7 +16,7 @@ resolvers ++= Seq(
 libraryDependencies ++= Seq(
   "com.typesafe.play" %% "play-json" % "2.3.8" withSources(),
   "org.scala-lang.modules" %% "scala-xml" % "1.0.4" withSources(),
-  "com.codacy" %% "codacy-engine-scala-seed" % "2.6.31"
+  "com.codacy" %% "codacy-engine-scala-seed" % "2.7.0"
 )
 
 enablePlugins(JavaAppPackaging)
@@ -30,10 +30,11 @@ val installAll =
       |&& apk add bash curl
       |&& apk add php5 php5-openssl php5-phar php5-json php5-curl
       |&& apk add php5-iconv php5-zlib
-      |&& php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-      |&& php composer-setup.php
-      |&& php composer.phar global require "squizlabs/php_codesniffer=2.3.0"
-      |&& curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
+      |&& curl -sS https://getcomposer.org/installer | php
+      |&& mv composer.phar /usr/bin/composer
+      |&& export COMPOSER_HOME=$$(pwd)/composer
+      |&& composer global require "squizlabs/php_codesniffer=2.6.2"
+      |&& ln -s $$COMPOSER_HOME/vendor/bin/phpcs /usr/bin/phpcs
    """.stripMargin.replaceAll(System.lineSeparator(), " ")
 
 mappings in Universal <++= (resourceDirectory in Compile) map { (resourceDir: File) =>
