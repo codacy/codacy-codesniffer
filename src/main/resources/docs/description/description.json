@@ -118,5 +118,11 @@
     "title": "Prohibit closing tag",
     "description": "The closing tag ?> must be omitted from files containing only PHP",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Generic_Arrays_DisallowLongArraySyntax",
+    "title": "Prohibit PHP long array syntax",
+    "description": "Prohibits the use of the PHP long array syntax",
+    "timeToFix": 5
   }
 ]

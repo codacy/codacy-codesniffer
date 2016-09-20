@@ -116,6 +116,11 @@
       "patternId": "Zend_Files_ClosingTag",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Generic_Arrays_DisallowLongArraySyntax",
+      "level": "Info",
+      "category": "CodeStyle"
     }
   ]
 }
