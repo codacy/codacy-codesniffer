@@ -22,7 +22,7 @@ object CodeSniffer extends Tool {
       val outputFile = FileHelper.createTmpFile("", "tool-result-", ".xml")
       val command = getCommandFor(configFile, outputFile, filesToLint)
 
-      CommandRunner.exec(command) match {
+      CommandRunner.exec(command, Some(path.toFile)) match {
         case Right(resultFromTool) if resultFromTool.exitCode < 2 =>
           parseToolResult(outputFile)
         case Right(resultFromTool) =>
