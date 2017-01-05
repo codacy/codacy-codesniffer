@@ -60,15 +60,9 @@
     "timeToFix": 5
   },
   {
-    "patternId": "PSR1_Classes_ClassDeclaration_MultipleClasses",
+    "patternId": "PSR1_Classes_ClassDeclaration",
     "title": "Enforce single class in file",
-    "description": "Each class must be declared in a different file",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "PSR1_Classes_ClassDeclaration_MissingNamespace",
-    "title": "Enforce namespace in class",
-    "description": "Each class must be in a namespace of at least one level",
+    "description": "Each class must be declared in a different file and in a namespace of at least one level",
     "timeToFix": 5
   },
   {
