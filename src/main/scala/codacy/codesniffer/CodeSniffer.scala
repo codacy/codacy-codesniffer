@@ -48,18 +48,17 @@ object CodeSniffer extends Tool {
             val filePath = (file \ "@name").toString()
             val line = (codeMatch \ "@line").toString().toInt
             val message = codeMatch.text
-            val ruleRaw = (codeMatch \ "@source").toString().replace(".", "_")
-            val ruleOpt = spec.patterns.find(p => ruleRaw.startsWith(p.patternId.value))
-            ruleOpt.map {
-              rule =>
-                Issue(
-                  SourcePath(filePath),
-                  ResultMessage(message),
-                  rule.patternId,
-                  ResultLine(line)
-                )
-            }
-        }.flatten
+            val rule = (codeMatch \ "@source").toString()
+              .split('.')
+              .dropRight(1)
+              .mkString("_")
+            Issue(
+              SourcePath(filePath),
+              ResultMessage(message),
+              PatternId(rule),
+              ResultLine(line)
+            )
+        }
     }.toList
   }
 

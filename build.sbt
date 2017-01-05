@@ -1,6 +1,6 @@
 import com.typesafe.sbt.packager.docker.{Cmd, ExecCmd}
 
-name := """codacy-engine-checkstyle"""
+name := """codacy-engine-codesniffer"""
 
 version := "1.0-SNAPSHOT"
 

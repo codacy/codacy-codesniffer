@@ -1,15 +1,15 @@
 <?php
-//#Patterns: PSR1_Classes_ClassDeclaration_MultipleClasses, PSR1_Classes_ClassDeclaration_MissingNamespace
+//#Patterns: PSR1_Classes_ClassDeclaration
 
 
-//#Info: PSR1_Classes_ClassDeclaration_MissingNamespace
+//#Info: PSR1_Classes_ClassDeclaration
 class Example
 {
 
 }
 
-//#Info: PSR1_Classes_ClassDeclaration_MissingNamespace
-//#Info: PSR1_Classes_ClassDeclaration_MultipleClasses
+//#Info: PSR1_Classes_ClassDeclaration
+//#Info: PSR1_Classes_ClassDeclaration
 class AnotherExample
 {
 

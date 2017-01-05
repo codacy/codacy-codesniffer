@@ -62,12 +62,7 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "PSR1_Classes_ClassDeclaration_MultipleClasses",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "PSR1_Classes_ClassDeclaration_MissingNamespace",
+      "patternId": "PSR1_Classes_ClassDeclaration",
       "level": "Info",
       "category": "CodeStyle"
     },
