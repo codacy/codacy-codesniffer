@@ -116,6 +116,236 @@
       "patternId": "Generic_Arrays_DisallowLongArraySyntax",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_Arrays_ArrayAssignmentRestrictions",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_Arrays_ArrayDeclaration",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_Arrays_ArrayDeclarationSpacing",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_Arrays_ArrayKeySpacingRestrictions",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_CSRF_NonceVerification",
+      "level": "Warning",
+      "category": "Security"
+    },
+    {
+      "patternId": "WordPress_DB_RestrictedClasses",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_Files_FileName",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_Functions_DontExtract",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_Functions_FunctionRestrictions",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_NamingConventions_ValidFunctionName",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_NamingConventions_ValidHookName",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_NamingConventions_ValidVariableName",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_PHP_DevelopmentFunctions",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_PHP_DiscouragedFunctions",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_PHP_DiscouragedPHPFunctions",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_PHP_POSIXFunctions",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_PHP_StrictComparisons",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_PHP_StrictInArray",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_PHP_YodaConditions",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_VIP_AdminBarRemoval",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_VIP_CronInterval",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_VIP_DirectDatabaseQuery",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_VIP_FileSystemWritesDisallow",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_VIP_OrderByRand",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_VIP_PluginMenuSlug",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_VIP_PostsPerPage",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_VIP_RestrictedFunctions",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_VIP_RestrictedVariables",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_VIP_SessionFunctionsUsage",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_VIP_SessionVariableUsage",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_VIP_SlowDBQuery",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_VIP_SuperGlobalInputUsage",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_VIP_TimezoneChange",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_VIP_ValidatedSanitizedInput",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_Variables_GlobalVariables",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_Variables_VariableRestrictions",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_WP_AlternativeFunctions",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_WP_DeprecatedFunctions",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_WP_DiscouragedFunctions",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_WP_EnqueuedResources",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_WP_I18n",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_WP_PreparedSQL",
+      "level": "Warning",
+      "category": "Security"
+    },
+    {
+      "patternId": "WordPress_WhiteSpace_CastStructureSpacing",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_WhiteSpace_ControlStructureSpacing",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_WhiteSpace_OperatorSpacing",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "WordPress_XSS_EscapeOutput",
+      "level": "Warning",
+      "category": "Security"
     }
   ]
 }
