@@ -27,7 +27,7 @@ version in Docker := "1.0"
 
 val installAll =
   s"""apk update && apk upgrade
-      |&& apk add bash curl
+      |&& apk add bash curl git
       |&& apk add php5 php5-openssl php5-phar php5-json php5-curl
       |&& apk add php5-iconv php5-zlib
       |&& curl -sS https://getcomposer.org/installer | php
@@ -35,6 +35,8 @@ val installAll =
       |&& export COMPOSER_HOME=$$(pwd)/composer
       |&& composer global require "squizlabs/php_codesniffer=2.6.2"
       |&& ln -s $$COMPOSER_HOME/vendor/bin/phpcs /usr/bin/phpcs
+      |&& git clone --branch 0.10.0 https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git wpcs
+      |&& phpcs --config-set installed_paths $$(pwd)/wpcs
    """.stripMargin.replaceAll(System.lineSeparator(), " ")
 
 mappings in Universal <++= (resourceDirectory in Compile) map { (resourceDir: File) =>
