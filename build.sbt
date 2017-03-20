@@ -26,10 +26,8 @@ enablePlugins(DockerPlugin)
 version in Docker := "1.0"
 
 val installAll =
-  s"""apk update && apk upgrade
-      |&& apk add bash curl git
-      |&& apk add php5 php5-openssl php5-phar php5-json php5-curl
-      |&& apk add php5-iconv php5-zlib
+  s"""apk --no-cache add bash curl git
+      |&& apk --no-cache add php php-openssl php-phar php-json php-curl php-iconv php-zlib
       |&& curl -sS https://getcomposer.org/installer | php
       |&& mv composer.phar /usr/bin/composer
       |&& export COMPOSER_HOME=$$(pwd)/composer
@@ -37,6 +35,9 @@ val installAll =
       |&& ln -s $$COMPOSER_HOME/vendor/bin/phpcs /usr/bin/phpcs
       |&& git clone --branch 0.10.0 https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git wpcs
       |&& phpcs --config-set installed_paths $$(pwd)/wpcs
+      |&& apk del curl git
+      |&& rm -rf /tmp/*
+      |&& rm -rf /var/cache/apk/*
    """.stripMargin.replaceAll(System.lineSeparator(), " ")
 
 mappings in Universal <++= (resourceDirectory in Compile) map { (resourceDir: File) =>
@@ -56,7 +57,7 @@ daemonUser in Docker := dockerUser
 
 daemonGroup in Docker := dockerGroup
 
-dockerBaseImage := "frolvlad/alpine-oraclejdk8"
+dockerBaseImage := "develar/java"
 
 dockerCommands := dockerCommands.value.flatMap {
   case cmd@Cmd("WORKDIR", _) => List(cmd,
