@@ -89,6 +89,14 @@
         {
           "name": "equalsSpacing",
           "default": 1
+        },
+        {
+          "name": "requiredSpacesAfterOpen",
+          "default": 0
+        },
+        {
+          "name": "requiredSpacesBeforeClose",
+          "default": 0
         }
       ]
     },
