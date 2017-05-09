@@ -10,4 +10,7 @@ Wrong example:
     function myFunctionC($arg1=1, $arg2=2)
     {
     }
-      
+    
+    function myFunctionC( $arg1 = 1, $arg2 = 2 )
+    {
+    }
