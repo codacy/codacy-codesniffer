@@ -41,5 +41,11 @@ function myFunctionE(
     // body
 };
 
+//#Info: Squiz_Functions_FunctionDeclarationArgumentSpacing
+//#Info: Squiz_Functions_FunctionDeclarationArgumentSpacing
+function myFunctionF( $a ){
+    // body
+}
+
 
 ?>

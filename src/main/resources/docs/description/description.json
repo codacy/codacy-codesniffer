@@ -15,7 +15,17 @@
     "patternId": "Generic_Files_LineLength",
     "title": "Prohibit long lines",
     "description": "Lines must have at most 120 characters",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "lineLimit",
+        "description": "Minimum line length to generate a Warning (must be less or equal to absoluteLineLimit)."
+      },
+      {
+        "name": "absoluteLineLimit",
+        "description": "Minimum line length to generate an Error."
+      }
+    ]
   },
   {
     "patternId": "Generic_Functions_FunctionCallArgumentSpacing",
@@ -87,7 +97,21 @@
     "patternId": "Squiz_Functions_FunctionDeclarationArgumentSpacing",
     "title": "Enforce argument spacing",
     "description": "Function arguments must be correctly spaced",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "equalsSpacing",
+        "description": "Padding around equal signs in the function argument list."
+      },
+      {
+        "name": "requiredSpacesAfterOpen",
+        "description": "Spaces following the opening bracket."
+      },
+      {
+        "name": "requiredSpacesBeforeClose",
+        "description": "spaces preceding the closing bracket."
+      }
+    ]
   },
   {
     "patternId": "Squiz_Scope_MethodScope",
