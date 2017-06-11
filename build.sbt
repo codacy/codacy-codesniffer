@@ -31,7 +31,7 @@ val installAll =
       |&& curl -sS https://getcomposer.org/installer | php
       |&& mv composer.phar /usr/bin/composer
       |&& export COMPOSER_HOME=$$(pwd)/composer
-      |&& composer global require "squizlabs/php_codesniffer=2.6.2"
+      |&& composer global require "squizlabs/php_codesniffer=2.9.1"
       |&& ln -s $$COMPOSER_HOME/vendor/bin/phpcs /usr/bin/phpcs
       |&& git clone --branch 0.10.0 https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git wpcs
       |&& phpcs --config-set installed_paths $$(pwd)/wpcs
