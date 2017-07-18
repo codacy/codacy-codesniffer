@@ -68,7 +68,7 @@ object CodeSniffer extends Tool {
         "--standard=" + config.toString
     }
 
-    List("phpcs", "--report=xml", s"--report-file=$outputFile") ++ configurationFile ++ filesToLint
+    List("phpcs", "-d", "memory_limit=-1", "--report=xml", s"--report-file=$outputFile") ++ configurationFile ++ filesToLint
   }
 
   private def generateConfig(configurationOpt: Option[List[PatternDef]]): Option[Path] = {
