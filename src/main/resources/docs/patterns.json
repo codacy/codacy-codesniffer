@@ -529,8 +529,6 @@
       "patternId": "MEQP2_Templates_XssTemplate",
       "level": "Info",
       "category": "CodeStyle"
-    },
-
-
+    }
   ]
 }
