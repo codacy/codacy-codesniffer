@@ -354,6 +354,181 @@
       "patternId": "WordPress_XSS_EscapeOutput",
       "level": "Warning",
       "category": "Security"
+    },
+    {
+      "patternId": "MEQP1_Security_LanguageConstruct_DirectOutput",
+      "level": "Warning",
+      "category": "Security"
+    },
+    {
+      "patternId": "MEQP1_CodeAnalysis_EmptyBlock_DetectedCATCH",
+      "level": "Warning",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP1_CodeAnalysis_EmptyBlock_DetectedCLASS",
+      "level": "Warning",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP1_CodeAnalysis_EmptyBlock_DetectedDO",
+      "level": "Warning",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP1_CodeAnalysis_EmptyBlock_DetectedELSE",
+      "level": "Warning",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP1_CodeAnalysis_EmptyBlock_DetectedELSEIF",
+      "level": "Warning",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP1_CodeAnalysis_EmptyBlock_DetectedFOR",
+      "level": "Warning",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP1_CodeAnalysis_EmptyBlock_DetectedFOREACH",
+      "level": "Warning",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP1_CodeAnalysis_EmptyBlock_DetectedFUNCTION",
+      "level": "Warning",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP1_CodeAnalysis_EmptyBlock_DetectedIF",
+      "level": "Warning",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP1_CodeAnalysis_EmptyBlock_DetectedINTERFACE",
+      "level": "Warning",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP1_CodeAnalysis_EmptyBlock_DetectedSWITCH",
+      "level": "Warning",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP1_CodeAnalysis_EmptyBlock_DetectedTRAIT",
+      "level": "Warning",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP1_CodeAnalysis_EmptyBlock_DetectedTRY",
+      "level": "Warning",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP1_CodeAnalysis_EmptyBlock_DetectedWHILE",
+      "level": "Warning",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP1_Exceptions_DirectThrow_FoundDirectThrow",
+      "level": "Warning",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP1_Exceptions_Namespace",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP1_Performance_CollectionCount",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP1_Performance_EmptyCheck",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP1_Performance_InefficientMethods",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP1_Performance_Loop",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP1_PHP_Goto",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP1_PHP_Var",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP1_Security_DiscouragedFunction",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP1_Security_IncludeFile",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP1_Security_LanguageConstruct",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP1_SQL_RawQuery",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP1_SQL_SlowQuery",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP1_Strings_RegEx",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP1_Strings_StringConcat",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP1_Strings_StringPosition",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP2_Classes_ObjectInstantiation",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP2_Templates_ThisInTemplate",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP2_Templates_RawJavaScript",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "MEQP2_Templates_XssTemplate",
+      "level": "Info",
+      "category": "CodeStyle"
     }
   ]
 }
