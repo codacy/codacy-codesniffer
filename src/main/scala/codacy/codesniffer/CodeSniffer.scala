@@ -93,7 +93,7 @@ object CodeSniffer extends Tool {
       s"""<property name="${param.name}" value="${jsValueAsSimpleString(param.value)}" />"""
     }.mkString(Properties.lineSeparator)
 
-    s"""<rule ref="${convertToToolId(patternIdentifier)}"><properties>$params</properties><"""
+    s"""<rule ref="${convertToToolId(patternIdentifier)}"><properties>$params</properties> </rule>"""
   }
 
   private def convertToToolId(patternId: Pattern.Id): String = {
