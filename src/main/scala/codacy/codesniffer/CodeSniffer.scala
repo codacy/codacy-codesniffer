@@ -1,9 +1,11 @@
 package codacy.codesniffer
 
+import java.io.File
 import java.nio.file.Path
 
-import codacy.dockerApi._
-import codacy.dockerApi.utils.{CommandRunner, FileHelper, ToolHelper}
+import codacy.docker.api._
+import codacy.docker.api.utils.ToolHelper
+import codacy.dockerApi.utils.{CommandRunner, FileHelper}
 import play.api.libs.json.{JsString, JsValue}
 
 import scala.util.{Properties, Try}
@@ -11,18 +13,19 @@ import scala.xml.{Elem, XML}
 
 object CodeSniffer extends Tool {
 
-  override def apply(path: Path, conf: Option[List[PatternDef]], files: Option[Set[Path]])(implicit spec: Spec): Try[List[Result]] = {
+  def apply(source: Source.Directory, configuration: Option[List[Pattern.Definition]], files: Option[Set[Source.File]],
+            options: Map[Configuration.Key, Configuration.Value])
+           (implicit specification: Tool.Specification): Try[List[Result]] = {
     Try {
-      val fullConfig = ToolHelper.getPatternsToLint(conf)
-      val filesToLint: List[String] = files.fold(List(path.toString)) {
-        paths =>
-          paths.map(_.toString).toList
+      val fullConfig = ToolHelper.patternsToLint(configuration)
+      val filesToLint: List[String] = files.fold(List(source.toString)) {
+        paths => paths.map(_.toString).toList
       }
       val configFile = generateConfig(fullConfig)
       val outputFile = FileHelper.createTmpFile("", "tool-result-", ".xml")
       val command = getCommandFor(configFile, outputFile, filesToLint)
 
-      CommandRunner.exec(command, Some(path.toFile)) match {
+      CommandRunner.exec(command, Option(new File(source.path))) match {
         case Right(resultFromTool) if resultFromTool.exitCode < 2 =>
           parseToolResult(outputFile)
         case Right(resultFromTool) =>
@@ -39,7 +42,7 @@ object CodeSniffer extends Tool {
     }
   }
 
-  private def parseToolResult(outputFile: Path)(implicit spec: Spec): List[Result] = {
+  private def parseToolResult(outputFile: Path): List[Result] = {
     val xmlResult = XML.loadFile(outputFile.toFile)
     (xmlResult \ "file").flatMap {
       file =>
@@ -52,11 +55,11 @@ object CodeSniffer extends Tool {
               .split('.')
               .dropRight(1)
               .mkString("_")
-            Issue(
-              SourcePath(filePath),
-              ResultMessage(message),
-              PatternId(rule),
-              ResultLine(line)
+            Result.Issue(
+              Source.File(filePath),
+              Result.Message(message),
+              Pattern.Id(rule),
+              Source.Line(line)
             )
         }
     }.toList
@@ -64,14 +67,13 @@ object CodeSniffer extends Tool {
 
   private def getCommandFor(configFile: Option[Path], outputFile: Path, filesToLint: List[String]): List[String] = {
     val configurationFile = configFile.map {
-      config =>
-        "--standard=" + config.toString
+      config => "--standard=" + config.toString
     }
 
     List("phpcs", "-d", "memory_limit=-1", "--report=xml", s"--report-file=$outputFile") ++ configurationFile ++ filesToLint
   }
 
-  private def generateConfig(configurationOpt: Option[List[PatternDef]]): Option[Path] = {
+  private def generateConfig(configurationOpt: Option[List[Pattern.Definition]]): Option[Path] = {
     configurationOpt.map { config =>
 
       val rules = config.map(p => generateRule(p.patternId, p.parameters))
@@ -84,17 +86,17 @@ object CodeSniffer extends Tool {
     }
   }
 
-  private def generateRule(patternIdentifier: PatternId, configuredParameters: Option[Set[ParameterDef]]): String = {
-    val parameters = configuredParameters.getOrElse(Set.empty[ParameterDef])
+  private def generateRule(patternIdentifier: Pattern.Id, configuredParameters: Option[Set[Parameter.Definition]]): String = {
+    val parameters = configuredParameters.getOrElse(Set.empty[Parameter.Definition])
 
     val params = parameters.map { param =>
       s"""<property name="${param.name}" value="${jsValueAsSimpleString(param.value)}" />"""
     }.mkString(Properties.lineSeparator)
 
-    s"""<rule ref="${convertToToolId(patternIdentifier)}"><properties>$params</properties> </rule>"""
+    s"""<rule ref="${convertToToolId(patternIdentifier)}"><properties>$params</properties><"""
   }
 
-  private def convertToToolId(patternId: PatternId): String = {
+  private def convertToToolId(patternId: Pattern.Id): String = {
     patternId.value.replace("_", ".")
   }
 
