@@ -3,9 +3,9 @@ package codacy.codesniffer
 import java.io.File
 import java.nio.file.Path
 
+import codacy.dockerApi.utils.{CommandRunner, FileHelper}
 import codacy.docker.api._
 import codacy.docker.api.utils.ToolHelper
-import codacy.dockerApi.utils.{CommandRunner, FileHelper}
 import play.api.libs.json.{JsString, JsValue}
 
 import scala.util.{Properties, Try}
@@ -13,7 +13,7 @@ import scala.xml.{Elem, XML}
 
 object CodeSniffer extends Tool {
 
-  private val phpVersionKey = Configuration.Key("php_version")
+  private[this] val phpVersionKey = Configuration.Key("php_version")
 
   def apply(source: Source.Directory,
             configuration: Option[List[Pattern.Definition]],
@@ -51,7 +51,7 @@ object CodeSniffer extends Tool {
     }
   }
 
-  private def parseToolResult(outputFile: Path): List[Result] = {
+  private[this] def parseToolResult(outputFile: Path): List[Result] = {
     val xmlResult = XML.loadFile(outputFile.toFile)
     (xmlResult \ "file").flatMap { file =>
       file.child.collect {
@@ -74,7 +74,7 @@ object CodeSniffer extends Tool {
     }.toList
   }
 
-  private def getCommandFor(configFile: Option[Path],
+  private[this] def getCommandFor(configFile: Option[Path],
                             outputFile: Path,
                             filesToLint: List[String]): List[String] = {
     val configurationFile = configFile.map { config =>
@@ -88,7 +88,7 @@ object CodeSniffer extends Tool {
          s"--report-file=$outputFile") ++ configurationFile ++ filesToLint
   }
 
-  private def generateConfig(
+  private[this] def generateConfig(
       configurationOpt: Option[List[Pattern.Definition]],
       phpVersion: Option[Configuration.Value]): Option[Path] = {
     configurationOpt.map { config =>
@@ -111,7 +111,7 @@ object CodeSniffer extends Tool {
     }
   }
 
-  private def generateRule(
+  private[this] def generateRule(
       patternIdentifier: Pattern.Id,
       configuredParameters: Option[Set[Parameter.Definition]]): String = {
     val parameters =
