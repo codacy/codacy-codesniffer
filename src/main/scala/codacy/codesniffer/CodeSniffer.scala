@@ -3,9 +3,9 @@ package codacy.codesniffer
 import java.io.File
 import java.nio.file.Path
 
-import codacy.dockerApi.utils.{CommandRunner, FileHelper}
 import codacy.docker.api._
 import codacy.docker.api.utils.ToolHelper
+import codacy.dockerApi.utils.{CommandRunner, FileHelper}
 import play.api.libs.json.{JsString, JsValue}
 
 import scala.util.{Properties, Try}
@@ -127,11 +127,11 @@ object CodeSniffer extends Tool {
     s"""<rule ref="${convertToToolId(patternIdentifier)}"><properties>$params</properties></rule>"""
   }
 
-  private def convertToToolId(patternId: Pattern.Id): String = {
+  private[this] def convertToToolId(patternId: Pattern.Id): String = {
     patternId.value.replace("_", ".")
   }
 
-  private def jsValueAsSimpleString(jsValue: JsValue): String = {
+  private[this] def jsValueAsSimpleString(jsValue: JsValue): String = {
     jsValue match {
       case JsString(value) => value
       case other           => other.toString
