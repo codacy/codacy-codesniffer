@@ -529,6 +529,342 @@
       "patternId": "MEQP2_Templates_XssTemplate",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_CaseSensitiveKeywords",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_ConstantArraysUsingConst",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_ConstantArraysUsingDefine",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_DeprecatedFunctions",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_DeprecatedIniDirectives",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_DeprecatedMagicAutoload",
+      "level": "Warning",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_DeprecatedNewReference",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_DeprecatedPHP4StyleConstructors",
+      "level": "Warning",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_DeprecatedTypeCasts",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_DynamicAccessToStatic",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_EmptyNonVariable",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_ForbiddenBreakContinueOutsideLoop",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_ForbiddenBreakContinueVariableArguments",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_ForbiddenCallTimePassByReference",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_ForbiddenClosureUseVariableNames",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_ForbiddenEmptyListAssignment",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_ForbiddenFunctionParametersWithSameName",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_ForbiddenGlobalVariableVariable",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_ForbiddenNamesAsDeclared",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_ForbiddenNamesAsInvokedFunctions",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_ForbiddenNames",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_ForbiddenNegativeBitshift",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_ForbiddenSwitchWithMultipleDefaultBlocks",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_InternalInterfaces",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_LateStaticBinding",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_MbstringReplaceEModifier",
+      "level": "Warning",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_NewAnonymousClasses",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_NewArrayStringDereferencing",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_NewClasses",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_NewClosure",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_NewConstVisibility",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_NewConstants",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_NewExecutionDirectives",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_NewFunctionArrayDereferencing",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_NewFunctionParameters",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_NewFunctions",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_NewGroupUseDeclarations",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_NewHashAlgorithms",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_NewHeredocInitialize",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_NewIniDirectives",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_NewInterfaces",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_NewKeywords",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_NewLanguageConstructs",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_NewMagicClassConstant",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_NewMagicMethods",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_NewMultiCatch",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_NewNullableTypes",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_NewReturnTypeDeclarations",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_NewScalarTypeDeclarations",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_NewTypeCasts",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_NewUseConstFunction",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_NonStaticMagicMethods",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_OptionalRequiredFunctionParameters",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_ParameterShadowSuperGlobals",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_PregReplaceEModifier",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_RemovedAlternativePHPTags",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_RemovedConstants",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_RemovedExtensions",
+      "level": "Error",
+      "category": "Compatibility",
+      "parameters": [
+        {
+          "name": "functionWhitelist",
+          "default": ""
+        }
+      ]
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_RemovedFunctionParameters",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_RemovedGlobalVariables",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_RemovedHashAlgorithms",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_RequiredOptionalFunctionParameters",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_ShortArray",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_TernaryOperators",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_ValidIntegers",
+      "level": "Error",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "PHPCompatibility_PHP_VariableVariables",
+      "level": "Error",
+      "category": "Compatibility"
     }
   ]
 }
