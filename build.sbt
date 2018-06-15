@@ -16,7 +16,7 @@ resolvers ++= Seq(
 libraryDependencies ++= Seq(
   "com.typesafe.play" %% "play-json" % "2.3.8" withSources(),
   "org.scala-lang.modules" %% "scala-xml" % "1.0.4" withSources(),
-  "com.codacy" %% "codacy-engine-scala-seed" % "2.7.1"
+  "com.codacy" %% "codacy-engine-scala-seed" % "2.7.9"
 )
 
 enablePlugins(JavaAppPackaging)
@@ -38,7 +38,8 @@ val installAll =
      |&& ln -s $$COMPOSER_HOME/vendor/bin/phpcs /usr/bin/phpcs
      |&& git clone --branch 0.10.0 https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git wpcs
      |&& git clone --branch 1.0.5 https://github.com/magento/marketplace-eqp.git magentocs
-     |&& phpcs --config-set installed_paths $$(pwd)/wpcs,$$(pwd)/magentocs
+     |&& git clone --branch 8.1.0 https://github.com/wimg/PHPCompatibility.git phpcompatibility
+     |&& phpcs --config-set installed_paths $$(pwd)/wpcs,$$(pwd)/magentocs,$$(pwd)/phpcompatibility
      |&& apk del curl git
      |&& rm -rf /tmp/*
      |&& rm -rf /var/cache/apk/*
