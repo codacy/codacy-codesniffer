@@ -85,6 +85,7 @@ object CodeSniffer extends Tool {
          "-d",
          "memory_limit=-1",
          "--report=xml",
+         "--encoding=utf-8",
          s"--report-file=$outputFile") ++ configurationFile ++ filesToLint
   }
 
