@@ -8,15 +8,11 @@ val languageVersion = "2.12.7"
 
 scalaVersion := languageVersion
 
-resolvers ++= Seq(
-  "Typesafe Repo" at "http://repo.typesafe.com/typesafe/releases/",
-  "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/releases"
-)
+resolvers ++= Seq("Typesafe Repo".at("http://repo.typesafe.com/typesafe/releases/"),
+                  "Sonatype OSS Snapshots".at("https://oss.sonatype.org/content/repositories/releases"))
 
-libraryDependencies ++= Seq(
-  "org.scala-lang.modules" %% "scala-xml" % "1.1.1" withSources(),
-  "com.codacy" %% "codacy-engine-scala-seed" % "3.0.141"
-)
+libraryDependencies ++= Seq(("org.scala-lang.modules" %% "scala-xml" % "1.1.1").withSources(),
+                            "com.codacy" %% "codacy-engine-scala-seed" % "3.0.141")
 
 enablePlugins(JavaAppPackaging)
 
@@ -45,7 +41,7 @@ val installAll =
      |&& sed 's/.*short_open_tag.*=.*/short_open_tag=On/' /etc/php/php.ini -i
    """.stripMargin.replaceAll(System.lineSeparator(), " ")
 
-mappings in Universal <++= (resourceDirectory in Compile) map { (resourceDir: File) =>
+mappings in Universal <++= (resourceDirectory in Compile).map { (resourceDir: File) =>
   val src = resourceDir / "docs"
   val dest = "/docs"
 
@@ -65,13 +61,11 @@ daemonGroup in Docker := dockerGroup
 dockerBaseImage := "develar/java"
 
 dockerCommands := dockerCommands.value.flatMap {
-  case cmd@Cmd("WORKDIR", _) => List(cmd,
-    Cmd("RUN", installAll)
-  )
-  case cmd@(Cmd("ADD", "opt /opt")) => List(cmd,
-    Cmd("RUN", "mv /opt/docker/docs /docs"),
-    Cmd("RUN", "adduser -u 2004 -D docker"),
-    ExecCmd("RUN", Seq("chown", "-R", s"$dockerUser:$dockerGroup", "/docs"): _*)
-  )
+  case cmd @ Cmd("WORKDIR", _) => List(cmd, Cmd("RUN", installAll))
+  case cmd @ (Cmd("ADD", "opt /opt")) =>
+    List(cmd,
+         Cmd("RUN", "mv /opt/docker/docs /docs"),
+         Cmd("RUN", "adduser -u 2004 -D docker"),
+         ExecCmd("RUN", Seq("chown", "-R", s"$dockerUser:$dockerGroup", "/docs"): _*))
   case other => List(other)
 }

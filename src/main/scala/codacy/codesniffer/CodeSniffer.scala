@@ -22,9 +22,8 @@ object CodeSniffer extends Tool {
             options: Map[Options.Key, Options.Value])(implicit specification: Tool.Specification): Try[List[Result]] = {
     Try {
       val fullConfig = configuration.withDefaultParameters
-      val filesToLint: List[String] = files.fold(List(source.toString)) {
-        paths =>
-          paths.map(_.toString).toList
+      val filesToLint: List[String] = files.fold(List(source.toString)) { paths =>
+        paths.map(_.toString).toList
       }
 
       val version = options.get(phpVersionKey)
@@ -44,10 +43,8 @@ object CodeSniffer extends Tool {
           val msg =
             s"""
                |CodeSniffer exited with code ${resultFromTool.exitCode}
-               |stdout: ${resultFromTool.stdout.mkString(
-                 Properties.lineSeparator)}
-               |stderr: ${resultFromTool.stderr.mkString(
-                 Properties.lineSeparator)}
+               |stdout: ${resultFromTool.stdout.mkString(Properties.lineSeparator)}
+               |stderr: ${resultFromTool.stderr.mkString(Properties.lineSeparator)}
                 """.stripMargin
           throw new Exception(msg)
         case Left(failure) =>
@@ -69,39 +66,27 @@ object CodeSniffer extends Tool {
             .split('.')
             .dropRight(1)
             .mkString("_")
-          Result.Issue(
-            Source.File(filePath),
-            Result.Message(message),
-            Pattern.Id(rule),
-            Source.Line(line)
-          )
+          Result.Issue(Source.File(filePath), Result.Message(message), Pattern.Id(rule), Source.Line(line))
       }
     }.toList
   }
 
   private[this] def getCommandFor(configFile: Option[Path],
-                            outputFile: Path,
-                            filesToLint: List[String]): List[String] = {
+                                  outputFile: Path,
+                                  filesToLint: List[String]): List[String] = {
     val configurationFile = configFile.map { config =>
       s"--standard=$config,${generateWordPressPluginAliasesStandard()}"
     }
 
-    List("phpcs",
-         "-d",
-         "memory_limit=-1",
-         "--report=xml",
-         "--encoding=utf-8",
-         s"--report-file=$outputFile") ++ configurationFile ++ filesToLint
+    List("phpcs", "-d", "memory_limit=-1", "--report=xml", "--encoding=utf-8", s"--report-file=$outputFile") ++ configurationFile ++ filesToLint
   }
 
-  private[this] def generateConfig(
-      configurationOpt: Option[List[Pattern.Definition]],
-      phpVersion: Option[Options.Value]): Option[Path] = {
+  private[this] def generateConfig(configurationOpt: Option[List[Pattern.Definition]],
+                                   phpVersion: Option[Options.Value]): Option[Path] = {
     configurationOpt.map { config =>
       val configParams = phpVersion
         .map { version =>
-          s"""<config name="testVersion" value="${jsValueAsSimpleString(
-            version: JsValue)}"/>"""
+          s"""<config name="testVersion" value="${jsValueAsSimpleString(version: JsValue)}"/>"""
         }
         .getOrElse("")
       val rules = config.map(p => generateRule(p.patternId, p.parameters))
@@ -129,16 +114,14 @@ object CodeSniffer extends Tool {
     FileHelper.createTmpFile(content, prefix = "", suffix = ".xml")
   }
 
-  private[this] def generateRule(
-      patternIdentifier: Pattern.Id,
-      configuredParameters: Option[Set[Parameter.Definition]]): String = {
+  private[this] def generateRule(patternIdentifier: Pattern.Id,
+                                 configuredParameters: Option[Set[Parameter.Definition]]): String = {
     val parameters =
       configuredParameters.getOrElse(Set.empty[Parameter.Definition])
 
     val params = parameters
       .map { param =>
-        s"""<property name="${param.name}" value="${jsValueAsSimpleString(
-          param.value)}" />"""
+        s"""<property name="${param.name}" value="${jsValueAsSimpleString(param.value)}" />"""
       }
       .mkString(Properties.lineSeparator)
 
@@ -152,7 +135,7 @@ object CodeSniffer extends Tool {
   private[this] def jsValueAsSimpleString(jsValue: JsValue): String = {
     jsValue match {
       case JsString(value) => value
-      case other           => other.toString
+      case other => other.toString
     }
   }
 }
