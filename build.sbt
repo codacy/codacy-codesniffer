@@ -4,7 +4,7 @@ name := """codacy-engine-codesniffer"""
 
 version := "1.0-SNAPSHOT"
 
-val languageVersion = "2.11.7"
+val languageVersion = "2.12.7"
 
 scalaVersion := languageVersion
 
@@ -14,9 +14,8 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "com.typesafe.play" %% "play-json" % "2.3.8" withSources(),
-  "org.scala-lang.modules" %% "scala-xml" % "1.0.4" withSources(),
-  "com.codacy" %% "codacy-engine-scala-seed" % "2.7.9"
+  "org.scala-lang.modules" %% "scala-xml" % "1.1.1" withSources(),
+  "com.codacy" %% "codacy-engine-scala-seed" % "3.0.141"
 )
 
 enablePlugins(JavaAppPackaging)

@@ -3,9 +3,10 @@ package codacy.codesniffer
 import java.io.File
 import java.nio.file.Path
 
-import codacy.docker.api._
-import codacy.docker.api.utils.ToolHelper
-import codacy.dockerApi.utils.{CommandRunner, FileHelper}
+import com.codacy.plugins.api.{Options, Source}
+import com.codacy.plugins.api.results.{Parameter, Pattern, Result, Tool}
+import com.codacy.tools.scala.seed.utils.{CommandRunner, FileHelper}
+import com.codacy.tools.scala.seed.utils.ToolHelper._
 import play.api.libs.json.{JsString, JsValue}
 
 import scala.util.{Properties, Try}
@@ -13,15 +14,14 @@ import scala.xml.{Elem, XML}
 
 object CodeSniffer extends Tool {
 
-  private[this] val phpVersionKey = Configuration.Key("php_version")
+  private[this] val phpVersionKey = Options.Key("php_version")
 
   def apply(source: Source.Directory,
             configuration: Option[List[Pattern.Definition]],
             files: Option[Set[Source.File]],
-            options: Map[Configuration.Key, Configuration.Value])(
-      implicit specification: Tool.Specification): Try[List[Result]] = {
+            options: Map[Options.Key, Options.Value])(implicit specification: Tool.Specification): Try[List[Result]] = {
     Try {
-      val fullConfig = ToolHelper.patternsToLint(configuration)
+      val fullConfig = configuration.withDefaultParameters
       val filesToLint: List[String] = files.fold(List(source.toString)) {
         paths =>
           paths.map(_.toString).toList
@@ -96,7 +96,7 @@ object CodeSniffer extends Tool {
 
   private[this] def generateConfig(
       configurationOpt: Option[List[Pattern.Definition]],
-      phpVersion: Option[Configuration.Value]): Option[Path] = {
+      phpVersion: Option[Options.Value]): Option[Path] = {
     configurationOpt.map { config =>
       val configParams = phpVersion
         .map { version =>
