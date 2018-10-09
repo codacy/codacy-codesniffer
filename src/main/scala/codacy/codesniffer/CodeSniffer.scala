@@ -32,8 +32,13 @@ object CodeSniffer extends Tool {
       val outputFile = FileHelper.createTmpFile("", "tool-result-", ".xml")
       val command = getCommandFor(configFile, outputFile, filesToLint)
 
+      // Possible error codes:
+      // 0 - Nothing found that could be fixed.
+      // 1 - Fixed all fixable errors.
+      // 2 - Fixed some fixable errors, but others failed to fix.
+      // others - errors
       CommandRunner.exec(command, Option(new File(source.path))) match {
-        case Right(resultFromTool) if resultFromTool.exitCode < 2 =>
+        case Right(resultFromTool) if resultFromTool.exitCode <= 2 =>
           parseToolResult(outputFile)
         case Right(resultFromTool) =>
           val msg =
