@@ -34,11 +34,11 @@ val installAll =
      |&& curl -sS https://getcomposer.org/installer | php
      |&& mv composer.phar /usr/bin/composer
      |&& export COMPOSER_HOME=$$(pwd)/composer
-     |&& composer global require "squizlabs/php_codesniffer=2.9.1"
+     |&& composer global require "squizlabs/php_codesniffer=3.3.2"
      |&& ln -s $$COMPOSER_HOME/vendor/bin/phpcs /usr/bin/phpcs
-     |&& git clone --branch 0.10.0 https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git wpcs
+     |&& git clone --branch 1.1.0 https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git wpcs
      |&& git clone --branch 1.0.5 https://github.com/magento/marketplace-eqp.git magentocs
-     |&& git clone --branch 8.1.0 https://github.com/wimg/PHPCompatibility.git phpcompatibility
+     |&& git clone --branch 9.0.0 https://github.com/wimg/PHPCompatibility.git phpcompatibility
      |&& phpcs --config-set installed_paths $$(pwd)/wpcs,$$(pwd)/magentocs,$$(pwd)/phpcompatibility
      |&& apk del curl git
      |&& rm -rf /tmp/*

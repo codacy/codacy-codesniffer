@@ -78,7 +78,7 @@ object CodeSniffer extends Tool {
                             outputFile: Path,
                             filesToLint: List[String]): List[String] = {
     val configurationFile = configFile.map { config =>
-      "--standard=" + config.toString
+      s"--standard=$config,${generateWordPressPluginAliasesStandard()}"
     }
 
     List("phpcs",
@@ -110,6 +110,18 @@ object CodeSniffer extends Tool {
 
       FileHelper.createTmpFile(xmlConfiguration, prefix = "", suffix = ".xml")
     }
+  }
+
+  private[this] def generateWordPressPluginAliasesStandard(): Path = {
+    val content =
+      """
+        |<ruleset name="Codacy WordPress-Coding-Standards aliases">
+        |  <description>Imports WordPress-Coding-Standards aliases file</description>
+        |  <autoload>/opt/docker/wpcs/WordPress/PHPCSAliases.php</autoload>
+        |</ruleset>
+      """.stripMargin
+
+    FileHelper.createTmpFile(content, prefix = "", suffix = ".xml")
   }
 
   private[this] def generateRule(
