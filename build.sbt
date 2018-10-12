@@ -20,6 +20,8 @@ enablePlugins(DockerPlugin)
 
 version in Docker := "1.0"
 
+mainClass in Compile := Some("codacy.Engine")
+
 // The `sed 's/.*short_open_tag.*=.*/short_open_tag=On/' /etc/php/php.ini -i` command changes the php configuration
 // to allow short open tags (without this config the tool immediately fails if a file uses short open tags)
 
