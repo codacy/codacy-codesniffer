@@ -32,7 +32,7 @@ class PHPCSDocsParser extends DocsParser {
     val patternId = Pattern.Id(s"${standard}_${sniffType}_$patternName")
     val spec = Pattern.Specification(patternId,
                                      findIssueType(sourceFile).getOrElse(Result.Level.Warn),
-                                     Pattern.Category.BestPractice, // TODO change category!
+                                     getCategory(patternId),
                                      parseParameters(sourceFile))
 
     val docsFile = rootDir / "src/Standards" / standard / "Docs" / sniffType / s"${patternName}Standard.xml"
