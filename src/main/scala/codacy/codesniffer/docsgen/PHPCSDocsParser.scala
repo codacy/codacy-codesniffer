@@ -9,7 +9,7 @@ class PHPCSDocsParser extends DocsParser {
 
   override val repositoryURL = "https://github.com/squizlabs/PHP_CodeSniffer.git"
 
-  private val sniffRegex = ".*src/Standards/(.*?)/Sniffs/(.*?)/(.*?)Sniff.php".r
+  private val sniffRegex = """.*src\/Standards\/(.*?)\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
 
   def handleRepo(dir: File): Set[PatternDocs] = {
     (for {

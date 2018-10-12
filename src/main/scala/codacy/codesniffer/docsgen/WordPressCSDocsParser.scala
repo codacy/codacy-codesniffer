@@ -7,7 +7,7 @@ class WordPressCSDocsParser extends DocsParser {
 
   override val repositoryURL = "https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.gits"
 
-  private val sniffRegex = ".*WordPress/Sniffs/(.*?)/(.*?)Sniff.php".r
+  private val sniffRegex = """.*WordPress\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
 
   def handleRepo(dir: File): Set[PatternDocs] = {
     (for {
