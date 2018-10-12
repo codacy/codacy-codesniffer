@@ -1,4 +1,5 @@
-package codacy.codesniffer.docsgen
+package codacy.codesniffer.docsgen.parsers
+
 import java.nio.file.Files
 
 import better.files.File

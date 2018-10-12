@@ -1,4 +1,4 @@
-package codacy.codesniffer.docsgen
+package codacy.codesniffer.docsgen.parsers
 
 import better.files.File
 import com.codacy.plugins.api.results.{Pattern, Result}

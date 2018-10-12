@@ -1,13 +1,13 @@
-package codacy.codesniffer.docsgen
+package codacy.codesniffer.docsgen.parsers
 
 import better.files.File
 import com.codacy.plugins.api.results.{Pattern, Result}
 
-class PHPCompatibilityDocsParser extends DocsParser {
+class WordPressCSDocsParser extends DocsParser {
 
-  override val repositoryURL = "https://github.com/PHPCompatibility/PHPCompatibility.git"
+  override val repositoryURL = "https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git"
 
-  private val sniffRegex = """.*PHPCompatibility\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
+  private val sniffRegex = """.*WordPress\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
 
   def handleRepo(dir: File): Set[PatternDocs] = {
     (for {
@@ -22,20 +22,18 @@ class PHPCompatibilityDocsParser extends DocsParser {
     }).toSet
   }
 
-  private def handlePattern(rootDir: File,
-                            sourceFile: File,
-                            sniffType: String,
-                            patternName: String): PatternDocs = {
-    val patternId = Pattern.Id(s"PHPCompatibility_${sniffType}_$patternName")
+  private def handlePattern(rootDir: File, sourceFile: File, sniffType: String, patternName: String): PatternDocs = {
+    val patternId = Pattern.Id(s"WordPress_${sniffType}_$patternName")
     val spec = Pattern.Specification(patternId,
                                      findIssueType(sourceFile).getOrElse(Result.Level.Warn),
                                      getCategory(patternId),
                                      parseParameters(sourceFile))
+    val description = getDescription(patternName, patternId)
 
-    PatternDocs(spec, description(patternName, patternId), None)
+    PatternDocs(spec, description, None)
   }
 
-  private def description(patternName: String, patternId: Pattern.Id): Pattern.Description = {
+  private def getDescription(patternName: String, patternId: Pattern.Id): Pattern.Description = {
     val title = Pattern.Title(patternName.replaceAll("(\\p{Upper})", " $1").trim)
     Pattern.Description(patternId, title, None, None, None)
   }

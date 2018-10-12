@@ -1,6 +1,7 @@
 package codacy.codesniffer.docsgen
 
 import better.files.File
+import codacy.codesniffer.docsgen.parsers._
 import com.codacy.plugins.api.results.Tool
 import play.api.libs.json.{Json, Writes}
 
