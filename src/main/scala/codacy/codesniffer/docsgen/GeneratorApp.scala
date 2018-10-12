@@ -21,7 +21,9 @@ object GeneratorApp extends App {
       .flatMap(_.patterns)
       .sortBy(_.pattern.patternId.value) // this makes diffs easier to read
 
-  writeAsJsonToFile(patternsDocs.map(_.pattern), "src/main/resources/docs/patterns.json")
+  val toolSpecification = Tool.Specification(toolName, toolVersion, patternsDocs.map(_.pattern)(collection.breakOut))
+
+  writeAsJsonToFile(toolSpecification, "src/main/resources/docs/patterns.json")
   writeAsJsonToFile(patternsDocs.map(_.description), "src/main/resources/docs/description/description.json")
 
   for {
