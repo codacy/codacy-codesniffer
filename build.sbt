@@ -12,7 +12,7 @@ resolvers ++= Seq("Typesafe Repo".at("http://repo.typesafe.com/typesafe/releases
                   "Sonatype OSS Snapshots".at("https://oss.sonatype.org/content/repositories/releases"))
 
 libraryDependencies ++= Seq(("org.scala-lang.modules" %% "scala-xml" % "1.1.1").withSources(),
-                            "com.codacy" %% "codacy-engine-scala-seed" % "3.0.141")
+                            "com.codacy" %% "codacy-engine-scala-seed" % "3.0.233")
 
 enablePlugins(JavaAppPackaging)
 
