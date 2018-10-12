@@ -32,13 +32,13 @@ trait DocsParser {
   protected val manualCategories: Map[String, Pattern.Category.Value] = Map.empty // TODO
 
   protected def getCategory(patternId: Pattern.Id,
-                          fallback: Pattern.Category.Value = Pattern.Category.CodeStyle): Pattern.Category.Value =
+                            fallback: Pattern.Category.Value = Pattern.Category.CodeStyle): Pattern.Category.Value =
     manualCategories.get(patternId.value).orElse(tryToGuessCategory(patternId)).getOrElse(fallback)
 
   private def tryToGuessCategory(patternId: Pattern.Id): Option[Pattern.Category.Value] = None
 
   protected def parseParameters(patternFile: File): Option[Set[Parameter.Specification]] = {
-    val patternRegex = """.*?public.*?\$(.*?)=(.*?);""".r
+    val patternRegex = """.*?\spublic.*?\$(.*?)=(.*?);""".r
 
     Option(patternFile.lineIterator.toStream.collect {
       case patternRegex(name, defaultValue) =>
