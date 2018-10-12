@@ -1,9 +1,12 @@
-You should not stack multiple statements in a single line. Instead of:
+Multiple statements are not allowed on a single line.
 
-    echo "a"; echo "b";
+Valid: Two statements are spread out on two separate lines.
+```
+$foo = 1;
+$bar = 2;
+```
 
-You should write:
-
-    echo "a";
-    echo "b";
-      
+Invalid: Two statements are combined onto one line.
+```
+$foo = 1; $bar = 2;
+```

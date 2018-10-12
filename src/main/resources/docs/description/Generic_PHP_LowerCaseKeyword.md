@@ -1,12 +1,11 @@
-PHP keywords must be in lower case. Instead of:
+All PHP keywords should be lowercase.
 
-    Class Something {
-        Public Function example() {}
-    }
+Valid: Lowercase array keyword used.
+```
+$foo = array();
+```
 
-You should write:
-
-    class Something {
-        public function example() {}
-    }
-      
+Invalid: Non-lowercase array keyword used.
+```
+$foo = Array();
+```

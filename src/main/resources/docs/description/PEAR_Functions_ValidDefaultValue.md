@@ -1,15 +1,17 @@
-Arguments with default values must be at the end of the argument list.
-Instead of:
+Arguments with default values go at the end of the argument list.
 
-    function foo($x = null, $z, $y = null) {
-     ..
-    }
+Valid: argument with default value at end of declaration
+```
+function connect($dsn, $persistent = false)
+{
+    ...
+}
+```
 
-You should write:
-
-    function foo($z, $x = null, $y = null) {
-     ..
-    }
-
-
-      
+Invalid: argument with default value at start of declaration
+```
+function connect($persistent = false, $dsn)
+{
+    ...
+}
+```

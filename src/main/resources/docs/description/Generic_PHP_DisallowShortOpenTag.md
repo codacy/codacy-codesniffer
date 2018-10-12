@@ -1,0 +1,1 @@
+Always use <?php ?> to delimit PHP code, not the <? ?> shorthand. This is the most portable way to include PHP code on differing operating systems and setups.

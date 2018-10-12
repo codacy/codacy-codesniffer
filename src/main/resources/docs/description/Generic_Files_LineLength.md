@@ -1,2 +1,1 @@
-The maximum line length is 120 characters
-      
+It is recommended to keep lines at approximately 80 characters long for better code readability.

@@ -1,13 +1,14 @@
-The body of each control structure must be enclosed by braces.
-Inline control statements may cause bugs when new lines are added to the body.
+Control Structures should use braces.
 
-Instead of
+Valid: Braces are used around the control structure.
+```
+if ($test) {
+    $var = 1;
+}
+```
 
-    if ($something) echo 'hello';
-
-You should write:
-
-    if ($something) {
-      echo 'hello';
-    }
-      
+Invalid: No braces are used for the control structure..
+```
+if ($test)
+    $var = 1;
+```

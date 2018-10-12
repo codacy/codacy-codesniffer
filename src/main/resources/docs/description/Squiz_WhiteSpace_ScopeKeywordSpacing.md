@@ -1,11 +1,15 @@
-You must not have multiple white spaces after keywords. Instead of:
+The php keywords static, public, private, and protected should have one space after them.
 
-    public   static  $var = null;
-    protected  $var = null;
+Valid: A single space following the keywords.
+```
+public static function foo()
+{
+}
+```
 
-You should write:
-
-    public static $var = null;
-    protected $var = null;
-
-      
+Invalid: Multiple spaces following the keywords.
+```
+public  static  function foo()
+{
+}
+```
