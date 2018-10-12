@@ -14,7 +14,10 @@ object GeneratorApp extends App {
   val toolName = Tool.Name("PHP Code Sniffer")
   val toolVersion = None
 
-  val parsers = List(new PHPCSDocsParser(), new WordPressCSDocsParser(), new MagentoCSDocsParser())
+  val parsers = List(new PHPCSDocsParser(),
+                     new WordPressCSDocsParser(),
+                     new MagentoCSDocsParser(),
+                     new PHPCompatibilityDocsParser())
 
   val patternsDocs =
     parsers
