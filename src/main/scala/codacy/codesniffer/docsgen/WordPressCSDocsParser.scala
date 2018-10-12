@@ -5,7 +5,7 @@ import com.codacy.plugins.api.results.{Pattern, Result}
 
 class WordPressCSDocsParser extends DocsParser {
 
-  override val repositoryURL = "https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.gits"
+  override val repositoryURL = "https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git"
 
   private val sniffRegex = """.*WordPress\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
 
