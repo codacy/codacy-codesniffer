@@ -8,7 +8,7 @@ class MagentoCSDocsParser extends DocsParser {
 
   override val repositoryURL = "https://github.com/magento/marketplace-eqp.git"
 
-  private val sniffRegex = """.*(MEQP1|MEQP2)\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
+  private[this] val sniffRegex = """.*(MEQP1|MEQP2)\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
 
   def handleRepo(dir: File): Set[PatternDocs] = {
     (for {
@@ -23,7 +23,7 @@ class MagentoCSDocsParser extends DocsParser {
     }).toSet
   }
 
-  private def handlePattern(rootDir: File,
+  private[this] def handlePattern(rootDir: File,
                             sourceFile: File,
                             magentoVersion: String,
                             sniffType: String,
@@ -37,7 +37,7 @@ class MagentoCSDocsParser extends DocsParser {
     PatternDocs(spec, description(patternName, patternId), None)
   }
 
-  private def description(patternName: String, patternId: Pattern.Id): Pattern.Description = {
+  private[this] def description(patternName: String, patternId: Pattern.Id): Pattern.Description = {
     val title = Pattern.Title(patternName.replaceAll("(\\p{Upper})", " $1").trim)
     Pattern.Description(patternId, title, None, None, None)
   }

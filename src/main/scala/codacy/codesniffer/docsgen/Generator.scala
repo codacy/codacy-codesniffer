@@ -10,15 +10,15 @@ import scala.collection.parallel.immutable.ParSeq
 
 class Generator() {
 
-  private val toolName = Tool.Name("PHP Code Sniffer")
-  private val toolVersion = None
+  private[this] val toolName = Tool.Name("PHP Code Sniffer")
+  private[this] val toolVersion = None
 
   val docsDir = File("src/main/resources/docs")
   val patternsFile: File = docsDir / "patterns.json"
   val descriptionsDir: File = docsDir / "description"
   val descriptionFile: File = descriptionsDir / "description.json"
 
-  private val parsers: List[DocsParser] =
+  private[this] val parsers: List[DocsParser] =
     List(new PHPCSDocsParser(),
          new WordPressCSDocsParser(),
          new MagentoCSDocsParser(),
@@ -35,14 +35,14 @@ class Generator() {
                    .seq)
   }
 
-  private def parallelParsers: ParSeq[DocsParser] = {
+  private[this] def parallelParsers: ParSeq[DocsParser] = {
     val parallel = parsers.par
     // for parallel cloning
     parallel.tasksupport = new ForkJoinTaskSupport(new java.util.concurrent.ForkJoinPool(parsers.length))
     parallel
   }
 
-  private def writeToFiles(toolName: Tool.Name, toolVersion: Option[Tool.Version], docs: Seq[PatternDocs]): Unit = {
+  private[this] def writeToFiles(toolName: Tool.Name, toolVersion: Option[Tool.Version], docs: Seq[PatternDocs]): Unit = {
     val sortedDocs = docs.sortBy(_.pattern.patternId.value)
 
     val toolSpecification = Tool.Specification(toolName, toolVersion, sortedDocs.map(_.pattern)(collection.breakOut))
@@ -59,7 +59,7 @@ class Generator() {
     }
   }
 
-  private def writeAsJsonToFile[A: Writes](a: A, file: File): File = {
+  private[this] def writeAsJsonToFile[A: Writes](a: A, file: File): File = {
     file.overwrite(Json.prettyPrint(Json.toJson(a)))
   }
 }

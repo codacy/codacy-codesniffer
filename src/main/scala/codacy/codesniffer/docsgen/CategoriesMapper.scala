@@ -4,7 +4,7 @@ import com.codacy.plugins.api.results.Pattern.Category
 
 object CategoriesMapper {
 
-  private val manualCategories: Map[String, Pattern.Category.Value] =
+  private[this] val manualCategories: Map[String, Pattern.Category.Value] =
     Map("WordPress_DB_PreparedSQL" -> Category.Security)
 
   def getCategory(patternId: Pattern.Id,

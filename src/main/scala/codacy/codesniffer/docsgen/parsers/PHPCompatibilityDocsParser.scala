@@ -8,9 +8,9 @@ class PHPCompatibilityDocsParser extends DocsParser {
 
   override val repositoryURL = "https://github.com/PHPCompatibility/PHPCompatibility.git"
 
-  private val sniffRegex = """.*PHPCompatibility\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
+  private[this] val sniffRegex = """.*PHPCompatibility\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
 
-  private val patternsPrefix = "PHPCompatibility"
+  private[this] val patternsPrefix = "PHPCompatibility"
 
   def handleRepo(dir: File): Set[PatternDocs] = {
     (for {
@@ -25,7 +25,7 @@ class PHPCompatibilityDocsParser extends DocsParser {
     }).toSet
   }
 
-  private def handlePattern(rootDir: File, sourceFile: File, sniffType: String, patternName: String): PatternDocs = {
+  private[this] def handlePattern(rootDir: File, sourceFile: File, sniffType: String, patternName: String): PatternDocs = {
     val patternId = Pattern.Id(s"${patternsPrefix}_${sniffType}_$patternName")
     val spec = Pattern.Specification(patternId,
                                      findIssueType(sourceFile).getOrElse(Result.Level.Warn),
@@ -39,7 +39,7 @@ class PHPCompatibilityDocsParser extends DocsParser {
     PatternDocs(spec, description(patternName, patternId), None)
   }
 
-  private def description(patternName: String, patternId: Pattern.Id): Pattern.Description = {
+  private[this] def description(patternName: String, patternId: Pattern.Id): Pattern.Description = {
     val title = Pattern.Title(patternName.replaceAll("(\\p{Upper})", " $1").trim)
     Pattern.Description(patternId, title, None, None, None)
   }

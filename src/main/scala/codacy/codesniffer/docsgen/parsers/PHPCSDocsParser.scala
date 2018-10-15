@@ -10,7 +10,7 @@ class PHPCSDocsParser extends DocsParser {
 
   override val repositoryURL = "https://github.com/squizlabs/PHP_CodeSniffer.git"
 
-  private val sniffRegex = """.*src\/Standards\/(.*?)\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
+  private[this] val sniffRegex = """.*src\/Standards\/(.*?)\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
 
   def handleRepo(dir: File): Set[PatternDocs] = {
     (for {
@@ -25,7 +25,7 @@ class PHPCSDocsParser extends DocsParser {
     }).toSet
   }
 
-  private def handlePattern(rootDir: File,
+  private[this] def handlePattern(rootDir: File,
                             sourceFile: File,
                             standard: String,
                             sniffType: String,
@@ -44,12 +44,12 @@ class PHPCSDocsParser extends DocsParser {
     PatternDocs(spec, description, doc)
   }
 
-  private def fallBackDescription(patternName: String, patternId: Pattern.Id): Pattern.Description = {
+  private[this] def fallBackDescription(patternName: String, patternId: Pattern.Id): Pattern.Description = {
     val title = Pattern.Title(patternName.replaceAll("(\\p{Upper})", " $1").trim)
     Pattern.Description(patternId, title, None, None, None)
   }
 
-  private def parseDocsFile(patternId: Pattern.Id, file: File): (Option[String], Pattern.Description) = {
+  private[this] def parseDocsFile(patternId: Pattern.Id, file: File): (Option[String], Pattern.Description) = {
     val xml = XML.loadFile(file.toString())
 
     val textOpt = (xml \ "standard").headOption.map(_.text.trim)

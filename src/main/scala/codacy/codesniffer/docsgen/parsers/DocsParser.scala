@@ -17,7 +17,7 @@ trait DocsParser {
     withRepo(repositoryURL)(handleRepo)
       .fold(a => throw a, identity)
 
-  private def withRepo[A](repositoryURL: String)(f: File => A): Either[Throwable, A] = {
+  private[this] def withRepo[A](repositoryURL: String)(f: File => A): Either[Throwable, A] = {
     val dir = Files.createTempDirectory("")
     for {
       _ <- CommandRunner
