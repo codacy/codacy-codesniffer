@@ -6,6 +6,8 @@ import better.files.File
 import com.codacy.plugins.api.results.{Parameter, Pattern, Result}
 import com.codacy.tools.scala.seed.utils.CommandRunner
 
+import scala.util.matching.Regex
+
 case class PatternDocs(pattern: Pattern.Specification, description: Pattern.Description, docs: Option[String])
 
 trait DocsParser {
@@ -13,11 +15,22 @@ trait DocsParser {
 
   def checkoutCommit: String
 
-  def handleRepo(dir: File): Set[PatternDocs]
+  def sniffRegex: Regex
+
+  def handlePatternFile(rootDir: File, patternSource: File, relativizedFilePath: String): PatternDocs
 
   def patterns: Set[PatternDocs] =
     withRepo(repositoryURL, checkoutCommit)(handleRepo)
       .fold(a => throw a, identity)
+
+  def handleRepo(dir: File): Set[PatternDocs] = {
+    (for {
+      file <- dir
+        .glob(sniffRegex.toString())(File.PathMatcherSyntax.regex)
+        .toList
+      relativizedFilePath = dir.relativize(file).toString
+    } yield handlePatternFile(dir, file, relativizedFilePath))(collection.breakOut)
+  }
 
   private[this] def withRepo[A](repositoryURL: String, checkoutCommit: String)(f: File => A): Either[Throwable, A] = {
     val dir = Files.createTempDirectory("")
@@ -43,13 +56,15 @@ trait DocsParser {
       .map(_.toSet)
   }
 
-  protected def findIssueType(patternFile: File): Option[Result.Level] = {
+  protected def findIssueType(patternFile: File, fallback: Result.Level = Result.Level.Warn): Result.Level = {
     val errorRegex = """.*->addError\(.*""".r
     val warningRegex = """.*->addWarning\(.*""".r
 
-    patternFile.lineIterator.toStream.collectFirst {
-      case errorRegex() => Result.Level.Err
-      case warningRegex() => Result.Level.Warn
-    }
+    patternFile.lineIterator.toStream
+      .collectFirst {
+        case errorRegex() => Result.Level.Err
+        case warningRegex() => Result.Level.Warn
+      }
+      .getOrElse(fallback)
   }
 }

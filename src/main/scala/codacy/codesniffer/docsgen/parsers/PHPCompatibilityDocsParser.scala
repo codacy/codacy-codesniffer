@@ -8,23 +8,15 @@ class PHPCompatibilityDocsParser extends DocsParser {
 
   override val repositoryURL = "https://github.com/PHPCompatibility/PHPCompatibility.git"
 
-  override def checkoutCommit: String = VersionsHelper.phpCompatibility
+  override val checkoutCommit: String = VersionsHelper.phpCompatibility
 
-  private[this] val sniffRegex = """.*PHPCompatibility\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
+  override val sniffRegex = """.*PHPCompatibility\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
 
   private[this] val patternsPrefix = "PHPCompatibility"
 
-  def handleRepo(dir: File): Set[PatternDocs] = {
-    (for {
-      file <- dir
-        .glob(s"$sniffRegex")(File.PathMatcherSyntax.regex)
-        .toList
-    } yield {
-      val sniffRegex(sniffType, patternName) = dir
-        .relativize(file)
-        .toString
-      handlePattern(dir, file, sniffType, patternName)
-    }).toSet
+  def handlePatternFile(rootDir: File, patternSource: File, relativizedFilePath: String): PatternDocs = {
+    val sniffRegex(sniffType, patternName) = relativizedFilePath
+    handlePattern(rootDir, patternSource, sniffType, patternName)
   }
 
   private[this] def handlePattern(rootDir: File,
@@ -33,7 +25,7 @@ class PHPCompatibilityDocsParser extends DocsParser {
                                   patternName: String): PatternDocs = {
     val patternId = Pattern.Id(s"${patternsPrefix}_${sniffType}_$patternName")
     val spec = Pattern.Specification(patternId,
-                                     findIssueType(sourceFile).getOrElse(Result.Level.Warn),
+                                     findIssueType(sourceFile),
                                      CategoriesMapper.categoryFor(patternId,
                                                                   patternsPrefix,
                                                                   sniffType,

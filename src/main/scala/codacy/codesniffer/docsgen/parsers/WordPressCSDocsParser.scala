@@ -4,27 +4,21 @@ import better.files.File
 import codacy.codesniffer.docsgen.{CategoriesMapper, VersionsHelper}
 import com.codacy.plugins.api.results.{Pattern, Result}
 
+import scala.util.matching.Regex
+
 class WordPressCSDocsParser extends DocsParser {
 
   override val repositoryURL = "https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git"
 
-  override def checkoutCommit: String = VersionsHelper.phpCompatibility
+  override val checkoutCommit: String = VersionsHelper.phpCompatibility
 
-  private[this] val sniffRegex = """.*WordPress\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
+  override val sniffRegex: Regex = """.*WordPress\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
 
   private[this] val patternsPrefix = "WordPress"
 
-  def handleRepo(dir: File): Set[PatternDocs] = {
-    (for {
-      file <- dir
-        .glob(s"$sniffRegex")(File.PathMatcherSyntax.regex)
-        .toList
-    } yield {
-      val sniffRegex(sniffType, patternName) = dir
-        .relativize(file)
-        .toString
-      handlePattern(dir, file, sniffType, patternName)
-    }).toSet
+  def handlePatternFile(rootDir: File, patternSource: File, relativizedFilePath: String): PatternDocs = {
+    val sniffRegex(sniffType, patternName) = relativizedFilePath
+    handlePattern(rootDir, patternSource, sniffType, patternName)
   }
 
   private[this] def handlePattern(rootDir: File,
@@ -33,7 +27,7 @@ class WordPressCSDocsParser extends DocsParser {
                                   patternName: String): PatternDocs = {
     val patternId = Pattern.Id(s"${patternsPrefix}_${sniffType}_$patternName")
     val spec = Pattern.Specification(patternId,
-                                     findIssueType(sourceFile).getOrElse(Result.Level.Warn),
+                                     findIssueType(sourceFile),
                                      CategoriesMapper.categoryFor(patternId, patternsPrefix, sniffType, patternName),
                                      parseParameters(sourceFile))
     val description = descriptionFor(patternName, patternId)

@@ -4,25 +4,19 @@ import better.files.File
 import codacy.codesniffer.docsgen.{CategoriesMapper, VersionsHelper}
 import com.codacy.plugins.api.results.{Pattern, Result}
 
+import scala.util.matching.Regex
+
 class MagentoCSDocsParser extends DocsParser {
 
   override val repositoryURL = "https://github.com/magento/marketplace-eqp.git"
 
-  override def checkoutCommit: String = VersionsHelper.magento
+  override val checkoutCommit: String = VersionsHelper.magento
 
-  private[this] val sniffRegex = """.*(MEQP1|MEQP2)\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
+  override val sniffRegex: Regex = """.*(MEQP1|MEQP2)\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
 
-  def handleRepo(dir: File): Set[PatternDocs] = {
-    (for {
-      file <- dir
-        .glob(s"$sniffRegex")(File.PathMatcherSyntax.regex)
-        .toList
-    } yield {
-      val sniffRegex(magentoVersion, sniffType, patternName) = dir
-        .relativize(file)
-        .toString
-      handlePattern(dir, file, magentoVersion, sniffType, patternName)
-    }).toSet
+  def handlePatternFile(rootDir: File, patternSource: File, relativizedFilePath: String): PatternDocs = {
+    val sniffRegex(magentoVersion, sniffType, patternName) = relativizedFilePath
+    handlePattern(rootDir, patternSource, magentoVersion, sniffType, patternName)
   }
 
   private[this] def handlePattern(rootDir: File,
@@ -32,7 +26,7 @@ class MagentoCSDocsParser extends DocsParser {
                             patternName: String): PatternDocs = {
     val patternId = Pattern.Id(s"${magentoVersion}_${sniffType}_$patternName")
     val spec = Pattern.Specification(patternId,
-                                     findIssueType(sourceFile).getOrElse(Result.Level.Warn),
+                                     findIssueType(sourceFile),
                                      CategoriesMapper.categoryFor(patternId, magentoVersion, sniffType, patternName),
                                      parseParameters(sourceFile))
 

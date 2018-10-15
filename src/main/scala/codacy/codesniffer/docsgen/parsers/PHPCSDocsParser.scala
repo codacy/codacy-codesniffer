@@ -2,29 +2,22 @@ package codacy.codesniffer.docsgen.parsers
 
 import better.files.File
 import codacy.codesniffer.docsgen.{CategoriesMapper, VersionsHelper}
-import com.codacy.plugins.api.results.{Pattern, Result}
+import com.codacy.plugins.api.results.Pattern
 
+import scala.util.matching.Regex
 import scala.xml.XML
 
 class PHPCSDocsParser extends DocsParser {
 
   override val repositoryURL = "https://github.com/squizlabs/PHP_CodeSniffer.git"
 
-  override def checkoutCommit: String = VersionsHelper.codesniffer
+  override val checkoutCommit: String = VersionsHelper.codesniffer
 
-  private[this] val sniffRegex = """.*src\/Standards\/(.*?)\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
+  override val sniffRegex: Regex = """.*src\/Standards\/(.*?)\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
 
-  def handleRepo(dir: File): Set[PatternDocs] = {
-    (for {
-      file <- dir
-        .glob(s"$sniffRegex")(File.PathMatcherSyntax.regex)
-        .toList
-    } yield {
-      val sniffRegex(standard, sniffType, patternName) = dir
-        .relativize(file)
-        .toString
-      handlePattern(dir, file, standard, sniffType, patternName)
-    }).toSet
+  def handlePatternFile(rootDir: File, patternSource: File, relativizedFilePath: String): PatternDocs = {
+    val sniffRegex(standard, sniffType, patternName) = relativizedFilePath
+    handlePattern(rootDir, patternSource, standard, sniffType, patternName)
   }
 
   private[this] def handlePattern(rootDir: File,
@@ -34,7 +27,7 @@ class PHPCSDocsParser extends DocsParser {
                                   patternName: String): PatternDocs = {
     val patternId = Pattern.Id(s"${standard}_${sniffType}_$patternName")
     val spec = Pattern.Specification(patternId,
-                                     findIssueType(sourceFile).getOrElse(Result.Level.Warn),
+                                     findIssueType(sourceFile),
                                      CategoriesMapper.categoryFor(patternId, standard, sniffType, patternName),
                                      parseParameters(sourceFile))
 
