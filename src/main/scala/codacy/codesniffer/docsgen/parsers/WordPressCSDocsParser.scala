@@ -1,6 +1,7 @@
 package codacy.codesniffer.docsgen.parsers
 
 import better.files.File
+import codacy.codesniffer.docsgen.CategoriesMapper
 import com.codacy.plugins.api.results.{Pattern, Result}
 
 class WordPressCSDocsParser extends DocsParser {
@@ -8,6 +9,8 @@ class WordPressCSDocsParser extends DocsParser {
   override val repositoryURL = "https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git"
 
   private val sniffRegex = """.*WordPress\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
+
+  private val patternsPrefix = "WordPress"
 
   def handleRepo(dir: File): Set[PatternDocs] = {
     (for {
@@ -23,10 +26,10 @@ class WordPressCSDocsParser extends DocsParser {
   }
 
   private def handlePattern(rootDir: File, sourceFile: File, sniffType: String, patternName: String): PatternDocs = {
-    val patternId = Pattern.Id(s"WordPress_${sniffType}_$patternName")
+    val patternId = Pattern.Id(s"${patternsPrefix}_${sniffType}_$patternName")
     val spec = Pattern.Specification(patternId,
                                      findIssueType(sourceFile).getOrElse(Result.Level.Warn),
-                                     getCategory(patternId),
+                                     CategoriesMapper.getCategory(patternId, patternsPrefix, sniffType, patternName),
                                      parseParameters(sourceFile))
     val description = getDescription(patternName, patternId)
 

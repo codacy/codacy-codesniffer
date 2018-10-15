@@ -1,6 +1,7 @@
 package codacy.codesniffer.docsgen.parsers
 
 import better.files.File
+import codacy.codesniffer.docsgen.CategoriesMapper
 import com.codacy.plugins.api.results.{Pattern, Result}
 
 import scala.xml.XML
@@ -32,7 +33,7 @@ class PHPCSDocsParser extends DocsParser {
     val patternId = Pattern.Id(s"${standard}_${sniffType}_$patternName")
     val spec = Pattern.Specification(patternId,
                                      findIssueType(sourceFile).getOrElse(Result.Level.Warn),
-                                     getCategory(patternId),
+                                     CategoriesMapper.getCategory(patternId, standard, sniffType, patternName),
                                      parseParameters(sourceFile))
 
     val docsFile = rootDir / "src/Standards" / standard / "Docs" / sniffType / s"${patternName}Standard.xml"

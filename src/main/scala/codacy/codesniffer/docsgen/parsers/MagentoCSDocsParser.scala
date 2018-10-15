@@ -1,6 +1,7 @@
 package codacy.codesniffer.docsgen.parsers
 
 import better.files.File
+import codacy.codesniffer.docsgen.CategoriesMapper
 import com.codacy.plugins.api.results.{Pattern, Result}
 
 class MagentoCSDocsParser extends DocsParser {
@@ -30,7 +31,7 @@ class MagentoCSDocsParser extends DocsParser {
     val patternId = Pattern.Id(s"${magentoVersion}_${sniffType}_$patternName")
     val spec = Pattern.Specification(patternId,
                                      findIssueType(sourceFile).getOrElse(Result.Level.Warn),
-                                     getCategory(patternId),
+                                     CategoriesMapper.getCategory(patternId, magentoVersion, sniffType, patternName),
                                      parseParameters(sourceFile))
 
     PatternDocs(spec, description(patternName, patternId), None)
