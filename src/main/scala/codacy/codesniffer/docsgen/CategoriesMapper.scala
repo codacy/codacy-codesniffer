@@ -1,4 +1,5 @@
 package codacy.codesniffer.docsgen
+import codacy.codesniffer.docsgen.parsers.PatternIdParts
 import com.codacy.plugins.api.results.Pattern
 import com.codacy.plugins.api.results.Pattern.Category
 
@@ -7,17 +8,13 @@ object CategoriesMapper {
   private[this] val manualCategories: Map[String, Pattern.Category.Value] =
     Map("WordPress_DB_PreparedSQL" -> Category.Security,
         "WordPress_WP_PreparedSQL" -> Category.Security,
-        "WordPress_XSS_EscapeOutput" -> Category.Security
-    )
+        "WordPress_XSS_EscapeOutput" -> Category.Security)
 
-  def categoryFor(patternId: Pattern.Id,
-                  patternPrefix: String,
-                  sniffType: String,
-                  patternName: String,
+  def categoryFor(patternIdParts: PatternIdParts,
                   fallback: Pattern.Category.Value = Pattern.Category.CodeStyle): Pattern.Category.Value =
     manualCategories
-      .get(patternId.value)
-      .orElse(tryToGuessCategory(patternPrefix, sniffType, patternName))
+      .get(patternIdParts.patternId.value)
+      .orElse(tryToGuessCategory(patternIdParts.prefix, patternIdParts.sniffType, patternIdParts.patternName))
       .getOrElse(fallback)
 
   private[this] def tryToGuessCategory(patternPrefix: String,

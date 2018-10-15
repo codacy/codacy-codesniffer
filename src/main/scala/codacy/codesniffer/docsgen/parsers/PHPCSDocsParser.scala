@@ -1,7 +1,7 @@
 package codacy.codesniffer.docsgen.parsers
 
 import better.files.File
-import codacy.codesniffer.docsgen.{CategoriesMapper, VersionsHelper}
+import codacy.codesniffer.docsgen.VersionsHelper
 import com.codacy.plugins.api.results.Pattern
 
 import scala.util.matching.Regex
@@ -15,39 +15,29 @@ class PHPCSDocsParser extends DocsParser {
 
   override val sniffRegex: Regex = """.*src\/Standards\/(.*?)\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
 
-  def handlePatternFile(rootDir: File, patternSource: File, relativizedFilePath: String): PatternDocs = {
+  override def patternIdPartsFor(relativizedFilePath: String): PatternIdParts = {
     val sniffRegex(standard, sniffType, patternName) = relativizedFilePath
-    handlePattern(rootDir, patternSource, standard, sniffType, patternName)
+    PatternIdParts(standard, sniffType, patternName)
   }
 
-  private[this] def handlePattern(rootDir: File,
-                                  sourceFile: File,
-                                  standard: String,
-                                  sniffType: String,
-                                  patternName: String): PatternDocs = {
-    val patternId = Pattern.Id(s"${standard}_${sniffType}_$patternName")
-    val spec = Pattern.Specification(patternId,
-                                     findIssueType(sourceFile),
-                                     CategoriesMapper.categoryFor(patternId, standard, sniffType, patternName),
-                                     parseParameters(sourceFile))
+  override def descriptionWithDocs(rootDir: File,
+                                   patternIdParts: PatternIdParts): (Pattern.Description, Option[String]) = {
+    val docsFile =
+      rootDir / "src/Standards" / patternIdParts.prefix / "Docs" / patternIdParts.sniffType / s"${patternIdParts.patternName}Standard.xml"
 
-    val docsFile = rootDir / "src/Standards" / standard / "Docs" / sniffType / s"${patternName}Standard.xml"
-    val (doc, description) =
-      if (docsFile.exists) {
-        parseDocsFile(patternId, docsFile)
-      } else {
-        (None, fallBackDescription(patternName, patternId))
-      }
-
-    PatternDocs(spec, description, doc)
+    if (docsFile.exists) {
+      parseDocsFile(patternIdParts.patternId, docsFile)
+    } else {
+      (fallBackDescription(patternIdParts), None)
+    }
   }
 
-  private[this] def fallBackDescription(patternName: String, patternId: Pattern.Id): Pattern.Description = {
-    val title = Pattern.Title(patternName.replaceAll("(\\p{Upper})", " $1").trim)
-    Pattern.Description(patternId, title, None, None, None)
+  private[this] def fallBackDescription(patternIdParts: PatternIdParts): Pattern.Description = {
+    val title = Pattern.Title(patternIdParts.patternName.replaceAll("(\\p{Upper})", " $1").trim)
+    Pattern.Description(patternIdParts.patternId, title, None, None, None)
   }
 
-  private[this] def parseDocsFile(patternId: Pattern.Id, file: File): (Option[String], Pattern.Description) = {
+  private[this] def parseDocsFile(patternId: Pattern.Id, file: File): (Pattern.Description, Option[String]) = {
     val xml = XML.loadFile(file.toString())
 
     val textOpt = (xml \ "standard").headOption.map(_.text.trim)
@@ -67,6 +57,7 @@ class PHPCSDocsParser extends DocsParser {
     val description =
       Pattern.Description(patternId, Pattern.Title(xml \@ "title"), textOpt.map(Pattern.DescriptionText), None, None)
 
-    (doc, description)
+    (description, doc)
   }
+
 }

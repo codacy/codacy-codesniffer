@@ -17,7 +17,7 @@ object VersionsHelper {
 
 }
 
-object Test extends App{
+object Test extends App {
   println(VersionsHelper.codesniffer)
   println(VersionsHelper.magento)
   println(VersionsHelper.wordpress)

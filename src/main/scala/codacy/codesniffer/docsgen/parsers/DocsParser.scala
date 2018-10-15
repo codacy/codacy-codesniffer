@@ -3,12 +3,17 @@ package codacy.codesniffer.docsgen.parsers
 import java.nio.file.Files
 
 import better.files.File
+import codacy.codesniffer.docsgen.CategoriesMapper
 import com.codacy.plugins.api.results.{Parameter, Pattern, Result}
 import com.codacy.tools.scala.seed.utils.CommandRunner
 
 import scala.util.matching.Regex
 
 case class PatternDocs(pattern: Pattern.Specification, description: Pattern.Description, docs: Option[String])
+
+case class PatternIdParts(prefix: String, sniffType: String, patternName: String) {
+  val patternId = Pattern.Id(s"${prefix}_${sniffType}_$patternName")
+}
 
 trait DocsParser {
   def repositoryURL: String
@@ -17,19 +22,34 @@ trait DocsParser {
 
   def sniffRegex: Regex
 
-  def handlePatternFile(rootDir: File, patternSource: File, relativizedFilePath: String): PatternDocs
+  def patternIdPartsFor(relativizedFilePath: String): PatternIdParts
+
+  def descriptionWithDocs(rootDir: File, patternIdParts: PatternIdParts): (Pattern.Description, Option[String])
+
+  def fallBackCategory: Pattern.Category.Value = Pattern.Category.CodeStyle
 
   def patterns: Set[PatternDocs] =
     withRepo(repositoryURL, checkoutCommit)(handleRepo)
       .fold(a => throw a, identity)
 
-  def handleRepo(dir: File): Set[PatternDocs] = {
+  private def handleRepo(dir: File): Set[PatternDocs] = {
     (for {
-      file <- dir
+      sourceFile <- dir
         .glob(sniffRegex.toString())(File.PathMatcherSyntax.regex)
         .toList
-      relativizedFilePath = dir.relativize(file).toString
-    } yield handlePatternFile(dir, file, relativizedFilePath))(collection.breakOut)
+      relativizedFilePath = dir.relativize(sourceFile).toString
+    } yield {
+      val idParts = patternIdPartsFor(relativizedFilePath)
+
+      val spec = Pattern.Specification(idParts.patternId,
+                                       findIssueType(sourceFile),
+                                       CategoriesMapper.categoryFor(idParts, fallBackCategory),
+                                       parseParameters(sourceFile))
+
+      val (description, docs) = descriptionWithDocs(dir, idParts)
+
+      PatternDocs(spec, description, docs)
+    })(collection.breakOut)
   }
 
   private[this] def withRepo[A](repositoryURL: String, checkoutCommit: String)(f: File => A): Either[Throwable, A] = {
