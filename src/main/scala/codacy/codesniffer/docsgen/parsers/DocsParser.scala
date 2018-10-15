@@ -32,14 +32,13 @@ trait DocsParser {
     withRepo(repositoryURL, checkoutCommit)(handleRepo)
       .fold(a => throw a, identity)
 
-  private def handleRepo(dir: File): Set[PatternDocs] = {
+  private[this] def handleRepo(dir: File): Set[PatternDocs] = {
     (for {
       sourceFile <- dir
         .glob(sniffRegex.toString())(File.PathMatcherSyntax.regex)
         .toList
-      relativizedFilePath = dir.relativize(sourceFile).toString
     } yield {
-      val idParts = patternIdPartsFor(relativizedFilePath)
+      val idParts = patternIdPartsFor(dir.relativize(sourceFile).toString)
 
       val spec = Pattern.Specification(idParts.patternId,
                                        findIssueType(sourceFile),
