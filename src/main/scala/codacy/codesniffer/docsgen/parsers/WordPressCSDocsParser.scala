@@ -29,9 +29,9 @@ class WordPressCSDocsParser extends DocsParser {
     val patternId = Pattern.Id(s"${patternsPrefix}_${sniffType}_$patternName")
     val spec = Pattern.Specification(patternId,
                                      findIssueType(sourceFile).getOrElse(Result.Level.Warn),
-                                     CategoriesMapper.getCategory(patternId, patternsPrefix, sniffType, patternName),
+                                     CategoriesMapper.categoryFor(patternId, patternsPrefix, sniffType, patternName),
                                      parseParameters(sourceFile))
-    val description = getDescription(patternName, patternId)
+    val description = descriptionFor(patternName, patternId)
 
     PatternDocs(spec, description, None)
   }
@@ -44,7 +44,7 @@ class WordPressCSDocsParser extends DocsParser {
       .exists(_.matches("""^.*\*.*@deprecated.*"""))
   }
 
-  private[this] def getDescription(patternName: String, patternId: Pattern.Id): Pattern.Description = {
+  private[this] def descriptionFor(patternName: String, patternId: Pattern.Id): Pattern.Description = {
     val title = Pattern.Title(patternName.replaceAll("(\\p{Upper})", " $1").trim)
     Pattern.Description(patternId, title, None, None, None)
   }

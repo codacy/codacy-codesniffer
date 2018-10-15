@@ -29,7 +29,7 @@ class PHPCompatibilityDocsParser extends DocsParser {
     val patternId = Pattern.Id(s"${patternsPrefix}_${sniffType}_$patternName")
     val spec = Pattern.Specification(patternId,
                                      findIssueType(sourceFile).getOrElse(Result.Level.Warn),
-                                     CategoriesMapper.getCategory(patternId,
+                                     CategoriesMapper.categoryFor(patternId,
                                                                   patternsPrefix,
                                                                   sniffType,
                                                                   patternName,

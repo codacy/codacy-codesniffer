@@ -26,20 +26,23 @@ class PHPCSDocsParser extends DocsParser {
   }
 
   private[this] def handlePattern(rootDir: File,
-                            sourceFile: File,
-                            standard: String,
-                            sniffType: String,
-                            patternName: String): PatternDocs = {
+                                  sourceFile: File,
+                                  standard: String,
+                                  sniffType: String,
+                                  patternName: String): PatternDocs = {
     val patternId = Pattern.Id(s"${standard}_${sniffType}_$patternName")
     val spec = Pattern.Specification(patternId,
                                      findIssueType(sourceFile).getOrElse(Result.Level.Warn),
-                                     CategoriesMapper.getCategory(patternId, standard, sniffType, patternName),
+                                     CategoriesMapper.categoryFor(patternId, standard, sniffType, patternName),
                                      parseParameters(sourceFile))
 
     val docsFile = rootDir / "src/Standards" / standard / "Docs" / sniffType / s"${patternName}Standard.xml"
     val (doc, description) =
-      if (docsFile.exists) parseDocsFile(patternId, docsFile)
-      else (None, fallBackDescription(patternName, patternId))
+      if (docsFile.exists) {
+        parseDocsFile(patternId, docsFile)
+      } else {
+        (None, fallBackDescription(patternName, patternId))
+      }
 
     PatternDocs(spec, description, doc)
   }

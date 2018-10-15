@@ -7,7 +7,7 @@ object CategoriesMapper {
   private[this] val manualCategories: Map[String, Pattern.Category.Value] =
     Map("WordPress_DB_PreparedSQL" -> Category.Security)
 
-  def getCategory(patternId: Pattern.Id,
+  def categoryFor(patternId: Pattern.Id,
                   patternPrefix: String,
                   sniffType: String,
                   patternName: String,
@@ -17,9 +17,9 @@ object CategoriesMapper {
       .orElse(tryToGuessCategory(patternPrefix, sniffType, patternName))
       .getOrElse(fallback)
 
-  def tryToGuessCategory(patternPrefix: String,
-                         sniffType: String,
-                         patternName: String): Option[Pattern.Category.Value] = {
+  private[this] def tryToGuessCategory(patternPrefix: String,
+                                       sniffType: String,
+                                       patternName: String): Option[Pattern.Category.Value] = {
     Option(sniffType.toLowerCase).filter(_ == "security").map(_ => Pattern.Category.Security)
     //.orElse(another check)
   }
