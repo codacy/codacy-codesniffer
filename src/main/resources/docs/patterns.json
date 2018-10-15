@@ -1848,6 +1848,14 @@
       "default" : false
     } ]
   }, {
+    "patternId" : "WordPress_Arrays_ArrayAssignmentRestrictions",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_Arrays_ArrayDeclaration",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
     "patternId" : "WordPress_Arrays_ArrayDeclarationSpacing",
     "level" : "Error",
     "category" : "CodeStyle",
@@ -1888,6 +1896,10 @@
       "name" : "alignMultilineItems",
       "default" : "'always'"
     } ]
+  }, {
+    "patternId" : "WordPress_CSRF_NonceVerification",
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_Classes_ClassInstantiation",
     "level" : "Error",
@@ -1946,7 +1958,15 @@
       "default" : true
     } ]
   }, {
+    "patternId" : "WordPress_Functions_DontExtract",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
     "patternId" : "WordPress_Functions_FunctionCallSignatureNoParams",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_Functions_FunctionRestrictions",
     "level" : "Warning",
     "category" : "CodeStyle"
   }, {
@@ -1986,6 +2006,10 @@
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_PHP_DiscourageGoto",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_PHP_DiscouragedFunctions",
     "level" : "Warning",
     "category" : "CodeStyle"
   }, {
@@ -2092,6 +2116,45 @@
       "default" : "array()"
     } ]
   }, {
+    "patternId" : "WordPress_VIP_AdminBarRemoval",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "array( 'PHP', 'CSS' )"
+    }, {
+      "name" : "remove_only",
+      "default" : true
+    } ]
+  }, {
+    "patternId" : "WordPress_VIP_CronInterval",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "min_interval",
+      "default" : 900
+    } ]
+  }, {
+    "patternId" : "WordPress_VIP_DirectDatabaseQuery",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_VIP_FileSystemWritesDisallow",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "error",
+      "default" : true
+    } ]
+  }, {
+    "patternId" : "WordPress_VIP_OrderByRand",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_VIP_PluginMenuSlug",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
     "patternId" : "WordPress_VIP_PostsPerPage",
     "level" : "Warning",
     "category" : "CodeStyle",
@@ -2099,6 +2162,46 @@
       "name" : "posts_per_page",
       "default" : 100
     } ]
+  }, {
+    "patternId" : "WordPress_VIP_RestrictedFunctions",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_VIP_RestrictedVariables",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_VIP_SessionFunctionsUsage",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_VIP_SessionVariableUsage",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_VIP_SlowDBQuery",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_VIP_SuperGlobalInputUsage",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_VIP_TimezoneChange",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_VIP_ValidatedSanitizedInput",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_Variables_GlobalVariables",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_Variables_VariableRestrictions",
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_WP_AlternativeFunctions",
     "level" : "Warning",
@@ -2172,6 +2275,10 @@
       "default" : 100
     } ]
   }, {
+    "patternId" : "WordPress_WP_PreparedSQL",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
     "patternId" : "WordPress_WP_TimezoneChange",
     "level" : "Warning",
     "category" : "CodeStyle"
@@ -2229,6 +2336,10 @@
     } ]
   }, {
     "patternId" : "WordPress_WhiteSpace_SemicolonSpacing",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_XSS_EscapeOutput",
     "level" : "Warning",
     "category" : "CodeStyle"
   }, {

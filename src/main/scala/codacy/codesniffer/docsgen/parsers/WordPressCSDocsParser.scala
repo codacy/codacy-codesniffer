@@ -16,7 +16,7 @@ class WordPressCSDocsParser extends DocsParser {
     (for {
       file <- dir
         .glob(s"$sniffRegex")(File.PathMatcherSyntax.regex)
-        .toList if !isDeprecated(file)
+        .toList
     } yield {
       val sniffRegex(sniffType, patternName) = dir
         .relativize(file)
@@ -25,7 +25,10 @@ class WordPressCSDocsParser extends DocsParser {
     }).toSet
   }
 
-  private[this] def handlePattern(rootDir: File, sourceFile: File, sniffType: String, patternName: String): PatternDocs = {
+  private[this] def handlePattern(rootDir: File,
+                                  sourceFile: File,
+                                  sniffType: String,
+                                  patternName: String): PatternDocs = {
     val patternId = Pattern.Id(s"${patternsPrefix}_${sniffType}_$patternName")
     val spec = Pattern.Specification(patternId,
                                      findIssueType(sourceFile).getOrElse(Result.Level.Warn),
@@ -34,14 +37,6 @@ class WordPressCSDocsParser extends DocsParser {
     val description = descriptionFor(patternName, patternId)
 
     PatternDocs(spec, description, None)
-  }
-
-  private[this] def isDeprecated(sourceFile: File): Boolean = {
-    val className = sourceFile.nameWithoutExtension
-
-    sourceFile.lineIterator
-      .takeWhile(line => !line.matches(s"""^.*class.*$className.*extends.*Sniff.*"""))
-      .exists(_.matches("""^.*\*.*@deprecated.*"""))
   }
 
   private[this] def descriptionFor(patternName: String, patternId: Pattern.Id): Pattern.Description = {
