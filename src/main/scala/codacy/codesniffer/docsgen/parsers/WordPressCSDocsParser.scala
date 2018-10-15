@@ -34,7 +34,11 @@ class WordPressCSDocsParser extends DocsParser {
   }
 
   private def isDeprecated(sourceFile: File): Boolean = {
-    sourceFile.lineIterator.exists(_.matches("""^.*\*.*@deprecated.*"""))
+    val className = sourceFile.nameWithoutExtension
+
+    sourceFile.lineIterator
+      .takeWhile(line => !line.matches(s"""^.*class.*$className.*extends.*Sniff.*"""))
+      .exists(_.matches("""^.*\*.*@deprecated.*"""))
   }
 
   private def getDescription(patternName: String, patternId: Pattern.Id): Pattern.Description = {
