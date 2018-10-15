@@ -477,23 +477,23 @@
   }, {
     "patternId" : "MEQP1_Security_Acl",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Security"
   }, {
     "patternId" : "MEQP1_Security_DiscouragedFunction",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Security"
   }, {
     "patternId" : "MEQP1_Security_IncludeFile",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Security"
   }, {
     "patternId" : "MEQP1_Security_LanguageConstruct",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Security"
   }, {
     "patternId" : "MEQP1_Security_Superglobal",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Security"
   }, {
     "patternId" : "MEQP1_Stdlib_DateTime",
     "level" : "Warning",
@@ -581,7 +581,7 @@
   }, {
     "patternId" : "MEQP2_Security_Superglobal",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Security"
   }, {
     "patternId" : "MEQP2_Stdlib_DateTime",
     "level" : "Warning",
@@ -806,371 +806,371 @@
   }, {
     "patternId" : "PHPCompatibility_Classes_NewAnonymousClasses",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Classes_NewClasses",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Classes_NewConstVisibility",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Classes_NewLateStaticBinding",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Constants_NewConstants",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Constants_NewMagicClassConstant",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Constants_RemovedConstants",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ControlStructures_DiscouragedSwitchContinue",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ControlStructures_ForbiddenBreakContinueOutsideLoop",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ControlStructures_ForbiddenBreakContinueVariableArguments",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ControlStructures_ForbiddenSwitchWithMultipleDefaultBlocks",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ControlStructures_NewExecutionDirectives",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ControlStructures_NewForeachExpressionReferencing",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ControlStructures_NewListInForeach",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ControlStructures_NewMultiCatch",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Extensions_RemovedExtensions",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionDeclarations_ForbiddenParameterShadowSuperGlobals",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionDeclarations_ForbiddenParametersWithSameName",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionDeclarations_ForbiddenVariableNamesInClosureUse",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionDeclarations_NewClosure",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionDeclarations_NewNullableTypes",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionDeclarations_NewParamTypeDeclarations",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionDeclarations_NewReturnTypeDeclarations",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionDeclarations_NonStaticMagicMethods",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionNameRestrictions_NewMagicMethods",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionNameRestrictions_RemovedMagicAutoload",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionNameRestrictions_RemovedNamespacedAssert",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionNameRestrictions_RemovedPHP4StyleConstructors",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionNameRestrictions_ReservedFunctionNames",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionUse_ArgumentFunctionsUsage",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionUse_NewFunctionParameters",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionUse_NewFunctions",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionUse_OptionalToRequiredFunctionParameters",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionUse_RemovedFunctionParameters",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionUse_RemovedFunctions",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionUse_RequiredToOptionalFunctionParameters",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Generators_NewGeneratorReturn",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_IniDirectives_NewIniDirectives",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_IniDirectives_RemovedIniDirectives",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_InitialValue_NewConstantArraysUsingConst",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_InitialValue_NewConstantArraysUsingDefine",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_InitialValue_NewConstantScalarExpressions",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_InitialValue_NewHeredoc",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Interfaces_InternalInterfaces",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Interfaces_NewInterfaces",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Keywords_CaseSensitiveKeywords",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Keywords_ForbiddenNames",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Keywords_ForbiddenNamesAsDeclared",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Keywords_ForbiddenNamesAsInvokedFunctions",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Keywords_NewKeywords",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_LanguageConstructs_NewEmptyNonVariable",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_LanguageConstructs_NewLanguageConstructs",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Lists_AssignmentOrder",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Lists_ForbiddenEmptyListAssignment",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Lists_NewKeyedList",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Lists_NewListReferenceAssignment",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Lists_NewShortList",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Miscellaneous_RemovedAlternativePHPTags",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Miscellaneous_ValidIntegers",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Operators_ForbiddenNegativeBitshift",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Operators_NewOperators",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Operators_NewShortTernary",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ParameterValues_ForbiddenGetClassNull",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ParameterValues_NewArrayReduceInitialType",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ParameterValues_NewFopenModes",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ParameterValues_NewHashAlgorithms",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ParameterValues_NewNegativeStringOffset",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ParameterValues_NewPCREModifiers",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ParameterValues_NewPackFormat",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ParameterValues_RemovedHashAlgorithms",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ParameterValues_RemovedIconvEncoding",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ParameterValues_RemovedMbstringModifiers",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ParameterValues_RemovedNonCryptoHash",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ParameterValues_RemovedPCREModifiers",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ParameterValues_RemovedSetlocaleString",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Syntax_ForbiddenCallTimePassByReference",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Syntax_NewArrayStringDereferencing",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Syntax_NewClassMemberAccess",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Syntax_NewDynamicAccessToStatic",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Syntax_NewFlexibleHeredocNowdoc",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Syntax_NewFunctionArrayDereferencing",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Syntax_NewFunctionCallTrailingComma",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Syntax_NewShortArray",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Syntax_RemovedNewReference",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_TypeCasts_NewTypeCasts",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_TypeCasts_RemovedTypeCasts",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Upgrade_LowPHPCS",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_UseDeclarations_NewGroupUseDeclarations",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_UseDeclarations_NewUseConstFunction",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Variables_ForbiddenGlobalVariableVariable",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Variables_NewUniformVariableSyntax",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Variables_RemovedPredefinedGlobalVariables",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Compatibility"
   }, {
     "patternId" : "PSR12_Classes_ClassInstantiation",
     "level" : "Warning",
@@ -1917,7 +1917,7 @@
   }, {
     "patternId" : "WordPress_DB_PreparedSQL",
     "level" : "Error",
-    "category" : "CodeStyle"
+    "category" : "Security"
   }, {
     "patternId" : "WordPress_DB_PreparedSQLPlaceholders",
     "level" : "Error",
@@ -1968,6 +1968,17 @@
     "parameters" : [ {
       "name" : "additionalWordDelimiters",
       "default" : "''"
+    } ]
+  }, {
+    "patternId" : "WordPress_NamingConventions_ValidVariableName",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "customPropertiesWhitelist",
+      "default" : "array()"
+    }, {
+      "name" : "customVariablesWhitelist",
+      "default" : "array()"
     } ]
   }, {
     "patternId" : "WordPress_PHP_DevelopmentFunctions",
@@ -2028,17 +2039,48 @@
     "level" : "Error",
     "category" : "CodeStyle"
   }, {
+    "patternId" : "WordPress_Security_EscapeOutput",
+    "level" : "Error",
+    "category" : "Security",
+    "parameters" : [ {
+      "name" : "customEscapingFunctions",
+      "default" : "array()"
+    }, {
+      "name" : "customAutoEscapedFunctions",
+      "default" : "array()"
+    }, {
+      "name" : "customSanitizingFunctions",
+      "default" : "array()"
+    }, {
+      "name" : "customPrintingFunctions",
+      "default" : "array()"
+    } ]
+  }, {
+    "patternId" : "WordPress_Security_NonceVerification",
+    "level" : "Warning",
+    "category" : "Security",
+    "parameters" : [ {
+      "name" : "customNonceVerificationFunctions",
+      "default" : "array()"
+    }, {
+      "name" : "customSanitizingFunctions",
+      "default" : "array()"
+    }, {
+      "name" : "customUnslashingSanitizingFunctions",
+      "default" : "array()"
+    } ]
+  }, {
     "patternId" : "WordPress_Security_PluginMenuSlug",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Security"
   }, {
     "patternId" : "WordPress_Security_SafeRedirect",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Security"
   }, {
     "patternId" : "WordPress_Security_ValidatedSanitizedInput",
     "level" : "Error",
-    "category" : "CodeStyle",
+    "category" : "Security",
     "parameters" : [ {
       "name" : "check_validation_in_scope_only",
       "default" : false
@@ -2048,6 +2090,14 @@
     }, {
       "name" : "customUnslashingSanitizingFunctions",
       "default" : "array()"
+    } ]
+  }, {
+    "patternId" : "WordPress_VIP_PostsPerPage",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "posts_per_page",
+      "default" : 100
     } ]
   }, {
     "patternId" : "WordPress_WP_AlternativeFunctions",

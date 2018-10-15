@@ -1257,6 +1257,9 @@
   "patternId" : "WordPress_NamingConventions_ValidHookName",
   "title" : "Valid Hook Name"
 }, {
+  "patternId" : "WordPress_NamingConventions_ValidVariableName",
+  "title" : "Valid Variable Name"
+}, {
   "patternId" : "WordPress_PHP_DevelopmentFunctions",
   "title" : "Development Functions"
 }, {
@@ -1293,6 +1296,12 @@
   "patternId" : "WordPress_PHP_YodaConditions",
   "title" : "Yoda Conditions"
 }, {
+  "patternId" : "WordPress_Security_EscapeOutput",
+  "title" : "Escape Output"
+}, {
+  "patternId" : "WordPress_Security_NonceVerification",
+  "title" : "Nonce Verification"
+}, {
   "patternId" : "WordPress_Security_PluginMenuSlug",
   "title" : "Plugin Menu Slug"
 }, {
@@ -1301,6 +1310,9 @@
 }, {
   "patternId" : "WordPress_Security_ValidatedSanitizedInput",
   "title" : "Validated Sanitized Input"
+}, {
+  "patternId" : "WordPress_VIP_PostsPerPage",
+  "title" : "Posts Per Page"
 }, {
   "patternId" : "WordPress_WP_AlternativeFunctions",
   "title" : "Alternative Functions"
