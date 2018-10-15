@@ -66,6 +66,7 @@ try {
     // TODO: Handle this exception later :-)
 }
 //#Warn: MEQP1_CodeAnalysis_EmptyBlock
+//#Warn: MEQP1_CodeAnalysis_EmptyBlock
 if (true) {} elseif (false) {}
 //#Warn: MEQP1_CodeAnalysis_EmptyBlock
 class EmptyBlockTestInc { /*Empty class block*/ }

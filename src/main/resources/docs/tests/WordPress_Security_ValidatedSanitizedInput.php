@@ -5,7 +5,8 @@
 do_something( $_POST ); // Ok.
 
 //#Err: WordPress_Security_ValidatedSanitizedInput
-do_something_with( $_POST['hello'] ); // Error for no validation, Error for no sanitizing, Error for no unslashing.
+//#Err: WordPress_Security_ValidatedSanitizedInput
+do_something_with( $_POST['hello'] ); // Error for no validation, Error for no unslashing.
 
 //#Err: WordPress_Security_ValidatedSanitizedInput
 echo sanitize_text_field( wp_unslash( $_POST['foo1'] ) ); // Error for no validation.

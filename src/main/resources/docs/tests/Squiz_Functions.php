@@ -14,6 +14,9 @@ FuNcTiON myFunctionA    ($arg1, $arg2)
 
 //#Err: Squiz_Functions_LowercaseFunctionKeywords
 //#Warn: Squiz_Functions_FunctionDeclarationArgumentSpacing
+//#Warn: Squiz_Functions_FunctionDeclarationArgumentSpacing
+//#Warn: Squiz_Functions_FunctionDeclarationArgumentSpacing
+//#Warn: Squiz_Functions_FunctionDeclarationArgumentSpacing
 functioN myFunctionB($arg1 = 1, $arg2 = 2)
 {
 }
@@ -34,6 +37,7 @@ function myFunctionE(
     // body
 };
 
+//#Warn: Squiz_Functions_FunctionDeclarationArgumentSpacing
 //#Warn: Squiz_Functions_FunctionDeclarationArgumentSpacing
 function myFunctionF( $a ){
     // body

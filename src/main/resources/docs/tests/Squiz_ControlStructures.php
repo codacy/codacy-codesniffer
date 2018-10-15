@@ -28,6 +28,7 @@ do { echo $i; } while ($i > 0);
 do{
    echo $i;
 //#Err: Squiz_ControlStructures_ControlSignature
+//#Err: Squiz_ControlStructures_ControlSignature
 }while($i > 0);
 
 
@@ -36,6 +37,7 @@ while ($i < 1) {
     echo $i;
 }
 
+//#Err: Squiz_ControlStructures_ControlSignature
 //#Err: Squiz_ControlStructures_ControlSignature
 while($i < 1){
     echo $i;
@@ -51,6 +53,7 @@ for ($i = 1; $i < 1; $i++) {
 }
 
 //#Err: Squiz_ControlStructures_ControlSignature
+//#Err: Squiz_ControlStructures_ControlSignature
 for($i = 1; $i < 1; $i++){
     echo $i;
 }
@@ -65,6 +68,7 @@ foreach ($items as $item) {
 }
 
 //#Err: Squiz_ControlStructures_ControlSignature
+//#Err: Squiz_ControlStructures_ControlSignature
 foreach($items as $item){
     echo $item;
 }
@@ -78,6 +82,7 @@ if ($i == 0) {
     $i = 1;
 }
 
+//#Err: Squiz_ControlStructures_ControlSignature
 //#Err: Squiz_ControlStructures_ControlSignature
 if($i == 0){
     $i = 1;
@@ -96,6 +101,7 @@ if ($i == 0) {
 
 if ($i == 0) {
     $i = 1;
+//#Err: Squiz_ControlStructures_ControlSignature
 //#Err: Squiz_ControlStructures_ControlSignature
 }else{
     $i = 0;
