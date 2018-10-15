@@ -4,16 +4,16 @@
 //#Patterns: Squiz_WhiteSpace_SuperfluousWhitespace, Squiz_WhiteSpace_ScopeKeywordSpacing
 
 
-//#Info: Squiz_WhiteSpace_SuperfluousWhitespace
+//#Warn: Squiz_WhiteSpace_SuperfluousWhitespace
 class myClass 
 {
 
-//#Info: Squiz_WhiteSpace_SuperfluousWhitespace
+//#Warn: Squiz_WhiteSpace_SuperfluousWhitespace
 } 
 
 class my_class
 {
-    //#Info: Squiz_WhiteSpace_ScopeKeywordSpacing
+    //#Warn: Squiz_WhiteSpace_ScopeKeywordSpacing
     public   function    stuff(){}
 }
 

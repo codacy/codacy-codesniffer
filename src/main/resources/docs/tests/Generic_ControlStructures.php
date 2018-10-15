@@ -8,7 +8,7 @@ class Example
 
     public function spaces($something)
     {
-        //#Info: Generic_ControlStructures_InlineControlStructure
+        //#Warn: Generic_ControlStructures_InlineControlStructure
         if ($something) echo 'hello';
 
         if ($something) {

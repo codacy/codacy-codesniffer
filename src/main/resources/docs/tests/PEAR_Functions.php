@@ -6,8 +6,8 @@
 
     }
 
-    //#Info: PEAR_Functions_ValidDefaultValue
-    function bar($x = null, $z, $y = null) {
+    //#Err: PEAR_Functions_ValidDefaultValue
+    function connect($persistent = false, $dsn) {
 
     }
 

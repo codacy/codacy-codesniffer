@@ -1,17 +1,17 @@
 <?php
 
-//#Patterns: WordPress_WP_PreparedSQL
+//#Patterns: WordPress_DB_PreparedSQL
 
-//#Warn: WordPress_WP_PreparedSQL
+//#Err: WordPress_DB_PreparedSQL
 $wpdb->query( "SELECT * FROM $wpdb->posts WHERE post_title LIKE '" . $_GET['title'] . "';" ); // Bad.
-//#Warn: WordPress_WP_PreparedSQL
+//#Err: WordPress_DB_PreparedSQL
 $wpdb->query( "SELECT * FROM $wpdb->posts WHERE post_title LIKE '{$_GET['title']}';" ); // Bad.
-//#Warn: WordPress_WP_PreparedSQL
+//#Err: WordPress_DB_PreparedSQL
 $wpdb->query( "SELECT * FROM $wpdb->posts WHERE post_title LIKE '$var';" ); // Bad.
 $wpdb->query( "SELECT * FROM $wpdb->posts WHERE post_title LIKE 'Hello World!';" ); // Ok.
-//#Warn: WordPress_WP_PreparedSQL
+//#Err: WordPress_DB_PreparedSQL
 $wpdb->query( $wpdb->prepare( "SELECT * FROM $wpdb->posts WHERE post_title LIKE '{$_GET['title']}';" ) ); // Bad.
-//#Warn: WordPress_WP_PreparedSQL
+//#Err: WordPress_DB_PreparedSQL
 $wpdb->query( $wpdb->prepare( "SELECT * FROM $wpdb->posts WHERE post_title LIKE '$var';" ) ); // Bad.
 $wpdb->query( $wpdb->prepare( "SELECT * FROM $wpdb->posts WHERE post_title LIKE %s;", $_GET['title'] ) ); // Ok.
 
@@ -20,16 +20,16 @@ $wpdb->query( "SELECT * FROM $wpdb->posts WHERE post_title LIKE '{$escaped_var}'
 
 $wpdb->query( $wpdb->prepare( "SELECT SUBSTRING( post_name, %d + 1 ) REGEXP '^[0-9]+$'", array( 123 ) ) ); // Ok.
 $wpdb->query( $wpdb->prepare( "SELECT * FROM $wpdb->posts WHERE post_title = 'The \$_GET var can be evil.' AND ID = %s", array( 123 ) ) ); // Ok.
-//#Warn: WordPress_WP_PreparedSQL
+//#Err: WordPress_DB_PreparedSQL
 $wpdb->query( $wpdb->prepare( "SELECT * FROM $wpdb->posts WHERE post_title = 'The $_GET[foo] var is evil.' AND ID = %s", array( 123 ) ) ); // Bad.
-//#Warn: WordPress_WP_PreparedSQL
+//#Err: WordPress_DB_PreparedSQL
 $wpdb->query( $wpdb->prepare( "SELECT * FROM $wpdb->posts WHERE post_title = 'The \\$_GET[foo]// var is evil again.' AND ID = %s", array( 123 ) ) ); // Bad.
-//#Warn: WordPress_WP_PreparedSQL
+//#Err: WordPress_DB_PreparedSQL
 $wpdb->query( $wpdb->prepare( "SELECT * FROM $wpdb->posts WHERE post_title = 'The \$_GET var can be evil, but $_GET[foo] var is evil.' AND ID = %s", array( 123 ) ) ); // Bad.
 
-//#Warn: WordPress_WP_PreparedSQL
+//#Err: WordPress_DB_PreparedSQL
 $wpdb->query( "SELECT * FROM $wpdb->posts WHERE post_title LIKE '" . foo() . "';" ); // Bad.
-//#Warn: WordPress_WP_PreparedSQL
+//#Err: WordPress_DB_PreparedSQL
 $wpdb->query( $wpdb->prepare( "SELECT * FROM $wpdb->posts WHERE post_title LIKE '" . foo() . "';" ) ); // Bad.
 
 $wpdb->query( "SELECT * FROM " . $wpdb->posts . " WHERE post_title LIKE 'foo';" ); // Ok.
