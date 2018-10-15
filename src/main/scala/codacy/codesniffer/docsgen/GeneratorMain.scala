@@ -1,5 +1,8 @@
 package codacy.codesniffer.docsgen
 
-object GeneratorMain extends App {
-  new Generator().run()
+object GeneratorMain {
+
+  def main(args: Array[String]): Unit = {
+    new Generator().run()
+  }
 }
