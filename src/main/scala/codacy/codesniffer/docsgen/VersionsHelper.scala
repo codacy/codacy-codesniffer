@@ -16,10 +16,3 @@ object VersionsHelper {
   lazy val phpCompatibility = properties.getProperty("php-compatibility")
 
 }
-
-object Test extends App {
-  println(VersionsHelper.codesniffer)
-  println(VersionsHelper.magento)
-  println(VersionsHelper.wordpress)
-  println(VersionsHelper.phpCompatibility)
-}
