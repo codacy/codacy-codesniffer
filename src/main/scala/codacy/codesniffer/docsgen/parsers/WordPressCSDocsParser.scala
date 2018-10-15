@@ -1,12 +1,14 @@
 package codacy.codesniffer.docsgen.parsers
 
 import better.files.File
-import codacy.codesniffer.docsgen.CategoriesMapper
+import codacy.codesniffer.docsgen.{CategoriesMapper, VersionsHelper}
 import com.codacy.plugins.api.results.{Pattern, Result}
 
 class WordPressCSDocsParser extends DocsParser {
 
   override val repositoryURL = "https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git"
+
+  override def checkoutCommit: String = VersionsHelper.phpCompatibility
 
   private[this] val sniffRegex = """.*WordPress\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
 

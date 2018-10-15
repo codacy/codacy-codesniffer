@@ -1,7 +1,7 @@
 package codacy.codesniffer.docsgen.parsers
 
 import better.files.File
-import codacy.codesniffer.docsgen.CategoriesMapper
+import codacy.codesniffer.docsgen.{CategoriesMapper, VersionsHelper}
 import com.codacy.plugins.api.results.{Pattern, Result}
 
 import scala.xml.XML
@@ -9,6 +9,8 @@ import scala.xml.XML
 class PHPCSDocsParser extends DocsParser {
 
   override val repositoryURL = "https://github.com/squizlabs/PHP_CodeSniffer.git"
+
+  override def checkoutCommit: String = VersionsHelper.codesniffer
 
   private[this] val sniffRegex = """.*src\/Standards\/(.*?)\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
 

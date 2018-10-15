@@ -1,3 +1,6 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 import com.typesafe.sbt.packager.docker.{Cmd, ExecCmd}
 
 name := """codacy-engine-codesniffer"""
@@ -22,20 +25,30 @@ version in Docker := "1.0"
 
 mainClass in Compile := Some("codacy.Engine")
 
+val versionProperties: Properties = {
+  val prop = new Properties()
+  prop.load(new FileInputStream(".versions.properties"))
+  prop
+}
+
+def versionFor(name: String): String = {
+  versionProperties.getProperty(name)
+}
+
 // The `sed 's/.*short_open_tag.*=.*/short_open_tag=On/' /etc/php/php.ini -i` command changes the php configuration
 // to allow short open tags (without this config the tool immediately fails if a file uses short open tags)
-
 val installAll =
   s"""apk --no-cache add bash curl git
      |&& apk --no-cache add php php-openssl php-phar php-json php-curl php-iconv php-zlib
      |&& curl -sS https://getcomposer.org/installer | php
      |&& mv composer.phar /usr/bin/composer
      |&& export COMPOSER_HOME=$$(pwd)/composer
-     |&& composer global require "squizlabs/php_codesniffer=3.3.2"
+     |&& composer global require "squizlabs/php_codesniffer=${versionFor("php-codesniffer")}"
      |&& ln -s $$COMPOSER_HOME/vendor/bin/phpcs /usr/bin/phpcs
-     |&& git clone --branch 1.1.0 https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git wpcs
-     |&& (git clone https://github.com/magento/marketplace-eqp.git magentocs && cd magentocs && git checkout 0c867c7a08a8ac80cd2b41af381af72b4cb23777)
-     |&& git clone --branch 9.0.0 https://github.com/wimg/PHPCompatibility.git phpcompatibility
+     |&& git clone --branch ${versionFor("wordpress")} https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git wpcs
+     |&& (git clone https://github.com/magento/marketplace-eqp.git magentocs
+     |&&    cd magentocs && git checkout ${versionFor("magento-eqp")})
+     |&& git clone --branch ${versionFor("php-compatibility")} https://github.com/wimg/PHPCompatibility.git phpcompatibility
      |&& phpcs --config-set installed_paths $$(pwd)/wpcs,$$(pwd)/magentocs,$$(pwd)/phpcompatibility
      |&& apk del curl git
      |&& rm -rf /tmp/*

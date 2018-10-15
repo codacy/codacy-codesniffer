@@ -11,7 +11,7 @@ import scala.collection.parallel.immutable.ParSeq
 class Generator() {
 
   private[this] val toolName = Tool.Name("PHP Code Sniffer")
-  private[this] val toolVersion = None
+  private[this] val toolVersion = Option(Tool.Version(VersionsHelper.codesniffer))
 
   val docsDir = File("src/main/resources/docs")
   val patternsFile: File = docsDir / "patterns.json"
@@ -42,7 +42,9 @@ class Generator() {
     parallel
   }
 
-  private[this] def writeToFiles(toolName: Tool.Name, toolVersion: Option[Tool.Version], docs: Seq[PatternDocs]): Unit = {
+  private[this] def writeToFiles(toolName: Tool.Name,
+                                 toolVersion: Option[Tool.Version],
+                                 docs: Seq[PatternDocs]): Unit = {
     val sortedDocs = docs.sortBy(_.pattern.patternId.value)
 
     val toolSpecification = Tool.Specification(toolName, toolVersion, sortedDocs.map(_.pattern)(collection.breakOut))

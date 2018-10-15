@@ -1,12 +1,14 @@
 package codacy.codesniffer.docsgen.parsers
 
 import better.files.File
-import codacy.codesniffer.docsgen.CategoriesMapper
+import codacy.codesniffer.docsgen.{CategoriesMapper, VersionsHelper}
 import com.codacy.plugins.api.results.{Pattern, Result}
 
 class MagentoCSDocsParser extends DocsParser {
 
   override val repositoryURL = "https://github.com/magento/marketplace-eqp.git"
+
+  override def checkoutCommit: String = VersionsHelper.magento
 
   private[this] val sniffRegex = """.*(MEQP1|MEQP2)\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
 

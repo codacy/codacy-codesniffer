@@ -1,12 +1,14 @@
 package codacy.codesniffer.docsgen.parsers
 
 import better.files.File
-import codacy.codesniffer.docsgen.CategoriesMapper
+import codacy.codesniffer.docsgen.{CategoriesMapper, VersionsHelper}
 import com.codacy.plugins.api.results.{Pattern, Result}
 
 class PHPCompatibilityDocsParser extends DocsParser {
 
   override val repositoryURL = "https://github.com/PHPCompatibility/PHPCompatibility.git"
+
+  override def checkoutCommit: String = VersionsHelper.phpCompatibility
 
   private[this] val sniffRegex = """.*PHPCompatibility\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
 
@@ -25,7 +27,10 @@ class PHPCompatibilityDocsParser extends DocsParser {
     }).toSet
   }
 
-  private[this] def handlePattern(rootDir: File, sourceFile: File, sniffType: String, patternName: String): PatternDocs = {
+  private[this] def handlePattern(rootDir: File,
+                                  sourceFile: File,
+                                  sniffType: String,
+                                  patternName: String): PatternDocs = {
     val patternId = Pattern.Id(s"${patternsPrefix}_${sniffType}_$patternName")
     val spec = Pattern.Specification(patternId,
                                      findIssueType(sourceFile).getOrElse(Result.Level.Warn),

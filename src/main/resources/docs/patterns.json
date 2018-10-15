@@ -1,6 +1,6 @@
 {
   "name" : "PHP Code Sniffer",
-  "version" : null,
+  "version" : "3.3.2",
   "patterns" : [ {
     "patternId" : "Generic_Arrays_ArrayIndent",
     "level" : "Warning",
@@ -358,10 +358,6 @@
       "name" : "allowMultiline",
       "default" : false
     } ]
-  }, {
-    "patternId" : "Generic_VersionControl_GitMergeConflict",
-    "level" : "Error",
-    "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_VersionControl_SubversionProperties",
     "level" : "Error",
@@ -2277,7 +2273,7 @@
   }, {
     "patternId" : "WordPress_WP_PreparedSQL",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Security"
   }, {
     "patternId" : "WordPress_WP_TimezoneChange",
     "level" : "Warning",
@@ -2341,7 +2337,7 @@
   }, {
     "patternId" : "WordPress_XSS_EscapeOutput",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "Security"
   }, {
     "patternId" : "Zend_Debug_CodeAnalyzer",
     "level" : "Warning",

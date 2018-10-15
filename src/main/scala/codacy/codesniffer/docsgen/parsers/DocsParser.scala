@@ -11,18 +11,21 @@ case class PatternDocs(pattern: Pattern.Specification, description: Pattern.Desc
 trait DocsParser {
   def repositoryURL: String
 
+  def checkoutCommit: String
+
   def handleRepo(dir: File): Set[PatternDocs]
 
   def patterns: Set[PatternDocs] =
-    withRepo(repositoryURL)(handleRepo)
+    withRepo(repositoryURL, checkoutCommit)(handleRepo)
       .fold(a => throw a, identity)
 
-  private[this] def withRepo[A](repositoryURL: String)(f: File => A): Either[Throwable, A] = {
+  private[this] def withRepo[A](repositoryURL: String, checkoutCommit: String)(f: File => A): Either[Throwable, A] = {
     val dir = Files.createTempDirectory("")
     for {
       _ <- CommandRunner
         .exec(List("git", "clone", repositoryURL, dir.toString))
         .right
+      _ <- CommandRunner.exec(List("git", "checkout", checkoutCommit), Some(dir.toFile))
       res = f(dir)
       _ <- CommandRunner.exec(List("rm", "-rf", dir.toString)).right
     } yield {
