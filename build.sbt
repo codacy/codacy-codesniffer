@@ -34,7 +34,7 @@ val installAll =
      |&& composer global require "squizlabs/php_codesniffer=3.3.2"
      |&& ln -s $$COMPOSER_HOME/vendor/bin/phpcs /usr/bin/phpcs
      |&& git clone --branch 1.1.0 https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git wpcs
-     |&& git clone --branch 1.0.5 https://github.com/magento/marketplace-eqp.git magentocs
+     |&& (git clone https://github.com/magento/marketplace-eqp.git magentocs && cd magentocs && git checkout 0c867c7a08a8ac80cd2b41af381af72b4cb23777)
      |&& git clone --branch 9.0.0 https://github.com/wimg/PHPCompatibility.git phpcompatibility
      |&& phpcs --config-set installed_paths $$(pwd)/wpcs,$$(pwd)/magentocs,$$(pwd)/phpcompatibility
      |&& apk del curl git
