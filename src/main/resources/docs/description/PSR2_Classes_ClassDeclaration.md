@@ -1,0 +1,15 @@
+There should be exactly 1 space between the abstract or final keyword and the class keyword and between the class keyword and the class name.  The extends and implements keywords, if present, must be on the same line as the class name.  When interfaces implemented are spread over multiple lines, there should be exactly 1 interface mentioned per line indented by 1 level.  The closing brace of the class must go on the first line after the body of the class and must be on a line by itself.
+
+Valid: Correct spacing around class keyword.
+```
+abstract class Foo
+{
+}
+```
+
+Invalid: 2 spaces used around class keyword.
+```
+abstract  class  Foo
+{
+}
+```

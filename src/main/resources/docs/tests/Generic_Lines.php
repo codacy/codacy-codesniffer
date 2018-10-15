@@ -1,19 +1,11 @@
-//#Patterns: Generic_Files_LineLength, Generic_Files_LineEndings
-//#Patterns: Generic_WhiteSpace_ScopeIndent
-
 <?php
+//#Patterns: Generic_Files_LineLength : { "absoluteLineLimit": 50, "ignoreComments" : true }
 
-##Issue: {"severity": "Info", "line": 1, "patternId": "Generic_Files_LineEndings"}
-//#Info: Generic_Files_LineLength
+//#Err: Generic_Files_LineLength
 echo "asdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaadadaasdadaasdadaasdadaasdadaasdada";
-echo "asdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaadadaasdadaasdadaasdadaasdadaasda";
+//#Err: Generic_Files_LineLength
+echo "asdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasda";
+//#Err: Generic_Files_LineLength
+echo "asdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasdad";
 
-    echo "tabs";
-
-class Example {
-    //#Info: Generic_WhiteSpace_ScopeIndent
-	const TABS=4;
-
-    public function spaces() {}
-}
 ?>

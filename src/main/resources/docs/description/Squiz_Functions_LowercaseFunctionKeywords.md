@@ -1,13 +1,17 @@
-PHP keywords should be written in lowercase:
+The php keywords function, public, private, protected, and static should be lowercase.
 
-    function example()
-    {
-    }
+Valid: Lowercase function keyword.
+```
+function foo()
+{
+    return true;
+}
+```
 
-Instead of:
-
-    Function example()
-    {
-    }
-
-      
+Invalid: Uppercase function keyword.
+```
+FUNCTION foo()
+{
+    return true;
+}
+```

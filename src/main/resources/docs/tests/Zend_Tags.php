@@ -13,5 +13,5 @@ class my_class
 
 }
 
-//#Info: Zend_Files_ClosingTag
+//#Warn: Zend_Files_ClosingTag
 ?>

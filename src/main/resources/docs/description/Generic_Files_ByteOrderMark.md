@@ -1,2 +1,1 @@
-In order to maintain compatibility across systems and languages, your files must be encoded with UTF-8 without BOOM
-      
+Byte Order Marks that may corrupt your application should not be used.  These include 0xefbbbf (UTF-8), 0xfeff (UTF-16 BE) and 0xfffe (UTF-16 LE).

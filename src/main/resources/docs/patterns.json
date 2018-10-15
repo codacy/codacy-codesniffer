@@ -1,870 +1,2354 @@
 {
-  "name": "PHP Code Sniffer",
-  "patterns": [
-    {
-      "patternId": "Generic_ControlStructures_InlineControlStructure",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "Generic_Files_LineEndings",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "Generic_Files_LineLength",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "lineLimit",
-          "default": 120
-        },
-        {
-          "name": "absoluteLineLimit",
-          "default": 0
-        }
-      ]
-    },
-    {
-      "patternId": "Generic_Functions_FunctionCallArgumentSpacing",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "Generic_Formatting_DisallowMultipleStatements",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "Generic_NamingConventions_UpperCaseConstantName",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "Generic_PHP_LowerCaseConstant",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "Generic_PHP_LowerCaseKeyword",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "Generic_WhiteSpace_ScopeIndent",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "PEAR_Functions_ValidDefaultValue",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "PSR1_Classes_ClassDeclaration",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "Squiz_Classes_ValidClassName",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "Squiz_ControlStructures_ControlSignature",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "Squiz_Functions_LowercaseFunctionKeywords",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "Squiz_Functions_FunctionDeclarationArgumentSpacing",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "equalsSpacing",
-          "default": 1
-        },
-        {
-          "name": "requiredSpacesAfterOpen",
-          "default": 0
-        },
-        {
-          "name": "requiredSpacesBeforeClose",
-          "default": 0
-        }
-      ]
-    },
-    {
-      "patternId": "Squiz_Scope_MethodScope",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "Squiz_WhiteSpace_SuperfluousWhitespace",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "Squiz_WhiteSpace_ScopeKeywordSpacing",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "Zend_Files_ClosingTag",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "Generic_Arrays_DisallowLongArraySyntax",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_Arrays_ArrayAssignmentRestrictions",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_Arrays_ArrayDeclaration",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_Arrays_ArrayDeclarationSpacing",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_Arrays_ArrayKeySpacingRestrictions",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_CSRF_NonceVerification",
-      "level": "Warning",
-      "category": "Security"
-    },
-    {
-      "patternId": "WordPress_DB_RestrictedClasses",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_Files_FileName",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_Functions_DontExtract",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_Functions_FunctionRestrictions",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_NamingConventions_ValidFunctionName",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_NamingConventions_ValidHookName",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_NamingConventions_ValidVariableName",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_PHP_DevelopmentFunctions",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_PHP_DiscouragedFunctions",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_PHP_DiscouragedPHPFunctions",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_PHP_POSIXFunctions",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_PHP_StrictComparisons",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_PHP_StrictInArray",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_PHP_YodaConditions",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_VIP_AdminBarRemoval",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_VIP_CronInterval",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_VIP_DirectDatabaseQuery",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_VIP_FileSystemWritesDisallow",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_VIP_OrderByRand",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_VIP_PluginMenuSlug",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_VIP_PostsPerPage",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_VIP_RestrictedFunctions",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_VIP_RestrictedVariables",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_VIP_SessionFunctionsUsage",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_VIP_SessionVariableUsage",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_VIP_SlowDBQuery",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_VIP_SuperGlobalInputUsage",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_VIP_TimezoneChange",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_VIP_ValidatedSanitizedInput",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_Variables_GlobalVariables",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_Variables_VariableRestrictions",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_WP_AlternativeFunctions",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_WP_DeprecatedFunctions",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_WP_DiscouragedFunctions",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_WP_EnqueuedResources",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_WP_I18n",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_WP_PreparedSQL",
-      "level": "Warning",
-      "category": "Security"
-    },
-    {
-      "patternId": "WordPress_WhiteSpace_CastStructureSpacing",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_WhiteSpace_ControlStructureSpacing",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_WhiteSpace_OperatorSpacing",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "WordPress_XSS_EscapeOutput",
-      "level": "Warning",
-      "category": "Security"
-    },
-    {
-      "patternId": "MEQP1_Security_LanguageConstruct_DirectOutput",
-      "level": "Warning",
-      "category": "Security"
-    },
-    {
-      "patternId": "MEQP1_CodeAnalysis_EmptyBlock_DetectedCATCH",
-      "level": "Warning",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP1_CodeAnalysis_EmptyBlock_DetectedCLASS",
-      "level": "Warning",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP1_CodeAnalysis_EmptyBlock_DetectedDO",
-      "level": "Warning",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP1_CodeAnalysis_EmptyBlock_DetectedELSE",
-      "level": "Warning",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP1_CodeAnalysis_EmptyBlock_DetectedELSEIF",
-      "level": "Warning",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP1_CodeAnalysis_EmptyBlock_DetectedFOR",
-      "level": "Warning",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP1_CodeAnalysis_EmptyBlock_DetectedFOREACH",
-      "level": "Warning",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP1_CodeAnalysis_EmptyBlock_DetectedFUNCTION",
-      "level": "Warning",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP1_CodeAnalysis_EmptyBlock_DetectedIF",
-      "level": "Warning",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP1_CodeAnalysis_EmptyBlock_DetectedINTERFACE",
-      "level": "Warning",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP1_CodeAnalysis_EmptyBlock_DetectedSWITCH",
-      "level": "Warning",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP1_CodeAnalysis_EmptyBlock_DetectedTRAIT",
-      "level": "Warning",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP1_CodeAnalysis_EmptyBlock_DetectedTRY",
-      "level": "Warning",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP1_CodeAnalysis_EmptyBlock_DetectedWHILE",
-      "level": "Warning",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP1_Exceptions_DirectThrow_FoundDirectThrow",
-      "level": "Warning",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP1_Exceptions_Namespace",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP1_Performance_CollectionCount",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP1_Performance_EmptyCheck",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP1_Performance_InefficientMethods",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP1_Performance_Loop",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP1_PHP_Goto",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP1_PHP_Var",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP1_Security_DiscouragedFunction",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP1_Security_IncludeFile",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP1_Security_LanguageConstruct",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP1_SQL_RawQuery",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP1_SQL_SlowQuery",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP1_Strings_RegEx",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP1_Strings_StringConcat",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP1_Strings_StringPosition",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP2_Classes_ObjectInstantiation",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP2_Templates_ThisInTemplate",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP2_Templates_RawJavaScript",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "MEQP2_Templates_XssTemplate",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_CaseSensitiveKeywords",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_ConstantArraysUsingConst",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_ConstantArraysUsingDefine",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_DeprecatedFunctions",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_DeprecatedIniDirectives",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_DeprecatedMagicAutoload",
-      "level": "Warning",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_DeprecatedNewReference",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_DeprecatedPHP4StyleConstructors",
-      "level": "Warning",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_DeprecatedTypeCasts",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_DynamicAccessToStatic",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_EmptyNonVariable",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_ForbiddenBreakContinueOutsideLoop",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_ForbiddenBreakContinueVariableArguments",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_ForbiddenCallTimePassByReference",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_ForbiddenClosureUseVariableNames",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_ForbiddenEmptyListAssignment",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_ForbiddenFunctionParametersWithSameName",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_ForbiddenGlobalVariableVariable",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_ForbiddenNamesAsDeclared",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_ForbiddenNamesAsInvokedFunctions",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_ForbiddenNames",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_ForbiddenNegativeBitshift",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_ForbiddenSwitchWithMultipleDefaultBlocks",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_InternalInterfaces",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_LateStaticBinding",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_MbstringReplaceEModifier",
-      "level": "Warning",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_NewAnonymousClasses",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_NewArrayStringDereferencing",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_NewClasses",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_NewClosure",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_NewConstVisibility",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_NewConstants",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_NewExecutionDirectives",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_NewFunctionArrayDereferencing",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_NewFunctionParameters",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_NewFunctions",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_NewGroupUseDeclarations",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_NewHashAlgorithms",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_NewHeredocInitialize",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_NewIniDirectives",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_NewInterfaces",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_NewKeywords",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_NewLanguageConstructs",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_NewMagicClassConstant",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_NewMagicMethods",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_NewMultiCatch",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_NewNullableTypes",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_NewReturnTypeDeclarations",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_NewScalarTypeDeclarations",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_NewTypeCasts",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_NewUseConstFunction",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_NonStaticMagicMethods",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_OptionalRequiredFunctionParameters",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_ParameterShadowSuperGlobals",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_PregReplaceEModifier",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_RemovedAlternativePHPTags",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_RemovedConstants",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_RemovedExtensions",
-      "level": "Error",
-      "category": "Compatibility",
-      "parameters": [
-        {
-          "name": "functionWhitelist",
-          "default": ""
-        }
-      ]
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_RemovedFunctionParameters",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_RemovedGlobalVariables",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_RemovedHashAlgorithms",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_RequiredOptionalFunctionParameters",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_ShortArray",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_TernaryOperators",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_ValidIntegers",
-      "level": "Error",
-      "category": "Compatibility"
-    },
-    {
-      "patternId": "PHPCompatibility_PHP_VariableVariables",
-      "level": "Error",
-      "category": "Compatibility"
-    }
-  ]
+  "name" : "PHP Code Sniffer",
+  "version" : "3.3.2",
+  "patterns" : [ {
+    "patternId" : "Generic_Arrays_ArrayIndent",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "indent",
+      "default" : 4
+    } ]
+  }, {
+    "patternId" : "Generic_Arrays_DisallowLongArraySyntax",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_Arrays_DisallowShortArraySyntax",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_Classes_DuplicateClassName",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_Classes_OpeningBraceSameLine",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_CodeAnalysis_AssignmentInCondition",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_CodeAnalysis_EmptyStatement",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_CodeAnalysis_ForLoopShouldBeWhileLoop",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_CodeAnalysis_ForLoopWithTestFunctionCall",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_CodeAnalysis_JumbledIncrementer",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_CodeAnalysis_UnconditionalIfStatement",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_CodeAnalysis_UnnecessaryFinalModifier",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_CodeAnalysis_UnusedFunctionParameter",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_CodeAnalysis_UselessOverridingMethod",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_Commenting_DocComment",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_Commenting_Fixme",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_Commenting_Todo",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_ControlStructures_InlineControlStructure",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "error",
+      "default" : true
+    } ]
+  }, {
+    "patternId" : "Generic_Debug_CSSLint",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['CSS']"
+    } ]
+  }, {
+    "patternId" : "Generic_Debug_ClosureLinter",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "errorCodes",
+      "default" : [ ]
+    }, {
+      "name" : "ignoreCodes",
+      "default" : [ ]
+    }, {
+      "name" : "supportedTokenizers",
+      "default" : "['JS']"
+    } ]
+  }, {
+    "patternId" : "Generic_Debug_ESLint",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['JS']"
+    }, {
+      "name" : "configFile",
+      "default" : null
+    } ]
+  }, {
+    "patternId" : "Generic_Debug_JSHint",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['JS']"
+    } ]
+  }, {
+    "patternId" : "Generic_Files_ByteOrderMark",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_Files_EndFileNewline",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_Files_EndFileNoNewline",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_Files_InlineHTML",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_Files_LineEndings",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "eolChar",
+      "default" : "'\\n'"
+    } ]
+  }, {
+    "patternId" : "Generic_Files_LineLength",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "lineLimit",
+      "default" : 80
+    }, {
+      "name" : "absoluteLineLimit",
+      "default" : 100
+    }, {
+      "name" : "ignoreComments",
+      "default" : false
+    } ]
+  }, {
+    "patternId" : "Generic_Files_LowercasedFilename",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_Files_OneClassPerFile",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_Files_OneInterfacePerFile",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_Files_OneObjectStructurePerFile",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_Files_OneTraitPerFile",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_Formatting_DisallowMultipleStatements",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_Formatting_MultipleStatementAlignment",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "error",
+      "default" : false
+    }, {
+      "name" : "maxPadding",
+      "default" : 1000
+    } ]
+  }, {
+    "patternId" : "Generic_Formatting_NoSpaceAfterCast",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_Formatting_SpaceAfterCast",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_Formatting_SpaceAfterNot",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_Functions_CallTimePassByReference",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_Functions_FunctionCallArgumentSpacing",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_Functions_OpeningFunctionBraceBsdAllman",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "checkFunctions",
+      "default" : true
+    }, {
+      "name" : "checkClosures",
+      "default" : false
+    } ]
+  }, {
+    "patternId" : "Generic_Functions_OpeningFunctionBraceKernighanRitchie",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "checkFunctions",
+      "default" : true
+    }, {
+      "name" : "checkClosures",
+      "default" : false
+    } ]
+  }, {
+    "patternId" : "Generic_Metrics_CyclomaticComplexity",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "complexity",
+      "default" : 10
+    }, {
+      "name" : "absoluteComplexity",
+      "default" : 20
+    } ]
+  }, {
+    "patternId" : "Generic_Metrics_NestingLevel",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "nestingLevel",
+      "default" : 5
+    }, {
+      "name" : "absoluteNestingLevel",
+      "default" : 10
+    } ]
+  }, {
+    "patternId" : "Generic_NamingConventions_CamelCapsFunctionName",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "strict",
+      "default" : true
+    } ]
+  }, {
+    "patternId" : "Generic_NamingConventions_ConstructorName",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_NamingConventions_UpperCaseConstantName",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_PHP_BacktickOperator",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_PHP_CharacterBeforePHPOpeningTag",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_PHP_ClosingPHPTag",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_PHP_DeprecatedFunctions",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "forbiddenFunctions",
+      "default" : [ ]
+    } ]
+  }, {
+    "patternId" : "Generic_PHP_DisallowAlternativePHPTags",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_PHP_DisallowShortOpenTag",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_PHP_DiscourageGoto",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_PHP_ForbiddenFunctions",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "error",
+      "default" : true
+    } ]
+  }, {
+    "patternId" : "Generic_PHP_LowerCaseConstant",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_PHP_LowerCaseKeyword",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_PHP_LowerCaseType",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_PHP_NoSilencedErrors",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "error",
+      "default" : false
+    } ]
+  }, {
+    "patternId" : "Generic_PHP_SAPIUsage",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_PHP_Syntax",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_PHP_UpperCaseConstant",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_Strings_UnnecessaryStringConcat",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "error",
+      "default" : true
+    }, {
+      "name" : "allowMultiline",
+      "default" : false
+    } ]
+  }, {
+    "patternId" : "Generic_VersionControl_SubversionProperties",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_WhiteSpace_ArbitraryParenthesesSpacing",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "spacing",
+      "default" : 0
+    }, {
+      "name" : "ignoreNewlines",
+      "default" : false
+    } ]
+  }, {
+    "patternId" : "Generic_WhiteSpace_DisallowSpaceIndent",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_WhiteSpace_DisallowTabIndent",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_WhiteSpace_LanguageConstructSpacing",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_WhiteSpace_ScopeIndent",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "indent",
+      "default" : 4
+    }, {
+      "name" : "exact",
+      "default" : false
+    }, {
+      "name" : "tabIndent",
+      "default" : false
+    }, {
+      "name" : "ignoreIndentationTokens",
+      "default" : [ ]
+    } ]
+  }, {
+    "patternId" : "MEQP1_Classes_Mysql4",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP1_Classes_ObjectInstantiation",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP1_Classes_ResourceModel",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP1_CodeAnalysis_EmptyBlock",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP1_Exceptions_DirectThrow",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP1_Exceptions_Namespace",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP1_PHP_Goto",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP1_PHP_PrivateClassMember",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP1_PHP_Syntax",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP1_PHP_Var",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP1_Performance_CollectionCount",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP1_Performance_EmptyCheck",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP1_Performance_InefficientMethods",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP1_Performance_Loop",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP1_SQL_MissedIndexes",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP1_SQL_RawQuery",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP1_SQL_SlowQuery",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP1_Security_Acl",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
+    "patternId" : "MEQP1_Security_DiscouragedFunction",
+    "level" : "Warning",
+    "category" : "Security"
+  }, {
+    "patternId" : "MEQP1_Security_IncludeFile",
+    "level" : "Warning",
+    "category" : "Security"
+  }, {
+    "patternId" : "MEQP1_Security_LanguageConstruct",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
+    "patternId" : "MEQP1_Security_Superglobal",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
+    "patternId" : "MEQP1_Stdlib_DateTime",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP1_Strings_RegEx",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP1_Strings_StringConcat",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP1_Strings_StringPosition",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP1_Templates_XssTemplate",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP2_Classes_CollectionDependency",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP2_Classes_ConstructorOperations",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP2_Classes_InterfaceName",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP2_Classes_MutableObjects",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP2_Classes_NameResolution",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP2_Classes_ObjectInstantiation",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP2_Classes_ObjectManager",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP2_Classes_PublicNonInterfaceMethods",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP2_Classes_ResourceModel",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP2_Exceptions_DirectThrow",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP2_Legacy_MageEntity",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP2_NamingConventions_ReservedWords",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP2_PHP_ProtectedClassMember",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP2_PHP_Syntax",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP2_SQL_CoreTablesModification",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP2_SQL_MissedIndexes",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP2_Security_Superglobal",
+    "level" : "Warning",
+    "category" : "Security"
+  }, {
+    "patternId" : "MEQP2_Stdlib_DateTime",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP2_Templates_RawJavaScript",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP2_Templates_ThisInTemplate",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP2_Templates_XssTemplate",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MEQP2_Translation_ConstantUsage",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "ignoreComments",
+      "default" : true
+    } ]
+  }, {
+    "patternId" : "MEQP2_Whitespace_MultipleEmptyLines",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MySource_CSS_BrowserSpecificStyles",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['CSS']"
+    } ]
+  }, {
+    "patternId" : "MySource_Channels_DisallowSelfActions",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MySource_Channels_IncludeOwnSystem",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MySource_Channels_IncludeSystem",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MySource_Channels_UnusedSystem",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MySource_Commenting_FunctionComment",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MySource_Debug_DebugCode",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MySource_Debug_FirebugConsole",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['JS']"
+    } ]
+  }, {
+    "patternId" : "MySource_Objects_AssignThis",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['JS']"
+    } ]
+  }, {
+    "patternId" : "MySource_Objects_CreateWidgetTypeCallback",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['JS']"
+    } ]
+  }, {
+    "patternId" : "MySource_Objects_DisallowNewWidget",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MySource_PHP_AjaxNullComparison",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MySource_PHP_EvalObjectFactory",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MySource_PHP_GetRequestData",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MySource_PHP_ReturnFunctionValue",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "MySource_Strings_JoinStrings",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['JS']"
+    } ]
+  }, {
+    "patternId" : "PEAR_Classes_ClassDeclaration",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PEAR_Commenting_ClassComment",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PEAR_Commenting_FileComment",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PEAR_Commenting_FunctionComment",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PEAR_Commenting_InlineComment",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PEAR_ControlStructures_ControlSignature",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "ignoreComments",
+      "default" : true
+    } ]
+  }, {
+    "patternId" : "PEAR_ControlStructures_MultiLineCondition",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "indent",
+      "default" : 4
+    } ]
+  }, {
+    "patternId" : "PEAR_Files_IncludingFile",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PEAR_Formatting_MultiLineAssignment",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "indent",
+      "default" : 4
+    } ]
+  }, {
+    "patternId" : "PEAR_Functions_FunctionCallSignature",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "indent",
+      "default" : 4
+    }, {
+      "name" : "allowMultipleArguments",
+      "default" : true
+    }, {
+      "name" : "requiredSpacesAfterOpen",
+      "default" : 0
+    }, {
+      "name" : "requiredSpacesBeforeClose",
+      "default" : 0
+    } ]
+  }, {
+    "patternId" : "PEAR_Functions_FunctionDeclaration",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "indent",
+      "default" : 4
+    } ]
+  }, {
+    "patternId" : "PEAR_Functions_ValidDefaultValue",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PEAR_NamingConventions_ValidClassName",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PEAR_NamingConventions_ValidFunctionName",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PEAR_NamingConventions_ValidVariableName",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PEAR_WhiteSpace_ObjectOperatorIndent",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "indent",
+      "default" : 4
+    } ]
+  }, {
+    "patternId" : "PEAR_WhiteSpace_ScopeClosingBrace",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "indent",
+      "default" : 4
+    } ]
+  }, {
+    "patternId" : "PEAR_WhiteSpace_ScopeIndent",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PHPCompatibility_Classes_NewAnonymousClasses",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Classes_NewClasses",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Classes_NewConstVisibility",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Classes_NewLateStaticBinding",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Constants_NewConstants",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Constants_NewMagicClassConstant",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Constants_RemovedConstants",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_ControlStructures_DiscouragedSwitchContinue",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_ControlStructures_ForbiddenBreakContinueOutsideLoop",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_ControlStructures_ForbiddenBreakContinueVariableArguments",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_ControlStructures_ForbiddenSwitchWithMultipleDefaultBlocks",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_ControlStructures_NewExecutionDirectives",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_ControlStructures_NewForeachExpressionReferencing",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_ControlStructures_NewListInForeach",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_ControlStructures_NewMultiCatch",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Extensions_RemovedExtensions",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_FunctionDeclarations_ForbiddenParameterShadowSuperGlobals",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_FunctionDeclarations_ForbiddenParametersWithSameName",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_FunctionDeclarations_ForbiddenVariableNamesInClosureUse",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_FunctionDeclarations_NewClosure",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_FunctionDeclarations_NewNullableTypes",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_FunctionDeclarations_NewParamTypeDeclarations",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_FunctionDeclarations_NewReturnTypeDeclarations",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_FunctionDeclarations_NonStaticMagicMethods",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_FunctionNameRestrictions_NewMagicMethods",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_FunctionNameRestrictions_RemovedMagicAutoload",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_FunctionNameRestrictions_RemovedNamespacedAssert",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_FunctionNameRestrictions_RemovedPHP4StyleConstructors",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_FunctionNameRestrictions_ReservedFunctionNames",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_FunctionUse_ArgumentFunctionsUsage",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_FunctionUse_NewFunctionParameters",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_FunctionUse_NewFunctions",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_FunctionUse_OptionalToRequiredFunctionParameters",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_FunctionUse_RemovedFunctionParameters",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_FunctionUse_RemovedFunctions",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_FunctionUse_RequiredToOptionalFunctionParameters",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Generators_NewGeneratorReturn",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_IniDirectives_NewIniDirectives",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_IniDirectives_RemovedIniDirectives",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_InitialValue_NewConstantArraysUsingConst",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_InitialValue_NewConstantArraysUsingDefine",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_InitialValue_NewConstantScalarExpressions",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_InitialValue_NewHeredoc",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Interfaces_InternalInterfaces",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Interfaces_NewInterfaces",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Keywords_CaseSensitiveKeywords",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Keywords_ForbiddenNames",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Keywords_ForbiddenNamesAsDeclared",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Keywords_ForbiddenNamesAsInvokedFunctions",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Keywords_NewKeywords",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_LanguageConstructs_NewEmptyNonVariable",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_LanguageConstructs_NewLanguageConstructs",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Lists_AssignmentOrder",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Lists_ForbiddenEmptyListAssignment",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Lists_NewKeyedList",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Lists_NewListReferenceAssignment",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Lists_NewShortList",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Miscellaneous_RemovedAlternativePHPTags",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Miscellaneous_ValidIntegers",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Operators_ForbiddenNegativeBitshift",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Operators_NewOperators",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Operators_NewShortTernary",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_ParameterValues_ForbiddenGetClassNull",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_ParameterValues_NewArrayReduceInitialType",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_ParameterValues_NewFopenModes",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_ParameterValues_NewHashAlgorithms",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_ParameterValues_NewNegativeStringOffset",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_ParameterValues_NewPCREModifiers",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_ParameterValues_NewPackFormat",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_ParameterValues_RemovedHashAlgorithms",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_ParameterValues_RemovedIconvEncoding",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_ParameterValues_RemovedMbstringModifiers",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_ParameterValues_RemovedNonCryptoHash",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_ParameterValues_RemovedPCREModifiers",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_ParameterValues_RemovedSetlocaleString",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Syntax_ForbiddenCallTimePassByReference",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Syntax_NewArrayStringDereferencing",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Syntax_NewClassMemberAccess",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Syntax_NewDynamicAccessToStatic",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Syntax_NewFlexibleHeredocNowdoc",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Syntax_NewFunctionArrayDereferencing",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Syntax_NewFunctionCallTrailingComma",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Syntax_NewShortArray",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Syntax_RemovedNewReference",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_TypeCasts_NewTypeCasts",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_TypeCasts_RemovedTypeCasts",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Upgrade_LowPHPCS",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_UseDeclarations_NewGroupUseDeclarations",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_UseDeclarations_NewUseConstFunction",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Variables_ForbiddenGlobalVariableVariable",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Variables_NewUniformVariableSyntax",
+    "level" : "Error",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Variables_RemovedPredefinedGlobalVariables",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PSR12_Classes_ClassInstantiation",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PSR12_Keywords_ShortFormTypeKeywords",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PSR12_Namespaces_CompoundNamespaceDepth",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "maxDepth",
+      "default" : 2
+    } ]
+  }, {
+    "patternId" : "PSR12_Operators_OperatorSpacing",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PSR1_Classes_ClassDeclaration",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PSR1_Files_SideEffects",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PSR1_Methods_CamelCapsMethodName",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PSR2_Classes_ClassDeclaration",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "indent",
+      "default" : 4
+    } ]
+  }, {
+    "patternId" : "PSR2_Classes_PropertyDeclaration",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PSR2_ControlStructures_ControlStructureSpacing",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "requiredSpacesAfterOpen",
+      "default" : 0
+    }, {
+      "name" : "requiredSpacesBeforeClose",
+      "default" : 0
+    } ]
+  }, {
+    "patternId" : "PSR2_ControlStructures_ElseIfDeclaration",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PSR2_ControlStructures_SwitchDeclaration",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "indent",
+      "default" : 4
+    } ]
+  }, {
+    "patternId" : "PSR2_Files_ClosingTag",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PSR2_Files_EndFileNewline",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PSR2_Methods_FunctionCallSignature",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "allowMultipleArguments",
+      "default" : false
+    } ]
+  }, {
+    "patternId" : "PSR2_Methods_FunctionClosingBrace",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PSR2_Methods_MethodDeclaration",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PSR2_Namespaces_NamespaceDeclaration",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PSR2_Namespaces_UseDeclaration",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Arrays_ArrayBracketSpacing",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Arrays_ArrayDeclaration",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_CSS_ClassDefinitionClosingBraceSpace",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['CSS']"
+    } ]
+  }, {
+    "patternId" : "Squiz_CSS_ClassDefinitionNameSpacing",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['CSS']"
+    } ]
+  }, {
+    "patternId" : "Squiz_CSS_ClassDefinitionOpeningBraceSpace",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['CSS']"
+    } ]
+  }, {
+    "patternId" : "Squiz_CSS_ColonSpacing",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['CSS']"
+    } ]
+  }, {
+    "patternId" : "Squiz_CSS_ColourDefinition",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['CSS']"
+    } ]
+  }, {
+    "patternId" : "Squiz_CSS_DisallowMultipleStyleDefinitions",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['CSS']"
+    } ]
+  }, {
+    "patternId" : "Squiz_CSS_DuplicateClassDefinition",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['CSS']"
+    } ]
+  }, {
+    "patternId" : "Squiz_CSS_DuplicateStyleDefinition",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['CSS']"
+    } ]
+  }, {
+    "patternId" : "Squiz_CSS_EmptyClassDefinition",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['CSS']"
+    } ]
+  }, {
+    "patternId" : "Squiz_CSS_EmptyStyleDefinition",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['CSS']"
+    } ]
+  }, {
+    "patternId" : "Squiz_CSS_ForbiddenStyles",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['CSS']"
+    }, {
+      "name" : "error",
+      "default" : true
+    } ]
+  }, {
+    "patternId" : "Squiz_CSS_Indentation",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['CSS']"
+    }, {
+      "name" : "indent",
+      "default" : 4
+    } ]
+  }, {
+    "patternId" : "Squiz_CSS_LowercaseStyleDefinition",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['CSS']"
+    } ]
+  }, {
+    "patternId" : "Squiz_CSS_MissingColon",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['CSS']"
+    } ]
+  }, {
+    "patternId" : "Squiz_CSS_NamedColours",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['CSS']"
+    } ]
+  }, {
+    "patternId" : "Squiz_CSS_Opacity",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['CSS']"
+    } ]
+  }, {
+    "patternId" : "Squiz_CSS_SemicolonSpacing",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['CSS']"
+    } ]
+  }, {
+    "patternId" : "Squiz_CSS_ShorthandSize",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['CSS']"
+    } ]
+  }, {
+    "patternId" : "Squiz_Classes_ClassDeclaration",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Classes_ClassFileName",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Classes_DuplicateProperty",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['JS']"
+    } ]
+  }, {
+    "patternId" : "Squiz_Classes_LowercaseClassKeywords",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Classes_SelfMemberReference",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Classes_ValidClassName",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Commenting_BlockComment",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Commenting_ClassComment",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Commenting_ClosingDeclarationComment",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Commenting_DocCommentAlignment",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Commenting_EmptyCatchComment",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Commenting_FileComment",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Commenting_FunctionComment",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Commenting_FunctionCommentThrowTag",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Commenting_InlineComment",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Commenting_LongConditionClosingComment",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "lineLimit",
+      "default" : 20
+    }, {
+      "name" : "commentFormat",
+      "default" : "'//end %s'"
+    } ]
+  }, {
+    "patternId" : "Squiz_Commenting_PostStatementComment",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Commenting_VariableComment",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_ControlStructures_ControlSignature",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "requiredSpacesBeforeColon",
+      "default" : 1
+    } ]
+  }, {
+    "patternId" : "Squiz_ControlStructures_ElseIfDeclaration",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_ControlStructures_ForEachLoopDeclaration",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "requiredSpacesAfterOpen",
+      "default" : 0
+    }, {
+      "name" : "requiredSpacesBeforeClose",
+      "default" : 0
+    } ]
+  }, {
+    "patternId" : "Squiz_ControlStructures_ForLoopDeclaration",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "requiredSpacesAfterOpen",
+      "default" : 0
+    }, {
+      "name" : "requiredSpacesBeforeClose",
+      "default" : 0
+    } ]
+  }, {
+    "patternId" : "Squiz_ControlStructures_InlineIfDeclaration",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_ControlStructures_LowercaseDeclaration",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_ControlStructures_SwitchDeclaration",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "indent",
+      "default" : 4
+    } ]
+  }, {
+    "patternId" : "Squiz_Debug_JSLint",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['JS']"
+    } ]
+  }, {
+    "patternId" : "Squiz_Debug_JavaScriptLint",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['JS']"
+    } ]
+  }, {
+    "patternId" : "Squiz_Files_FileExtension",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Formatting_OperatorBracket",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Functions_FunctionDeclaration",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Functions_FunctionDeclarationArgumentSpacing",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "equalsSpacing",
+      "default" : 0
+    }, {
+      "name" : "requiredSpacesAfterOpen",
+      "default" : 0
+    }, {
+      "name" : "requiredSpacesBeforeClose",
+      "default" : 0
+    } ]
+  }, {
+    "patternId" : "Squiz_Functions_FunctionDuplicateArgument",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Functions_GlobalFunction",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Functions_LowercaseFunctionKeywords",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Functions_MultiLineFunctionDeclaration",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_NamingConventions_ValidFunctionName",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_NamingConventions_ValidVariableName",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Objects_DisallowObjectStringIndex",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['JS']"
+    } ]
+  }, {
+    "patternId" : "Squiz_Objects_ObjectInstantiation",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Objects_ObjectMemberComma",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['JS']"
+    } ]
+  }, {
+    "patternId" : "Squiz_Operators_ComparisonOperatorUsage",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Operators_IncrementDecrementUsage",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Operators_ValidLogicalOperators",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_PHP_CommentedOutCode",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "maxPercentage",
+      "default" : 35
+    } ]
+  }, {
+    "patternId" : "Squiz_PHP_DisallowBooleanStatement",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_PHP_DisallowComparisonAssignment",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_PHP_DisallowInlineIf",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_PHP_DisallowMultipleAssignments",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_PHP_DisallowSizeFunctionsInLoops",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_PHP_DiscouragedFunctions",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "error",
+      "default" : false
+    } ]
+  }, {
+    "patternId" : "Squiz_PHP_EmbeddedPhp",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_PHP_Eval",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_PHP_GlobalKeyword",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_PHP_Heredoc",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_PHP_InnerFunctions",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_PHP_LowercasePHPFunctions",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_PHP_NonExecutableCode",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Scope_MemberVarScope",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Scope_MethodScope",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Scope_StaticThisUsage",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Strings_ConcatenationSpacing",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "spacing",
+      "default" : 0
+    }, {
+      "name" : "ignoreNewlines",
+      "default" : false
+    } ]
+  }, {
+    "patternId" : "Squiz_Strings_DoubleQuoteUsage",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_Strings_EchoedStrings",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_WhiteSpace_CastSpacing",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_WhiteSpace_ControlStructureSpacing",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_WhiteSpace_FunctionClosingBraceSpace",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_WhiteSpace_FunctionOpeningBraceSpace",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_WhiteSpace_FunctionSpacing",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "spacing",
+      "default" : 2
+    }, {
+      "name" : "spacingBeforeFirst",
+      "default" : 2
+    }, {
+      "name" : "spacingAfterLast",
+      "default" : 2
+    } ]
+  }, {
+    "patternId" : "Squiz_WhiteSpace_LanguageConstructSpacing",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_WhiteSpace_LogicalOperatorSpacing",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_WhiteSpace_MemberVarSpacing",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "spacing",
+      "default" : 1
+    }, {
+      "name" : "spacingBeforeFirst",
+      "default" : 1
+    } ]
+  }, {
+    "patternId" : "Squiz_WhiteSpace_ObjectOperatorSpacing",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "ignoreNewlines",
+      "default" : false
+    } ]
+  }, {
+    "patternId" : "Squiz_WhiteSpace_OperatorSpacing",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "ignoreNewlines",
+      "default" : false
+    } ]
+  }, {
+    "patternId" : "Squiz_WhiteSpace_PropertyLabelSpacing",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "['JS']"
+    } ]
+  }, {
+    "patternId" : "Squiz_WhiteSpace_ScopeClosingBrace",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_WhiteSpace_ScopeKeywordSpacing",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_WhiteSpace_SemicolonSpacing",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Squiz_WhiteSpace_SuperfluousWhitespace",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "ignoreBlankLines",
+      "default" : false
+    } ]
+  }, {
+    "patternId" : "WordPress_Arrays_ArrayAssignmentRestrictions",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_Arrays_ArrayDeclaration",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_Arrays_ArrayDeclarationSpacing",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "allow_single_item_single_line_associative_arrays",
+      "default" : true
+    } ]
+  }, {
+    "patternId" : "WordPress_Arrays_ArrayIndentation",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "tabIndent",
+      "default" : true
+    } ]
+  }, {
+    "patternId" : "WordPress_Arrays_ArrayKeySpacingRestrictions",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_Arrays_CommaAfterArrayItem",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_Arrays_MultipleStatementAlignment",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "ignoreNewlines",
+      "default" : true
+    }, {
+      "name" : "exact",
+      "default" : true
+    }, {
+      "name" : "maxColumn",
+      "default" : 1000
+    }, {
+      "name" : "alignMultilineItems",
+      "default" : "'always'"
+    } ]
+  }, {
+    "patternId" : "WordPress_CSRF_NonceVerification",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_Classes_ClassInstantiation",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_CodeAnalysis_AssignmentInCondition",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_CodeAnalysis_EmptyStatement",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_DB_DirectDatabaseQuery",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "customCacheGetFunctions",
+      "default" : "array()"
+    }, {
+      "name" : "customCacheSetFunctions",
+      "default" : "array()"
+    }, {
+      "name" : "customCacheDeleteFunctions",
+      "default" : "array()"
+    } ]
+  }, {
+    "patternId" : "WordPress_DB_PreparedSQL",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
+    "patternId" : "WordPress_DB_PreparedSQLPlaceholders",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_DB_RestrictedClasses",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_DB_RestrictedFunctions",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_DB_SlowDBQuery",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_Files_FileName",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "is_theme",
+      "default" : false
+    }, {
+      "name" : "strict_class_file_names",
+      "default" : true
+    } ]
+  }, {
+    "patternId" : "WordPress_Functions_DontExtract",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_Functions_FunctionCallSignatureNoParams",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_Functions_FunctionRestrictions",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_NamingConventions_PrefixAllGlobals",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "prefixes",
+      "default" : "''"
+    } ]
+  }, {
+    "patternId" : "WordPress_NamingConventions_ValidFunctionName",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_NamingConventions_ValidHookName",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "additionalWordDelimiters",
+      "default" : "''"
+    } ]
+  }, {
+    "patternId" : "WordPress_NamingConventions_ValidVariableName",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "customPropertiesWhitelist",
+      "default" : "array()"
+    }, {
+      "name" : "customVariablesWhitelist",
+      "default" : "array()"
+    } ]
+  }, {
+    "patternId" : "WordPress_PHP_DevelopmentFunctions",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_PHP_DiscourageGoto",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_PHP_DiscouragedFunctions",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_PHP_DiscouragedPHPFunctions",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_PHP_DontExtract",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_PHP_NoSilencedErrors",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "context_length",
+      "default" : 6
+    }, {
+      "name" : "use_default_whitelist",
+      "default" : true
+    }, {
+      "name" : "custom_whitelist",
+      "default" : "array()"
+    } ]
+  }, {
+    "patternId" : "WordPress_PHP_POSIXFunctions",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_PHP_PregQuoteDelimiter",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_PHP_RestrictedPHPFunctions",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_PHP_StrictComparisons",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_PHP_StrictInArray",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_PHP_TypeCasts",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_PHP_YodaConditions",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_Security_EscapeOutput",
+    "level" : "Error",
+    "category" : "Security",
+    "parameters" : [ {
+      "name" : "customEscapingFunctions",
+      "default" : "array()"
+    }, {
+      "name" : "customAutoEscapedFunctions",
+      "default" : "array()"
+    }, {
+      "name" : "customSanitizingFunctions",
+      "default" : "array()"
+    }, {
+      "name" : "customPrintingFunctions",
+      "default" : "array()"
+    } ]
+  }, {
+    "patternId" : "WordPress_Security_NonceVerification",
+    "level" : "Warning",
+    "category" : "Security",
+    "parameters" : [ {
+      "name" : "customNonceVerificationFunctions",
+      "default" : "array()"
+    }, {
+      "name" : "customSanitizingFunctions",
+      "default" : "array()"
+    }, {
+      "name" : "customUnslashingSanitizingFunctions",
+      "default" : "array()"
+    } ]
+  }, {
+    "patternId" : "WordPress_Security_PluginMenuSlug",
+    "level" : "Warning",
+    "category" : "Security"
+  }, {
+    "patternId" : "WordPress_Security_SafeRedirect",
+    "level" : "Warning",
+    "category" : "Security"
+  }, {
+    "patternId" : "WordPress_Security_ValidatedSanitizedInput",
+    "level" : "Error",
+    "category" : "Security",
+    "parameters" : [ {
+      "name" : "check_validation_in_scope_only",
+      "default" : false
+    }, {
+      "name" : "customSanitizingFunctions",
+      "default" : "array()"
+    }, {
+      "name" : "customUnslashingSanitizingFunctions",
+      "default" : "array()"
+    } ]
+  }, {
+    "patternId" : "WordPress_VIP_AdminBarRemoval",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "supportedTokenizers",
+      "default" : "array( 'PHP', 'CSS' )"
+    }, {
+      "name" : "remove_only",
+      "default" : true
+    } ]
+  }, {
+    "patternId" : "WordPress_VIP_CronInterval",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "min_interval",
+      "default" : 900
+    } ]
+  }, {
+    "patternId" : "WordPress_VIP_DirectDatabaseQuery",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_VIP_FileSystemWritesDisallow",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "error",
+      "default" : true
+    } ]
+  }, {
+    "patternId" : "WordPress_VIP_OrderByRand",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_VIP_PluginMenuSlug",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_VIP_PostsPerPage",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "posts_per_page",
+      "default" : 100
+    } ]
+  }, {
+    "patternId" : "WordPress_VIP_RestrictedFunctions",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_VIP_RestrictedVariables",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_VIP_SessionFunctionsUsage",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_VIP_SessionVariableUsage",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_VIP_SlowDBQuery",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_VIP_SuperGlobalInputUsage",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_VIP_TimezoneChange",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_VIP_ValidatedSanitizedInput",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_Variables_GlobalVariables",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_Variables_VariableRestrictions",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_WP_AlternativeFunctions",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_WP_CapitalPDangit",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_WP_CronInterval",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "min_interval",
+      "default" : 900
+    } ]
+  }, {
+    "patternId" : "WordPress_WP_DeprecatedClasses",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_WP_DeprecatedFunctions",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_WP_DeprecatedParameterValues",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_WP_DeprecatedParameters",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_WP_DiscouragedConstants",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_WP_DiscouragedFunctions",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_WP_EnqueuedResourceParameters",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_WP_EnqueuedResources",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_WP_GlobalVariablesOverride",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "treat_files_as_scoped",
+      "default" : false
+    } ]
+  }, {
+    "patternId" : "WordPress_WP_I18n",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "check_translator_comments",
+      "default" : true
+    } ]
+  }, {
+    "patternId" : "WordPress_WP_PostsPerPage",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "posts_per_page",
+      "default" : 100
+    } ]
+  }, {
+    "patternId" : "WordPress_WP_PreparedSQL",
+    "level" : "Warning",
+    "category" : "Security"
+  }, {
+    "patternId" : "WordPress_WP_TimezoneChange",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_WhiteSpace_ArbitraryParenthesesSpacing",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "spacingInside",
+      "default" : 0
+    }, {
+      "name" : "ignoreNewlines",
+      "default" : false
+    } ]
+  }, {
+    "patternId" : "WordPress_WhiteSpace_CastStructureSpacing",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_WhiteSpace_ControlStructureSpacing",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "blank_line_check",
+      "default" : false
+    }, {
+      "name" : "blank_line_after_check",
+      "default" : true
+    }, {
+      "name" : "space_before_colon",
+      "default" : "'required'"
+    }, {
+      "name" : "spaces_before_closure_open_paren",
+      "default" : -1
+    } ]
+  }, {
+    "patternId" : "WordPress_WhiteSpace_DisallowInlineTabs",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_WhiteSpace_OperatorSpacing",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "ignoreNewlines",
+      "default" : true
+    } ]
+  }, {
+    "patternId" : "WordPress_WhiteSpace_PrecisionAlignment",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "ignoreAlignmentTokens",
+      "default" : "array()"
+    } ]
+  }, {
+    "patternId" : "WordPress_WhiteSpace_SemicolonSpacing",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_XSS_EscapeOutput",
+    "level" : "Warning",
+    "category" : "Security"
+  }, {
+    "patternId" : "Zend_Debug_CodeAnalyzer",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Zend_Files_ClosingTag",
+    "level" : "Warning",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Zend_NamingConventions_ValidVariableName",
+    "level" : "Error",
+    "category" : "CodeStyle"
+  } ]
 }

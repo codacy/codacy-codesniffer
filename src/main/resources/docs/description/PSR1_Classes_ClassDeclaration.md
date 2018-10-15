@@ -1,14 +1,38 @@
-Having only one class in each file makes it easier to find the class while browsing you project.
+Each class must be in a file by itself and must be under a namespace (a top-level vendor name).
 
-Namespaces were added in PHP 5.3. To declare the namespace simply write:
+Valid: One class in a file.
+```
+<?php
+namespace Foo;
 
-    <?php
+class Bar {
+}
+```
 
-        namespace MyProject;
+Invalid: Multiple classes in a single file.
+```
+<?php
+namespace Foo;
 
-        Class Example() { /* ... */  }
+class Bar {
+}
 
-    ?>
+class Baz {
+}
+```
 
-For more information consult the [documentation](http://www.php.net/manual/en/language.namespaces.php)
+Valid: A vendor-level namespace is used.
+```
+<?php
+namespace Foo;
 
+class Bar {
+}
+```
+
+Invalid: No namespace used in file.
+```
+<?php
+class Bar {
+}
+```

@@ -1,17 +1,21 @@
-Constants must be written in UPPER_CASE.:
+Constants should always be all-uppercase, with underscores to separate words.
 
-    class Foo
-    {
-        const VERSION = '1.0';
-        const START_DATE = '2012-06-01';
-    }
+Valid: all uppercase
+```
+define('FOO_CONSTANT', 'foo');
 
-Instead of:
+class FooClass
+{
+    const FOO_CONSTANT = 'foo';
+}
+```
 
-    class Foo
-    {
-        const version = '1.0';
-        const startDate = '2012-06-01';
-    }
+Invalid: mixed case
+```
+define('Foo_Constant', 'foo');
 
-      
+class FooClass
+{
+    const foo_constant = 'foo';
+}
+```

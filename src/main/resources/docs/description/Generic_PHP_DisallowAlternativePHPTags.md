@@ -1,0 +1,1 @@
+Always use <?php ?> to delimit PHP code, do not use the ASP <% %> style tags nor the <script language="php"></script> tags. This is the most portable way to include PHP code on differing operating systems and setups.

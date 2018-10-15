@@ -1,11 +1,15 @@
-You should use the short syntax for creating an array.
-Instead of:
-    
-    $var = array(
-        'a' => 4,
-        'b' => 2
-    );
+Short array syntax must be used to define arrays.
 
-You should write:
-    
-    $var = ['a' => 4, 'b' => 2];
+Valid: Short form of array.
+```
+$arr = [
+    'foo' => 'bar',
+];
+```
+
+Invalid: Long form of array.
+```
+$arr = array(
+    'foo' => 'bar',
+);
+```

@@ -1,6 +1,6 @@
 package codacy
 
-import codacy.dockerApi.DockerEngine
 import codacy.codesniffer.CodeSniffer
+import com.codacy.tools.scala.seed.DockerEngine
 
-object Engine extends DockerEngine(CodeSniffer)
+object Engine extends DockerEngine(CodeSniffer)()
