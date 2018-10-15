@@ -1200,12 +1200,6 @@
   "patternId" : "Squiz_WhiteSpace_SuperfluousWhitespace",
   "title" : "Superfluous Whitespace"
 }, {
-  "patternId" : "WordPress_Arrays_ArrayAssignmentRestrictions",
-  "title" : "Array Assignment Restrictions"
-}, {
-  "patternId" : "WordPress_Arrays_ArrayDeclaration",
-  "title" : "Array Declaration"
-}, {
   "patternId" : "WordPress_Arrays_ArrayDeclarationSpacing",
   "title" : "Array Declaration Spacing"
 }, {
@@ -1220,9 +1214,6 @@
 }, {
   "patternId" : "WordPress_Arrays_MultipleStatementAlignment",
   "title" : "Multiple Statement Alignment"
-}, {
-  "patternId" : "WordPress_CSRF_NonceVerification",
-  "title" : "Nonce Verification"
 }, {
   "patternId" : "WordPress_Classes_ClassInstantiation",
   "title" : "Class Instantiation"
@@ -1254,14 +1245,8 @@
   "patternId" : "WordPress_Files_FileName",
   "title" : "File Name"
 }, {
-  "patternId" : "WordPress_Functions_DontExtract",
-  "title" : "Dont Extract"
-}, {
   "patternId" : "WordPress_Functions_FunctionCallSignatureNoParams",
   "title" : "Function Call Signature No Params"
-}, {
-  "patternId" : "WordPress_Functions_FunctionRestrictions",
-  "title" : "Function Restrictions"
 }, {
   "patternId" : "WordPress_NamingConventions_PrefixAllGlobals",
   "title" : "Prefix All Globals"
@@ -1272,17 +1257,11 @@
   "patternId" : "WordPress_NamingConventions_ValidHookName",
   "title" : "Valid Hook Name"
 }, {
-  "patternId" : "WordPress_NamingConventions_ValidVariableName",
-  "title" : "Valid Variable Name"
-}, {
   "patternId" : "WordPress_PHP_DevelopmentFunctions",
   "title" : "Development Functions"
 }, {
   "patternId" : "WordPress_PHP_DiscourageGoto",
   "title" : "Discourage Goto"
-}, {
-  "patternId" : "WordPress_PHP_DiscouragedFunctions",
-  "title" : "Discouraged Functions"
 }, {
   "patternId" : "WordPress_PHP_DiscouragedPHPFunctions",
   "title" : "Discouraged P H P Functions"
@@ -1314,12 +1293,6 @@
   "patternId" : "WordPress_PHP_YodaConditions",
   "title" : "Yoda Conditions"
 }, {
-  "patternId" : "WordPress_Security_EscapeOutput",
-  "title" : "Escape Output"
-}, {
-  "patternId" : "WordPress_Security_NonceVerification",
-  "title" : "Nonce Verification"
-}, {
   "patternId" : "WordPress_Security_PluginMenuSlug",
   "title" : "Plugin Menu Slug"
 }, {
@@ -1328,57 +1301,6 @@
 }, {
   "patternId" : "WordPress_Security_ValidatedSanitizedInput",
   "title" : "Validated Sanitized Input"
-}, {
-  "patternId" : "WordPress_VIP_AdminBarRemoval",
-  "title" : "Admin Bar Removal"
-}, {
-  "patternId" : "WordPress_VIP_CronInterval",
-  "title" : "Cron Interval"
-}, {
-  "patternId" : "WordPress_VIP_DirectDatabaseQuery",
-  "title" : "Direct Database Query"
-}, {
-  "patternId" : "WordPress_VIP_FileSystemWritesDisallow",
-  "title" : "File System Writes Disallow"
-}, {
-  "patternId" : "WordPress_VIP_OrderByRand",
-  "title" : "Order By Rand"
-}, {
-  "patternId" : "WordPress_VIP_PluginMenuSlug",
-  "title" : "Plugin Menu Slug"
-}, {
-  "patternId" : "WordPress_VIP_PostsPerPage",
-  "title" : "Posts Per Page"
-}, {
-  "patternId" : "WordPress_VIP_RestrictedFunctions",
-  "title" : "Restricted Functions"
-}, {
-  "patternId" : "WordPress_VIP_RestrictedVariables",
-  "title" : "Restricted Variables"
-}, {
-  "patternId" : "WordPress_VIP_SessionFunctionsUsage",
-  "title" : "Session Functions Usage"
-}, {
-  "patternId" : "WordPress_VIP_SessionVariableUsage",
-  "title" : "Session Variable Usage"
-}, {
-  "patternId" : "WordPress_VIP_SlowDBQuery",
-  "title" : "Slow D B Query"
-}, {
-  "patternId" : "WordPress_VIP_SuperGlobalInputUsage",
-  "title" : "Super Global Input Usage"
-}, {
-  "patternId" : "WordPress_VIP_TimezoneChange",
-  "title" : "Timezone Change"
-}, {
-  "patternId" : "WordPress_VIP_ValidatedSanitizedInput",
-  "title" : "Validated Sanitized Input"
-}, {
-  "patternId" : "WordPress_Variables_GlobalVariables",
-  "title" : "Global Variables"
-}, {
-  "patternId" : "WordPress_Variables_VariableRestrictions",
-  "title" : "Variable Restrictions"
 }, {
   "patternId" : "WordPress_WP_AlternativeFunctions",
   "title" : "Alternative Functions"
@@ -1422,9 +1344,6 @@
   "patternId" : "WordPress_WP_PostsPerPage",
   "title" : "Posts Per Page"
 }, {
-  "patternId" : "WordPress_WP_PreparedSQL",
-  "title" : "Prepared S Q L"
-}, {
   "patternId" : "WordPress_WP_TimezoneChange",
   "title" : "Timezone Change"
 }, {
@@ -1448,9 +1367,6 @@
 }, {
   "patternId" : "WordPress_WhiteSpace_SemicolonSpacing",
   "title" : "Semicolon Spacing"
-}, {
-  "patternId" : "WordPress_XSS_EscapeOutput",
-  "title" : "Escape Output"
 }, {
   "patternId" : "Zend_Debug_CodeAnalyzer",
   "title" : "Zend Code Analyzer",
