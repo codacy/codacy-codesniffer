@@ -6,7 +6,7 @@
 
     }
 
-    //#Err: PEAR_Functions_ValidDefaultValue
+    //#Info: PEAR_Functions_ValidDefaultValue
     function connect($persistent = false, $dsn) {
 
     }

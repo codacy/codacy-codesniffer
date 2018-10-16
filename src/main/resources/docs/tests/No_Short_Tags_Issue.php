@@ -2,6 +2,6 @@
 
 // This tests if the tools allows short open tags <?
 <?
-    //#Warn: Generic_PHP_LowerCaseConstant
+    //#Info: Generic_PHP_LowerCaseConstant
     $foo = TRUE;
 >?

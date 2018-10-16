@@ -3,7 +3,7 @@
   "version" : "3.3.2",
   "patterns" : [ {
     "patternId" : "Generic_Arrays_ArrayIndent",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "indent",
@@ -11,71 +11,71 @@
     } ]
   }, {
     "patternId" : "Generic_Arrays_DisallowLongArraySyntax",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_Arrays_DisallowShortArraySyntax",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_Classes_DuplicateClassName",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_Classes_OpeningBraceSameLine",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_CodeAnalysis_AssignmentInCondition",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_CodeAnalysis_EmptyStatement",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_CodeAnalysis_ForLoopShouldBeWhileLoop",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_CodeAnalysis_ForLoopWithTestFunctionCall",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_CodeAnalysis_JumbledIncrementer",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_CodeAnalysis_UnconditionalIfStatement",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_CodeAnalysis_UnnecessaryFinalModifier",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_CodeAnalysis_UnusedFunctionParameter",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_CodeAnalysis_UselessOverridingMethod",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_Commenting_DocComment",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_Commenting_Fixme",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_Commenting_Todo",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_ControlStructures_InlineControlStructure",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "error",
@@ -83,7 +83,7 @@
     } ]
   }, {
     "patternId" : "Generic_Debug_CSSLint",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -91,7 +91,7 @@
     } ]
   }, {
     "patternId" : "Generic_Debug_ClosureLinter",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "errorCodes",
@@ -105,7 +105,7 @@
     } ]
   }, {
     "patternId" : "Generic_Debug_ESLint",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -116,7 +116,7 @@
     } ]
   }, {
     "patternId" : "Generic_Debug_JSHint",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -124,23 +124,23 @@
     } ]
   }, {
     "patternId" : "Generic_Files_ByteOrderMark",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_Files_EndFileNewline",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_Files_EndFileNoNewline",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_Files_InlineHTML",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_Files_LineEndings",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "eolChar",
@@ -148,7 +148,7 @@
     } ]
   }, {
     "patternId" : "Generic_Files_LineLength",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "lineLimit",
@@ -162,31 +162,31 @@
     } ]
   }, {
     "patternId" : "Generic_Files_LowercasedFilename",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_Files_OneClassPerFile",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_Files_OneInterfacePerFile",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_Files_OneObjectStructurePerFile",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_Files_OneTraitPerFile",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_Formatting_DisallowMultipleStatements",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_Formatting_MultipleStatementAlignment",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "error",
@@ -197,27 +197,27 @@
     } ]
   }, {
     "patternId" : "Generic_Formatting_NoSpaceAfterCast",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_Formatting_SpaceAfterCast",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_Formatting_SpaceAfterNot",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_Functions_CallTimePassByReference",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_Functions_FunctionCallArgumentSpacing",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_Functions_OpeningFunctionBraceBsdAllman",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "checkFunctions",
@@ -228,7 +228,7 @@
     } ]
   }, {
     "patternId" : "Generic_Functions_OpeningFunctionBraceKernighanRitchie",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "checkFunctions",
@@ -239,7 +239,7 @@
     } ]
   }, {
     "patternId" : "Generic_Metrics_CyclomaticComplexity",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "complexity",
@@ -250,7 +250,7 @@
     } ]
   }, {
     "patternId" : "Generic_Metrics_NestingLevel",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "nestingLevel",
@@ -261,7 +261,7 @@
     } ]
   }, {
     "patternId" : "Generic_NamingConventions_CamelCapsFunctionName",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "strict",
@@ -269,27 +269,27 @@
     } ]
   }, {
     "patternId" : "Generic_NamingConventions_ConstructorName",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_NamingConventions_UpperCaseConstantName",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_PHP_BacktickOperator",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_PHP_CharacterBeforePHPOpeningTag",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_PHP_ClosingPHPTag",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_PHP_DeprecatedFunctions",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "forbiddenFunctions",
@@ -297,19 +297,19 @@
     } ]
   }, {
     "patternId" : "Generic_PHP_DisallowAlternativePHPTags",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_PHP_DisallowShortOpenTag",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_PHP_DiscourageGoto",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_PHP_ForbiddenFunctions",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "error",
@@ -317,19 +317,19 @@
     } ]
   }, {
     "patternId" : "Generic_PHP_LowerCaseConstant",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_PHP_LowerCaseKeyword",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_PHP_LowerCaseType",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_PHP_NoSilencedErrors",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "error",
@@ -337,19 +337,19 @@
     } ]
   }, {
     "patternId" : "Generic_PHP_SAPIUsage",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_PHP_Syntax",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_PHP_UpperCaseConstant",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_Strings_UnnecessaryStringConcat",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "error",
@@ -360,11 +360,11 @@
     } ]
   }, {
     "patternId" : "Generic_VersionControl_SubversionProperties",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_WhiteSpace_ArbitraryParenthesesSpacing",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "spacing",
@@ -375,19 +375,19 @@
     } ]
   }, {
     "patternId" : "Generic_WhiteSpace_DisallowSpaceIndent",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_WhiteSpace_DisallowTabIndent",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_WhiteSpace_LanguageConstructSpacing",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_WhiteSpace_ScopeIndent",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "indent",
@@ -404,71 +404,71 @@
     } ]
   }, {
     "patternId" : "MEQP1_Classes_Mysql4",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP1_Classes_ObjectInstantiation",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP1_Classes_ResourceModel",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP1_CodeAnalysis_EmptyBlock",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP1_Exceptions_DirectThrow",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP1_Exceptions_Namespace",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP1_PHP_Goto",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP1_PHP_PrivateClassMember",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP1_PHP_Syntax",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP1_PHP_Var",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP1_Performance_CollectionCount",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP1_Performance_EmptyCheck",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP1_Performance_InefficientMethods",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP1_Performance_Loop",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP1_SQL_MissedIndexes",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP1_SQL_RawQuery",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP1_SQL_SlowQuery",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP1_Security_Acl",
@@ -492,111 +492,111 @@
     "category" : "Security"
   }, {
     "patternId" : "MEQP1_Stdlib_DateTime",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP1_Strings_RegEx",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP1_Strings_StringConcat",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP1_Strings_StringPosition",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP1_Templates_XssTemplate",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP2_Classes_CollectionDependency",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP2_Classes_ConstructorOperations",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP2_Classes_InterfaceName",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP2_Classes_MutableObjects",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP2_Classes_NameResolution",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP2_Classes_ObjectInstantiation",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP2_Classes_ObjectManager",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP2_Classes_PublicNonInterfaceMethods",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP2_Classes_ResourceModel",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP2_Exceptions_DirectThrow",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP2_Legacy_MageEntity",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP2_NamingConventions_ReservedWords",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP2_PHP_ProtectedClassMember",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP2_PHP_Syntax",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP2_SQL_CoreTablesModification",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP2_SQL_MissedIndexes",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP2_Security_Superglobal",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "Security"
   }, {
     "patternId" : "MEQP2_Stdlib_DateTime",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP2_Templates_RawJavaScript",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP2_Templates_ThisInTemplate",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP2_Templates_XssTemplate",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MEQP2_Translation_ConstantUsage",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "ignoreComments",
@@ -604,11 +604,11 @@
     } ]
   }, {
     "patternId" : "MEQP2_Whitespace_MultipleEmptyLines",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MySource_CSS_BrowserSpecificStyles",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -616,31 +616,31 @@
     } ]
   }, {
     "patternId" : "MySource_Channels_DisallowSelfActions",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MySource_Channels_IncludeOwnSystem",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MySource_Channels_IncludeSystem",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MySource_Channels_UnusedSystem",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MySource_Commenting_FunctionComment",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MySource_Debug_DebugCode",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MySource_Debug_FirebugConsole",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -648,7 +648,7 @@
     } ]
   }, {
     "patternId" : "MySource_Objects_AssignThis",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -656,7 +656,7 @@
     } ]
   }, {
     "patternId" : "MySource_Objects_CreateWidgetTypeCallback",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -664,27 +664,27 @@
     } ]
   }, {
     "patternId" : "MySource_Objects_DisallowNewWidget",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MySource_PHP_AjaxNullComparison",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MySource_PHP_EvalObjectFactory",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MySource_PHP_GetRequestData",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MySource_PHP_ReturnFunctionValue",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "MySource_Strings_JoinStrings",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -692,27 +692,27 @@
     } ]
   }, {
     "patternId" : "PEAR_Classes_ClassDeclaration",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "PEAR_Commenting_ClassComment",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "PEAR_Commenting_FileComment",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "PEAR_Commenting_FunctionComment",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "PEAR_Commenting_InlineComment",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "PEAR_ControlStructures_ControlSignature",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "ignoreComments",
@@ -720,7 +720,7 @@
     } ]
   }, {
     "patternId" : "PEAR_ControlStructures_MultiLineCondition",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "indent",
@@ -728,11 +728,11 @@
     } ]
   }, {
     "patternId" : "PEAR_Files_IncludingFile",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "PEAR_Formatting_MultiLineAssignment",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "indent",
@@ -740,7 +740,7 @@
     } ]
   }, {
     "patternId" : "PEAR_Functions_FunctionCallSignature",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "indent",
@@ -757,7 +757,7 @@
     } ]
   }, {
     "patternId" : "PEAR_Functions_FunctionDeclaration",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "indent",
@@ -765,23 +765,23 @@
     } ]
   }, {
     "patternId" : "PEAR_Functions_ValidDefaultValue",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "PEAR_NamingConventions_ValidClassName",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "PEAR_NamingConventions_ValidFunctionName",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "PEAR_NamingConventions_ValidVariableName",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "PEAR_WhiteSpace_ObjectOperatorIndent",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "indent",
@@ -789,7 +789,7 @@
     } ]
   }, {
     "patternId" : "PEAR_WhiteSpace_ScopeClosingBrace",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "indent",
@@ -797,11 +797,11 @@
     } ]
   }, {
     "patternId" : "PEAR_WhiteSpace_ScopeIndent",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "PHPCompatibility_Classes_NewAnonymousClasses",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Classes_NewClasses",
@@ -809,11 +809,11 @@
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Classes_NewConstVisibility",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Classes_NewLateStaticBinding",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Constants_NewConstants",
@@ -821,7 +821,7 @@
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Constants_NewMagicClassConstant",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Constants_RemovedConstants",
@@ -837,27 +837,27 @@
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ControlStructures_ForbiddenBreakContinueVariableArguments",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ControlStructures_ForbiddenSwitchWithMultipleDefaultBlocks",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ControlStructures_NewExecutionDirectives",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ControlStructures_NewForeachExpressionReferencing",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ControlStructures_NewListInForeach",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ControlStructures_NewMultiCatch",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Extensions_RemovedExtensions",
@@ -865,27 +865,27 @@
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionDeclarations_ForbiddenParameterShadowSuperGlobals",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionDeclarations_ForbiddenParametersWithSameName",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionDeclarations_ForbiddenVariableNamesInClosureUse",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionDeclarations_NewClosure",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionDeclarations_NewNullableTypes",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionDeclarations_NewParamTypeDeclarations",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionDeclarations_NewReturnTypeDeclarations",
@@ -893,7 +893,7 @@
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionDeclarations_NonStaticMagicMethods",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionNameRestrictions_NewMagicMethods",
@@ -917,7 +917,7 @@
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionUse_ArgumentFunctionsUsage",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionUse_NewFunctionParameters",
@@ -941,11 +941,11 @@
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionUse_RequiredToOptionalFunctionParameters",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Generators_NewGeneratorReturn",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_IniDirectives_NewIniDirectives",
@@ -957,15 +957,15 @@
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_InitialValue_NewConstantArraysUsingConst",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_InitialValue_NewConstantArraysUsingDefine",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_InitialValue_NewConstantScalarExpressions",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_InitialValue_NewHeredoc",
@@ -973,19 +973,19 @@
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Interfaces_InternalInterfaces",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Interfaces_NewInterfaces",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Keywords_CaseSensitiveKeywords",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Keywords_ForbiddenNames",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Keywords_ForbiddenNamesAsDeclared",
@@ -993,7 +993,7 @@
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Keywords_ForbiddenNamesAsInvokedFunctions",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Keywords_NewKeywords",
@@ -1001,7 +1001,7 @@
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_LanguageConstructs_NewEmptyNonVariable",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_LanguageConstructs_NewLanguageConstructs",
@@ -1009,35 +1009,35 @@
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Lists_AssignmentOrder",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Lists_ForbiddenEmptyListAssignment",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Lists_NewKeyedList",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Lists_NewListReferenceAssignment",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Lists_NewShortList",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Miscellaneous_RemovedAlternativePHPTags",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Miscellaneous_ValidIntegers",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Operators_ForbiddenNegativeBitshift",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Operators_NewOperators",
@@ -1045,19 +1045,19 @@
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Operators_NewShortTernary",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ParameterValues_ForbiddenGetClassNull",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ParameterValues_NewArrayReduceInitialType",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ParameterValues_NewFopenModes",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ParameterValues_NewHashAlgorithms",
@@ -1065,15 +1065,15 @@
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ParameterValues_NewNegativeStringOffset",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ParameterValues_NewPCREModifiers",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ParameterValues_NewPackFormat",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ParameterValues_RemovedHashAlgorithms",
@@ -1089,7 +1089,7 @@
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ParameterValues_RemovedNonCryptoHash",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ParameterValues_RemovedPCREModifiers",
@@ -1105,31 +1105,31 @@
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Syntax_NewArrayStringDereferencing",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Syntax_NewClassMemberAccess",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Syntax_NewDynamicAccessToStatic",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Syntax_NewFlexibleHeredocNowdoc",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Syntax_NewFunctionArrayDereferencing",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Syntax_NewFunctionCallTrailingComma",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Syntax_NewShortArray",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Syntax_RemovedNewReference",
@@ -1149,19 +1149,19 @@
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_UseDeclarations_NewGroupUseDeclarations",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_UseDeclarations_NewUseConstFunction",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Variables_ForbiddenGlobalVariableVariable",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Variables_NewUniformVariableSyntax",
-    "level" : "Error",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Variables_RemovedPredefinedGlobalVariables",
@@ -1169,15 +1169,15 @@
     "category" : "Compatibility"
   }, {
     "patternId" : "PSR12_Classes_ClassInstantiation",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "PSR12_Keywords_ShortFormTypeKeywords",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "PSR12_Namespaces_CompoundNamespaceDepth",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "maxDepth",
@@ -1185,23 +1185,23 @@
     } ]
   }, {
     "patternId" : "PSR12_Operators_OperatorSpacing",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "PSR1_Classes_ClassDeclaration",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "PSR1_Files_SideEffects",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "PSR1_Methods_CamelCapsMethodName",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "PSR2_Classes_ClassDeclaration",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "indent",
@@ -1209,11 +1209,11 @@
     } ]
   }, {
     "patternId" : "PSR2_Classes_PropertyDeclaration",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "PSR2_ControlStructures_ControlStructureSpacing",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "requiredSpacesAfterOpen",
@@ -1224,11 +1224,11 @@
     } ]
   }, {
     "patternId" : "PSR2_ControlStructures_ElseIfDeclaration",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "PSR2_ControlStructures_SwitchDeclaration",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "indent",
@@ -1236,15 +1236,15 @@
     } ]
   }, {
     "patternId" : "PSR2_Files_ClosingTag",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "PSR2_Files_EndFileNewline",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "PSR2_Methods_FunctionCallSignature",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "allowMultipleArguments",
@@ -1252,31 +1252,31 @@
     } ]
   }, {
     "patternId" : "PSR2_Methods_FunctionClosingBrace",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "PSR2_Methods_MethodDeclaration",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "PSR2_Namespaces_NamespaceDeclaration",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "PSR2_Namespaces_UseDeclaration",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Arrays_ArrayBracketSpacing",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Arrays_ArrayDeclaration",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_CSS_ClassDefinitionClosingBraceSpace",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -1284,7 +1284,7 @@
     } ]
   }, {
     "patternId" : "Squiz_CSS_ClassDefinitionNameSpacing",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -1292,7 +1292,7 @@
     } ]
   }, {
     "patternId" : "Squiz_CSS_ClassDefinitionOpeningBraceSpace",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -1300,7 +1300,7 @@
     } ]
   }, {
     "patternId" : "Squiz_CSS_ColonSpacing",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -1308,7 +1308,7 @@
     } ]
   }, {
     "patternId" : "Squiz_CSS_ColourDefinition",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -1316,7 +1316,7 @@
     } ]
   }, {
     "patternId" : "Squiz_CSS_DisallowMultipleStyleDefinitions",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -1324,7 +1324,7 @@
     } ]
   }, {
     "patternId" : "Squiz_CSS_DuplicateClassDefinition",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -1332,7 +1332,7 @@
     } ]
   }, {
     "patternId" : "Squiz_CSS_DuplicateStyleDefinition",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -1340,7 +1340,7 @@
     } ]
   }, {
     "patternId" : "Squiz_CSS_EmptyClassDefinition",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -1348,7 +1348,7 @@
     } ]
   }, {
     "patternId" : "Squiz_CSS_EmptyStyleDefinition",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -1356,7 +1356,7 @@
     } ]
   }, {
     "patternId" : "Squiz_CSS_ForbiddenStyles",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -1367,7 +1367,7 @@
     } ]
   }, {
     "patternId" : "Squiz_CSS_Indentation",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -1378,7 +1378,7 @@
     } ]
   }, {
     "patternId" : "Squiz_CSS_LowercaseStyleDefinition",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -1386,7 +1386,7 @@
     } ]
   }, {
     "patternId" : "Squiz_CSS_MissingColon",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -1394,7 +1394,7 @@
     } ]
   }, {
     "patternId" : "Squiz_CSS_NamedColours",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -1402,7 +1402,7 @@
     } ]
   }, {
     "patternId" : "Squiz_CSS_Opacity",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -1410,7 +1410,7 @@
     } ]
   }, {
     "patternId" : "Squiz_CSS_SemicolonSpacing",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -1418,7 +1418,7 @@
     } ]
   }, {
     "patternId" : "Squiz_CSS_ShorthandSize",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -1426,15 +1426,15 @@
     } ]
   }, {
     "patternId" : "Squiz_Classes_ClassDeclaration",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Classes_ClassFileName",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Classes_DuplicateProperty",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -1442,55 +1442,55 @@
     } ]
   }, {
     "patternId" : "Squiz_Classes_LowercaseClassKeywords",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Classes_SelfMemberReference",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Classes_ValidClassName",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Commenting_BlockComment",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Commenting_ClassComment",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Commenting_ClosingDeclarationComment",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Commenting_DocCommentAlignment",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Commenting_EmptyCatchComment",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Commenting_FileComment",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Commenting_FunctionComment",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Commenting_FunctionCommentThrowTag",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Commenting_InlineComment",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Commenting_LongConditionClosingComment",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "lineLimit",
@@ -1501,15 +1501,15 @@
     } ]
   }, {
     "patternId" : "Squiz_Commenting_PostStatementComment",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Commenting_VariableComment",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_ControlStructures_ControlSignature",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "requiredSpacesBeforeColon",
@@ -1517,11 +1517,11 @@
     } ]
   }, {
     "patternId" : "Squiz_ControlStructures_ElseIfDeclaration",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_ControlStructures_ForEachLoopDeclaration",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "requiredSpacesAfterOpen",
@@ -1532,7 +1532,7 @@
     } ]
   }, {
     "patternId" : "Squiz_ControlStructures_ForLoopDeclaration",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "requiredSpacesAfterOpen",
@@ -1543,15 +1543,15 @@
     } ]
   }, {
     "patternId" : "Squiz_ControlStructures_InlineIfDeclaration",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_ControlStructures_LowercaseDeclaration",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_ControlStructures_SwitchDeclaration",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "indent",
@@ -1559,7 +1559,7 @@
     } ]
   }, {
     "patternId" : "Squiz_Debug_JSLint",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -1567,7 +1567,7 @@
     } ]
   }, {
     "patternId" : "Squiz_Debug_JavaScriptLint",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -1575,19 +1575,19 @@
     } ]
   }, {
     "patternId" : "Squiz_Files_FileExtension",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Formatting_OperatorBracket",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Functions_FunctionDeclaration",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Functions_FunctionDeclarationArgumentSpacing",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "equalsSpacing",
@@ -1601,31 +1601,31 @@
     } ]
   }, {
     "patternId" : "Squiz_Functions_FunctionDuplicateArgument",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Functions_GlobalFunction",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Functions_LowercaseFunctionKeywords",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Functions_MultiLineFunctionDeclaration",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_NamingConventions_ValidFunctionName",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_NamingConventions_ValidVariableName",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Objects_DisallowObjectStringIndex",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -1633,11 +1633,11 @@
     } ]
   }, {
     "patternId" : "Squiz_Objects_ObjectInstantiation",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Objects_ObjectMemberComma",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -1645,19 +1645,19 @@
     } ]
   }, {
     "patternId" : "Squiz_Operators_ComparisonOperatorUsage",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Operators_IncrementDecrementUsage",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Operators_ValidLogicalOperators",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_PHP_CommentedOutCode",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "maxPercentage",
@@ -1665,27 +1665,27 @@
     } ]
   }, {
     "patternId" : "Squiz_PHP_DisallowBooleanStatement",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_PHP_DisallowComparisonAssignment",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_PHP_DisallowInlineIf",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_PHP_DisallowMultipleAssignments",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_PHP_DisallowSizeFunctionsInLoops",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_PHP_DiscouragedFunctions",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "error",
@@ -1693,47 +1693,47 @@
     } ]
   }, {
     "patternId" : "Squiz_PHP_EmbeddedPhp",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_PHP_Eval",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_PHP_GlobalKeyword",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_PHP_Heredoc",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_PHP_InnerFunctions",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_PHP_LowercasePHPFunctions",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_PHP_NonExecutableCode",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Scope_MemberVarScope",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Scope_MethodScope",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Scope_StaticThisUsage",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Strings_ConcatenationSpacing",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "spacing",
@@ -1744,31 +1744,31 @@
     } ]
   }, {
     "patternId" : "Squiz_Strings_DoubleQuoteUsage",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Strings_EchoedStrings",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_WhiteSpace_CastSpacing",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_WhiteSpace_ControlStructureSpacing",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_WhiteSpace_FunctionClosingBraceSpace",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_WhiteSpace_FunctionOpeningBraceSpace",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_WhiteSpace_FunctionSpacing",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "spacing",
@@ -1782,15 +1782,15 @@
     } ]
   }, {
     "patternId" : "Squiz_WhiteSpace_LanguageConstructSpacing",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_WhiteSpace_LogicalOperatorSpacing",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_WhiteSpace_MemberVarSpacing",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "spacing",
@@ -1801,7 +1801,7 @@
     } ]
   }, {
     "patternId" : "Squiz_WhiteSpace_ObjectOperatorSpacing",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "ignoreNewlines",
@@ -1809,7 +1809,7 @@
     } ]
   }, {
     "patternId" : "Squiz_WhiteSpace_OperatorSpacing",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "ignoreNewlines",
@@ -1817,7 +1817,7 @@
     } ]
   }, {
     "patternId" : "Squiz_WhiteSpace_PropertyLabelSpacing",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -1825,19 +1825,19 @@
     } ]
   }, {
     "patternId" : "Squiz_WhiteSpace_ScopeClosingBrace",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_WhiteSpace_ScopeKeywordSpacing",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_WhiteSpace_SemicolonSpacing",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_WhiteSpace_SuperfluousWhitespace",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "ignoreBlankLines",
@@ -1845,15 +1845,15 @@
     } ]
   }, {
     "patternId" : "WordPress_Arrays_ArrayAssignmentRestrictions",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_Arrays_ArrayDeclaration",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_Arrays_ArrayDeclarationSpacing",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "allow_single_item_single_line_associative_arrays",
@@ -1861,7 +1861,7 @@
     } ]
   }, {
     "patternId" : "WordPress_Arrays_ArrayIndentation",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "tabIndent",
@@ -1869,15 +1869,15 @@
     } ]
   }, {
     "patternId" : "WordPress_Arrays_ArrayKeySpacingRestrictions",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_Arrays_CommaAfterArrayItem",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_Arrays_MultipleStatementAlignment",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "ignoreNewlines",
@@ -1894,23 +1894,23 @@
     } ]
   }, {
     "patternId" : "WordPress_CSRF_NonceVerification",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_Classes_ClassInstantiation",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_CodeAnalysis_AssignmentInCondition",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_CodeAnalysis_EmptyStatement",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_DB_DirectDatabaseQuery",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "customCacheGetFunctions",
@@ -1928,23 +1928,23 @@
     "category" : "Security"
   }, {
     "patternId" : "WordPress_DB_PreparedSQLPlaceholders",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_DB_RestrictedClasses",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_DB_RestrictedFunctions",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_DB_SlowDBQuery",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_Files_FileName",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "is_theme",
@@ -1955,19 +1955,19 @@
     } ]
   }, {
     "patternId" : "WordPress_Functions_DontExtract",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_Functions_FunctionCallSignatureNoParams",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_Functions_FunctionRestrictions",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_NamingConventions_PrefixAllGlobals",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "prefixes",
@@ -1975,11 +1975,11 @@
     } ]
   }, {
     "patternId" : "WordPress_NamingConventions_ValidFunctionName",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_NamingConventions_ValidHookName",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "additionalWordDelimiters",
@@ -1987,7 +1987,7 @@
     } ]
   }, {
     "patternId" : "WordPress_NamingConventions_ValidVariableName",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "customPropertiesWhitelist",
@@ -1998,27 +1998,27 @@
     } ]
   }, {
     "patternId" : "WordPress_PHP_DevelopmentFunctions",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_PHP_DiscourageGoto",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_PHP_DiscouragedFunctions",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_PHP_DiscouragedPHPFunctions",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_PHP_DontExtract",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_PHP_NoSilencedErrors",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "context_length",
@@ -2032,31 +2032,31 @@
     } ]
   }, {
     "patternId" : "WordPress_PHP_POSIXFunctions",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_PHP_PregQuoteDelimiter",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_PHP_RestrictedPHPFunctions",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_PHP_StrictComparisons",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_PHP_StrictInArray",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_PHP_TypeCasts",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_PHP_YodaConditions",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_Security_EscapeOutput",
@@ -2077,7 +2077,7 @@
     } ]
   }, {
     "patternId" : "WordPress_Security_NonceVerification",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "Security",
     "parameters" : [ {
       "name" : "customNonceVerificationFunctions",
@@ -2095,7 +2095,7 @@
     "category" : "Security"
   }, {
     "patternId" : "WordPress_Security_SafeRedirect",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "Security"
   }, {
     "patternId" : "WordPress_Security_ValidatedSanitizedInput",
@@ -2113,7 +2113,7 @@
     } ]
   }, {
     "patternId" : "WordPress_VIP_AdminBarRemoval",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "supportedTokenizers",
@@ -2124,7 +2124,7 @@
     } ]
   }, {
     "patternId" : "WordPress_VIP_CronInterval",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "min_interval",
@@ -2132,11 +2132,11 @@
     } ]
   }, {
     "patternId" : "WordPress_VIP_DirectDatabaseQuery",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_VIP_FileSystemWritesDisallow",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "error",
@@ -2144,15 +2144,15 @@
     } ]
   }, {
     "patternId" : "WordPress_VIP_OrderByRand",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_VIP_PluginMenuSlug",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_VIP_PostsPerPage",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "posts_per_page",
@@ -2160,55 +2160,55 @@
     } ]
   }, {
     "patternId" : "WordPress_VIP_RestrictedFunctions",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_VIP_RestrictedVariables",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_VIP_SessionFunctionsUsage",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_VIP_SessionVariableUsage",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_VIP_SlowDBQuery",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_VIP_SuperGlobalInputUsage",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_VIP_TimezoneChange",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_VIP_ValidatedSanitizedInput",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_Variables_GlobalVariables",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_Variables_VariableRestrictions",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_WP_AlternativeFunctions",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_WP_CapitalPDangit",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_WP_CronInterval",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "min_interval",
@@ -2216,39 +2216,39 @@
     } ]
   }, {
     "patternId" : "WordPress_WP_DeprecatedClasses",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_WP_DeprecatedFunctions",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_WP_DeprecatedParameterValues",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_WP_DeprecatedParameters",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_WP_DiscouragedConstants",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_WP_DiscouragedFunctions",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_WP_EnqueuedResourceParameters",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_WP_EnqueuedResources",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_WP_GlobalVariablesOverride",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "treat_files_as_scoped",
@@ -2256,7 +2256,7 @@
     } ]
   }, {
     "patternId" : "WordPress_WP_I18n",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "check_translator_comments",
@@ -2264,7 +2264,7 @@
     } ]
   }, {
     "patternId" : "WordPress_WP_PostsPerPage",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "posts_per_page",
@@ -2276,11 +2276,11 @@
     "category" : "Security"
   }, {
     "patternId" : "WordPress_WP_TimezoneChange",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_WhiteSpace_ArbitraryParenthesesSpacing",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "spacingInside",
@@ -2291,11 +2291,11 @@
     } ]
   }, {
     "patternId" : "WordPress_WhiteSpace_CastStructureSpacing",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_WhiteSpace_ControlStructureSpacing",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "blank_line_check",
@@ -2312,11 +2312,11 @@
     } ]
   }, {
     "patternId" : "WordPress_WhiteSpace_DisallowInlineTabs",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_WhiteSpace_OperatorSpacing",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "ignoreNewlines",
@@ -2324,7 +2324,7 @@
     } ]
   }, {
     "patternId" : "WordPress_WhiteSpace_PrecisionAlignment",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "ignoreAlignmentTokens",
@@ -2332,7 +2332,7 @@
     } ]
   }, {
     "patternId" : "WordPress_WhiteSpace_SemicolonSpacing",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_XSS_EscapeOutput",
@@ -2340,15 +2340,15 @@
     "category" : "Security"
   }, {
     "patternId" : "Zend_Debug_CodeAnalyzer",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Zend_Files_ClosingTag",
-    "level" : "Warning",
+    "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "Zend_NamingConventions_ValidVariableName",
-    "level" : "Error",
+    "level" : "Info",
     "category" : "CodeStyle"
   } ]
 }

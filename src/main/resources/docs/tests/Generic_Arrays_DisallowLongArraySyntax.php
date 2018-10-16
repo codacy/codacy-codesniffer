@@ -2,7 +2,7 @@
 
 //#Patterns: Generic_Arrays_DisallowLongArraySyntax
 
-    //#Err: Generic_Arrays_DisallowLongArraySyntax
+    //#Info: Generic_Arrays_DisallowLongArraySyntax
     $var = array(
         'a' => 1,
     );
