@@ -40,8 +40,10 @@ trait DocsParser {
     } yield {
       val idParts = patternIdPartsFor(dir.relativize(sourceFile).toString)
 
+      val category = CategoriesMapper.categoryFor(idParts, fallBackCategory)
+
       val spec = Pattern.Specification(idParts.patternId,
-                                       findIssueType(sourceFile),
+                                       issueTypeFor(category, sourceFile, Result.Level.Info),
                                        CategoriesMapper.categoryFor(idParts, fallBackCategory),
                                        parseParameters(sourceFile))
 
@@ -75,7 +77,19 @@ trait DocsParser {
       .map(_.toSet)
   }
 
-  protected def findIssueType(patternFile: File, fallback: Result.Level = Result.Level.Warn): Result.Level = {
+  private[this] def issueTypeFor(category: Pattern.Category,
+                                 patternFile: File,
+                                 fallback: Result.Level): Result.Level = {
+    Option(category)
+      .collect {
+        case Pattern.Category.CodeStyle => Result.Level.Info
+        case Pattern.Category.Compatibility => Result.Level.Warn
+      }
+      .orElse(findIssueTypeInSourceFile(patternFile))
+      .getOrElse(fallback)
+  }
+
+  private[this] def findIssueTypeInSourceFile(patternFile: File): Option[Result.Level] = {
     val errorRegex = """.*->addError\(.*""".r
     val warningRegex = """.*->addWarning\(.*""".r
 
@@ -84,6 +98,5 @@ trait DocsParser {
         case errorRegex() => Result.Level.Err
         case warningRegex() => Result.Level.Warn
       }
-      .getOrElse(fallback)
   }
 }
