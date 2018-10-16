@@ -26,7 +26,7 @@ class Example
 
     }
 
-    //#Err: Squiz_Scope_MethodScope
+    //#Info: Squiz_Scope_MethodScope
     function spaces3($something)
     {
         if ($something) echo 'hello';

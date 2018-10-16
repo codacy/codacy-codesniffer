@@ -71,9 +71,9 @@ trait Foobar {
 /*
  * Incorrect use, but covered by ForbiddenNames sniff, should not be reported here.
  */
- //#Error: PHPCompatibility_Keywords_ForbiddenNames
+ //#Warn: PHPCompatibility_Keywords_ForbiddenNames
 use const as Baz;
-//#Error: PHPCompatibility_Keywords_ForbiddenNames
+//#Warn: PHPCompatibility_Keywords_ForbiddenNames
 use function as Baz;
-//#Error: PHPCompatibility_Keywords_ForbiddenNames
+//#Warn: PHPCompatibility_Keywords_ForbiddenNames
 use const, function, somethingElse;
