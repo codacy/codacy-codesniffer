@@ -32,7 +32,17 @@ docker run -it -v $srcDir:/src  <DOCKER_NAME>:<DOCKER_VERSION>
 We use the [codacy-plugins-test](https://github.com/codacy/codacy-plugins-test) to test our external tools integration.
 You can follow the instructions there to make sure your tool is working as expected.
 
-## What is Codacy
+## Generating the documentation
+
+Update the versions in `.versions.properties` and run:
+
+```bash
+sbt "runMain codacy.codesniffer.docsgen.GeneratorMain"
+```
+
+This will create updated `patterns.json`, `description.json` and the individual documentation Markdown files.
+
+## What is Codacy?
 
 [Codacy](https://www.codacy.com/) is an Automated Code Review Tool that monitors your technical debt, helps you improve your code quality, teaches best practices to your developers, and helps you save time in Code Reviews.
 

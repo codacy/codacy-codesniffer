@@ -3,7 +3,7 @@ import java.util.Properties
 
 import com.typesafe.sbt.packager.docker.{Cmd, ExecCmd}
 
-name := """codacy-engine-codesniffer"""
+name := """codacy-codesniffer"""
 
 version := "1.0-SNAPSHOT"
 
@@ -15,15 +15,13 @@ resolvers ++= Seq("Typesafe Repo".at("http://repo.typesafe.com/typesafe/releases
                   "Sonatype OSS Snapshots".at("https://oss.sonatype.org/content/repositories/releases"))
 
 libraryDependencies ++= Seq(("org.scala-lang.modules" %% "scala-xml" % "1.1.1").withSources(),
-                            "com.codacy" %% "codacy-engine-scala-seed" % "3.0.233")
+                            "com.codacy" %% "codacy-engine-scala-seed" % "3.0.244")
 
-enablePlugins(JavaAppPackaging)
+enablePlugins(AshScriptPlugin)
 
 enablePlugins(DockerPlugin)
 
 version in Docker := "1.0"
-
-mainClass in Compile := Some("codacy.Engine")
 
 val versionProperties: Properties = {
   val prop = new Properties()
@@ -38,8 +36,9 @@ def versionFor(name: String): String = {
 // The `sed 's/.*short_open_tag.*=.*/short_open_tag=On/' /etc/php/php.ini -i` command changes the php configuration
 // to allow short open tags (without this config the tool immediately fails if a file uses short open tags)
 val installAll =
-  s"""apk --no-cache add bash curl git
-     |&& apk --no-cache add php php-openssl php-phar php-json php-curl php-iconv php-zlib
+  s"""apk --no-cache add curl git
+     |&& apk --no-cache add php php-openssl php-phar php-json php-curl php-iconv php-zlib php-simplexml php-tokenizer php-xmlwriter
+     |&& sed 's/.*short_open_tag.*=.*/short_open_tag=On/' /etc/php7/php.ini -i
      |&& curl -sS https://getcomposer.org/installer | php
      |&& mv composer.phar /usr/bin/composer
      |&& export COMPOSER_HOME=$$(pwd)/composer
@@ -49,22 +48,23 @@ val installAll =
      |&& (git clone https://github.com/magento/marketplace-eqp.git magentocs
      |&&    cd magentocs && git checkout ${versionFor("magento-eqp")})
      |&& git clone --branch ${versionFor("php-compatibility")} https://github.com/wimg/PHPCompatibility.git phpcompatibility
-     |&& phpcs --config-set installed_paths $$(pwd)/wpcs,$$(pwd)/magentocs,$$(pwd)/phpcompatibility
+     |&& git clone --branch ${versionFor("phpcs-security-audit")} https://github.com/FloeDesignTechnologies/phpcs-security-audit phpcs-security-audit
+     |&& phpcs --config-set installed_paths $$(pwd)/wpcs,$$(pwd)/magentocs,$$(pwd)/phpcompatibility,$$(pwd)/phpcs-security-audit
      |&& apk del curl git
      |&& rm -rf /tmp/*
      |&& rm -rf /var/cache/apk/*
-     |&& sed 's/.*short_open_tag.*=.*/short_open_tag=On/' /etc/php/php.ini -i
    """.stripMargin.replaceAll(System.lineSeparator(), " ")
 
-mappings in Universal <++= (resourceDirectory in Compile).map { (resourceDir: File) =>
-  val src = resourceDir / "docs"
-  val dest = "/docs"
+mappings in Universal ++= {
+  (resourceDirectory in Compile).map { (resourceDir: File) =>
+    val src = resourceDir / "docs"
+    val dest = "/docs"
 
-  for {
-    path <- (src ***).get
-    if !path.isDirectory
-  } yield path -> path.toString.replaceFirst(src.toString, dest)
-}
+    for {
+      path <- src.allPaths.get if !path.isDirectory
+    } yield path -> path.toString.replaceFirst(src.toString, dest)
+  }
+}.value
 
 val dockerUser = "docker"
 val dockerGroup = "docker"
@@ -73,14 +73,15 @@ daemonUser in Docker := dockerUser
 
 daemonGroup in Docker := dockerGroup
 
-dockerBaseImage := "develar/java"
+dockerBaseImage := "openjdk:8-jre-alpine"
+
+mainClass in Compile := Some("codacy.Engine")
 
 dockerCommands := dockerCommands.value.flatMap {
-  case cmd @ Cmd("WORKDIR", _) => List(cmd, Cmd("RUN", installAll))
-  case cmd @ (Cmd("ADD", "opt /opt")) =>
-    List(cmd,
-         Cmd("RUN", "mv /opt/docker/docs /docs"),
-         Cmd("RUN", "adduser -u 2004 -D docker"),
-         ExecCmd("RUN", Seq("chown", "-R", s"$dockerUser:$dockerGroup", "/docs"): _*))
+  case cmd @ Cmd("ADD", _) =>
+    List(Cmd("RUN", s"adduser -u 2004 -D $dockerUser"),
+         cmd,
+         Cmd("RUN", installAll),
+         Cmd("RUN", "mv /opt/docker/docs /docs"))
   case other => List(other)
 }

@@ -800,6 +800,149 @@
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
+    "patternId" : "Security_BadFunctions_Asserts",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Security_BadFunctions_Backticks",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Security_BadFunctions_CallbackFunctions",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Security_BadFunctions_CryptoFunctions",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Security_BadFunctions_EasyRFI",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Security_BadFunctions_EasyXSS",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "forceParanoia",
+      "default" : -1
+    } ]
+  }, {
+    "patternId" : "Security_BadFunctions_ErrorHandling",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Security_BadFunctions_FilesystemFunctions",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Security_BadFunctions_FringeFunctions",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Security_BadFunctions_FunctionHandlingFunctions",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Security_BadFunctions_Mysqli",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Security_BadFunctions_NoEvals",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Security_BadFunctions_Phpinfos",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Security_BadFunctions_PregReplace",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Security_BadFunctions_SQLFunctions",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Security_BadFunctions_SystemExecFunctions",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Security_CVE_20132110",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Security_CVE_20134113",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Security_Drupal7_AESModule",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Security_Drupal7_AdvisoriesContrib",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Security_Drupal7_AdvisoriesCore",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Security_Drupal7_Cachei",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Security_Drupal7_DbQueryAC",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "forceParanoia",
+      "default" : -1
+    } ]
+  }, {
+    "patternId" : "Security_Drupal7_DynQueries",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Security_Drupal7_HttpRequest",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Security_Drupal7_SQLi",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Security_Drupal7_UserInputWatch",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "FormThreshold",
+      "default" : 10
+    }, {
+      "name" : "FormStateThreshold",
+      "default" : 10
+    } ]
+  }, {
+    "patternId" : "Security_Drupal7_XSSFormValue",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Security_Drupal7_XSSHTMLConstruct",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Security_Drupal7_XSSPTheme",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Security_Misc_BadCorsHeader",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Security_Misc_IncludeMismatch",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
     "patternId" : "PHPCompatibility_Classes_NewAnonymousClasses",
     "level" : "Warning",
     "category" : "Compatibility"

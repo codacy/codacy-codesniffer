@@ -22,7 +22,9 @@ class Generator() {
     List(new PHPCSDocsParser(),
          new WordPressCSDocsParser(),
          new MagentoCSDocsParser(),
-         new PHPCompatibilityDocsParser())
+         new PHPCompatibilityDocsParser(),
+         new PHPCSSecurityAuditDocsParser(),
+    )
 
   def run(): Unit = {
     docsDir.createDirectories()
