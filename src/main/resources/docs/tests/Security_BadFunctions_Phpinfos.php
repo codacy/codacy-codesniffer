@@ -16,7 +16,7 @@
 
 	// BadFunctions
 	md5();
-    //#Info: Security_BadFunctions_Phpinfos
+    //#Warn: Security_BadFunctions_Phpinfos
     phpinfo();
 	create_function($a);
 	ftp_exec($a);
@@ -25,7 +25,6 @@
 	`$a`;
 	`$_GET`;
     include($a);
-    //#Info: Security_BadFunctions_Asserts
 	assert($a);
 	assert($_GET);
 	exec($a);
