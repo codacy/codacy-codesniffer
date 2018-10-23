@@ -10,7 +10,7 @@ class PHPCSSecurityAuditDocsParser extends DocsParser {
 
   override val repositoryURL = "https://github.com/FloeDesignTechnologies/phpcs-security-audit.git"
 
-  override val checkoutCommit: String = VersionsHelper.`phpcs-security-audit`
+  override val checkoutCommit: String = VersionsHelper.phpcsSecurityAudit
 
   override def fallBackCategory: Pattern.Category.Value = Pattern.Category.Security
 
