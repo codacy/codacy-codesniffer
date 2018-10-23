@@ -66,6 +66,7 @@ object CodeSniffer extends Tool {
             .split('.')
             .dropRight(1)
             .mkString("_")
+            .replace("PHPCS_SecurityAudit", "Security")
           Result.Issue(Source.File(filePath), Result.Message(message), Pattern.Id(rule), Source.Line(line))
       }
     }.toList
