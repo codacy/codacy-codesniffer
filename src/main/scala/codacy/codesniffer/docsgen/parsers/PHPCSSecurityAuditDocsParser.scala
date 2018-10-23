@@ -12,6 +12,8 @@ class PHPCSSecurityAuditDocsParser extends DocsParser {
 
   override val checkoutCommit: String = VersionsHelper.`phpcs-security-audit`
 
+  override def fallBackCategory: Pattern.Category.Value = Pattern.Category.Security
+
   override val sniffRegex: Regex = """.*Security\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
 
   override def patternIdPartsFor(relativizedFilePath: String): PatternIdParts = {

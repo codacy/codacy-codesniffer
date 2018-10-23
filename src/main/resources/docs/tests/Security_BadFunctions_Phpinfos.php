@@ -16,7 +16,7 @@
 
 	// BadFunctions
 	md5();
-    //#Err: Security_BadFunctions_Phpinfos
+    //#Info: Security_BadFunctions_Phpinfos
     phpinfo();
 	create_function($a);
 	ftp_exec($a);

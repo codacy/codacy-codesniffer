@@ -537,102 +537,6 @@
   "title" : "Scope Indentation",
   "description" : "Any scope openers except for switch statements should be indented 1 level.  This includes classes, functions, and control structures."
 }, {
-  "patternId" : "Security_BadFunctions_Asserts",
-  "title" : "Asserts"
-}, {
-  "patternId" : "Security_BadFunctions_Backticks",
-  "title" : "Backticks"
-}, {
-  "patternId" : "Security_BadFunctions_CallbackFunctions",
-  "title" : "Callback Functions"
-}, {
-  "patternId" : "Security_BadFunctions_CryptoFunctions",
-  "title" : "Crypto Functions"
-}, {
-  "patternId" : "Security_BadFunctions_EasyRFI",
-  "title" : "Easy R F I"
-}, {
-  "patternId" : "Security_BadFunctions_EasyXSS",
-  "title" : "Easy X S S"
-}, {
-  "patternId" : "Security_BadFunctions_ErrorHandling",
-  "title" : "Error Handling"
-}, {
-  "patternId" : "Security_BadFunctions_FilesystemFunctions",
-  "title" : "Filesystem Functions"
-}, {
-  "patternId" : "Security_BadFunctions_FringeFunctions",
-  "title" : "Fringe Functions"
-}, {
-  "patternId" : "Security_BadFunctions_FunctionHandlingFunctions",
-  "title" : "Function Handling Functions"
-}, {
-  "patternId" : "Security_BadFunctions_Mysqli",
-  "title" : "Mysqli"
-}, {
-  "patternId" : "Security_BadFunctions_NoEvals",
-  "title" : "No Evals"
-}, {
-  "patternId" : "Security_BadFunctions_Phpinfos",
-  "title" : "Phpinfos"
-}, {
-  "patternId" : "Security_BadFunctions_PregReplace",
-  "title" : "Preg Replace"
-}, {
-  "patternId" : "Security_BadFunctions_SQLFunctions",
-  "title" : "S Q L Functions"
-}, {
-  "patternId" : "Security_BadFunctions_SystemExecFunctions",
-  "title" : "System Exec Functions"
-}, {
-  "patternId" : "Security_CVE_20132110",
-  "title" : "20132110"
-}, {
-  "patternId" : "Security_CVE_20134113",
-  "title" : "20134113"
-}, {
-  "patternId" : "Security_Drupal7_AESModule",
-  "title" : "A E S Module"
-}, {
-  "patternId" : "Security_Drupal7_AdvisoriesContrib",
-  "title" : "Advisories Contrib"
-}, {
-  "patternId" : "Security_Drupal7_AdvisoriesCore",
-  "title" : "Advisories Core"
-}, {
-  "patternId" : "Security_Drupal7_Cachei",
-  "title" : "Cachei"
-}, {
-  "patternId" : "Security_Drupal7_DbQueryAC",
-  "title" : "Db Query A C"
-}, {
-  "patternId" : "Security_Drupal7_DynQueries",
-  "title" : "Dyn Queries"
-}, {
-  "patternId" : "Security_Drupal7_HttpRequest",
-  "title" : "Http Request"
-}, {
-  "patternId" : "Security_Drupal7_SQLi",
-  "title" : "S Q Li"
-}, {
-  "patternId" : "Security_Drupal7_UserInputWatch",
-  "title" : "User Input Watch"
-}, {
-  "patternId" : "Security_Drupal7_XSSFormValue",
-  "title" : "X S S Form Value"
-}, {
-  "patternId" : "Security_Drupal7_XSSHTMLConstruct",
-  "title" : "X S S H T M L Construct"
-}, {
-  "patternId" : "Security_Drupal7_XSSPTheme",
-  "title" : "X S S P Theme"
-}, {
-  "patternId" : "Security_Misc_BadCorsHeader",
-  "title" : "Bad Cors Header"
-}, {
-  "patternId" : "Security_Misc_IncludeMismatch",
-  "title" : "Include Mismatch"
-}, {
   "patternId" : "PHPCompatibility_Classes_NewAnonymousClasses",
   "title" : "New Anonymous Classes"
 }, {
@@ -980,6 +884,102 @@
   "patternId" : "PSR2_Namespaces_UseDeclaration",
   "title" : "Namespace Declarations",
   "description" : "Each use declaration must contain only one namespace and must come after the first namespace declaration.  There should be one blank line after the final use statement."
+}, {
+  "patternId" : "Security_BadFunctions_Asserts",
+  "title" : "Asserts"
+}, {
+  "patternId" : "Security_BadFunctions_Backticks",
+  "title" : "Backticks"
+}, {
+  "patternId" : "Security_BadFunctions_CallbackFunctions",
+  "title" : "Callback Functions"
+}, {
+  "patternId" : "Security_BadFunctions_CryptoFunctions",
+  "title" : "Crypto Functions"
+}, {
+  "patternId" : "Security_BadFunctions_EasyRFI",
+  "title" : "Easy R F I"
+}, {
+  "patternId" : "Security_BadFunctions_EasyXSS",
+  "title" : "Easy X S S"
+}, {
+  "patternId" : "Security_BadFunctions_ErrorHandling",
+  "title" : "Error Handling"
+}, {
+  "patternId" : "Security_BadFunctions_FilesystemFunctions",
+  "title" : "Filesystem Functions"
+}, {
+  "patternId" : "Security_BadFunctions_FringeFunctions",
+  "title" : "Fringe Functions"
+}, {
+  "patternId" : "Security_BadFunctions_FunctionHandlingFunctions",
+  "title" : "Function Handling Functions"
+}, {
+  "patternId" : "Security_BadFunctions_Mysqli",
+  "title" : "Mysqli"
+}, {
+  "patternId" : "Security_BadFunctions_NoEvals",
+  "title" : "No Evals"
+}, {
+  "patternId" : "Security_BadFunctions_Phpinfos",
+  "title" : "Phpinfos"
+}, {
+  "patternId" : "Security_BadFunctions_PregReplace",
+  "title" : "Preg Replace"
+}, {
+  "patternId" : "Security_BadFunctions_SQLFunctions",
+  "title" : "S Q L Functions"
+}, {
+  "patternId" : "Security_BadFunctions_SystemExecFunctions",
+  "title" : "System Exec Functions"
+}, {
+  "patternId" : "Security_CVE_20132110",
+  "title" : "20132110"
+}, {
+  "patternId" : "Security_CVE_20134113",
+  "title" : "20134113"
+}, {
+  "patternId" : "Security_Drupal7_AESModule",
+  "title" : "A E S Module"
+}, {
+  "patternId" : "Security_Drupal7_AdvisoriesContrib",
+  "title" : "Advisories Contrib"
+}, {
+  "patternId" : "Security_Drupal7_AdvisoriesCore",
+  "title" : "Advisories Core"
+}, {
+  "patternId" : "Security_Drupal7_Cachei",
+  "title" : "Cachei"
+}, {
+  "patternId" : "Security_Drupal7_DbQueryAC",
+  "title" : "Db Query A C"
+}, {
+  "patternId" : "Security_Drupal7_DynQueries",
+  "title" : "Dyn Queries"
+}, {
+  "patternId" : "Security_Drupal7_HttpRequest",
+  "title" : "Http Request"
+}, {
+  "patternId" : "Security_Drupal7_SQLi",
+  "title" : "S Q Li"
+}, {
+  "patternId" : "Security_Drupal7_UserInputWatch",
+  "title" : "User Input Watch"
+}, {
+  "patternId" : "Security_Drupal7_XSSFormValue",
+  "title" : "X S S Form Value"
+}, {
+  "patternId" : "Security_Drupal7_XSSHTMLConstruct",
+  "title" : "X S S H T M L Construct"
+}, {
+  "patternId" : "Security_Drupal7_XSSPTheme",
+  "title" : "X S S P Theme"
+}, {
+  "patternId" : "Security_Misc_BadCorsHeader",
+  "title" : "Bad Cors Header"
+}, {
+  "patternId" : "Security_Misc_IncludeMismatch",
+  "title" : "Include Mismatch"
 }, {
   "patternId" : "Squiz_Arrays_ArrayBracketSpacing",
   "title" : "Array Bracket Spacing",
