@@ -14,5 +14,6 @@ object VersionsHelper {
   lazy val magento = properties.getProperty("magento-eqp")
   lazy val wordpress = properties.getProperty("wordpress")
   lazy val phpCompatibility = properties.getProperty("php-compatibility")
+  lazy val phpcsSecurityAudit = properties.getProperty("phpcs-security-audit")
 
 }

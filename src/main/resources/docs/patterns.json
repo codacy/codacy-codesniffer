@@ -1267,6 +1267,149 @@
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
+    "patternId" : "Security_BadFunctions_Asserts",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
+    "patternId" : "Security_BadFunctions_Backticks",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
+    "patternId" : "Security_BadFunctions_CallbackFunctions",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
+    "patternId" : "Security_BadFunctions_CryptoFunctions",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
+    "patternId" : "Security_BadFunctions_EasyRFI",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
+    "patternId" : "Security_BadFunctions_EasyXSS",
+    "level" : "Error",
+    "category" : "Security",
+    "parameters" : [ {
+      "name" : "forceParanoia",
+      "default" : -1
+    } ]
+  }, {
+    "patternId" : "Security_BadFunctions_ErrorHandling",
+    "level" : "Warning",
+    "category" : "Security"
+  }, {
+    "patternId" : "Security_BadFunctions_FilesystemFunctions",
+    "level" : "Warning",
+    "category" : "Security"
+  }, {
+    "patternId" : "Security_BadFunctions_FringeFunctions",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
+    "patternId" : "Security_BadFunctions_FunctionHandlingFunctions",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
+    "patternId" : "Security_BadFunctions_Mysqli",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
+    "patternId" : "Security_BadFunctions_NoEvals",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
+    "patternId" : "Security_BadFunctions_Phpinfos",
+    "level" : "Warning",
+    "category" : "Security"
+  }, {
+    "patternId" : "Security_BadFunctions_PregReplace",
+    "level" : "Warning",
+    "category" : "Security"
+  }, {
+    "patternId" : "Security_BadFunctions_SQLFunctions",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
+    "patternId" : "Security_BadFunctions_SystemExecFunctions",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
+    "patternId" : "Security_CVE_20132110",
+    "level" : "Warning",
+    "category" : "Security"
+  }, {
+    "patternId" : "Security_CVE_20134113",
+    "level" : "Warning",
+    "category" : "Security"
+  }, {
+    "patternId" : "Security_Drupal7_AESModule",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
+    "patternId" : "Security_Drupal7_AdvisoriesContrib",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
+    "patternId" : "Security_Drupal7_AdvisoriesCore",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
+    "patternId" : "Security_Drupal7_Cachei",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
+    "patternId" : "Security_Drupal7_DbQueryAC",
+    "level" : "Warning",
+    "category" : "Security",
+    "parameters" : [ {
+      "name" : "forceParanoia",
+      "default" : -1
+    } ]
+  }, {
+    "patternId" : "Security_Drupal7_DynQueries",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
+    "patternId" : "Security_Drupal7_HttpRequest",
+    "level" : "Warning",
+    "category" : "Security"
+  }, {
+    "patternId" : "Security_Drupal7_SQLi",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
+    "patternId" : "Security_Drupal7_UserInputWatch",
+    "level" : "Warning",
+    "category" : "Security",
+    "parameters" : [ {
+      "name" : "FormThreshold",
+      "default" : 10
+    }, {
+      "name" : "FormStateThreshold",
+      "default" : 10
+    } ]
+  }, {
+    "patternId" : "Security_Drupal7_XSSFormValue",
+    "level" : "Warning",
+    "category" : "Security"
+  }, {
+    "patternId" : "Security_Drupal7_XSSHTMLConstruct",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
+    "patternId" : "Security_Drupal7_XSSPTheme",
+    "level" : "Warning",
+    "category" : "Security"
+  }, {
+    "patternId" : "Security_Misc_BadCorsHeader",
+    "level" : "Warning",
+    "category" : "Security"
+  }, {
+    "patternId" : "Security_Misc_IncludeMismatch",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
     "patternId" : "Squiz_Arrays_ArrayBracketSpacing",
     "level" : "Info",
     "category" : "CodeStyle"
