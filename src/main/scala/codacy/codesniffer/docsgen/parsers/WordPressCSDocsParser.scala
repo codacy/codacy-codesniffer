@@ -10,7 +10,7 @@ class WordPressCSDocsParser extends DocsParser {
 
   override val repositoryURL = "https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git"
 
-  override val checkoutCommit: String = VersionsHelper.phpCompatibility
+  override val checkoutCommit: String = VersionsHelper.wordpress
 
   override val sniffRegex: Regex = """.*WordPress\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
 
