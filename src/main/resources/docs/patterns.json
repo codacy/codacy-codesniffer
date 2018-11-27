@@ -84,44 +84,23 @@
   }, {
     "patternId" : "Generic_Debug_CSSLint",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['CSS']"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_Debug_ClosureLinter",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "errorCodes",
-      "default" : [ ]
-    }, {
-      "name" : "ignoreCodes",
-      "default" : [ ]
-    }, {
-      "name" : "supportedTokenizers",
-      "default" : "['JS']"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_Debug_ESLint",
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['JS']"
-    }, {
       "name" : "configFile",
       "default" : null
     } ]
   }, {
     "patternId" : "Generic_Debug_JSHint",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['JS']"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_Files_ByteOrderMark",
     "level" : "Info",
@@ -290,11 +269,7 @@
   }, {
     "patternId" : "Generic_PHP_DeprecatedFunctions",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "forbiddenFunctions",
-      "default" : [ ]
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_PHP_DisallowAlternativePHPTags",
     "level" : "Info",
@@ -398,9 +373,6 @@
     }, {
       "name" : "tabIndent",
       "default" : false
-    }, {
-      "name" : "ignoreIndentationTokens",
-      "default" : [ ]
     } ]
   }, {
     "patternId" : "MEQP1_Classes_Mysql4",
@@ -609,11 +581,7 @@
   }, {
     "patternId" : "MySource_CSS_BrowserSpecificStyles",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['CSS']"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "MySource_Channels_DisallowSelfActions",
     "level" : "Info",
@@ -641,27 +609,15 @@
   }, {
     "patternId" : "MySource_Debug_FirebugConsole",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['JS']"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "MySource_Objects_AssignThis",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['JS']"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "MySource_Objects_CreateWidgetTypeCallback",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['JS']"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "MySource_Objects_DisallowNewWidget",
     "level" : "Info",
@@ -685,11 +641,7 @@
   }, {
     "patternId" : "MySource_Strings_JoinStrings",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['JS']"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "PEAR_Classes_ClassDeclaration",
     "level" : "Info",
@@ -1420,91 +1372,48 @@
   }, {
     "patternId" : "Squiz_CSS_ClassDefinitionClosingBraceSpace",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['CSS']"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_CSS_ClassDefinitionNameSpacing",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['CSS']"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_CSS_ClassDefinitionOpeningBraceSpace",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['CSS']"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_CSS_ColonSpacing",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['CSS']"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_CSS_ColourDefinition",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['CSS']"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_CSS_DisallowMultipleStyleDefinitions",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['CSS']"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_CSS_DuplicateClassDefinition",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['CSS']"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_CSS_DuplicateStyleDefinition",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['CSS']"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_CSS_EmptyClassDefinition",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['CSS']"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_CSS_EmptyStyleDefinition",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['CSS']"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_CSS_ForbiddenStyles",
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['CSS']"
-    }, {
       "name" : "error",
       "default" : true
     } ]
@@ -1513,60 +1422,33 @@
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['CSS']"
-    }, {
       "name" : "indent",
       "default" : 4
     } ]
   }, {
     "patternId" : "Squiz_CSS_LowercaseStyleDefinition",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['CSS']"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_CSS_MissingColon",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['CSS']"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_CSS_NamedColours",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['CSS']"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_CSS_Opacity",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['CSS']"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_CSS_SemicolonSpacing",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['CSS']"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_CSS_ShorthandSize",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['CSS']"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Classes_ClassDeclaration",
     "level" : "Info",
@@ -1578,11 +1460,7 @@
   }, {
     "patternId" : "Squiz_Classes_DuplicateProperty",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['JS']"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Classes_LowercaseClassKeywords",
     "level" : "Info",
@@ -1703,19 +1581,11 @@
   }, {
     "patternId" : "Squiz_Debug_JSLint",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['JS']"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Debug_JavaScriptLint",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['JS']"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Files_FileExtension",
     "level" : "Info",
@@ -1769,11 +1639,7 @@
   }, {
     "patternId" : "Squiz_Objects_DisallowObjectStringIndex",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['JS']"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Objects_ObjectInstantiation",
     "level" : "Info",
@@ -1781,11 +1647,7 @@
   }, {
     "patternId" : "Squiz_Objects_ObjectMemberComma",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['JS']"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Operators_ComparisonOperatorUsage",
     "level" : "Info",
@@ -1961,11 +1823,7 @@
   }, {
     "patternId" : "Squiz_WhiteSpace_PropertyLabelSpacing",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "['JS']"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_WhiteSpace_ScopeClosingBrace",
     "level" : "Info",
@@ -2054,17 +1912,7 @@
   }, {
     "patternId" : "WordPress_DB_DirectDatabaseQuery",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "customCacheGetFunctions",
-      "default" : "array()"
-    }, {
-      "name" : "customCacheSetFunctions",
-      "default" : "array()"
-    }, {
-      "name" : "customCacheDeleteFunctions",
-      "default" : "array()"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_DB_PreparedSQL",
     "level" : "Error",
@@ -2131,14 +1979,7 @@
   }, {
     "patternId" : "WordPress_NamingConventions_ValidVariableName",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "customPropertiesWhitelist",
-      "default" : "array()"
-    }, {
-      "name" : "customVariablesWhitelist",
-      "default" : "array()"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_PHP_DevelopmentFunctions",
     "level" : "Info",
@@ -2169,9 +2010,6 @@
     }, {
       "name" : "use_default_whitelist",
       "default" : true
-    }, {
-      "name" : "custom_whitelist",
-      "default" : "array()"
     } ]
   }, {
     "patternId" : "WordPress_PHP_POSIXFunctions",
@@ -2194,44 +2032,17 @@
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
-    "patternId" : "WordPress_PHP_TypeCasts",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
     "patternId" : "WordPress_PHP_YodaConditions",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_Security_EscapeOutput",
     "level" : "Error",
-    "category" : "Security",
-    "parameters" : [ {
-      "name" : "customEscapingFunctions",
-      "default" : "array()"
-    }, {
-      "name" : "customAutoEscapedFunctions",
-      "default" : "array()"
-    }, {
-      "name" : "customSanitizingFunctions",
-      "default" : "array()"
-    }, {
-      "name" : "customPrintingFunctions",
-      "default" : "array()"
-    } ]
+    "category" : "Security"
   }, {
     "patternId" : "WordPress_Security_NonceVerification",
     "level" : "Info",
-    "category" : "Security",
-    "parameters" : [ {
-      "name" : "customNonceVerificationFunctions",
-      "default" : "array()"
-    }, {
-      "name" : "customSanitizingFunctions",
-      "default" : "array()"
-    }, {
-      "name" : "customUnslashingSanitizingFunctions",
-      "default" : "array()"
-    } ]
+    "category" : "Security"
   }, {
     "patternId" : "WordPress_Security_PluginMenuSlug",
     "level" : "Warning",
@@ -2247,21 +2058,12 @@
     "parameters" : [ {
       "name" : "check_validation_in_scope_only",
       "default" : false
-    }, {
-      "name" : "customSanitizingFunctions",
-      "default" : "array()"
-    }, {
-      "name" : "customUnslashingSanitizingFunctions",
-      "default" : "array()"
     } ]
   }, {
     "patternId" : "WordPress_VIP_AdminBarRemoval",
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
-      "name" : "supportedTokenizers",
-      "default" : "array( 'PHP', 'CSS' )"
-    }, {
       "name" : "remove_only",
       "default" : true
     } ]
@@ -2468,11 +2270,7 @@
   }, {
     "patternId" : "WordPress_WhiteSpace_PrecisionAlignment",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "ignoreAlignmentTokens",
-      "default" : "array()"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_WhiteSpace_SemicolonSpacing",
     "level" : "Info",

@@ -1401,9 +1401,6 @@
   "patternId" : "WordPress_PHP_StrictInArray",
   "title" : "Strict In Array"
 }, {
-  "patternId" : "WordPress_PHP_TypeCasts",
-  "title" : "Type Casts"
-}, {
   "patternId" : "WordPress_PHP_YodaConditions",
   "title" : "Yoda Conditions"
 }, {
