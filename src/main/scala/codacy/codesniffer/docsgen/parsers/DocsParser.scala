@@ -67,14 +67,18 @@ trait DocsParser {
     }
   }
 
-  protected def parseParameters(patternFile: File): Option[Set[Parameter.Specification]] = {
+  private def parseParameters(patternFile: File): Option[Set[Parameter.Specification]] = {
     val patternRegex = """.*?\spublic.*?\$(.*?)=(.*?);""".r
 
     Option(patternFile.lineIterator.toStream.collect {
-      case patternRegex(name, defaultValue) =>
+      case patternRegex(name, defaultValue) if !valueIsArray(defaultValue.trim)=>
         Parameter.Specification(Parameter.Name(name.trim), Parameter.Value(defaultValue.trim))
     }).filter(_.nonEmpty)
       .map(_.toSet)
+  }
+
+  private def valueIsArray(value: String): Boolean = {
+    value.startsWith("array(") || value.startsWith("[")
   }
 
   private[this] def issueTypeFor(category: Pattern.Category,
