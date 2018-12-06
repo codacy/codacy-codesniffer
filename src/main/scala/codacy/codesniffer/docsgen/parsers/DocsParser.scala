@@ -71,7 +71,7 @@ trait DocsParser {
     val patternRegex = """.*?\spublic.*?\$(.*?)=(.*?);""".r
 
     Option(patternFile.lineIterator.toStream.collect {
-      case patternRegex(name, defaultValue) if !valueIsArray(defaultValue.trim)=>
+      case patternRegex(name, defaultValue) if !valueIsArray(defaultValue.trim) =>
         Parameter.Specification(Parameter.Name(name.trim), Parameter.Value(defaultValue.trim))
     }).filter(_.nonEmpty)
       .map(_.toSet)
