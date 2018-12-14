@@ -21,7 +21,7 @@ class PHPCSSecurityAuditDocsParser extends DocsParser {
     PatternIdParts("Security", sniffType, patternName)
   }
   override def descriptionWithDocs(rootDir: File,
-                                   patternIdParts: PatternIdParts): (Pattern.Description, Option[String]) = {
+                                   patternIdParts: PatternIdParts, patternFile: File): (Pattern.Description, Option[String]) = {
     (descriptionFor(patternIdParts), None)
   }
 

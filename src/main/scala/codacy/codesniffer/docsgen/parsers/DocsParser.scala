@@ -24,7 +24,7 @@ trait DocsParser {
 
   def patternIdPartsFor(relativizedFilePath: String): PatternIdParts
 
-  def descriptionWithDocs(rootDir: File, patternIdParts: PatternIdParts): (Pattern.Description, Option[String])
+  def descriptionWithDocs(rootDir: File, patternIdParts: PatternIdParts, patternFile: File): (Pattern.Description, Option[String])
 
   def fallBackCategory: Pattern.Category.Value = Pattern.Category.CodeStyle
 
@@ -47,7 +47,7 @@ trait DocsParser {
                                        CategoriesMapper.categoryFor(idParts, fallBackCategory),
                                        parseParameters(sourceFile))
 
-      val (description, docs) = descriptionWithDocs(dir, idParts)
+      val (description, docs) = descriptionWithDocs(dir, idParts, sourceFile)
 
       PatternDocs(spec, description, docs)
     })(collection.breakOut)
