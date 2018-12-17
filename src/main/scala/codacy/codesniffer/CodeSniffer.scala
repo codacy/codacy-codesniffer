@@ -16,6 +16,8 @@ object CodeSniffer extends Tool {
 
   private[this] val phpVersionKey = Options.Key("php_version")
 
+  private[this] val deprecatedPropertyRegex = ".*property is deprecated in favor of.*"
+
   def apply(source: Source.Directory,
             configuration: Option[List[Pattern.Definition]],
             files: Option[Set[Source.File]],
@@ -56,19 +58,21 @@ object CodeSniffer extends Tool {
   private[this] def parseToolResult(outputFile: Path): List[Result] = {
     val xmlResult = XML.loadFile(outputFile.toFile)
     (xmlResult \ "file").flatMap { file =>
-      file.child.collect {
-        case codeMatch: Elem =>
-          val filePath = (file \ "@name").toString()
-          val line = (codeMatch \ "@line").toString().toInt
-          val message = codeMatch.text
-          val rule = (codeMatch \ "@source")
-            .toString()
-            .split('.')
-            .dropRight(1)
-            .mkString("_")
-            .replace("PHPCS_SecurityAudit", "Security")
-          Result.Issue(Source.File(filePath), Result.Message(message), Pattern.Id(rule), Source.Line(line))
-      }
+      file.child
+        .filterNot(codeMatch => codeMatch.text.matches(deprecatedPropertyRegex))
+        .collect {
+          case codeMatch: Elem =>
+            val filePath = (file \ "@name").toString()
+            val line = (codeMatch \ "@line").toString().toInt
+            val message = codeMatch.text
+            val rule = (codeMatch \ "@source")
+              .toString()
+              .split('.')
+              .dropRight(1)
+              .mkString("_")
+              .replace("PHPCS_SecurityAudit", "Security")
+            Result.Issue(Source.File(filePath), Result.Message(message), Pattern.Id(rule), Source.Line(line))
+        }
     }.toList
   }
 
