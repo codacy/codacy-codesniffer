@@ -1294,10 +1294,10 @@
   "title" : "Superfluous Whitespace"
 }, {
   "patternId" : "WordPress_Arrays_ArrayAssignmentRestrictions",
-  "title" : "Array Assignment Restrictions"
+  "title" : "Array Assignment Restrictions (Deprecated)"
 }, {
   "patternId" : "WordPress_Arrays_ArrayDeclaration",
-  "title" : "Array Declaration"
+  "title" : "Array Declaration (Deprecated)"
 }, {
   "patternId" : "WordPress_Arrays_ArrayDeclarationSpacing",
   "title" : "Array Declaration Spacing"
@@ -1315,7 +1315,7 @@
   "title" : "Multiple Statement Alignment"
 }, {
   "patternId" : "WordPress_CSRF_NonceVerification",
-  "title" : "Nonce Verification"
+  "title" : "Nonce Verification (Deprecated)"
 }, {
   "patternId" : "WordPress_Classes_ClassInstantiation",
   "title" : "Class Instantiation"
@@ -1348,13 +1348,13 @@
   "title" : "File Name"
 }, {
   "patternId" : "WordPress_Functions_DontExtract",
-  "title" : "Dont Extract"
+  "title" : "Dont Extract (Deprecated)"
 }, {
   "patternId" : "WordPress_Functions_FunctionCallSignatureNoParams",
   "title" : "Function Call Signature No Params"
 }, {
   "patternId" : "WordPress_Functions_FunctionRestrictions",
-  "title" : "Function Restrictions"
+  "title" : "Function Restrictions (Deprecated)"
 }, {
   "patternId" : "WordPress_NamingConventions_PrefixAllGlobals",
   "title" : "Prefix All Globals"
@@ -1375,7 +1375,7 @@
   "title" : "Discourage Goto"
 }, {
   "patternId" : "WordPress_PHP_DiscouragedFunctions",
-  "title" : "Discouraged Functions"
+  "title" : "Discouraged Functions (Deprecated)"
 }, {
   "patternId" : "WordPress_PHP_DiscouragedPHPFunctions",
   "title" : "Discouraged P H P Functions"
@@ -1420,55 +1420,55 @@
   "title" : "Validated Sanitized Input"
 }, {
   "patternId" : "WordPress_VIP_AdminBarRemoval",
-  "title" : "Admin Bar Removal"
+  "title" : "Admin Bar Removal (Deprecated)"
 }, {
   "patternId" : "WordPress_VIP_CronInterval",
-  "title" : "Cron Interval"
+  "title" : "Cron Interval (Deprecated)"
 }, {
   "patternId" : "WordPress_VIP_DirectDatabaseQuery",
-  "title" : "Direct Database Query"
+  "title" : "Direct Database Query (Deprecated)"
 }, {
   "patternId" : "WordPress_VIP_FileSystemWritesDisallow",
-  "title" : "File System Writes Disallow"
+  "title" : "File System Writes Disallow (Deprecated)"
 }, {
   "patternId" : "WordPress_VIP_OrderByRand",
-  "title" : "Order By Rand"
+  "title" : "Order By Rand (Deprecated)"
 }, {
   "patternId" : "WordPress_VIP_PluginMenuSlug",
-  "title" : "Plugin Menu Slug"
+  "title" : "Plugin Menu Slug (Deprecated)"
 }, {
   "patternId" : "WordPress_VIP_PostsPerPage",
   "title" : "Posts Per Page"
 }, {
   "patternId" : "WordPress_VIP_RestrictedFunctions",
-  "title" : "Restricted Functions"
+  "title" : "Restricted Functions (Deprecated)"
 }, {
   "patternId" : "WordPress_VIP_RestrictedVariables",
-  "title" : "Restricted Variables"
+  "title" : "Restricted Variables (Deprecated)"
 }, {
   "patternId" : "WordPress_VIP_SessionFunctionsUsage",
-  "title" : "Session Functions Usage"
+  "title" : "Session Functions Usage (Deprecated)"
 }, {
   "patternId" : "WordPress_VIP_SessionVariableUsage",
-  "title" : "Session Variable Usage"
+  "title" : "Session Variable Usage (Deprecated)"
 }, {
   "patternId" : "WordPress_VIP_SlowDBQuery",
-  "title" : "Slow D B Query"
+  "title" : "Slow D B Query (Deprecated)"
 }, {
   "patternId" : "WordPress_VIP_SuperGlobalInputUsage",
-  "title" : "Super Global Input Usage"
+  "title" : "Super Global Input Usage (Deprecated)"
 }, {
   "patternId" : "WordPress_VIP_TimezoneChange",
-  "title" : "Timezone Change"
+  "title" : "Timezone Change (Deprecated)"
 }, {
   "patternId" : "WordPress_VIP_ValidatedSanitizedInput",
-  "title" : "Validated Sanitized Input"
+  "title" : "Validated Sanitized Input (Deprecated)"
 }, {
   "patternId" : "WordPress_Variables_GlobalVariables",
-  "title" : "Global Variables"
+  "title" : "Global Variables (Deprecated)"
 }, {
   "patternId" : "WordPress_Variables_VariableRestrictions",
-  "title" : "Variable Restrictions"
+  "title" : "Variable Restrictions (Deprecated)"
 }, {
   "patternId" : "WordPress_WP_AlternativeFunctions",
   "title" : "Alternative Functions"
@@ -1513,7 +1513,7 @@
   "title" : "Posts Per Page"
 }, {
   "patternId" : "WordPress_WP_PreparedSQL",
-  "title" : "Prepared S Q L"
+  "title" : "Prepared S Q L (Deprecated)"
 }, {
   "patternId" : "WordPress_WP_TimezoneChange",
   "title" : "Timezone Change"
@@ -1540,7 +1540,7 @@
   "title" : "Semicolon Spacing"
 }, {
   "patternId" : "WordPress_XSS_EscapeOutput",
-  "title" : "Escape Output"
+  "title" : "Escape Output (Deprecated)"
 }, {
   "patternId" : "Zend_Debug_CodeAnalyzer",
   "title" : "Zend Code Analyzer",

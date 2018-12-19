@@ -20,7 +20,7 @@ class MagentoCSDocsParser extends DocsParser {
   }
 
   override def descriptionWithDocs(rootDir: File,
-                                   patternIdParts: PatternIdParts): (Pattern.Description, Option[String]) =
+                                   patternIdParts: PatternIdParts, patternFile: File): (Pattern.Description, Option[String]) =
     (description(patternIdParts), None)
 
   private[this] def description(patternIdParts: PatternIdParts): Pattern.Description = {

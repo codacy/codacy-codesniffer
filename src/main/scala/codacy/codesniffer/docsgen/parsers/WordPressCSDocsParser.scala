@@ -18,9 +18,25 @@ class WordPressCSDocsParser extends DocsParser {
     val sniffRegex(sniffType, patternName) = relativizedFilePath
     PatternIdParts("WordPress", sniffType, patternName)
   }
+
   override def descriptionWithDocs(rootDir: File,
-                                   patternIdParts: PatternIdParts): (Pattern.Description, Option[String]) = {
-    (descriptionFor(patternIdParts), None)
+                                   patternIdParts: PatternIdParts, patternFile: File): (Pattern.Description, Option[String]) = {
+    val descriptionFromParts = descriptionFor(patternIdParts)
+    val description = if (isDeprecated(patternFile)) {
+      val newTitle = Pattern.Title(s"${descriptionFromParts.title.value} (Deprecated)")
+      descriptionFromParts.copy(title = newTitle)
+    } else {
+      descriptionFromParts
+    }
+    (description, None)
+  }
+
+  private[this] def isDeprecated(patternFile: File): Boolean = {
+    val className = patternFile.nameWithoutExtension
+
+    patternFile.lineIterator
+      .takeWhile(line => !line.matches(s"""^.*class.*$className.*extends.*Sniff.*"""))
+      .exists(_.matches("""^.*\*.*@deprecated.*"""))
   }
 
   private[this] def descriptionFor(patternIdParts: PatternIdParts): Pattern.Description = {
