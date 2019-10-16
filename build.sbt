@@ -7,15 +7,13 @@ name := """codacy-codesniffer"""
 
 version := "1.0-SNAPSHOT"
 
-val languageVersion = "2.12.7"
+val languageVersion = "2.13.1"
 
 scalaVersion := languageVersion
 
-resolvers ++= Seq("Typesafe Repo".at("http://repo.typesafe.com/typesafe/releases/"),
-                  "Sonatype OSS Snapshots".at("https://oss.sonatype.org/content/repositories/releases"))
-
-libraryDependencies ++= Seq(("org.scala-lang.modules" %% "scala-xml" % "1.1.1").withSources(),
-                            "com.codacy" %% "codacy-engine-scala-seed" % "3.0.244")
+libraryDependencies ++= Seq(("org.scala-lang.modules" %% "scala-xml" % "1.2.0").withSources(),
+                            "org.scala-lang.modules" %% "scala-parallel-collections" % "0.2.0",
+                            "com.codacy" %% "codacy-engine-scala-seed" % "3.1.0")
 
 enablePlugins(AshScriptPlugin)
 
