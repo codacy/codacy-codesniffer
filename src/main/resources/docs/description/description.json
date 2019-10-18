@@ -22,6 +22,9 @@
   "title" : "Assignment In Condition",
   "description" : "Variable assignments should not be made within conditions."
 }, {
+  "patternId" : "Generic_CodeAnalysis_EmptyPHPStatement",
+  "title" : "Empty P H P Statement"
+}, {
   "patternId" : "Generic_CodeAnalysis_EmptyStatement",
   "title" : "Empty Statements",
   "description" : "Control Structures must have at least one statement inside of the body."
@@ -64,6 +67,10 @@
   "patternId" : "Generic_Commenting_Todo",
   "title" : "Todo Comments",
   "description" : "TODO Statements should be taken care of."
+}, {
+  "patternId" : "Generic_ControlStructures_DisallowYodaConditions",
+  "title" : "Disallow Yoda conditions",
+  "description" : "Yoda conditions are disallowed."
 }, {
   "patternId" : "Generic_ControlStructures_InlineControlStructure",
   "title" : "Inline Control Structures",
@@ -121,10 +128,12 @@
   "description" : "There should only be one interface defined in a file."
 }, {
   "patternId" : "Generic_Files_OneObjectStructurePerFile",
-  "title" : "One Object Structure Per File"
+  "title" : "One Object Structure Per File",
+  "description" : "There should only be one class or interface or trait defined in a file."
 }, {
   "patternId" : "Generic_Files_OneTraitPerFile",
-  "title" : "One Trait Per File"
+  "title" : "One Trait Per File",
+  "description" : "There should only be one trait defined in a file."
 }, {
   "patternId" : "Generic_Formatting_DisallowMultipleStatements",
   "title" : "Multiple Statements On a Single Line",
@@ -143,7 +152,11 @@
   "description" : "Exactly one space is allowed after a cast."
 }, {
   "patternId" : "Generic_Formatting_SpaceAfterNot",
-  "title" : "Space After Not"
+  "title" : "Space After NOT operator",
+  "description" : "Exactly one space is allowed after the NOT operator."
+}, {
+  "patternId" : "Generic_Formatting_SpaceBeforeCast",
+  "title" : "Space Before Cast"
 }, {
   "patternId" : "Generic_Functions_CallTimePassByReference",
   "title" : "Call-Time Pass-By-Reference",
@@ -229,6 +242,9 @@
   "title" : "Silenced Errors",
   "description" : "Suppressing Errors is not allowed."
 }, {
+  "patternId" : "Generic_PHP_RequireStrictTypes",
+  "title" : "Require Strict Types"
+}, {
   "patternId" : "Generic_PHP_SAPIUsage",
   "title" : "SAPI Usage",
   "description" : "The PHP_SAPI constant should be used instead of php_sapi_name()."
@@ -243,6 +259,9 @@
   "patternId" : "Generic_Strings_UnnecessaryStringConcat",
   "title" : "Unnecessary String Concatenation",
   "description" : "Strings should not be concatenated together."
+}, {
+  "patternId" : "Generic_VersionControl_GitMergeConflict",
+  "title" : "Git Merge Conflict"
 }, {
   "patternId" : "Generic_VersionControl_SubversionProperties",
   "title" : "Subversion Properties",
@@ -260,6 +279,9 @@
   "title" : "No Tab Indentation",
   "description" : "Spaces should be used for indentation instead of tabs."
 }, {
+  "patternId" : "Generic_WhiteSpace_IncrementDecrementSpacing",
+  "title" : "Increment Decrement Spacing"
+}, {
   "patternId" : "Generic_WhiteSpace_LanguageConstructSpacing",
   "title" : "Language Construct Spacing"
 }, {
@@ -267,155 +289,183 @@
   "title" : "Scope Indentation",
   "description" : "Indentation for control structures, classes, and functions should be 4 spaces per level."
 }, {
+  "patternId" : "Generic_WhiteSpace_SpreadOperatorSpacingAfter",
+  "title" : "Spacing After Spread Operator",
+  "description" : "There should be no space between the spread operator and the variable/function call it applies to."
+}, {
   "patternId" : "MEQP1_Classes_Mysql4",
-  "title" : "Mysql4"
+  "title" : "Classes: Mysql4"
 }, {
   "patternId" : "MEQP1_Classes_ObjectInstantiation",
-  "title" : "Object Instantiation"
+  "title" : "Classes: Object Instantiation"
 }, {
   "patternId" : "MEQP1_Classes_ResourceModel",
-  "title" : "Resource Model"
+  "title" : "Classes: Resource Model"
 }, {
   "patternId" : "MEQP1_CodeAnalysis_EmptyBlock",
-  "title" : "Empty Block"
+  "title" : "Code Analysis: Empty Block"
 }, {
   "patternId" : "MEQP1_Exceptions_DirectThrow",
-  "title" : "Direct Throw"
+  "title" : "Exceptions: Direct Throw"
 }, {
   "patternId" : "MEQP1_Exceptions_Namespace",
-  "title" : "Namespace"
+  "title" : "Exceptions: Namespace"
 }, {
   "patternId" : "MEQP1_PHP_Goto",
-  "title" : "Goto"
+  "title" : "PHP: Goto"
 }, {
   "patternId" : "MEQP1_PHP_PrivateClassMember",
-  "title" : "Private Class Member"
+  "title" : "PHP: Private Class Member"
 }, {
   "patternId" : "MEQP1_PHP_Syntax",
-  "title" : "Syntax"
+  "title" : "PHP: Syntax"
 }, {
   "patternId" : "MEQP1_PHP_Var",
-  "title" : "Var"
+  "title" : "PHP: Var"
 }, {
   "patternId" : "MEQP1_Performance_CollectionCount",
-  "title" : "Collection Count"
+  "title" : "Performance: Collection Count"
 }, {
   "patternId" : "MEQP1_Performance_EmptyCheck",
-  "title" : "Empty Check"
+  "title" : "Performance: Empty Check"
 }, {
   "patternId" : "MEQP1_Performance_InefficientMethods",
-  "title" : "Inefficient Methods"
+  "title" : "Performance: Inefficient Methods"
 }, {
   "patternId" : "MEQP1_Performance_Loop",
-  "title" : "Loop"
+  "title" : "Performance: Loop"
 }, {
   "patternId" : "MEQP1_SQL_MissedIndexes",
-  "title" : "Missed Indexes"
+  "title" : "SQL: Missed Indexes"
 }, {
   "patternId" : "MEQP1_SQL_RawQuery",
-  "title" : "Raw Query"
+  "title" : "SQL: Raw Query"
 }, {
   "patternId" : "MEQP1_SQL_SlowQuery",
-  "title" : "Slow Query"
+  "title" : "SQL: Slow Query"
 }, {
   "patternId" : "MEQP1_Security_Acl",
-  "title" : "Acl"
+  "title" : "Security: Acl"
 }, {
   "patternId" : "MEQP1_Security_DiscouragedFunction",
-  "title" : "Discouraged Function"
+  "title" : "Security: Discouraged Function"
 }, {
   "patternId" : "MEQP1_Security_IncludeFile",
-  "title" : "Include File"
+  "title" : "Security: Include File"
+}, {
+  "patternId" : "MEQP1_Security_InsecureFunction",
+  "title" : "Security: Insecure Function"
 }, {
   "patternId" : "MEQP1_Security_LanguageConstruct",
-  "title" : "Language Construct"
+  "title" : "Security: Language Construct"
 }, {
   "patternId" : "MEQP1_Security_Superglobal",
-  "title" : "Superglobal"
+  "title" : "Security: Superglobal"
 }, {
   "patternId" : "MEQP1_Stdlib_DateTime",
-  "title" : "Date Time"
+  "title" : "Stdlib: Date Time"
 }, {
   "patternId" : "MEQP1_Strings_RegEx",
-  "title" : "Reg Ex"
+  "title" : "Strings: Reg Ex"
 }, {
   "patternId" : "MEQP1_Strings_StringConcat",
-  "title" : "String Concat"
+  "title" : "Strings: String Concat"
 }, {
   "patternId" : "MEQP1_Strings_StringPosition",
-  "title" : "String Position"
+  "title" : "Strings: String Position"
 }, {
   "patternId" : "MEQP1_Templates_XssTemplate",
-  "title" : "Xss Template"
+  "title" : "Templates: Xss Template"
 }, {
-  "patternId" : "MEQP2_Classes_CollectionDependency",
-  "title" : "Collection Dependency"
+  "patternId" : "Magento2_Classes_AbstractApi",
+  "title" : "Classes: Abstract Api"
 }, {
-  "patternId" : "MEQP2_Classes_ConstructorOperations",
-  "title" : "Constructor Operations"
+  "patternId" : "Magento2_Classes_DiscouragedDependencies",
+  "title" : "Classes: Discouraged Dependencies"
 }, {
-  "patternId" : "MEQP2_Classes_InterfaceName",
-  "title" : "Interface Name"
+  "patternId" : "Magento2_CodeAnalysis_EmptyBlock",
+  "title" : "Code Analysis: Empty Block"
 }, {
-  "patternId" : "MEQP2_Classes_MutableObjects",
-  "title" : "Mutable Objects"
+  "patternId" : "Magento2_Commenting_ConstantsPHPDocFormatting",
+  "title" : "Commenting: Constants PHP Doc Formatting"
 }, {
-  "patternId" : "MEQP2_Classes_NameResolution",
-  "title" : "Name Resolution"
+  "patternId" : "Magento2_Exceptions_DirectThrow",
+  "title" : "Exceptions: Direct Throw"
 }, {
-  "patternId" : "MEQP2_Classes_ObjectInstantiation",
-  "title" : "Object Instantiation"
+  "patternId" : "Magento2_Exceptions_ThrowCatch",
+  "title" : "Exceptions: Throw Catch"
 }, {
-  "patternId" : "MEQP2_Classes_ObjectManager",
-  "title" : "Object Manager"
+  "patternId" : "Magento2_Files_LineLength",
+  "title" : "Files: Line Length"
 }, {
-  "patternId" : "MEQP2_Classes_PublicNonInterfaceMethods",
-  "title" : "Public Non Interface Methods"
+  "patternId" : "Magento2_Functions_DiscouragedFunction",
+  "title" : "Functions: Discouraged Function"
 }, {
-  "patternId" : "MEQP2_Classes_ResourceModel",
-  "title" : "Resource Model"
+  "patternId" : "Magento2_Functions_StaticFunction",
+  "title" : "Functions: Static Function"
 }, {
-  "patternId" : "MEQP2_Exceptions_DirectThrow",
-  "title" : "Direct Throw"
+  "patternId" : "Magento2_Legacy_MageEntity",
+  "title" : "Legacy: Mage Entity"
 }, {
-  "patternId" : "MEQP2_Legacy_MageEntity",
-  "title" : "Mage Entity"
+  "patternId" : "Magento2_NamingConvention_InterfaceName",
+  "title" : "Naming Convention: Interface Name"
 }, {
-  "patternId" : "MEQP2_NamingConventions_ReservedWords",
-  "title" : "Reserved Words"
+  "patternId" : "Magento2_NamingConvention_ReservedWords",
+  "title" : "Naming Convention: Reserved Words"
 }, {
-  "patternId" : "MEQP2_PHP_ProtectedClassMember",
-  "title" : "Protected Class Member"
+  "patternId" : "Magento2_PHP_FinalImplementation",
+  "title" : "PHP: Final Implementation"
 }, {
-  "patternId" : "MEQP2_PHP_Syntax",
-  "title" : "Syntax"
+  "patternId" : "Magento2_PHP_Goto",
+  "title" : "PHP: Goto"
 }, {
-  "patternId" : "MEQP2_SQL_CoreTablesModification",
-  "title" : "Core Tables Modification"
+  "patternId" : "Magento2_PHP_LiteralNamespaces",
+  "title" : "PHP: Literal Namespaces"
 }, {
-  "patternId" : "MEQP2_SQL_MissedIndexes",
-  "title" : "Missed Indexes"
+  "patternId" : "Magento2_PHP_ReturnValueCheck",
+  "title" : "PHP: Return Value Check"
 }, {
-  "patternId" : "MEQP2_Security_Superglobal",
-  "title" : "Superglobal"
+  "patternId" : "Magento2_PHP_ShortEchoSyntax",
+  "title" : "PHP: Short Echo Syntax"
 }, {
-  "patternId" : "MEQP2_Stdlib_DateTime",
-  "title" : "Date Time"
+  "patternId" : "Magento2_PHP_Var",
+  "title" : "PHP: Var"
 }, {
-  "patternId" : "MEQP2_Templates_RawJavaScript",
-  "title" : "Raw Java Script"
+  "patternId" : "Magento2_Performance_ForeachArrayMerge",
+  "title" : "Performance: Foreach Array Merge"
 }, {
-  "patternId" : "MEQP2_Templates_ThisInTemplate",
-  "title" : "This In Template"
+  "patternId" : "Magento2_SQL_RawQuery",
+  "title" : "SQL: Raw Query"
 }, {
-  "patternId" : "MEQP2_Templates_XssTemplate",
-  "title" : "Xss Template"
+  "patternId" : "Magento2_Security_IncludeFile",
+  "title" : "Security: Include File"
 }, {
-  "patternId" : "MEQP2_Translation_ConstantUsage",
-  "title" : "Constant Usage"
+  "patternId" : "Magento2_Security_InsecureFunction",
+  "title" : "Security: Insecure Function"
 }, {
-  "patternId" : "MEQP2_Whitespace_MultipleEmptyLines",
-  "title" : "Multiple Empty Lines"
+  "patternId" : "Magento2_Security_LanguageConstruct",
+  "title" : "Security: Language Construct"
+}, {
+  "patternId" : "Magento2_Security_Superglobal",
+  "title" : "Security: Superglobal"
+}, {
+  "patternId" : "Magento2_Security_XssTemplate",
+  "title" : "Security: Xss Template"
+}, {
+  "patternId" : "Magento2_Strings_ExecutableRegEx",
+  "title" : "Strings: Executable Reg Ex"
+}, {
+  "patternId" : "Magento2_Strings_StringConcat",
+  "title" : "Strings: String Concat"
+}, {
+  "patternId" : "Magento2_Templates_ThisInTemplate",
+  "title" : "Templates: This In Template"
+}, {
+  "patternId" : "Magento2_Translation_ConstantUsage",
+  "title" : "Translation: Constant Usage"
+}, {
+  "patternId" : "Magento2_Whitespace_MultipleEmptyLines",
+  "title" : "Whitespace: Multiple Empty Lines"
 }, {
   "patternId" : "MySource_CSS_BrowserSpecificStyles",
   "title" : "Browser Specific Styles"
@@ -537,285 +587,391 @@
   "title" : "Scope Indentation",
   "description" : "Any scope openers except for switch statements should be indented 1 level.  This includes classes, functions, and control structures."
 }, {
+  "patternId" : "PHPCompatibility_Classes_ForbiddenAbstractPrivateMethods",
+  "title" : "PHP Compatibility related issue (Classes): Forbidden Abstract Private Methods"
+}, {
   "patternId" : "PHPCompatibility_Classes_NewAnonymousClasses",
-  "title" : "New Anonymous Classes"
+  "title" : "PHP Compatibility related issue (Classes): New Anonymous Classes"
 }, {
   "patternId" : "PHPCompatibility_Classes_NewClasses",
-  "title" : "New Classes"
+  "title" : "PHP Compatibility related issue (Classes): New Classes"
 }, {
   "patternId" : "PHPCompatibility_Classes_NewConstVisibility",
-  "title" : "New Const Visibility"
+  "title" : "PHP Compatibility related issue (Classes): New Const Visibility"
 }, {
   "patternId" : "PHPCompatibility_Classes_NewLateStaticBinding",
-  "title" : "New Late Static Binding"
+  "title" : "PHP Compatibility related issue (Classes): New Late Static Binding"
+}, {
+  "patternId" : "PHPCompatibility_Classes_NewTypedProperties",
+  "title" : "PHP Compatibility related issue (Classes): New Typed Properties"
+}, {
+  "patternId" : "PHPCompatibility_Classes_RemovedOrphanedParent",
+  "title" : "PHP Compatibility related issue (Classes): Removed Orphaned Parent"
 }, {
   "patternId" : "PHPCompatibility_Constants_NewConstants",
-  "title" : "New Constants"
+  "title" : "PHP Compatibility related issue (Constants): New Constants"
 }, {
   "patternId" : "PHPCompatibility_Constants_NewMagicClassConstant",
-  "title" : "New Magic Class Constant"
+  "title" : "PHP Compatibility related issue (Constants): New Magic Class Constant"
 }, {
   "patternId" : "PHPCompatibility_Constants_RemovedConstants",
-  "title" : "Removed Constants"
+  "title" : "PHP Compatibility related issue (Constants): Removed Constants"
 }, {
   "patternId" : "PHPCompatibility_ControlStructures_DiscouragedSwitchContinue",
-  "title" : "Discouraged Switch Continue"
+  "title" : "PHP Compatibility related issue (Control Structures): Discouraged Switch Continue"
 }, {
   "patternId" : "PHPCompatibility_ControlStructures_ForbiddenBreakContinueOutsideLoop",
-  "title" : "Forbidden Break Continue Outside Loop"
+  "title" : "PHP Compatibility related issue (Control Structures): Forbidden Break Continue Outside Loop"
 }, {
   "patternId" : "PHPCompatibility_ControlStructures_ForbiddenBreakContinueVariableArguments",
-  "title" : "Forbidden Break Continue Variable Arguments"
+  "title" : "PHP Compatibility related issue (Control Structures): Forbidden Break Continue Variable Arguments"
 }, {
   "patternId" : "PHPCompatibility_ControlStructures_ForbiddenSwitchWithMultipleDefaultBlocks",
-  "title" : "Forbidden Switch With Multiple Default Blocks"
+  "title" : "PHP Compatibility related issue (Control Structures): Forbidden Switch With Multiple Default Blocks"
 }, {
   "patternId" : "PHPCompatibility_ControlStructures_NewExecutionDirectives",
-  "title" : "New Execution Directives"
+  "title" : "PHP Compatibility related issue (Control Structures): New Execution Directives"
 }, {
   "patternId" : "PHPCompatibility_ControlStructures_NewForeachExpressionReferencing",
-  "title" : "New Foreach Expression Referencing"
+  "title" : "PHP Compatibility related issue (Control Structures): New Foreach Expression Referencing"
 }, {
   "patternId" : "PHPCompatibility_ControlStructures_NewListInForeach",
-  "title" : "New List In Foreach"
+  "title" : "PHP Compatibility related issue (Control Structures): New List In Foreach"
 }, {
   "patternId" : "PHPCompatibility_ControlStructures_NewMultiCatch",
-  "title" : "New Multi Catch"
+  "title" : "PHP Compatibility related issue (Control Structures): New Multi Catch"
 }, {
   "patternId" : "PHPCompatibility_Extensions_RemovedExtensions",
-  "title" : "Removed Extensions"
+  "title" : "PHP Compatibility related issue (Extensions): Removed Extensions"
 }, {
   "patternId" : "PHPCompatibility_FunctionDeclarations_ForbiddenParameterShadowSuperGlobals",
-  "title" : "Forbidden Parameter Shadow Super Globals"
+  "title" : "PHP Compatibility related issue (Function Declarations): Forbidden Parameter Shadow Super Globals"
 }, {
   "patternId" : "PHPCompatibility_FunctionDeclarations_ForbiddenParametersWithSameName",
-  "title" : "Forbidden Parameters With Same Name"
+  "title" : "PHP Compatibility related issue (Function Declarations): Forbidden Parameters With Same Name"
+}, {
+  "patternId" : "PHPCompatibility_FunctionDeclarations_ForbiddenToStringParameters",
+  "title" : "PHP Compatibility related issue (Function Declarations): Forbidden To String Parameters"
 }, {
   "patternId" : "PHPCompatibility_FunctionDeclarations_ForbiddenVariableNamesInClosureUse",
-  "title" : "Forbidden Variable Names In Closure Use"
+  "title" : "PHP Compatibility related issue (Function Declarations): Forbidden Variable Names In Closure Use"
 }, {
   "patternId" : "PHPCompatibility_FunctionDeclarations_NewClosure",
-  "title" : "New Closure"
+  "title" : "PHP Compatibility related issue (Function Declarations): New Closure"
+}, {
+  "patternId" : "PHPCompatibility_FunctionDeclarations_NewExceptionsFromToString",
+  "title" : "PHP Compatibility related issue (Function Declarations): New Exceptions From To String"
 }, {
   "patternId" : "PHPCompatibility_FunctionDeclarations_NewNullableTypes",
-  "title" : "New Nullable Types"
+  "title" : "PHP Compatibility related issue (Function Declarations): New Nullable Types"
 }, {
   "patternId" : "PHPCompatibility_FunctionDeclarations_NewParamTypeDeclarations",
-  "title" : "New Param Type Declarations"
+  "title" : "PHP Compatibility related issue (Function Declarations): New Param Type Declarations"
 }, {
   "patternId" : "PHPCompatibility_FunctionDeclarations_NewReturnTypeDeclarations",
-  "title" : "New Return Type Declarations"
+  "title" : "PHP Compatibility related issue (Function Declarations): New Return Type Declarations"
 }, {
   "patternId" : "PHPCompatibility_FunctionDeclarations_NonStaticMagicMethods",
-  "title" : "Non Static Magic Methods"
+  "title" : "PHP Compatibility related issue (Function Declarations): Non Static Magic Methods"
 }, {
   "patternId" : "PHPCompatibility_FunctionNameRestrictions_NewMagicMethods",
-  "title" : "New Magic Methods"
+  "title" : "PHP Compatibility related issue (Function Name Restrictions): New Magic Methods"
 }, {
   "patternId" : "PHPCompatibility_FunctionNameRestrictions_RemovedMagicAutoload",
-  "title" : "Removed Magic Autoload"
+  "title" : "PHP Compatibility related issue (Function Name Restrictions): Removed Magic Autoload"
 }, {
   "patternId" : "PHPCompatibility_FunctionNameRestrictions_RemovedNamespacedAssert",
-  "title" : "Removed Namespaced Assert"
+  "title" : "PHP Compatibility related issue (Function Name Restrictions): Removed Namespaced Assert"
 }, {
   "patternId" : "PHPCompatibility_FunctionNameRestrictions_RemovedPHP4StyleConstructors",
-  "title" : "Removed P H P4 Style Constructors"
+  "title" : "PHP Compatibility related issue (Function Name Restrictions): Removed PHP4 Style Constructors"
 }, {
   "patternId" : "PHPCompatibility_FunctionNameRestrictions_ReservedFunctionNames",
-  "title" : "Reserved Function Names"
+  "title" : "PHP Compatibility related issue (Function Name Restrictions): Reserved Function Names"
+}, {
+  "patternId" : "PHPCompatibility_FunctionUse_ArgumentFunctionsReportCurrentValue",
+  "title" : "PHP Compatibility related issue (Function Use): Argument Functions Report Current Value"
 }, {
   "patternId" : "PHPCompatibility_FunctionUse_ArgumentFunctionsUsage",
-  "title" : "Argument Functions Usage"
+  "title" : "PHP Compatibility related issue (Function Use): Argument Functions Usage"
 }, {
   "patternId" : "PHPCompatibility_FunctionUse_NewFunctionParameters",
-  "title" : "New Function Parameters"
+  "title" : "PHP Compatibility related issue (Function Use): New Function Parameters"
 }, {
   "patternId" : "PHPCompatibility_FunctionUse_NewFunctions",
-  "title" : "New Functions"
+  "title" : "PHP Compatibility related issue (Function Use): New Functions"
 }, {
   "patternId" : "PHPCompatibility_FunctionUse_OptionalToRequiredFunctionParameters",
-  "title" : "Optional To Required Function Parameters"
+  "title" : "PHP Compatibility related issue (Function Use): Optional To Required Function Parameters"
 }, {
   "patternId" : "PHPCompatibility_FunctionUse_RemovedFunctionParameters",
-  "title" : "Removed Function Parameters"
+  "title" : "PHP Compatibility related issue (Function Use): Removed Function Parameters"
 }, {
   "patternId" : "PHPCompatibility_FunctionUse_RemovedFunctions",
-  "title" : "Removed Functions"
+  "title" : "PHP Compatibility related issue (Function Use): Removed Functions"
 }, {
   "patternId" : "PHPCompatibility_FunctionUse_RequiredToOptionalFunctionParameters",
-  "title" : "Required To Optional Function Parameters"
+  "title" : "PHP Compatibility related issue (Function Use): Required To Optional Function Parameters"
 }, {
   "patternId" : "PHPCompatibility_Generators_NewGeneratorReturn",
-  "title" : "New Generator Return"
+  "title" : "PHP Compatibility related issue (Generators): New Generator Return"
 }, {
   "patternId" : "PHPCompatibility_IniDirectives_NewIniDirectives",
-  "title" : "New Ini Directives"
+  "title" : "PHP Compatibility related issue (Ini Directives): New Ini Directives"
 }, {
   "patternId" : "PHPCompatibility_IniDirectives_RemovedIniDirectives",
-  "title" : "Removed Ini Directives"
+  "title" : "PHP Compatibility related issue (Ini Directives): Removed Ini Directives"
 }, {
   "patternId" : "PHPCompatibility_InitialValue_NewConstantArraysUsingConst",
-  "title" : "New Constant Arrays Using Const"
+  "title" : "PHP Compatibility related issue (Initial Value): New Constant Arrays Using Const"
 }, {
   "patternId" : "PHPCompatibility_InitialValue_NewConstantArraysUsingDefine",
-  "title" : "New Constant Arrays Using Define"
+  "title" : "PHP Compatibility related issue (Initial Value): New Constant Arrays Using Define"
 }, {
   "patternId" : "PHPCompatibility_InitialValue_NewConstantScalarExpressions",
-  "title" : "New Constant Scalar Expressions"
+  "title" : "PHP Compatibility related issue (Initial Value): New Constant Scalar Expressions"
 }, {
   "patternId" : "PHPCompatibility_InitialValue_NewHeredoc",
-  "title" : "New Heredoc"
+  "title" : "PHP Compatibility related issue (Initial Value): New Heredoc"
 }, {
   "patternId" : "PHPCompatibility_Interfaces_InternalInterfaces",
-  "title" : "Internal Interfaces"
+  "title" : "PHP Compatibility related issue (Interfaces): Internal Interfaces"
 }, {
   "patternId" : "PHPCompatibility_Interfaces_NewInterfaces",
-  "title" : "New Interfaces"
+  "title" : "PHP Compatibility related issue (Interfaces): New Interfaces"
 }, {
   "patternId" : "PHPCompatibility_Keywords_CaseSensitiveKeywords",
-  "title" : "Case Sensitive Keywords"
+  "title" : "PHP Compatibility related issue (Keywords): Case Sensitive Keywords"
 }, {
   "patternId" : "PHPCompatibility_Keywords_ForbiddenNames",
-  "title" : "Forbidden Names"
+  "title" : "PHP Compatibility related issue (Keywords): Forbidden Names"
 }, {
   "patternId" : "PHPCompatibility_Keywords_ForbiddenNamesAsDeclared",
-  "title" : "Forbidden Names As Declared"
+  "title" : "PHP Compatibility related issue (Keywords): Forbidden Names As Declared"
 }, {
   "patternId" : "PHPCompatibility_Keywords_ForbiddenNamesAsInvokedFunctions",
-  "title" : "Forbidden Names As Invoked Functions"
+  "title" : "PHP Compatibility related issue (Keywords): Forbidden Names As Invoked Functions"
 }, {
   "patternId" : "PHPCompatibility_Keywords_NewKeywords",
-  "title" : "New Keywords"
+  "title" : "PHP Compatibility related issue (Keywords): New Keywords"
 }, {
   "patternId" : "PHPCompatibility_LanguageConstructs_NewEmptyNonVariable",
-  "title" : "New Empty Non Variable"
+  "title" : "PHP Compatibility related issue (Language Constructs): New Empty Non Variable"
 }, {
   "patternId" : "PHPCompatibility_LanguageConstructs_NewLanguageConstructs",
-  "title" : "New Language Constructs"
+  "title" : "PHP Compatibility related issue (Language Constructs): New Language Constructs"
 }, {
   "patternId" : "PHPCompatibility_Lists_AssignmentOrder",
-  "title" : "Assignment Order"
+  "title" : "PHP Compatibility related issue (Lists): Assignment Order"
 }, {
   "patternId" : "PHPCompatibility_Lists_ForbiddenEmptyListAssignment",
-  "title" : "Forbidden Empty List Assignment"
+  "title" : "PHP Compatibility related issue (Lists): Forbidden Empty List Assignment"
 }, {
   "patternId" : "PHPCompatibility_Lists_NewKeyedList",
-  "title" : "New Keyed List"
+  "title" : "PHP Compatibility related issue (Lists): New Keyed List"
 }, {
   "patternId" : "PHPCompatibility_Lists_NewListReferenceAssignment",
-  "title" : "New List Reference Assignment"
+  "title" : "PHP Compatibility related issue (Lists): New List Reference Assignment"
 }, {
   "patternId" : "PHPCompatibility_Lists_NewShortList",
-  "title" : "New Short List"
+  "title" : "PHP Compatibility related issue (Lists): New Short List"
+}, {
+  "patternId" : "PHPCompatibility_MethodUse_ForbiddenToStringParameters",
+  "title" : "PHP Compatibility related issue (Method Use): Forbidden To String Parameters"
+}, {
+  "patternId" : "PHPCompatibility_MethodUse_NewDirectCallsToClone",
+  "title" : "PHP Compatibility related issue (Method Use): New Direct Calls To Clone"
+}, {
+  "patternId" : "PHPCompatibility_Miscellaneous_NewPHPOpenTagEOF",
+  "title" : "PHP Compatibility related issue (Miscellaneous): New PHP Open Tag EOF"
 }, {
   "patternId" : "PHPCompatibility_Miscellaneous_RemovedAlternativePHPTags",
-  "title" : "Removed Alternative P H P Tags"
+  "title" : "PHP Compatibility related issue (Miscellaneous): Removed Alternative PHP Tags"
 }, {
   "patternId" : "PHPCompatibility_Miscellaneous_ValidIntegers",
-  "title" : "Valid Integers"
+  "title" : "PHP Compatibility related issue (Miscellaneous): Valid Integers"
+}, {
+  "patternId" : "PHPCompatibility_Operators_ChangedConcatOperatorPrecedence",
+  "title" : "PHP Compatibility related issue (Operators): Changed Concat Operator Precedence"
 }, {
   "patternId" : "PHPCompatibility_Operators_ForbiddenNegativeBitshift",
-  "title" : "Forbidden Negative Bitshift"
+  "title" : "PHP Compatibility related issue (Operators): Forbidden Negative Bitshift"
 }, {
   "patternId" : "PHPCompatibility_Operators_NewOperators",
-  "title" : "New Operators"
+  "title" : "PHP Compatibility related issue (Operators): New Operators"
 }, {
   "patternId" : "PHPCompatibility_Operators_NewShortTernary",
-  "title" : "New Short Ternary"
+  "title" : "PHP Compatibility related issue (Operators): New Short Ternary"
+}, {
+  "patternId" : "PHPCompatibility_Operators_RemovedTernaryAssociativity",
+  "title" : "PHP Compatibility related issue (Operators): Removed Ternary Associativity"
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_ForbiddenGetClassNull",
-  "title" : "Forbidden Get Class Null"
+  "title" : "PHP Compatibility related issue (Parameter Values): Forbidden Get Class Null"
+}, {
+  "patternId" : "PHPCompatibility_ParameterValues_ForbiddenStripTagsSelfClosingXHTML",
+  "title" : "PHP Compatibility related issue (Parameter Values): Forbidden Strip Tags Self Closing XHTML"
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_NewArrayReduceInitialType",
-  "title" : "New Array Reduce Initial Type"
+  "title" : "PHP Compatibility related issue (Parameter Values): New Array Reduce Initial Type"
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_NewFopenModes",
-  "title" : "New Fopen Modes"
+  "title" : "PHP Compatibility related issue (Parameter Values): New Fopen Modes"
+}, {
+  "patternId" : "PHPCompatibility_ParameterValues_NewHTMLEntitiesEncodingDefault",
+  "title" : "PHP Compatibility related issue (Parameter Values): New HTML Entities Encoding Default"
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_NewHashAlgorithms",
-  "title" : "New Hash Algorithms"
+  "title" : "PHP Compatibility related issue (Parameter Values): New Hash Algorithms"
+}, {
+  "patternId" : "PHPCompatibility_ParameterValues_NewIDNVariantDefault",
+  "title" : "PHP Compatibility related issue (Parameter Values): New IDN Variant Default"
+}, {
+  "patternId" : "PHPCompatibility_ParameterValues_NewIconvMbstringCharsetDefault",
+  "title" : "PHP Compatibility related issue (Parameter Values): New Iconv Mbstring Charset Default"
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_NewNegativeStringOffset",
-  "title" : "New Negative String Offset"
+  "title" : "PHP Compatibility related issue (Parameter Values): New Negative String Offset"
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_NewPCREModifiers",
-  "title" : "New P C R E Modifiers"
+  "title" : "PHP Compatibility related issue (Parameter Values): New PCRE Modifiers"
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_NewPackFormat",
-  "title" : "New Pack Format"
+  "title" : "PHP Compatibility related issue (Parameter Values): New Pack Format"
+}, {
+  "patternId" : "PHPCompatibility_ParameterValues_NewPasswordAlgoConstantValues",
+  "title" : "PHP Compatibility related issue (Parameter Values): New Password Algo Constant Values"
+}, {
+  "patternId" : "PHPCompatibility_ParameterValues_NewProcOpenCmdArray",
+  "title" : "PHP Compatibility related issue (Parameter Values): New Proc Open Cmd Array"
+}, {
+  "patternId" : "PHPCompatibility_ParameterValues_NewStripTagsAllowableTagsArray",
+  "title" : "PHP Compatibility related issue (Parameter Values): New Strip Tags Allowable Tags Array"
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_RemovedHashAlgorithms",
-  "title" : "Removed Hash Algorithms"
+  "title" : "PHP Compatibility related issue (Parameter Values): Removed Hash Algorithms"
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_RemovedIconvEncoding",
-  "title" : "Removed Iconv Encoding"
+  "title" : "PHP Compatibility related issue (Parameter Values): Removed Iconv Encoding"
+}, {
+  "patternId" : "PHPCompatibility_ParameterValues_RemovedImplodeFlexibleParamOrder",
+  "title" : "PHP Compatibility related issue (Parameter Values): Removed Implode Flexible Param Order"
+}, {
+  "patternId" : "PHPCompatibility_ParameterValues_RemovedMbStrrposEncodingThirdParam",
+  "title" : "PHP Compatibility related issue (Parameter Values): Removed Mb Strrpos Encoding Third Param"
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_RemovedMbstringModifiers",
-  "title" : "Removed Mbstring Modifiers"
+  "title" : "PHP Compatibility related issue (Parameter Values): Removed Mbstring Modifiers"
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_RemovedNonCryptoHash",
-  "title" : "Removed Non Crypto Hash"
+  "title" : "PHP Compatibility related issue (Parameter Values): Removed Non Crypto Hash"
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_RemovedPCREModifiers",
-  "title" : "Removed P C R E Modifiers"
+  "title" : "PHP Compatibility related issue (Parameter Values): Removed PCRE Modifiers"
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_RemovedSetlocaleString",
-  "title" : "Removed Setlocale String"
+  "title" : "PHP Compatibility related issue (Parameter Values): Removed Setlocale String"
 }, {
   "patternId" : "PHPCompatibility_Syntax_ForbiddenCallTimePassByReference",
-  "title" : "Forbidden Call Time Pass By Reference"
+  "title" : "PHP Compatibility related issue (Syntax): Forbidden Call Time Pass By Reference"
 }, {
   "patternId" : "PHPCompatibility_Syntax_NewArrayStringDereferencing",
-  "title" : "New Array String Dereferencing"
+  "title" : "PHP Compatibility related issue (Syntax): New Array String Dereferencing"
+}, {
+  "patternId" : "PHPCompatibility_Syntax_NewArrayUnpacking",
+  "title" : "PHP Compatibility related issue (Syntax): New Array Unpacking"
 }, {
   "patternId" : "PHPCompatibility_Syntax_NewClassMemberAccess",
-  "title" : "New Class Member Access"
+  "title" : "PHP Compatibility related issue (Syntax): New Class Member Access"
 }, {
   "patternId" : "PHPCompatibility_Syntax_NewDynamicAccessToStatic",
-  "title" : "New Dynamic Access To Static"
+  "title" : "PHP Compatibility related issue (Syntax): New Dynamic Access To Static"
 }, {
   "patternId" : "PHPCompatibility_Syntax_NewFlexibleHeredocNowdoc",
-  "title" : "New Flexible Heredoc Nowdoc"
+  "title" : "PHP Compatibility related issue (Syntax): New Flexible Heredoc Nowdoc"
 }, {
   "patternId" : "PHPCompatibility_Syntax_NewFunctionArrayDereferencing",
-  "title" : "New Function Array Dereferencing"
+  "title" : "PHP Compatibility related issue (Syntax): New Function Array Dereferencing"
 }, {
   "patternId" : "PHPCompatibility_Syntax_NewFunctionCallTrailingComma",
-  "title" : "New Function Call Trailing Comma"
+  "title" : "PHP Compatibility related issue (Syntax): New Function Call Trailing Comma"
 }, {
   "patternId" : "PHPCompatibility_Syntax_NewShortArray",
-  "title" : "New Short Array"
+  "title" : "PHP Compatibility related issue (Syntax): New Short Array"
+}, {
+  "patternId" : "PHPCompatibility_Syntax_RemovedCurlyBraceArrayAccess",
+  "title" : "PHP Compatibility related issue (Syntax): Removed Curly Brace Array Access"
 }, {
   "patternId" : "PHPCompatibility_Syntax_RemovedNewReference",
-  "title" : "Removed New Reference"
+  "title" : "PHP Compatibility related issue (Syntax): Removed New Reference"
+}, {
+  "patternId" : "PHPCompatibility_TextStrings_NewUnicodeEscapeSequence",
+  "title" : "PHP Compatibility related issue (Text Strings): New Unicode Escape Sequence"
 }, {
   "patternId" : "PHPCompatibility_TypeCasts_NewTypeCasts",
-  "title" : "New Type Casts"
+  "title" : "PHP Compatibility related issue (Type Casts): New Type Casts"
 }, {
   "patternId" : "PHPCompatibility_TypeCasts_RemovedTypeCasts",
-  "title" : "Removed Type Casts"
+  "title" : "PHP Compatibility related issue (Type Casts): Removed Type Casts"
+}, {
+  "patternId" : "PHPCompatibility_Upgrade_LowPHP",
+  "title" : "PHP Compatibility related issue (Upgrade): Low PHP"
 }, {
   "patternId" : "PHPCompatibility_Upgrade_LowPHPCS",
-  "title" : "Low P H P C S"
+  "title" : "PHP Compatibility related issue (Upgrade): Low PHPCS"
 }, {
   "patternId" : "PHPCompatibility_UseDeclarations_NewGroupUseDeclarations",
-  "title" : "New Group Use Declarations"
+  "title" : "PHP Compatibility related issue (Use Declarations): New Group Use Declarations"
 }, {
   "patternId" : "PHPCompatibility_UseDeclarations_NewUseConstFunction",
-  "title" : "New Use Const Function"
+  "title" : "PHP Compatibility related issue (Use Declarations): New Use Const Function"
 }, {
   "patternId" : "PHPCompatibility_Variables_ForbiddenGlobalVariableVariable",
-  "title" : "Forbidden Global Variable Variable"
+  "title" : "PHP Compatibility related issue (Variables): Forbidden Global Variable Variable"
+}, {
+  "patternId" : "PHPCompatibility_Variables_ForbiddenThisUseContexts",
+  "title" : "PHP Compatibility related issue (Variables): Forbidden This Use Contexts"
 }, {
   "patternId" : "PHPCompatibility_Variables_NewUniformVariableSyntax",
-  "title" : "New Uniform Variable Syntax"
+  "title" : "PHP Compatibility related issue (Variables): New Uniform Variable Syntax"
 }, {
   "patternId" : "PHPCompatibility_Variables_RemovedPredefinedGlobalVariables",
-  "title" : "Removed Predefined Global Variables"
+  "title" : "PHP Compatibility related issue (Variables): Removed Predefined Global Variables"
+}, {
+  "patternId" : "PSR12_Classes_AnonClassDeclaration",
+  "title" : "Anon Class Declaration"
 }, {
   "patternId" : "PSR12_Classes_ClassInstantiation",
   "title" : "Class Instantiation",
   "description" : "When instantiating a new class, parenthesis MUST always be present even when there are no arguments passed to the constructor."
+}, {
+  "patternId" : "PSR12_Classes_ClosingBrace",
+  "title" : "Closing Brace"
+}, {
+  "patternId" : "PSR12_ControlStructures_BooleanOperatorPlacement",
+  "title" : "Boolean Operator Placement"
+}, {
+  "patternId" : "PSR12_ControlStructures_ControlStructureSpacing",
+  "title" : "Control Structure Spacing"
+}, {
+  "patternId" : "PSR12_Files_DeclareStatement",
+  "title" : "Declare Statement"
+}, {
+  "patternId" : "PSR12_Files_FileHeader",
+  "title" : "File Header"
+}, {
+  "patternId" : "PSR12_Files_ImportStatement",
+  "title" : "Import Statement"
+}, {
+  "patternId" : "PSR12_Files_OpenTag",
+  "title" : "Open Tag"
+}, {
+  "patternId" : "PSR12_Functions_NullableTypeDeclaration",
+  "title" : "Nullable Type Declarations Functions",
+  "description" : "In nullable type declarations there MUST NOT be a space between the question mark and the type."
+}, {
+  "patternId" : "PSR12_Functions_ReturnTypeDeclaration",
+  "title" : "Return Type Declaration"
 }, {
   "patternId" : "PSR12_Keywords_ShortFormTypeKeywords",
   "title" : "Short Form Type Keywords",
@@ -829,6 +985,12 @@
   "title" : "Operator Spacing",
   "description" : "All binary and ternary (but not unary) operators MUST be preceded and followed by at least one space. This includes all arithmetic, comparison, assignment, bitwise, logical (excluding ! which is unary), string concatenation, type operators, trait operators (insteadof and as), and the single pipe operator (e.g. ExceptionType1 | ExceptionType2 $e)."
 }, {
+  "patternId" : "PSR12_Properties_ConstantVisibility",
+  "title" : "Constant Visibility"
+}, {
+  "patternId" : "PSR12_Traits_UseDeclaration",
+  "title" : "Use Declaration"
+}, {
   "patternId" : "PSR1_Classes_ClassDeclaration",
   "title" : "Class Declaration",
   "description" : "Each class must be in a file by itself and must be under a namespace (a top-level vendor name)."
@@ -838,7 +1000,8 @@
   "description" : "A php file should either contain declarations with no side effects, or should just have logic (including side effects) with no declarations."
 }, {
   "patternId" : "PSR1_Methods_CamelCapsMethodName",
-  "title" : "Camel Caps Method Name"
+  "title" : "Method Name",
+  "description" : "Method names MUST be declared in camelCase."
 }, {
   "patternId" : "PSR2_Classes_ClassDeclaration",
   "title" : "Class Declarations",
@@ -846,7 +1009,7 @@
 }, {
   "patternId" : "PSR2_Classes_PropertyDeclaration",
   "title" : "Property Declarations",
-  "description" : "Property names should not be prefixed with an underscore to indicate visibility.  Visibility should be used to declare properties rather than the var keyword.  Only one property should be declared within a statement."
+  "description" : "Property names should not be prefixed with an underscore to indicate visibility.  Visibility should be used to declare properties rather than the var keyword.  Only one property should be declared within a statement.  The static declaration must come after the visibility declaration."
 }, {
   "patternId" : "PSR2_ControlStructures_ControlStructureSpacing",
   "title" : "Control Structure Spacing",
@@ -886,100 +1049,364 @@
   "description" : "Each use declaration must contain only one namespace and must come after the first namespace declaration.  There should be one blank line after the final use statement."
 }, {
   "patternId" : "Security_BadFunctions_Asserts",
-  "title" : "Asserts"
+  "title" : "Security Bad Functions related issue: Asserts"
 }, {
   "patternId" : "Security_BadFunctions_Backticks",
-  "title" : "Backticks"
+  "title" : "Security Bad Functions related issue: Backticks"
 }, {
   "patternId" : "Security_BadFunctions_CallbackFunctions",
-  "title" : "Callback Functions"
+  "title" : "Security Bad Functions related issue: Callback Functions"
 }, {
   "patternId" : "Security_BadFunctions_CryptoFunctions",
-  "title" : "Crypto Functions"
+  "title" : "Security Bad Functions related issue: Crypto Functions"
 }, {
   "patternId" : "Security_BadFunctions_EasyRFI",
-  "title" : "Easy R F I"
+  "title" : "Security Bad Functions related issue: Easy RFI"
 }, {
   "patternId" : "Security_BadFunctions_EasyXSS",
-  "title" : "Easy X S S"
+  "title" : "Security Bad Functions related issue: Easy XSS"
 }, {
   "patternId" : "Security_BadFunctions_ErrorHandling",
-  "title" : "Error Handling"
+  "title" : "Security Bad Functions related issue: Error Handling"
 }, {
   "patternId" : "Security_BadFunctions_FilesystemFunctions",
-  "title" : "Filesystem Functions"
+  "title" : "Security Bad Functions related issue: Filesystem Functions"
 }, {
   "patternId" : "Security_BadFunctions_FringeFunctions",
-  "title" : "Fringe Functions"
+  "title" : "Security Bad Functions related issue: Fringe Functions"
 }, {
   "patternId" : "Security_BadFunctions_FunctionHandlingFunctions",
-  "title" : "Function Handling Functions"
+  "title" : "Security Bad Functions related issue: Function Handling Functions"
 }, {
   "patternId" : "Security_BadFunctions_Mysqli",
-  "title" : "Mysqli"
+  "title" : "Security Bad Functions related issue: Mysqli"
 }, {
   "patternId" : "Security_BadFunctions_NoEvals",
-  "title" : "No Evals"
+  "title" : "Security Bad Functions related issue: No Evals"
 }, {
   "patternId" : "Security_BadFunctions_Phpinfos",
-  "title" : "Phpinfos"
+  "title" : "Security Bad Functions related issue: Phpinfos"
 }, {
   "patternId" : "Security_BadFunctions_PregReplace",
-  "title" : "Preg Replace"
+  "title" : "Security Bad Functions related issue: Preg Replace"
 }, {
   "patternId" : "Security_BadFunctions_SQLFunctions",
-  "title" : "S Q L Functions"
+  "title" : "Security Bad Functions related issue: SQL Functions"
 }, {
   "patternId" : "Security_BadFunctions_SystemExecFunctions",
-  "title" : "System Exec Functions"
+  "title" : "Security Bad Functions related issue: System Exec Functions"
 }, {
   "patternId" : "Security_CVE_20132110",
-  "title" : "20132110"
+  "title" : "Security CVE related issue: 20132110"
 }, {
   "patternId" : "Security_CVE_20134113",
-  "title" : "20134113"
+  "title" : "Security CVE related issue: 20134113"
 }, {
   "patternId" : "Security_Drupal7_AESModule",
-  "title" : "A E S Module"
+  "title" : "Security Drupal7 related issue: AES Module"
 }, {
   "patternId" : "Security_Drupal7_AdvisoriesContrib",
-  "title" : "Advisories Contrib"
+  "title" : "Security Drupal7 related issue: Advisories Contrib"
 }, {
   "patternId" : "Security_Drupal7_AdvisoriesCore",
-  "title" : "Advisories Core"
+  "title" : "Security Drupal7 related issue: Advisories Core"
 }, {
   "patternId" : "Security_Drupal7_Cachei",
-  "title" : "Cachei"
+  "title" : "Security Drupal7 related issue: Cachei"
 }, {
   "patternId" : "Security_Drupal7_DbQueryAC",
-  "title" : "Db Query A C"
+  "title" : "Security Drupal7 related issue: Db Query AC"
 }, {
   "patternId" : "Security_Drupal7_DynQueries",
-  "title" : "Dyn Queries"
+  "title" : "Security Drupal7 related issue: Dyn Queries"
 }, {
   "patternId" : "Security_Drupal7_HttpRequest",
-  "title" : "Http Request"
+  "title" : "Security Drupal7 related issue: Http Request"
 }, {
   "patternId" : "Security_Drupal7_SQLi",
-  "title" : "S Q Li"
+  "title" : "Security Drupal7 related issue: SQ Li"
 }, {
   "patternId" : "Security_Drupal7_UserInputWatch",
-  "title" : "User Input Watch"
+  "title" : "Security Drupal7 related issue: User Input Watch"
 }, {
   "patternId" : "Security_Drupal7_XSSFormValue",
-  "title" : "X S S Form Value"
+  "title" : "Security Drupal7 related issue: XSS Form Value"
 }, {
   "patternId" : "Security_Drupal7_XSSHTMLConstruct",
-  "title" : "X S S H T M L Construct"
+  "title" : "Security Drupal7 related issue: XSSHTML Construct"
 }, {
   "patternId" : "Security_Drupal7_XSSPTheme",
-  "title" : "X S S P Theme"
+  "title" : "Security Drupal7 related issue: XSSP Theme"
 }, {
   "patternId" : "Security_Misc_BadCorsHeader",
-  "title" : "Bad Cors Header"
+  "title" : "Security Misc related issue: Bad Cors Header"
 }, {
   "patternId" : "Security_Misc_IncludeMismatch",
-  "title" : "Include Mismatch"
+  "title" : "Security Misc related issue: Include Mismatch"
+}, {
+  "patternId" : "SlevomatCodingStandard_Arrays_DisallowImplicitArrayCreation",
+  "title" : "Arrays: Disallow Implicit Array Creation"
+}, {
+  "patternId" : "SlevomatCodingStandard_Arrays_TrailingArrayComma",
+  "title" : "Arrays: Trailing Array Comma"
+}, {
+  "patternId" : "SlevomatCodingStandard_Classes_ClassConstantVisibility",
+  "title" : "Classes: Class Constant Visibility"
+}, {
+  "patternId" : "SlevomatCodingStandard_Classes_DisallowLateStaticBindingForConstants",
+  "title" : "Classes: Disallow Late Static Binding For Constants"
+}, {
+  "patternId" : "SlevomatCodingStandard_Classes_EmptyLinesAroundClassBraces",
+  "title" : "Classes: Empty Lines Around Class Braces"
+}, {
+  "patternId" : "SlevomatCodingStandard_Classes_ModernClassNameReference",
+  "title" : "Classes: Modern Class Name Reference"
+}, {
+  "patternId" : "SlevomatCodingStandard_Classes_SuperfluousAbstractClassNaming",
+  "title" : "Classes: Superfluous Abstract Class Naming"
+}, {
+  "patternId" : "SlevomatCodingStandard_Classes_SuperfluousExceptionNaming",
+  "title" : "Classes: Superfluous Exception Naming"
+}, {
+  "patternId" : "SlevomatCodingStandard_Classes_SuperfluousInterfaceNaming",
+  "title" : "Classes: Superfluous Interface Naming"
+}, {
+  "patternId" : "SlevomatCodingStandard_Classes_SuperfluousTraitNaming",
+  "title" : "Classes: Superfluous Trait Naming"
+}, {
+  "patternId" : "SlevomatCodingStandard_Classes_TraitUseDeclaration",
+  "title" : "Classes: Trait Use Declaration"
+}, {
+  "patternId" : "SlevomatCodingStandard_Classes_TraitUseSpacing",
+  "title" : "Classes: Trait Use Spacing"
+}, {
+  "patternId" : "SlevomatCodingStandard_Classes_UnusedPrivateElements",
+  "title" : "Classes: Unused Private Elements"
+}, {
+  "patternId" : "SlevomatCodingStandard_Classes_UselessLateStaticBinding",
+  "title" : "Classes: Useless Late Static Binding"
+}, {
+  "patternId" : "SlevomatCodingStandard_Commenting_DisallowOneLinePropertyDocComment",
+  "title" : "Commenting: Disallow One Line Property Doc Comment"
+}, {
+  "patternId" : "SlevomatCodingStandard_Commenting_DocCommentSpacing",
+  "title" : "Commenting: Doc Comment Spacing"
+}, {
+  "patternId" : "SlevomatCodingStandard_Commenting_EmptyComment",
+  "title" : "Commenting: Empty Comment"
+}, {
+  "patternId" : "SlevomatCodingStandard_Commenting_ForbiddenAnnotations",
+  "title" : "Commenting: Forbidden Annotations"
+}, {
+  "patternId" : "SlevomatCodingStandard_Commenting_ForbiddenComments",
+  "title" : "Commenting: Forbidden Comments"
+}, {
+  "patternId" : "SlevomatCodingStandard_Commenting_InlineDocCommentDeclaration",
+  "title" : "Commenting: Inline Doc Comment Declaration"
+}, {
+  "patternId" : "SlevomatCodingStandard_Commenting_RequireOneLinePropertyDocComment",
+  "title" : "Commenting: Require One Line Property Doc Comment"
+}, {
+  "patternId" : "SlevomatCodingStandard_Commenting_UselessInheritDocComment",
+  "title" : "Commenting: Useless Inherit Doc Comment"
+}, {
+  "patternId" : "SlevomatCodingStandard_ControlStructures_AssignmentInCondition",
+  "title" : "Control Structures: Assignment In Condition"
+}, {
+  "patternId" : "SlevomatCodingStandard_ControlStructures_ControlStructureSpacing",
+  "title" : "Control Structures: Control Structure Spacing"
+}, {
+  "patternId" : "SlevomatCodingStandard_ControlStructures_DisallowContinueWithoutIntegerOperandInSwitch",
+  "title" : "Control Structures: Disallow Continue Without Integer Operand In Switch"
+}, {
+  "patternId" : "SlevomatCodingStandard_ControlStructures_DisallowEmpty",
+  "title" : "Control Structures: Disallow Empty"
+}, {
+  "patternId" : "SlevomatCodingStandard_ControlStructures_DisallowShortTernaryOperator",
+  "title" : "Control Structures: Disallow Short Ternary Operator"
+}, {
+  "patternId" : "SlevomatCodingStandard_ControlStructures_DisallowYodaComparison",
+  "title" : "Control Structures: Disallow Yoda Comparison"
+}, {
+  "patternId" : "SlevomatCodingStandard_ControlStructures_EarlyExit",
+  "title" : "Control Structures: Early Exit"
+}, {
+  "patternId" : "SlevomatCodingStandard_ControlStructures_LanguageConstructWithParentheses",
+  "title" : "Control Structures: Language Construct With Parentheses"
+}, {
+  "patternId" : "SlevomatCodingStandard_ControlStructures_NewWithParentheses",
+  "title" : "Control Structures: New With Parentheses"
+}, {
+  "patternId" : "SlevomatCodingStandard_ControlStructures_NewWithoutParentheses",
+  "title" : "Control Structures: New Without Parentheses"
+}, {
+  "patternId" : "SlevomatCodingStandard_ControlStructures_RequireMultiLineTernaryOperator",
+  "title" : "Control Structures: Require Multi Line Ternary Operator"
+}, {
+  "patternId" : "SlevomatCodingStandard_ControlStructures_RequireNullCoalesceOperator",
+  "title" : "Control Structures: Require Null Coalesce Operator"
+}, {
+  "patternId" : "SlevomatCodingStandard_ControlStructures_RequireShortTernaryOperator",
+  "title" : "Control Structures: Require Short Ternary Operator"
+}, {
+  "patternId" : "SlevomatCodingStandard_ControlStructures_RequireTernaryOperator",
+  "title" : "Control Structures: Require Ternary Operator"
+}, {
+  "patternId" : "SlevomatCodingStandard_ControlStructures_RequireYodaComparison",
+  "title" : "Control Structures: Require Yoda Comparison"
+}, {
+  "patternId" : "SlevomatCodingStandard_ControlStructures_UselessIfConditionWithReturn",
+  "title" : "Control Structures: Useless If Condition With Return"
+}, {
+  "patternId" : "SlevomatCodingStandard_ControlStructures_UselessTernaryOperator",
+  "title" : "Control Structures: Useless Ternary Operator"
+}, {
+  "patternId" : "SlevomatCodingStandard_Exceptions_DeadCatch",
+  "title" : "Exceptions: Dead Catch"
+}, {
+  "patternId" : "SlevomatCodingStandard_Exceptions_ReferenceThrowableOnly",
+  "title" : "Exceptions: Reference Throwable Only"
+}, {
+  "patternId" : "SlevomatCodingStandard_Files_TypeNameMatchesFileName",
+  "title" : "Files: Type Name Matches File Name"
+}, {
+  "patternId" : "SlevomatCodingStandard_Functions_StaticClosure",
+  "title" : "Functions: Static Closure"
+}, {
+  "patternId" : "SlevomatCodingStandard_Functions_TrailingCommaInCall",
+  "title" : "Functions: Trailing Comma In Call"
+}, {
+  "patternId" : "SlevomatCodingStandard_Functions_UnusedInheritedVariablePassedToClosure",
+  "title" : "Functions: Unused Inherited Variable Passed To Closure"
+}, {
+  "patternId" : "SlevomatCodingStandard_Functions_UnusedParameter",
+  "title" : "Functions: Unused Parameter"
+}, {
+  "patternId" : "SlevomatCodingStandard_Functions_UselessParameterDefaultValue",
+  "title" : "Functions: Useless Parameter Default Value"
+}, {
+  "patternId" : "SlevomatCodingStandard_Namespaces_AlphabeticallySortedUses",
+  "title" : "Namespaces: Alphabetically Sorted Uses"
+}, {
+  "patternId" : "SlevomatCodingStandard_Namespaces_DisallowGroupUse",
+  "title" : "Namespaces: Disallow Group Use"
+}, {
+  "patternId" : "SlevomatCodingStandard_Namespaces_FullyQualifiedClassNameAfterKeyword",
+  "title" : "Namespaces: Fully Qualified Class Name After Keyword"
+}, {
+  "patternId" : "SlevomatCodingStandard_Namespaces_FullyQualifiedClassNameInAnnotation",
+  "title" : "Namespaces: Fully Qualified Class Name In Annotation"
+}, {
+  "patternId" : "SlevomatCodingStandard_Namespaces_FullyQualifiedExceptions",
+  "title" : "Namespaces: Fully Qualified Exceptions"
+}, {
+  "patternId" : "SlevomatCodingStandard_Namespaces_FullyQualifiedGlobalConstants",
+  "title" : "Namespaces: Fully Qualified Global Constants"
+}, {
+  "patternId" : "SlevomatCodingStandard_Namespaces_FullyQualifiedGlobalFunctions",
+  "title" : "Namespaces: Fully Qualified Global Functions"
+}, {
+  "patternId" : "SlevomatCodingStandard_Namespaces_MultipleUsesPerLine",
+  "title" : "Namespaces: Multiple Uses Per Line"
+}, {
+  "patternId" : "SlevomatCodingStandard_Namespaces_NamespaceDeclaration",
+  "title" : "Namespaces: Namespace Declaration"
+}, {
+  "patternId" : "SlevomatCodingStandard_Namespaces_NamespaceSpacing",
+  "title" : "Namespaces: Namespace Spacing"
+}, {
+  "patternId" : "SlevomatCodingStandard_Namespaces_ReferenceUsedNamesOnly",
+  "title" : "Namespaces: Reference Used Names Only"
+}, {
+  "patternId" : "SlevomatCodingStandard_Namespaces_RequireOneNamespaceInFile",
+  "title" : "Namespaces: Require One Namespace In File"
+}, {
+  "patternId" : "SlevomatCodingStandard_Namespaces_UnusedUses",
+  "title" : "Namespaces: Unused Uses"
+}, {
+  "patternId" : "SlevomatCodingStandard_Namespaces_UseDoesNotStartWithBackslash",
+  "title" : "Namespaces: Use Does Not Start With Backslash"
+}, {
+  "patternId" : "SlevomatCodingStandard_Namespaces_UseFromSameNamespace",
+  "title" : "Namespaces: Use From Same Namespace"
+}, {
+  "patternId" : "SlevomatCodingStandard_Namespaces_UseOnlyWhitelistedNamespaces",
+  "title" : "Namespaces: Use Only Whitelisted Namespaces"
+}, {
+  "patternId" : "SlevomatCodingStandard_Namespaces_UseSpacing",
+  "title" : "Namespaces: Use Spacing"
+}, {
+  "patternId" : "SlevomatCodingStandard_Namespaces_UselessAlias",
+  "title" : "Namespaces: Useless Alias"
+}, {
+  "patternId" : "SlevomatCodingStandard_Operators_DisallowEqualOperators",
+  "title" : "Operators: Disallow Equal Operators"
+}, {
+  "patternId" : "SlevomatCodingStandard_Operators_DisallowIncrementAndDecrementOperators",
+  "title" : "Operators: Disallow Increment And Decrement Operators"
+}, {
+  "patternId" : "SlevomatCodingStandard_Operators_RequireCombinedAssignmentOperator",
+  "title" : "Operators: Require Combined Assignment Operator"
+}, {
+  "patternId" : "SlevomatCodingStandard_Operators_RequireOnlyStandaloneIncrementAndDecrementOperators",
+  "title" : "Operators: Require Only Standalone Increment And Decrement Operators"
+}, {
+  "patternId" : "SlevomatCodingStandard_Operators_SpreadOperatorSpacing",
+  "title" : "Operators: Spread Operator Spacing"
+}, {
+  "patternId" : "SlevomatCodingStandard_PHP_OptimizedFunctionsWithoutUnpacking",
+  "title" : "PHP: Optimized Functions Without Unpacking"
+}, {
+  "patternId" : "SlevomatCodingStandard_PHP_ShortList",
+  "title" : "PHP: Short List"
+}, {
+  "patternId" : "SlevomatCodingStandard_PHP_TypeCast",
+  "title" : "PHP: Type Cast"
+}, {
+  "patternId" : "SlevomatCodingStandard_PHP_UselessParentheses",
+  "title" : "PHP: Useless Parentheses"
+}, {
+  "patternId" : "SlevomatCodingStandard_PHP_UselessSemicolon",
+  "title" : "PHP: Useless Semicolon"
+}, {
+  "patternId" : "SlevomatCodingStandard_TypeHints_DeclareStrictTypes",
+  "title" : "Type Hints: Declare Strict Types"
+}, {
+  "patternId" : "SlevomatCodingStandard_TypeHints_DisallowArrayTypeHintSyntax",
+  "title" : "Type Hints: Disallow Array Type Hint Syntax"
+}, {
+  "patternId" : "SlevomatCodingStandard_TypeHints_DisallowMixedTypeHint",
+  "title" : "Type Hints: Disallow Mixed Type Hint"
+}, {
+  "patternId" : "SlevomatCodingStandard_TypeHints_LongTypeHints",
+  "title" : "Type Hints: Long Type Hints"
+}, {
+  "patternId" : "SlevomatCodingStandard_TypeHints_NullTypeHintOnLastPosition",
+  "title" : "Type Hints: Null Type Hint On Last Position"
+}, {
+  "patternId" : "SlevomatCodingStandard_TypeHints_NullableTypeForNullDefaultValue",
+  "title" : "Type Hints: Nullable Type For Null Default Value"
+}, {
+  "patternId" : "SlevomatCodingStandard_TypeHints_ParameterTypeHintSpacing",
+  "title" : "Type Hints: Parameter Type Hint Spacing"
+}, {
+  "patternId" : "SlevomatCodingStandard_TypeHints_ReturnTypeHintSpacing",
+  "title" : "Type Hints: Return Type Hint Spacing"
+}, {
+  "patternId" : "SlevomatCodingStandard_TypeHints_TypeHintDeclaration",
+  "title" : "Type Hints: Type Hint Declaration"
+}, {
+  "patternId" : "SlevomatCodingStandard_TypeHints_UselessConstantTypeHint",
+  "title" : "Type Hints: Useless Constant Type Hint"
+}, {
+  "patternId" : "SlevomatCodingStandard_Variables_DuplicateAssignmentToVariable",
+  "title" : "Variables: Duplicate Assignment To Variable"
+}, {
+  "patternId" : "SlevomatCodingStandard_Variables_UnusedVariable",
+  "title" : "Variables: Unused Variable"
+}, {
+  "patternId" : "SlevomatCodingStandard_Variables_UselessVariable",
+  "title" : "Variables: Useless Variable"
 }, {
   "patternId" : "Squiz_Arrays_ArrayBracketSpacing",
   "title" : "Array Bracket Spacing",
@@ -1293,254 +1720,176 @@
   "patternId" : "Squiz_WhiteSpace_SuperfluousWhitespace",
   "title" : "Superfluous Whitespace"
 }, {
-  "patternId" : "WordPress_Arrays_ArrayAssignmentRestrictions",
-  "title" : "Array Assignment Restrictions (Deprecated)"
-}, {
-  "patternId" : "WordPress_Arrays_ArrayDeclaration",
-  "title" : "Array Declaration (Deprecated)"
-}, {
   "patternId" : "WordPress_Arrays_ArrayDeclarationSpacing",
-  "title" : "Array Declaration Spacing"
+  "title" : "Arrays: Array Declaration Spacing"
 }, {
   "patternId" : "WordPress_Arrays_ArrayIndentation",
-  "title" : "Array Indentation"
+  "title" : "Arrays: Array Indentation"
 }, {
   "patternId" : "WordPress_Arrays_ArrayKeySpacingRestrictions",
-  "title" : "Array Key Spacing Restrictions"
+  "title" : "Arrays: Array Key Spacing Restrictions"
 }, {
   "patternId" : "WordPress_Arrays_CommaAfterArrayItem",
-  "title" : "Comma After Array Item"
+  "title" : "Arrays: Comma After Array Item"
 }, {
   "patternId" : "WordPress_Arrays_MultipleStatementAlignment",
-  "title" : "Multiple Statement Alignment"
-}, {
-  "patternId" : "WordPress_CSRF_NonceVerification",
-  "title" : "Nonce Verification (Deprecated)"
+  "title" : "Arrays: Multiple Statement Alignment"
 }, {
   "patternId" : "WordPress_Classes_ClassInstantiation",
-  "title" : "Class Instantiation"
+  "title" : "Classes: Class Instantiation"
 }, {
   "patternId" : "WordPress_CodeAnalysis_AssignmentInCondition",
-  "title" : "Assignment In Condition"
+  "title" : "Code Analysis: Assignment In Condition"
 }, {
   "patternId" : "WordPress_CodeAnalysis_EmptyStatement",
-  "title" : "Empty Statement"
+  "title" : "Code Analysis: Empty Statement"
 }, {
   "patternId" : "WordPress_DB_DirectDatabaseQuery",
-  "title" : "Direct Database Query"
+  "title" : "DB: Direct Database Query"
 }, {
   "patternId" : "WordPress_DB_PreparedSQL",
-  "title" : "Prepared S Q L"
+  "title" : "DB: Prepared SQL"
 }, {
   "patternId" : "WordPress_DB_PreparedSQLPlaceholders",
-  "title" : "Prepared S Q L Placeholders"
+  "title" : "DB: Prepared SQL Placeholders"
 }, {
   "patternId" : "WordPress_DB_RestrictedClasses",
-  "title" : "Restricted Classes"
+  "title" : "DB: Restricted Classes"
 }, {
   "patternId" : "WordPress_DB_RestrictedFunctions",
-  "title" : "Restricted Functions"
+  "title" : "DB: Restricted Functions"
 }, {
   "patternId" : "WordPress_DB_SlowDBQuery",
-  "title" : "Slow D B Query"
+  "title" : "DB: Slow DB Query"
 }, {
   "patternId" : "WordPress_Files_FileName",
-  "title" : "File Name"
-}, {
-  "patternId" : "WordPress_Functions_DontExtract",
-  "title" : "Dont Extract (Deprecated)"
-}, {
-  "patternId" : "WordPress_Functions_FunctionCallSignatureNoParams",
-  "title" : "Function Call Signature No Params"
-}, {
-  "patternId" : "WordPress_Functions_FunctionRestrictions",
-  "title" : "Function Restrictions (Deprecated)"
+  "title" : "Files: File Name"
 }, {
   "patternId" : "WordPress_NamingConventions_PrefixAllGlobals",
-  "title" : "Prefix All Globals"
+  "title" : "Naming Conventions: Prefix All Globals"
 }, {
   "patternId" : "WordPress_NamingConventions_ValidFunctionName",
-  "title" : "Valid Function Name"
+  "title" : "Naming Conventions: Valid Function Name"
 }, {
   "patternId" : "WordPress_NamingConventions_ValidHookName",
-  "title" : "Valid Hook Name"
+  "title" : "Naming Conventions: Valid Hook Name"
 }, {
   "patternId" : "WordPress_NamingConventions_ValidVariableName",
-  "title" : "Valid Variable Name"
+  "title" : "Naming Conventions: Valid Variable Name"
 }, {
   "patternId" : "WordPress_PHP_DevelopmentFunctions",
-  "title" : "Development Functions"
-}, {
-  "patternId" : "WordPress_PHP_DiscourageGoto",
-  "title" : "Discourage Goto"
-}, {
-  "patternId" : "WordPress_PHP_DiscouragedFunctions",
-  "title" : "Discouraged Functions (Deprecated)"
+  "title" : "PHP: Development Functions"
 }, {
   "patternId" : "WordPress_PHP_DiscouragedPHPFunctions",
-  "title" : "Discouraged P H P Functions"
+  "title" : "PHP: Discouraged PHP Functions"
 }, {
   "patternId" : "WordPress_PHP_DontExtract",
-  "title" : "Dont Extract"
+  "title" : "PHP: Dont Extract"
+}, {
+  "patternId" : "WordPress_PHP_IniSet",
+  "title" : "PHP: Ini Set"
 }, {
   "patternId" : "WordPress_PHP_NoSilencedErrors",
-  "title" : "No Silenced Errors"
+  "title" : "PHP: No Silenced Errors"
 }, {
   "patternId" : "WordPress_PHP_POSIXFunctions",
-  "title" : "P O S I X Functions"
+  "title" : "PHP: POSIX Functions"
 }, {
   "patternId" : "WordPress_PHP_PregQuoteDelimiter",
-  "title" : "Preg Quote Delimiter"
+  "title" : "PHP: Preg Quote Delimiter"
 }, {
   "patternId" : "WordPress_PHP_RestrictedPHPFunctions",
-  "title" : "Restricted P H P Functions"
+  "title" : "PHP: Restricted PHP Functions"
 }, {
   "patternId" : "WordPress_PHP_StrictComparisons",
-  "title" : "Strict Comparisons"
+  "title" : "PHP: Strict Comparisons"
 }, {
   "patternId" : "WordPress_PHP_StrictInArray",
-  "title" : "Strict In Array"
+  "title" : "PHP: Strict In Array"
+}, {
+  "patternId" : "WordPress_PHP_TypeCasts",
+  "title" : "PHP: Type Casts"
 }, {
   "patternId" : "WordPress_PHP_YodaConditions",
-  "title" : "Yoda Conditions"
+  "title" : "PHP: Yoda Conditions"
 }, {
   "patternId" : "WordPress_Security_EscapeOutput",
-  "title" : "Escape Output"
+  "title" : "Security: Escape Output"
 }, {
   "patternId" : "WordPress_Security_NonceVerification",
-  "title" : "Nonce Verification"
+  "title" : "Security: Nonce Verification"
 }, {
   "patternId" : "WordPress_Security_PluginMenuSlug",
-  "title" : "Plugin Menu Slug"
+  "title" : "Security: Plugin Menu Slug"
 }, {
   "patternId" : "WordPress_Security_SafeRedirect",
-  "title" : "Safe Redirect"
+  "title" : "Security: Safe Redirect"
 }, {
   "patternId" : "WordPress_Security_ValidatedSanitizedInput",
-  "title" : "Validated Sanitized Input"
+  "title" : "Security: Validated Sanitized Input"
 }, {
-  "patternId" : "WordPress_VIP_AdminBarRemoval",
-  "title" : "Admin Bar Removal (Deprecated)"
-}, {
-  "patternId" : "WordPress_VIP_CronInterval",
-  "title" : "Cron Interval (Deprecated)"
-}, {
-  "patternId" : "WordPress_VIP_DirectDatabaseQuery",
-  "title" : "Direct Database Query (Deprecated)"
-}, {
-  "patternId" : "WordPress_VIP_FileSystemWritesDisallow",
-  "title" : "File System Writes Disallow (Deprecated)"
-}, {
-  "patternId" : "WordPress_VIP_OrderByRand",
-  "title" : "Order By Rand (Deprecated)"
-}, {
-  "patternId" : "WordPress_VIP_PluginMenuSlug",
-  "title" : "Plugin Menu Slug (Deprecated)"
-}, {
-  "patternId" : "WordPress_VIP_PostsPerPage",
-  "title" : "Posts Per Page"
-}, {
-  "patternId" : "WordPress_VIP_RestrictedFunctions",
-  "title" : "Restricted Functions (Deprecated)"
-}, {
-  "patternId" : "WordPress_VIP_RestrictedVariables",
-  "title" : "Restricted Variables (Deprecated)"
-}, {
-  "patternId" : "WordPress_VIP_SessionFunctionsUsage",
-  "title" : "Session Functions Usage (Deprecated)"
-}, {
-  "patternId" : "WordPress_VIP_SessionVariableUsage",
-  "title" : "Session Variable Usage (Deprecated)"
-}, {
-  "patternId" : "WordPress_VIP_SlowDBQuery",
-  "title" : "Slow D B Query (Deprecated)"
-}, {
-  "patternId" : "WordPress_VIP_SuperGlobalInputUsage",
-  "title" : "Super Global Input Usage (Deprecated)"
-}, {
-  "patternId" : "WordPress_VIP_TimezoneChange",
-  "title" : "Timezone Change (Deprecated)"
-}, {
-  "patternId" : "WordPress_VIP_ValidatedSanitizedInput",
-  "title" : "Validated Sanitized Input (Deprecated)"
-}, {
-  "patternId" : "WordPress_Variables_GlobalVariables",
-  "title" : "Global Variables (Deprecated)"
-}, {
-  "patternId" : "WordPress_Variables_VariableRestrictions",
-  "title" : "Variable Restrictions (Deprecated)"
+  "patternId" : "WordPress_Utils_I18nTextDomainFixer",
+  "title" : "Utils: I18n Text Domain Fixer"
 }, {
   "patternId" : "WordPress_WP_AlternativeFunctions",
-  "title" : "Alternative Functions"
+  "title" : "WP: Alternative Functions"
 }, {
   "patternId" : "WordPress_WP_CapitalPDangit",
-  "title" : "Capital P Dangit"
+  "title" : "WP: Capital P Dangit"
 }, {
   "patternId" : "WordPress_WP_CronInterval",
-  "title" : "Cron Interval"
+  "title" : "WP: Cron Interval"
 }, {
   "patternId" : "WordPress_WP_DeprecatedClasses",
-  "title" : "Deprecated Classes"
+  "title" : "WP: Deprecated Classes"
 }, {
   "patternId" : "WordPress_WP_DeprecatedFunctions",
-  "title" : "Deprecated Functions"
+  "title" : "WP: Deprecated Functions"
 }, {
   "patternId" : "WordPress_WP_DeprecatedParameterValues",
-  "title" : "Deprecated Parameter Values"
+  "title" : "WP: Deprecated Parameter Values"
 }, {
   "patternId" : "WordPress_WP_DeprecatedParameters",
-  "title" : "Deprecated Parameters"
+  "title" : "WP: Deprecated Parameters"
 }, {
   "patternId" : "WordPress_WP_DiscouragedConstants",
-  "title" : "Discouraged Constants"
+  "title" : "WP: Discouraged Constants"
 }, {
   "patternId" : "WordPress_WP_DiscouragedFunctions",
-  "title" : "Discouraged Functions"
+  "title" : "WP: Discouraged Functions"
 }, {
   "patternId" : "WordPress_WP_EnqueuedResourceParameters",
-  "title" : "Enqueued Resource Parameters"
+  "title" : "WP: Enqueued Resource Parameters"
 }, {
   "patternId" : "WordPress_WP_EnqueuedResources",
-  "title" : "Enqueued Resources"
+  "title" : "WP: Enqueued Resources"
 }, {
   "patternId" : "WordPress_WP_GlobalVariablesOverride",
-  "title" : "Global Variables Override"
+  "title" : "WP: Global Variables Override"
 }, {
   "patternId" : "WordPress_WP_I18n",
-  "title" : "I18n"
+  "title" : "WP: I18n"
 }, {
   "patternId" : "WordPress_WP_PostsPerPage",
-  "title" : "Posts Per Page"
-}, {
-  "patternId" : "WordPress_WP_PreparedSQL",
-  "title" : "Prepared S Q L (Deprecated)"
+  "title" : "WP: Posts Per Page"
 }, {
   "patternId" : "WordPress_WP_TimezoneChange",
-  "title" : "Timezone Change"
-}, {
-  "patternId" : "WordPress_WhiteSpace_ArbitraryParenthesesSpacing",
-  "title" : "Arbitrary Parentheses Spacing"
+  "title" : "WP: Timezone Change"
 }, {
   "patternId" : "WordPress_WhiteSpace_CastStructureSpacing",
-  "title" : "Cast Structure Spacing"
+  "title" : "White Space: Cast Structure Spacing"
 }, {
   "patternId" : "WordPress_WhiteSpace_ControlStructureSpacing",
-  "title" : "Control Structure Spacing"
+  "title" : "White Space: Control Structure Spacing"
 }, {
   "patternId" : "WordPress_WhiteSpace_DisallowInlineTabs",
-  "title" : "Disallow Inline Tabs"
+  "title" : "White Space: Disallow Inline Tabs"
 }, {
   "patternId" : "WordPress_WhiteSpace_OperatorSpacing",
-  "title" : "Operator Spacing"
+  "title" : "White Space: Operator Spacing"
 }, {
   "patternId" : "WordPress_WhiteSpace_PrecisionAlignment",
-  "title" : "Precision Alignment"
-}, {
-  "patternId" : "WordPress_WhiteSpace_SemicolonSpacing",
-  "title" : "Semicolon Spacing"
-}, {
-  "patternId" : "WordPress_XSS_EscapeOutput",
-  "title" : "Escape Output (Deprecated)"
+  "title" : "White Space: Precision Alignment"
 }, {
   "patternId" : "Zend_Debug_CodeAnalyzer",
   "title" : "Zend Code Analyzer",

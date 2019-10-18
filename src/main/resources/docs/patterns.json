@@ -1,6 +1,6 @@
 {
   "name" : "PHP Code Sniffer",
-  "version" : "3.3.2",
+  "version" : "3.5.1",
   "patterns" : [ {
     "patternId" : "Generic_Arrays_ArrayIndent",
     "level" : "Info",
@@ -27,6 +27,10 @@
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_CodeAnalysis_AssignmentInCondition",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_CodeAnalysis_EmptyPHPStatement",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
@@ -71,6 +75,10 @@
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_Commenting_Todo",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_ControlStructures_DisallowYodaConditions",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
@@ -181,9 +189,27 @@
   }, {
     "patternId" : "Generic_Formatting_SpaceAfterCast",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "spacing",
+      "default" : 1
+    }, {
+      "name" : "ignoreNewlines",
+      "default" : false
+    } ]
   }, {
     "patternId" : "Generic_Formatting_SpaceAfterNot",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "spacing",
+      "default" : 1
+    }, {
+      "name" : "ignoreNewlines",
+      "default" : false
+    } ]
+  }, {
+    "patternId" : "Generic_Formatting_SpaceBeforeCast",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
@@ -311,6 +337,10 @@
       "default" : false
     } ]
   }, {
+    "patternId" : "Generic_PHP_RequireStrictTypes",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
     "patternId" : "Generic_PHP_SAPIUsage",
     "level" : "Info",
     "category" : "CodeStyle"
@@ -333,6 +363,10 @@
       "name" : "allowMultiline",
       "default" : false
     } ]
+  }, {
+    "patternId" : "Generic_VersionControl_GitMergeConflict",
+    "level" : "Info",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_VersionControl_SubversionProperties",
     "level" : "Info",
@@ -357,6 +391,10 @@
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
+    "patternId" : "Generic_WhiteSpace_IncrementDecrementSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
     "patternId" : "Generic_WhiteSpace_LanguageConstructSpacing",
     "level" : "Info",
     "category" : "CodeStyle"
@@ -372,6 +410,17 @@
       "default" : false
     }, {
       "name" : "tabIndent",
+      "default" : false
+    } ]
+  }, {
+    "patternId" : "Generic_WhiteSpace_SpreadOperatorSpacingAfter",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "spacing",
+      "default" : 0
+    }, {
+      "name" : "ignoreNewlines",
       "default" : false
     } ]
   }, {
@@ -455,6 +504,10 @@
     "level" : "Warning",
     "category" : "Security"
   }, {
+    "patternId" : "MEQP1_Security_InsecureFunction",
+    "level" : "Info",
+    "category" : "Security"
+  }, {
     "patternId" : "MEQP1_Security_LanguageConstruct",
     "level" : "Error",
     "category" : "Security"
@@ -483,99 +536,134 @@
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
-    "patternId" : "MEQP2_Classes_CollectionDependency",
+    "patternId" : "Magento2_Classes_AbstractApi",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
-    "patternId" : "MEQP2_Classes_ConstructorOperations",
+    "patternId" : "Magento2_Classes_DiscouragedDependencies",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
-    "patternId" : "MEQP2_Classes_InterfaceName",
+    "patternId" : "Magento2_CodeAnalysis_EmptyBlock",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
-    "patternId" : "MEQP2_Classes_MutableObjects",
+    "patternId" : "Magento2_Commenting_ConstantsPHPDocFormatting",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
-    "patternId" : "MEQP2_Classes_NameResolution",
+    "patternId" : "Magento2_Exceptions_DirectThrow",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
-    "patternId" : "MEQP2_Classes_ObjectInstantiation",
+    "patternId" : "Magento2_Exceptions_ThrowCatch",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
-    "patternId" : "MEQP2_Classes_ObjectManager",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "MEQP2_Classes_PublicNonInterfaceMethods",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "MEQP2_Classes_ResourceModel",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "MEQP2_Exceptions_DirectThrow",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "MEQP2_Legacy_MageEntity",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "MEQP2_NamingConventions_ReservedWords",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "MEQP2_PHP_ProtectedClassMember",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "MEQP2_PHP_Syntax",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "MEQP2_SQL_CoreTablesModification",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "MEQP2_SQL_MissedIndexes",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "MEQP2_Security_Superglobal",
-    "level" : "Info",
-    "category" : "Security"
-  }, {
-    "patternId" : "MEQP2_Stdlib_DateTime",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "MEQP2_Templates_RawJavaScript",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "MEQP2_Templates_ThisInTemplate",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "MEQP2_Templates_XssTemplate",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "MEQP2_Translation_ConstantUsage",
+    "patternId" : "Magento2_Files_LineLength",
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
-      "name" : "ignoreComments",
-      "default" : true
+      "name" : "lineLimit",
+      "default" : 120
+    }, {
+      "name" : "absoluteLineLimit",
+      "default" : 120
     } ]
   }, {
-    "patternId" : "MEQP2_Whitespace_MultipleEmptyLines",
+    "patternId" : "Magento2_Functions_DiscouragedFunction",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "error",
+      "default" : false
+    } ]
+  }, {
+    "patternId" : "Magento2_Functions_StaticFunction",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Magento2_Legacy_MageEntity",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Magento2_NamingConvention_InterfaceName",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Magento2_NamingConvention_ReservedWords",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Magento2_PHP_FinalImplementation",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Magento2_PHP_Goto",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Magento2_PHP_LiteralNamespaces",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Magento2_PHP_ReturnValueCheck",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Magento2_PHP_ShortEchoSyntax",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Magento2_PHP_Var",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Magento2_Performance_ForeachArrayMerge",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Magento2_SQL_RawQuery",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Magento2_Security_IncludeFile",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
+    "patternId" : "Magento2_Security_InsecureFunction",
+    "level" : "Info",
+    "category" : "Security"
+  }, {
+    "patternId" : "Magento2_Security_LanguageConstruct",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
+    "patternId" : "Magento2_Security_Superglobal",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
+    "patternId" : "Magento2_Security_XssTemplate",
+    "level" : "Warning",
+    "category" : "Security"
+  }, {
+    "patternId" : "Magento2_Strings_ExecutableRegEx",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Magento2_Strings_StringConcat",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Magento2_Templates_ThisInTemplate",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Magento2_Translation_ConstantUsage",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Magento2_Whitespace_MultipleEmptyLines",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
@@ -738,6 +826,9 @@
     "parameters" : [ {
       "name" : "indent",
       "default" : 4
+    }, {
+      "name" : "multilevel",
+      "default" : false
     } ]
   }, {
     "patternId" : "PEAR_WhiteSpace_ScopeClosingBrace",
@@ -752,6 +843,10 @@
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
+    "patternId" : "PHPCompatibility_Classes_ForbiddenAbstractPrivateMethods",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
     "patternId" : "PHPCompatibility_Classes_NewAnonymousClasses",
     "level" : "Warning",
     "category" : "Compatibility"
@@ -765,6 +860,14 @@
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Classes_NewLateStaticBinding",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Classes_NewTypedProperties",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Classes_RemovedOrphanedParent",
     "level" : "Warning",
     "category" : "Compatibility"
   }, {
@@ -824,11 +927,19 @@
     "level" : "Warning",
     "category" : "Compatibility"
   }, {
+    "patternId" : "PHPCompatibility_FunctionDeclarations_ForbiddenToStringParameters",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
     "patternId" : "PHPCompatibility_FunctionDeclarations_ForbiddenVariableNamesInClosureUse",
     "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionDeclarations_NewClosure",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_FunctionDeclarations_NewExceptionsFromToString",
     "level" : "Warning",
     "category" : "Compatibility"
   }, {
@@ -865,6 +976,10 @@
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_FunctionNameRestrictions_ReservedFunctionNames",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_FunctionUse_ArgumentFunctionsReportCurrentValue",
     "level" : "Warning",
     "category" : "Compatibility"
   }, {
@@ -980,11 +1095,27 @@
     "level" : "Warning",
     "category" : "Compatibility"
   }, {
+    "patternId" : "PHPCompatibility_MethodUse_ForbiddenToStringParameters",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_MethodUse_NewDirectCallsToClone",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Miscellaneous_NewPHPOpenTagEOF",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
     "patternId" : "PHPCompatibility_Miscellaneous_RemovedAlternativePHPTags",
     "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_Miscellaneous_ValidIntegers",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Operators_ChangedConcatOperatorPrecedence",
     "level" : "Warning",
     "category" : "Compatibility"
   }, {
@@ -1000,7 +1131,15 @@
     "level" : "Warning",
     "category" : "Compatibility"
   }, {
+    "patternId" : "PHPCompatibility_Operators_RemovedTernaryAssociativity",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
     "patternId" : "PHPCompatibility_ParameterValues_ForbiddenGetClassNull",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_ParameterValues_ForbiddenStripTagsSelfClosingXHTML",
     "level" : "Warning",
     "category" : "Compatibility"
   }, {
@@ -1012,7 +1151,19 @@
     "level" : "Warning",
     "category" : "Compatibility"
   }, {
+    "patternId" : "PHPCompatibility_ParameterValues_NewHTMLEntitiesEncodingDefault",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
     "patternId" : "PHPCompatibility_ParameterValues_NewHashAlgorithms",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_ParameterValues_NewIDNVariantDefault",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_ParameterValues_NewIconvMbstringCharsetDefault",
     "level" : "Warning",
     "category" : "Compatibility"
   }, {
@@ -1028,11 +1179,31 @@
     "level" : "Warning",
     "category" : "Compatibility"
   }, {
+    "patternId" : "PHPCompatibility_ParameterValues_NewPasswordAlgoConstantValues",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_ParameterValues_NewProcOpenCmdArray",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_ParameterValues_NewStripTagsAllowableTagsArray",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
     "patternId" : "PHPCompatibility_ParameterValues_RemovedHashAlgorithms",
     "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_ParameterValues_RemovedIconvEncoding",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_ParameterValues_RemovedImplodeFlexibleParamOrder",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_ParameterValues_RemovedMbStrrposEncodingThirdParam",
     "level" : "Warning",
     "category" : "Compatibility"
   }, {
@@ -1060,6 +1231,10 @@
     "level" : "Warning",
     "category" : "Compatibility"
   }, {
+    "patternId" : "PHPCompatibility_Syntax_NewArrayUnpacking",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
     "patternId" : "PHPCompatibility_Syntax_NewClassMemberAccess",
     "level" : "Warning",
     "category" : "Compatibility"
@@ -1084,7 +1259,15 @@
     "level" : "Warning",
     "category" : "Compatibility"
   }, {
+    "patternId" : "PHPCompatibility_Syntax_RemovedCurlyBraceArrayAccess",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
     "patternId" : "PHPCompatibility_Syntax_RemovedNewReference",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_TextStrings_NewUnicodeEscapeSequence",
     "level" : "Warning",
     "category" : "Compatibility"
   }, {
@@ -1093,6 +1276,10 @@
     "category" : "Compatibility"
   }, {
     "patternId" : "PHPCompatibility_TypeCasts_RemovedTypeCasts",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
+    "patternId" : "PHPCompatibility_Upgrade_LowPHP",
     "level" : "Warning",
     "category" : "Compatibility"
   }, {
@@ -1112,6 +1299,10 @@
     "level" : "Warning",
     "category" : "Compatibility"
   }, {
+    "patternId" : "PHPCompatibility_Variables_ForbiddenThisUseContexts",
+    "level" : "Warning",
+    "category" : "Compatibility"
+  }, {
     "patternId" : "PHPCompatibility_Variables_NewUniformVariableSyntax",
     "level" : "Warning",
     "category" : "Compatibility"
@@ -1120,7 +1311,51 @@
     "level" : "Warning",
     "category" : "Compatibility"
   }, {
+    "patternId" : "PSR12_Classes_AnonClassDeclaration",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
     "patternId" : "PSR12_Classes_ClassInstantiation",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PSR12_Classes_ClosingBrace",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PSR12_ControlStructures_BooleanOperatorPlacement",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PSR12_ControlStructures_ControlStructureSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "indent",
+      "default" : 4
+    } ]
+  }, {
+    "patternId" : "PSR12_Files_DeclareStatement",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PSR12_Files_FileHeader",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PSR12_Files_ImportStatement",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PSR12_Files_OpenTag",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PSR12_Functions_NullableTypeDeclaration",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PSR12_Functions_ReturnTypeDeclaration",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
@@ -1137,6 +1372,14 @@
     } ]
   }, {
     "patternId" : "PSR12_Operators_OperatorSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PSR12_Properties_ConstantVisibility",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "PSR12_Traits_UseDeclaration",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
@@ -1361,6 +1604,534 @@
     "patternId" : "Security_Misc_IncludeMismatch",
     "level" : "Error",
     "category" : "Security"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Arrays_DisallowImplicitArrayCreation",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Arrays_TrailingArrayComma",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Classes_ClassConstantVisibility",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "fixable",
+      "default" : false
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_Classes_DisallowLateStaticBindingForConstants",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Classes_EmptyLinesAroundClassBraces",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "linesCountAfterOpeningBrace",
+      "default" : 1
+    }, {
+      "name" : "linesCountBeforeClosingBrace",
+      "default" : 1
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_Classes_ModernClassNameReference",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Classes_SuperfluousAbstractClassNaming",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Classes_SuperfluousExceptionNaming",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Classes_SuperfluousInterfaceNaming",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Classes_SuperfluousTraitNaming",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Classes_TraitUseDeclaration",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Classes_TraitUseSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "linesCountBeforeFirstUse",
+      "default" : 1
+    }, {
+      "name" : "linesCountBetweenUses",
+      "default" : 0
+    }, {
+      "name" : "linesCountAfterLastUse",
+      "default" : 1
+    }, {
+      "name" : "linesCountAfterLastUseWhenLastInClass",
+      "default" : 1
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_Classes_UnusedPrivateElements",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Classes_UselessLateStaticBinding",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Commenting_DisallowOneLinePropertyDocComment",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Commenting_DocCommentSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "linesCountBetweenAnnotationsGroups",
+      "default" : 1
+    }, {
+      "name" : "linesCountAfterLastContent",
+      "default" : 0
+    }, {
+      "name" : "linesCountBetweenDifferentAnnotationsTypes",
+      "default" : 0
+    }, {
+      "name" : "linesCountBetweenDescriptionAndAnnotations",
+      "default" : 1
+    }, {
+      "name" : "linesCountBeforeFirstContent",
+      "default" : 0
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_Commenting_EmptyComment",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Commenting_ForbiddenAnnotations",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Commenting_ForbiddenComments",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Commenting_InlineDocCommentDeclaration",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Commenting_RequireOneLinePropertyDocComment",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Commenting_UselessInheritDocComment",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_ControlStructures_AssignmentInCondition",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_ControlStructures_ControlStructureSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "linesCountAroundControlStructure",
+      "default" : 1
+    }, {
+      "name" : "linesCountBeforeFirstControlStructure",
+      "default" : 0
+    }, {
+      "name" : "linesCountAfterLastControlStructure",
+      "default" : 0
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_ControlStructures_DisallowContinueWithoutIntegerOperandInSwitch",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_ControlStructures_DisallowEmpty",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_ControlStructures_DisallowShortTernaryOperator",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "fixable",
+      "default" : true
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_ControlStructures_DisallowYodaComparison",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_ControlStructures_EarlyExit",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "ignoreStandaloneIfInScope",
+      "default" : false
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_ControlStructures_LanguageConstructWithParentheses",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_ControlStructures_NewWithParentheses",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_ControlStructures_NewWithoutParentheses",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_ControlStructures_RequireMultiLineTernaryOperator",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "lineLengthLimit",
+      "default" : 0
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_ControlStructures_RequireNullCoalesceOperator",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_ControlStructures_RequireShortTernaryOperator",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_ControlStructures_RequireTernaryOperator",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "ignoreMultiLine",
+      "default" : false
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_ControlStructures_RequireYodaComparison",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_ControlStructures_UselessIfConditionWithReturn",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "assumeAllConditionExpressionsAreAlreadyBoolean",
+      "default" : false
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_ControlStructures_UselessTernaryOperator",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "assumeAllConditionExpressionsAreAlreadyBoolean",
+      "default" : false
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_Exceptions_DeadCatch",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Exceptions_ReferenceThrowableOnly",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Files_TypeNameMatchesFileName",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Functions_StaticClosure",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Functions_TrailingCommaInCall",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Functions_UnusedInheritedVariablePassedToClosure",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Functions_UnusedParameter",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Functions_UselessParameterDefaultValue",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Namespaces_AlphabeticallySortedUses",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "psr12Compatible",
+      "default" : true
+    }, {
+      "name" : "caseSensitive",
+      "default" : false
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_Namespaces_DisallowGroupUse",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Namespaces_FullyQualifiedClassNameAfterKeyword",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Namespaces_FullyQualifiedClassNameInAnnotation",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Namespaces_FullyQualifiedExceptions",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Namespaces_FullyQualifiedGlobalConstants",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Namespaces_FullyQualifiedGlobalFunctions",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Namespaces_MultipleUsesPerLine",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Namespaces_NamespaceDeclaration",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Namespaces_NamespaceSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "linesCountBeforeNamespace",
+      "default" : 1
+    }, {
+      "name" : "linesCountAfterNamespace",
+      "default" : 1
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_Namespaces_ReferenceUsedNamesOnly",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "allowFullyQualifiedExceptions",
+      "default" : false
+    }, {
+      "name" : "allowFullyQualifiedGlobalFunctions",
+      "default" : false
+    }, {
+      "name" : "allowFullyQualifiedGlobalConstants",
+      "default" : false
+    }, {
+      "name" : "searchAnnotations",
+      "default" : false
+    }, {
+      "name" : "allowFullyQualifiedNameForCollidingClasses",
+      "default" : false
+    }, {
+      "name" : "allowFullyQualifiedNameForCollidingFunctions",
+      "default" : false
+    }, {
+      "name" : "allowFallbackGlobalFunctions",
+      "default" : true
+    }, {
+      "name" : "allowFullyQualifiedGlobalClasses",
+      "default" : false
+    }, {
+      "name" : "allowPartialUses",
+      "default" : true
+    }, {
+      "name" : "allowFullyQualifiedNameForCollidingConstants",
+      "default" : false
+    }, {
+      "name" : "allowFallbackGlobalConstants",
+      "default" : true
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_Namespaces_RequireOneNamespaceInFile",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Namespaces_UnusedUses",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "searchAnnotations",
+      "default" : false
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_Namespaces_UseDoesNotStartWithBackslash",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Namespaces_UseFromSameNamespace",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Namespaces_UseOnlyWhitelistedNamespaces",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "allowUseFromRootNamespace",
+      "default" : false
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_Namespaces_UseSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "linesCountBeforeFirstUse",
+      "default" : 1
+    }, {
+      "name" : "linesCountBetweenUseTypes",
+      "default" : 0
+    }, {
+      "name" : "linesCountAfterLastUse",
+      "default" : 1
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_Namespaces_UselessAlias",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Operators_DisallowEqualOperators",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Operators_DisallowIncrementAndDecrementOperators",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Operators_RequireCombinedAssignmentOperator",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Operators_RequireOnlyStandaloneIncrementAndDecrementOperators",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Operators_SpreadOperatorSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "spacesCountAfterOperator",
+      "default" : 0
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_PHP_OptimizedFunctionsWithoutUnpacking",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_PHP_ShortList",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_PHP_TypeCast",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_PHP_UselessParentheses",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "ignoreComplexTernaryConditions",
+      "default" : false
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_PHP_UselessSemicolon",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_TypeHints_DeclareStrictTypes",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "newlinesCountBetweenOpenTagAndDeclare",
+      "default" : 0
+    }, {
+      "name" : "newlinesCountAfterDeclare",
+      "default" : 2
+    }, {
+      "name" : "spacesCountAroundEqualsSign",
+      "default" : 1
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_TypeHints_DisallowArrayTypeHintSyntax",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_TypeHints_DisallowMixedTypeHint",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_TypeHints_LongTypeHints",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_TypeHints_NullTypeHintOnLastPosition",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_TypeHints_NullableTypeForNullDefaultValue",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_TypeHints_ParameterTypeHintSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_TypeHints_ReturnTypeHintSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "spacesCountBeforeColon",
+      "default" : 0
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_TypeHints_TypeHintDeclaration",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "enableObjectTypeHint",
+      "default" : "PHP_VERSION_ID >= 70200"
+    }, {
+      "name" : "enableEachParameterAndReturnInspection",
+      "default" : false
+    }, {
+      "name" : "allAnnotationsAreUseful",
+      "default" : false
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_TypeHints_UselessConstantTypeHint",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Variables_DuplicateAssignmentToVariable",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Variables_UnusedVariable",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "ignoreUnusedValuesWhenOnlyKeysAreUsedInForeach",
+      "default" : false
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_Variables_UselessVariable",
+    "level" : "Info",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Squiz_Arrays_ArrayBracketSpacing",
     "level" : "Info",
@@ -1819,6 +2590,9 @@
     "parameters" : [ {
       "name" : "ignoreNewlines",
       "default" : false
+    }, {
+      "name" : "ignoreSpacingBeforeAssignments",
+      "default" : true
     } ]
   }, {
     "patternId" : "Squiz_WhiteSpace_PropertyLabelSpacing",
@@ -1844,14 +2618,6 @@
       "name" : "ignoreBlankLines",
       "default" : false
     } ]
-  }, {
-    "patternId" : "WordPress_Arrays_ArrayAssignmentRestrictions",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "WordPress_Arrays_ArrayDeclaration",
-    "level" : "Info",
-    "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_Arrays_ArrayDeclarationSpacing",
     "level" : "Info",
@@ -1893,10 +2659,6 @@
       "name" : "alignMultilineItems",
       "default" : "'always'"
     } ]
-  }, {
-    "patternId" : "WordPress_CSRF_NonceVerification",
-    "level" : "Info",
-    "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_Classes_ClassInstantiation",
     "level" : "Info",
@@ -1945,18 +2707,6 @@
       "default" : true
     } ]
   }, {
-    "patternId" : "WordPress_Functions_DontExtract",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "WordPress_Functions_FunctionCallSignatureNoParams",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "WordPress_Functions_FunctionRestrictions",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
     "patternId" : "WordPress_NamingConventions_PrefixAllGlobals",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -1985,19 +2735,15 @@
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
-    "patternId" : "WordPress_PHP_DiscourageGoto",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "WordPress_PHP_DiscouragedFunctions",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
     "patternId" : "WordPress_PHP_DiscouragedPHPFunctions",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_PHP_DontExtract",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_PHP_IniSet",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
@@ -2032,6 +2778,10 @@
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
+    "patternId" : "WordPress_PHP_TypeCasts",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
     "patternId" : "WordPress_PHP_YodaConditions",
     "level" : "Info",
     "category" : "CodeStyle"
@@ -2060,89 +2810,13 @@
       "default" : false
     } ]
   }, {
-    "patternId" : "WordPress_VIP_AdminBarRemoval",
+    "patternId" : "WordPress_Utils_I18nTextDomainFixer",
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
-      "name" : "remove_only",
-      "default" : true
+      "name" : "new_text_domain",
+      "default" : "''"
     } ]
-  }, {
-    "patternId" : "WordPress_VIP_CronInterval",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "min_interval",
-      "default" : 900
-    } ]
-  }, {
-    "patternId" : "WordPress_VIP_DirectDatabaseQuery",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "WordPress_VIP_FileSystemWritesDisallow",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "error",
-      "default" : true
-    } ]
-  }, {
-    "patternId" : "WordPress_VIP_OrderByRand",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "WordPress_VIP_PluginMenuSlug",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "WordPress_VIP_PostsPerPage",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "posts_per_page",
-      "default" : 100
-    } ]
-  }, {
-    "patternId" : "WordPress_VIP_RestrictedFunctions",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "WordPress_VIP_RestrictedVariables",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "WordPress_VIP_SessionFunctionsUsage",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "WordPress_VIP_SessionVariableUsage",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "WordPress_VIP_SlowDBQuery",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "WordPress_VIP_SuperGlobalInputUsage",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "WordPress_VIP_TimezoneChange",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "WordPress_VIP_ValidatedSanitizedInput",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "WordPress_Variables_GlobalVariables",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "WordPress_Variables_VariableRestrictions",
-    "level" : "Info",
-    "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_WP_AlternativeFunctions",
     "level" : "Info",
@@ -2216,24 +2890,9 @@
       "default" : 100
     } ]
   }, {
-    "patternId" : "WordPress_WP_PreparedSQL",
-    "level" : "Warning",
-    "category" : "Security"
-  }, {
     "patternId" : "WordPress_WP_TimezoneChange",
     "level" : "Info",
     "category" : "CodeStyle"
-  }, {
-    "patternId" : "WordPress_WhiteSpace_ArbitraryParenthesesSpacing",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "spacingInside",
-      "default" : 0
-    }, {
-      "name" : "ignoreNewlines",
-      "default" : false
-    } ]
   }, {
     "patternId" : "WordPress_WhiteSpace_CastStructureSpacing",
     "level" : "Info",
@@ -2271,14 +2930,6 @@
     "patternId" : "WordPress_WhiteSpace_PrecisionAlignment",
     "level" : "Info",
     "category" : "CodeStyle"
-  }, {
-    "patternId" : "WordPress_WhiteSpace_SemicolonSpacing",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
-    "patternId" : "WordPress_XSS_EscapeOutput",
-    "level" : "Warning",
-    "category" : "Security"
   }, {
     "patternId" : "Zend_Debug_CodeAnalyzer",
     "level" : "Info",
