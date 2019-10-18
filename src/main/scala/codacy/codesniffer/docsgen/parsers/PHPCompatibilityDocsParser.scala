@@ -24,11 +24,15 @@ class PHPCompatibilityDocsParser extends DocsParser {
   }
 
   override def descriptionWithDocs(rootDir: File,
-                                   patternIdParts: PatternIdParts, patternFile: File): (Pattern.Description, Option[String]) =
+                                   patternIdParts: PatternIdParts,
+                                   patternFile: File): (Pattern.Description, Option[String]) =
     (description(patternIdParts), None)
 
   private[this] def description(patternIdParts: PatternIdParts): Pattern.Description = {
-    val title = Pattern.Title(patternIdParts.patternName.replaceAll("(\\p{Upper})", " $1").trim)
+    val caseRegexPattern = """((?<=\p{Ll})\p{Lu}|\p{Lu}(?=\p{Ll}))""".r
+    val patternName = caseRegexPattern.replaceAllIn(patternIdParts.patternName, " $1").trim
+    val sniffName = caseRegexPattern.replaceAllIn(patternIdParts.sniffType, " $1").trim
+    val title = Pattern.Title(s"PHP Compatibility related issue ($sniffName): $patternName")
     Pattern.Description(patternIdParts.patternId, title, None, None, None)
   }
 

@@ -8,11 +8,11 @@ import scala.util.matching.Regex
 
 class MagentoCSDocsParser extends DocsParser {
 
-  override val repositoryURL = "https://github.com/magento/marketplace-eqp.git"
+  override val repositoryURL = "https://github.com/magento/magento-coding-standard.git"
 
-  override val checkoutCommit: String = VersionsHelper.magento
+  override val checkoutCommit: String = VersionsHelper.magentoCS
 
-  override val sniffRegex: Regex = """.*(MEQP1|MEQP2)\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
+  override val sniffRegex: Regex = """.*(Magento2)\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
 
   override def patternIdPartsFor(relativizedFilePath: String): PatternIdParts = {
     val sniffRegex(magentoVersion, sniffType, patternName) = relativizedFilePath
@@ -20,11 +20,15 @@ class MagentoCSDocsParser extends DocsParser {
   }
 
   override def descriptionWithDocs(rootDir: File,
-                                   patternIdParts: PatternIdParts, patternFile: File): (Pattern.Description, Option[String]) =
+                                   patternIdParts: PatternIdParts,
+                                   patternFile: File): (Pattern.Description, Option[String]) =
     (description(patternIdParts), None)
 
   private[this] def description(patternIdParts: PatternIdParts): Pattern.Description = {
-    val title = Pattern.Title(patternIdParts.patternName.replaceAll("(\\p{Upper})", " $1").trim)
+    val caseRegexPattern = """((?<=\p{Ll})\p{Lu}|\p{Lu}(?=\p{Ll}))""".r
+    val patternName = caseRegexPattern.replaceAllIn(patternIdParts.patternName, " $1").trim
+    val sniffName = caseRegexPattern.replaceAllIn(patternIdParts.sniffType, " $1").trim
+    val title = Pattern.Title(s"$sniffName: $patternName")
     Pattern.Description(patternIdParts.patternId, title, None, None, None)
   }
 
