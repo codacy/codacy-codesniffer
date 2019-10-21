@@ -7,6 +7,7 @@ import play.api.libs.json.{Json, Writes}
 
 import scala.collection.parallel.ForkJoinTaskSupport
 import scala.collection.parallel.immutable.ParSeq
+import scala.collection.parallel.CollectionConverters._
 
 class Generator() {
 
@@ -21,10 +22,11 @@ class Generator() {
   private[this] val parsers: List[DocsParser] =
     List(new PHPCSDocsParser(),
          new WordPressCSDocsParser(),
+         new MagentoEQPDocsParser(),
          new MagentoCSDocsParser(),
          new PHPCompatibilityDocsParser(),
          new PHPCSSecurityAuditDocsParser(),
-    )
+         new SlevomatCSDocsParser())
 
   def run(): Unit = {
     docsDir.createDirectories()
@@ -49,7 +51,7 @@ class Generator() {
                                  docs: Seq[PatternDocs]): Unit = {
     val sortedDocs = docs.sortBy(_.pattern.patternId.value)
 
-    val toolSpecification = Tool.Specification(toolName, toolVersion, sortedDocs.map(_.pattern)(collection.breakOut))
+    val toolSpecification = Tool.Specification(toolName, toolVersion, sortedDocs.view.map(_.pattern).to(Set))
 
     writeAsJsonToFile(toolSpecification, patternsFile)
     writeAsJsonToFile(sortedDocs.map(_.description), descriptionFile)

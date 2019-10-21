@@ -24,7 +24,9 @@ trait DocsParser {
 
   def patternIdPartsFor(relativizedFilePath: String): PatternIdParts
 
-  def descriptionWithDocs(rootDir: File, patternIdParts: PatternIdParts, patternFile: File): (Pattern.Description, Option[String])
+  def descriptionWithDocs(rootDir: File,
+                          patternIdParts: PatternIdParts,
+                          patternFile: File): (Pattern.Description, Option[String])
 
   def fallBackCategory: Pattern.Category.Value = Pattern.Category.CodeStyle
 
@@ -50,18 +52,19 @@ trait DocsParser {
       val (description, docs) = descriptionWithDocs(dir, idParts, sourceFile)
 
       PatternDocs(spec, description, docs)
-    })(collection.breakOut)
+    }).to(Set)
   }
 
   private[this] def withRepo[A](repositoryURL: String, checkoutCommit: String)(f: File => A): Either[Throwable, A] = {
     val dir = Files.createTempDirectory("")
     for {
-      _ <- CommandRunner
-        .exec(List("git", "clone", repositoryURL, dir.toString))
-        .right
+      _ <- Right(
+        CommandRunner
+          .exec(List("git", "clone", repositoryURL, dir.toString))
+      )
       _ <- CommandRunner.exec(List("git", "checkout", checkoutCommit), Some(dir.toFile))
       res = f(dir)
-      _ <- CommandRunner.exec(List("rm", "-rf", dir.toString)).right
+      _ <- CommandRunner.exec(List("rm", "-rf", dir.toString))
     } yield {
       res
     }
@@ -70,7 +73,7 @@ trait DocsParser {
   private def parseParameters(patternFile: File): Option[Set[Parameter.Specification]] = {
     val patternRegex = """.*?\spublic.*?\$(.*?)=(.*?);""".r
 
-    Option(patternFile.lineIterator.toStream.collect {
+    Option(patternFile.lineIterator.to(LazyList).collect {
       case patternRegex(name, defaultValue) if !valueIsArray(defaultValue.trim) =>
         Parameter.Specification(Parameter.Name(name.trim), Parameter.Value(defaultValue.trim))
     }).filter(_.nonEmpty)
@@ -97,7 +100,8 @@ trait DocsParser {
     val errorRegex = """.*->addError\(.*""".r
     val warningRegex = """.*->addWarning\(.*""".r
 
-    patternFile.lineIterator.toStream
+    patternFile.lineIterator
+      .to(LazyList)
       .collectFirst {
         case errorRegex() => Result.Level.Err
         case warningRegex() => Result.Level.Warn

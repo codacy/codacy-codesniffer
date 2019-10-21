@@ -7,15 +7,13 @@ name := """codacy-codesniffer"""
 
 version := "1.0-SNAPSHOT"
 
-val languageVersion = "2.12.7"
+val languageVersion = "2.13.1"
 
 scalaVersion := languageVersion
 
-resolvers ++= Seq("Typesafe Repo".at("http://repo.typesafe.com/typesafe/releases/"),
-                  "Sonatype OSS Snapshots".at("https://oss.sonatype.org/content/repositories/releases"))
-
-libraryDependencies ++= Seq(("org.scala-lang.modules" %% "scala-xml" % "1.1.1").withSources(),
-                            "com.codacy" %% "codacy-engine-scala-seed" % "3.0.244")
+libraryDependencies ++= Seq(("org.scala-lang.modules" %% "scala-xml" % "1.2.0").withSources(),
+                            "org.scala-lang.modules" %% "scala-parallel-collections" % "0.2.0",
+                            "com.codacy" %% "codacy-engine-scala-seed" % "3.1.0")
 
 enablePlugins(AshScriptPlugin)
 
@@ -45,11 +43,12 @@ val installAll =
      |&& composer global require "squizlabs/php_codesniffer=${versionFor("php-codesniffer")}"
      |&& ln -s $$COMPOSER_HOME/vendor/bin/phpcs /usr/bin/phpcs
      |&& git clone --branch ${versionFor("wordpress")} https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git wpcs
-     |&& (git clone https://github.com/magento/marketplace-eqp.git magentocs
-     |&&    cd magentocs && git checkout ${versionFor("magento-eqp")})
+     |&& git clone --branch ${versionFor("magento-eqp")} https://github.com/magento/marketplace-eqp.git magento-eqp
+     |&& git clone --branch ${versionFor("magento-cs")} https://github.com/magento/magento-coding-standard.git magento-cs
      |&& git clone --branch ${versionFor("php-compatibility")} https://github.com/wimg/PHPCompatibility.git phpcompatibility
      |&& git clone --branch ${versionFor("phpcs-security-audit")} https://github.com/FloeDesignTechnologies/phpcs-security-audit phpcs-security-audit
-     |&& phpcs --config-set installed_paths $$(pwd)/wpcs,$$(pwd)/magentocs,$$(pwd)/phpcompatibility,$$(pwd)/phpcs-security-audit
+     |&& git clone --branch ${versionFor("slevomat-cs")} https://github.com/slevomat/coding-standard slevomat-cs
+     |&& phpcs --config-set installed_paths $$(pwd)/wpcs,$$(pwd)/magento-eqp,$$(pwd)/magento-cs,$$(pwd)/phpcompatibility,$$(pwd)/phpcs-security-audit,$$(pwd)/slevomat-cs
      |&& apk del curl git
      |&& rm -rf /tmp/*
      |&& rm -rf /var/cache/apk/*

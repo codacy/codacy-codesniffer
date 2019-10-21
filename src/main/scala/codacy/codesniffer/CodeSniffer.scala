@@ -80,7 +80,7 @@ object CodeSniffer extends Tool {
                                   outputFile: Path,
                                   filesToLint: List[String]): List[String] = {
     val configurationFile = configFile.map { config =>
-      s"--standard=$config,${generateWordPressPluginAliasesStandard()}"
+      s"--standard=$config,${generateCrossCompatibilityAliasesStandard()}"
     }
 
     List("phpcs", "-d", "memory_limit=-1", "--report=xml", "--encoding=utf-8", s"--report-file=$outputFile") ++ configurationFile ++ filesToLint
@@ -107,12 +107,12 @@ object CodeSniffer extends Tool {
     }
   }
 
-  private[this] def generateWordPressPluginAliasesStandard(): Path = {
+  private[this] def generateCrossCompatibilityAliasesStandard(): Path = {
     val content =
       """
-        |<ruleset name="Codacy WordPress-Coding-Standards aliases">
-        |  <description>Imports WordPress-Coding-Standards aliases file</description>
-        |  <autoload>/opt/docker/wpcs/WordPress/PHPCSAliases.php</autoload>
+        |<ruleset name="PHPCS cross-version compatibility aliases">
+        |  <description>Imports compatibility helper file</description>
+        |  <autoload>/opt/docker/phpcompatibility/PHPCSAliases.php</autoload>
         |</ruleset>
       """.stripMargin
 

@@ -11,9 +11,11 @@ object VersionsHelper {
   }
 
   lazy val codesniffer = properties.getProperty("php-codesniffer")
-  lazy val magento = properties.getProperty("magento-eqp")
+  lazy val magentoEQP = properties.getProperty("magento-eqp")
+  lazy val magentoCS = properties.getProperty("magento-cs")
   lazy val wordpress = properties.getProperty("wordpress")
   lazy val phpCompatibility = properties.getProperty("php-compatibility")
   lazy val phpcsSecurityAudit = properties.getProperty("phpcs-security-audit")
+  lazy val slevomatCS = properties.getProperty("slevomat-cs")
 
 }

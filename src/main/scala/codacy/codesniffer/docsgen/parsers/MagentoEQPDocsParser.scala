@@ -6,13 +6,13 @@ import com.codacy.plugins.api.results.Pattern
 
 import scala.util.matching.Regex
 
-class MagentoCSDocsParser extends DocsParser {
+class MagentoEQPDocsParser extends DocsParser {
 
-  override val repositoryURL = "https://github.com/magento/magento-coding-standard.git"
+  override val repositoryURL = "https://github.com/magento/marketplace-eqp.git"
 
-  override val checkoutCommit: String = VersionsHelper.magentoCS
+  override val checkoutCommit: String = VersionsHelper.magentoEQP
 
-  override val sniffRegex: Regex = """.*(Magento2)\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
+  override val sniffRegex: Regex = """.*(MEQP1)\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
 
   override def patternIdPartsFor(relativizedFilePath: String): PatternIdParts = {
     val sniffRegex(magentoVersion, sniffType, patternName) = relativizedFilePath
