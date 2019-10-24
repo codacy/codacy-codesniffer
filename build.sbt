@@ -3,7 +3,7 @@ import java.util.Properties
 
 import com.typesafe.sbt.packager.docker.{Cmd, ExecCmd}
 
-name := """codacy-codesniffer"""
+name := "codacy-codesniffer"
 
 version := "1.0-SNAPSHOT"
 
