@@ -1,0 +1,4 @@
+<module name="root">
+    <property name="php_version" value="&quot;7.0&quot;"/>
+    <module name="PHPCompatibility_UseDeclarations_NewGroupUseDeclarations" />
+</module>
