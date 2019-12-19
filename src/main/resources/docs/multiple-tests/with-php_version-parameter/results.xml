@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<checkstyle version="4.3">
+    <file name="php70.php">
+        <error source="PHPCompatibility_UseDeclarations_NewGroupUseDeclarations" line="33" message="Trailing comma&apos;s are not allowed in group use statements in PHP 7.1 or earlier" severity="warning" />
+		<error source="PHPCompatibility_UseDeclarations_NewGroupUseDeclarations" line="34" message="Trailing comma&apos;s are not allowed in group use statements in PHP 7.1 or earlier" severity="warning" />
+		<error source="PHPCompatibility_UseDeclarations_NewGroupUseDeclarations" line="35" message="Trailing comma&apos;s are not allowed in group use statements in PHP 7.1 or earlier" severity="warning" />
+		<error source="PHPCompatibility_UseDeclarations_NewGroupUseDeclarations" line="39" message="Trailing comma&apos;s are not allowed in group use statements in PHP 7.1 or earlier" severity="warning" />
+    </file>
+</checkstyle>
