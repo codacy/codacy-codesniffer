@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<checkstyle version="4.3">
+    <file name="CodingStandard.php">
+        <error source="SlevomatCodingStandard_TypeHints_TypeHintDeclaration" line="3"
+               message="Function createProgressBar() does not have parameter type hint nor @param annotation for its parameter $max."
+               severity="info"/>
+        <error source="SlevomatCodingStandard_ControlStructures_AssignmentInCondition" line="5"
+               message="Assignment in if condition is not allowed." severity="info"/>
+    </file>
+    <file name="CodingStandardSuppress.php">
+        <error source="SlevomatCodingStandard_ControlStructures_AssignmentInCondition" line="8"
+               message="Assignment in if condition is not allowed." severity="info"/>
+    </file>
+    <file name="SecurityAudit.php">
+        <error source="Security_BadFunctions_EasyXSS" line="6"
+               message="Easy XSS detected because of direct user input with $_POST on echo" severity="error"/>
+    </file>
+    <file name="MagentoCS.php">
+        <error source="Generic_PHP_CharacterBeforePHPOpeningTag" line="2"
+               message="The opening PHP tag must be the first content in the file" severity="info"/>
+    </file>
+</checkstyle>

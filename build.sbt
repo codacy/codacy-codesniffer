@@ -42,13 +42,14 @@ val installAll =
      |&& export COMPOSER_HOME=$$(pwd)/composer
      |&& composer global require "squizlabs/php_codesniffer=${versionFor("php-codesniffer")}"
      |&& ln -s $$COMPOSER_HOME/vendor/bin/phpcs /usr/bin/phpcs
+     |&& composer global require "slevomat/coding-standard=${versionFor("slevomat-cs")}"
+     |&& composer global require "pheromone/phpcs-security-audit=${versionFor("phpcs-security-audit")}"
+     |&& composer global require "magento/magento-coding-standard=${versionFor("magento-cs")}"
      |&& git clone --branch ${versionFor("wordpress")} https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git wpcs
      |&& git clone --branch ${versionFor("magento-eqp")} https://github.com/magento/marketplace-eqp.git magento-eqp
-     |&& git clone --branch ${versionFor("magento-cs")} https://github.com/magento/magento-coding-standard.git magento-cs
      |&& git clone --branch ${versionFor("php-compatibility")} https://github.com/wimg/PHPCompatibility.git phpcompatibility
-     |&& git clone --branch ${versionFor("phpcs-security-audit")} https://github.com/FloeDesignTechnologies/phpcs-security-audit phpcs-security-audit
-     |&& git clone --branch ${versionFor("slevomat-cs")} https://github.com/slevomat/coding-standard slevomat-cs
-     |&& phpcs --config-set installed_paths $$(pwd)/wpcs,$$(pwd)/magento-eqp,$$(pwd)/magento-cs,$$(pwd)/phpcompatibility,$$(pwd)/phpcs-security-audit,$$(pwd)/slevomat-cs
+     |&& phpcs --config-set installed_paths $$(pwd)/wpcs,$$(pwd)/magento-eqp,$$(pwd)/phpcompatibility
+     |&& composer global require dealerdirect/phpcodesniffer-composer-installer
      |&& apk del curl git
      |&& rm -rf /tmp/*
      |&& rm -rf /var/cache/apk/*
