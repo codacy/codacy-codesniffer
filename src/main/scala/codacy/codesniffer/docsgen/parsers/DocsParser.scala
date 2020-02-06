@@ -3,7 +3,7 @@ package codacy.codesniffer.docsgen.parsers
 import java.nio.file.Files
 
 import better.files.File
-import codacy.codesniffer.docsgen.{CategoriesMapper, SubCategoriesMapper}
+import codacy.codesniffer.docsgen.CategoriesMapper
 import com.codacy.plugins.api.results.{Parameter, Pattern, Result}
 import com.codacy.tools.scala.seed.utils.CommandRunner
 
@@ -42,8 +42,7 @@ trait DocsParser {
     } yield {
       val idParts = patternIdPartsFor(dir.relativize(sourceFile).toString)
 
-      val category = CategoriesMapper.categoryFor(idParts, fallBackCategory)
-      val subcategory = SubCategoriesMapper.subcategoryFor(idParts)
+      val (category, subcategory) = CategoriesMapper.categoryFor(idParts, fallBackCategory)
 
       val spec = Pattern.Specification(idParts.patternId,
                                        issueTypeFor(category, sourceFile, Result.Level.Info),

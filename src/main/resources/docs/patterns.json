@@ -1493,6 +1493,7 @@
     "patternId" : "Security_BadFunctions_EasyXSS",
     "level" : "Error",
     "category" : "Security",
+    "subcategory" : "XSS",
     "parameters" : [ {
       "name" : "forceParanoia",
       "default" : -1
@@ -1576,7 +1577,8 @@
   }, {
     "patternId" : "Security_Drupal7_HttpRequest",
     "level" : "Warning",
-    "category" : "Security"
+    "category" : "Security",
+    "subcategory" : "HTTP"
   }, {
     "patternId" : "Security_Drupal7_SQLi",
     "level" : "Error",
@@ -1595,15 +1597,18 @@
   }, {
     "patternId" : "Security_Drupal7_XSSFormValue",
     "level" : "Warning",
-    "category" : "Security"
+    "category" : "Security",
+    "subcategory" : "XSS"
   }, {
     "patternId" : "Security_Drupal7_XSSHTMLConstruct",
     "level" : "Error",
-    "category" : "Security"
+    "category" : "Security",
+    "subcategory" : "XSS"
   }, {
     "patternId" : "Security_Drupal7_XSSPTheme",
     "level" : "Warning",
-    "category" : "Security"
+    "category" : "Security",
+    "subcategory" : "XSS"
   }, {
     "patternId" : "Security_Misc_BadCorsHeader",
     "level" : "Warning",
@@ -2817,7 +2822,8 @@
   }, {
     "patternId" : "WordPress_Security_EscapeOutput",
     "level" : "Error",
-    "category" : "Security"
+    "category" : "Security",
+    "subcategory" : "XSS"
   }, {
     "patternId" : "WordPress_Security_NonceVerification",
     "level" : "Info",
