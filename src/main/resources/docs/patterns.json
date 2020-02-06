@@ -1,6 +1,6 @@
 {
   "name" : "PHP Code Sniffer",
-  "version" : "3.5.1",
+  "version" : "3.5.3",
   "patterns" : [ {
     "patternId" : "Generic_Arrays_ArrayIndent",
     "level" : "Info",
@@ -119,6 +119,10 @@
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_Files_EndFileNoNewline",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_Files_ExecutableFile",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
@@ -498,7 +502,8 @@
   }, {
     "patternId" : "MEQP1_Security_DiscouragedFunction",
     "level" : "Warning",
-    "category" : "Security"
+    "category" : "Security",
+    "subcategory" : "InsecureModulesLibraries"
   }, {
     "patternId" : "MEQP1_Security_IncludeFile",
     "level" : "Warning",
@@ -506,7 +511,8 @@
   }, {
     "patternId" : "MEQP1_Security_InsecureFunction",
     "level" : "Info",
-    "category" : "Security"
+    "category" : "Security",
+    "subcategory" : "InsecureModulesLibraries"
   }, {
     "patternId" : "MEQP1_Security_LanguageConstruct",
     "level" : "Error",
@@ -633,7 +639,8 @@
   }, {
     "patternId" : "Magento2_Security_InsecureFunction",
     "level" : "Info",
-    "category" : "Security"
+    "category" : "Security",
+    "subcategory" : "InsecureModulesLibraries"
   }, {
     "patternId" : "Magento2_Security_LanguageConstruct",
     "level" : "Error",
@@ -645,7 +652,8 @@
   }, {
     "patternId" : "Magento2_Security_XssTemplate",
     "level" : "Warning",
-    "category" : "Security"
+    "category" : "Security",
+    "subcategory" : "XSS"
   }, {
     "patternId" : "Magento2_Strings_ExecutableRegEx",
     "level" : "Info",
@@ -2672,13 +2680,18 @@
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
+    "patternId" : "WordPress_CodeAnalysis_EscapedNotTranslated",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
     "patternId" : "WordPress_DB_DirectDatabaseQuery",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_DB_PreparedSQL",
     "level" : "Error",
-    "category" : "Security"
+    "category" : "Security",
+    "subcategory" : "SQLInjection"
   }, {
     "patternId" : "WordPress_DB_PreparedSQLPlaceholders",
     "level" : "Info",
@@ -2693,6 +2706,14 @@
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_DB_SlowDBQuery",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_DateTime_CurrentTimeTimestamp",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_DateTime_RestrictedFunctions",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
@@ -2727,11 +2748,19 @@
       "default" : "''"
     } ]
   }, {
+    "patternId" : "WordPress_NamingConventions_ValidPostTypeSlug",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
     "patternId" : "WordPress_NamingConventions_ValidVariableName",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_PHP_DevelopmentFunctions",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPress_PHP_DisallowShortTernary",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
@@ -2792,7 +2821,8 @@
   }, {
     "patternId" : "WordPress_Security_NonceVerification",
     "level" : "Info",
-    "category" : "Security"
+    "category" : "Security",
+    "subcategory" : "CSRF"
   }, {
     "patternId" : "WordPress_Security_PluginMenuSlug",
     "level" : "Warning",
@@ -2800,11 +2830,13 @@
   }, {
     "patternId" : "WordPress_Security_SafeRedirect",
     "level" : "Info",
-    "category" : "Security"
+    "category" : "Security",
+    "subcategory" : "HTTP"
   }, {
     "patternId" : "WordPress_Security_ValidatedSanitizedInput",
     "level" : "Error",
     "category" : "Security",
+    "subcategory" : "InputValidation",
     "parameters" : [ {
       "name" : "check_validation_in_scope_only",
       "default" : false

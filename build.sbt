@@ -13,7 +13,7 @@ scalaVersion := languageVersion
 
 libraryDependencies ++= Seq(("org.scala-lang.modules" %% "scala-xml" % "1.2.0").withSources(),
                             "org.scala-lang.modules" %% "scala-parallel-collections" % "0.2.0",
-                            "com.codacy" %% "codacy-engine-scala-seed" % "3.1.0")
+                            "com.codacy" %% "codacy-engine-scala-seed" % "4.0.0")
 
 enablePlugins(AshScriptPlugin)
 
