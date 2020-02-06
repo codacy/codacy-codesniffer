@@ -1,6 +1,6 @@
 [ {
   "patternId" : "Generic_Arrays_ArrayIndent",
-  "title" : "Array Indent"
+  "title" : "Arrays: Array Indent"
 }, {
   "patternId" : "Generic_Arrays_DisallowLongArraySyntax",
   "title" : "Short Array Syntax",
@@ -23,7 +23,7 @@
   "description" : "Variable assignments should not be made within conditions."
 }, {
   "patternId" : "Generic_CodeAnalysis_EmptyPHPStatement",
-  "title" : "Empty P H P Statement"
+  "title" : "Code Analysis: Empty PHP Statement"
 }, {
   "patternId" : "Generic_CodeAnalysis_EmptyStatement",
   "title" : "Empty Statements",
@@ -58,7 +58,7 @@
   "description" : "Methods should not be defined that only call the parent method."
 }, {
   "patternId" : "Generic_Commenting_DocComment",
-  "title" : "Doc Comment"
+  "title" : "Commenting: Doc Comment"
 }, {
   "patternId" : "Generic_Commenting_Fixme",
   "title" : "Fixme Comments",
@@ -85,7 +85,7 @@
   "description" : "All javascript files should pass basic Closure Linter tests."
 }, {
   "patternId" : "Generic_Debug_ESLint",
-  "title" : "E S Lint"
+  "title" : "Debug: ES Lint"
 }, {
   "patternId" : "Generic_Debug_JSHint",
   "title" : "JSHint",
@@ -102,6 +102,10 @@
   "patternId" : "Generic_Files_EndFileNoNewline",
   "title" : "No End of File Newline",
   "description" : "Files should not end with a newline character."
+}, {
+  "patternId" : "Generic_Files_ExecutableFile",
+  "title" : "Executable Files",
+  "description" : "Files should not be executable."
 }, {
   "patternId" : "Generic_Files_InlineHTML",
   "title" : "Inline HTML",
@@ -156,7 +160,7 @@
   "description" : "Exactly one space is allowed after the NOT operator."
 }, {
   "patternId" : "Generic_Formatting_SpaceBeforeCast",
-  "title" : "Space Before Cast"
+  "title" : "Formatting: Space Before Cast"
 }, {
   "patternId" : "Generic_Functions_CallTimePassByReference",
   "title" : "Call-Time Pass-By-Reference",
@@ -243,14 +247,14 @@
   "description" : "Suppressing Errors is not allowed."
 }, {
   "patternId" : "Generic_PHP_RequireStrictTypes",
-  "title" : "Require Strict Types"
+  "title" : "PHP: Require Strict Types"
 }, {
   "patternId" : "Generic_PHP_SAPIUsage",
   "title" : "SAPI Usage",
   "description" : "The PHP_SAPI constant should be used instead of php_sapi_name()."
 }, {
   "patternId" : "Generic_PHP_Syntax",
-  "title" : "Syntax"
+  "title" : "PHP: Syntax"
 }, {
   "patternId" : "Generic_PHP_UpperCaseConstant",
   "title" : "Uppercase PHP Constants",
@@ -261,7 +265,7 @@
   "description" : "Strings should not be concatenated together."
 }, {
   "patternId" : "Generic_VersionControl_GitMergeConflict",
-  "title" : "Git Merge Conflict"
+  "title" : "Version Control: Git Merge Conflict"
 }, {
   "patternId" : "Generic_VersionControl_SubversionProperties",
   "title" : "Subversion Properties",
@@ -280,10 +284,10 @@
   "description" : "Spaces should be used for indentation instead of tabs."
 }, {
   "patternId" : "Generic_WhiteSpace_IncrementDecrementSpacing",
-  "title" : "Increment Decrement Spacing"
+  "title" : "White Space: Increment Decrement Spacing"
 }, {
   "patternId" : "Generic_WhiteSpace_LanguageConstructSpacing",
-  "title" : "Language Construct Spacing"
+  "title" : "White Space: Language Construct Spacing"
 }, {
   "patternId" : "Generic_WhiteSpace_ScopeIndent",
   "title" : "Scope Indentation",
@@ -468,52 +472,52 @@
   "title" : "Whitespace: Multiple Empty Lines"
 }, {
   "patternId" : "MySource_CSS_BrowserSpecificStyles",
-  "title" : "Browser Specific Styles"
+  "title" : "CSS: Browser Specific Styles"
 }, {
   "patternId" : "MySource_Channels_DisallowSelfActions",
-  "title" : "Disallow Self Actions"
+  "title" : "Channels: Disallow Self Actions"
 }, {
   "patternId" : "MySource_Channels_IncludeOwnSystem",
-  "title" : "Include Own System"
+  "title" : "Channels: Include Own System"
 }, {
   "patternId" : "MySource_Channels_IncludeSystem",
-  "title" : "Include System"
+  "title" : "Channels: Include System"
 }, {
   "patternId" : "MySource_Channels_UnusedSystem",
-  "title" : "Unused System"
+  "title" : "Channels: Unused System"
 }, {
   "patternId" : "MySource_Commenting_FunctionComment",
-  "title" : "Function Comment"
+  "title" : "Commenting: Function Comment"
 }, {
   "patternId" : "MySource_Debug_DebugCode",
-  "title" : "Debug Code"
+  "title" : "Debug: Debug Code"
 }, {
   "patternId" : "MySource_Debug_FirebugConsole",
-  "title" : "Firebug Console"
+  "title" : "Debug: Firebug Console"
 }, {
   "patternId" : "MySource_Objects_AssignThis",
-  "title" : "Assign This"
+  "title" : "Objects: Assign This"
 }, {
   "patternId" : "MySource_Objects_CreateWidgetTypeCallback",
-  "title" : "Create Widget Type Callback"
+  "title" : "Objects: Create Widget Type Callback"
 }, {
   "patternId" : "MySource_Objects_DisallowNewWidget",
-  "title" : "Disallow New Widget"
+  "title" : "Objects: Disallow New Widget"
 }, {
   "patternId" : "MySource_PHP_AjaxNullComparison",
-  "title" : "Ajax Null Comparison"
+  "title" : "PHP: Ajax Null Comparison"
 }, {
   "patternId" : "MySource_PHP_EvalObjectFactory",
-  "title" : "Eval Object Factory"
+  "title" : "PHP: Eval Object Factory"
 }, {
   "patternId" : "MySource_PHP_GetRequestData",
-  "title" : "Get Request Data"
+  "title" : "PHP: Get Request Data"
 }, {
   "patternId" : "MySource_PHP_ReturnFunctionValue",
-  "title" : "Return Function Value"
+  "title" : "PHP: Return Function Value"
 }, {
   "patternId" : "MySource_Strings_JoinStrings",
-  "title" : "Join Strings"
+  "title" : "Strings: Join Strings"
 }, {
   "patternId" : "PEAR_Classes_ClassDeclaration",
   "title" : "Class Declarations",
@@ -939,39 +943,39 @@
   "title" : "PHP Compatibility related issue (Variables): Removed Predefined Global Variables"
 }, {
   "patternId" : "PSR12_Classes_AnonClassDeclaration",
-  "title" : "Anon Class Declaration"
+  "title" : "Classes: Anon Class Declaration"
 }, {
   "patternId" : "PSR12_Classes_ClassInstantiation",
   "title" : "Class Instantiation",
   "description" : "When instantiating a new class, parenthesis MUST always be present even when there are no arguments passed to the constructor."
 }, {
   "patternId" : "PSR12_Classes_ClosingBrace",
-  "title" : "Closing Brace"
+  "title" : "Classes: Closing Brace"
 }, {
   "patternId" : "PSR12_ControlStructures_BooleanOperatorPlacement",
-  "title" : "Boolean Operator Placement"
+  "title" : "Control Structures: Boolean Operator Placement"
 }, {
   "patternId" : "PSR12_ControlStructures_ControlStructureSpacing",
-  "title" : "Control Structure Spacing"
+  "title" : "Control Structures: Control Structure Spacing"
 }, {
   "patternId" : "PSR12_Files_DeclareStatement",
-  "title" : "Declare Statement"
+  "title" : "Files: Declare Statement"
 }, {
   "patternId" : "PSR12_Files_FileHeader",
-  "title" : "File Header"
+  "title" : "Files: File Header"
 }, {
   "patternId" : "PSR12_Files_ImportStatement",
-  "title" : "Import Statement"
+  "title" : "Files: Import Statement"
 }, {
   "patternId" : "PSR12_Files_OpenTag",
-  "title" : "Open Tag"
+  "title" : "Files: Open Tag"
 }, {
   "patternId" : "PSR12_Functions_NullableTypeDeclaration",
   "title" : "Nullable Type Declarations Functions",
   "description" : "In nullable type declarations there MUST NOT be a space between the question mark and the type."
 }, {
   "patternId" : "PSR12_Functions_ReturnTypeDeclaration",
-  "title" : "Return Type Declaration"
+  "title" : "Functions: Return Type Declaration"
 }, {
   "patternId" : "PSR12_Keywords_ShortFormTypeKeywords",
   "title" : "Short Form Type Keywords",
@@ -986,10 +990,10 @@
   "description" : "All binary and ternary (but not unary) operators MUST be preceded and followed by at least one space. This includes all arithmetic, comparison, assignment, bitwise, logical (excluding ! which is unary), string concatenation, type operators, trait operators (insteadof and as), and the single pipe operator (e.g. ExceptionType1 | ExceptionType2 $e)."
 }, {
   "patternId" : "PSR12_Properties_ConstantVisibility",
-  "title" : "Constant Visibility"
+  "title" : "Properties: Constant Visibility"
 }, {
   "patternId" : "PSR12_Traits_UseDeclaration",
-  "title" : "Use Declaration"
+  "title" : "Traits: Use Declaration"
 }, {
   "patternId" : "PSR1_Classes_ClassDeclaration",
   "title" : "Class Declaration",
@@ -1024,17 +1028,17 @@
   "description" : "Case statements should be indented 4 spaces from the switch keyword.  It should also be followed by a space.  Colons in switch declarations should not be preceded by whitespace.  Break statements should be indented 4 more spaces from the case statement.  There must be a comment when falling through from one case into the next."
 }, {
   "patternId" : "PSR2_Files_ClosingTag",
-  "title" : "Closing Tag"
+  "title" : "Files: Closing Tag"
 }, {
   "patternId" : "PSR2_Files_EndFileNewline",
   "title" : "End File Newline",
   "description" : "PHP Files should end with exactly one newline."
 }, {
   "patternId" : "PSR2_Methods_FunctionCallSignature",
-  "title" : "Function Call Signature"
+  "title" : "Methods: Function Call Signature"
 }, {
   "patternId" : "PSR2_Methods_FunctionClosingBrace",
-  "title" : "Function Closing Brace"
+  "title" : "Methods: Function Closing Brace"
 }, {
   "patternId" : "PSR2_Methods_MethodDeclaration",
   "title" : "Method Declarations",
@@ -1417,67 +1421,67 @@
   "description" : "This standard covers all array declarations, regardless of the number and type of values contained within the array."
 }, {
   "patternId" : "Squiz_CSS_ClassDefinitionClosingBraceSpace",
-  "title" : "Class Definition Closing Brace Space"
+  "title" : "CSS: Class Definition Closing Brace Space"
 }, {
   "patternId" : "Squiz_CSS_ClassDefinitionNameSpacing",
-  "title" : "Class Definition Name Spacing"
+  "title" : "CSS: Class Definition Name Spacing"
 }, {
   "patternId" : "Squiz_CSS_ClassDefinitionOpeningBraceSpace",
-  "title" : "Class Definition Opening Brace Space"
+  "title" : "CSS: Class Definition Opening Brace Space"
 }, {
   "patternId" : "Squiz_CSS_ColonSpacing",
-  "title" : "Colon Spacing"
+  "title" : "CSS: Colon Spacing"
 }, {
   "patternId" : "Squiz_CSS_ColourDefinition",
-  "title" : "Colour Definition"
+  "title" : "CSS: Colour Definition"
 }, {
   "patternId" : "Squiz_CSS_DisallowMultipleStyleDefinitions",
-  "title" : "Disallow Multiple Style Definitions"
+  "title" : "CSS: Disallow Multiple Style Definitions"
 }, {
   "patternId" : "Squiz_CSS_DuplicateClassDefinition",
-  "title" : "Duplicate Class Definition"
+  "title" : "CSS: Duplicate Class Definition"
 }, {
   "patternId" : "Squiz_CSS_DuplicateStyleDefinition",
-  "title" : "Duplicate Style Definition"
+  "title" : "CSS: Duplicate Style Definition"
 }, {
   "patternId" : "Squiz_CSS_EmptyClassDefinition",
-  "title" : "Empty Class Definition"
+  "title" : "CSS: Empty Class Definition"
 }, {
   "patternId" : "Squiz_CSS_EmptyStyleDefinition",
-  "title" : "Empty Style Definition"
+  "title" : "CSS: Empty Style Definition"
 }, {
   "patternId" : "Squiz_CSS_ForbiddenStyles",
-  "title" : "Forbidden Styles"
+  "title" : "CSS: Forbidden Styles"
 }, {
   "patternId" : "Squiz_CSS_Indentation",
-  "title" : "Indentation"
+  "title" : "CSS: Indentation"
 }, {
   "patternId" : "Squiz_CSS_LowercaseStyleDefinition",
-  "title" : "Lowercase Style Definition"
+  "title" : "CSS: Lowercase Style Definition"
 }, {
   "patternId" : "Squiz_CSS_MissingColon",
-  "title" : "Missing Colon"
+  "title" : "CSS: Missing Colon"
 }, {
   "patternId" : "Squiz_CSS_NamedColours",
-  "title" : "Named Colours"
+  "title" : "CSS: Named Colours"
 }, {
   "patternId" : "Squiz_CSS_Opacity",
-  "title" : "Opacity"
+  "title" : "CSS: Opacity"
 }, {
   "patternId" : "Squiz_CSS_SemicolonSpacing",
-  "title" : "Semicolon Spacing"
+  "title" : "CSS: Semicolon Spacing"
 }, {
   "patternId" : "Squiz_CSS_ShorthandSize",
-  "title" : "Shorthand Size"
+  "title" : "CSS: Shorthand Size"
 }, {
   "patternId" : "Squiz_Classes_ClassDeclaration",
-  "title" : "Class Declaration"
+  "title" : "Classes: Class Declaration"
 }, {
   "patternId" : "Squiz_Classes_ClassFileName",
-  "title" : "Class File Name"
+  "title" : "Classes: Class File Name"
 }, {
   "patternId" : "Squiz_Classes_DuplicateProperty",
-  "title" : "Duplicate Property"
+  "title" : "Classes: Duplicate Property"
 }, {
   "patternId" : "Squiz_Classes_LowercaseClassKeywords",
   "title" : "Lowercase Class Keywords",
@@ -1488,51 +1492,51 @@
   "description" : "The self keyword should be used instead of the current class name, should be lowercase, and should not have spaces before or after it."
 }, {
   "patternId" : "Squiz_Classes_ValidClassName",
-  "title" : "Valid Class Name"
+  "title" : "Classes: Valid Class Name"
 }, {
   "patternId" : "Squiz_Commenting_BlockComment",
-  "title" : "Block Comment"
+  "title" : "Commenting: Block Comment"
 }, {
   "patternId" : "Squiz_Commenting_ClassComment",
-  "title" : "Class Comment"
+  "title" : "Commenting: Class Comment"
 }, {
   "patternId" : "Squiz_Commenting_ClosingDeclarationComment",
-  "title" : "Closing Declaration Comment"
+  "title" : "Commenting: Closing Declaration Comment"
 }, {
   "patternId" : "Squiz_Commenting_DocCommentAlignment",
   "title" : "Doc Comment Alignment",
   "description" : "The asterisks in a doc comment should align, and there should be one space between the asterisk and tags."
 }, {
   "patternId" : "Squiz_Commenting_EmptyCatchComment",
-  "title" : "Empty Catch Comment"
+  "title" : "Commenting: Empty Catch Comment"
 }, {
   "patternId" : "Squiz_Commenting_FileComment",
-  "title" : "File Comment"
+  "title" : "Commenting: File Comment"
 }, {
   "patternId" : "Squiz_Commenting_FunctionComment",
-  "title" : "Function Comment"
+  "title" : "Commenting: Function Comment"
 }, {
   "patternId" : "Squiz_Commenting_FunctionCommentThrowTag",
   "title" : "Doc Comment Throws Tag",
   "description" : "If a function throws any exceptions, they should be documented in a @throws tag."
 }, {
   "patternId" : "Squiz_Commenting_InlineComment",
-  "title" : "Inline Comment"
+  "title" : "Commenting: Inline Comment"
 }, {
   "patternId" : "Squiz_Commenting_LongConditionClosingComment",
-  "title" : "Long Condition Closing Comment"
+  "title" : "Commenting: Long Condition Closing Comment"
 }, {
   "patternId" : "Squiz_Commenting_PostStatementComment",
-  "title" : "Post Statement Comment"
+  "title" : "Commenting: Post Statement Comment"
 }, {
   "patternId" : "Squiz_Commenting_VariableComment",
-  "title" : "Variable Comment"
+  "title" : "Commenting: Variable Comment"
 }, {
   "patternId" : "Squiz_ControlStructures_ControlSignature",
-  "title" : "Control Signature"
+  "title" : "Control Structures: Control Signature"
 }, {
   "patternId" : "Squiz_ControlStructures_ElseIfDeclaration",
-  "title" : "Else If Declaration"
+  "title" : "Control Structures: Else If Declaration"
 }, {
   "patternId" : "Squiz_ControlStructures_ForEachLoopDeclaration",
   "title" : "Foreach Loop Declarations",
@@ -1543,128 +1547,128 @@
   "description" : "In a for loop declaration, there should be no space inside the brackets and there should be 0 spaces before and 1 space after semicolons."
 }, {
   "patternId" : "Squiz_ControlStructures_InlineIfDeclaration",
-  "title" : "Inline If Declaration"
+  "title" : "Control Structures: Inline If Declaration"
 }, {
   "patternId" : "Squiz_ControlStructures_LowercaseDeclaration",
   "title" : "Lowercase Control Structure Keywords",
   "description" : "The php keywords if, else, elseif, foreach, for, do, switch, while, try, and catch should be lowercase."
 }, {
   "patternId" : "Squiz_ControlStructures_SwitchDeclaration",
-  "title" : "Switch Declaration"
+  "title" : "Control Structures: Switch Declaration"
 }, {
   "patternId" : "Squiz_Debug_JSLint",
-  "title" : "J S Lint"
+  "title" : "Debug: JS Lint"
 }, {
   "patternId" : "Squiz_Debug_JavaScriptLint",
-  "title" : "Java Script Lint"
+  "title" : "Debug: Java Script Lint"
 }, {
   "patternId" : "Squiz_Files_FileExtension",
-  "title" : "File Extension"
+  "title" : "Files: File Extension"
 }, {
   "patternId" : "Squiz_Formatting_OperatorBracket",
-  "title" : "Operator Bracket"
+  "title" : "Formatting: Operator Bracket"
 }, {
   "patternId" : "Squiz_Functions_FunctionDeclaration",
-  "title" : "Function Declaration"
+  "title" : "Functions: Function Declaration"
 }, {
   "patternId" : "Squiz_Functions_FunctionDeclarationArgumentSpacing",
-  "title" : "Function Declaration Argument Spacing"
+  "title" : "Functions: Function Declaration Argument Spacing"
 }, {
   "patternId" : "Squiz_Functions_FunctionDuplicateArgument",
   "title" : "Lowercase Built-In functions",
   "description" : "All PHP built-in functions should be lowercased when called."
 }, {
   "patternId" : "Squiz_Functions_GlobalFunction",
-  "title" : "Global Function"
+  "title" : "Functions: Global Function"
 }, {
   "patternId" : "Squiz_Functions_LowercaseFunctionKeywords",
   "title" : "Lowercase Function Keywords",
   "description" : "The php keywords function, public, private, protected, and static should be lowercase."
 }, {
   "patternId" : "Squiz_Functions_MultiLineFunctionDeclaration",
-  "title" : "Multi Line Function Declaration"
+  "title" : "Functions: Multi Line Function Declaration"
 }, {
   "patternId" : "Squiz_NamingConventions_ValidFunctionName",
-  "title" : "Valid Function Name"
+  "title" : "Naming Conventions: Valid Function Name"
 }, {
   "patternId" : "Squiz_NamingConventions_ValidVariableName",
-  "title" : "Valid Variable Name"
+  "title" : "Naming Conventions: Valid Variable Name"
 }, {
   "patternId" : "Squiz_Objects_DisallowObjectStringIndex",
-  "title" : "Disallow Object String Index"
+  "title" : "Objects: Disallow Object String Index"
 }, {
   "patternId" : "Squiz_Objects_ObjectInstantiation",
-  "title" : "Object Instantiation"
+  "title" : "Objects: Object Instantiation"
 }, {
   "patternId" : "Squiz_Objects_ObjectMemberComma",
-  "title" : "Object Member Comma"
+  "title" : "Objects: Object Member Comma"
 }, {
   "patternId" : "Squiz_Operators_ComparisonOperatorUsage",
-  "title" : "Comparison Operator Usage"
+  "title" : "Operators: Comparison Operator Usage"
 }, {
   "patternId" : "Squiz_Operators_IncrementDecrementUsage",
-  "title" : "Increment Decrement Usage"
+  "title" : "Operators: Increment Decrement Usage"
 }, {
   "patternId" : "Squiz_Operators_ValidLogicalOperators",
-  "title" : "Valid Logical Operators"
+  "title" : "Operators: Valid Logical Operators"
 }, {
   "patternId" : "Squiz_PHP_CommentedOutCode",
-  "title" : "Commented Out Code"
+  "title" : "PHP: Commented Out Code"
 }, {
   "patternId" : "Squiz_PHP_DisallowBooleanStatement",
-  "title" : "Disallow Boolean Statement"
+  "title" : "PHP: Disallow Boolean Statement"
 }, {
   "patternId" : "Squiz_PHP_DisallowComparisonAssignment",
-  "title" : "Disallow Comparison Assignment"
+  "title" : "PHP: Disallow Comparison Assignment"
 }, {
   "patternId" : "Squiz_PHP_DisallowInlineIf",
-  "title" : "Disallow Inline If"
+  "title" : "PHP: Disallow Inline If"
 }, {
   "patternId" : "Squiz_PHP_DisallowMultipleAssignments",
-  "title" : "Disallow Multiple Assignments"
+  "title" : "PHP: Disallow Multiple Assignments"
 }, {
   "patternId" : "Squiz_PHP_DisallowSizeFunctionsInLoops",
-  "title" : "Disallow Size Functions In Loops"
+  "title" : "PHP: Disallow Size Functions In Loops"
 }, {
   "patternId" : "Squiz_PHP_DiscouragedFunctions",
-  "title" : "Discouraged Functions"
+  "title" : "PHP: Discouraged Functions"
 }, {
   "patternId" : "Squiz_PHP_EmbeddedPhp",
-  "title" : "Embedded Php"
+  "title" : "PHP: Embedded Php"
 }, {
   "patternId" : "Squiz_PHP_Eval",
-  "title" : "Eval"
+  "title" : "PHP: Eval"
 }, {
   "patternId" : "Squiz_PHP_GlobalKeyword",
-  "title" : "Global Keyword"
+  "title" : "PHP: Global Keyword"
 }, {
   "patternId" : "Squiz_PHP_Heredoc",
-  "title" : "Heredoc"
+  "title" : "PHP: Heredoc"
 }, {
   "patternId" : "Squiz_PHP_InnerFunctions",
-  "title" : "Inner Functions"
+  "title" : "PHP: Inner Functions"
 }, {
   "patternId" : "Squiz_PHP_LowercasePHPFunctions",
-  "title" : "Lowercase P H P Functions"
+  "title" : "PHP: Lowercase PHP Functions"
 }, {
   "patternId" : "Squiz_PHP_NonExecutableCode",
-  "title" : "Non Executable Code"
+  "title" : "PHP: Non Executable Code"
 }, {
   "patternId" : "Squiz_Scope_MemberVarScope",
-  "title" : "Member Var Scope"
+  "title" : "Scope: Member Var Scope"
 }, {
   "patternId" : "Squiz_Scope_MethodScope",
-  "title" : "Method Scope"
+  "title" : "Scope: Method Scope"
 }, {
   "patternId" : "Squiz_Scope_StaticThisUsage",
   "title" : "Static This Usage",
   "description" : "Static methods should not use $this."
 }, {
   "patternId" : "Squiz_Strings_ConcatenationSpacing",
-  "title" : "Concatenation Spacing"
+  "title" : "Strings: Concatenation Spacing"
 }, {
   "patternId" : "Squiz_Strings_DoubleQuoteUsage",
-  "title" : "Double Quote Usage"
+  "title" : "Strings: Double Quote Usage"
 }, {
   "patternId" : "Squiz_Strings_EchoedStrings",
   "title" : "Echoed Strings",
@@ -1675,39 +1679,39 @@
   "description" : "Casts should not have whitespace inside the parentheses."
 }, {
   "patternId" : "Squiz_WhiteSpace_ControlStructureSpacing",
-  "title" : "Control Structure Spacing"
+  "title" : "White Space: Control Structure Spacing"
 }, {
   "patternId" : "Squiz_WhiteSpace_FunctionClosingBraceSpace",
-  "title" : "Function Closing Brace Space"
+  "title" : "White Space: Function Closing Brace Space"
 }, {
   "patternId" : "Squiz_WhiteSpace_FunctionOpeningBraceSpace",
-  "title" : "Function Opening Brace Space"
+  "title" : "White Space: Function Opening Brace Space"
 }, {
   "patternId" : "Squiz_WhiteSpace_FunctionSpacing",
-  "title" : "Function Spacing"
+  "title" : "White Space: Function Spacing"
 }, {
   "patternId" : "Squiz_WhiteSpace_LanguageConstructSpacing",
   "title" : "Language Construct Whitespace",
   "description" : "The php constructs echo, print, return, include, include_once, require, require_once, and new should have one space after them."
 }, {
   "patternId" : "Squiz_WhiteSpace_LogicalOperatorSpacing",
-  "title" : "Logical Operator Spacing"
+  "title" : "White Space: Logical Operator Spacing"
 }, {
   "patternId" : "Squiz_WhiteSpace_MemberVarSpacing",
-  "title" : "Member Var Spacing"
+  "title" : "White Space: Member Var Spacing"
 }, {
   "patternId" : "Squiz_WhiteSpace_ObjectOperatorSpacing",
   "title" : "Object Operator Spacing",
   "description" : "The object operator (->) should not have any space around it."
 }, {
   "patternId" : "Squiz_WhiteSpace_OperatorSpacing",
-  "title" : "Operator Spacing"
+  "title" : "White Space: Operator Spacing"
 }, {
   "patternId" : "Squiz_WhiteSpace_PropertyLabelSpacing",
-  "title" : "Property Label Spacing"
+  "title" : "White Space: Property Label Spacing"
 }, {
   "patternId" : "Squiz_WhiteSpace_ScopeClosingBrace",
-  "title" : "Scope Closing Brace"
+  "title" : "White Space: Scope Closing Brace"
 }, {
   "patternId" : "Squiz_WhiteSpace_ScopeKeywordSpacing",
   "title" : "Scope Keyword Spacing",
@@ -1718,7 +1722,7 @@
   "description" : "Semicolons should not have spaces before them."
 }, {
   "patternId" : "Squiz_WhiteSpace_SuperfluousWhitespace",
-  "title" : "Superfluous Whitespace"
+  "title" : "White Space: Superfluous Whitespace"
 }, {
   "patternId" : "WordPress_Arrays_ArrayDeclarationSpacing",
   "title" : "Arrays: Array Declaration Spacing"
@@ -1744,6 +1748,9 @@
   "patternId" : "WordPress_CodeAnalysis_EmptyStatement",
   "title" : "Code Analysis: Empty Statement"
 }, {
+  "patternId" : "WordPress_CodeAnalysis_EscapedNotTranslated",
+  "title" : "Code Analysis: Escaped Not Translated"
+}, {
   "patternId" : "WordPress_DB_DirectDatabaseQuery",
   "title" : "DB: Direct Database Query"
 }, {
@@ -1762,23 +1769,35 @@
   "patternId" : "WordPress_DB_SlowDBQuery",
   "title" : "DB: Slow DB Query"
 }, {
+  "patternId" : "WordPress_DateTime_CurrentTimeTimestamp",
+  "title" : "Date Time: Current Time Timestamp"
+}, {
+  "patternId" : "WordPress_DateTime_RestrictedFunctions",
+  "title" : "Date Time: Restricted Functions"
+}, {
   "patternId" : "WordPress_Files_FileName",
   "title" : "Files: File Name"
 }, {
   "patternId" : "WordPress_NamingConventions_PrefixAllGlobals",
-  "title" : "Naming Conventions: Prefix All Globals"
+  "title" : "Naming Conventions: Prefix All Globals (Deprecated)"
 }, {
   "patternId" : "WordPress_NamingConventions_ValidFunctionName",
-  "title" : "Naming Conventions: Valid Function Name"
+  "title" : "Naming Conventions: Valid Function Name (Deprecated)"
 }, {
   "patternId" : "WordPress_NamingConventions_ValidHookName",
   "title" : "Naming Conventions: Valid Hook Name"
+}, {
+  "patternId" : "WordPress_NamingConventions_ValidPostTypeSlug",
+  "title" : "Naming Conventions: Valid Post Type Slug"
 }, {
   "patternId" : "WordPress_NamingConventions_ValidVariableName",
   "title" : "Naming Conventions: Valid Variable Name"
 }, {
   "patternId" : "WordPress_PHP_DevelopmentFunctions",
   "title" : "PHP: Development Functions"
+}, {
+  "patternId" : "WordPress_PHP_DisallowShortTernary",
+  "title" : "PHP: Disallow Short Ternary"
 }, {
   "patternId" : "WordPress_PHP_DiscouragedPHPFunctions",
   "title" : "PHP: Discouraged PHP Functions"
@@ -1874,7 +1893,7 @@
   "title" : "WP: Posts Per Page"
 }, {
   "patternId" : "WordPress_WP_TimezoneChange",
-  "title" : "WP: Timezone Change"
+  "title" : "WP: Timezone Change (Deprecated)"
 }, {
   "patternId" : "WordPress_WhiteSpace_CastStructureSpacing",
   "title" : "White Space: Cast Structure Spacing"

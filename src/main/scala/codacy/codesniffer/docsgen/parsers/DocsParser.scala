@@ -42,11 +42,12 @@ trait DocsParser {
     } yield {
       val idParts = patternIdPartsFor(dir.relativize(sourceFile).toString)
 
-      val category = CategoriesMapper.categoryFor(idParts, fallBackCategory)
+      val (category, subcategory) = CategoriesMapper.categoryFor(idParts, fallBackCategory)
 
       val spec = Pattern.Specification(idParts.patternId,
                                        issueTypeFor(category, sourceFile, Result.Level.Info),
-                                       CategoriesMapper.categoryFor(idParts, fallBackCategory),
+                                       category,
+                                       subcategory,
                                        parseParameters(sourceFile))
 
       val (description, docs) = descriptionWithDocs(dir, idParts, sourceFile)
