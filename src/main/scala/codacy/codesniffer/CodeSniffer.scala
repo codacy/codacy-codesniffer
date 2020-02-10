@@ -18,6 +18,8 @@ object CodeSniffer extends Tool {
 
   private[this] val deprecatedPropertyRegex = ".*property is deprecated in favor of.*"
 
+  private[this] val phpCompatibilityInstallLocation = "/opt/docker/composer/vendor/wimg/phpcompatibility"
+
   def apply(source: Source.Directory,
             configuration: Option[List[Pattern.Definition]],
             files: Option[Set[Source.File]],
@@ -109,10 +111,10 @@ object CodeSniffer extends Tool {
 
   private[this] def generateCrossCompatibilityAliasesStandard(): Path = {
     val content =
-      """
+      s"""
         |<ruleset name="PHPCS cross-version compatibility aliases">
         |  <description>Imports compatibility helper file</description>
-        |  <autoload>/opt/docker/phpcompatibility/PHPCSAliases.php</autoload>
+        |  <autoload>$phpCompatibilityInstallLocation/PHPCSAliases.php</autoload>
         |</ruleset>
       """.stripMargin
 
