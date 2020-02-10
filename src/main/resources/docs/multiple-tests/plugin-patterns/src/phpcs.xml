@@ -2,6 +2,7 @@
 <ruleset name="PSR2">
     <description>The PSR-2 coding standard.</description>
     <arg name="tab-width" value="4"/>
+    <config name="another_config" value="not_used"/>
 
     <rule ref="SlevomatCodingStandard.ControlStructures.AssignmentInCondition">
         <properties>

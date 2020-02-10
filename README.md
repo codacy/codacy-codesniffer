@@ -36,6 +36,12 @@ sbt "runMain codacy.codesniffer.docsgen.GeneratorMain"
 
 This will create updated `patterns.json`, `description.json` and the individual documentation Markdown files.
 
+## CodeSniffer configuration file
+
+PHP CodeSniffer can be configured by adding a `phpcs.xml` file to the source code.
+
+Currently, the tool supports this configuration file except from one feature - setting installed_paths: `<config name="installed_paths" />`
+
 ## What is Codacy?
 
 [Codacy](https://www.codacy.com/) is an Automated Code Review Tool that monitors your technical debt, helps you improve your code quality, teaches best practices to your developers, and helps you save time in Code Reviews.
