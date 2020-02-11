@@ -12,7 +12,7 @@
             </property>
         </properties>
     </rule>
-    <rule ref="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingParameterTypeHint" />
+    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint" />
 
     <rule ref="Security.BadFunctions.EasyXSS" />
     <rule ref="Generic.PHP.CharacterBeforePHPOpeningTag" />

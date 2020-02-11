@@ -1622,9 +1622,25 @@
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
-    "patternId" : "SlevomatCodingStandard_Arrays_TrailingArrayComma",
+    "patternId" : "SlevomatCodingStandard_Arrays_MultiLineArrayEndBracketPlacement",
     "level" : "Info",
     "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Arrays_SingleLineArrayWhitespace",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "spacesAroundBrackets",
+      "default" : 0
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_Arrays_TrailingArrayComma",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "enableAfterHeredoc",
+      "default" : "PHP_VERSION_ID >= 70300"
+    } ]
   }, {
     "patternId" : "SlevomatCodingStandard_Classes_ClassConstantVisibility",
     "level" : "Info",
@@ -1633,6 +1649,14 @@
       "name" : "fixable",
       "default" : false
     } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_Classes_ClassStructure",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Classes_ConstantSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "SlevomatCodingStandard_Classes_DisallowLateStaticBindingForConstants",
     "level" : "Info",
@@ -1652,6 +1676,43 @@
     "patternId" : "SlevomatCodingStandard_Classes_ModernClassNameReference",
     "level" : "Info",
     "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Classes_ParentCallSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "linesCountBeforeParentCall",
+      "default" : 1
+    }, {
+      "name" : "linesCountBeforeFirstParentCall",
+      "default" : 0
+    }, {
+      "name" : "linesCountAfterParentCall",
+      "default" : 1
+    }, {
+      "name" : "linesCountAfterLastParentCall",
+      "default" : 0
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_Classes_PropertySpacing",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Classes_RequireMultiLineMethodSignature",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "minLineLength",
+      "default" : 121
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_Classes_RequireSingleLineMethodSignature",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "maxLineLength",
+      "default" : 120
+    } ]
   }, {
     "patternId" : "SlevomatCodingStandard_Classes_SuperfluousAbstractClassNaming",
     "level" : "Info",
@@ -1738,7 +1799,15 @@
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
+    "patternId" : "SlevomatCodingStandard_Commenting_RequireOneLineDocComment",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
     "patternId" : "SlevomatCodingStandard_Commenting_RequireOneLinePropertyDocComment",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Commenting_UselessFunctionDocComment",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
@@ -1750,15 +1819,18 @@
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
-    "patternId" : "SlevomatCodingStandard_ControlStructures_ControlStructureSpacing",
+    "patternId" : "SlevomatCodingStandard_ControlStructures_BlockControlStructureSpacing",
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
-      "name" : "linesCountAroundControlStructure",
+      "name" : "linesCountBeforeControlStructure",
       "default" : 1
     }, {
       "name" : "linesCountBeforeFirstControlStructure",
       "default" : 0
+    }, {
+      "name" : "linesCountAfterControlStructure",
+      "default" : 1
     }, {
       "name" : "linesCountAfterLastControlStructure",
       "default" : 0
@@ -1792,6 +1864,26 @@
       "default" : false
     } ]
   }, {
+    "patternId" : "SlevomatCodingStandard_ControlStructures_JumpStatementsSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "linesCountAfterLastControlStructure",
+      "default" : 0
+    }, {
+      "name" : "linesCountBeforeFirstControlStructure",
+      "default" : 0
+    }, {
+      "name" : "linesCountBeforeControlStructure",
+      "default" : 1
+    }, {
+      "name" : "allowSingleLineYieldStacking",
+      "default" : true
+    }, {
+      "name" : "linesCountAfterControlStructure",
+      "default" : 1
+    } ]
+  }, {
     "patternId" : "SlevomatCodingStandard_ControlStructures_LanguageConstructWithParentheses",
     "level" : "Info",
     "category" : "CodeStyle"
@@ -1811,6 +1903,10 @@
       "name" : "lineLengthLimit",
       "default" : 0
     } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_ControlStructures_RequireNullCoalesceEqualOperator",
+    "level" : "Info",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "SlevomatCodingStandard_ControlStructures_RequireNullCoalesceOperator",
     "level" : "Info",
@@ -1856,9 +1952,39 @@
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
+    "patternId" : "SlevomatCodingStandard_Files_LineLength",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "lineLengthLimit",
+      "default" : 120
+    }, {
+      "name" : "ignoreComments",
+      "default" : false
+    }, {
+      "name" : "ignoreImports",
+      "default" : true
+    } ]
+  }, {
     "patternId" : "SlevomatCodingStandard_Files_TypeNameMatchesFileName",
     "level" : "Info",
     "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Functions_DisallowArrowFunction",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Functions_DisallowEmptyFunction",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Functions_RequireArrowFunction",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "allowNested",
+      "default" : true
+    } ]
   }, {
     "patternId" : "SlevomatCodingStandard_Functions_StaticClosure",
     "level" : "Info",
@@ -2018,6 +2144,14 @@
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
+    "patternId" : "SlevomatCodingStandard_Numbers_DisallowNumericLiteralSeparator",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Numbers_RequireNumericLiteralSeparator",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
     "patternId" : "SlevomatCodingStandard_Operators_DisallowEqualOperators",
     "level" : "Info",
     "category" : "CodeStyle"
@@ -2025,6 +2159,14 @@
     "patternId" : "SlevomatCodingStandard_Operators_DisallowIncrementAndDecrementOperators",
     "level" : "Info",
     "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Operators_NegationOperatorSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "spacesCount",
+      "default" : 0
+    } ]
   }, {
     "patternId" : "SlevomatCodingStandard_Operators_RequireCombinedAssignmentOperator",
     "level" : "Info",
@@ -2042,7 +2184,27 @@
       "default" : 0
     } ]
   }, {
+    "patternId" : "SlevomatCodingStandard_PHP_DisallowReference",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
     "patternId" : "SlevomatCodingStandard_PHP_OptimizedFunctionsWithoutUnpacking",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_PHP_ReferenceSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "spacesCountAfterReference",
+      "default" : 0
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_PHP_RequireExplicitAssertion",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_PHP_RequireNowdoc",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
@@ -2100,9 +2262,37 @@
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
+    "patternId" : "SlevomatCodingStandard_TypeHints_ParameterTypeHint",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "enableObjectTypeHint",
+      "default" : "PHP_VERSION_ID >= 70200"
+    } ]
+  }, {
     "patternId" : "SlevomatCodingStandard_TypeHints_ParameterTypeHintSpacing",
     "level" : "Info",
     "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_TypeHints_PropertyTypeHint",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "enableNativeTypeHint",
+      "default" : "PHP_VERSION_ID >= 70400"
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_TypeHints_PropertyTypeHintSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_TypeHints_ReturnTypeHint",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "enableObjectTypeHint",
+      "default" : "PHP_VERSION_ID >= 70200"
+    } ]
   }, {
     "patternId" : "SlevomatCodingStandard_TypeHints_ReturnTypeHintSpacing",
     "level" : "Info",
@@ -2110,20 +2300,6 @@
     "parameters" : [ {
       "name" : "spacesCountBeforeColon",
       "default" : 0
-    } ]
-  }, {
-    "patternId" : "SlevomatCodingStandard_TypeHints_TypeHintDeclaration",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "enableObjectTypeHint",
-      "default" : "PHP_VERSION_ID >= 70200"
-    }, {
-      "name" : "enableEachParameterAndReturnInspection",
-      "default" : false
-    }, {
-      "name" : "allAnnotationsAreUseful",
-      "default" : false
     } ]
   }, {
     "patternId" : "SlevomatCodingStandard_TypeHints_UselessConstantTypeHint",
