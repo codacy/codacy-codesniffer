@@ -1151,11 +1151,23 @@
   "patternId" : "SlevomatCodingStandard_Arrays_DisallowImplicitArrayCreation",
   "title" : "Arrays: Disallow Implicit Array Creation"
 }, {
+  "patternId" : "SlevomatCodingStandard_Arrays_MultiLineArrayEndBracketPlacement",
+  "title" : "Arrays: Multi Line Array End Bracket Placement"
+}, {
+  "patternId" : "SlevomatCodingStandard_Arrays_SingleLineArrayWhitespace",
+  "title" : "Arrays: Single Line Array Whitespace"
+}, {
   "patternId" : "SlevomatCodingStandard_Arrays_TrailingArrayComma",
   "title" : "Arrays: Trailing Array Comma"
 }, {
   "patternId" : "SlevomatCodingStandard_Classes_ClassConstantVisibility",
   "title" : "Classes: Class Constant Visibility"
+}, {
+  "patternId" : "SlevomatCodingStandard_Classes_ClassStructure",
+  "title" : "Classes: Class Structure"
+}, {
+  "patternId" : "SlevomatCodingStandard_Classes_ConstantSpacing",
+  "title" : "Classes: Constant Spacing"
 }, {
   "patternId" : "SlevomatCodingStandard_Classes_DisallowLateStaticBindingForConstants",
   "title" : "Classes: Disallow Late Static Binding For Constants"
@@ -1165,6 +1177,18 @@
 }, {
   "patternId" : "SlevomatCodingStandard_Classes_ModernClassNameReference",
   "title" : "Classes: Modern Class Name Reference"
+}, {
+  "patternId" : "SlevomatCodingStandard_Classes_ParentCallSpacing",
+  "title" : "Classes: Parent Call Spacing"
+}, {
+  "patternId" : "SlevomatCodingStandard_Classes_PropertySpacing",
+  "title" : "Classes: Property Spacing"
+}, {
+  "patternId" : "SlevomatCodingStandard_Classes_RequireMultiLineMethodSignature",
+  "title" : "Classes: Require Multi Line Method Signature"
+}, {
+  "patternId" : "SlevomatCodingStandard_Classes_RequireSingleLineMethodSignature",
+  "title" : "Classes: Require Single Line Method Signature"
 }, {
   "patternId" : "SlevomatCodingStandard_Classes_SuperfluousAbstractClassNaming",
   "title" : "Classes: Superfluous Abstract Class Naming"
@@ -1208,8 +1232,14 @@
   "patternId" : "SlevomatCodingStandard_Commenting_InlineDocCommentDeclaration",
   "title" : "Commenting: Inline Doc Comment Declaration"
 }, {
+  "patternId" : "SlevomatCodingStandard_Commenting_RequireOneLineDocComment",
+  "title" : "Commenting: Require One Line Doc Comment"
+}, {
   "patternId" : "SlevomatCodingStandard_Commenting_RequireOneLinePropertyDocComment",
   "title" : "Commenting: Require One Line Property Doc Comment"
+}, {
+  "patternId" : "SlevomatCodingStandard_Commenting_UselessFunctionDocComment",
+  "title" : "Commenting: Useless Function Doc Comment"
 }, {
   "patternId" : "SlevomatCodingStandard_Commenting_UselessInheritDocComment",
   "title" : "Commenting: Useless Inherit Doc Comment"
@@ -1217,8 +1247,8 @@
   "patternId" : "SlevomatCodingStandard_ControlStructures_AssignmentInCondition",
   "title" : "Control Structures: Assignment In Condition"
 }, {
-  "patternId" : "SlevomatCodingStandard_ControlStructures_ControlStructureSpacing",
-  "title" : "Control Structures: Control Structure Spacing"
+  "patternId" : "SlevomatCodingStandard_ControlStructures_BlockControlStructureSpacing",
+  "title" : "Control Structures: Block Control Structure Spacing"
 }, {
   "patternId" : "SlevomatCodingStandard_ControlStructures_DisallowContinueWithoutIntegerOperandInSwitch",
   "title" : "Control Structures: Disallow Continue Without Integer Operand In Switch"
@@ -1235,6 +1265,9 @@
   "patternId" : "SlevomatCodingStandard_ControlStructures_EarlyExit",
   "title" : "Control Structures: Early Exit"
 }, {
+  "patternId" : "SlevomatCodingStandard_ControlStructures_JumpStatementsSpacing",
+  "title" : "Control Structures: Jump Statements Spacing"
+}, {
   "patternId" : "SlevomatCodingStandard_ControlStructures_LanguageConstructWithParentheses",
   "title" : "Control Structures: Language Construct With Parentheses"
 }, {
@@ -1246,6 +1279,9 @@
 }, {
   "patternId" : "SlevomatCodingStandard_ControlStructures_RequireMultiLineTernaryOperator",
   "title" : "Control Structures: Require Multi Line Ternary Operator"
+}, {
+  "patternId" : "SlevomatCodingStandard_ControlStructures_RequireNullCoalesceEqualOperator",
+  "title" : "Control Structures: Require Null Coalesce Equal Operator"
 }, {
   "patternId" : "SlevomatCodingStandard_ControlStructures_RequireNullCoalesceOperator",
   "title" : "Control Structures: Require Null Coalesce Operator"
@@ -1271,8 +1307,20 @@
   "patternId" : "SlevomatCodingStandard_Exceptions_ReferenceThrowableOnly",
   "title" : "Exceptions: Reference Throwable Only"
 }, {
+  "patternId" : "SlevomatCodingStandard_Files_LineLength",
+  "title" : "Files: Line Length"
+}, {
   "patternId" : "SlevomatCodingStandard_Files_TypeNameMatchesFileName",
   "title" : "Files: Type Name Matches File Name"
+}, {
+  "patternId" : "SlevomatCodingStandard_Functions_DisallowArrowFunction",
+  "title" : "Functions: Disallow Arrow Function"
+}, {
+  "patternId" : "SlevomatCodingStandard_Functions_DisallowEmptyFunction",
+  "title" : "Functions: Disallow Empty Function"
+}, {
+  "patternId" : "SlevomatCodingStandard_Functions_RequireArrowFunction",
+  "title" : "Functions: Require Arrow Function"
 }, {
   "patternId" : "SlevomatCodingStandard_Functions_StaticClosure",
   "title" : "Functions: Static Closure"
@@ -1343,11 +1391,20 @@
   "patternId" : "SlevomatCodingStandard_Namespaces_UselessAlias",
   "title" : "Namespaces: Useless Alias"
 }, {
+  "patternId" : "SlevomatCodingStandard_Numbers_DisallowNumericLiteralSeparator",
+  "title" : "Numbers: Disallow Numeric Literal Separator"
+}, {
+  "patternId" : "SlevomatCodingStandard_Numbers_RequireNumericLiteralSeparator",
+  "title" : "Numbers: Require Numeric Literal Separator"
+}, {
   "patternId" : "SlevomatCodingStandard_Operators_DisallowEqualOperators",
   "title" : "Operators: Disallow Equal Operators"
 }, {
   "patternId" : "SlevomatCodingStandard_Operators_DisallowIncrementAndDecrementOperators",
   "title" : "Operators: Disallow Increment And Decrement Operators"
+}, {
+  "patternId" : "SlevomatCodingStandard_Operators_NegationOperatorSpacing",
+  "title" : "Operators: Negation Operator Spacing"
 }, {
   "patternId" : "SlevomatCodingStandard_Operators_RequireCombinedAssignmentOperator",
   "title" : "Operators: Require Combined Assignment Operator"
@@ -1358,8 +1415,20 @@
   "patternId" : "SlevomatCodingStandard_Operators_SpreadOperatorSpacing",
   "title" : "Operators: Spread Operator Spacing"
 }, {
+  "patternId" : "SlevomatCodingStandard_PHP_DisallowReference",
+  "title" : "PHP: Disallow Reference"
+}, {
   "patternId" : "SlevomatCodingStandard_PHP_OptimizedFunctionsWithoutUnpacking",
   "title" : "PHP: Optimized Functions Without Unpacking"
+}, {
+  "patternId" : "SlevomatCodingStandard_PHP_ReferenceSpacing",
+  "title" : "PHP: Reference Spacing"
+}, {
+  "patternId" : "SlevomatCodingStandard_PHP_RequireExplicitAssertion",
+  "title" : "PHP: Require Explicit Assertion"
+}, {
+  "patternId" : "SlevomatCodingStandard_PHP_RequireNowdoc",
+  "title" : "PHP: Require Nowdoc"
 }, {
   "patternId" : "SlevomatCodingStandard_PHP_ShortList",
   "title" : "PHP: Short List"
@@ -1391,14 +1460,23 @@
   "patternId" : "SlevomatCodingStandard_TypeHints_NullableTypeForNullDefaultValue",
   "title" : "Type Hints: Nullable Type For Null Default Value"
 }, {
+  "patternId" : "SlevomatCodingStandard_TypeHints_ParameterTypeHint",
+  "title" : "Type Hints: Parameter Type Hint"
+}, {
   "patternId" : "SlevomatCodingStandard_TypeHints_ParameterTypeHintSpacing",
   "title" : "Type Hints: Parameter Type Hint Spacing"
 }, {
+  "patternId" : "SlevomatCodingStandard_TypeHints_PropertyTypeHint",
+  "title" : "Type Hints: Property Type Hint"
+}, {
+  "patternId" : "SlevomatCodingStandard_TypeHints_PropertyTypeHintSpacing",
+  "title" : "Type Hints: Property Type Hint Spacing"
+}, {
+  "patternId" : "SlevomatCodingStandard_TypeHints_ReturnTypeHint",
+  "title" : "Type Hints: Return Type Hint"
+}, {
   "patternId" : "SlevomatCodingStandard_TypeHints_ReturnTypeHintSpacing",
   "title" : "Type Hints: Return Type Hint Spacing"
-}, {
-  "patternId" : "SlevomatCodingStandard_TypeHints_TypeHintDeclaration",
-  "title" : "Type Hints: Type Hint Declaration"
 }, {
   "patternId" : "SlevomatCodingStandard_TypeHints_UselessConstantTypeHint",
   "title" : "Type Hints: Useless Constant Type Hint"

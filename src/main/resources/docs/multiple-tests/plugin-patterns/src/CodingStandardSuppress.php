@@ -1,6 +1,7 @@
 <?php
+
 /**
- * @phpcsSuppress SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingParameterTypeHint
+ * @phpcsSuppress SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint
  * @param int $max
  */
 public function createProgressBar($max = 0): ProgressBar
