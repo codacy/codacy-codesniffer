@@ -4,7 +4,7 @@
         "slevomat/coding-standard": "6.1.5",
         "pheromone/phpcs-security-audit": "2.0.1",
         "magento/magento-coding-standard": "v4",
-        "wp-coding-standards/wpcs": "2.2.0",
+        "wp-coding-standards/wpcs": "2.2.1",
         "phpcompatibility/php-compatibility": "9.3.4",
         "magento/marketplace-eqp": "4.0.0"
     },
