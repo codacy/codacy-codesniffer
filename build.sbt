@@ -1,25 +1,18 @@
-import java.io.FileInputStream
-import java.util.Properties
-
 import com.typesafe.sbt.packager.docker.Cmd
 
 name := "codacy-codesniffer"
 
 version := "1.0-SNAPSHOT"
 
-val languageVersion = "2.13.1"
-
-scalaVersion := languageVersion
+scalaVersion := "2.13.1"
 
 libraryDependencies ++= Seq(("org.scala-lang.modules" %% "scala-xml" % "1.2.0").withSources(),
                             "org.scala-lang.modules" %% "scala-parallel-collections" % "0.2.0",
-                            "com.codacy" %% "codacy-engine-scala-seed" % "4.0.0")
+                            "com.codacy" %% "codacy-engine-scala-seed" % "4.0.2")
 
 enablePlugins(AshScriptPlugin)
 
 enablePlugins(DockerPlugin)
-
-version in Docker := "1.0"
 
 mappings in Universal ++= {
   (resourceDirectory in Compile).map { (resourceDir: File) =>
@@ -34,6 +27,8 @@ mappings in Universal ++= {
 
 val dockerUser = "docker"
 val dockerGroup = "docker"
+
+version in Docker := "1.0"
 
 daemonUser in Docker := dockerUser
 

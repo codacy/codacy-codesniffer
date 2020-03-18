@@ -20,5 +20,3 @@ RUN ln -s ${COMPOSER_HOME}/vendor/bin/phpcs /usr/bin/phpcs
 RUN composer global require dealerdirect/phpcodesniffer-composer-installer
 
 RUN apk del curl git && rm -rf /tmp/* && rm -rf /var/cache/apk/*
-
-
