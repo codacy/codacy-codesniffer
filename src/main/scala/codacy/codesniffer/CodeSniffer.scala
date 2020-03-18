@@ -18,7 +18,8 @@ object CodeSniffer extends Tool {
 
   private[this] val deprecatedPropertyRegex = ".*property is deprecated in favor of.*"
 
-  private[this] val phpCompatibilityInstallLocation = "/opt/docker/composer/vendor/wimg/phpcompatibility"
+  private[this] val phpCompatibilityInstallLocation =
+    "/opt/docker/app/.composer/vendor/phpcompatibility/php-compatibility"
 
   def apply(source: Source.Directory,
             configuration: Option[List[Pattern.Definition]],

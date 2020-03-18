@@ -13,6 +13,7 @@ workflows:
       - codacy/sbt:
           name: publish_docker_local
           cmd: |
+            docker build -t codacy-codesniffer-base .
             sbt "set scalafmtUseIvy in ThisBuild := false;
                  scalafmt::test;
                  test:scalafmt::test;

@@ -19,4 +19,23 @@
         <error source="Generic_PHP_CharacterBeforePHPOpeningTag" line="2"
                message="The opening PHP tag must be the first content in the file" severity="info"/>
     </file>
+    <file name="MagentoGoTo.php">
+        <error source="Magento2_PHP_Goto" line="2"
+               message="Use of goto is discouraged." severity="info"/>
+        <error source="MEQP1_PHP_Goto" line="2"
+               message="Use of goto is discouraged." severity="info"/>
+    </file>
+    <file name="WPCodingStandard.php">
+        <error source="WordPress_PHP_RestrictedPHPFunctions" line="2"
+               message="create_function() is deprecated as of PHP 7.2, please use full fledged functions or anonymous functions instead."
+               severity="info"/>
+        <error source="PHPCompatibility_FunctionUse_RemovedFunctions" line="2"
+               message="Function create_function() is deprecated since PHP 7.2; Use an anonymous function instead"
+               severity="warning"/>
+    </file>
+    <file name="PHPCompatibility.php">
+        <error source="PHPCompatibility_FunctionUse_ArgumentFunctionsUsage" line="2"
+               message="Use of func_get_arg() outside of a user-defined function is only supported if the file is included from within a user-defined function in another file prior to PHP 5.3. As of PHP 5.3, it is no longer supported at all."
+               severity="warning"/>
+    </file>
 </checkstyle>
