@@ -7,16 +7,15 @@ object VersionsHelper {
   private[this] val properties = {
     val composerJsonString = File("composer.json").contentAsString
     val composerJson = ujson.read(composerJsonString)
-    val dependencies = composerJson("require")
-    dependencies.obj
+    composerJson("require")
   }
 
-  lazy val codesniffer = properties.getOrElse("squizlabs/php_codesniffer", ujson.Null).str
-  lazy val magentoEQP = properties.getOrElse("magento/marketplace-eqp", ujson.Null).str
-  lazy val magentoCS = properties.getOrElse("magento/magento-coding-standard", ujson.Null).str
-  lazy val wordpress = properties.getOrElse("wp-coding-standards/wpcs", ujson.Null).str
-  lazy val phpCompatibility = properties.getOrElse("phpcompatibility/php-compatibility", ujson.Null).str
-  lazy val phpcsSecurityAudit = properties.getOrElse("pheromone/phpcs-security-audit", ujson.Null).str
-  lazy val slevomatCS = properties.getOrElse("slevomat/coding-standard", ujson.Null).str
+  lazy val codesniffer = properties("squizlabs/php_codesniffer").str
+  lazy val magentoEQP = properties("magento/marketplace-eqp").str
+  lazy val magentoCS = properties("magento/magento-coding-standard").str
+  lazy val wordpress = properties("wp-coding-standards/wpcs").str
+  lazy val phpCompatibility = properties("phpcompatibility/php-compatibility").str
+  lazy val phpcsSecurityAudit = properties("pheromone/phpcs-security-audit").str
+  lazy val slevomatCS = properties("slevomat/coding-standard").str
 
 }
