@@ -8,7 +8,9 @@ scalaVersion := "2.13.1"
 
 libraryDependencies ++= Seq(("org.scala-lang.modules" %% "scala-xml" % "1.2.0").withSources(),
                             "org.scala-lang.modules" %% "scala-parallel-collections" % "0.2.0",
-                            "com.codacy" %% "codacy-engine-scala-seed" % "4.0.2")
+                            "com.codacy" %% "codacy-engine-scala-seed" % "4.0.2",
+                            "com.lihaoyi" %% "ujson" % "1.0.0",
+                            "com.github.pathikrit" %% "better-files" % "3.8.0")
 
 enablePlugins(AshScriptPlugin)
 

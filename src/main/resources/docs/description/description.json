@@ -218,6 +218,10 @@
   "title" : "Alternative PHP Code Tags",
   "description" : "Always use <?php ?> to delimit PHP code, do not use the ASP <% %> style tags nor the <script language=\"php\"></script> tags. This is the most portable way to include PHP code on differing operating systems and setups."
 }, {
+  "patternId" : "Generic_PHP_DisallowRequestSuperglobal",
+  "title" : "$_REQUEST Superglobal",
+  "description" : "$_REQUEST should never be used due to the ambiguity created as to where the data is coming from. Use $_POST, $_GET, or $_COOKIE instead."
+}, {
   "patternId" : "Generic_PHP_DisallowShortOpenTag",
   "title" : "PHP Code Tags",
   "description" : "Always use <?php ?> to delimit PHP code, not the <? ?> shorthand. This is the most portable way to include PHP code on differing operating systems and setups."

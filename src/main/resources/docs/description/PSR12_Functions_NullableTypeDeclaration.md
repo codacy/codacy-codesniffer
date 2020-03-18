@@ -2,21 +2,32 @@ In nullable type declarations there MUST NOT be a space between the question mar
 
 Valid: no whitespace used.
 ```
-public function functionName(?string $arg1, ?int $arg2): ?string
-{
+public function functionName(
+    ?string $arg1,
+    ?int $arg2
+): ?string {
 }
 ```
 
 Invalid: superfluous whitespace used.
 ```
-public function functionName(? string $arg1, ? int $arg2): ? string
+public function functionName(
+    ? string $arg1,
+    ? int $arg2
+): ? string {
+}
+```
+
+Valid: no unexpected characters.
+```
+public function foo(?int $arg): ?string
 {
 }
 ```
 
 Invalid: unexpected characters used.
 ```
-public function functionName(? /* nullable for a reason */ string $arg1): ?
+public function bar(? /* comment */ int $arg): ?
     // nullable for a reason
     string
 {

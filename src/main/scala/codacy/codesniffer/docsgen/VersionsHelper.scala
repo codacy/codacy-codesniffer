@@ -1,21 +1,22 @@
 package codacy.codesniffer.docsgen
-import java.io.FileInputStream
-import java.util.Properties
+
+import better.files.File
 
 object VersionsHelper {
 
   private[this] val properties = {
-    val prop = new Properties()
-    prop.load(new FileInputStream(".versions.properties"))
-    prop
+    val composerJsonString = File("composer.json").contentAsString
+    val composerJson = ujson.read(composerJsonString)
+    val dependencies = composerJson("require")
+    dependencies.obj
   }
 
-  lazy val codesniffer = properties.getProperty("php-codesniffer")
-  lazy val magentoEQP = properties.getProperty("magento-eqp")
-  lazy val magentoCS = properties.getProperty("magento-cs")
-  lazy val wordpress = properties.getProperty("wordpress")
-  lazy val phpCompatibility = properties.getProperty("php-compatibility")
-  lazy val phpcsSecurityAudit = properties.getProperty("phpcs-security-audit")
-  lazy val slevomatCS = properties.getProperty("slevomat-cs")
+  lazy val codesniffer = properties.get("squizlabs/php_codesniffer").head.str
+  lazy val magentoEQP = properties.get("magento/marketplace-eqp").head.str
+  lazy val magentoCS = properties.get("magento/magento-coding-standard").head.str
+  lazy val wordpress = properties.get("wp-coding-standards/wpcs").head.str
+  lazy val phpCompatibility = properties.get("phpcompatibility/php-compatibility").head.str
+  lazy val phpcsSecurityAudit = properties.get("pheromone/phpcs-security-audit").head.str
+  lazy val slevomatCS = properties.get("slevomat/coding-standard").head.str
 
 }
