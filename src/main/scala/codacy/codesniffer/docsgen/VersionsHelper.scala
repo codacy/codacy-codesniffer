@@ -11,12 +11,12 @@ object VersionsHelper {
     dependencies.obj
   }
 
-  lazy val codesniffer = properties.get("squizlabs/php_codesniffer").head.str
-  lazy val magentoEQP = properties.get("magento/marketplace-eqp").head.str
-  lazy val magentoCS = properties.get("magento/magento-coding-standard").head.str
-  lazy val wordpress = properties.get("wp-coding-standards/wpcs").head.str
-  lazy val phpCompatibility = properties.get("phpcompatibility/php-compatibility").head.str
-  lazy val phpcsSecurityAudit = properties.get("pheromone/phpcs-security-audit").head.str
-  lazy val slevomatCS = properties.get("slevomat/coding-standard").head.str
+  lazy val codesniffer = properties.getOrElse("squizlabs/php_codesniffer", ujson.Null).str
+  lazy val magentoEQP = properties.getOrElse("magento/marketplace-eqp", ujson.Null).str
+  lazy val magentoCS = properties.getOrElse("magento/magento-coding-standard", ujson.Null).str
+  lazy val wordpress = properties.getOrElse("wp-coding-standards/wpcs", ujson.Null).str
+  lazy val phpCompatibility = properties.getOrElse("phpcompatibility/php-compatibility", ujson.Null).str
+  lazy val phpcsSecurityAudit = properties.getOrElse("pheromone/phpcs-security-audit", ujson.Null).str
+  lazy val slevomatCS = properties.getOrElse("slevomat/coding-standard", ujson.Null).str
 
 }

@@ -20,6 +20,7 @@ workflows:
                  sbt:scalafmt::test;
                  set name := \"$CIRCLE_PROJECT_REPONAME\";
                  set version in Docker := \"latest\";
+                 runMain codacy.codesniffer.docsgen.GeneratorMain;
                  docker:publishLocal"
             docker save --output docker-image.tar $CIRCLE_PROJECT_REPONAME:latest
           persist_to_workspace: true
