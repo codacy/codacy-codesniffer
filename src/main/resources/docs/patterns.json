@@ -1,6 +1,6 @@
 {
   "name" : "PHP Code Sniffer",
-  "version" : "3.5.3",
+  "version" : "3.5.4",
   "patterns" : [ {
     "patternId" : "Generic_Arrays_ArrayIndent",
     "level" : "Info",
@@ -302,6 +302,10 @@
     "category" : "CodeStyle"
   }, {
     "patternId" : "Generic_PHP_DisallowAlternativePHPTags",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Generic_PHP_DisallowRequestSuperglobal",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
@@ -1333,7 +1337,11 @@
   }, {
     "patternId" : "PSR12_ControlStructures_BooleanOperatorPlacement",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "allowOnly",
+      "default" : null
+    } ]
   }, {
     "patternId" : "PSR12_ControlStructures_ControlStructureSpacing",
     "level" : "Info",
@@ -1632,6 +1640,9 @@
     "parameters" : [ {
       "name" : "spacesAroundBrackets",
       "default" : 0
+    }, {
+      "name" : "enableEmptyArrayCheck",
+      "default" : false
     } ]
   }, {
     "patternId" : "SlevomatCodingStandard_Arrays_TrailingArrayComma",
@@ -1738,17 +1749,20 @@
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
+      "name" : "linesCountAfterLastUseWhenLastInClass",
+      "default" : 1
+    }, {
       "name" : "linesCountBeforeFirstUse",
       "default" : 1
     }, {
-      "name" : "linesCountBetweenUses",
-      "default" : 0
+      "name" : "linesCountBeforeFirstUseWhenFirstInClass",
+      "default" : null
     }, {
       "name" : "linesCountAfterLastUse",
       "default" : 1
     }, {
-      "name" : "linesCountAfterLastUseWhenLastInClass",
-      "default" : 1
+      "name" : "linesCountBetweenUses",
+      "default" : 0
     } ]
   }, {
     "patternId" : "SlevomatCodingStandard_Classes_UnusedPrivateElements",
@@ -2521,6 +2535,9 @@
     }, {
       "name" : "requiredSpacesBeforeClose",
       "default" : 0
+    }, {
+      "name" : "ignoreNewlines",
+      "default" : false
     } ]
   }, {
     "patternId" : "Squiz_ControlStructures_InlineIfDeclaration",

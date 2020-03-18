@@ -4,14 +4,14 @@ Equals signs aligned
 ```
 $shortVar        = (1 + 2);
 $veryLongVarName = 'string';
-$var             = foo($bar, $baz, $quux);
+$var             = foo($bar, $baz);
 ```
 
 Not aligned; harder to read
 ```
 $shortVar = (1 + 2);
 $veryLongVarName = 'string';
-$var = foo($bar, $baz, $quux);
+$var = foo($bar, $baz);
 ```
 
 Equals signs aligned; only one space after longest var name

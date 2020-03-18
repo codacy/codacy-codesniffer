@@ -13,12 +13,14 @@ workflows:
       - codacy/sbt:
           name: publish_docker_local
           cmd: |
+            docker build -t codacy-codesniffer-base .
             sbt "set scalafmtUseIvy in ThisBuild := false;
                  scalafmt::test;
                  test:scalafmt::test;
                  sbt:scalafmt::test;
                  set name := \"$CIRCLE_PROJECT_REPONAME\";
                  set version in Docker := \"latest\";
+                 runMain codacy.codesniffer.docsgen.GeneratorMain;
                  docker:publishLocal"
             docker save --output docker-image.tar $CIRCLE_PROJECT_REPONAME:latest
           persist_to_workspace: true
