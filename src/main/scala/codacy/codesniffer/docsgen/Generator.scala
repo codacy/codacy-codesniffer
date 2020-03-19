@@ -5,9 +5,9 @@ import codacy.codesniffer.docsgen.parsers._
 import com.codacy.plugins.api.results.Tool
 import play.api.libs.json.{Json, Writes}
 
+import scala.collection.parallel.CollectionConverters._
 import scala.collection.parallel.ForkJoinTaskSupport
 import scala.collection.parallel.immutable.ParSeq
-import scala.collection.parallel.CollectionConverters._
 
 class Generator() {
 
@@ -26,7 +26,8 @@ class Generator() {
          new MagentoCSDocsParser(),
          new PHPCompatibilityDocsParser(),
          new PHPCSSecurityAuditDocsParser(),
-         new SlevomatCSDocsParser())
+         new SlevomatCSDocsParser(),
+         new DrupalCoderDocsParser())
 
   def run(): Unit = {
     docsDir.createDirectories()

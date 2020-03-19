@@ -20,6 +20,7 @@ object CategoriesMapper {
       case "MEQP1_Security_InsecureFunction" => (Category.Security, Some(Subcategory.InsecureModulesLibraries))
       case "Magento2_Security_InsecureFunction" => (Category.Security, Some(Subcategory.InsecureModulesLibraries))
       case "MEQP1_Security_DiscouragedFunction" => (Category.Security, Some(Subcategory.InsecureModulesLibraries))
+      case "Drupal_Semantics_PregSecurity" => (Category.Security, Some(Subcategory.CommandInjection))
 
       case patternID if patternID.toLowerCase.contains("security") =>
         patternID.toLowerCase match {

@@ -17,5 +17,6 @@ object VersionsHelper {
   lazy val phpCompatibility = properties("phpcompatibility/php-compatibility").str
   lazy val phpcsSecurityAudit = properties("pheromone/phpcs-security-audit").str
   lazy val slevomatCS = properties("slevomat/coding-standard").str
+  lazy val drupalCoder = properties("drupal/coder").str
 
 }
