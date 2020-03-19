@@ -1,4 +1,217 @@
 [ {
+  "patternId" : "Drupal_Arrays_Array",
+  "title" : "Arrays: Array"
+}, {
+  "patternId" : "Drupal_Arrays_DisallowLongArraySyntax",
+  "title" : "Arrays: Disallow Long Array Syntax"
+}, {
+  "patternId" : "Drupal_CSS_ClassDefinitionNameSpacing",
+  "title" : "CSS: Class Definition Name Spacing"
+}, {
+  "patternId" : "Drupal_CSS_ColourDefinition",
+  "title" : "CSS: Colour Definition"
+}, {
+  "patternId" : "Drupal_Classes_ClassCreateInstance",
+  "title" : "Classes: Class Create Instance"
+}, {
+  "patternId" : "Drupal_Classes_ClassDeclaration",
+  "title" : "Classes: Class Declaration"
+}, {
+  "patternId" : "Drupal_Classes_ClassFileName",
+  "title" : "Classes: Class File Name"
+}, {
+  "patternId" : "Drupal_Classes_FullyQualifiedNamespace",
+  "title" : "Classes: Fully Qualified Namespace"
+}, {
+  "patternId" : "Drupal_Classes_InterfaceName",
+  "title" : "Classes: Interface Name"
+}, {
+  "patternId" : "Drupal_Classes_PropertyDeclaration",
+  "title" : "Classes: Property Declaration"
+}, {
+  "patternId" : "Drupal_Classes_UnusedUseStatement",
+  "title" : "Classes: Unused Use Statement"
+}, {
+  "patternId" : "Drupal_Classes_UseLeadingBackslash",
+  "title" : "Classes: Use Leading Backslash"
+}, {
+  "patternId" : "Drupal_Commenting_ClassComment",
+  "title" : "Commenting: Class Comment"
+}, {
+  "patternId" : "Drupal_Commenting_DataTypeNamespace",
+  "title" : "Commenting: Data Type Namespace"
+}, {
+  "patternId" : "Drupal_Commenting_Deprecated",
+  "title" : "Commenting: Deprecated"
+}, {
+  "patternId" : "Drupal_Commenting_DocComment",
+  "title" : "Commenting: Doc Comment"
+}, {
+  "patternId" : "Drupal_Commenting_DocCommentAlignment",
+  "title" : "Commenting: Doc Comment Alignment"
+}, {
+  "patternId" : "Drupal_Commenting_DocCommentStar",
+  "title" : "Commenting: Doc Comment Star"
+}, {
+  "patternId" : "Drupal_Commenting_FileComment",
+  "title" : "Commenting: File Comment"
+}, {
+  "patternId" : "Drupal_Commenting_FunctionComment",
+  "title" : "Commenting: Function Comment"
+}, {
+  "patternId" : "Drupal_Commenting_GenderNeutralComment",
+  "title" : "Commenting: Gender Neutral Comment"
+}, {
+  "patternId" : "Drupal_Commenting_HookComment",
+  "title" : "Commenting: Hook Comment"
+}, {
+  "patternId" : "Drupal_Commenting_InlineComment",
+  "title" : "Commenting: Inline Comment"
+}, {
+  "patternId" : "Drupal_Commenting_PostStatementComment",
+  "title" : "Commenting: Post Statement Comment"
+}, {
+  "patternId" : "Drupal_Commenting_VariableComment",
+  "title" : "Commenting: Variable Comment"
+}, {
+  "patternId" : "Drupal_ControlStructures_ControlSignature",
+  "title" : "Control Structures: Control Signature"
+}, {
+  "patternId" : "Drupal_ControlStructures_ElseIf",
+  "title" : "Control Structures: Else If"
+}, {
+  "patternId" : "Drupal_ControlStructures_InlineControlStructure",
+  "title" : "Control Structures: Inline Control Structure"
+}, {
+  "patternId" : "Drupal_Files_EndFileNewline",
+  "title" : "Files: End File Newline"
+}, {
+  "patternId" : "Drupal_Files_FileEncoding",
+  "title" : "Files: File Encoding"
+}, {
+  "patternId" : "Drupal_Files_LineLength",
+  "title" : "Files: Line Length"
+}, {
+  "patternId" : "Drupal_Files_TxtFileLineLength",
+  "title" : "Files: Txt File Line Length"
+}, {
+  "patternId" : "Drupal_Formatting_MultiLineAssignment",
+  "title" : "Formatting: Multi Line Assignment"
+}, {
+  "patternId" : "Drupal_Formatting_MultipleStatementAlignment",
+  "title" : "Formatting: Multiple Statement Alignment"
+}, {
+  "patternId" : "Drupal_Formatting_SpaceInlineIf",
+  "title" : "Formatting: Space Inline If"
+}, {
+  "patternId" : "Drupal_Formatting_SpaceUnaryOperator",
+  "title" : "Formatting: Space Unary Operator"
+}, {
+  "patternId" : "Drupal_Functions_DiscouragedFunctions",
+  "title" : "Functions: Discouraged Functions"
+}, {
+  "patternId" : "Drupal_Functions_FunctionDeclaration",
+  "title" : "Functions: Function Declaration"
+}, {
+  "patternId" : "Drupal_InfoFiles_AutoAddedKeys",
+  "title" : "Info Files: Auto Added Keys"
+}, {
+  "patternId" : "Drupal_InfoFiles_ClassFiles",
+  "title" : "Info Files: Class Files"
+}, {
+  "patternId" : "Drupal_InfoFiles_DuplicateEntry",
+  "title" : "Info Files: Duplicate Entry"
+}, {
+  "patternId" : "Drupal_InfoFiles_Required",
+  "title" : "Info Files: Required"
+}, {
+  "patternId" : "Drupal_Methods_MethodDeclaration",
+  "title" : "Methods: Method Declaration"
+}, {
+  "patternId" : "Drupal_NamingConventions_ValidClassName",
+  "title" : "Naming Conventions: Valid Class Name"
+}, {
+  "patternId" : "Drupal_NamingConventions_ValidFunctionName",
+  "title" : "Naming Conventions: Valid Function Name"
+}, {
+  "patternId" : "Drupal_NamingConventions_ValidGlobal",
+  "title" : "Naming Conventions: Valid Global"
+}, {
+  "patternId" : "Drupal_NamingConventions_ValidVariableName",
+  "title" : "Naming Conventions: Valid Variable Name"
+}, {
+  "patternId" : "Drupal_Scope_MethodScope",
+  "title" : "Scope: Method Scope"
+}, {
+  "patternId" : "Drupal_Semantics_ConstantName",
+  "title" : "Semantics: Constant Name"
+}, {
+  "patternId" : "Drupal_Semantics_EmptyInstall",
+  "title" : "Semantics: Empty Install"
+}, {
+  "patternId" : "Drupal_Semantics_FunctionAlias",
+  "title" : "Semantics: Function Alias"
+}, {
+  "patternId" : "Drupal_Semantics_FunctionT",
+  "title" : "Semantics: Function T"
+}, {
+  "patternId" : "Drupal_Semantics_FunctionTriggerError",
+  "title" : "Semantics: Function Trigger Error"
+}, {
+  "patternId" : "Drupal_Semantics_FunctionWatchdog",
+  "title" : "Semantics: Function Watchdog"
+}, {
+  "patternId" : "Drupal_Semantics_InstallHooks",
+  "title" : "Semantics: Install Hooks"
+}, {
+  "patternId" : "Drupal_Semantics_LStringTranslatable",
+  "title" : "Semantics: L String Translatable"
+}, {
+  "patternId" : "Drupal_Semantics_PregSecurity",
+  "title" : "Semantics: Preg Security"
+}, {
+  "patternId" : "Drupal_Semantics_RemoteAddress",
+  "title" : "Semantics: Remote Address"
+}, {
+  "patternId" : "Drupal_Semantics_TInHookMenu",
+  "title" : "Semantics: T In Hook Menu"
+}, {
+  "patternId" : "Drupal_Semantics_TInHookSchema",
+  "title" : "Semantics: T In Hook Schema"
+}, {
+  "patternId" : "Drupal_Strings_UnnecessaryStringConcat",
+  "title" : "Strings: Unnecessary String Concat"
+}, {
+  "patternId" : "Drupal_WhiteSpace_CloseBracketSpacing",
+  "title" : "White Space: Close Bracket Spacing"
+}, {
+  "patternId" : "Drupal_WhiteSpace_Comma",
+  "title" : "White Space: Comma"
+}, {
+  "patternId" : "Drupal_WhiteSpace_EmptyLines",
+  "title" : "White Space: Empty Lines"
+}, {
+  "patternId" : "Drupal_WhiteSpace_Namespace",
+  "title" : "White Space: Namespace"
+}, {
+  "patternId" : "Drupal_WhiteSpace_ObjectOperatorIndent",
+  "title" : "White Space: Object Operator Indent"
+}, {
+  "patternId" : "Drupal_WhiteSpace_ObjectOperatorSpacing",
+  "title" : "White Space: Object Operator Spacing"
+}, {
+  "patternId" : "Drupal_WhiteSpace_OpenBracketSpacing",
+  "title" : "White Space: Open Bracket Spacing"
+}, {
+  "patternId" : "Drupal_WhiteSpace_OpenTagNewline",
+  "title" : "White Space: Open Tag Newline"
+}, {
+  "patternId" : "Drupal_WhiteSpace_ScopeClosingBrace",
+  "title" : "White Space: Scope Closing Brace"
+}, {
+  "patternId" : "Drupal_WhiteSpace_ScopeIndent",
+  "title" : "White Space: Scope Indent"
+}, {
   "patternId" : "Generic_Arrays_ArrayIndent",
   "title" : "Arrays: Array Indent"
 }, {
@@ -394,6 +607,9 @@
   "patternId" : "Magento2_CodeAnalysis_EmptyBlock",
   "title" : "Code Analysis: Empty Block"
 }, {
+  "patternId" : "Magento2_Commenting_ClassAndInterfacePHPDocFormatting",
+  "title" : "Commenting: Class And Interface PHP Doc Formatting"
+}, {
   "patternId" : "Magento2_Commenting_ConstantsPHPDocFormatting",
   "title" : "Commenting: Constants PHP Doc Formatting"
 }, {
@@ -403,14 +619,32 @@
   "patternId" : "Magento2_Exceptions_ThrowCatch",
   "title" : "Exceptions: Throw Catch"
 }, {
-  "patternId" : "Magento2_Files_LineLength",
-  "title" : "Files: Line Length"
+  "patternId" : "Magento2_Exceptions_TryProcessSystemResources",
+  "title" : "Exceptions: Try Process System Resources"
 }, {
   "patternId" : "Magento2_Functions_DiscouragedFunction",
   "title" : "Functions: Discouraged Function"
 }, {
   "patternId" : "Magento2_Functions_StaticFunction",
   "title" : "Functions: Static Function"
+}, {
+  "patternId" : "Magento2_GraphQL_AbstractGraphQL",
+  "title" : "Graph QL: Abstract Graph QL"
+}, {
+  "patternId" : "Magento2_GraphQL_ValidArgumentName",
+  "title" : "Graph QL: Valid Argument Name"
+}, {
+  "patternId" : "Magento2_GraphQL_ValidEnumValue",
+  "title" : "Graph QL: Valid Enum Value"
+}, {
+  "patternId" : "Magento2_GraphQL_ValidFieldName",
+  "title" : "Graph QL: Valid Field Name"
+}, {
+  "patternId" : "Magento2_GraphQL_ValidTopLevelFieldName",
+  "title" : "Graph QL: Valid Top Level Field Name"
+}, {
+  "patternId" : "Magento2_GraphQL_ValidTypeName",
+  "title" : "Graph QL: Valid Type Name"
 }, {
   "patternId" : "Magento2_Legacy_MageEntity",
   "title" : "Legacy: Mage Entity"

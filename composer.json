@@ -6,10 +6,13 @@
         "magento/magento-coding-standard": "v5",
         "wp-coding-standards/wpcs": "2.2.1",
         "phpcompatibility/php-compatibility": "9.3.5",
-        "magento/marketplace-eqp": "4.0.0"
+        "magento/marketplace-eqp": "4.0.0",
+        "drupal/coder": "8.3.7"
     },
-    "repositories": [{
-        "type": "vcs",
-        "url": "https://github.com/magento/marketplace-eqp.git"
-    }]
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/magento/marketplace-eqp.git"
+        }
+    ]
 }

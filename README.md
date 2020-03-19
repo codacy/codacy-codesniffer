@@ -4,7 +4,7 @@ This is the docker engine we use at Codacy to have [PHP_CodeSniffer](https://git
 You can also create a docker to integrate the tool and language of your choice!
 See the [codacy-engine-scala-seed](https://github.com/codacy/codacy-engine-scala-seed) repository for more information.
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b695e76adcfa48749a8eaa33f2f2f626)](https://www.codacy.com/gh/codacy/codacy-codesniffer?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=codacy/codacy-codesniffer&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b695e76adcfa48749a8eaa33f2f2f626)](https://www.codacy.com/gh/codacy/codacy-codesniffer?utm_source=github.com&utm_medium=referral&utm_content=codacy/codacy-codesniffer&utm_campaign=Badge_Grade)
 [![Build Status](https://circleci.com/gh/codacy/codacy-codesniffer.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/codacy/codacy-codesniffer)
 
 ## Usage
@@ -12,6 +12,7 @@ See the [codacy-engine-scala-seed](https://github.com/codacy/codacy-engine-scala
 You can create the docker by doing:
 
 ```bash
+docker build -t codacy-codesniffer-base .
 sbt docker:publishLocal
 ```
 
@@ -28,7 +29,7 @@ You can follow the instructions there to make sure your tool is working as expec
 
 ## Generating the documentation
 
-Update the versions in `.versions.properties` and run:
+Update the versions in `composer.json` and run:
 
 ```bash
 sbt "runMain codacy.codesniffer.docsgen.GeneratorMain"
@@ -48,11 +49,11 @@ Currently, the tool supports this configuration file except from one feature - s
 
 ### Among Codacy’s features
 
-- Identify new Static Analysis issues
-- Commit and Pull Request Analysis with GitHub, BitBucket/Stash, GitLab (and also direct git repositories)
-- Auto-comments on Commits and Pull Requests
-- Integrations with Slack, HipChat, Jira, YouTrack
-- Track issues in Code Style, Security, Error Proneness, Performance, Unused Code and other categories
+-   Identify new Static Analysis issues
+-   Commit and Pull Request Analysis with GitHub, BitBucket/Stash, GitLab (and also direct git repositories)
+-   Auto-comments on Commits and Pull Requests
+-   Integrations with Slack, HipChat, Jira, YouTrack
+-   Track issues in Code Style, Security, Error Proneness, Performance, Unused Code and other categories
 
 Codacy also helps keep track of Code Coverage, Code Duplication, and Code Complexity.
 

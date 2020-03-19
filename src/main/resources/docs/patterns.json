@@ -2,6 +2,319 @@
   "name" : "PHP Code Sniffer",
   "version" : "3.5.4",
   "patterns" : [ {
+    "patternId" : "Drupal_Arrays_Array",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Arrays_DisallowLongArraySyntax",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_CSS_ClassDefinitionNameSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_CSS_ColourDefinition",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Classes_ClassCreateInstance",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Classes_ClassDeclaration",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Classes_ClassFileName",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Classes_FullyQualifiedNamespace",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Classes_InterfaceName",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Classes_PropertyDeclaration",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Classes_UnusedUseStatement",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Classes_UseLeadingBackslash",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Commenting_ClassComment",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Commenting_DataTypeNamespace",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Commenting_Deprecated",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Commenting_DocComment",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Commenting_DocCommentAlignment",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Commenting_DocCommentStar",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Commenting_FileComment",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Commenting_FunctionComment",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Commenting_GenderNeutralComment",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Commenting_HookComment",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Commenting_InlineComment",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Commenting_PostStatementComment",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Commenting_VariableComment",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_ControlStructures_ControlSignature",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_ControlStructures_ElseIf",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_ControlStructures_InlineControlStructure",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Files_EndFileNewline",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Files_FileEncoding",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Files_LineLength",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "lineLimit",
+      "default" : 80
+    }, {
+      "name" : "absoluteLineLimit",
+      "default" : 0
+    } ]
+  }, {
+    "patternId" : "Drupal_Files_TxtFileLineLength",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Formatting_MultiLineAssignment",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Formatting_MultipleStatementAlignment",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "error",
+      "default" : true
+    } ]
+  }, {
+    "patternId" : "Drupal_Formatting_SpaceInlineIf",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Formatting_SpaceUnaryOperator",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Functions_DiscouragedFunctions",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "error",
+      "default" : false
+    } ]
+  }, {
+    "patternId" : "Drupal_Functions_FunctionDeclaration",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_InfoFiles_AutoAddedKeys",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_InfoFiles_ClassFiles",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_InfoFiles_DuplicateEntry",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_InfoFiles_Required",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Methods_MethodDeclaration",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_NamingConventions_ValidClassName",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_NamingConventions_ValidFunctionName",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_NamingConventions_ValidGlobal",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_NamingConventions_ValidVariableName",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Scope_MethodScope",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Semantics_ConstantName",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Semantics_EmptyInstall",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Semantics_FunctionAlias",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Semantics_FunctionT",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Semantics_FunctionTriggerError",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Semantics_FunctionWatchdog",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Semantics_InstallHooks",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Semantics_LStringTranslatable",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Semantics_PregSecurity",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
+    "patternId" : "Drupal_Semantics_RemoteAddress",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Semantics_TInHookMenu",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Semantics_TInHookSchema",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Strings_UnnecessaryStringConcat",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_WhiteSpace_CloseBracketSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_WhiteSpace_Comma",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_WhiteSpace_EmptyLines",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_WhiteSpace_Namespace",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_WhiteSpace_ObjectOperatorIndent",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_WhiteSpace_ObjectOperatorSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_WhiteSpace_OpenBracketSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_WhiteSpace_OpenTagNewline",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_WhiteSpace_ScopeClosingBrace",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "indent",
+      "default" : 2
+    } ]
+  }, {
+    "patternId" : "Drupal_WhiteSpace_ScopeIndent",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "indent",
+      "default" : 2
+    }, {
+      "name" : "exact",
+      "default" : true
+    }, {
+      "name" : "tabIndent",
+      "default" : false
+    } ]
+  }, {
     "patternId" : "Generic_Arrays_ArrayIndent",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -558,6 +871,10 @@
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
+    "patternId" : "Magento2_Commenting_ClassAndInterfacePHPDocFormatting",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
     "patternId" : "Magento2_Commenting_ConstantsPHPDocFormatting",
     "level" : "Info",
     "category" : "CodeStyle"
@@ -570,16 +887,9 @@
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
-    "patternId" : "Magento2_Files_LineLength",
+    "patternId" : "Magento2_Exceptions_TryProcessSystemResources",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "lineLimit",
-      "default" : 120
-    }, {
-      "name" : "absoluteLineLimit",
-      "default" : 120
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Magento2_Functions_DiscouragedFunction",
     "level" : "Info",
@@ -590,6 +900,30 @@
     } ]
   }, {
     "patternId" : "Magento2_Functions_StaticFunction",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Magento2_GraphQL_AbstractGraphQL",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Magento2_GraphQL_ValidArgumentName",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Magento2_GraphQL_ValidEnumValue",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Magento2_GraphQL_ValidFieldName",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Magento2_GraphQL_ValidTopLevelFieldName",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Magento2_GraphQL_ValidTypeName",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
