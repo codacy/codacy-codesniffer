@@ -243,7 +243,8 @@
   }, {
     "patternId" : "Drupal_Semantics_PregSecurity",
     "level" : "Error",
-    "category" : "Security"
+    "category" : "Security",
+    "subcategory" : "CommandInjection"
   }, {
     "patternId" : "Drupal_Semantics_RemoteAddress",
     "level" : "Info",
