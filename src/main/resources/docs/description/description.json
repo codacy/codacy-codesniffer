@@ -1410,8 +1410,17 @@
   "patternId" : "SlevomatCodingStandard_Classes_DisallowLateStaticBindingForConstants",
   "title" : "Classes: Disallow Late Static Binding For Constants"
 }, {
+  "patternId" : "SlevomatCodingStandard_Classes_DisallowMultiConstantDefinition",
+  "title" : "Classes: Disallow Multi Constant Definition"
+}, {
+  "patternId" : "SlevomatCodingStandard_Classes_DisallowMultiPropertyDefinition",
+  "title" : "Classes: Disallow Multi Property Definition"
+}, {
   "patternId" : "SlevomatCodingStandard_Classes_EmptyLinesAroundClassBraces",
   "title" : "Classes: Empty Lines Around Class Braces"
+}, {
+  "patternId" : "SlevomatCodingStandard_Classes_MethodSpacing",
+  "title" : "Classes: Method Spacing"
 }, {
   "patternId" : "SlevomatCodingStandard_Classes_ModernClassNameReference",
   "title" : "Classes: Modern Class Name Reference"
@@ -1451,6 +1460,9 @@
 }, {
   "patternId" : "SlevomatCodingStandard_Classes_UselessLateStaticBinding",
   "title" : "Classes: Useless Late Static Binding"
+}, {
+  "patternId" : "SlevomatCodingStandard_Commenting_DisallowCommentAfterCode",
+  "title" : "Commenting: Disallow Comment After Code"
 }, {
   "patternId" : "SlevomatCodingStandard_Commenting_DisallowOneLinePropertyDocComment",
   "title" : "Commenting: Disallow One Line Property Doc Comment"
@@ -1550,6 +1562,9 @@
 }, {
   "patternId" : "SlevomatCodingStandard_Files_TypeNameMatchesFileName",
   "title" : "Files: Type Name Matches File Name"
+}, {
+  "patternId" : "SlevomatCodingStandard_Functions_ArrowFunctionDeclaration",
+  "title" : "Functions: Arrow Function Declaration"
 }, {
   "patternId" : "SlevomatCodingStandard_Functions_DisallowArrowFunction",
   "title" : "Functions: Disallow Arrow Function"
@@ -1653,6 +1668,9 @@
   "patternId" : "SlevomatCodingStandard_Operators_SpreadOperatorSpacing",
   "title" : "Operators: Spread Operator Spacing"
 }, {
+  "patternId" : "SlevomatCodingStandard_PHP_DisallowDirectMagicInvokeCall",
+  "title" : "PHP: Disallow Direct Magic Invoke Call"
+}, {
   "patternId" : "SlevomatCodingStandard_PHP_DisallowReference",
   "title" : "PHP: Disallow Reference"
 }, {
@@ -1719,6 +1737,9 @@
   "patternId" : "SlevomatCodingStandard_TypeHints_UselessConstantTypeHint",
   "title" : "Type Hints: Useless Constant Type Hint"
 }, {
+  "patternId" : "SlevomatCodingStandard_Variables_DisallowSuperGlobalVariable",
+  "title" : "Variables: Disallow Super Global Variable"
+}, {
   "patternId" : "SlevomatCodingStandard_Variables_DuplicateAssignmentToVariable",
   "title" : "Variables: Duplicate Assignment To Variable"
 }, {
@@ -1727,6 +1748,9 @@
 }, {
   "patternId" : "SlevomatCodingStandard_Variables_UselessVariable",
   "title" : "Variables: Useless Variable"
+}, {
+  "patternId" : "SlevomatCodingStandard_Whitespaces_DuplicateSpaces",
+  "title" : "Whitespaces: Duplicate Spaces"
 }, {
   "patternId" : "Squiz_Arrays_ArrayBracketSpacing",
   "title" : "Array Bracket Spacing",

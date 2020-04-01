@@ -4,7 +4,11 @@
   "patterns" : [ {
     "patternId" : "Drupal_Arrays_Array",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "lineLimit",
+      "default" : 80
+    } ]
   }, {
     "patternId" : "Drupal_Arrays_DisallowLongArraySyntax",
     "level" : "Info",
@@ -1985,7 +1989,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "enableAfterHeredoc",
-      "default" : "PHP_VERSION_ID >= 70300"
+      "default" : null
     } ]
   }, {
     "patternId" : "SlevomatCodingStandard_Classes_ClassConstantVisibility",
@@ -1998,13 +2002,25 @@
   }, {
     "patternId" : "SlevomatCodingStandard_Classes_ClassStructure",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "enableFinalMethods",
+      "default" : false
+    } ]
   }, {
     "patternId" : "SlevomatCodingStandard_Classes_ConstantSpacing",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
     "patternId" : "SlevomatCodingStandard_Classes_DisallowLateStaticBindingForConstants",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Classes_DisallowMultiConstantDefinition",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Classes_DisallowMultiPropertyDefinition",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
@@ -2016,6 +2032,17 @@
       "default" : 1
     }, {
       "name" : "linesCountBeforeClosingBrace",
+      "default" : 1
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_Classes_MethodSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "minLinesCount",
+      "default" : 1
+    }, {
+      "name" : "maxLinesCount",
       "default" : 1
     } ]
   }, {
@@ -2108,6 +2135,10 @@
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
+    "patternId" : "SlevomatCodingStandard_Commenting_DisallowCommentAfterCode",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
     "patternId" : "SlevomatCodingStandard_Commenting_DisallowOneLinePropertyDocComment",
     "level" : "Info",
     "category" : "CodeStyle"
@@ -2146,7 +2177,11 @@
   }, {
     "patternId" : "SlevomatCodingStandard_Commenting_InlineDocCommentDeclaration",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "allowDocCommentAboveReturn",
+      "default" : false
+    } ]
   }, {
     "patternId" : "SlevomatCodingStandard_Commenting_RequireOneLineDocComment",
     "level" : "Info",
@@ -2211,6 +2246,9 @@
     "parameters" : [ {
       "name" : "ignoreStandaloneIfInScope",
       "default" : false
+    }, {
+      "name" : "ignoreOneLineTrailingIf",
+      "default" : false
     } ]
   }, {
     "patternId" : "SlevomatCodingStandard_ControlStructures_JumpStatementsSpacing",
@@ -2223,11 +2261,20 @@
       "name" : "linesCountBeforeFirstControlStructure",
       "default" : 0
     }, {
+      "name" : "linesCountAfterWhenLastInCaseOrDefault",
+      "default" : null
+    }, {
       "name" : "linesCountBeforeControlStructure",
       "default" : 1
     }, {
       "name" : "allowSingleLineYieldStacking",
       "default" : true
+    }, {
+      "name" : "linesCountBeforeWhenFirstInCaseOrDefault",
+      "default" : null
+    }, {
+      "name" : "linesCountAfterWhenLastInLastCaseOrDefault",
+      "default" : null
     }, {
       "name" : "linesCountAfterControlStructure",
       "default" : 1
@@ -2255,7 +2302,11 @@
   }, {
     "patternId" : "SlevomatCodingStandard_ControlStructures_RequireNullCoalesceEqualOperator",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "enable",
+      "default" : null
+    } ]
   }, {
     "patternId" : "SlevomatCodingStandard_ControlStructures_RequireNullCoalesceOperator",
     "level" : "Info",
@@ -2275,7 +2326,11 @@
   }, {
     "patternId" : "SlevomatCodingStandard_ControlStructures_RequireYodaComparison",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "alwaysVariableOnRight",
+      "default" : false
+    } ]
   }, {
     "patternId" : "SlevomatCodingStandard_ControlStructures_UselessIfConditionWithReturn",
     "level" : "Info",
@@ -2319,6 +2374,23 @@
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
+    "patternId" : "SlevomatCodingStandard_Functions_ArrowFunctionDeclaration",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "spacesCountAfterKeyword",
+      "default" : 1
+    }, {
+      "name" : "spacesCountBeforeArrow",
+      "default" : 1
+    }, {
+      "name" : "spacesCountAfterArrow",
+      "default" : 1
+    }, {
+      "name" : "allowMultiLine",
+      "default" : false
+    } ]
+  }, {
     "patternId" : "SlevomatCodingStandard_Functions_DisallowArrowFunction",
     "level" : "Info",
     "category" : "CodeStyle"
@@ -2333,6 +2405,9 @@
     "parameters" : [ {
       "name" : "allowNested",
       "default" : true
+    }, {
+      "name" : "enable",
+      "default" : null
     } ]
   }, {
     "patternId" : "SlevomatCodingStandard_Functions_StaticClosure",
@@ -2341,7 +2416,11 @@
   }, {
     "patternId" : "SlevomatCodingStandard_Functions_TrailingCommaInCall",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "enable",
+      "default" : null
+    } ]
   }, {
     "patternId" : "SlevomatCodingStandard_Functions_UnusedInheritedVariablePassedToClosure",
     "level" : "Info",
@@ -2388,7 +2467,11 @@
   }, {
     "patternId" : "SlevomatCodingStandard_Namespaces_FullyQualifiedGlobalFunctions",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "includeSpecialFunctions",
+      "default" : false
+    } ]
   }, {
     "patternId" : "SlevomatCodingStandard_Namespaces_MultipleUsesPerLine",
     "level" : "Info",
@@ -2499,7 +2582,17 @@
   }, {
     "patternId" : "SlevomatCodingStandard_Numbers_RequireNumericLiteralSeparator",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "enable",
+      "default" : null
+    }, {
+      "name" : "minDigitsBeforeDecimalPoint",
+      "default" : 4
+    }, {
+      "name" : "minDigitsAfterDecimalPoint",
+      "default" : 4
+    } ]
   }, {
     "patternId" : "SlevomatCodingStandard_Operators_DisallowEqualOperators",
     "level" : "Info",
@@ -2532,6 +2625,10 @@
       "name" : "spacesCountAfterOperator",
       "default" : 0
     } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_PHP_DisallowDirectMagicInvokeCall",
+    "level" : "Info",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "SlevomatCodingStandard_PHP_DisallowReference",
     "level" : "Info",
@@ -2616,7 +2713,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "enableObjectTypeHint",
-      "default" : "PHP_VERSION_ID >= 70200"
+      "default" : null
     } ]
   }, {
     "patternId" : "SlevomatCodingStandard_TypeHints_ParameterTypeHintSpacing",
@@ -2628,7 +2725,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "enableNativeTypeHint",
-      "default" : "PHP_VERSION_ID >= 70400"
+      "default" : null
     } ]
   }, {
     "patternId" : "SlevomatCodingStandard_TypeHints_PropertyTypeHintSpacing",
@@ -2640,7 +2737,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "enableObjectTypeHint",
-      "default" : "PHP_VERSION_ID >= 70200"
+      "default" : null
     } ]
   }, {
     "patternId" : "SlevomatCodingStandard_TypeHints_ReturnTypeHintSpacing",
@@ -2652,6 +2749,10 @@
     } ]
   }, {
     "patternId" : "SlevomatCodingStandard_TypeHints_UselessConstantTypeHint",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Variables_DisallowSuperGlobalVariable",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
@@ -2670,6 +2771,17 @@
     "patternId" : "SlevomatCodingStandard_Variables_UselessVariable",
     "level" : "Info",
     "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Whitespaces_DuplicateSpaces",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "ignoreSpacesBeforeAssignment",
+      "default" : false
+    }, {
+      "name" : "ignoreSpacesInAnnotation",
+      "default" : false
+    } ]
   }, {
     "patternId" : "Squiz_Arrays_ArrayBracketSpacing",
     "level" : "Info",
