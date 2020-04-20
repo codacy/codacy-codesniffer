@@ -4,10 +4,12 @@ import java.nio.file.Files
 
 import better.files.File
 import codacy.codesniffer.docsgen.CategoriesMapper
+import com.codacy.plugins.api.results.Pattern.DescriptionText
 import com.codacy.plugins.api.results.{Parameter, Pattern, Result}
 import com.codacy.tools.scala.seed.utils.CommandRunner
 
 import scala.util.matching.Regex
+import scala.xml.{Elem, XML}
 
 case class PatternDocs(pattern: Pattern.Specification, description: Pattern.Description, docs: Option[String])
 
@@ -64,6 +66,9 @@ trait DocsParser {
           .exec(List("git", "clone", repositoryURL, dir.toString))
       )
       _ <- CommandRunner.exec(List("git", "checkout", checkoutCommit), Some(dir.toFile))
+      _ <- CommandRunner.exec(List("phpdoc", "-t", "docs", "-d", ".", "--template", "checkstyle,xml,clean"),
+                              Some(dir.toFile))
+
       res = f(dir)
       _ <- CommandRunner.exec(List("rm", "-rf", dir.toString))
     } yield {
@@ -107,5 +112,45 @@ trait DocsParser {
         case errorRegex() => Result.Level.Err
         case warningRegex() => Result.Level.Warn
       }
+  }
+
+  private[this] def sniffDocumentationInfo(structureXML: Elem, namespace: String, patternIdParts: PatternIdParts) = {
+    val sniffNamespace = s"$namespace\\${patternIdParts.sniffType}"
+    val sniffClassName = s"${patternIdParts.patternName}Sniff"
+
+    for {
+      sniffInfo <- (structureXML \ "file" \ "class")
+        .find(file => (file \@ "namespace") == sniffNamespace && (file \ "name").text == sniffClassName)
+      docBlock = sniffInfo \ "docblock"
+    } yield docBlock
+  }
+
+  protected def parseExtendedDescription(namespace: String,
+                                         patternIdParts: PatternIdParts,
+                                         rootDir: File): Option[String] = {
+    val docsFile = rootDir / "docs" / "structure.xml"
+
+    val structureXML = XML.loadString(docsFile.contentAsString)
+
+    for {
+      docBlock <- this.sniffDocumentationInfo(structureXML, namespace, patternIdParts)
+      longDescription = (docBlock \ "long-description").text
+      description = (docBlock \ "description").text
+      if longDescription.nonEmpty && description.nonEmpty
+    } yield description + longDescription
+  }
+
+  protected def parseDescription(namespace: String,
+                                 patternIdParts: PatternIdParts,
+                                 rootDir: File): Option[DescriptionText] = {
+    val docsFile = rootDir / "docs" / "structure.xml"
+
+    val structureXML = XML.loadString(docsFile.contentAsString)
+
+    for {
+      docBlock <- this.sniffDocumentationInfo(structureXML, namespace, patternIdParts)
+      description = (docBlock \ "description").text
+      if description.nonEmpty
+    } yield DescriptionText(description)
   }
 }
