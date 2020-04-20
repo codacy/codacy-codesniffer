@@ -1,0 +1,3 @@
+# SlevomatCodingStandard_PHP_DisallowReference
+
+Disallows references.

@@ -1,0 +1,3 @@
+# SlevomatCodingStandard_Functions_DisallowArrowFunction
+
+Disallows arrow functions.
