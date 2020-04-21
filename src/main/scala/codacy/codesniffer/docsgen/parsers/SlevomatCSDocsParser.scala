@@ -18,14 +18,15 @@ class SlevomatCSDocsParser extends DocsParser {
     val sniffRegex(magentoVersion, sniffType, patternName) = relativizedFilePath
     PatternIdParts(magentoVersion, sniffType, patternName)
   }
-  private object SanitizedMdList {
-    private var sanitizedMdList: Map[String, String] = null
-    def apply(rootDir: File): Map[String, String] = {
-      if(sanitizedMdList == null) {
+  private object Docs {
+    private var patternIdsToDocs: Map[String, String] = null
+
+    def get(rootDir: File, patternId: String): Option[String] = {
+      if (patternIdsToDocs == null) {
         val readmeFile = rootDir / "README.md"
         val readme = readmeFile.contentAsString
         val mdList = readme.split("####").toList.tail
-        sanitizedMdList = mdList.view.flatMap { s =>
+        patternIdsToDocs = mdList.view.flatMap { s =>
           s.linesIterator.toList match {
             case title :: text =>
               val pattern =
@@ -35,13 +36,13 @@ class SlevomatCSDocsParser extends DocsParser {
           }
         }.toMap
       }
-      sanitizedMdList
+      patternIdsToDocs.get(patternId)
     }
   }
   override def descriptionWithDocs(rootDir: File,
                                    patternIdParts: PatternIdParts,
                                    patternFile: File): (Pattern.Description, Option[String]) = {
-    val docs = SanitizedMdList(rootDir).get(patternIdParts.patternId.value)
+    val docs = Docs.get(rootDir, patternIdParts.patternId.value)
     (description(patternIdParts), docs)
   }
 
