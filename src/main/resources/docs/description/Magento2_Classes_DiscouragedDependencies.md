@@ -1,0 +1,1 @@
+Detects explicit request of proxies and interceptors in constructorsSearch is in variable names and namespaces, including indirect namespaces from use statements

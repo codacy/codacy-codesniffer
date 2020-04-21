@@ -1,0 +1,1 @@
+\Drupal\Sniffs\CSS\ColourDefinitionSniff.Ensure colours are defined in lower-case.

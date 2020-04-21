@@ -1,0 +1,1 @@
+\Drupal\Sniffs\NamingConventions\ValidVariableNameSniff.Checks the naming of member variables.

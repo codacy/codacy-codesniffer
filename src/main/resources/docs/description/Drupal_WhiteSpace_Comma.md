@@ -1,0 +1,1 @@
+\Drupal\Sniffs\WhiteSpace\CommaSniff.Checks that there is one space after a comma.

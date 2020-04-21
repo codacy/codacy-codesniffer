@@ -1,0 +1,1 @@
+Since PHP 5.3.4, `strip_tags()` ignores self-closing XHTML tags in allowable_tagsPHP version 5.3.4
