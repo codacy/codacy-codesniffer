@@ -12,8 +12,7 @@
   "description" : "Ensure there are no blank lines between the names of classes/IDs. Copied from\n\\PHP_CodeSniffer\\Standards\\Squiz\\Sniffs\\CSS\\ClassDefinitionNameSpacingSniff\nbecause we also check for comma separated selectors on their own line."
 }, {
   "patternId" : "Drupal_CSS_ColourDefinition",
-  "title" : "CSS: Colour Definition",
-  "description" : "\\Drupal\\Sniffs\\CSS\\ColourDefinitionSniff."
+  "title" : "CSS: Colour Definition"
 }, {
   "patternId" : "Drupal_Classes_ClassCreateInstance",
   "title" : "Classes: Class Create Instance",
@@ -87,8 +86,7 @@
   "description" : "Ensures hook comments on function are correct."
 }, {
   "patternId" : "Drupal_Commenting_InlineComment",
-  "title" : "Commenting: Inline Comment",
-  "description" : "\\Drupal\\Sniffs\\Commenting\\InlineCommentSniff."
+  "title" : "Commenting: Inline Comment"
 }, {
   "patternId" : "Drupal_Commenting_PostStatementComment",
   "title" : "Commenting: Post Statement Comment",
@@ -107,28 +105,24 @@
   "description" : "Checks that \"elseif\" is used instead of \"else if\"."
 }, {
   "patternId" : "Drupal_ControlStructures_InlineControlStructure",
-  "title" : "Control Structures: Inline Control Structure",
-  "description" : "\\Drupal\\Sniffs\\ControlStructures\\InlineControlStructureSniff."
+  "title" : "Control Structures: Inline Control Structure"
 }, {
   "patternId" : "Drupal_Files_EndFileNewline",
   "title" : "Files: End File Newline",
   "description" : "Ensures the file ends with a newline character."
 }, {
   "patternId" : "Drupal_Files_FileEncoding",
-  "title" : "Files: File Encoding",
-  "description" : "\\Drupal\\Sniffs\\Files\\FileEncodingSniff."
+  "title" : "Files: File Encoding"
 }, {
   "patternId" : "Drupal_Files_LineLength",
   "title" : "Files: Line Length",
   "description" : "Checks comment lines in the file, and throws warnings if they are over 80\ncharacters in length."
 }, {
   "patternId" : "Drupal_Files_TxtFileLineLength",
-  "title" : "Files: Txt File Line Length",
-  "description" : "\\Drupal\\Sniffs\\Files\\TxtFileLineLengthSniff."
+  "title" : "Files: Txt File Line Length"
 }, {
   "patternId" : "Drupal_Formatting_MultiLineAssignment",
-  "title" : "Formatting: Multi Line Assignment",
-  "description" : "\\Drupal\\Sniffs\\Formatting\\MultiLineAssignmentSniff."
+  "title" : "Formatting: Multi Line Assignment"
 }, {
   "patternId" : "Drupal_Formatting_MultipleStatementAlignment",
   "title" : "Formatting: Multiple Statement Alignment",
@@ -171,20 +165,17 @@
   "description" : "Checks that the method declaration is correct."
 }, {
   "patternId" : "Drupal_NamingConventions_ValidClassName",
-  "title" : "Naming Conventions: Valid Class Name",
-  "description" : "\\Drupal\\Sniffs\\NamingConventions\\ValidClassNameSniff."
+  "title" : "Naming Conventions: Valid Class Name"
 }, {
   "patternId" : "Drupal_NamingConventions_ValidFunctionName",
-  "title" : "Naming Conventions: Valid Function Name",
-  "description" : "\\Drupal\\Sniffs\\NamingConventions\\ValidFunctionNameSniff."
+  "title" : "Naming Conventions: Valid Function Name"
 }, {
   "patternId" : "Drupal_NamingConventions_ValidGlobal",
   "title" : "Naming Conventions: Valid Global",
   "description" : "Ensures that global variables start with an underscore."
 }, {
   "patternId" : "Drupal_NamingConventions_ValidVariableName",
-  "title" : "Naming Conventions: Valid Variable Name",
-  "description" : "\\Drupal\\Sniffs\\NamingConventions\\ValidVariableNameSniff."
+  "title" : "Naming Conventions: Valid Variable Name"
 }, {
   "patternId" : "Drupal_Scope_MethodScope",
   "title" : "Scope: Method Scope",
@@ -247,20 +238,17 @@
   "description" : "Checks that there is no white space before a closing bracket, for \")\" and \"}\"."
 }, {
   "patternId" : "Drupal_WhiteSpace_Comma",
-  "title" : "White Space: Comma",
-  "description" : "\\Drupal\\Sniffs\\WhiteSpace\\CommaSniff."
+  "title" : "White Space: Comma"
 }, {
   "patternId" : "Drupal_WhiteSpace_EmptyLines",
-  "title" : "White Space: Empty Lines",
-  "description" : "\\Drupal\\Sniffs\\WhiteSpace\\EmptyLinesSniff."
+  "title" : "White Space: Empty Lines"
 }, {
   "patternId" : "Drupal_WhiteSpace_Namespace",
   "title" : "White Space: Namespace",
   "description" : "Checks that there is exactly one space after the namespace keyword."
 }, {
   "patternId" : "Drupal_WhiteSpace_ObjectOperatorIndent",
-  "title" : "White Space: Object Operator Indent",
-  "description" : "\\Drupal\\Sniffs\\WhiteSpace\\ObjectOperatorIndentSniff."
+  "title" : "White Space: Object Operator Indent"
 }, {
   "patternId" : "Drupal_WhiteSpace_ObjectOperatorSpacing",
   "title" : "White Space: Object Operator Spacing",

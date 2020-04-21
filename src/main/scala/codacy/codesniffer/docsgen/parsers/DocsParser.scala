@@ -114,13 +114,21 @@ trait DocsParser {
       }
   }
 
+  private[this] def sniffNamespace(namespace: String, patternIdParts: PatternIdParts) = {
+    s"$namespace\\${patternIdParts.sniffType}"
+  }
+
+  private[this] def sniffClassName(patternIdParts: PatternIdParts) = {
+    s"${patternIdParts.patternName}Sniff"
+  }
+
   private[this] def sniffDocumentationInfo(structureXML: Elem, namespace: String, patternIdParts: PatternIdParts) = {
-    val sniffNamespace = s"$namespace\\${patternIdParts.sniffType}"
-    val sniffClassName = s"${patternIdParts.patternName}Sniff"
+    val patternNamespace = sniffNamespace(namespace, patternIdParts)
+    val patternClassName = sniffClassName(patternIdParts)
 
     for {
       sniffInfo <- (structureXML \ "file" \ "class")
-        .find(file => (file \@ "namespace") == sniffNamespace && (file \ "name").text == sniffClassName)
+        .find(file => (file \@ "namespace") == patternNamespace && (file \ "name").text == patternClassName)
       docBlock = sniffInfo \ "docblock"
     } yield docBlock
   }
@@ -150,7 +158,8 @@ trait DocsParser {
     for {
       docBlock <- this.sniffDocumentationInfo(structureXML, namespace, patternIdParts)
       description = (docBlock \ "description").text
-      if description.nonEmpty
+      classFullNamespace = s"\\${sniffNamespace(namespace, patternIdParts)}\\${sniffClassName(patternIdParts)}"
+      if description.nonEmpty && description.stripSuffix(".") != s"$classFullNamespace"
     } yield DescriptionText(description)
   }
 }
