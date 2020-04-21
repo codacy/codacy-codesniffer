@@ -6,4 +6,3 @@ Sniff provides the following settings:
 
 * `ignoreSpacesBeforeAssignment`: to allow multiple spaces to align assignments.
 * `ignoreSpacesInAnnotation`: to allow multiple spaces to align annotations.
-* `ignoreSpacesInComment`: to allow multiple spaces to align content of the comment.
