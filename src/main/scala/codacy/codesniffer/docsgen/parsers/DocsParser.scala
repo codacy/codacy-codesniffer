@@ -9,7 +9,7 @@ import com.codacy.plugins.api.results.{Parameter, Pattern, Result}
 import com.codacy.tools.scala.seed.utils.CommandRunner
 
 import scala.util.matching.Regex
-import scala.xml.{Elem, XML}
+import scala.xml.{Elem, NodeSeq, XML}
 
 case class PatternDocs(pattern: Pattern.Specification, description: Pattern.Description, docs: Option[String])
 
@@ -133,6 +133,19 @@ trait DocsParser {
     } yield docBlock
   }
 
+  private[this] def longDescriptionBeautify(docBlock: NodeSeq, classFullNamespace: String) = {
+    val longDescription = (docBlock \ "long-description").text
+    longDescription
+      .stripPrefix(s"$classFullNamespace.")
+      .replaceAll("\\.-", ".\n") // for list to start on the next line
+      .replaceAll("\\.", ". ") // to add spaces on each paragraph
+  }
+
+  private[this] def descriptionBeautify(docBlock: NodeSeq, classFullNamespace: String) = {
+    val description = (docBlock \ "description").text
+    description.stripPrefix(s"$classFullNamespace.")
+  }
+
   protected def parseExtendedDescription(namespace: String,
                                          patternIdParts: PatternIdParts,
                                          rootDir: File): Option[String] = {
@@ -142,10 +155,11 @@ trait DocsParser {
 
     for {
       docBlock <- this.sniffDocumentationInfo(structureXML, namespace, patternIdParts)
-      longDescription = (docBlock \ "long-description").text
-      description = (docBlock \ "description").text
-      if longDescription.nonEmpty && description.nonEmpty
-    } yield description + longDescription
+      classFullNamespace = s"\\${sniffNamespace(namespace, patternIdParts)}\\${sniffClassName(patternIdParts)}"
+      longDescription = longDescriptionBeautify(docBlock, classFullNamespace)
+      description = descriptionBeautify(docBlock, classFullNamespace)
+      if longDescription.nonEmpty
+    } yield s"$description\n$longDescription".trim
   }
 
   protected def parseDescription(namespace: String,
@@ -157,9 +171,9 @@ trait DocsParser {
 
     for {
       docBlock <- this.sniffDocumentationInfo(structureXML, namespace, patternIdParts)
-      description = (docBlock \ "description").text
       classFullNamespace = s"\\${sniffNamespace(namespace, patternIdParts)}\\${sniffClassName(patternIdParts)}"
-      if description.nonEmpty && description.stripSuffix(".") != s"$classFullNamespace"
+      description = descriptionBeautify(docBlock, classFullNamespace)
+      if description.nonEmpty
     } yield DescriptionText(description)
   }
 }

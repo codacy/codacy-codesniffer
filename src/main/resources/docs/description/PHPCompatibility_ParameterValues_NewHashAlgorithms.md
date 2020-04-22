@@ -1,1 +1,2 @@
-Detect the use of newly introduced hash algorithms.PHP version 5.2+
+Detect the use of newly introduced hash algorithms.
+PHP version 5. 2+

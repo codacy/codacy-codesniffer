@@ -1,1 +1,2 @@
-Verify operator spacing, uses the Squiz sniff, but additionally also sniffs for the `!` (boolean not) operator."Always put spaces after commas, and on both sides of logical, comparison, string and assignment operators."
+Verify operator spacing, uses the Squiz sniff, but additionally also sniffs for the `!` (boolean not) operator.
+"Always put spaces after commas, and on both sides of logical, comparison, string and assignment operators. "

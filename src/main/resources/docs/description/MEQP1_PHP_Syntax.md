@@ -1,2 +1,3 @@
 Class SyntaxSniff
-Ensures PHP believes the syntax is clean..
+Ensures PHP believes the syntax is clean.
+.

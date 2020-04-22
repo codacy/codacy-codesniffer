@@ -1,1 +1,2 @@
-Detect calls to new native PHP functions.PHP version All
+Detect calls to new native PHP functions.
+PHP version All

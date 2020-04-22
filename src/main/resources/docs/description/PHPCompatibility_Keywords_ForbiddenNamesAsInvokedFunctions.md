@@ -1,1 +1,2 @@
-Prohibits the use of reserved keywords invoked as functions.PHP version All
+Prohibits the use of reserved keywords invoked as functions.
+PHP version All

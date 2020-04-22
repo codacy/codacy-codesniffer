@@ -1,1 +1,1 @@
-\Drupal\Sniffs\Files\FileEncodingSniff.Validates the encoding of a file against a white list of allowed encodings.
+Validates the encoding of a file against a white list of allowed encodings.
