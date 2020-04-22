@@ -29,6 +29,17 @@ You can follow the instructions there to make sure your tool is working as expec
 
 ## Generating the documentation
 
+Requirements:
+
+- phpdoc
+
+    ```bash
+    curl -s http://getcomposer.org/installer | php
+    php composer install
+    composer global require phpdocumentor/phpdocumentor
+    export PATH=$PATH:~/.composer/vendor/bin/
+    ```
+
 Update the versions in `composer.json` and run:
 
 ```bash

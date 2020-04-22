@@ -23,15 +23,17 @@ class PHPCSSecurityAuditDocsParser extends DocsParser {
   override def descriptionWithDocs(rootDir: File,
                                    patternIdParts: PatternIdParts,
                                    patternFile: File): (Pattern.Description, Option[String]) = {
-    (descriptionFor(patternIdParts), None)
+    (descriptionFor(patternIdParts, rootDir),
+     this.parseExtendedDescription("PHPCS_SecurityAudit\\Security\\Sniffs", patternIdParts, rootDir))
   }
 
-  private[this] def descriptionFor(patternIdParts: PatternIdParts): Pattern.Description = {
+  private[this] def descriptionFor(patternIdParts: PatternIdParts, rootDir: File): Pattern.Description = {
     val caseRegexPattern = """((?<=\p{Ll})\p{Lu}|\p{Lu}(?=\p{Ll}))""".r
     val patternName = caseRegexPattern.replaceAllIn(patternIdParts.patternName, " $1").trim
     val sniffName = caseRegexPattern.replaceAllIn(patternIdParts.sniffType, " $1").trim
     val title = Pattern.Title(s"${patternIdParts.prefix} $sniffName related issue: $patternName")
-    Pattern.Description(patternIdParts.patternId, title, None, None, None)
+    val extended = this.parseDescription("PHPCS_SecurityAudit\\Security\\Sniffs", patternIdParts, rootDir)
+    Pattern.Description(patternIdParts.patternId, title, extended, None, None)
   }
 
 }

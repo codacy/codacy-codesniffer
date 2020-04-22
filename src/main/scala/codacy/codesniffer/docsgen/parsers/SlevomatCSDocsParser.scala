@@ -18,11 +18,33 @@ class SlevomatCSDocsParser extends DocsParser {
     val sniffRegex(magentoVersion, sniffType, patternName) = relativizedFilePath
     PatternIdParts(magentoVersion, sniffType, patternName)
   }
+  private object Docs {
+    private var patternIdsToDocs: Map[String, String] = null
 
+    def get(rootDir: File, patternId: String): Option[String] = {
+      if (patternIdsToDocs == null) {
+        val readmeFile = rootDir / "README.md"
+        val readme = readmeFile.contentAsString
+        val mdList = readme.split("####").toList.tail
+        patternIdsToDocs = mdList.view.flatMap { s =>
+          s.linesIterator.toList match {
+            case title :: text =>
+              val pattern =
+                title.filter(c => c.isLetterOrDigit || c == '.' || c == '_').replace('.', '_').replace('/', '_').trim
+              Some(pattern -> (s"# $pattern" :: text).mkString(System.lineSeparator))
+            case Nil => None
+          }
+        }.toMap
+      }
+      patternIdsToDocs.get(patternId)
+    }
+  }
   override def descriptionWithDocs(rootDir: File,
                                    patternIdParts: PatternIdParts,
-                                   patternFile: File): (Pattern.Description, Option[String]) =
-    (description(patternIdParts), None)
+                                   patternFile: File): (Pattern.Description, Option[String]) = {
+    val docs = Docs.get(rootDir, patternIdParts.patternId.value)
+    (description(patternIdParts), docs)
+  }
 
   private[this] def description(patternIdParts: PatternIdParts): Pattern.Description = {
     val caseRegexPattern = """((?<=\p{Ll})\p{Lu}|\p{Lu}(?=\p{Ll}))""".r

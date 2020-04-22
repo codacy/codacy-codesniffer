@@ -1,0 +1,1 @@
+Checks the naming of member variables.

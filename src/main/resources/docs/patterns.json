@@ -1,6 +1,6 @@
 {
   "name" : "PHP Code Sniffer",
-  "version" : "3.5.4",
+  "version" : "3.5.5",
   "patterns" : [ {
     "patternId" : "Drupal_Arrays_Array",
     "level" : "Info",

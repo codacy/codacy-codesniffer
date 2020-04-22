@@ -1,0 +1,1 @@
+Checks that there are not more than 2 empty lines following each other.

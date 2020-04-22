@@ -14,6 +14,13 @@ workflows:
           name: publish_docker_local
           cmd: |
             docker build -t codacy-codesniffer-base .
+
+            sudo apt-get update
+            sudo apt-get install php php-xml php-dom
+            wget https://github.com/phpDocumentor/phpDocumentor2/releases/download/v2.9.1/phpDocumentor.phar
+            sudo mv phpDocumentor.phar /usr/local/bin/phpdoc
+            sudo chmod +x /usr/local/bin/phpdoc
+
             sbt "set scalafmtUseIvy in ThisBuild := false;
                  scalafmt::test;
                  test:scalafmt::test;

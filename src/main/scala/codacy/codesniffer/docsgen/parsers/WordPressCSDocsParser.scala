@@ -22,14 +22,15 @@ class WordPressCSDocsParser extends DocsParser {
   override def descriptionWithDocs(rootDir: File,
                                    patternIdParts: PatternIdParts,
                                    patternFile: File): (Pattern.Description, Option[String]) = {
-    val descriptionFromParts = descriptionFor(patternIdParts)
+    val descriptionFromParts = descriptionFor(patternIdParts, rootDir)
     val description = if (isDeprecated(patternFile)) {
       val newTitle = Pattern.Title(s"${descriptionFromParts.title.value} (Deprecated)")
       descriptionFromParts.copy(title = newTitle)
     } else {
       descriptionFromParts
     }
-    (description, None)
+
+    (description, this.parseExtendedDescription("WordPressCS\\WordPress\\Sniffs", patternIdParts, rootDir))
   }
 
   private[this] def isDeprecated(patternFile: File): Boolean = {
@@ -40,12 +41,13 @@ class WordPressCSDocsParser extends DocsParser {
       .exists(_.matches("""^.*\*.*@deprecated.*"""))
   }
 
-  private[this] def descriptionFor(patternIdParts: PatternIdParts): Pattern.Description = {
+  private[this] def descriptionFor(patternIdParts: PatternIdParts, rootDir: File): Pattern.Description = {
     val caseRegexPattern = """((?<=\p{Ll})\p{Lu}|\p{Lu}(?=\p{Ll}))""".r
     val patternName = caseRegexPattern.replaceAllIn(patternIdParts.patternName, " $1").trim
     val sniffName = caseRegexPattern.replaceAllIn(patternIdParts.sniffType, " $1").trim
     val title = Pattern.Title(s"$sniffName: $patternName")
-    Pattern.Description(patternIdParts.patternId, title, None, None, None)
+    val extended = this.parseDescription("WordPressCS\\WordPress\\Sniffs", patternIdParts, rootDir)
+    Pattern.Description(patternIdParts.patternId, title, extended, None, None)
   }
 
 }

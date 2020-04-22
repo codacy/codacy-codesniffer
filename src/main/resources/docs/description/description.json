@@ -1,96 +1,122 @@
 [ {
   "patternId" : "Drupal_Arrays_Array",
-  "title" : "Arrays: Array"
+  "title" : "Arrays: Array",
+  "description" : "ArraySniff."
 }, {
   "patternId" : "Drupal_Arrays_DisallowLongArraySyntax",
-  "title" : "Arrays: Disallow Long Array Syntax"
+  "title" : "Arrays: Disallow Long Array Syntax",
+  "description" : "Bans the use of the PHP long array syntax in Drupal 8."
 }, {
   "patternId" : "Drupal_CSS_ClassDefinitionNameSpacing",
-  "title" : "CSS: Class Definition Name Spacing"
+  "title" : "CSS: Class Definition Name Spacing",
+  "description" : "Ensure there are no blank lines between the names of classes/IDs. Copied from\n\\PHP_CodeSniffer\\Standards\\Squiz\\Sniffs\\CSS\\ClassDefinitionNameSpacingSniff\nbecause we also check for comma separated selectors on their own line."
 }, {
   "patternId" : "Drupal_CSS_ColourDefinition",
   "title" : "CSS: Colour Definition"
 }, {
   "patternId" : "Drupal_Classes_ClassCreateInstance",
-  "title" : "Classes: Class Create Instance"
+  "title" : "Classes: Class Create Instance",
+  "description" : "Class create instance Test."
 }, {
   "patternId" : "Drupal_Classes_ClassDeclaration",
-  "title" : "Classes: Class Declaration"
+  "title" : "Classes: Class Declaration",
+  "description" : "Class Declaration Test."
 }, {
   "patternId" : "Drupal_Classes_ClassFileName",
   "title" : "Classes: Class File Name"
 }, {
   "patternId" : "Drupal_Classes_FullyQualifiedNamespace",
-  "title" : "Classes: Fully Qualified Namespace"
+  "title" : "Classes: Fully Qualified Namespace",
+  "description" : "Checks that class references do not use FQN but use statements."
 }, {
   "patternId" : "Drupal_Classes_InterfaceName",
-  "title" : "Classes: Interface Name"
+  "title" : "Classes: Interface Name",
+  "description" : "Checks that interface names end with \"Interface\"."
 }, {
   "patternId" : "Drupal_Classes_PropertyDeclaration",
-  "title" : "Classes: Property Declaration"
+  "title" : "Classes: Property Declaration",
+  "description" : "Laregely copied from\n\\PHP_CodeSniffer\\Standards\\PSR2\\Sniffs\\Classes\\PropertyDeclarationSniff to have a fixer\nfor the var keyword."
 }, {
   "patternId" : "Drupal_Classes_UnusedUseStatement",
-  "title" : "Classes: Unused Use Statement"
+  "title" : "Classes: Unused Use Statement",
+  "description" : "Checks for \"use\" statements that are not needed in a file."
 }, {
   "patternId" : "Drupal_Classes_UseLeadingBackslash",
-  "title" : "Classes: Use Leading Backslash"
+  "title" : "Classes: Use Leading Backslash",
+  "description" : "Use statements to import classes must not begin with \"\\\"."
 }, {
   "patternId" : "Drupal_Commenting_ClassComment",
-  "title" : "Commenting: Class Comment"
+  "title" : "Commenting: Class Comment",
+  "description" : "Checks that comment doc blocks exist on classes, interfaces and traits. Largely\ncopied from PHP_CodeSniffer\\Standards\\Squiz\\Sniffs\\Commenting\\ClassCommentSniff."
 }, {
   "patternId" : "Drupal_Commenting_DataTypeNamespace",
-  "title" : "Commenting: Data Type Namespace"
+  "title" : "Commenting: Data Type Namespace",
+  "description" : "Checks that data types in param, return, var, and throws tags are fully namespaced."
 }, {
   "patternId" : "Drupal_Commenting_Deprecated",
-  "title" : "Commenting: Deprecated"
+  "title" : "Commenting: Deprecated",
+  "description" : "Ensures standard format of a @deprecated text."
 }, {
   "patternId" : "Drupal_Commenting_DocComment",
-  "title" : "Commenting: Doc Comment"
+  "title" : "Commenting: Doc Comment",
+  "description" : "Ensures doc blocks follow basic formatting."
 }, {
   "patternId" : "Drupal_Commenting_DocCommentAlignment",
-  "title" : "Commenting: Doc Comment Alignment"
+  "title" : "Commenting: Doc Comment Alignment",
+  "description" : "Largely copied from\n\\PHP_CodeSniffer\\Standards\\Squiz\\Sniffs\\Commenting\\DocCommentAlignmentSniff to also\nhandle the \"var\" keyword. See\nhttps://github.com/squizlabs/PHP_CodeSniffer/pull/1212"
 }, {
   "patternId" : "Drupal_Commenting_DocCommentStar",
-  "title" : "Commenting: Doc Comment Star"
+  "title" : "Commenting: Doc Comment Star",
+  "description" : "Checks that a doc comment block has a doc comment star on every line."
 }, {
   "patternId" : "Drupal_Commenting_FileComment",
-  "title" : "Commenting: File Comment"
+  "title" : "Commenting: File Comment",
+  "description" : "Parses and verifies the doc comments for files."
 }, {
   "patternId" : "Drupal_Commenting_FunctionComment",
-  "title" : "Commenting: Function Comment"
+  "title" : "Commenting: Function Comment",
+  "description" : "Parses and verifies the doc comments for functions. Largely copied from\nPHP_CodeSniffer\\Standards\\Squiz\\Sniffs\\Commenting\\FunctionCommentSniff."
 }, {
   "patternId" : "Drupal_Commenting_GenderNeutralComment",
-  "title" : "Commenting: Gender Neutral Comment"
+  "title" : "Commenting: Gender Neutral Comment",
+  "description" : "Parses and verifies that comments use gender neutral language."
 }, {
   "patternId" : "Drupal_Commenting_HookComment",
-  "title" : "Commenting: Hook Comment"
+  "title" : "Commenting: Hook Comment",
+  "description" : "Ensures hook comments on function are correct."
 }, {
   "patternId" : "Drupal_Commenting_InlineComment",
   "title" : "Commenting: Inline Comment"
 }, {
   "patternId" : "Drupal_Commenting_PostStatementComment",
-  "title" : "Commenting: Post Statement Comment"
+  "title" : "Commenting: Post Statement Comment",
+  "description" : "Largely copied from\n\\PHP_CodeSniffer\\Standards\\Squiz\\Sniffs\\Commenting\\PostStatementCommentSniff\nbut we want the fixer to move the comment to the previous line."
 }, {
   "patternId" : "Drupal_Commenting_VariableComment",
-  "title" : "Commenting: Variable Comment"
+  "title" : "Commenting: Variable Comment",
+  "description" : "Parses and verifies class property doc comments."
 }, {
   "patternId" : "Drupal_ControlStructures_ControlSignature",
-  "title" : "Control Structures: Control Signature"
+  "title" : "Control Structures: Control Signature",
+  "description" : "Verifies that control statements conform to their coding standards."
 }, {
   "patternId" : "Drupal_ControlStructures_ElseIf",
-  "title" : "Control Structures: Else If"
+  "title" : "Control Structures: Else If",
+  "description" : "Checks that \"elseif\" is used instead of \"else if\"."
 }, {
   "patternId" : "Drupal_ControlStructures_InlineControlStructure",
   "title" : "Control Structures: Inline Control Structure"
 }, {
   "patternId" : "Drupal_Files_EndFileNewline",
-  "title" : "Files: End File Newline"
+  "title" : "Files: End File Newline",
+  "description" : "Ensures the file ends with a newline character."
 }, {
   "patternId" : "Drupal_Files_FileEncoding",
   "title" : "Files: File Encoding"
 }, {
   "patternId" : "Drupal_Files_LineLength",
-  "title" : "Files: Line Length"
+  "title" : "Files: Line Length",
+  "description" : "Checks comment lines in the file, and throws warnings if they are over 80\ncharacters in length."
 }, {
   "patternId" : "Drupal_Files_TxtFileLineLength",
   "title" : "Files: Txt File Line Length"
@@ -99,34 +125,44 @@
   "title" : "Formatting: Multi Line Assignment"
 }, {
   "patternId" : "Drupal_Formatting_MultipleStatementAlignment",
-  "title" : "Formatting: Multiple Statement Alignment"
+  "title" : "Formatting: Multiple Statement Alignment",
+  "description" : "Checks alignment of multiple assignments.Largely copied from\n\\PHP_CodeSniffer\\Standards\\Generic\\Sniffs\\Formatting\\MultipleStatementAlignmentSniff\nbut also allows multiple single space assignments."
 }, {
   "patternId" : "Drupal_Formatting_SpaceInlineIf",
-  "title" : "Formatting: Space Inline If"
+  "title" : "Formatting: Space Inline If",
+  "description" : "Checks that there is no space between \"?\" and \":\" inline if/else statements."
 }, {
   "patternId" : "Drupal_Formatting_SpaceUnaryOperator",
-  "title" : "Formatting: Space Unary Operator"
+  "title" : "Formatting: Space Unary Operator",
+  "description" : "\\PHP_CodeSniffer\\Standards\\Generic\\Sniffs\\Formatting\\SpaceUnaryOperatorSniff."
 }, {
   "patternId" : "Drupal_Functions_DiscouragedFunctions",
-  "title" : "Functions: Discouraged Functions"
+  "title" : "Functions: Discouraged Functions",
+  "description" : "Discourage the use of debug functions."
 }, {
   "patternId" : "Drupal_Functions_FunctionDeclaration",
-  "title" : "Functions: Function Declaration"
+  "title" : "Functions: Function Declaration",
+  "description" : "Ensure that there is only one space after the function keyword and no space\nbefore the opening parenthesis."
 }, {
   "patternId" : "Drupal_InfoFiles_AutoAddedKeys",
-  "title" : "Info Files: Auto Added Keys"
+  "title" : "Info Files: Auto Added Keys",
+  "description" : "\"version\", \"project\" and \"timestamp\" are added automatically by drupal.org\npackaging scripts."
 }, {
   "patternId" : "Drupal_InfoFiles_ClassFiles",
-  "title" : "Info Files: Class Files"
+  "title" : "Info Files: Class Files",
+  "description" : "Checks files[] entries in info files. Only files containing classes/interfaces\nshould be listed."
 }, {
   "patternId" : "Drupal_InfoFiles_DuplicateEntry",
-  "title" : "Info Files: Duplicate Entry"
+  "title" : "Info Files: Duplicate Entry",
+  "description" : "Make sure that entries in info files are specified only once."
 }, {
   "patternId" : "Drupal_InfoFiles_Required",
-  "title" : "Info Files: Required"
+  "title" : "Info Files: Required",
+  "description" : "\"name\", \"description\" and \"core are required fields in Drupal info files. Also\nchecks the \"php\" minimum requirement for Drupal 7."
 }, {
   "patternId" : "Drupal_Methods_MethodDeclaration",
-  "title" : "Methods: Method Declaration"
+  "title" : "Methods: Method Declaration",
+  "description" : "Checks that the method declaration is correct."
 }, {
   "patternId" : "Drupal_NamingConventions_ValidClassName",
   "title" : "Naming Conventions: Valid Class Name"
@@ -135,55 +171,71 @@
   "title" : "Naming Conventions: Valid Function Name"
 }, {
   "patternId" : "Drupal_NamingConventions_ValidGlobal",
-  "title" : "Naming Conventions: Valid Global"
+  "title" : "Naming Conventions: Valid Global",
+  "description" : "Ensures that global variables start with an underscore."
 }, {
   "patternId" : "Drupal_NamingConventions_ValidVariableName",
   "title" : "Naming Conventions: Valid Variable Name"
 }, {
   "patternId" : "Drupal_Scope_MethodScope",
-  "title" : "Scope: Method Scope"
+  "title" : "Scope: Method Scope",
+  "description" : "Verifies that class/interface/trait methods have scope modifiers."
 }, {
   "patternId" : "Drupal_Semantics_ConstantName",
-  "title" : "Semantics: Constant Name"
+  "title" : "Semantics: Constant Name",
+  "description" : "Checks that constants introduced with define() in module or install files start\nwith the module's name."
 }, {
   "patternId" : "Drupal_Semantics_EmptyInstall",
-  "title" : "Semantics: Empty Install"
+  "title" : "Semantics: Empty Install",
+  "description" : "Throws an error if hook_install() or hook_uninstall() definitions are empty."
 }, {
   "patternId" : "Drupal_Semantics_FunctionAlias",
-  "title" : "Semantics: Function Alias"
+  "title" : "Semantics: Function Alias",
+  "description" : "Checks that no PHP function name aliases are used."
 }, {
   "patternId" : "Drupal_Semantics_FunctionT",
-  "title" : "Semantics: Function T"
+  "title" : "Semantics: Function T",
+  "description" : "Check the usage of the t() function to not escape translateable strings with back\nslashes. Also checks that the first argument does not use string concatenation."
 }, {
   "patternId" : "Drupal_Semantics_FunctionTriggerError",
-  "title" : "Semantics: Function Trigger Error"
+  "title" : "Semantics: Function Trigger Error",
+  "description" : "Checks that the trigger_error deprecation text message adheres to standards."
 }, {
   "patternId" : "Drupal_Semantics_FunctionWatchdog",
-  "title" : "Semantics: Function Watchdog"
+  "title" : "Semantics: Function Watchdog",
+  "description" : "Checks that the second argument to watchdog() is not enclosed with t()."
 }, {
   "patternId" : "Drupal_Semantics_InstallHooks",
-  "title" : "Semantics: Install Hooks"
+  "title" : "Semantics: Install Hooks",
+  "description" : "Checks that hook_disable(), hook_enable(), hook_install(), hook_uninstall(),\nhook_requirements() and hook_schema() are not defined in the module file."
 }, {
   "patternId" : "Drupal_Semantics_LStringTranslatable",
-  "title" : "Semantics: L String Translatable"
+  "title" : "Semantics: L String Translatable",
+  "description" : "Checks that string literals passed to l() are translatable."
 }, {
   "patternId" : "Drupal_Semantics_PregSecurity",
-  "title" : "Semantics: Preg Security"
+  "title" : "Semantics: Preg Security",
+  "description" : "Check the usage of the preg functions to ensure the insecure /e flag isn't\nused: https://www.drupal.org/node/750148"
 }, {
   "patternId" : "Drupal_Semantics_RemoteAddress",
-  "title" : "Semantics: Remote Address"
+  "title" : "Semantics: Remote Address",
+  "description" : "Make sure that ip_address() or Drupal::request()->getClientIp() is used instead of\n$_SERVER['REMOTE_ADDR']."
 }, {
   "patternId" : "Drupal_Semantics_TInHookMenu",
-  "title" : "Semantics: T In Hook Menu"
+  "title" : "Semantics: T In Hook Menu",
+  "description" : "Checks that t() is not used in hook_menu()."
 }, {
   "patternId" : "Drupal_Semantics_TInHookSchema",
-  "title" : "Semantics: T In Hook Schema"
+  "title" : "Semantics: T In Hook Schema",
+  "description" : "Checks that t() is not used in hook_schema()."
 }, {
   "patternId" : "Drupal_Strings_UnnecessaryStringConcat",
-  "title" : "Strings: Unnecessary String Concat"
+  "title" : "Strings: Unnecessary String Concat",
+  "description" : "Checks that two strings are not concatenated together; suggests using one string instead."
 }, {
   "patternId" : "Drupal_WhiteSpace_CloseBracketSpacing",
-  "title" : "White Space: Close Bracket Spacing"
+  "title" : "White Space: Close Bracket Spacing",
+  "description" : "Checks that there is no white space before a closing bracket, for \")\" and \"}\"."
 }, {
   "patternId" : "Drupal_WhiteSpace_Comma",
   "title" : "White Space: Comma"
@@ -192,25 +244,31 @@
   "title" : "White Space: Empty Lines"
 }, {
   "patternId" : "Drupal_WhiteSpace_Namespace",
-  "title" : "White Space: Namespace"
+  "title" : "White Space: Namespace",
+  "description" : "Checks that there is exactly one space after the namespace keyword."
 }, {
   "patternId" : "Drupal_WhiteSpace_ObjectOperatorIndent",
   "title" : "White Space: Object Operator Indent"
 }, {
   "patternId" : "Drupal_WhiteSpace_ObjectOperatorSpacing",
-  "title" : "White Space: Object Operator Spacing"
+  "title" : "White Space: Object Operator Spacing",
+  "description" : "Ensure that there are no white spaces before and after the object operator."
 }, {
   "patternId" : "Drupal_WhiteSpace_OpenBracketSpacing",
-  "title" : "White Space: Open Bracket Spacing"
+  "title" : "White Space: Open Bracket Spacing",
+  "description" : "Checks that there is no white space after an opening bracket, for \"(\" and \"{\"."
 }, {
   "patternId" : "Drupal_WhiteSpace_OpenTagNewline",
-  "title" : "White Space: Open Tag Newline"
+  "title" : "White Space: Open Tag Newline",
+  "description" : "Checks that there is exactly one newline after the PHP open tag."
 }, {
   "patternId" : "Drupal_WhiteSpace_ScopeClosingBrace",
-  "title" : "White Space: Scope Closing Brace"
+  "title" : "White Space: Scope Closing Brace",
+  "description" : "Copied from \\PHP_CodeSniffer\\Standards\\PEAR\\Sniffs\\WhiteSpace\\ScopeClosingBraceSniff to allow empty methods\nand classes."
 }, {
   "patternId" : "Drupal_WhiteSpace_ScopeIndent",
-  "title" : "White Space: Scope Indent"
+  "title" : "White Space: Scope Indent",
+  "description" : "Largely copied from\n\\PHP_CodeSniffer\\Standards\\Generic\\Sniffs\\WhiteSpace\\ScopeIndentSniff,\nmodified to make the exact mode working with comments and multi line\nstatements."
 }, {
   "patternId" : "Generic_Arrays_ArrayIndent",
   "title" : "Arrays: Array Indent"
@@ -515,199 +573,264 @@
   "description" : "There should be no space between the spread operator and the variable/function call it applies to."
 }, {
   "patternId" : "MEQP1_Classes_Mysql4",
-  "title" : "Classes: Mysql4"
+  "title" : "Classes: Mysql4",
+  "description" : "Class Mysql4Sniff\nDetects usage of deprecated 'Mysql4' suffix in class names."
 }, {
   "patternId" : "MEQP1_Classes_ObjectInstantiation",
-  "title" : "Classes: Object Instantiation"
+  "title" : "Classes: Object Instantiation",
+  "description" : "Class ObjectInstantiationSniff\nDetects direct object instantiation via 'new' keyword."
 }, {
   "patternId" : "MEQP1_Classes_ResourceModel",
-  "title" : "Classes: Resource Model"
+  "title" : "Classes: Resource Model",
+  "description" : "Class ResourceModelSniff\nDetects data access code outside of ResourceModel."
 }, {
   "patternId" : "MEQP1_CodeAnalysis_EmptyBlock",
-  "title" : "Code Analysis: Empty Block"
+  "title" : "Code Analysis: Empty Block",
+  "description" : "Class EmptyBlockSniff\nDetects possible empty blocks."
 }, {
   "patternId" : "MEQP1_Exceptions_DirectThrow",
-  "title" : "Exceptions: Direct Throw"
+  "title" : "Exceptions: Direct Throw",
+  "description" : "Class DirectThrowSniff\nDetects possible direct throws of Exceptions."
 }, {
   "patternId" : "MEQP1_Exceptions_Namespace",
-  "title" : "Exceptions: Namespace"
+  "title" : "Exceptions: Namespace",
+  "description" : "Class NamespaceSniff\nDetects possible usage of exceptions without namespace declaration."
 }, {
   "patternId" : "MEQP1_PHP_Goto",
-  "title" : "PHP: Goto"
+  "title" : "PHP: Goto",
+  "description" : "Class GotoSniff\nDetects use of GOTO."
 }, {
   "patternId" : "MEQP1_PHP_PrivateClassMember",
-  "title" : "PHP: Private Class Member"
+  "title" : "PHP: Private Class Member",
+  "description" : "Class PrivateClassMemberSniff\nDetects possible usage of 'private' scope modifiers."
 }, {
   "patternId" : "MEQP1_PHP_Syntax",
-  "title" : "PHP: Syntax"
+  "title" : "PHP: Syntax",
+  "description" : "Class SyntaxSniff\nEnsures PHP believes the syntax is clean."
 }, {
   "patternId" : "MEQP1_PHP_Var",
-  "title" : "PHP: Var"
+  "title" : "PHP: Var",
+  "description" : "Class VarSniff\nDetects possible usage of 'var' language construction."
 }, {
   "patternId" : "MEQP1_Performance_CollectionCount",
-  "title" : "Performance: Collection Count"
+  "title" : "Performance: Collection Count",
+  "description" : "Class CollectionCountSniff\nDetects possible usage of collection count() method."
 }, {
   "patternId" : "MEQP1_Performance_EmptyCheck",
-  "title" : "Performance: Empty Check"
+  "title" : "Performance: Empty Check",
+  "description" : "Class EmptyCheckSniff\nAllows easily detect wrong approach for checking empty variables in conditions."
 }, {
   "patternId" : "MEQP1_Performance_InefficientMethods",
-  "title" : "Performance: Inefficient Methods"
+  "title" : "Performance: Inefficient Methods",
+  "description" : "Class InefficientMethodsSniff\nDetects use of inefficient methods."
 }, {
   "patternId" : "MEQP1_Performance_Loop",
-  "title" : "Performance: Loop"
+  "title" : "Performance: Loop",
+  "description" : "Class LoopSniff\nDetects possible data load in the loop."
 }, {
   "patternId" : "MEQP1_SQL_MissedIndexes",
-  "title" : "SQL: Missed Indexes"
+  "title" : "SQL: Missed Indexes",
+  "description" : "Class MissedIndexesSniff\nDetects possible missed indexes in install and update schema classes."
 }, {
   "patternId" : "MEQP1_SQL_RawQuery",
-  "title" : "SQL: Raw Query"
+  "title" : "SQL: Raw Query",
+  "description" : "Class RawQuerySniff\nDetects possible raw SQL queries."
 }, {
   "patternId" : "MEQP1_SQL_SlowQuery",
-  "title" : "SQL: Slow Query"
+  "title" : "SQL: Slow Query",
+  "description" : "Class SlowQuerySniff\nDetects possible slow SQL queries."
 }, {
   "patternId" : "MEQP1_Security_Acl",
-  "title" : "Security: Acl"
+  "title" : "Security: Acl",
+  "description" : "Class AclSniff\nDetects possible improper usage of adminhtml actions."
 }, {
   "patternId" : "MEQP1_Security_DiscouragedFunction",
-  "title" : "Security: Discouraged Function"
+  "title" : "Security: Discouraged Function",
+  "description" : "Class DiscouragedFunctionSniff\nDetects possible usage of discouraged functions."
 }, {
   "patternId" : "MEQP1_Security_IncludeFile",
-  "title" : "Security: Include File"
+  "title" : "Security: Include File",
+  "description" : "Class IncludeFileSniff\nDetects possible improper usage of include functions."
 }, {
   "patternId" : "MEQP1_Security_InsecureFunction",
-  "title" : "Security: Insecure Function"
+  "title" : "Security: Insecure Function",
+  "description" : "Detects the use of insecure functions."
 }, {
   "patternId" : "MEQP1_Security_LanguageConstruct",
-  "title" : "Security: Language Construct"
+  "title" : "Security: Language Construct",
+  "description" : "Class LanguageConstructSniff\nDetects possible usage of discouraged language constructs."
 }, {
   "patternId" : "MEQP1_Security_Superglobal",
-  "title" : "Security: Superglobal"
+  "title" : "Security: Superglobal",
+  "description" : "Class SuperglobalSniff\nDetects usage of super global variables."
 }, {
   "patternId" : "MEQP1_Stdlib_DateTime",
-  "title" : "Stdlib: Date Time"
+  "title" : "Stdlib: Date Time",
+  "description" : "Class DateTimeSniff\nDetects overcomplicated Date/Time handling."
 }, {
   "patternId" : "MEQP1_Strings_RegEx",
-  "title" : "Strings: Reg Ex"
+  "title" : "Strings: Reg Ex",
+  "description" : "Class RegExSniff\nDetects executable regular expressions."
 }, {
   "patternId" : "MEQP1_Strings_StringConcat",
-  "title" : "Strings: String Concat"
+  "title" : "Strings: String Concat",
+  "description" : "Class StringConcatSniff\nDetects string concatenation via '+' operator."
 }, {
   "patternId" : "MEQP1_Strings_StringPosition",
-  "title" : "Strings: String Position"
+  "title" : "Strings: String Position",
+  "description" : "Class StringPositionSniff\nDetects misusing of IS_IDENTICAL operators."
 }, {
   "patternId" : "MEQP1_Templates_XssTemplate",
-  "title" : "Templates: Xss Template"
+  "title" : "Templates: Xss Template",
+  "description" : "Class XssTemplateSniff\nDetects not escaped output in phtml templates."
 }, {
   "patternId" : "Magento2_Classes_AbstractApi",
-  "title" : "Classes: Abstract Api"
+  "title" : "Classes: Abstract Api",
+  "description" : "Detects api annotation for an abstract class."
 }, {
   "patternId" : "Magento2_Classes_DiscouragedDependencies",
-  "title" : "Classes: Discouraged Dependencies"
+  "title" : "Classes: Discouraged Dependencies",
+  "description" : "Detects explicit request of proxies and interceptors in constructors"
 }, {
   "patternId" : "Magento2_CodeAnalysis_EmptyBlock",
-  "title" : "Code Analysis: Empty Block"
+  "title" : "Code Analysis: Empty Block",
+  "description" : "Detects possible empty blocks."
 }, {
   "patternId" : "Magento2_Commenting_ClassAndInterfacePHPDocFormatting",
-  "title" : "Commenting: Class And Interface PHP Doc Formatting"
+  "title" : "Commenting: Class And Interface PHP Doc Formatting",
+  "description" : "Detects PHPDoc formatting for classes and interfaces."
 }, {
   "patternId" : "Magento2_Commenting_ConstantsPHPDocFormatting",
-  "title" : "Commenting: Constants PHP Doc Formatting"
+  "title" : "Commenting: Constants PHP Doc Formatting",
+  "description" : "Detects PHPDoc formatting for constants."
 }, {
   "patternId" : "Magento2_Exceptions_DirectThrow",
-  "title" : "Exceptions: Direct Throw"
+  "title" : "Exceptions: Direct Throw",
+  "description" : "Detects possible direct throws of Exceptions."
 }, {
   "patternId" : "Magento2_Exceptions_ThrowCatch",
-  "title" : "Exceptions: Throw Catch"
+  "title" : "Exceptions: Throw Catch",
+  "description" : "Detects exceptions must not be handled in same function"
 }, {
   "patternId" : "Magento2_Exceptions_TryProcessSystemResources",
-  "title" : "Exceptions: Try Process System Resources"
+  "title" : "Exceptions: Try Process System Resources",
+  "description" : "Detects missing try-catch block when processing system resources."
 }, {
   "patternId" : "Magento2_Functions_DiscouragedFunction",
-  "title" : "Functions: Discouraged Function"
+  "title" : "Functions: Discouraged Function",
+  "description" : "Detects possible usage of discouraged functions."
 }, {
   "patternId" : "Magento2_Functions_StaticFunction",
-  "title" : "Functions: Static Function"
+  "title" : "Functions: Static Function",
+  "description" : "Detects static function definitions."
 }, {
   "patternId" : "Magento2_GraphQL_AbstractGraphQL",
-  "title" : "Graph QL: Abstract Graph QL"
+  "title" : "Graph QL: Abstract Graph QL",
+  "description" : "Defines an abstract base class for GraphQL sniffs."
 }, {
   "patternId" : "Magento2_GraphQL_ValidArgumentName",
-  "title" : "Graph QL: Valid Argument Name"
+  "title" : "Graph QL: Valid Argument Name",
+  "description" : "Detects argument names that are not specified in <kbd>cameCase</kbd>."
 }, {
   "patternId" : "Magento2_GraphQL_ValidEnumValue",
-  "title" : "Graph QL: Valid Enum Value"
+  "title" : "Graph QL: Valid Enum Value",
+  "description" : "Detects enum values that are not specified in <kbd>SCREAMING_SNAKE_CASE</kbd>."
 }, {
   "patternId" : "Magento2_GraphQL_ValidFieldName",
-  "title" : "Graph QL: Valid Field Name"
+  "title" : "Graph QL: Valid Field Name",
+  "description" : "Detects field names the are not specified in <kbd>snake_case</kbd>."
 }, {
   "patternId" : "Magento2_GraphQL_ValidTopLevelFieldName",
-  "title" : "Graph QL: Valid Top Level Field Name"
+  "title" : "Graph QL: Valid Top Level Field Name",
+  "description" : "Detects top level field names that are not specified in <kbd>cameCase</kbd>."
 }, {
   "patternId" : "Magento2_GraphQL_ValidTypeName",
-  "title" : "Graph QL: Valid Type Name"
+  "title" : "Graph QL: Valid Type Name",
+  "description" : "Detects types (<kbd>type</kbd>, <kbd>interface</kbd> and <kbd>enum</kbd>) that are not specified in\n<kbd>UpperCamelCase</kbd>."
 }, {
   "patternId" : "Magento2_Legacy_MageEntity",
-  "title" : "Legacy: Mage Entity"
+  "title" : "Legacy: Mage Entity",
+  "description" : "Detects typical Magento 1.x classes constructions."
 }, {
   "patternId" : "Magento2_NamingConvention_InterfaceName",
-  "title" : "Naming Convention: Interface Name"
+  "title" : "Naming Convention: Interface Name",
+  "description" : "Detects possible interface declaration without 'Interface' suffix."
 }, {
   "patternId" : "Magento2_NamingConvention_ReservedWords",
-  "title" : "Naming Convention: Reserved Words"
+  "title" : "Naming Convention: Reserved Words",
+  "description" : "Validates that class name is not reserved word."
 }, {
   "patternId" : "Magento2_PHP_FinalImplementation",
-  "title" : "PHP: Final Implementation"
+  "title" : "PHP: Final Implementation",
+  "description" : "Magento is a highly extensible and customizable platform. The use of final classes and methods is prohibited."
 }, {
   "patternId" : "Magento2_PHP_Goto",
-  "title" : "PHP: Goto"
+  "title" : "PHP: Goto",
+  "description" : "Detects use of GOTO."
 }, {
   "patternId" : "Magento2_PHP_LiteralNamespaces",
-  "title" : "PHP: Literal Namespaces"
+  "title" : "PHP: Literal Namespaces",
+  "description" : "Custom phpcs sniff to detect usages of literal class and interface names."
 }, {
   "patternId" : "Magento2_PHP_ReturnValueCheck",
-  "title" : "PHP: Return Value Check"
+  "title" : "PHP: Return Value Check",
+  "description" : "Detects misusing of IS_IDENTICAL operators."
 }, {
   "patternId" : "Magento2_PHP_ShortEchoSyntax",
-  "title" : "PHP: Short Echo Syntax"
+  "title" : "PHP: Short Echo Syntax",
+  "description" : "Validate short echo syntax is used."
 }, {
   "patternId" : "Magento2_PHP_Var",
-  "title" : "PHP: Var"
+  "title" : "PHP: Var",
+  "description" : "Detects possible usage of 'var' language construction."
 }, {
   "patternId" : "Magento2_Performance_ForeachArrayMerge",
-  "title" : "Performance: Foreach Array Merge"
+  "title" : "Performance: Foreach Array Merge",
+  "description" : "Detects array_merge(."
 }, {
   "patternId" : "Magento2_SQL_RawQuery",
-  "title" : "SQL: Raw Query"
+  "title" : "SQL: Raw Query",
+  "description" : "Detects possible raw SQL queries."
 }, {
   "patternId" : "Magento2_Security_IncludeFile",
-  "title" : "Security: Include File"
+  "title" : "Security: Include File",
+  "description" : "Detects possible improper usage of include functions."
 }, {
   "patternId" : "Magento2_Security_InsecureFunction",
-  "title" : "Security: Insecure Function"
+  "title" : "Security: Insecure Function",
+  "description" : "Detects the use of insecure functions."
 }, {
   "patternId" : "Magento2_Security_LanguageConstruct",
-  "title" : "Security: Language Construct"
+  "title" : "Security: Language Construct",
+  "description" : "Detects possible usage of discouraged language constructs."
 }, {
   "patternId" : "Magento2_Security_Superglobal",
-  "title" : "Security: Superglobal"
+  "title" : "Security: Superglobal",
+  "description" : "Detects possible usage of super global variables."
 }, {
   "patternId" : "Magento2_Security_XssTemplate",
-  "title" : "Security: Xss Template"
+  "title" : "Security: Xss Template",
+  "description" : "Detects not escaped output in phtml templates."
 }, {
   "patternId" : "Magento2_Strings_ExecutableRegEx",
-  "title" : "Strings: Executable Reg Ex"
+  "title" : "Strings: Executable Reg Ex",
+  "description" : "Detects executable regular expressions."
 }, {
   "patternId" : "Magento2_Strings_StringConcat",
-  "title" : "Strings: String Concat"
+  "title" : "Strings: String Concat",
+  "description" : "Detects string concatenation via '+' operator."
 }, {
   "patternId" : "Magento2_Templates_ThisInTemplate",
-  "title" : "Templates: This In Template"
+  "title" : "Templates: This In Template",
+  "description" : "Detects possible usage of $this variable files."
 }, {
   "patternId" : "Magento2_Translation_ConstantUsage",
-  "title" : "Translation: Constant Usage"
+  "title" : "Translation: Constant Usage",
+  "description" : "Make sure that constants are not used as the first argument of translation function."
 }, {
   "patternId" : "Magento2_Whitespace_MultipleEmptyLines",
-  "title" : "Whitespace: Multiple Empty Lines"
+  "title" : "Whitespace: Multiple Empty Lines",
+  "description" : "Detects possible usage of multiple blank lines in a row."
 }, {
   "patternId" : "MySource_CSS_BrowserSpecificStyles",
   "title" : "CSS: Browser Specific Styles"
@@ -830,355 +953,472 @@
   "description" : "Any scope openers except for switch statements should be indented 1 level.  This includes classes, functions, and control structures."
 }, {
   "patternId" : "PHPCompatibility_Classes_ForbiddenAbstractPrivateMethods",
-  "title" : "PHP Compatibility related issue (Classes): Forbidden Abstract Private Methods"
+  "title" : "PHP Compatibility related issue (Classes): Forbidden Abstract Private Methods",
+  "description" : "Abstract private methods are not allowed since PHP 5.1."
 }, {
   "patternId" : "PHPCompatibility_Classes_NewAnonymousClasses",
-  "title" : "PHP Compatibility related issue (Classes): New Anonymous Classes"
+  "title" : "PHP Compatibility related issue (Classes): New Anonymous Classes",
+  "description" : "Anonymous classes are supported since PHP 7.0."
 }, {
   "patternId" : "PHPCompatibility_Classes_NewClasses",
-  "title" : "PHP Compatibility related issue (Classes): New Classes"
+  "title" : "PHP Compatibility related issue (Classes): New Classes",
+  "description" : "Detect use of new PHP native classes."
 }, {
   "patternId" : "PHPCompatibility_Classes_NewConstVisibility",
-  "title" : "PHP Compatibility related issue (Classes): New Const Visibility"
+  "title" : "PHP Compatibility related issue (Classes): New Const Visibility",
+  "description" : "Visibility for class constants is available since PHP 7.1."
 }, {
   "patternId" : "PHPCompatibility_Classes_NewLateStaticBinding",
-  "title" : "PHP Compatibility related issue (Classes): New Late Static Binding"
+  "title" : "PHP Compatibility related issue (Classes): New Late Static Binding",
+  "description" : "Detect use of late static binding as introduced in PHP 5.3."
 }, {
   "patternId" : "PHPCompatibility_Classes_NewTypedProperties",
-  "title" : "PHP Compatibility related issue (Classes): New Typed Properties"
+  "title" : "PHP Compatibility related issue (Classes): New Typed Properties",
+  "description" : "Typed class property declarations are available since PHP 7.4."
 }, {
   "patternId" : "PHPCompatibility_Classes_RemovedOrphanedParent",
-  "title" : "PHP Compatibility related issue (Classes): Removed Orphaned Parent"
+  "title" : "PHP Compatibility related issue (Classes): Removed Orphaned Parent",
+  "description" : "Using `parent` inside a class without parent is deprecated since PHP 7.4."
 }, {
   "patternId" : "PHPCompatibility_Constants_NewConstants",
-  "title" : "PHP Compatibility related issue (Constants): New Constants"
+  "title" : "PHP Compatibility related issue (Constants): New Constants",
+  "description" : "Detect use of new PHP native global constants."
 }, {
   "patternId" : "PHPCompatibility_Constants_NewMagicClassConstant",
-  "title" : "PHP Compatibility related issue (Constants): New Magic Class Constant"
+  "title" : "PHP Compatibility related issue (Constants): New Magic Class Constant",
+  "description" : "Detect usage of the magic `::class` constant introduced in PHP 5.5."
 }, {
   "patternId" : "PHPCompatibility_Constants_RemovedConstants",
-  "title" : "PHP Compatibility related issue (Constants): Removed Constants"
+  "title" : "PHP Compatibility related issue (Constants): Removed Constants",
+  "description" : "Detect use of deprecated and/or removed PHP native global constants."
 }, {
   "patternId" : "PHPCompatibility_ControlStructures_DiscouragedSwitchContinue",
-  "title" : "PHP Compatibility related issue (Control Structures): Discouraged Switch Continue"
+  "title" : "PHP Compatibility related issue (Control Structures): Discouraged Switch Continue",
+  "description" : "Detect use of `continue` in `switch` control structures."
 }, {
   "patternId" : "PHPCompatibility_ControlStructures_ForbiddenBreakContinueOutsideLoop",
-  "title" : "PHP Compatibility related issue (Control Structures): Forbidden Break Continue Outside Loop"
+  "title" : "PHP Compatibility related issue (Control Structures): Forbidden Break Continue Outside Loop",
+  "description" : "Detect using `break` and/or `continue` statements outside of a looping structure."
 }, {
   "patternId" : "PHPCompatibility_ControlStructures_ForbiddenBreakContinueVariableArguments",
-  "title" : "PHP Compatibility related issue (Control Structures): Forbidden Break Continue Variable Arguments"
+  "title" : "PHP Compatibility related issue (Control Structures): Forbidden Break Continue Variable Arguments",
+  "description" : "Detects using 0 and variable numeric arguments on `break` and `continue` statements."
 }, {
   "patternId" : "PHPCompatibility_ControlStructures_ForbiddenSwitchWithMultipleDefaultBlocks",
-  "title" : "PHP Compatibility related issue (Control Structures): Forbidden Switch With Multiple Default Blocks"
+  "title" : "PHP Compatibility related issue (Control Structures): Forbidden Switch With Multiple Default Blocks",
+  "description" : "Switch statements can not have multiple default blocks since PHP 7.0."
 }, {
   "patternId" : "PHPCompatibility_ControlStructures_NewExecutionDirectives",
-  "title" : "PHP Compatibility related issue (Control Structures): New Execution Directives"
+  "title" : "PHP Compatibility related issue (Control Structures): New Execution Directives",
+  "description" : "Check for valid execution directives set with `declare()`."
 }, {
   "patternId" : "PHPCompatibility_ControlStructures_NewForeachExpressionReferencing",
-  "title" : "PHP Compatibility related issue (Control Structures): New Foreach Expression Referencing"
+  "title" : "PHP Compatibility related issue (Control Structures): New Foreach Expression Referencing",
+  "description" : "Detect `foreach` expression referencing."
 }, {
   "patternId" : "PHPCompatibility_ControlStructures_NewListInForeach",
-  "title" : "PHP Compatibility related issue (Control Structures): New List In Foreach"
+  "title" : "PHP Compatibility related issue (Control Structures): New List In Foreach",
+  "description" : "Detect unpacking nested arrays with `list()` in a `foreach()` as available since PHP 5.5."
 }, {
   "patternId" : "PHPCompatibility_ControlStructures_NewMultiCatch",
-  "title" : "PHP Compatibility related issue (Control Structures): New Multi Catch"
+  "title" : "PHP Compatibility related issue (Control Structures): New Multi Catch",
+  "description" : "Catching multiple exception types in one statement is available since PHP 7.1."
 }, {
   "patternId" : "PHPCompatibility_Extensions_RemovedExtensions",
-  "title" : "PHP Compatibility related issue (Extensions): Removed Extensions"
+  "title" : "PHP Compatibility related issue (Extensions): Removed Extensions",
+  "description" : "Detect the use of deprecated and/or removed PHP extensions."
 }, {
   "patternId" : "PHPCompatibility_FunctionDeclarations_ForbiddenParameterShadowSuperGlobals",
-  "title" : "PHP Compatibility related issue (Function Declarations): Forbidden Parameter Shadow Super Globals"
+  "title" : "PHP Compatibility related issue (Function Declarations): Forbidden Parameter Shadow Super Globals",
+  "description" : "Detect the use of superglobals as parameters for functions, support for which was removed in PHP 5.4."
 }, {
   "patternId" : "PHPCompatibility_FunctionDeclarations_ForbiddenParametersWithSameName",
-  "title" : "PHP Compatibility related issue (Function Declarations): Forbidden Parameters With Same Name"
+  "title" : "PHP Compatibility related issue (Function Declarations): Forbidden Parameters With Same Name",
+  "description" : "Functions can not have multiple parameters with the same name since PHP 7.0."
 }, {
   "patternId" : "PHPCompatibility_FunctionDeclarations_ForbiddenToStringParameters",
-  "title" : "PHP Compatibility related issue (Function Declarations): Forbidden To String Parameters"
+  "title" : "PHP Compatibility related issue (Function Declarations): Forbidden To String Parameters",
+  "description" : "As of PHP 5.3, the __toString() magic method can no longer accept arguments."
 }, {
   "patternId" : "PHPCompatibility_FunctionDeclarations_ForbiddenVariableNamesInClosureUse",
-  "title" : "PHP Compatibility related issue (Function Declarations): Forbidden Variable Names In Closure Use"
+  "title" : "PHP Compatibility related issue (Function Declarations): Forbidden Variable Names In Closure Use",
+  "description" : "Detect variable names forbidden to be used in closure `use` statements."
 }, {
   "patternId" : "PHPCompatibility_FunctionDeclarations_NewClosure",
-  "title" : "PHP Compatibility related issue (Function Declarations): New Closure"
+  "title" : "PHP Compatibility related issue (Function Declarations): New Closure",
+  "description" : "Detect closures and verify that the features used are supported."
 }, {
   "patternId" : "PHPCompatibility_FunctionDeclarations_NewExceptionsFromToString",
-  "title" : "PHP Compatibility related issue (Function Declarations): New Exceptions From To String"
+  "title" : "PHP Compatibility related issue (Function Declarations): New Exceptions From To String",
+  "description" : "As of PHP 7.4, throwing exceptions from a `__toString()` method is allowed."
 }, {
   "patternId" : "PHPCompatibility_FunctionDeclarations_NewNullableTypes",
-  "title" : "PHP Compatibility related issue (Function Declarations): New Nullable Types"
+  "title" : "PHP Compatibility related issue (Function Declarations): New Nullable Types",
+  "description" : "Nullable parameter type declarations and return types are available since PHP 7.1."
 }, {
   "patternId" : "PHPCompatibility_FunctionDeclarations_NewParamTypeDeclarations",
-  "title" : "PHP Compatibility related issue (Function Declarations): New Param Type Declarations"
+  "title" : "PHP Compatibility related issue (Function Declarations): New Param Type Declarations",
+  "description" : "Detect and verify the use of parameter type declarations in function declarations."
 }, {
   "patternId" : "PHPCompatibility_FunctionDeclarations_NewReturnTypeDeclarations",
-  "title" : "PHP Compatibility related issue (Function Declarations): New Return Type Declarations"
+  "title" : "PHP Compatibility related issue (Function Declarations): New Return Type Declarations",
+  "description" : "Detect and verify the use of return type declarations in function declarations."
 }, {
   "patternId" : "PHPCompatibility_FunctionDeclarations_NonStaticMagicMethods",
-  "title" : "PHP Compatibility related issue (Function Declarations): Non Static Magic Methods"
+  "title" : "PHP Compatibility related issue (Function Declarations): Non Static Magic Methods",
+  "description" : "Verifies the use of the correct visibility and static properties of magic methods."
 }, {
   "patternId" : "PHPCompatibility_FunctionNameRestrictions_NewMagicMethods",
-  "title" : "PHP Compatibility related issue (Function Name Restrictions): New Magic Methods"
+  "title" : "PHP Compatibility related issue (Function Name Restrictions): New Magic Methods",
+  "description" : "Warns for non-magic behaviour of magic methods prior to becoming magic."
 }, {
   "patternId" : "PHPCompatibility_FunctionNameRestrictions_RemovedMagicAutoload",
-  "title" : "PHP Compatibility related issue (Function Name Restrictions): Removed Magic Autoload"
+  "title" : "PHP Compatibility related issue (Function Name Restrictions): Removed Magic Autoload",
+  "description" : "Detect declaration of the magic `__autoload()` method."
 }, {
   "patternId" : "PHPCompatibility_FunctionNameRestrictions_RemovedNamespacedAssert",
-  "title" : "PHP Compatibility related issue (Function Name Restrictions): Removed Namespaced Assert"
+  "title" : "PHP Compatibility related issue (Function Name Restrictions): Removed Namespaced Assert",
+  "description" : "Detect declaration of a namespaced function called `assert()`."
 }, {
   "patternId" : "PHPCompatibility_FunctionNameRestrictions_RemovedPHP4StyleConstructors",
-  "title" : "PHP Compatibility related issue (Function Name Restrictions): Removed PHP4 Style Constructors"
+  "title" : "PHP Compatibility related issue (Function Name Restrictions): Removed PHP4 Style Constructors",
+  "description" : "Detect declarations of PHP 4 style constructors which are deprecated as of PHP 7.0.0."
 }, {
   "patternId" : "PHPCompatibility_FunctionNameRestrictions_ReservedFunctionNames",
-  "title" : "PHP Compatibility related issue (Function Name Restrictions): Reserved Function Names"
+  "title" : "PHP Compatibility related issue (Function Name Restrictions): Reserved Function Names",
+  "description" : "All function and method names starting with double underscore are reserved by PHP."
 }, {
   "patternId" : "PHPCompatibility_FunctionUse_ArgumentFunctionsReportCurrentValue",
-  "title" : "PHP Compatibility related issue (Function Use): Argument Functions Report Current Value"
+  "title" : "PHP Compatibility related issue (Function Use): Argument Functions Report Current Value",
+  "description" : "Functions inspecting function arguments report the current parameter value\ninstead of the original since PHP 7.0."
 }, {
   "patternId" : "PHPCompatibility_FunctionUse_ArgumentFunctionsUsage",
-  "title" : "PHP Compatibility related issue (Function Use): Argument Functions Usage"
+  "title" : "PHP Compatibility related issue (Function Use): Argument Functions Usage",
+  "description" : "Detect usage of `func_get_args()`, `func_get_arg()` and `func_num_args()` in invalid context."
 }, {
   "patternId" : "PHPCompatibility_FunctionUse_NewFunctionParameters",
-  "title" : "PHP Compatibility related issue (Function Use): New Function Parameters"
+  "title" : "PHP Compatibility related issue (Function Use): New Function Parameters",
+  "description" : "Detect use of new function parameters in calls to native PHP functions."
 }, {
   "patternId" : "PHPCompatibility_FunctionUse_NewFunctions",
-  "title" : "PHP Compatibility related issue (Function Use): New Functions"
+  "title" : "PHP Compatibility related issue (Function Use): New Functions",
+  "description" : "Detect calls to new native PHP functions."
 }, {
   "patternId" : "PHPCompatibility_FunctionUse_OptionalToRequiredFunctionParameters",
-  "title" : "PHP Compatibility related issue (Function Use): Optional To Required Function Parameters"
+  "title" : "PHP Compatibility related issue (Function Use): Optional To Required Function Parameters",
+  "description" : "Detect missing required function parameters in calls to native PHP functions."
 }, {
   "patternId" : "PHPCompatibility_FunctionUse_RemovedFunctionParameters",
-  "title" : "PHP Compatibility related issue (Function Use): Removed Function Parameters"
+  "title" : "PHP Compatibility related issue (Function Use): Removed Function Parameters",
+  "description" : "Detect use of deprecated/removed function parameters in calls to native PHP functions."
 }, {
   "patternId" : "PHPCompatibility_FunctionUse_RemovedFunctions",
-  "title" : "PHP Compatibility related issue (Function Use): Removed Functions"
+  "title" : "PHP Compatibility related issue (Function Use): Removed Functions",
+  "description" : "Detect calls to deprecated/removed native PHP functions."
 }, {
   "patternId" : "PHPCompatibility_FunctionUse_RequiredToOptionalFunctionParameters",
-  "title" : "PHP Compatibility related issue (Function Use): Required To Optional Function Parameters"
+  "title" : "PHP Compatibility related issue (Function Use): Required To Optional Function Parameters",
+  "description" : "Detect missing required function parameters in calls to native PHP functions."
 }, {
   "patternId" : "PHPCompatibility_Generators_NewGeneratorReturn",
-  "title" : "PHP Compatibility related issue (Generators): New Generator Return"
+  "title" : "PHP Compatibility related issue (Generators): New Generator Return",
+  "description" : "As of PHP 7.0, a `return` statement can be used within a generator for a final expression to be returned."
 }, {
   "patternId" : "PHPCompatibility_IniDirectives_NewIniDirectives",
-  "title" : "PHP Compatibility related issue (Ini Directives): New Ini Directives"
+  "title" : "PHP Compatibility related issue (Ini Directives): New Ini Directives",
+  "description" : "Detect the use of new INI directives through `ini_set()` or `ini_get()`."
 }, {
   "patternId" : "PHPCompatibility_IniDirectives_RemovedIniDirectives",
-  "title" : "PHP Compatibility related issue (Ini Directives): Removed Ini Directives"
+  "title" : "PHP Compatibility related issue (Ini Directives): Removed Ini Directives",
+  "description" : "Detect the use of deprecated and removed INI directives through `ini_set()` or `ini_get()`."
 }, {
   "patternId" : "PHPCompatibility_InitialValue_NewConstantArraysUsingConst",
-  "title" : "PHP Compatibility related issue (Initial Value): New Constant Arrays Using Const"
+  "title" : "PHP Compatibility related issue (Initial Value): New Constant Arrays Using Const",
+  "description" : "Detect declaration of constants using the `const` keyword with a (constant) array value\nas supported since PHP 5.6."
 }, {
   "patternId" : "PHPCompatibility_InitialValue_NewConstantArraysUsingDefine",
-  "title" : "PHP Compatibility related issue (Initial Value): New Constant Arrays Using Define"
+  "title" : "PHP Compatibility related issue (Initial Value): New Constant Arrays Using Define",
+  "description" : "Detect declaration of constants using `define()` with a (constant) array value\nas supported since PHP 7.0."
 }, {
   "patternId" : "PHPCompatibility_InitialValue_NewConstantScalarExpressions",
-  "title" : "PHP Compatibility related issue (Initial Value): New Constant Scalar Expressions"
+  "title" : "PHP Compatibility related issue (Initial Value): New Constant Scalar Expressions",
+  "description" : "Detect constant scalar expressions being used to set an initial value."
 }, {
   "patternId" : "PHPCompatibility_InitialValue_NewHeredoc",
-  "title" : "PHP Compatibility related issue (Initial Value): New Heredoc"
+  "title" : "PHP Compatibility related issue (Initial Value): New Heredoc",
+  "description" : "Detect a heredoc being used to set an initial value."
 }, {
   "patternId" : "PHPCompatibility_Interfaces_InternalInterfaces",
-  "title" : "PHP Compatibility related issue (Interfaces): Internal Interfaces"
+  "title" : "PHP Compatibility related issue (Interfaces): Internal Interfaces",
+  "description" : "Detect classes which implement PHP native interfaces intended only for PHP internal use."
 }, {
   "patternId" : "PHPCompatibility_Interfaces_NewInterfaces",
-  "title" : "PHP Compatibility related issue (Interfaces): New Interfaces"
+  "title" : "PHP Compatibility related issue (Interfaces): New Interfaces",
+  "description" : "Detect use of new PHP native interfaces and unsupported interface methods."
 }, {
   "patternId" : "PHPCompatibility_Keywords_CaseSensitiveKeywords",
-  "title" : "PHP Compatibility related issue (Keywords): Case Sensitive Keywords"
+  "title" : "PHP Compatibility related issue (Keywords): Case Sensitive Keywords",
+  "description" : "Detect usage of `self`, `parent` and `static` and verify they are lowercase."
 }, {
   "patternId" : "PHPCompatibility_Keywords_ForbiddenNames",
-  "title" : "PHP Compatibility related issue (Keywords): Forbidden Names"
+  "title" : "PHP Compatibility related issue (Keywords): Forbidden Names",
+  "description" : "Detects the use of reserved keywords as class, function, namespace or constant names."
 }, {
   "patternId" : "PHPCompatibility_Keywords_ForbiddenNamesAsDeclared",
-  "title" : "PHP Compatibility related issue (Keywords): Forbidden Names As Declared"
+  "title" : "PHP Compatibility related issue (Keywords): Forbidden Names As Declared",
+  "description" : "Detects the use of some reserved keywords to name a class, interface, trait or namespace."
 }, {
   "patternId" : "PHPCompatibility_Keywords_ForbiddenNamesAsInvokedFunctions",
-  "title" : "PHP Compatibility related issue (Keywords): Forbidden Names As Invoked Functions"
+  "title" : "PHP Compatibility related issue (Keywords): Forbidden Names As Invoked Functions",
+  "description" : "Prohibits the use of reserved keywords invoked as functions."
 }, {
   "patternId" : "PHPCompatibility_Keywords_NewKeywords",
-  "title" : "PHP Compatibility related issue (Keywords): New Keywords"
+  "title" : "PHP Compatibility related issue (Keywords): New Keywords",
+  "description" : "Detect use of new PHP keywords."
 }, {
   "patternId" : "PHPCompatibility_LanguageConstructs_NewEmptyNonVariable",
-  "title" : "PHP Compatibility related issue (Language Constructs): New Empty Non Variable"
+  "title" : "PHP Compatibility related issue (Language Constructs): New Empty Non Variable",
+  "description" : "Verify that nothing but variables are passed to empty()."
 }, {
   "patternId" : "PHPCompatibility_LanguageConstructs_NewLanguageConstructs",
-  "title" : "PHP Compatibility related issue (Language Constructs): New Language Constructs"
+  "title" : "PHP Compatibility related issue (Language Constructs): New Language Constructs",
+  "description" : "Detect use of new PHP language constructs."
 }, {
   "patternId" : "PHPCompatibility_Lists_AssignmentOrder",
-  "title" : "PHP Compatibility related issue (Lists): Assignment Order"
+  "title" : "PHP Compatibility related issue (Lists): Assignment Order",
+  "description" : "Detect code affected by the changed list assignment order in PHP 7.0+."
 }, {
   "patternId" : "PHPCompatibility_Lists_ForbiddenEmptyListAssignment",
-  "title" : "PHP Compatibility related issue (Lists): Forbidden Empty List Assignment"
+  "title" : "PHP Compatibility related issue (Lists): Forbidden Empty List Assignment",
+  "description" : "Support for empty `list()` expressions has been removed in PHP 7.0."
 }, {
   "patternId" : "PHPCompatibility_Lists_NewKeyedList",
-  "title" : "PHP Compatibility related issue (Lists): New Keyed List"
+  "title" : "PHP Compatibility related issue (Lists): New Keyed List",
+  "description" : "Since PHP 7.1, you can specify keys in `list()`, or its new shorthand `[]` syntax."
 }, {
   "patternId" : "PHPCompatibility_Lists_NewListReferenceAssignment",
-  "title" : "PHP Compatibility related issue (Lists): New List Reference Assignment"
+  "title" : "PHP Compatibility related issue (Lists): New List Reference Assignment",
+  "description" : "Detect reference assignments in array destructuring using (short) list."
 }, {
   "patternId" : "PHPCompatibility_Lists_NewShortList",
-  "title" : "PHP Compatibility related issue (Lists): New Short List"
+  "title" : "PHP Compatibility related issue (Lists): New Short List",
+  "description" : "Detect short list syntax for symmetric array destructuring."
 }, {
   "patternId" : "PHPCompatibility_MethodUse_ForbiddenToStringParameters",
-  "title" : "PHP Compatibility related issue (Method Use): Forbidden To String Parameters"
+  "title" : "PHP Compatibility related issue (Method Use): Forbidden To String Parameters",
+  "description" : "As of PHP 5.3, the `__toString()` magic method can no longer be passed arguments."
 }, {
   "patternId" : "PHPCompatibility_MethodUse_NewDirectCallsToClone",
-  "title" : "PHP Compatibility related issue (Method Use): New Direct Calls To Clone"
+  "title" : "PHP Compatibility related issue (Method Use): New Direct Calls To Clone",
+  "description" : "Detect direct calls to the `__clone()` magic method, which is allowed since PHP 7.0."
 }, {
   "patternId" : "PHPCompatibility_Miscellaneous_NewPHPOpenTagEOF",
-  "title" : "PHP Compatibility related issue (Miscellaneous): New PHP Open Tag EOF"
+  "title" : "PHP Compatibility related issue (Miscellaneous): New PHP Open Tag EOF",
+  "description" : "PHP 7.4 now supports stand-alone PHP tags at the end of a file (without new line)."
 }, {
   "patternId" : "PHPCompatibility_Miscellaneous_RemovedAlternativePHPTags",
-  "title" : "PHP Compatibility related issue (Miscellaneous): Removed Alternative PHP Tags"
+  "title" : "PHP Compatibility related issue (Miscellaneous): Removed Alternative PHP Tags",
+  "description" : "Check for use of alternative PHP tags, support for which was removed in PHP 7.0."
 }, {
   "patternId" : "PHPCompatibility_Miscellaneous_ValidIntegers",
-  "title" : "PHP Compatibility related issue (Miscellaneous): Valid Integers"
+  "title" : "PHP Compatibility related issue (Miscellaneous): Valid Integers",
+  "description" : "Check for valid integer types and values."
 }, {
   "patternId" : "PHPCompatibility_Operators_ChangedConcatOperatorPrecedence",
-  "title" : "PHP Compatibility related issue (Operators): Changed Concat Operator Precedence"
+  "title" : "PHP Compatibility related issue (Operators): Changed Concat Operator Precedence",
+  "description" : "Detect code affected by the change in operator precedence of concatenation in PHP 8.0."
 }, {
   "patternId" : "PHPCompatibility_Operators_ForbiddenNegativeBitshift",
-  "title" : "PHP Compatibility related issue (Operators): Forbidden Negative Bitshift"
+  "title" : "PHP Compatibility related issue (Operators): Forbidden Negative Bitshift",
+  "description" : "Bitwise shifts by negative number will throw an ArithmeticError since PHP 7.0."
 }, {
   "patternId" : "PHPCompatibility_Operators_NewOperators",
-  "title" : "PHP Compatibility related issue (Operators): New Operators"
+  "title" : "PHP Compatibility related issue (Operators): New Operators",
+  "description" : "Detect use of new PHP operators."
 }, {
   "patternId" : "PHPCompatibility_Operators_NewShortTernary",
-  "title" : "PHP Compatibility related issue (Operators): New Short Ternary"
+  "title" : "PHP Compatibility related issue (Operators): New Short Ternary",
+  "description" : "Detect usage of the short ternary (elvis) operator as introduced in PHP 5.3."
 }, {
   "patternId" : "PHPCompatibility_Operators_RemovedTernaryAssociativity",
-  "title" : "PHP Compatibility related issue (Operators): Removed Ternary Associativity"
+  "title" : "PHP Compatibility related issue (Operators): Removed Ternary Associativity",
+  "description" : "The left-associativity of the ternary operator is deprecated in PHP 7.4 and\nremoved in PHP 8.0."
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_ForbiddenGetClassNull",
-  "title" : "PHP Compatibility related issue (Parameter Values): Forbidden Get Class Null"
+  "title" : "PHP Compatibility related issue (Parameter Values): Forbidden Get Class Null",
+  "description" : "Detect: Passing `null` to `get_class()` is no longer allowed as of PHP 7.2."
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_ForbiddenStripTagsSelfClosingXHTML",
-  "title" : "PHP Compatibility related issue (Parameter Values): Forbidden Strip Tags Self Closing XHTML"
+  "title" : "PHP Compatibility related issue (Parameter Values): Forbidden Strip Tags Self Closing XHTML",
+  "description" : "Since PHP 5.3.4, `strip_tags()` ignores self-closing XHTML tags in allowable_tags"
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_NewArrayReduceInitialType",
-  "title" : "PHP Compatibility related issue (Parameter Values): New Array Reduce Initial Type"
+  "title" : "PHP Compatibility related issue (Parameter Values): New Array Reduce Initial Type",
+  "description" : "In PHP 5.2 and lower, the `$initial` parameter for `array_reduce()` had to be an integer."
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_NewFopenModes",
-  "title" : "PHP Compatibility related issue (Parameter Values): New Fopen Modes"
+  "title" : "PHP Compatibility related issue (Parameter Values): New Fopen Modes",
+  "description" : "Check for valid values for the `fopen()` `$mode` parameter."
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_NewHTMLEntitiesEncodingDefault",
-  "title" : "PHP Compatibility related issue (Parameter Values): New HTML Entities Encoding Default"
+  "title" : "PHP Compatibility related issue (Parameter Values): New HTML Entities Encoding Default",
+  "description" : "As of PHP 5.4, the default character set for `htmlspecialchars()`, `htmlentities()`\nand `html_entity_decode()` is now `UTF-8`, instead of `ISO-8859-1`."
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_NewHashAlgorithms",
-  "title" : "PHP Compatibility related issue (Parameter Values): New Hash Algorithms"
+  "title" : "PHP Compatibility related issue (Parameter Values): New Hash Algorithms",
+  "description" : "Detect the use of newly introduced hash algorithms."
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_NewIDNVariantDefault",
-  "title" : "PHP Compatibility related issue (Parameter Values): New IDN Variant Default"
+  "title" : "PHP Compatibility related issue (Parameter Values): New IDN Variant Default",
+  "description" : "The default value for the `$variant` parameter has changed from `INTL_IDNA_VARIANT_2003`\nto `INTL_IDNA_VARIANT_UTS46` in PHP 7.4."
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_NewIconvMbstringCharsetDefault",
-  "title" : "PHP Compatibility related issue (Parameter Values): New Iconv Mbstring Charset Default"
+  "title" : "PHP Compatibility related issue (Parameter Values): New Iconv Mbstring Charset Default",
+  "description" : "Detect calls to Iconv and Mbstring functions with the optional `$charset`/`$encoding` parameter not set."
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_NewNegativeStringOffset",
-  "title" : "PHP Compatibility related issue (Parameter Values): New Negative String Offset"
+  "title" : "PHP Compatibility related issue (Parameter Values): New Negative String Offset",
+  "description" : "Detect negative string offsets as parameters passed to functions where this\nwas not allowed prior to PHP 7.1."
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_NewPCREModifiers",
-  "title" : "PHP Compatibility related issue (Parameter Values): New PCRE Modifiers"
+  "title" : "PHP Compatibility related issue (Parameter Values): New PCRE Modifiers",
+  "description" : "Check for the use of newly added regex modifiers for PCRE functions."
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_NewPackFormat",
-  "title" : "PHP Compatibility related issue (Parameter Values): New Pack Format"
+  "title" : "PHP Compatibility related issue (Parameter Values): New Pack Format",
+  "description" : "Check for valid values for the `$format` passed to `pack()`."
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_NewPasswordAlgoConstantValues",
-  "title" : "PHP Compatibility related issue (Parameter Values): New Password Algo Constant Values"
+  "title" : "PHP Compatibility related issue (Parameter Values): New Password Algo Constant Values",
+  "description" : "The constant value of the password hash algorithm constants has changed in PHP 7.4."
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_NewProcOpenCmdArray",
-  "title" : "PHP Compatibility related issue (Parameter Values): New Proc Open Cmd Array"
+  "title" : "PHP Compatibility related issue (Parameter Values): New Proc Open Cmd Array",
+  "description" : "As of PHP 7.4, `proc_open()` now also accepts an array instead of a string for the command."
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_NewStripTagsAllowableTagsArray",
-  "title" : "PHP Compatibility related issue (Parameter Values): New Strip Tags Allowable Tags Array"
+  "title" : "PHP Compatibility related issue (Parameter Values): New Strip Tags Allowable Tags Array",
+  "description" : "As of PHP 7.4, `strip_tags()` now also accepts an array of `$allowable_tags`."
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_RemovedHashAlgorithms",
-  "title" : "PHP Compatibility related issue (Parameter Values): Removed Hash Algorithms"
+  "title" : "PHP Compatibility related issue (Parameter Values): Removed Hash Algorithms",
+  "description" : "Detect the use of deprecated and removed hash algorithms."
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_RemovedIconvEncoding",
-  "title" : "PHP Compatibility related issue (Parameter Values): Removed Iconv Encoding"
+  "title" : "PHP Compatibility related issue (Parameter Values): Removed Iconv Encoding",
+  "description" : "Detect passing deprecated `$type` values to `iconv_get_encoding()`."
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_RemovedImplodeFlexibleParamOrder",
-  "title" : "PHP Compatibility related issue (Parameter Values): Removed Implode Flexible Param Order"
+  "title" : "PHP Compatibility related issue (Parameter Values): Removed Implode Flexible Param Order",
+  "description" : "Passing the `$glue` and `$pieces` parameters to `implode()` in reverse order has\nbeen deprecated in PHP 7.4."
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_RemovedMbStrrposEncodingThirdParam",
-  "title" : "PHP Compatibility related issue (Parameter Values): Removed Mb Strrpos Encoding Third Param"
+  "title" : "PHP Compatibility related issue (Parameter Values): Removed Mb Strrpos Encoding Third Param",
+  "description" : "Detect passing `$encoding` to `mb_strrpos()` as 3rd argument."
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_RemovedMbstringModifiers",
-  "title" : "PHP Compatibility related issue (Parameter Values): Removed Mbstring Modifiers"
+  "title" : "PHP Compatibility related issue (Parameter Values): Removed Mbstring Modifiers",
+  "description" : "Check for use of deprecated and removed regex modifiers for MbString regex functions."
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_RemovedNonCryptoHash",
-  "title" : "PHP Compatibility related issue (Parameter Values): Removed Non Crypto Hash"
+  "title" : "PHP Compatibility related issue (Parameter Values): Removed Non Crypto Hash",
+  "description" : "Detect usage of non-cryptographic hashes."
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_RemovedPCREModifiers",
-  "title" : "PHP Compatibility related issue (Parameter Values): Removed PCRE Modifiers"
+  "title" : "PHP Compatibility related issue (Parameter Values): Removed PCRE Modifiers",
+  "description" : "Check for the use of deprecated and removed regex modifiers for PCRE regex functions."
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_RemovedSetlocaleString",
-  "title" : "PHP Compatibility related issue (Parameter Values): Removed Setlocale String"
+  "title" : "PHP Compatibility related issue (Parameter Values): Removed Setlocale String",
+  "description" : "Detect passing a string literal as `$category` to `setlocale()`."
 }, {
   "patternId" : "PHPCompatibility_Syntax_ForbiddenCallTimePassByReference",
-  "title" : "PHP Compatibility related issue (Syntax): Forbidden Call Time Pass By Reference"
+  "title" : "PHP Compatibility related issue (Syntax): Forbidden Call Time Pass By Reference",
+  "description" : "Detect the use of call time pass by reference."
 }, {
   "patternId" : "PHPCompatibility_Syntax_NewArrayStringDereferencing",
-  "title" : "PHP Compatibility related issue (Syntax): New Array String Dereferencing"
+  "title" : "PHP Compatibility related issue (Syntax): New Array String Dereferencing",
+  "description" : "Detect array and string literal dereferencing."
 }, {
   "patternId" : "PHPCompatibility_Syntax_NewArrayUnpacking",
-  "title" : "PHP Compatibility related issue (Syntax): New Array Unpacking"
+  "title" : "PHP Compatibility related issue (Syntax): New Array Unpacking",
+  "description" : "Using the spread operator for unpacking arrays in array expressions is available since PHP 7.4."
 }, {
   "patternId" : "PHPCompatibility_Syntax_NewClassMemberAccess",
-  "title" : "PHP Compatibility related issue (Syntax): New Class Member Access"
+  "title" : "PHP Compatibility related issue (Syntax): New Class Member Access",
+  "description" : "Detect class member access on object instantiation/cloning."
 }, {
   "patternId" : "PHPCompatibility_Syntax_NewDynamicAccessToStatic",
-  "title" : "PHP Compatibility related issue (Syntax): New Dynamic Access To Static"
+  "title" : "PHP Compatibility related issue (Syntax): New Dynamic Access To Static",
+  "description" : "Detect dynamic access to static methods and properties, as well as class constants."
 }, {
   "patternId" : "PHPCompatibility_Syntax_NewFlexibleHeredocNowdoc",
-  "title" : "PHP Compatibility related issue (Syntax): New Flexible Heredoc Nowdoc"
+  "title" : "PHP Compatibility related issue (Syntax): New Flexible Heredoc Nowdoc",
+  "description" : "Detect usage of flexible heredoc/nowdoc and related cross-version incompatibilities."
 }, {
   "patternId" : "PHPCompatibility_Syntax_NewFunctionArrayDereferencing",
-  "title" : "PHP Compatibility related issue (Syntax): New Function Array Dereferencing"
+  "title" : "PHP Compatibility related issue (Syntax): New Function Array Dereferencing",
+  "description" : "Detect function array dereferencing as introduced in PHP 5.4."
 }, {
   "patternId" : "PHPCompatibility_Syntax_NewFunctionCallTrailingComma",
-  "title" : "PHP Compatibility related issue (Syntax): New Function Call Trailing Comma"
+  "title" : "PHP Compatibility related issue (Syntax): New Function Call Trailing Comma",
+  "description" : "Detect trailing comma's in function calls, `isset()` and `unset()` as allowed since PHP 7.3."
 }, {
   "patternId" : "PHPCompatibility_Syntax_NewShortArray",
-  "title" : "PHP Compatibility related issue (Syntax): New Short Array"
+  "title" : "PHP Compatibility related issue (Syntax): New Short Array",
+  "description" : "Detect use of short array syntax which is available since PHP 5.4."
 }, {
   "patternId" : "PHPCompatibility_Syntax_RemovedCurlyBraceArrayAccess",
-  "title" : "PHP Compatibility related issue (Syntax): Removed Curly Brace Array Access"
+  "title" : "PHP Compatibility related issue (Syntax): Removed Curly Brace Array Access",
+  "description" : "Using the curly brace syntax to access array or string offsets has been deprecated in PHP 7.4."
 }, {
   "patternId" : "PHPCompatibility_Syntax_RemovedNewReference",
-  "title" : "PHP Compatibility related issue (Syntax): Removed New Reference"
+  "title" : "PHP Compatibility related issue (Syntax): Removed New Reference",
+  "description" : "Detect the use of assigning the return value of `new` by reference."
 }, {
   "patternId" : "PHPCompatibility_TextStrings_NewUnicodeEscapeSequence",
-  "title" : "PHP Compatibility related issue (Text Strings): New Unicode Escape Sequence"
+  "title" : "PHP Compatibility related issue (Text Strings): New Unicode Escape Sequence",
+  "description" : "PHP 7.0 introduced a Unicode codepoint escape sequence."
 }, {
   "patternId" : "PHPCompatibility_TypeCasts_NewTypeCasts",
-  "title" : "PHP Compatibility related issue (Type Casts): New Type Casts"
+  "title" : "PHP Compatibility related issue (Type Casts): New Type Casts",
+  "description" : "Detect use of newly introduced type casts."
 }, {
   "patternId" : "PHPCompatibility_TypeCasts_RemovedTypeCasts",
-  "title" : "PHP Compatibility related issue (Type Casts): Removed Type Casts"
+  "title" : "PHP Compatibility related issue (Type Casts): Removed Type Casts",
+  "description" : "Detect use of deprecated/removed type casts."
 }, {
   "patternId" : "PHPCompatibility_Upgrade_LowPHP",
-  "title" : "PHP Compatibility related issue (Upgrade): Low PHP"
+  "title" : "PHP Compatibility related issue (Upgrade): Low PHP",
+  "description" : "Add a notification for users of low PHP versions."
 }, {
   "patternId" : "PHPCompatibility_Upgrade_LowPHPCS",
-  "title" : "PHP Compatibility related issue (Upgrade): Low PHPCS"
+  "title" : "PHP Compatibility related issue (Upgrade): Low PHPCS",
+  "description" : "Add a notification for users of low PHPCS versions."
 }, {
   "patternId" : "PHPCompatibility_UseDeclarations_NewGroupUseDeclarations",
-  "title" : "PHP Compatibility related issue (Use Declarations): New Group Use Declarations"
+  "title" : "PHP Compatibility related issue (Use Declarations): New Group Use Declarations",
+  "description" : "Detect group use declarations as introduced in PHP 7.0."
 }, {
   "patternId" : "PHPCompatibility_UseDeclarations_NewUseConstFunction",
-  "title" : "PHP Compatibility related issue (Use Declarations): New Use Const Function"
+  "title" : "PHP Compatibility related issue (Use Declarations): New Use Const Function",
+  "description" : "Detect importing constants and functions via a `use` statement."
 }, {
   "patternId" : "PHPCompatibility_Variables_ForbiddenGlobalVariableVariable",
-  "title" : "PHP Compatibility related issue (Variables): Forbidden Global Variable Variable"
+  "title" : "PHP Compatibility related issue (Variables): Forbidden Global Variable Variable",
+  "description" : "Detect use of `global` with variable variables, support for which has been removed in PHP 7.0."
 }, {
   "patternId" : "PHPCompatibility_Variables_ForbiddenThisUseContexts",
-  "title" : "PHP Compatibility related issue (Variables): Forbidden This Use Contexts"
+  "title" : "PHP Compatibility related issue (Variables): Forbidden This Use Contexts",
+  "description" : "Detect using `$this` in incompatible contexts."
 }, {
   "patternId" : "PHPCompatibility_Variables_NewUniformVariableSyntax",
-  "title" : "PHP Compatibility related issue (Variables): New Uniform Variable Syntax"
+  "title" : "PHP Compatibility related issue (Variables): New Uniform Variable Syntax",
+  "description" : "The interpretation of variable variables has changed in PHP 7.0."
 }, {
   "patternId" : "PHPCompatibility_Variables_RemovedPredefinedGlobalVariables",
-  "title" : "PHP Compatibility related issue (Variables): Removed Predefined Global Variables"
+  "title" : "PHP Compatibility related issue (Variables): Removed Predefined Global Variables",
+  "description" : "Detect the use of removed global variables. Suggests alternatives if available."
 }, {
   "patternId" : "PSR12_Classes_AnonClassDeclaration",
   "title" : "Classes: Anon Class Declaration"
@@ -2065,190 +2305,252 @@
   "title" : "White Space: Superfluous Whitespace"
 }, {
   "patternId" : "WordPress_Arrays_ArrayDeclarationSpacing",
-  "title" : "Arrays: Array Declaration Spacing"
+  "title" : "Arrays: Array Declaration Spacing",
+  "description" : "Enforces WordPress array spacing format."
 }, {
   "patternId" : "WordPress_Arrays_ArrayIndentation",
-  "title" : "Arrays: Array Indentation"
+  "title" : "Arrays: Array Indentation",
+  "description" : "Enforces WordPress array indentation for multi-line arrays."
 }, {
   "patternId" : "WordPress_Arrays_ArrayKeySpacingRestrictions",
-  "title" : "Arrays: Array Key Spacing Restrictions"
+  "title" : "Arrays: Array Key Spacing Restrictions",
+  "description" : "Check for proper spacing in array key references."
 }, {
   "patternId" : "WordPress_Arrays_CommaAfterArrayItem",
-  "title" : "Arrays: Comma After Array Item"
+  "title" : "Arrays: Comma After Array Item",
+  "description" : "Enforces a comma after each array item and the spacing around it."
 }, {
   "patternId" : "WordPress_Arrays_MultipleStatementAlignment",
-  "title" : "Arrays: Multiple Statement Alignment"
+  "title" : "Arrays: Multiple Statement Alignment",
+  "description" : "Enforces alignment of the double arrow assignment operator for multi-item, multi-line arrays."
 }, {
   "patternId" : "WordPress_Classes_ClassInstantiation",
-  "title" : "Classes: Class Instantiation"
+  "title" : "Classes: Class Instantiation",
+  "description" : "Verifies object instantiation statements."
 }, {
   "patternId" : "WordPress_CodeAnalysis_AssignmentInCondition",
-  "title" : "Code Analysis: Assignment In Condition"
+  "title" : "Code Analysis: Assignment In Condition",
+  "description" : "Detects variable assignments being made within conditions."
 }, {
   "patternId" : "WordPress_CodeAnalysis_EmptyStatement",
-  "title" : "Code Analysis: Empty Statement"
+  "title" : "Code Analysis: Empty Statement",
+  "description" : "Checks against empty statements."
 }, {
   "patternId" : "WordPress_CodeAnalysis_EscapedNotTranslated",
-  "title" : "Code Analysis: Escaped Not Translated"
+  "title" : "Code Analysis: Escaped Not Translated",
+  "description" : "Flag calls to escaping functions which look like they may have been intended\nas calls to the \"translate + escape\" sister-function due to the presence of\nmore than one parameter."
 }, {
   "patternId" : "WordPress_DB_DirectDatabaseQuery",
-  "title" : "DB: Direct Database Query"
+  "title" : "DB: Direct Database Query",
+  "description" : "Flag Database direct queries."
 }, {
   "patternId" : "WordPress_DB_PreparedSQL",
-  "title" : "DB: Prepared SQL"
+  "title" : "DB: Prepared SQL",
+  "description" : "Sniff for prepared SQL."
 }, {
   "patternId" : "WordPress_DB_PreparedSQLPlaceholders",
-  "title" : "DB: Prepared SQL Placeholders"
+  "title" : "DB: Prepared SQL Placeholders",
+  "description" : "Check for incorrect use of the $wpdb->prepare method."
 }, {
   "patternId" : "WordPress_DB_RestrictedClasses",
-  "title" : "DB: Restricted Classes"
+  "title" : "DB: Restricted Classes",
+  "description" : "Verifies that no database related PHP classes are used."
 }, {
   "patternId" : "WordPress_DB_RestrictedFunctions",
-  "title" : "DB: Restricted Functions"
+  "title" : "DB: Restricted Functions",
+  "description" : "Verifies that no database related PHP functions are used."
 }, {
   "patternId" : "WordPress_DB_SlowDBQuery",
-  "title" : "DB: Slow DB Query"
+  "title" : "DB: Slow DB Query",
+  "description" : "Flag potentially slow queries."
 }, {
   "patternId" : "WordPress_DateTime_CurrentTimeTimestamp",
-  "title" : "Date Time: Current Time Timestamp"
+  "title" : "Date Time: Current Time Timestamp",
+  "description" : "Don't use current_time() to get a (timezone corrected) \"timestamp\"."
 }, {
   "patternId" : "WordPress_DateTime_RestrictedFunctions",
-  "title" : "Date Time: Restricted Functions"
+  "title" : "Date Time: Restricted Functions",
+  "description" : "Forbids the use of various native DateTime related PHP/WP functions and suggests alternatives."
 }, {
   "patternId" : "WordPress_Files_FileName",
-  "title" : "Files: File Name"
+  "title" : "Files: File Name",
+  "description" : "Ensures filenames do not contain underscores."
 }, {
   "patternId" : "WordPress_NamingConventions_PrefixAllGlobals",
-  "title" : "Naming Conventions: Prefix All Globals (Deprecated)"
+  "title" : "Naming Conventions: Prefix All Globals (Deprecated)",
+  "description" : "Verify that everything defined in the global namespace is prefixed with a theme/plugin specific prefix."
 }, {
   "patternId" : "WordPress_NamingConventions_ValidFunctionName",
-  "title" : "Naming Conventions: Valid Function Name (Deprecated)"
+  "title" : "Naming Conventions: Valid Function Name (Deprecated)",
+  "description" : "Enforces WordPress function name and method name format, based upon Squiz code."
 }, {
   "patternId" : "WordPress_NamingConventions_ValidHookName",
-  "title" : "Naming Conventions: Valid Hook Name"
+  "title" : "Naming Conventions: Valid Hook Name",
+  "description" : "Use lowercase letters in action and filter names. Separate words via underscores."
 }, {
   "patternId" : "WordPress_NamingConventions_ValidPostTypeSlug",
-  "title" : "Naming Conventions: Valid Post Type Slug"
+  "title" : "Naming Conventions: Valid Post Type Slug",
+  "description" : "Validates post type names."
 }, {
   "patternId" : "WordPress_NamingConventions_ValidVariableName",
-  "title" : "Naming Conventions: Valid Variable Name"
+  "title" : "Naming Conventions: Valid Variable Name",
+  "description" : "Checks the naming of variables and member variables."
 }, {
   "patternId" : "WordPress_PHP_DevelopmentFunctions",
-  "title" : "PHP: Development Functions"
+  "title" : "PHP: Development Functions",
+  "description" : "Restrict the use of various development functions."
 }, {
   "patternId" : "WordPress_PHP_DisallowShortTernary",
-  "title" : "PHP: Disallow Short Ternary"
+  "title" : "PHP: Disallow Short Ternary",
+  "description" : "Disallow the use of short ternaries."
 }, {
   "patternId" : "WordPress_PHP_DiscouragedPHPFunctions",
-  "title" : "PHP: Discouraged PHP Functions"
+  "title" : "PHP: Discouraged PHP Functions",
+  "description" : "Discourages the use of various native PHP functions and suggests alternatives."
 }, {
   "patternId" : "WordPress_PHP_DontExtract",
-  "title" : "PHP: Dont Extract"
+  "title" : "PHP: Dont Extract",
+  "description" : "Restricts the usage of extract()."
 }, {
   "patternId" : "WordPress_PHP_IniSet",
-  "title" : "PHP: Ini Set"
+  "title" : "PHP: Ini Set",
+  "description" : "Detect use of the `ini_set()` function."
 }, {
   "patternId" : "WordPress_PHP_NoSilencedErrors",
-  "title" : "PHP: No Silenced Errors"
+  "title" : "PHP: No Silenced Errors",
+  "description" : "Discourage the use of the PHP error silencing operator."
 }, {
   "patternId" : "WordPress_PHP_POSIXFunctions",
-  "title" : "PHP: POSIX Functions"
+  "title" : "PHP: POSIX Functions",
+  "description" : "Perl compatible regular expressions (PCRE, preg_ functions) should be used in preference\nto their POSIX counterparts."
 }, {
   "patternId" : "WordPress_PHP_PregQuoteDelimiter",
-  "title" : "PHP: Preg Quote Delimiter"
+  "title" : "PHP: Preg Quote Delimiter",
+  "description" : "Flag calling preg_quote() without the second ($delimiter) parameter."
 }, {
   "patternId" : "WordPress_PHP_RestrictedPHPFunctions",
-  "title" : "PHP: Restricted PHP Functions"
+  "title" : "PHP: Restricted PHP Functions",
+  "description" : "Forbids the use of various native PHP functions and suggests alternatives."
 }, {
   "patternId" : "WordPress_PHP_StrictComparisons",
-  "title" : "PHP: Strict Comparisons"
+  "title" : "PHP: Strict Comparisons",
+  "description" : "Enforces Strict Comparison checks, based upon Squiz code."
 }, {
   "patternId" : "WordPress_PHP_StrictInArray",
-  "title" : "PHP: Strict In Array"
+  "title" : "PHP: Strict In Array",
+  "description" : "Flag calling in_array(), array_search() and array_keys() without true as the third parameter."
 }, {
   "patternId" : "WordPress_PHP_TypeCasts",
-  "title" : "PHP: Type Casts"
+  "title" : "PHP: Type Casts",
+  "description" : "Verifies the correct usage of type cast keywords."
 }, {
   "patternId" : "WordPress_PHP_YodaConditions",
-  "title" : "PHP: Yoda Conditions"
+  "title" : "PHP: Yoda Conditions",
+  "description" : "Enforces Yoda conditional statements."
 }, {
   "patternId" : "WordPress_Security_EscapeOutput",
-  "title" : "Security: Escape Output"
+  "title" : "Security: Escape Output",
+  "description" : "Verifies that all outputted strings are escaped."
 }, {
   "patternId" : "WordPress_Security_NonceVerification",
-  "title" : "Security: Nonce Verification"
+  "title" : "Security: Nonce Verification",
+  "description" : "Checks that nonce verification accompanies form processing."
 }, {
   "patternId" : "WordPress_Security_PluginMenuSlug",
-  "title" : "Security: Plugin Menu Slug"
+  "title" : "Security: Plugin Menu Slug",
+  "description" : "Warn about __FILE__ for page registration."
 }, {
   "patternId" : "WordPress_Security_SafeRedirect",
-  "title" : "Security: Safe Redirect"
+  "title" : "Security: Safe Redirect",
+  "description" : "Encourages use of wp_safe_redirect() to avoid open redirect vulnerabilities."
 }, {
   "patternId" : "WordPress_Security_ValidatedSanitizedInput",
-  "title" : "Security: Validated Sanitized Input"
+  "title" : "Security: Validated Sanitized Input",
+  "description" : "Flag any non-validated/sanitized input ( _GET / _POST / etc. )."
 }, {
   "patternId" : "WordPress_Utils_I18nTextDomainFixer",
-  "title" : "Utils: I18n Text Domain Fixer"
+  "title" : "Utils: I18n Text Domain Fixer",
+  "description" : "Comprehensive I18n text domain fixer tool."
 }, {
   "patternId" : "WordPress_WP_AlternativeFunctions",
-  "title" : "WP: Alternative Functions"
+  "title" : "WP: Alternative Functions",
+  "description" : "Discourages the use of various functions and suggests (WordPress) alternatives."
 }, {
   "patternId" : "WordPress_WP_CapitalPDangit",
-  "title" : "WP: Capital P Dangit"
+  "title" : "WP: Capital P Dangit",
+  "description" : "Capital P Dangit!"
 }, {
   "patternId" : "WordPress_WP_CronInterval",
-  "title" : "WP: Cron Interval"
+  "title" : "WP: Cron Interval",
+  "description" : "Flag cron schedules less than 15 minutes."
 }, {
   "patternId" : "WordPress_WP_DeprecatedClasses",
-  "title" : "WP: Deprecated Classes"
+  "title" : "WP: Deprecated Classes",
+  "description" : "Restricts the use of deprecated WordPress classes and suggests alternatives."
 }, {
   "patternId" : "WordPress_WP_DeprecatedFunctions",
-  "title" : "WP: Deprecated Functions"
+  "title" : "WP: Deprecated Functions",
+  "description" : "Restricts the use of various deprecated WordPress functions and suggests alternatives."
 }, {
   "patternId" : "WordPress_WP_DeprecatedParameterValues",
-  "title" : "WP: Deprecated Parameter Values"
+  "title" : "WP: Deprecated Parameter Values",
+  "description" : "Check for usage of deprecated parameter values in WP functions and provide alternative based on the parameter passed."
 }, {
   "patternId" : "WordPress_WP_DeprecatedParameters",
-  "title" : "WP: Deprecated Parameters"
+  "title" : "WP: Deprecated Parameters",
+  "description" : "Check for usage of deprecated parameters in WP functions and suggest alternative based on the parameter passed."
 }, {
   "patternId" : "WordPress_WP_DiscouragedConstants",
-  "title" : "WP: Discouraged Constants"
+  "title" : "WP: Discouraged Constants",
+  "description" : "Warns against usage of discouraged WP CONSTANTS and recommends alternatives."
 }, {
   "patternId" : "WordPress_WP_DiscouragedFunctions",
-  "title" : "WP: Discouraged Functions"
+  "title" : "WP: Discouraged Functions",
+  "description" : "Discourages the use of various WordPress functions and suggests alternatives."
 }, {
   "patternId" : "WordPress_WP_EnqueuedResourceParameters",
-  "title" : "WP: Enqueued Resource Parameters"
+  "title" : "WP: Enqueued Resource Parameters",
+  "description" : "This checks the enqueued 4th and 5th parameters to make sure the version and in_footer are set."
 }, {
   "patternId" : "WordPress_WP_EnqueuedResources",
-  "title" : "WP: Enqueued Resources"
+  "title" : "WP: Enqueued Resources",
+  "description" : "Makes sure scripts and styles are enqueued and not explicitly echo'd."
 }, {
   "patternId" : "WordPress_WP_GlobalVariablesOverride",
-  "title" : "WP: Global Variables Override"
+  "title" : "WP: Global Variables Override",
+  "description" : "Warns about overwriting WordPress native global variables."
 }, {
   "patternId" : "WordPress_WP_I18n",
-  "title" : "WP: I18n"
+  "title" : "WP: I18n",
+  "description" : "Makes sure WP internationalization functions are used properly."
 }, {
   "patternId" : "WordPress_WP_PostsPerPage",
-  "title" : "WP: Posts Per Page"
+  "title" : "WP: Posts Per Page",
+  "description" : "Flag returning high or infinite posts_per_page."
 }, {
   "patternId" : "WordPress_WP_TimezoneChange",
-  "title" : "WP: Timezone Change (Deprecated)"
+  "title" : "WP: Timezone Change (Deprecated)",
+  "description" : "Disallow the changing of timezone."
 }, {
   "patternId" : "WordPress_WhiteSpace_CastStructureSpacing",
-  "title" : "White Space: Cast Structure Spacing"
+  "title" : "White Space: Cast Structure Spacing",
+  "description" : "Ensure cast statements are preceded by whitespace."
 }, {
   "patternId" : "WordPress_WhiteSpace_ControlStructureSpacing",
-  "title" : "White Space: Control Structure Spacing"
+  "title" : "White Space: Control Structure Spacing",
+  "description" : "Enforces spacing around logical operators and assignments, based upon Squiz code."
 }, {
   "patternId" : "WordPress_WhiteSpace_DisallowInlineTabs",
-  "title" : "White Space: Disallow Inline Tabs"
+  "title" : "White Space: Disallow Inline Tabs",
+  "description" : "Enforces using spaces for mid-line alignment."
 }, {
   "patternId" : "WordPress_WhiteSpace_OperatorSpacing",
-  "title" : "White Space: Operator Spacing"
+  "title" : "White Space: Operator Spacing",
+  "description" : "Verify operator spacing, uses the Squiz sniff, but additionally also sniffs for the `!` (boolean not) operator."
 }, {
   "patternId" : "WordPress_WhiteSpace_PrecisionAlignment",
-  "title" : "White Space: Precision Alignment"
+  "title" : "White Space: Precision Alignment",
+  "description" : "Warn on line indentation ending with spaces for precision alignment."
 }, {
   "patternId" : "Zend_Debug_CodeAnalyzer",
   "title" : "Zend Code Analyzer",
