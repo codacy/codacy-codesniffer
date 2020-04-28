@@ -31,7 +31,7 @@ You can follow the instructions there to make sure your tool is working as expec
 
 Requirements:
 
-- phpdoc
+-   phpdoc
 
     ```bash
     curl -s http://getcomposer.org/installer | php
@@ -53,6 +53,65 @@ This will create updated `patterns.json`, `description.json` and the individual 
 PHP CodeSniffer can be configured by adding a `phpcs.xml` file to the source code.
 
 Currently, the tool supports this configuration file except from one feature - setting installed_paths: `<config name="installed_paths" />`
+
+## Add new Codesniffer plugin
+
+To add a new plugin to Codesniffer:
+
+1.  Add the plugin dependency to `require` inside `composer.json`. This depedency must be available on [Packagist](https://packagist.org/)
+
+2.  Add to `scala/codacy/codesniffer/docsgen/VersionsHelper.scala` the plugin version:
+
+    ```scala
+    lazy val newPlugin = properties("pluginNamespace/pluginName").str
+    ```
+
+3.  Implement the plugin documentation parser inside `scala/codacy/codesniffer/docsgen/parsers`. The parser must extend `DocsParser` and override the following:
+
+    | Name                                                                                                                                        | Description                                                                                     |
+    | ------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+    | `override val repositoryURL`                                                                                                                | Plugin's git repository                                                                         |
+    | `override val checkoutCommit`                                                                                                               | Commit related to the version on plugin's git repository (you can use the version tag for that) |
+    | `override val sniffRegex`                                                                                                                   | Regex to get all Sniffs implementation files                                                    |
+    | `override def patternIdPartsFor(relativizedFilePath: String): PatternIdParts`                                                               | Get the pattern id parts from pattern path                                                      |
+    | `override def descriptionWithDocs(rootDir: File, patternIdParts: PatternIdParts, patternFile: File): (Pattern.Description, Option[String])` | Get tuple with small and extended description for pattern                                       |
+
+
+    Example:
+
+    ```scala
+    class DrupalCoderDocsParser extends DocsParser {
+
+        override val repositoryURL = "https://github.com/pfrenssen/coder.git"
+
+        override val checkoutCommit: String = VersionsHelper.drupalCoder
+
+        override val sniffRegex: Regex = """.*coder_sniffer\/(Drupal)\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
+
+        override def patternIdPartsFor(relativizedFilePath: String): PatternIdParts = {
+            val sniffRegex(drupalCoderVersion, sniffType, patternName) = relativizedFilePath
+            PatternIdParts(drupalCoderVersion, sniffType, patternName)
+        }
+
+        override def descriptionWithDocs(rootDir: File,
+                                        patternIdParts: PatternIdParts,
+                                        patternFile: File): (Pattern.Description, Option[String]) = {
+            (description(patternIdParts, rootDir), this.parseExtendedDescription("Drupal\\Sniffs", patternIdParts, rootDir))
+        }
+
+        private[this] def description(patternIdParts: PatternIdParts, rootDir: File): Pattern.Description = {
+            val caseRegexPattern = """((?<=\p{Ll})\p{Lu}|\p{Lu}(?=\p{Ll}))""".r
+            val patternName = caseRegexPattern.replaceAllIn(patternIdParts.patternName, " $1").trim
+            val sniffName = caseRegexPattern.replaceAllIn(patternIdParts.sniffType, " $1").trim
+            val title = Pattern.Title(s"$sniffName: $patternName")
+            val extended = this.parseDescription("Drupal\\Sniffs", patternIdParts, rootDir)
+            Pattern.Description(patternIdParts.patternId, title, extended, None, None)
+        }
+
+    }
+    ```
+
+4.  [Generate the documentation](#generating-the-documentation)
 
 ## What is Codacy?
 
