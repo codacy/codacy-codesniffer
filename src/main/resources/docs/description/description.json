@@ -55,7 +55,7 @@
 }, {
   "patternId" : "Drupal_Commenting_Deprecated",
   "title" : "Commenting: Deprecated",
-  "description" : "Ensures standard format of a @deprecated text."
+  "description" : "Ensures standard format of @ deprecated tag text in docblock."
 }, {
   "patternId" : "Drupal_Commenting_DocComment",
   "title" : "Commenting: Doc Comment",
@@ -1641,6 +1641,9 @@
   "patternId" : "SlevomatCodingStandard_Classes_ClassConstantVisibility",
   "title" : "Classes: Class Constant Visibility"
 }, {
+  "patternId" : "SlevomatCodingStandard_Classes_ClassMemberSpacing",
+  "title" : "Classes: Class Member Spacing"
+}, {
   "patternId" : "SlevomatCodingStandard_Classes_ClassStructure",
   "title" : "Classes: Class Structure"
 }, {
@@ -1818,6 +1821,9 @@
   "patternId" : "SlevomatCodingStandard_Functions_StaticClosure",
   "title" : "Functions: Static Closure"
 }, {
+  "patternId" : "SlevomatCodingStandard_Functions_StrictCall",
+  "title" : "Functions: Strict Call"
+}, {
   "patternId" : "SlevomatCodingStandard_Functions_TrailingCommaInCall",
   "title" : "Functions: Trailing Comma In Call"
 }, {
@@ -1913,6 +1919,9 @@
 }, {
   "patternId" : "SlevomatCodingStandard_PHP_DisallowReference",
   "title" : "PHP: Disallow Reference"
+}, {
+  "patternId" : "SlevomatCodingStandard_PHP_ForbiddenClasses",
+  "title" : "PHP: Forbidden Classes"
 }, {
   "patternId" : "SlevomatCodingStandard_PHP_OptimizedFunctionsWithoutUnpacking",
   "title" : "PHP: Optimized Functions Without Unpacking"

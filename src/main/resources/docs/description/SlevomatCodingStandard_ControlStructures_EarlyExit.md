@@ -25,3 +25,17 @@ foreach ($values as $value) {
 	}
 }
 ```
+
+* `ignoreTrailingIfWithOneInstruction`: ignores `if` that has only one instruction and is on the last position in scope, like this:
+
+```php
+foreach ($values as $value) {
+	$value .= 'whatever';
+
+	if ($value) {
+		doSomething(function () {
+			// Anything
+		});
+	}
+}
+```
