@@ -2000,6 +2000,14 @@
       "default" : false
     } ]
   }, {
+    "patternId" : "SlevomatCodingStandard_Classes_ClassMemberSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "linesCountBetweenMembers",
+      "default" : 1
+    } ]
+  }, {
     "patternId" : "SlevomatCodingStandard_Classes_ClassStructure",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -2201,7 +2209,11 @@
   }, {
     "patternId" : "SlevomatCodingStandard_ControlStructures_AssignmentInCondition",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "ignoreAssignmentsInsideFunctionCalls",
+      "default" : false
+    } ]
   }, {
     "patternId" : "SlevomatCodingStandard_ControlStructures_BlockControlStructureSpacing",
     "level" : "Info",
@@ -2248,6 +2260,9 @@
       "default" : false
     }, {
       "name" : "ignoreOneLineTrailingIf",
+      "default" : false
+    }, {
+      "name" : "ignoreTrailingIfWithOneInstruction",
       "default" : false
     } ]
   }, {
@@ -2411,6 +2426,10 @@
     } ]
   }, {
     "patternId" : "SlevomatCodingStandard_Functions_StaticClosure",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Functions_StrictCall",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
@@ -2634,6 +2653,10 @@
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
+    "patternId" : "SlevomatCodingStandard_PHP_ForbiddenClasses",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
     "patternId" : "SlevomatCodingStandard_PHP_OptimizedFunctionsWithoutUnpacking",
     "level" : "Info",
     "category" : "CodeStyle"
@@ -2780,6 +2803,9 @@
       "default" : false
     }, {
       "name" : "ignoreSpacesInAnnotation",
+      "default" : false
+    }, {
+      "name" : "ignoreSpacesInComment",
       "default" : false
     } ]
   }, {
