@@ -2313,6 +2313,182 @@
   "patternId" : "Squiz_WhiteSpace_SuperfluousWhitespace",
   "title" : "White Space: Superfluous Whitespace"
 }, {
+  "patternId" : "WordPressVIPMinimum_Classes_DeclarationCompatibility",
+  "title" : "Classes: Declaration Compatibility",
+  "description" : "Class WordPressVIPMinimum_Sniffs_Classes_DeclarationCompatibilitySniff"
+}, {
+  "patternId" : "WordPressVIPMinimum_Classes_RestrictedExtendClasses",
+  "title" : "Classes: Restricted Extend Classes",
+  "description" : "WordPressVIPMinimum_Sniffs_Classes_RestrictedExtendClassesSniff."
+}, {
+  "patternId" : "WordPressVIPMinimum_Compatibility_Zoninator",
+  "title" : "Compatibility: Zoninator",
+  "description" : "This sniff reminds the developers to check whether the WordPress Core REST API is enabled\nalong with loading v0.8 and above."
+}, {
+  "patternId" : "WordPressVIPMinimum_Constants_ConstantString",
+  "title" : "Constants: Constant String",
+  "description" : "Sniff for properly using constant name when checking whether a constant is defined."
+}, {
+  "patternId" : "WordPressVIPMinimum_Constants_RestrictedConstants",
+  "title" : "Constants: Restricted Constants",
+  "description" : "Restricts usage of some constants."
+}, {
+  "patternId" : "WordPressVIPMinimum_Files_IncludingFile",
+  "title" : "Files: Including File",
+  "description" : "WordPressVIPMinimum_Sniffs_Files_IncludingFileSniff."
+}, {
+  "patternId" : "WordPressVIPMinimum_Files_IncludingNonPHPFile",
+  "title" : "Files: Including Non PHP File",
+  "description" : "WordPressVIPMinimum_Sniffs_Files_IncludingNonPHPFileSniff."
+}, {
+  "patternId" : "WordPressVIPMinimum_Functions_CheckReturnValue",
+  "title" : "Functions: Check Return Value",
+  "description" : "This sniff enforces checking the return value of a function before passing it to another one."
+}, {
+  "patternId" : "WordPressVIPMinimum_Functions_DynamicCalls",
+  "title" : "Functions: Dynamic Calls",
+  "description" : "This sniff enforces that certain functions are not\ndynamically called."
+}, {
+  "patternId" : "WordPressVIPMinimum_Functions_RestrictedFunctions",
+  "title" : "Functions: Restricted Functions",
+  "description" : "Restricts usage of some functions in VIP context."
+}, {
+  "patternId" : "WordPressVIPMinimum_Functions_StripTags",
+  "title" : "Functions: Strip Tags",
+  "description" : "This sniff ensures proper tag stripping."
+}, {
+  "patternId" : "WordPressVIPMinimum_Hooks_AlwaysReturnInFilter",
+  "title" : "Hooks: Always Return In Filter",
+  "description" : "This sniff validates that filters always return a value"
+}, {
+  "patternId" : "WordPressVIPMinimum_Hooks_PreGetPosts",
+  "title" : "Hooks: Pre Get Posts",
+  "description" : "This sniff validates a proper usage of pre_get_posts action callback."
+}, {
+  "patternId" : "WordPressVIPMinimum_Hooks_RestrictedHooks",
+  "title" : "Hooks: Restricted Hooks",
+  "description" : "This sniff restricts usage of some action and filter hooks."
+}, {
+  "patternId" : "WordPressVIPMinimum_JS_DangerouslySetInnerHTML",
+  "title" : "JS: Dangerously Set Inner HTML",
+  "description" : "WordPressVIPMinimum_Sniffs_JS_DangerouslySetInnerHTMLSniff."
+}, {
+  "patternId" : "WordPressVIPMinimum_JS_HTMLExecutingFunctions",
+  "title" : "JS: HTML Executing Functions",
+  "description" : "WordPressVIPMinimum_Sniffs_JS_HTMLExecutingFunctions."
+}, {
+  "patternId" : "WordPressVIPMinimum_JS_InnerHTML",
+  "title" : "JS: Inner HTML",
+  "description" : "WordPressVIPMinimum_Sniffs_JS_InnerHTMLSniff."
+}, {
+  "patternId" : "WordPressVIPMinimum_JS_StringConcat",
+  "title" : "JS: String Concat",
+  "description" : "WordPressVIPMinimum_Sniffs_JS_StringConcatSniff."
+}, {
+  "patternId" : "WordPressVIPMinimum_JS_StrippingTags",
+  "title" : "JS: Stripping Tags",
+  "description" : "WordPressVIPMinimum_Sniffs_JS_StrippingTagsSniff."
+}, {
+  "patternId" : "WordPressVIPMinimum_JS_Window",
+  "title" : "JS: Window",
+  "description" : "WordPressVIPMinimum_Sniffs_JS_WindowSniff."
+}, {
+  "patternId" : "WordPressVIPMinimum_Performance_BatcacheWhitelistedParams",
+  "title" : "Performance: Batcache Whitelisted Params",
+  "description" : "Checks whether proper escaping function is used."
+}, {
+  "patternId" : "WordPressVIPMinimum_Performance_CacheValueOverride",
+  "title" : "Performance: Cache Value Override",
+  "description" : "This sniff enforces checking the return value of a function before passing it to another one."
+}, {
+  "patternId" : "WordPressVIPMinimum_Performance_FetchingRemoteData",
+  "title" : "Performance: Fetching Remote Data",
+  "description" : "Restricts usage of rewrite rules flushing"
+}, {
+  "patternId" : "WordPressVIPMinimum_Performance_LowExpiryCacheTime",
+  "title" : "Performance: Low Expiry Cache Time",
+  "description" : "This sniff throws a warning when low cache times are set."
+}, {
+  "patternId" : "WordPressVIPMinimum_Performance_NoPaging",
+  "title" : "Performance: No Paging",
+  "description" : "Flag returning high or infinite posts_per_page."
+}, {
+  "patternId" : "WordPressVIPMinimum_Performance_OrderByRand",
+  "title" : "Performance: Order By Rand",
+  "description" : "Flag using orderby => rand."
+}, {
+  "patternId" : "WordPressVIPMinimum_Performance_RegexpCompare",
+  "title" : "Performance: Regexp Compare",
+  "description" : "Flag REGEXP and NOT REGEXP in meta compare"
+}, {
+  "patternId" : "WordPressVIPMinimum_Performance_RemoteRequestTimeout",
+  "title" : "Performance: Remote Request Timeout",
+  "description" : "Flag REGEXP and NOT REGEXP in meta compare"
+}, {
+  "patternId" : "WordPressVIPMinimum_Performance_TaxonomyMetaInOptions",
+  "title" : "Performance: Taxonomy Meta In Options",
+  "description" : "Restricts the implementation of taxonomy term meta via options."
+}, {
+  "patternId" : "WordPressVIPMinimum_Performance_WPQueryParams",
+  "title" : "Performance: WP Query Params",
+  "description" : "Flag suspicious WP_Query and get_posts params."
+}, {
+  "patternId" : "WordPressVIPMinimum_Security_EscapingVoidReturnFunctions",
+  "title" : "Security: Escaping Void Return Functions",
+  "description" : "Flag functions that don't return anything, yet are wrapped in an escaping function call."
+}, {
+  "patternId" : "WordPressVIPMinimum_Security_ExitAfterRedirect",
+  "title" : "Security: Exit After Redirect",
+  "description" : "Require `exit;` being called after wp_redirect and wp_safe_redirect."
+}, {
+  "patternId" : "WordPressVIPMinimum_Security_Mustache",
+  "title" : "Security: Mustache",
+  "description" : "Looks for instances of unescaped output for Mustache templating engine and Handlebars.js."
+}, {
+  "patternId" : "WordPressVIPMinimum_Security_PHPFilterFunctions",
+  "title" : "Security: PHP Filter Functions",
+  "description" : "This sniff ensures that proper sanitization is occurring when PHP's filter_* functions are used."
+}, {
+  "patternId" : "WordPressVIPMinimum_Security_ProperEscapingFunction",
+  "title" : "Security: Proper Escaping Function",
+  "description" : "Checks whether proper escaping function is used."
+}, {
+  "patternId" : "WordPressVIPMinimum_Security_StaticStrreplace",
+  "title" : "Security: Static Strreplace",
+  "description" : "Restricts usage of str_replace with all 3 params being static."
+}, {
+  "patternId" : "WordPressVIPMinimum_Security_Twig",
+  "title" : "Security: Twig",
+  "description" : "Looks for instances of unescaped output for Twig templating engine."
+}, {
+  "patternId" : "WordPressVIPMinimum_Security_Underscorejs",
+  "title" : "Security: Underscorejs",
+  "description" : "Looks for instances of unescaped output for Underscore.js templating engine."
+}, {
+  "patternId" : "WordPressVIPMinimum_Security_Vuejs",
+  "title" : "Security: Vuejs",
+  "description" : "Looks for instances of unescaped output for Twig templating engine."
+}, {
+  "patternId" : "WordPressVIPMinimum_UserExperience_AdminBarRemoval",
+  "title" : "User Experience: Admin Bar Removal",
+  "description" : "Discourages removal of the admin bar."
+}, {
+  "patternId" : "WordPressVIPMinimum_Variables_RestrictedVariables",
+  "title" : "Variables: Restricted Variables",
+  "description" : "Restricts usage of some variables in VIP context."
+}, {
+  "patternId" : "WordPressVIPMinimum_Variables_ServerVariables",
+  "title" : "Variables: Server Variables",
+  "description" : "Restricts usage of some server variables."
+}, {
+  "patternId" : "WordPressVIPMinimum_Variables_VariableAnalysis",
+  "title" : "Variables: Variable Analysis",
+  "description" : "Checks the for undefined function variables."
+}, {
+  "patternId" : "WordPressVIPMinimum_VersionControl_MergeConflict",
+  "title" : "Version Control: Merge Conflict",
+  "description" : "Looks for merge conflict residues in files."
+}, {
   "patternId" : "WordPress_Arrays_ArrayDeclarationSpacing",
   "title" : "Arrays: Array Declaration Spacing",
   "description" : "Enforces WordPress array spacing format."

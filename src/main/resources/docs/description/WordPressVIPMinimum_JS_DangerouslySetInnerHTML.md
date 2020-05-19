@@ -1,0 +1,2 @@
+WordPressVIPMinimum_Sniffs_JS_DangerouslySetInnerHTMLSniff.
+Looks for instances of React's dangerouslySetInnerHMTL.

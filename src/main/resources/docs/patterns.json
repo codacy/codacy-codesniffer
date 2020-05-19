@@ -3298,6 +3298,193 @@
       "default" : false
     } ]
   }, {
+    "patternId" : "WordPressVIPMinimum_Classes_DeclarationCompatibility",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Classes_RestrictedExtendClasses",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Compatibility_Zoninator",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Constants_ConstantString",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Constants_RestrictedConstants",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Files_IncludingFile",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Files_IncludingNonPHPFile",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Functions_CheckReturnValue",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Functions_DynamicCalls",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Functions_RestrictedFunctions",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Functions_StripTags",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Hooks_AlwaysReturnInFilter",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Hooks_PreGetPosts",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Hooks_RestrictedHooks",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_JS_DangerouslySetInnerHTML",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_JS_HTMLExecutingFunctions",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_JS_InnerHTML",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_JS_StringConcat",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_JS_StrippingTags",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_JS_Window",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Performance_BatcacheWhitelistedParams",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Performance_CacheValueOverride",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Performance_FetchingRemoteData",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Performance_LowExpiryCacheTime",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Performance_NoPaging",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Performance_OrderByRand",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Performance_RegexpCompare",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Performance_RemoteRequestTimeout",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Performance_TaxonomyMetaInOptions",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Performance_WPQueryParams",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Security_EscapingVoidReturnFunctions",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Security_ExitAfterRedirect",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Security_Mustache",
+    "level" : "Warning",
+    "category" : "Security"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Security_PHPFilterFunctions",
+    "level" : "Warning",
+    "category" : "Security"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Security_ProperEscapingFunction",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Security_StaticStrreplace",
+    "level" : "Error",
+    "category" : "Security"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Security_Twig",
+    "level" : "Warning",
+    "category" : "Security"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Security_Underscorejs",
+    "level" : "Warning",
+    "category" : "Security"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Security_Vuejs",
+    "level" : "Warning",
+    "category" : "Security"
+  }, {
+    "patternId" : "WordPressVIPMinimum_UserExperience_AdminBarRemoval",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "remove_only",
+      "default" : true
+    } ]
+  }, {
+    "patternId" : "WordPressVIPMinimum_Variables_RestrictedVariables",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Variables_ServerVariables",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "WordPressVIPMinimum_Variables_VariableAnalysis",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "allowUnusedCaughtExceptions",
+      "default" : false
+    }, {
+      "name" : "allowUnusedFunctionParameters",
+      "default" : true
+    } ]
+  }, {
+    "patternId" : "WordPressVIPMinimum_VersionControl_MergeConflict",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
     "patternId" : "WordPress_Arrays_ArrayDeclarationSpacing",
     "level" : "Info",
     "category" : "CodeStyle",

@@ -18,5 +18,6 @@ object VersionsHelper {
   lazy val phpcsSecurityAudit = properties("pheromone/phpcs-security-audit").str
   lazy val slevomatCS = properties("slevomat/coding-standard").str
   lazy val drupalCoder = properties("drupal/coder").str
+  lazy val vipWordpress = properties("automattic/vipwpcs").str
 
 }
