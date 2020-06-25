@@ -3298,6 +3298,106 @@
       "default" : false
     } ]
   }, {
+    "patternId" : "Symfony_Arrays_MultiLineArrayComma",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Symfony_Classes_MultipleClassesOneFile",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Symfony_Classes_PropertyDeclaration",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Symfony_Commenting_Annotations",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Symfony_Commenting_ClassComment",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Symfony_Commenting_FunctionComment",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Symfony_Commenting_License",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Symfony_Commenting_TypeHinting",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Symfony_ControlStructure_IdenticalComparison",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Symfony_ControlStructure_UnaryOperators",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Symfony_ControlStructure_YodaConditions",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Symfony_Errors_ExceptionMessage",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Symfony_Errors_UserDeprecated",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Symfony_Files_AlphanumericFilename",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Symfony_Formatting_BlankLineBeforeReturn",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Symfony_Formatting_ReturnOrThrow",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Symfony_Functions_Arguments",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Symfony_Functions_ReturnType",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Symfony_Functions_ScopeOrder",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Symfony_NamingConventions_ValidClassName",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Symfony_Objects_ObjectInstantiation",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Symfony_Whitespace_AssignmentSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Symfony_Whitespace_BinaryOperatorSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Symfony_Whitespace_CommaSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Symfony_Whitespace_DiscourageFitzinator",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
     "patternId" : "WordPressVIPMinimum_Classes_DeclarationCompatibility",
     "level" : "Info",
     "category" : "CodeStyle"

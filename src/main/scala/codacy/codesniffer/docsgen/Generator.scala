@@ -28,7 +28,8 @@ class Generator() {
          new PHPCSSecurityAuditDocsParser(),
          new SlevomatCSDocsParser(),
          new DrupalCoderDocsParser(),
-         new VipWordPressDocsParser())
+         new VipWordPressDocsParser(),
+         new SymfonyDocsParser())
 
   def run(): Unit = {
     docsDir.createDirectories()

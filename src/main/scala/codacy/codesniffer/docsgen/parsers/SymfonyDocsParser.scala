@@ -1,3 +1,11 @@
+package codacy.codesniffer.docsgen.parsers
+
+import better.files.File
+import codacy.codesniffer.docsgen.VersionsHelper
+import com.codacy.plugins.api.results.Pattern
+
+import scala.util.matching.Regex
+
 class SymfonyDocsParser extends DocsParser {
 
     override val repositoryURL = "https://github.com/escapestudios/symfony2-coding-standard.git"
@@ -8,7 +16,7 @@ class SymfonyDocsParser extends DocsParser {
 
     override def patternIdPartsFor(relativizedFilePath: String): PatternIdParts = {
         val sniffRegex(sniffType, patternName) = relativizedFilePath
-        PatternIdParts(sniffType, patternName)
+        PatternIdParts("Symfony", sniffType, patternName)
     }
 
     override def descriptionWithDocs(rootDir: File,
