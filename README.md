@@ -111,7 +111,13 @@ To add a new plugin to Codesniffer:
     }
     ```
 
-4.  [Generate the documentation](#generating-the-documentation)
+4.  Add the new parser to the list of parsers inside `scala/codacy/codesniffer/docsgen/Generator.scala`.
+
+    ```scala
+    private[this] val parsers: List[DocsParser] = List(new PHPCSDocsParser(), ...)
+    ```
+
+5.  [Generate the documentation](#generating-the-documentation)
 
 ## What is Codacy?
 
