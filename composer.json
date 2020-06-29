@@ -1,7 +1,7 @@
 {
     "require": {
         "squizlabs/php_codesniffer": "3.5.5",
-        "slevomat/coding-standard": "6.3.9",
+        "slevomat/coding-standard": "6.3.10",
         "pheromone/phpcs-security-audit": "2.0.1",
         "magento/magento-coding-standard": "v5",
         "wp-coding-standards/wpcs": "2.3.0",
