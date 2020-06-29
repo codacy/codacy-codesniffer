@@ -19,5 +19,6 @@ object VersionsHelper {
   lazy val slevomatCS = properties("slevomat/coding-standard").str
   lazy val drupalCoder = properties("drupal/coder").str
   lazy val vipWordpress = properties("automattic/vipwpcs").str
+  lazy val symfony = properties("escapestudios/symfony2-coding-standard").str
 
 }

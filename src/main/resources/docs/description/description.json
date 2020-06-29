@@ -2313,6 +2313,106 @@
   "patternId" : "Squiz_WhiteSpace_SuperfluousWhitespace",
   "title" : "White Space: Superfluous Whitespace"
 }, {
+  "patternId" : "Symfony_Arrays_MultiLineArrayComma",
+  "title" : "Arrays: Multi Line Array Comma",
+  "description" : "MultiLineArrayCommaSniff."
+}, {
+  "patternId" : "Symfony_Classes_MultipleClassesOneFile",
+  "title" : "Classes: Multiple Classes One File",
+  "description" : "MultipleClassesOneFileSniff."
+}, {
+  "patternId" : "Symfony_Classes_PropertyDeclaration",
+  "title" : "Classes: Property Declaration",
+  "description" : "PropertyDeclarationSniff."
+}, {
+  "patternId" : "Symfony_Commenting_Annotations",
+  "title" : "Commenting: Annotations",
+  "description" : "Checks whether annotations of a different type are separated with newlines."
+}, {
+  "patternId" : "Symfony_Commenting_ClassComment",
+  "title" : "Commenting: Class Comment",
+  "description" : "Parses and verifies the doc comments for classes."
+}, {
+  "patternId" : "Symfony_Commenting_FunctionComment",
+  "title" : "Commenting: Function Comment",
+  "description" : "Symfony standard customization to PEARs FunctionCommentSniff."
+}, {
+  "patternId" : "Symfony_Commenting_License",
+  "title" : "Commenting: License",
+  "description" : "Checks for the presence of a license comment prior to the namespace."
+}, {
+  "patternId" : "Symfony_Commenting_TypeHinting",
+  "title" : "Commenting: Type Hinting",
+  "description" : "Checks for proper type hinting."
+}, {
+  "patternId" : "Symfony_ControlStructure_IdenticalComparison",
+  "title" : "Control Structure: Identical Comparison",
+  "description" : "Checks for identical comparison and adds warning if not used."
+}, {
+  "patternId" : "Symfony_ControlStructure_UnaryOperators",
+  "title" : "Control Structure: Unary Operators",
+  "description" : "Checks whether unary operators are adjacent to the affected variable."
+}, {
+  "patternId" : "Symfony_ControlStructure_YodaConditions",
+  "title" : "Control Structure: Yoda Conditions",
+  "description" : "Checks whether variables are properly compared to expressions."
+}, {
+  "patternId" : "Symfony_Errors_ExceptionMessage",
+  "title" : "Errors: Exception Message",
+  "description" : "Checks whether functions are defined on one line."
+}, {
+  "patternId" : "Symfony_Errors_UserDeprecated",
+  "title" : "Errors: User Deprecated",
+  "description" : "Checks whether E_USER_DEPRECATED errors are silenced by default."
+}, {
+  "patternId" : "Symfony_Files_AlphanumericFilename",
+  "title" : "Files: Alphanumeric Filename",
+  "description" : "Checks whether filename contains any other character than alphanumeric\nand underscores."
+}, {
+  "patternId" : "Symfony_Formatting_BlankLineBeforeReturn",
+  "title" : "Formatting: Blank Line Before Return",
+  "description" : "BlankLineBeforeReturnSniff."
+}, {
+  "patternId" : "Symfony_Formatting_ReturnOrThrow",
+  "title" : "Formatting: Return Or Throw",
+  "description" : "Checks whether there are (else)if or break statements after return or throw"
+}, {
+  "patternId" : "Symfony_Functions_Arguments",
+  "title" : "Functions: Arguments",
+  "description" : "Checks whether functions are defined on one line."
+}, {
+  "patternId" : "Symfony_Functions_ReturnType",
+  "title" : "Functions: Return Type",
+  "description" : "Checks whether a function returns the appropriate return type"
+}, {
+  "patternId" : "Symfony_Functions_ScopeOrder",
+  "title" : "Functions: Scope Order",
+  "description" : "ScopeOrderSniff."
+}, {
+  "patternId" : "Symfony_NamingConventions_ValidClassName",
+  "title" : "Naming Conventions: Valid Class Name",
+  "description" : "ValidClassNameSniff."
+}, {
+  "patternId" : "Symfony_Objects_ObjectInstantiation",
+  "title" : "Objects: Object Instantiation",
+  "description" : "ObjectInstantiationSniff."
+}, {
+  "patternId" : "Symfony_Whitespace_AssignmentSpacing",
+  "title" : "Whitespace: Assignment Spacing",
+  "description" : "AssignmentSpacingSniff."
+}, {
+  "patternId" : "Symfony_Whitespace_BinaryOperatorSpacing",
+  "title" : "Whitespace: Binary Operator Spacing",
+  "description" : "BinaryOperatorSpacingSniff."
+}, {
+  "patternId" : "Symfony_Whitespace_CommaSpacing",
+  "title" : "Whitespace: Comma Spacing",
+  "description" : "CommaSpacingSniff."
+}, {
+  "patternId" : "Symfony_Whitespace_DiscourageFitzinator",
+  "title" : "Whitespace: Discourage Fitzinator",
+  "description" : "DiscourageFitzinatorSniff."
+}, {
   "patternId" : "WordPressVIPMinimum_Classes_DeclarationCompatibility",
   "title" : "Classes: Declaration Compatibility",
   "description" : "Class WordPressVIPMinimum_Sniffs_Classes_DeclarationCompatibilitySniff"
