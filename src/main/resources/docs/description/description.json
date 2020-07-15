@@ -2585,10 +2585,6 @@
   "title" : "Variables: Variable Analysis",
   "description" : "Checks the for undefined function variables."
 }, {
-  "patternId" : "WordPressVIPMinimum_VersionControl_MergeConflict",
-  "title" : "Version Control: Merge Conflict",
-  "description" : "Looks for merge conflict residues in files."
-}, {
   "patternId" : "WordPress_Arrays_ArrayDeclarationSpacing",
   "title" : "Arrays: Array Declaration Spacing",
   "description" : "Enforces WordPress array spacing format."

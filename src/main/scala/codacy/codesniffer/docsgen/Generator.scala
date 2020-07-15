@@ -11,7 +11,7 @@ import scala.collection.parallel.immutable.ParSeq
 
 class Generator() {
 
-  private[this] val toolName = Tool.Name("PHP Code Sniffer")
+  private[this] val toolName = Tool.Name("phpcs")
   private[this] val toolVersion = Option(Tool.Version(VersionsHelper.codesniffer))
 
   val docsDir = File("src/main/resources/docs")
