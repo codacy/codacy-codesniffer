@@ -1,5 +1,5 @@
 {
-  "name" : "PHP Code Sniffer",
+  "name" : "phpcs",
   "version" : "3.5.5",
   "patterns" : [ {
     "patternId" : "Drupal_Arrays_Array",
@@ -3580,10 +3580,6 @@
       "name" : "allowUnusedFunctionParameters",
       "default" : true
     } ]
-  }, {
-    "patternId" : "WordPressVIPMinimum_VersionControl_MergeConflict",
-    "level" : "Info",
-    "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_Arrays_ArrayDeclarationSpacing",
     "level" : "Info",
