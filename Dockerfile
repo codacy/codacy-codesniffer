@@ -3,7 +3,7 @@ FROM openjdk:8-jre-alpine
 WORKDIR /opt/docker/app
 
 RUN apk --no-cache add curl git 
-RUN apk --no-cache add php php-openssl php-phar php-json php-curl php-iconv php-zlib php-simplexml php-tokenizer php-xmlwriter php-mbstring php-xml php-dom 
+RUN apk --no-cache add php php-openssl php-phar php-json php-curl php-iconv php-zlib php-simplexml php-tokenizer php-xmlwriter php-mbstring php-xml php-dom php-xmlreader
 RUN ln -s /etc/php7/php.ini /etc/php7/conf.d/php.ini && sed 's/.*short_open_tag.*=.*/short_open_tag=On/' /etc/php7/php.ini -i
 
 RUN curl -sS https://getcomposer.org/installer | php 
