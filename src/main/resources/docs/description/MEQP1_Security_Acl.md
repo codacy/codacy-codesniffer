@@ -1,2 +1,1 @@
-Class AclSniff
-Detects possible improper usage of adminhtml actions.
+Class AclSniff Detects possible improper usage of adminhtml actions.

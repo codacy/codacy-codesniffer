@@ -1,2 +1,1 @@
-Class RawQuerySniff
-Detects possible raw SQL queries.
+Class RawQuerySniff Detects possible raw SQL queries.

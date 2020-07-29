@@ -1,2 +1,1 @@
-Make sure that ip_address() or Drupal::request()->getClientIp() is used instead of
-$_SERVER['REMOTE_ADDR'].
+Make sure that ip_address() or Drupal::request()->getClientIp() is used instead of $_SERVER['REMOTE_ADDR'].

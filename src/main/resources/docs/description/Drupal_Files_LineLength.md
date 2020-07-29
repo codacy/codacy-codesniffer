@@ -1,2 +1,1 @@
-Checks comment lines in the file, and throws warnings if they are over 80
-characters in length.
+Checks comment lines in the file, and throws warnings if they are over 80 characters in length.

@@ -1,2 +1,1 @@
-Class DateTimeSniff
-Detects overcomplicated Date/Time handling.
+Class DateTimeSniff Detects overcomplicated Date/Time handling.

@@ -1,2 +1,1 @@
-Class PrivateClassMemberSniff
-Detects possible usage of 'private' scope modifiers.
+Class PrivateClassMemberSniff Detects possible usage of 'private' scope modifiers.

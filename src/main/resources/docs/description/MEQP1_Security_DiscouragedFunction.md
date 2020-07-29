@@ -1,2 +1,1 @@
-Class DiscouragedFunctionSniff
-Detects possible usage of discouraged functions.
+Class DiscouragedFunctionSniff Detects possible usage of discouraged functions.

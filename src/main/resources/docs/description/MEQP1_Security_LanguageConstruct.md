@@ -1,2 +1,1 @@
-Class LanguageConstructSniff
-Detects possible usage of discouraged language constructs.
+Class LanguageConstructSniff Detects possible usage of discouraged language constructs.
