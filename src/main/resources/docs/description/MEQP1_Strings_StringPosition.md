@@ -1,2 +1,1 @@
-Class StringPositionSniff
-Detects misusing of IS_IDENTICAL operators.
+Class StringPositionSniff Detects misusing of IS_IDENTICAL operators.

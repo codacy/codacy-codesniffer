@@ -1,2 +1,1 @@
-Class SuperglobalSniff
-Detects usage of super global variables.
+Class SuperglobalSniff Detects usage of super global variables.

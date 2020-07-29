@@ -1,2 +1,1 @@
-Class NamespaceSniff
-Detects possible usage of exceptions without namespace declaration.
+Class NamespaceSniff Detects possible usage of exceptions without namespace declaration.

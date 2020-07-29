@@ -1,2 +1,1 @@
-Class StringConcatSniff
-Detects string concatenation via '+' operator.
+Class StringConcatSniff Detects string concatenation via '+' operator.

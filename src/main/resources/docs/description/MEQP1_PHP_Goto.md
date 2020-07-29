@@ -1,2 +1,1 @@
-Class GotoSniff
-Detects use of GOTO.
+Class GotoSniff Detects use of GOTO.

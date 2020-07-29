@@ -13,7 +13,7 @@
 }, {
   "patternId" : "Drupal_CSS_ClassDefinitionNameSpacing",
   "title" : "CSS: Class Definition Name Spacing",
-  "description" : "Ensure there are no blank lines between the names of classes/IDs. Copied from\n\\PHP_CodeSniffer\\Standards\\Squiz\\Sniffs\\CSS\\ClassDefinitionNameSpacingSniff\nbecause we also check for comma separated selectors on their own line."
+  "description" : "Ensure there are no blank lines between the names of classes/IDs. Copied from \\PHP_CodeSniffer\\Standards\\Squiz\\Sniffs\\CSS\\ClassDefinitionNameSpacingSniff because we also check for comma separated selectors on their own line."
 }, {
   "patternId" : "Drupal_CSS_ColourDefinition",
   "title" : "CSS: Colour Definition"
@@ -39,7 +39,7 @@
 }, {
   "patternId" : "Drupal_Classes_PropertyDeclaration",
   "title" : "Classes: Property Declaration",
-  "description" : "Laregely copied from\n\\PHP_CodeSniffer\\Standards\\PSR2\\Sniffs\\Classes\\PropertyDeclarationSniff to have a fixer\nfor the var keyword."
+  "description" : "Laregely copied from \\PHP_CodeSniffer\\Standards\\PSR2\\Sniffs\\Classes\\PropertyDeclarationSniff to have a fixer for the var keyword."
 }, {
   "patternId" : "Drupal_Classes_UnusedUseStatement",
   "title" : "Classes: Unused Use Statement",
@@ -51,7 +51,7 @@
 }, {
   "patternId" : "Drupal_Commenting_ClassComment",
   "title" : "Commenting: Class Comment",
-  "description" : "Checks that comment doc blocks exist on classes, interfaces and traits. Largely\ncopied from PHP_CodeSniffer\\Standards\\Squiz\\Sniffs\\Commenting\\ClassCommentSniff."
+  "description" : "Checks that comment doc blocks exist on classes, interfaces and traits. Largely copied from PHP_CodeSniffer\\Standards\\Squiz\\Sniffs\\Commenting\\ClassCommentSniff."
 }, {
   "patternId" : "Drupal_Commenting_DataTypeNamespace",
   "title" : "Commenting: Data Type Namespace",
@@ -67,7 +67,7 @@
 }, {
   "patternId" : "Drupal_Commenting_DocCommentAlignment",
   "title" : "Commenting: Doc Comment Alignment",
-  "description" : "Largely copied from\n\\PHP_CodeSniffer\\Standards\\Squiz\\Sniffs\\Commenting\\DocCommentAlignmentSniff to also\nhandle the \"var\" keyword. See\nhttps://github.com/squizlabs/PHP_CodeSniffer/pull/1212"
+  "description" : "Largely copied from \\PHP_CodeSniffer\\Standards\\Squiz\\Sniffs\\Commenting\\DocCommentAlignmentSniff to also handle the \"var\" keyword. See https://github.com/squizlabs/PHP_CodeSniffer/pull/1212"
 }, {
   "patternId" : "Drupal_Commenting_DocCommentStar",
   "title" : "Commenting: Doc Comment Star",
@@ -79,7 +79,7 @@
 }, {
   "patternId" : "Drupal_Commenting_FunctionComment",
   "title" : "Commenting: Function Comment",
-  "description" : "Parses and verifies the doc comments for functions. Largely copied from\nPHP_CodeSniffer\\Standards\\Squiz\\Sniffs\\Commenting\\FunctionCommentSniff."
+  "description" : "Parses and verifies the doc comments for functions. Largely copied from PHP_CodeSniffer\\Standards\\Squiz\\Sniffs\\Commenting\\FunctionCommentSniff."
 }, {
   "patternId" : "Drupal_Commenting_GenderNeutralComment",
   "title" : "Commenting: Gender Neutral Comment",
@@ -94,7 +94,7 @@
 }, {
   "patternId" : "Drupal_Commenting_PostStatementComment",
   "title" : "Commenting: Post Statement Comment",
-  "description" : "Largely copied from\n\\PHP_CodeSniffer\\Standards\\Squiz\\Sniffs\\Commenting\\PostStatementCommentSniff\nbut we want the fixer to move the comment to the previous line."
+  "description" : "Largely copied from \\PHP_CodeSniffer\\Standards\\Squiz\\Sniffs\\Commenting\\PostStatementCommentSniff but we want the fixer to move the comment to the previous line."
 }, {
   "patternId" : "Drupal_Commenting_VariableComment",
   "title" : "Commenting: Variable Comment",
@@ -120,7 +120,7 @@
 }, {
   "patternId" : "Drupal_Files_LineLength",
   "title" : "Files: Line Length",
-  "description" : "Checks comment lines in the file, and throws warnings if they are over 80\ncharacters in length.",
+  "description" : "Checks comment lines in the file, and throws warnings if they are over 80 characters in length.",
   "parameters" : [ {
     "name" : "lineLimit",
     "description" : "lineLimit"
@@ -137,7 +137,7 @@
 }, {
   "patternId" : "Drupal_Formatting_MultipleStatementAlignment",
   "title" : "Formatting: Multiple Statement Alignment",
-  "description" : "Checks alignment of multiple assignments.Largely copied from\n\\PHP_CodeSniffer\\Standards\\Generic\\Sniffs\\Formatting\\MultipleStatementAlignmentSniff\nbut also allows multiple single space assignments.",
+  "description" : "Checks alignment of multiple assignments.Largely copied from \\PHP_CodeSniffer\\Standards\\Generic\\Sniffs\\Formatting\\MultipleStatementAlignmentSniff but also allows multiple single space assignments.",
   "parameters" : [ {
     "name" : "error",
     "description" : "error"
@@ -161,15 +161,15 @@
 }, {
   "patternId" : "Drupal_Functions_FunctionDeclaration",
   "title" : "Functions: Function Declaration",
-  "description" : "Ensure that there is only one space after the function keyword and no space\nbefore the opening parenthesis."
+  "description" : "Ensure that there is only one space after the function keyword and no space before the opening parenthesis."
 }, {
   "patternId" : "Drupal_InfoFiles_AutoAddedKeys",
   "title" : "Info Files: Auto Added Keys",
-  "description" : "\"version\", \"project\" and \"timestamp\" are added automatically by drupal.org\npackaging scripts."
+  "description" : "\"version\", \"project\" and \"timestamp\" are added automatically by drupal.org packaging scripts."
 }, {
   "patternId" : "Drupal_InfoFiles_ClassFiles",
   "title" : "Info Files: Class Files",
-  "description" : "Checks files[] entries in info files. Only files containing classes/interfaces\nshould be listed."
+  "description" : "Checks files[] entries in info files. Only files containing classes/interfaces should be listed."
 }, {
   "patternId" : "Drupal_InfoFiles_DuplicateEntry",
   "title" : "Info Files: Duplicate Entry",
@@ -177,7 +177,7 @@
 }, {
   "patternId" : "Drupal_InfoFiles_Required",
   "title" : "Info Files: Required",
-  "description" : "\"name\", \"description\" and \"core are required fields in Drupal info files. Also\nchecks the \"php\" minimum requirement for Drupal 7."
+  "description" : "\"name\", \"description\" and \"core are required fields in Drupal info files. Also checks the \"php\" minimum requirement for Drupal 7."
 }, {
   "patternId" : "Drupal_Methods_MethodDeclaration",
   "title" : "Methods: Method Declaration",
@@ -202,7 +202,7 @@
 }, {
   "patternId" : "Drupal_Semantics_ConstantName",
   "title" : "Semantics: Constant Name",
-  "description" : "Checks that constants introduced with define() in module or install files start\nwith the module's name."
+  "description" : "Checks that constants introduced with define() in module or install files start with the module's name."
 }, {
   "patternId" : "Drupal_Semantics_EmptyInstall",
   "title" : "Semantics: Empty Install",
@@ -214,7 +214,7 @@
 }, {
   "patternId" : "Drupal_Semantics_FunctionT",
   "title" : "Semantics: Function T",
-  "description" : "Check the usage of the t() function to not escape translateable strings with back\nslashes. Also checks that the first argument does not use string concatenation."
+  "description" : "Check the usage of the t() function to not escape translateable strings with back slashes. Also checks that the first argument does not use string concatenation."
 }, {
   "patternId" : "Drupal_Semantics_FunctionTriggerError",
   "title" : "Semantics: Function Trigger Error",
@@ -226,7 +226,7 @@
 }, {
   "patternId" : "Drupal_Semantics_InstallHooks",
   "title" : "Semantics: Install Hooks",
-  "description" : "Checks that hook_disable(), hook_enable(), hook_install(), hook_uninstall(),\nhook_requirements() and hook_schema() are not defined in the module file."
+  "description" : "Checks that hook_disable(), hook_enable(), hook_install(), hook_uninstall(), hook_requirements() and hook_schema() are not defined in the module file."
 }, {
   "patternId" : "Drupal_Semantics_LStringTranslatable",
   "title" : "Semantics: L String Translatable",
@@ -234,11 +234,11 @@
 }, {
   "patternId" : "Drupal_Semantics_PregSecurity",
   "title" : "Semantics: Preg Security",
-  "description" : "Check the usage of the preg functions to ensure the insecure /e flag isn't\nused: https://www.drupal.org/node/750148"
+  "description" : "Check the usage of the preg functions to ensure the insecure /e flag isn't used: https://www.drupal.org/node/750148"
 }, {
   "patternId" : "Drupal_Semantics_RemoteAddress",
   "title" : "Semantics: Remote Address",
-  "description" : "Make sure that ip_address() or Drupal::request()->getClientIp() is used instead of\n$_SERVER['REMOTE_ADDR']."
+  "description" : "Make sure that ip_address() or Drupal::request()->getClientIp() is used instead of $_SERVER['REMOTE_ADDR']."
 }, {
   "patternId" : "Drupal_Semantics_TInHookMenu",
   "title" : "Semantics: T In Hook Menu",
@@ -283,7 +283,7 @@
 }, {
   "patternId" : "Drupal_WhiteSpace_ScopeClosingBrace",
   "title" : "White Space: Scope Closing Brace",
-  "description" : "Copied from \\PHP_CodeSniffer\\Standards\\PEAR\\Sniffs\\WhiteSpace\\ScopeClosingBraceSniff to allow empty methods\nand classes.",
+  "description" : "Copied from \\PHP_CodeSniffer\\Standards\\PEAR\\Sniffs\\WhiteSpace\\ScopeClosingBraceSniff to allow empty methods and classes.",
   "parameters" : [ {
     "name" : "indent",
     "description" : "indent"
@@ -291,7 +291,7 @@
 }, {
   "patternId" : "Drupal_WhiteSpace_ScopeIndent",
   "title" : "White Space: Scope Indent",
-  "description" : "Largely copied from\n\\PHP_CodeSniffer\\Standards\\Generic\\Sniffs\\WhiteSpace\\ScopeIndentSniff,\nmodified to make the exact mode working with comments and multi line\nstatements.",
+  "description" : "Largely copied from \\PHP_CodeSniffer\\Standards\\Generic\\Sniffs\\WhiteSpace\\ScopeIndentSniff, modified to make the exact mode working with comments and multi line statements.",
   "parameters" : [ {
     "name" : "indent",
     "description" : "indent"
@@ -725,83 +725,83 @@
 }, {
   "patternId" : "MEQP1_Classes_Mysql4",
   "title" : "Classes: Mysql4",
-  "description" : "Class Mysql4Sniff\nDetects usage of deprecated 'Mysql4' suffix in class names."
+  "description" : "Class Mysql4Sniff Detects usage of deprecated 'Mysql4' suffix in class names."
 }, {
   "patternId" : "MEQP1_Classes_ObjectInstantiation",
   "title" : "Classes: Object Instantiation",
-  "description" : "Class ObjectInstantiationSniff\nDetects direct object instantiation via 'new' keyword."
+  "description" : "Class ObjectInstantiationSniff Detects direct object instantiation via 'new' keyword."
 }, {
   "patternId" : "MEQP1_Classes_ResourceModel",
   "title" : "Classes: Resource Model",
-  "description" : "Class ResourceModelSniff\nDetects data access code outside of ResourceModel."
+  "description" : "Class ResourceModelSniff Detects data access code outside of ResourceModel."
 }, {
   "patternId" : "MEQP1_CodeAnalysis_EmptyBlock",
   "title" : "Code Analysis: Empty Block",
-  "description" : "Class EmptyBlockSniff\nDetects possible empty blocks."
+  "description" : "Class EmptyBlockSniff Detects possible empty blocks."
 }, {
   "patternId" : "MEQP1_Exceptions_DirectThrow",
   "title" : "Exceptions: Direct Throw",
-  "description" : "Class DirectThrowSniff\nDetects possible direct throws of Exceptions."
+  "description" : "Class DirectThrowSniff Detects possible direct throws of Exceptions."
 }, {
   "patternId" : "MEQP1_Exceptions_Namespace",
   "title" : "Exceptions: Namespace",
-  "description" : "Class NamespaceSniff\nDetects possible usage of exceptions without namespace declaration."
+  "description" : "Class NamespaceSniff Detects possible usage of exceptions without namespace declaration."
 }, {
   "patternId" : "MEQP1_PHP_Goto",
   "title" : "PHP: Goto",
-  "description" : "Class GotoSniff\nDetects use of GOTO."
+  "description" : "Class GotoSniff Detects use of GOTO."
 }, {
   "patternId" : "MEQP1_PHP_PrivateClassMember",
   "title" : "PHP: Private Class Member",
-  "description" : "Class PrivateClassMemberSniff\nDetects possible usage of 'private' scope modifiers."
+  "description" : "Class PrivateClassMemberSniff Detects possible usage of 'private' scope modifiers."
 }, {
   "patternId" : "MEQP1_PHP_Syntax",
   "title" : "PHP: Syntax",
-  "description" : "Class SyntaxSniff\nEnsures PHP believes the syntax is clean."
+  "description" : "Class SyntaxSniff Ensures PHP believes the syntax is clean."
 }, {
   "patternId" : "MEQP1_PHP_Var",
   "title" : "PHP: Var",
-  "description" : "Class VarSniff\nDetects possible usage of 'var' language construction."
+  "description" : "Class VarSniff Detects possible usage of 'var' language construction."
 }, {
   "patternId" : "MEQP1_Performance_CollectionCount",
   "title" : "Performance: Collection Count",
-  "description" : "Class CollectionCountSniff\nDetects possible usage of collection count() method."
+  "description" : "Class CollectionCountSniff Detects possible usage of collection count() method."
 }, {
   "patternId" : "MEQP1_Performance_EmptyCheck",
   "title" : "Performance: Empty Check",
-  "description" : "Class EmptyCheckSniff\nAllows easily detect wrong approach for checking empty variables in conditions."
+  "description" : "Class EmptyCheckSniff Allows easily detect wrong approach for checking empty variables in conditions."
 }, {
   "patternId" : "MEQP1_Performance_InefficientMethods",
   "title" : "Performance: Inefficient Methods",
-  "description" : "Class InefficientMethodsSniff\nDetects use of inefficient methods."
+  "description" : "Class InefficientMethodsSniff Detects use of inefficient methods."
 }, {
   "patternId" : "MEQP1_Performance_Loop",
   "title" : "Performance: Loop",
-  "description" : "Class LoopSniff\nDetects possible data load in the loop."
+  "description" : "Class LoopSniff Detects possible data load in the loop."
 }, {
   "patternId" : "MEQP1_SQL_MissedIndexes",
   "title" : "SQL: Missed Indexes",
-  "description" : "Class MissedIndexesSniff\nDetects possible missed indexes in install and update schema classes."
+  "description" : "Class MissedIndexesSniff Detects possible missed indexes in install and update schema classes."
 }, {
   "patternId" : "MEQP1_SQL_RawQuery",
   "title" : "SQL: Raw Query",
-  "description" : "Class RawQuerySniff\nDetects possible raw SQL queries."
+  "description" : "Class RawQuerySniff Detects possible raw SQL queries."
 }, {
   "patternId" : "MEQP1_SQL_SlowQuery",
   "title" : "SQL: Slow Query",
-  "description" : "Class SlowQuerySniff\nDetects possible slow SQL queries."
+  "description" : "Class SlowQuerySniff Detects possible slow SQL queries."
 }, {
   "patternId" : "MEQP1_Security_Acl",
   "title" : "Security: Acl",
-  "description" : "Class AclSniff\nDetects possible improper usage of adminhtml actions."
+  "description" : "Class AclSniff Detects possible improper usage of adminhtml actions."
 }, {
   "patternId" : "MEQP1_Security_DiscouragedFunction",
   "title" : "Security: Discouraged Function",
-  "description" : "Class DiscouragedFunctionSniff\nDetects possible usage of discouraged functions."
+  "description" : "Class DiscouragedFunctionSniff Detects possible usage of discouraged functions."
 }, {
   "patternId" : "MEQP1_Security_IncludeFile",
   "title" : "Security: Include File",
-  "description" : "Class IncludeFileSniff\nDetects possible improper usage of include functions."
+  "description" : "Class IncludeFileSniff Detects possible improper usage of include functions."
 }, {
   "patternId" : "MEQP1_Security_InsecureFunction",
   "title" : "Security: Insecure Function",
@@ -809,31 +809,31 @@
 }, {
   "patternId" : "MEQP1_Security_LanguageConstruct",
   "title" : "Security: Language Construct",
-  "description" : "Class LanguageConstructSniff\nDetects possible usage of discouraged language constructs."
+  "description" : "Class LanguageConstructSniff Detects possible usage of discouraged language constructs."
 }, {
   "patternId" : "MEQP1_Security_Superglobal",
   "title" : "Security: Superglobal",
-  "description" : "Class SuperglobalSniff\nDetects usage of super global variables."
+  "description" : "Class SuperglobalSniff Detects usage of super global variables."
 }, {
   "patternId" : "MEQP1_Stdlib_DateTime",
   "title" : "Stdlib: Date Time",
-  "description" : "Class DateTimeSniff\nDetects overcomplicated Date/Time handling."
+  "description" : "Class DateTimeSniff Detects overcomplicated Date/Time handling."
 }, {
   "patternId" : "MEQP1_Strings_RegEx",
   "title" : "Strings: Reg Ex",
-  "description" : "Class RegExSniff\nDetects executable regular expressions."
+  "description" : "Class RegExSniff Detects executable regular expressions."
 }, {
   "patternId" : "MEQP1_Strings_StringConcat",
   "title" : "Strings: String Concat",
-  "description" : "Class StringConcatSniff\nDetects string concatenation via '+' operator."
+  "description" : "Class StringConcatSniff Detects string concatenation via '+' operator."
 }, {
   "patternId" : "MEQP1_Strings_StringPosition",
   "title" : "Strings: String Position",
-  "description" : "Class StringPositionSniff\nDetects misusing of IS_IDENTICAL operators."
+  "description" : "Class StringPositionSniff Detects misusing of IS_IDENTICAL operators."
 }, {
   "patternId" : "MEQP1_Templates_XssTemplate",
   "title" : "Templates: Xss Template",
-  "description" : "Class XssTemplateSniff\nDetects not escaped output in phtml templates."
+  "description" : "Class XssTemplateSniff Detects not escaped output in phtml templates."
 }, {
   "patternId" : "Magento2_Classes_AbstractApi",
   "title" : "Classes: Abstract Api",
@@ -901,7 +901,7 @@
 }, {
   "patternId" : "Magento2_GraphQL_ValidTypeName",
   "title" : "Graph QL: Valid Type Name",
-  "description" : "Detects types (<kbd>type</kbd>, <kbd>interface</kbd> and <kbd>enum</kbd>) that are not specified in\n<kbd>UpperCamelCase</kbd>."
+  "description" : "Detects types (<kbd>type</kbd>, <kbd>interface</kbd> and <kbd>enum</kbd>) that are not specified in <kbd>UpperCamelCase</kbd>."
 }, {
   "patternId" : "Magento2_Legacy_MageEntity",
   "title" : "Legacy: Mage Entity",
@@ -1285,7 +1285,7 @@
 }, {
   "patternId" : "PHPCompatibility_FunctionUse_ArgumentFunctionsReportCurrentValue",
   "title" : "PHP Compatibility related issue (Function Use): Argument Functions Report Current Value",
-  "description" : "Functions inspecting function arguments report the current parameter value\ninstead of the original since PHP 7.0."
+  "description" : "Functions inspecting function arguments report the current parameter value instead of the original since PHP 7.0."
 }, {
   "patternId" : "PHPCompatibility_FunctionUse_ArgumentFunctionsUsage",
   "title" : "PHP Compatibility related issue (Function Use): Argument Functions Usage",
@@ -1329,11 +1329,11 @@
 }, {
   "patternId" : "PHPCompatibility_InitialValue_NewConstantArraysUsingConst",
   "title" : "PHP Compatibility related issue (Initial Value): New Constant Arrays Using Const",
-  "description" : "Detect declaration of constants using the `const` keyword with a (constant) array value\nas supported since PHP 5.6."
+  "description" : "Detect declaration of constants using the `const` keyword with a (constant) array value as supported since PHP 5.6."
 }, {
   "patternId" : "PHPCompatibility_InitialValue_NewConstantArraysUsingDefine",
   "title" : "PHP Compatibility related issue (Initial Value): New Constant Arrays Using Define",
-  "description" : "Detect declaration of constants using `define()` with a (constant) array value\nas supported since PHP 7.0."
+  "description" : "Detect declaration of constants using `define()` with a (constant) array value as supported since PHP 7.0."
 }, {
   "patternId" : "PHPCompatibility_InitialValue_NewConstantScalarExpressions",
   "title" : "PHP Compatibility related issue (Initial Value): New Constant Scalar Expressions",
@@ -1437,7 +1437,7 @@
 }, {
   "patternId" : "PHPCompatibility_Operators_RemovedTernaryAssociativity",
   "title" : "PHP Compatibility related issue (Operators): Removed Ternary Associativity",
-  "description" : "The left-associativity of the ternary operator is deprecated in PHP 7.4 and\nremoved in PHP 8.0."
+  "description" : "The left-associativity of the ternary operator is deprecated in PHP 7.4 and removed in PHP 8.0."
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_ForbiddenGetClassNull",
   "title" : "PHP Compatibility related issue (Parameter Values): Forbidden Get Class Null",
@@ -1457,7 +1457,7 @@
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_NewHTMLEntitiesEncodingDefault",
   "title" : "PHP Compatibility related issue (Parameter Values): New HTML Entities Encoding Default",
-  "description" : "As of PHP 5.4, the default character set for `htmlspecialchars()`, `htmlentities()`\nand `html_entity_decode()` is now `UTF-8`, instead of `ISO-8859-1`."
+  "description" : "As of PHP 5.4, the default character set for `htmlspecialchars()`, `htmlentities()` and `html_entity_decode()` is now `UTF-8`, instead of `ISO-8859-1`."
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_NewHashAlgorithms",
   "title" : "PHP Compatibility related issue (Parameter Values): New Hash Algorithms",
@@ -1465,7 +1465,7 @@
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_NewIDNVariantDefault",
   "title" : "PHP Compatibility related issue (Parameter Values): New IDN Variant Default",
-  "description" : "The default value for the `$variant` parameter has changed from `INTL_IDNA_VARIANT_2003`\nto `INTL_IDNA_VARIANT_UTS46` in PHP 7.4."
+  "description" : "The default value for the `$variant` parameter has changed from `INTL_IDNA_VARIANT_2003` to `INTL_IDNA_VARIANT_UTS46` in PHP 7.4."
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_NewIconvMbstringCharsetDefault",
   "title" : "PHP Compatibility related issue (Parameter Values): New Iconv Mbstring Charset Default",
@@ -1473,7 +1473,7 @@
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_NewNegativeStringOffset",
   "title" : "PHP Compatibility related issue (Parameter Values): New Negative String Offset",
-  "description" : "Detect negative string offsets as parameters passed to functions where this\nwas not allowed prior to PHP 7.1."
+  "description" : "Detect negative string offsets as parameters passed to functions where this was not allowed prior to PHP 7.1."
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_NewPCREModifiers",
   "title" : "PHP Compatibility related issue (Parameter Values): New PCRE Modifiers",
@@ -1505,7 +1505,7 @@
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_RemovedImplodeFlexibleParamOrder",
   "title" : "PHP Compatibility related issue (Parameter Values): Removed Implode Flexible Param Order",
-  "description" : "Passing the `$glue` and `$pieces` parameters to `implode()` in reverse order has\nbeen deprecated in PHP 7.4."
+  "description" : "Passing the `$glue` and `$pieces` parameters to `implode()` in reverse order has been deprecated in PHP 7.4."
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_RemovedMbStrrposEncodingThirdParam",
   "title" : "PHP Compatibility related issue (Parameter Values): Removed Mb Strrpos Encoding Third Param",
@@ -3049,7 +3049,7 @@
 }, {
   "patternId" : "Symfony_Files_AlphanumericFilename",
   "title" : "Files: Alphanumeric Filename",
-  "description" : "Checks whether filename contains any other character than alphanumeric\nand underscores."
+  "description" : "Checks whether filename contains any other character than alphanumeric and underscores."
 }, {
   "patternId" : "Symfony_Formatting_BlankLineBeforeReturn",
   "title" : "Formatting: Blank Line Before Return",
@@ -3105,7 +3105,7 @@
 }, {
   "patternId" : "WordPressVIPMinimum_Compatibility_Zoninator",
   "title" : "Compatibility: Zoninator",
-  "description" : "This sniff reminds the developers to check whether the WordPress Core REST API is enabled\nalong with loading v0.8 and above."
+  "description" : "This sniff reminds the developers to check whether the WordPress Core REST API is enabled along with loading v0.8 and above."
 }, {
   "patternId" : "WordPressVIPMinimum_Constants_ConstantString",
   "title" : "Constants: Constant String",
@@ -3129,7 +3129,7 @@
 }, {
   "patternId" : "WordPressVIPMinimum_Functions_DynamicCalls",
   "title" : "Functions: Dynamic Calls",
-  "description" : "This sniff enforces that certain functions are not\ndynamically called."
+  "description" : "This sniff enforces that certain functions are not dynamically called."
 }, {
   "patternId" : "WordPressVIPMinimum_Functions_RestrictedFunctions",
   "title" : "Functions: Restricted Functions",
@@ -3333,7 +3333,7 @@
 }, {
   "patternId" : "WordPress_CodeAnalysis_EscapedNotTranslated",
   "title" : "Code Analysis: Escaped Not Translated",
-  "description" : "Flag calls to escaping functions which look like they may have been intended\nas calls to the \"translate + escape\" sister-function due to the presence of\nmore than one parameter."
+  "description" : "Flag calls to escaping functions which look like they may have been intended as calls to the \"translate + escape\" sister-function due to the presence of more than one parameter."
 }, {
   "patternId" : "WordPress_DB_DirectDatabaseQuery",
   "title" : "DB: Direct Database Query",
@@ -3439,7 +3439,7 @@
 }, {
   "patternId" : "WordPress_PHP_POSIXFunctions",
   "title" : "PHP: POSIX Functions",
-  "description" : "Perl compatible regular expressions (PCRE, preg_ functions) should be used in preference\nto their POSIX counterparts."
+  "description" : "Perl compatible regular expressions (PCRE, preg_ functions) should be used in preference to their POSIX counterparts."
 }, {
   "patternId" : "WordPress_PHP_PregQuoteDelimiter",
   "title" : "PHP: Preg Quote Delimiter",

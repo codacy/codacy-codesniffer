@@ -1,2 +1,1 @@
-Class XssTemplateSniff
-Detects not escaped output in phtml templates.
+Class XssTemplateSniff Detects not escaped output in phtml templates.
