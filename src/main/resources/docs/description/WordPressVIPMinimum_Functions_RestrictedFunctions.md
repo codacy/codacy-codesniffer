@@ -1,0 +1,1 @@
+Restricts usage of some functions in VIP context.

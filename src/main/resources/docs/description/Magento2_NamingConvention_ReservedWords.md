@@ -1,0 +1,1 @@
+Validates that class name is not reserved word.

@@ -1,0 +1,1 @@
+Checks that the trigger_error deprecation text message adheres to standards.

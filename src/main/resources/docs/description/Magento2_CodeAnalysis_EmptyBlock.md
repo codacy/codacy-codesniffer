@@ -1,0 +1,1 @@
+Detects possible empty blocks.

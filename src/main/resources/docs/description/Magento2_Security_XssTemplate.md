@@ -1,0 +1,1 @@
+Detects not escaped output in phtml templates.

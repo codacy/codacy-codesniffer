@@ -1,0 +1,1 @@
+PHP: Require Strict Types

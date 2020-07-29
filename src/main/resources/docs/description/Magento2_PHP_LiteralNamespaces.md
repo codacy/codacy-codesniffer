@@ -1,0 +1,1 @@
+Custom phpcs sniff to detect usages of literal class and interface names.

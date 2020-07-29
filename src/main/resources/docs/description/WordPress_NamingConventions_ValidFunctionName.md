@@ -1,0 +1,1 @@
+Enforces WordPress function name and method name format, based upon Squiz code.

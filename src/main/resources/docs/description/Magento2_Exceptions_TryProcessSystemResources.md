@@ -1,0 +1,1 @@
+Detects missing try-catch block when processing system resources.

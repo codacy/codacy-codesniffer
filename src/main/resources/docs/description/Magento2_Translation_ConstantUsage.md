@@ -1,0 +1,1 @@
+Make sure that constants are not used as the first argument of translation function.

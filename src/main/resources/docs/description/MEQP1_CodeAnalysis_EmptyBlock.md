@@ -1,0 +1,2 @@
+Class EmptyBlockSniff
+Detects possible empty blocks.

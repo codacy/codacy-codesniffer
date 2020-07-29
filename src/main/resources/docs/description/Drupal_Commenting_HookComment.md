@@ -1,0 +1,1 @@
+Ensures hook comments on function are correct.

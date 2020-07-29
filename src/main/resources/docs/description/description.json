@@ -1,7 +1,11 @@
 [ {
   "patternId" : "Drupal_Arrays_Array",
   "title" : "Arrays: Array",
-  "description" : "ArraySniff."
+  "description" : "ArraySniff.",
+  "parameters" : [ {
+    "name" : "lineLimit",
+    "description" : "lineLimit"
+  } ]
 }, {
   "patternId" : "Drupal_Arrays_DisallowLongArraySyntax",
   "title" : "Arrays: Disallow Long Array Syntax",
@@ -116,7 +120,14 @@
 }, {
   "patternId" : "Drupal_Files_LineLength",
   "title" : "Files: Line Length",
-  "description" : "Checks comment lines in the file, and throws warnings if they are over 80\ncharacters in length."
+  "description" : "Checks comment lines in the file, and throws warnings if they are over 80\ncharacters in length.",
+  "parameters" : [ {
+    "name" : "lineLimit",
+    "description" : "lineLimit"
+  }, {
+    "name" : "absoluteLineLimit",
+    "description" : "absoluteLineLimit"
+  } ]
 }, {
   "patternId" : "Drupal_Files_TxtFileLineLength",
   "title" : "Files: Txt File Line Length"
@@ -126,7 +137,11 @@
 }, {
   "patternId" : "Drupal_Formatting_MultipleStatementAlignment",
   "title" : "Formatting: Multiple Statement Alignment",
-  "description" : "Checks alignment of multiple assignments.Largely copied from\n\\PHP_CodeSniffer\\Standards\\Generic\\Sniffs\\Formatting\\MultipleStatementAlignmentSniff\nbut also allows multiple single space assignments."
+  "description" : "Checks alignment of multiple assignments.Largely copied from\n\\PHP_CodeSniffer\\Standards\\Generic\\Sniffs\\Formatting\\MultipleStatementAlignmentSniff\nbut also allows multiple single space assignments.",
+  "parameters" : [ {
+    "name" : "error",
+    "description" : "error"
+  } ]
 }, {
   "patternId" : "Drupal_Formatting_SpaceInlineIf",
   "title" : "Formatting: Space Inline If",
@@ -138,7 +153,11 @@
 }, {
   "patternId" : "Drupal_Functions_DiscouragedFunctions",
   "title" : "Functions: Discouraged Functions",
-  "description" : "Discourage the use of debug functions."
+  "description" : "Discourage the use of debug functions.",
+  "parameters" : [ {
+    "name" : "error",
+    "description" : "error"
+  } ]
 }, {
   "patternId" : "Drupal_Functions_FunctionDeclaration",
   "title" : "Functions: Function Declaration",
@@ -264,14 +283,32 @@
 }, {
   "patternId" : "Drupal_WhiteSpace_ScopeClosingBrace",
   "title" : "White Space: Scope Closing Brace",
-  "description" : "Copied from \\PHP_CodeSniffer\\Standards\\PEAR\\Sniffs\\WhiteSpace\\ScopeClosingBraceSniff to allow empty methods\nand classes."
+  "description" : "Copied from \\PHP_CodeSniffer\\Standards\\PEAR\\Sniffs\\WhiteSpace\\ScopeClosingBraceSniff to allow empty methods\nand classes.",
+  "parameters" : [ {
+    "name" : "indent",
+    "description" : "indent"
+  } ]
 }, {
   "patternId" : "Drupal_WhiteSpace_ScopeIndent",
   "title" : "White Space: Scope Indent",
-  "description" : "Largely copied from\n\\PHP_CodeSniffer\\Standards\\Generic\\Sniffs\\WhiteSpace\\ScopeIndentSniff,\nmodified to make the exact mode working with comments and multi line\nstatements."
+  "description" : "Largely copied from\n\\PHP_CodeSniffer\\Standards\\Generic\\Sniffs\\WhiteSpace\\ScopeIndentSniff,\nmodified to make the exact mode working with comments and multi line\nstatements.",
+  "parameters" : [ {
+    "name" : "indent",
+    "description" : "indent"
+  }, {
+    "name" : "exact",
+    "description" : "exact"
+  }, {
+    "name" : "tabIndent",
+    "description" : "tabIndent"
+  } ]
 }, {
   "patternId" : "Generic_Arrays_ArrayIndent",
-  "title" : "Arrays: Array Indent"
+  "title" : "Arrays: Array Indent",
+  "parameters" : [ {
+    "name" : "indent",
+    "description" : "indent"
+  } ]
 }, {
   "patternId" : "Generic_Arrays_DisallowLongArraySyntax",
   "title" : "Short Array Syntax",
@@ -345,7 +382,11 @@
 }, {
   "patternId" : "Generic_ControlStructures_InlineControlStructure",
   "title" : "Inline Control Structures",
-  "description" : "Control Structures should use braces."
+  "description" : "Control Structures should use braces.",
+  "parameters" : [ {
+    "name" : "error",
+    "description" : "error"
+  } ]
 }, {
   "patternId" : "Generic_Debug_CSSLint",
   "title" : "CSSLint",
@@ -356,7 +397,11 @@
   "description" : "All javascript files should pass basic Closure Linter tests."
 }, {
   "patternId" : "Generic_Debug_ESLint",
-  "title" : "Debug: ES Lint"
+  "title" : "Debug: ES Lint",
+  "parameters" : [ {
+    "name" : "configFile",
+    "description" : "configFile"
+  } ]
 }, {
   "patternId" : "Generic_Debug_JSHint",
   "title" : "JSHint",
@@ -384,11 +429,25 @@
 }, {
   "patternId" : "Generic_Files_LineEndings",
   "title" : "Line Endings",
-  "description" : "Unix-style line endings are preferred (\"\\n\" instead of \"\\r\\n\")."
+  "description" : "Unix-style line endings are preferred (\"\\n\" instead of \"\\r\\n\").",
+  "parameters" : [ {
+    "name" : "eolChar",
+    "description" : "eolChar"
+  } ]
 }, {
   "patternId" : "Generic_Files_LineLength",
   "title" : "Line Length",
-  "description" : "It is recommended to keep lines at approximately 80 characters long for better code readability."
+  "description" : "It is recommended to keep lines at approximately 80 characters long for better code readability.",
+  "parameters" : [ {
+    "name" : "lineLimit",
+    "description" : "lineLimit"
+  }, {
+    "name" : "absoluteLineLimit",
+    "description" : "absoluteLineLimit"
+  }, {
+    "name" : "ignoreComments",
+    "description" : "ignoreComments"
+  } ]
 }, {
   "patternId" : "Generic_Files_LowercasedFilename",
   "title" : "Lowercased Filenames",
@@ -416,7 +475,14 @@
 }, {
   "patternId" : "Generic_Formatting_MultipleStatementAlignment",
   "title" : "Aligning Blocks of Assignments",
-  "description" : "There should be one space on either side of an equals sign used to assign a value to a variable. In the case of a block of related assignments, more space may be inserted to promote readability."
+  "description" : "There should be one space on either side of an equals sign used to assign a value to a variable. In the case of a block of related assignments, more space may be inserted to promote readability.",
+  "parameters" : [ {
+    "name" : "error",
+    "description" : "error"
+  }, {
+    "name" : "maxPadding",
+    "description" : "maxPadding"
+  } ]
 }, {
   "patternId" : "Generic_Formatting_NoSpaceAfterCast",
   "title" : "Space After Casts",
@@ -424,11 +490,25 @@
 }, {
   "patternId" : "Generic_Formatting_SpaceAfterCast",
   "title" : "Space After Casts",
-  "description" : "Exactly one space is allowed after a cast."
+  "description" : "Exactly one space is allowed after a cast.",
+  "parameters" : [ {
+    "name" : "spacing",
+    "description" : "spacing"
+  }, {
+    "name" : "ignoreNewlines",
+    "description" : "ignoreNewlines"
+  } ]
 }, {
   "patternId" : "Generic_Formatting_SpaceAfterNot",
   "title" : "Space After NOT operator",
-  "description" : "Exactly one space is allowed after the NOT operator."
+  "description" : "Exactly one space is allowed after the NOT operator.",
+  "parameters" : [ {
+    "name" : "spacing",
+    "description" : "spacing"
+  }, {
+    "name" : "ignoreNewlines",
+    "description" : "ignoreNewlines"
+  } ]
 }, {
   "patternId" : "Generic_Formatting_SpaceBeforeCast",
   "title" : "Formatting: Space Before Cast"
@@ -443,23 +523,55 @@
 }, {
   "patternId" : "Generic_Functions_OpeningFunctionBraceBsdAllman",
   "title" : "Opening Brace in Function Declarations",
-  "description" : "Function declarations follow the \"BSD/Allman style\". The function brace is on the line following the function declaration and is indented to the same column as the start of the function declaration."
+  "description" : "Function declarations follow the \"BSD/Allman style\". The function brace is on the line following the function declaration and is indented to the same column as the start of the function declaration.",
+  "parameters" : [ {
+    "name" : "checkFunctions",
+    "description" : "checkFunctions"
+  }, {
+    "name" : "checkClosures",
+    "description" : "checkClosures"
+  } ]
 }, {
   "patternId" : "Generic_Functions_OpeningFunctionBraceKernighanRitchie",
   "title" : "Opening Brace in Function Declarations",
-  "description" : "Function declarations follow the \"Kernighan/Ritchie style\". The function brace is on the same line as the function declaration. One space is required between the closing parenthesis and the brace."
+  "description" : "Function declarations follow the \"Kernighan/Ritchie style\". The function brace is on the same line as the function declaration. One space is required between the closing parenthesis and the brace.",
+  "parameters" : [ {
+    "name" : "checkFunctions",
+    "description" : "checkFunctions"
+  }, {
+    "name" : "checkClosures",
+    "description" : "checkClosures"
+  } ]
 }, {
   "patternId" : "Generic_Metrics_CyclomaticComplexity",
   "title" : "Cyclomatic Complexity",
-  "description" : "Functions should not have a cyclomatic complexity greater than 20, and should try to stay below a complexity of 10."
+  "description" : "Functions should not have a cyclomatic complexity greater than 20, and should try to stay below a complexity of 10.",
+  "parameters" : [ {
+    "name" : "complexity",
+    "description" : "complexity"
+  }, {
+    "name" : "absoluteComplexity",
+    "description" : "absoluteComplexity"
+  } ]
 }, {
   "patternId" : "Generic_Metrics_NestingLevel",
   "title" : "Nesting Level",
-  "description" : "Functions should not have a nesting level greater than 10, and should try to stay below 5."
+  "description" : "Functions should not have a nesting level greater than 10, and should try to stay below 5.",
+  "parameters" : [ {
+    "name" : "nestingLevel",
+    "description" : "nestingLevel"
+  }, {
+    "name" : "absoluteNestingLevel",
+    "description" : "absoluteNestingLevel"
+  } ]
 }, {
   "patternId" : "Generic_NamingConventions_CamelCapsFunctionName",
   "title" : "camelCaps Function Names",
-  "description" : "Functions should use camelCaps format for their names. Only PHP's magic methods should use a double underscore prefix."
+  "description" : "Functions should use camelCaps format for their names. Only PHP's magic methods should use a double underscore prefix.",
+  "parameters" : [ {
+    "name" : "strict",
+    "description" : "strict"
+  } ]
 }, {
   "patternId" : "Generic_NamingConventions_ConstructorName",
   "title" : "Constructor name",
@@ -503,7 +615,11 @@
 }, {
   "patternId" : "Generic_PHP_ForbiddenFunctions",
   "title" : "Forbidden Functions",
-  "description" : "The forbidden functions sizeof() and delete() should not be used."
+  "description" : "The forbidden functions sizeof() and delete() should not be used.",
+  "parameters" : [ {
+    "name" : "error",
+    "description" : "error"
+  } ]
 }, {
   "patternId" : "Generic_PHP_LowerCaseConstant",
   "title" : "Lowercase PHP Constants",
@@ -519,7 +635,11 @@
 }, {
   "patternId" : "Generic_PHP_NoSilencedErrors",
   "title" : "Silenced Errors",
-  "description" : "Suppressing Errors is not allowed."
+  "description" : "Suppressing Errors is not allowed.",
+  "parameters" : [ {
+    "name" : "error",
+    "description" : "error"
+  } ]
 }, {
   "patternId" : "Generic_PHP_RequireStrictTypes",
   "title" : "PHP: Require Strict Types"
@@ -537,7 +657,14 @@
 }, {
   "patternId" : "Generic_Strings_UnnecessaryStringConcat",
   "title" : "Unnecessary String Concatenation",
-  "description" : "Strings should not be concatenated together."
+  "description" : "Strings should not be concatenated together.",
+  "parameters" : [ {
+    "name" : "error",
+    "description" : "error"
+  }, {
+    "name" : "allowMultiline",
+    "description" : "allowMultiline"
+  } ]
 }, {
   "patternId" : "Generic_VersionControl_GitMergeConflict",
   "title" : "Version Control: Git Merge Conflict"
@@ -548,7 +675,14 @@
 }, {
   "patternId" : "Generic_WhiteSpace_ArbitraryParenthesesSpacing",
   "title" : "Arbitrary Parentheses Spacing",
-  "description" : "Arbitrary sets of parentheses should have no spaces inside."
+  "description" : "Arbitrary sets of parentheses should have no spaces inside.",
+  "parameters" : [ {
+    "name" : "spacing",
+    "description" : "spacing"
+  }, {
+    "name" : "ignoreNewlines",
+    "description" : "ignoreNewlines"
+  } ]
 }, {
   "patternId" : "Generic_WhiteSpace_DisallowSpaceIndent",
   "title" : "No Space Indentation",
@@ -566,11 +700,28 @@
 }, {
   "patternId" : "Generic_WhiteSpace_ScopeIndent",
   "title" : "Scope Indentation",
-  "description" : "Indentation for control structures, classes, and functions should be 4 spaces per level."
+  "description" : "Indentation for control structures, classes, and functions should be 4 spaces per level.",
+  "parameters" : [ {
+    "name" : "indent",
+    "description" : "indent"
+  }, {
+    "name" : "exact",
+    "description" : "exact"
+  }, {
+    "name" : "tabIndent",
+    "description" : "tabIndent"
+  } ]
 }, {
   "patternId" : "Generic_WhiteSpace_SpreadOperatorSpacingAfter",
   "title" : "Spacing After Spread Operator",
-  "description" : "There should be no space between the spread operator and the variable/function call it applies to."
+  "description" : "There should be no space between the spread operator and the variable/function call it applies to.",
+  "parameters" : [ {
+    "name" : "spacing",
+    "description" : "spacing"
+  }, {
+    "name" : "ignoreNewlines",
+    "description" : "ignoreNewlines"
+  } ]
 }, {
   "patternId" : "MEQP1_Classes_Mysql4",
   "title" : "Classes: Mysql4",
@@ -718,7 +869,11 @@
 }, {
   "patternId" : "Magento2_Functions_DiscouragedFunction",
   "title" : "Functions: Discouraged Function",
-  "description" : "Detects possible usage of discouraged functions."
+  "description" : "Detects possible usage of discouraged functions.",
+  "parameters" : [ {
+    "name" : "error",
+    "description" : "error"
+  } ]
 }, {
   "patternId" : "Magento2_Functions_StaticFunction",
   "title" : "Functions: Static Function",
@@ -890,7 +1045,7 @@
 }, {
   "patternId" : "PEAR_Commenting_FileComment",
   "title" : "File Comments",
-  "description" : "Files must have a non-empty doc comment.  The short description must be on the second line of the comment.  Each description must have one blank comment line before and after.  There must be one blank line before the tags in the comments.  There must be a category, package, author, license, and link tag.  There may only be one category, package, subpackage, license, version, since and deprecated tag.  The tags must be in the order category, package, subpackage, author, copyright, license, version, link, see, since, and deprecated.  The php version must be specified."
+  "description" : "Files must have a non-empty doc comment.  The short description must be on the second line of the comment.  Each description must have one blank comment line before and after.  There must be one blank line before the tags in the comments.  There must be a category, package, author, license, and link tag.  There may only be one category, package, subpackage, license, version, since and deprecated tag"
 }, {
   "patternId" : "PEAR_Commenting_FunctionComment",
   "title" : "Function Comments",
@@ -902,11 +1057,19 @@
 }, {
   "patternId" : "PEAR_ControlStructures_ControlSignature",
   "title" : "Control Structure Signatures",
-  "description" : "Control structures should use one space around the parentheses in conditions.  The opening brace should be preceded by one space and should be at the end of the line."
+  "description" : "Control structures should use one space around the parentheses in conditions.  The opening brace should be preceded by one space and should be at the end of the line.",
+  "parameters" : [ {
+    "name" : "ignoreComments",
+    "description" : "ignoreComments"
+  } ]
 }, {
   "patternId" : "PEAR_ControlStructures_MultiLineCondition",
   "title" : "Multi-line If Conditions",
-  "description" : "Multi-line if conditions should be indented one level and each line should begin with a boolean operator.  The end parenthesis should be on a new line."
+  "description" : "Multi-line if conditions should be indented one level and each line should begin with a boolean operator.  The end parenthesis should be on a new line.",
+  "parameters" : [ {
+    "name" : "indent",
+    "description" : "indent"
+  } ]
 }, {
   "patternId" : "PEAR_Files_IncludingFile",
   "title" : "Including Code",
@@ -914,15 +1077,36 @@
 }, {
   "patternId" : "PEAR_Formatting_MultiLineAssignment",
   "title" : "Multi-Line Assignment",
-  "description" : "Multi-line assignment should have the equals sign be the first item on the second line indented correctly."
+  "description" : "Multi-line assignment should have the equals sign be the first item on the second line indented correctly.",
+  "parameters" : [ {
+    "name" : "indent",
+    "description" : "indent"
+  } ]
 }, {
   "patternId" : "PEAR_Functions_FunctionCallSignature",
   "title" : "Function Calls",
-  "description" : "Functions should be called with no spaces between the function name, the opening parenthesis, and the first parameter; and no space between the last parameter, the closing parenthesis, and the semicolon."
+  "description" : "Functions should be called with no spaces between the function name, the opening parenthesis, and the first parameter; and no space between the last parameter, the closing parenthesis, and the semicolon.",
+  "parameters" : [ {
+    "name" : "indent",
+    "description" : "indent"
+  }, {
+    "name" : "allowMultipleArguments",
+    "description" : "allowMultipleArguments"
+  }, {
+    "name" : "requiredSpacesAfterOpen",
+    "description" : "requiredSpacesAfterOpen"
+  }, {
+    "name" : "requiredSpacesBeforeClose",
+    "description" : "requiredSpacesBeforeClose"
+  } ]
 }, {
   "patternId" : "PEAR_Functions_FunctionDeclaration",
   "title" : "Function Declarations",
-  "description" : "There should be exactly 1 space after the function keyword and 1 space on each side of the use keyword.  Closures should use the Kernighan/Ritchie Brace style and other single-line functions should use the BSD/Allman style.  Multi-line function declarations should have the parameter lists indented one level with the closing parenthesis on a newline followed by a single space and the opening brace of the function."
+  "description" : "There should be exactly 1 space after the function keyword and 1 space on each side of the use keyword.  Closures should use the Kernighan/Ritchie Brace style and other single-line functions should use the BSD/Allman style.  Multi-line function declarations should have the parameter lists indented one level with the closing parenthesis on a newline followed by a single space and the opening brace of the function.",
+  "parameters" : [ {
+    "name" : "indent",
+    "description" : "indent"
+  } ]
 }, {
   "patternId" : "PEAR_Functions_ValidDefaultValue",
   "title" : "Default Values in Function Declarations",
@@ -942,11 +1126,22 @@
 }, {
   "patternId" : "PEAR_WhiteSpace_ObjectOperatorIndent",
   "title" : "Object Operator Indentation",
-  "description" : "Chained object operators when spread out over multiple lines should be the first thing on the line and be indented by 1 level."
+  "description" : "Chained object operators when spread out over multiple lines should be the first thing on the line and be indented by 1 level.",
+  "parameters" : [ {
+    "name" : "indent",
+    "description" : "indent"
+  }, {
+    "name" : "multilevel",
+    "description" : "multilevel"
+  } ]
 }, {
   "patternId" : "PEAR_WhiteSpace_ScopeClosingBrace",
   "title" : "Closing Brace Indentation",
-  "description" : "Closing braces should be indented at the same level as the beginning of the scope."
+  "description" : "Closing braces should be indented at the same level as the beginning of the scope.",
+  "parameters" : [ {
+    "name" : "indent",
+    "description" : "indent"
+  } ]
 }, {
   "patternId" : "PEAR_WhiteSpace_ScopeIndent",
   "title" : "Scope Indentation",
@@ -1431,10 +1626,18 @@
   "title" : "Classes: Closing Brace"
 }, {
   "patternId" : "PSR12_ControlStructures_BooleanOperatorPlacement",
-  "title" : "Control Structures: Boolean Operator Placement"
+  "title" : "Control Structures: Boolean Operator Placement",
+  "parameters" : [ {
+    "name" : "allowOnly",
+    "description" : "allowOnly"
+  } ]
 }, {
   "patternId" : "PSR12_ControlStructures_ControlStructureSpacing",
-  "title" : "Control Structures: Control Structure Spacing"
+  "title" : "Control Structures: Control Structure Spacing",
+  "parameters" : [ {
+    "name" : "indent",
+    "description" : "indent"
+  } ]
 }, {
   "patternId" : "PSR12_Files_DeclareStatement",
   "title" : "Files: Declare Statement"
@@ -1461,7 +1664,11 @@
 }, {
   "patternId" : "PSR12_Namespaces_CompoundNamespaceDepth",
   "title" : "Compound Namespace Depth",
-  "description" : "Compound namespaces with a depth of more than two MUST NOT be used."
+  "description" : "Compound namespaces with a depth of more than two MUST NOT be used.",
+  "parameters" : [ {
+    "name" : "maxDepth",
+    "description" : "maxDepth"
+  } ]
 }, {
   "patternId" : "PSR12_Operators_OperatorSpacing",
   "title" : "Operator Spacing",
@@ -1487,7 +1694,11 @@
 }, {
   "patternId" : "PSR2_Classes_ClassDeclaration",
   "title" : "Class Declarations",
-  "description" : "There should be exactly 1 space between the abstract or final keyword and the class keyword and between the class keyword and the class name.  The extends and implements keywords, if present, must be on the same line as the class name.  When interfaces implemented are spread over multiple lines, there should be exactly 1 interface mentioned per line indented by 1 level.  The closing brace of the class must go on the first line after the body of the class and must be on a line by itself."
+  "description" : "There should be exactly 1 space between the abstract or final keyword and the class keyword and between the class keyword and the class name.  The extends and implements keywords, if present, must be on the same line as the class name.  When interfaces implemented are spread over multiple lines, there should be exactly 1 interface mentioned per line indented by 1 level.  The closing brace of the class must go on the first line after the body of the class and must be on a line by itself.",
+  "parameters" : [ {
+    "name" : "indent",
+    "description" : "indent"
+  } ]
 }, {
   "patternId" : "PSR2_Classes_PropertyDeclaration",
   "title" : "Property Declarations",
@@ -1495,7 +1706,14 @@
 }, {
   "patternId" : "PSR2_ControlStructures_ControlStructureSpacing",
   "title" : "Control Structure Spacing",
-  "description" : "Control Structures should have 0 spaces after opening parentheses and 0 spaces before closing parentheses."
+  "description" : "Control Structures should have 0 spaces after opening parentheses and 0 spaces before closing parentheses.",
+  "parameters" : [ {
+    "name" : "requiredSpacesAfterOpen",
+    "description" : "requiredSpacesAfterOpen"
+  }, {
+    "name" : "requiredSpacesBeforeClose",
+    "description" : "requiredSpacesBeforeClose"
+  } ]
 }, {
   "patternId" : "PSR2_ControlStructures_ElseIfDeclaration",
   "title" : "Elseif Declarations",
@@ -1503,7 +1721,11 @@
 }, {
   "patternId" : "PSR2_ControlStructures_SwitchDeclaration",
   "title" : "Switch Declarations",
-  "description" : "Case statements should be indented 4 spaces from the switch keyword.  It should also be followed by a space.  Colons in switch declarations should not be preceded by whitespace.  Break statements should be indented 4 more spaces from the case statement.  There must be a comment when falling through from one case into the next."
+  "description" : "Case statements should be indented 4 spaces from the switch keyword.  It should also be followed by a space.  Colons in switch declarations should not be preceded by whitespace.  Break statements should be indented 4 more spaces from the case statement.  There must be a comment when falling through from one case into the next.",
+  "parameters" : [ {
+    "name" : "indent",
+    "description" : "indent"
+  } ]
 }, {
   "patternId" : "PSR2_Files_ClosingTag",
   "title" : "Files: Closing Tag"
@@ -1513,7 +1735,11 @@
   "description" : "PHP Files should end with exactly one newline."
 }, {
   "patternId" : "PSR2_Methods_FunctionCallSignature",
-  "title" : "Methods: Function Call Signature"
+  "title" : "Methods: Function Call Signature",
+  "parameters" : [ {
+    "name" : "allowMultipleArguments",
+    "description" : "allowMultipleArguments"
+  } ]
 }, {
   "patternId" : "PSR2_Methods_FunctionClosingBrace",
   "title" : "Methods: Function Closing Brace"
@@ -1546,7 +1772,11 @@
   "title" : "Security Bad Functions related issue: Easy RFI"
 }, {
   "patternId" : "Security_BadFunctions_EasyXSS",
-  "title" : "Security Bad Functions related issue: Easy XSS"
+  "title" : "Security Bad Functions related issue: Easy XSS",
+  "parameters" : [ {
+    "name" : "forceParanoia",
+    "description" : "forceParanoia"
+  } ]
 }, {
   "patternId" : "Security_BadFunctions_ErrorHandling",
   "title" : "Security Bad Functions related issue: Error Handling"
@@ -1597,7 +1827,11 @@
   "title" : "Security Drupal7 related issue: Cachei"
 }, {
   "patternId" : "Security_Drupal7_DbQueryAC",
-  "title" : "Security Drupal7 related issue: Db Query AC"
+  "title" : "Security Drupal7 related issue: Db Query AC",
+  "parameters" : [ {
+    "name" : "forceParanoia",
+    "description" : "forceParanoia"
+  } ]
 }, {
   "patternId" : "Security_Drupal7_DynQueries",
   "title" : "Security Drupal7 related issue: Dyn Queries"
@@ -1609,7 +1843,14 @@
   "title" : "Security Drupal7 related issue: SQ Li"
 }, {
   "patternId" : "Security_Drupal7_UserInputWatch",
-  "title" : "Security Drupal7 related issue: User Input Watch"
+  "title" : "Security Drupal7 related issue: User Input Watch",
+  "parameters" : [ {
+    "name" : "FormThreshold",
+    "description" : "FormThreshold"
+  }, {
+    "name" : "FormStateThreshold",
+    "description" : "FormStateThreshold"
+  } ]
 }, {
   "patternId" : "Security_Drupal7_XSSFormValue",
   "title" : "Security Drupal7 related issue: XSS Form Value"
@@ -1633,19 +1874,42 @@
   "title" : "Arrays: Multi Line Array End Bracket Placement"
 }, {
   "patternId" : "SlevomatCodingStandard_Arrays_SingleLineArrayWhitespace",
-  "title" : "Arrays: Single Line Array Whitespace"
+  "title" : "Arrays: Single Line Array Whitespace",
+  "parameters" : [ {
+    "name" : "spacesAroundBrackets",
+    "description" : "spacesAroundBrackets"
+  }, {
+    "name" : "enableEmptyArrayCheck",
+    "description" : "enableEmptyArrayCheck"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Arrays_TrailingArrayComma",
-  "title" : "Arrays: Trailing Array Comma"
+  "title" : "Arrays: Trailing Array Comma",
+  "parameters" : [ {
+    "name" : "enableAfterHeredoc",
+    "description" : "enableAfterHeredoc"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Classes_ClassConstantVisibility",
-  "title" : "Classes: Class Constant Visibility"
+  "title" : "Classes: Class Constant Visibility",
+  "parameters" : [ {
+    "name" : "fixable",
+    "description" : "fixable"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Classes_ClassMemberSpacing",
-  "title" : "Classes: Class Member Spacing"
+  "title" : "Classes: Class Member Spacing",
+  "parameters" : [ {
+    "name" : "linesCountBetweenMembers",
+    "description" : "linesCountBetweenMembers"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Classes_ClassStructure",
-  "title" : "Classes: Class Structure"
+  "title" : "Classes: Class Structure",
+  "parameters" : [ {
+    "name" : "enableFinalMethods",
+    "description" : "enableFinalMethods"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Classes_ConstantSpacing",
   "title" : "Classes: Constant Spacing"
@@ -1660,25 +1924,60 @@
   "title" : "Classes: Disallow Multi Property Definition"
 }, {
   "patternId" : "SlevomatCodingStandard_Classes_EmptyLinesAroundClassBraces",
-  "title" : "Classes: Empty Lines Around Class Braces"
+  "title" : "Classes: Empty Lines Around Class Braces",
+  "parameters" : [ {
+    "name" : "linesCountAfterOpeningBrace",
+    "description" : "linesCountAfterOpeningBrace"
+  }, {
+    "name" : "linesCountBeforeClosingBrace",
+    "description" : "linesCountBeforeClosingBrace"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Classes_MethodSpacing",
-  "title" : "Classes: Method Spacing"
+  "title" : "Classes: Method Spacing",
+  "parameters" : [ {
+    "name" : "minLinesCount",
+    "description" : "minLinesCount"
+  }, {
+    "name" : "maxLinesCount",
+    "description" : "maxLinesCount"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Classes_ModernClassNameReference",
   "title" : "Classes: Modern Class Name Reference"
 }, {
   "patternId" : "SlevomatCodingStandard_Classes_ParentCallSpacing",
-  "title" : "Classes: Parent Call Spacing"
+  "title" : "Classes: Parent Call Spacing",
+  "parameters" : [ {
+    "name" : "linesCountBeforeParentCall",
+    "description" : "linesCountBeforeParentCall"
+  }, {
+    "name" : "linesCountBeforeFirstParentCall",
+    "description" : "linesCountBeforeFirstParentCall"
+  }, {
+    "name" : "linesCountAfterParentCall",
+    "description" : "linesCountAfterParentCall"
+  }, {
+    "name" : "linesCountAfterLastParentCall",
+    "description" : "linesCountAfterLastParentCall"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Classes_PropertySpacing",
   "title" : "Classes: Property Spacing"
 }, {
   "patternId" : "SlevomatCodingStandard_Classes_RequireMultiLineMethodSignature",
-  "title" : "Classes: Require Multi Line Method Signature"
+  "title" : "Classes: Require Multi Line Method Signature",
+  "parameters" : [ {
+    "name" : "minLineLength",
+    "description" : "minLineLength"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Classes_RequireSingleLineMethodSignature",
-  "title" : "Classes: Require Single Line Method Signature"
+  "title" : "Classes: Require Single Line Method Signature",
+  "parameters" : [ {
+    "name" : "maxLineLength",
+    "description" : "maxLineLength"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Classes_SuperfluousAbstractClassNaming",
   "title" : "Classes: Superfluous Abstract Class Naming"
@@ -1696,7 +1995,23 @@
   "title" : "Classes: Trait Use Declaration"
 }, {
   "patternId" : "SlevomatCodingStandard_Classes_TraitUseSpacing",
-  "title" : "Classes: Trait Use Spacing"
+  "title" : "Classes: Trait Use Spacing",
+  "parameters" : [ {
+    "name" : "linesCountAfterLastUseWhenLastInClass",
+    "description" : "linesCountAfterLastUseWhenLastInClass"
+  }, {
+    "name" : "linesCountBeforeFirstUse",
+    "description" : "linesCountBeforeFirstUse"
+  }, {
+    "name" : "linesCountAfterLastUse",
+    "description" : "linesCountAfterLastUse"
+  }, {
+    "name" : "linesCountBetweenUses",
+    "description" : "linesCountBetweenUses"
+  }, {
+    "name" : "linesCountBeforeFirstUseWhenFirstInClass",
+    "description" : "linesCountBeforeFirstUseWhenFirstInClass"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Classes_UnusedPrivateElements",
   "title" : "Classes: Unused Private Elements"
@@ -1711,7 +2026,23 @@
   "title" : "Commenting: Disallow One Line Property Doc Comment"
 }, {
   "patternId" : "SlevomatCodingStandard_Commenting_DocCommentSpacing",
-  "title" : "Commenting: Doc Comment Spacing"
+  "title" : "Commenting: Doc Comment Spacing",
+  "parameters" : [ {
+    "name" : "linesCountBeforeFirstContent",
+    "description" : "linesCountBeforeFirstContent"
+  }, {
+    "name" : "linesCountBetweenDescriptionAndAnnotations",
+    "description" : "linesCountBetweenDescriptionAndAnnotations"
+  }, {
+    "name" : "linesCountBetweenAnnotationsGroups",
+    "description" : "linesCountBetweenAnnotationsGroups"
+  }, {
+    "name" : "linesCountBetweenDifferentAnnotationsTypes",
+    "description" : "linesCountBetweenDifferentAnnotationsTypes"
+  }, {
+    "name" : "linesCountAfterLastContent",
+    "description" : "linesCountAfterLastContent"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Commenting_EmptyComment",
   "title" : "Commenting: Empty Comment"
@@ -1723,7 +2054,11 @@
   "title" : "Commenting: Forbidden Comments"
 }, {
   "patternId" : "SlevomatCodingStandard_Commenting_InlineDocCommentDeclaration",
-  "title" : "Commenting: Inline Doc Comment Declaration"
+  "title" : "Commenting: Inline Doc Comment Declaration",
+  "parameters" : [ {
+    "name" : "allowDocCommentAboveReturn",
+    "description" : "allowDocCommentAboveReturn"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Commenting_RequireOneLineDocComment",
   "title" : "Commenting: Require One Line Doc Comment"
@@ -1738,10 +2073,27 @@
   "title" : "Commenting: Useless Inherit Doc Comment"
 }, {
   "patternId" : "SlevomatCodingStandard_ControlStructures_AssignmentInCondition",
-  "title" : "Control Structures: Assignment In Condition"
+  "title" : "Control Structures: Assignment In Condition",
+  "parameters" : [ {
+    "name" : "ignoreAssignmentsInsideFunctionCalls",
+    "description" : "ignoreAssignmentsInsideFunctionCalls"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_ControlStructures_BlockControlStructureSpacing",
-  "title" : "Control Structures: Block Control Structure Spacing"
+  "title" : "Control Structures: Block Control Structure Spacing",
+  "parameters" : [ {
+    "name" : "linesCountBeforeControlStructure",
+    "description" : "linesCountBeforeControlStructure"
+  }, {
+    "name" : "linesCountBeforeFirstControlStructure",
+    "description" : "linesCountBeforeFirstControlStructure"
+  }, {
+    "name" : "linesCountAfterControlStructure",
+    "description" : "linesCountAfterControlStructure"
+  }, {
+    "name" : "linesCountAfterLastControlStructure",
+    "description" : "linesCountAfterLastControlStructure"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_ControlStructures_DisallowContinueWithoutIntegerOperandInSwitch",
   "title" : "Control Structures: Disallow Continue Without Integer Operand In Switch"
@@ -1750,16 +2102,55 @@
   "title" : "Control Structures: Disallow Empty"
 }, {
   "patternId" : "SlevomatCodingStandard_ControlStructures_DisallowShortTernaryOperator",
-  "title" : "Control Structures: Disallow Short Ternary Operator"
+  "title" : "Control Structures: Disallow Short Ternary Operator",
+  "parameters" : [ {
+    "name" : "fixable",
+    "description" : "fixable"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_ControlStructures_DisallowYodaComparison",
   "title" : "Control Structures: Disallow Yoda Comparison"
 }, {
   "patternId" : "SlevomatCodingStandard_ControlStructures_EarlyExit",
-  "title" : "Control Structures: Early Exit"
+  "title" : "Control Structures: Early Exit",
+  "parameters" : [ {
+    "name" : "ignoreStandaloneIfInScope",
+    "description" : "ignoreStandaloneIfInScope"
+  }, {
+    "name" : "ignoreOneLineTrailingIf",
+    "description" : "ignoreOneLineTrailingIf"
+  }, {
+    "name" : "ignoreTrailingIfWithOneInstruction",
+    "description" : "ignoreTrailingIfWithOneInstruction"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_ControlStructures_JumpStatementsSpacing",
-  "title" : "Control Structures: Jump Statements Spacing"
+  "title" : "Control Structures: Jump Statements Spacing",
+  "parameters" : [ {
+    "name" : "allowSingleLineYieldStacking",
+    "description" : "allowSingleLineYieldStacking"
+  }, {
+    "name" : "linesCountAfterControlStructure",
+    "description" : "linesCountAfterControlStructure"
+  }, {
+    "name" : "linesCountBeforeControlStructure",
+    "description" : "linesCountBeforeControlStructure"
+  }, {
+    "name" : "linesCountAfterLastControlStructure",
+    "description" : "linesCountAfterLastControlStructure"
+  }, {
+    "name" : "linesCountAfterWhenLastInCaseOrDefault",
+    "description" : "linesCountAfterWhenLastInCaseOrDefault"
+  }, {
+    "name" : "linesCountBeforeFirstControlStructure",
+    "description" : "linesCountBeforeFirstControlStructure"
+  }, {
+    "name" : "linesCountAfterWhenLastInLastCaseOrDefault",
+    "description" : "linesCountAfterWhenLastInLastCaseOrDefault"
+  }, {
+    "name" : "linesCountBeforeWhenFirstInCaseOrDefault",
+    "description" : "linesCountBeforeWhenFirstInCaseOrDefault"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_ControlStructures_LanguageConstructWithParentheses",
   "title" : "Control Structures: Language Construct With Parentheses"
@@ -1771,10 +2162,18 @@
   "title" : "Control Structures: New Without Parentheses"
 }, {
   "patternId" : "SlevomatCodingStandard_ControlStructures_RequireMultiLineTernaryOperator",
-  "title" : "Control Structures: Require Multi Line Ternary Operator"
+  "title" : "Control Structures: Require Multi Line Ternary Operator",
+  "parameters" : [ {
+    "name" : "lineLengthLimit",
+    "description" : "lineLengthLimit"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_ControlStructures_RequireNullCoalesceEqualOperator",
-  "title" : "Control Structures: Require Null Coalesce Equal Operator"
+  "title" : "Control Structures: Require Null Coalesce Equal Operator",
+  "parameters" : [ {
+    "name" : "enable",
+    "description" : "enable"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_ControlStructures_RequireNullCoalesceOperator",
   "title" : "Control Structures: Require Null Coalesce Operator"
@@ -1783,16 +2182,32 @@
   "title" : "Control Structures: Require Short Ternary Operator"
 }, {
   "patternId" : "SlevomatCodingStandard_ControlStructures_RequireTernaryOperator",
-  "title" : "Control Structures: Require Ternary Operator"
+  "title" : "Control Structures: Require Ternary Operator",
+  "parameters" : [ {
+    "name" : "ignoreMultiLine",
+    "description" : "ignoreMultiLine"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_ControlStructures_RequireYodaComparison",
-  "title" : "Control Structures: Require Yoda Comparison"
+  "title" : "Control Structures: Require Yoda Comparison",
+  "parameters" : [ {
+    "name" : "alwaysVariableOnRight",
+    "description" : "alwaysVariableOnRight"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_ControlStructures_UselessIfConditionWithReturn",
-  "title" : "Control Structures: Useless If Condition With Return"
+  "title" : "Control Structures: Useless If Condition With Return",
+  "parameters" : [ {
+    "name" : "assumeAllConditionExpressionsAreAlreadyBoolean",
+    "description" : "assumeAllConditionExpressionsAreAlreadyBoolean"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_ControlStructures_UselessTernaryOperator",
-  "title" : "Control Structures: Useless Ternary Operator"
+  "title" : "Control Structures: Useless Ternary Operator",
+  "parameters" : [ {
+    "name" : "assumeAllConditionExpressionsAreAlreadyBoolean",
+    "description" : "assumeAllConditionExpressionsAreAlreadyBoolean"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Exceptions_DeadCatch",
   "title" : "Exceptions: Dead Catch"
@@ -1801,13 +2216,36 @@
   "title" : "Exceptions: Reference Throwable Only"
 }, {
   "patternId" : "SlevomatCodingStandard_Files_LineLength",
-  "title" : "Files: Line Length"
+  "title" : "Files: Line Length",
+  "parameters" : [ {
+    "name" : "lineLengthLimit",
+    "description" : "lineLengthLimit"
+  }, {
+    "name" : "ignoreComments",
+    "description" : "ignoreComments"
+  }, {
+    "name" : "ignoreImports",
+    "description" : "ignoreImports"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Files_TypeNameMatchesFileName",
   "title" : "Files: Type Name Matches File Name"
 }, {
   "patternId" : "SlevomatCodingStandard_Functions_ArrowFunctionDeclaration",
-  "title" : "Functions: Arrow Function Declaration"
+  "title" : "Functions: Arrow Function Declaration",
+  "parameters" : [ {
+    "name" : "spacesCountAfterKeyword",
+    "description" : "spacesCountAfterKeyword"
+  }, {
+    "name" : "spacesCountBeforeArrow",
+    "description" : "spacesCountBeforeArrow"
+  }, {
+    "name" : "spacesCountAfterArrow",
+    "description" : "spacesCountAfterArrow"
+  }, {
+    "name" : "allowMultiLine",
+    "description" : "allowMultiLine"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Functions_DisallowArrowFunction",
   "title" : "Functions: Disallow Arrow Function"
@@ -1816,7 +2254,14 @@
   "title" : "Functions: Disallow Empty Function"
 }, {
   "patternId" : "SlevomatCodingStandard_Functions_RequireArrowFunction",
-  "title" : "Functions: Require Arrow Function"
+  "title" : "Functions: Require Arrow Function",
+  "parameters" : [ {
+    "name" : "allowNested",
+    "description" : "allowNested"
+  }, {
+    "name" : "enable",
+    "description" : "enable"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Functions_StaticClosure",
   "title" : "Functions: Static Closure"
@@ -1825,7 +2270,11 @@
   "title" : "Functions: Strict Call"
 }, {
   "patternId" : "SlevomatCodingStandard_Functions_TrailingCommaInCall",
-  "title" : "Functions: Trailing Comma In Call"
+  "title" : "Functions: Trailing Comma In Call",
+  "parameters" : [ {
+    "name" : "enable",
+    "description" : "enable"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Functions_UnusedInheritedVariablePassedToClosure",
   "title" : "Functions: Unused Inherited Variable Passed To Closure"
@@ -1837,7 +2286,14 @@
   "title" : "Functions: Useless Parameter Default Value"
 }, {
   "patternId" : "SlevomatCodingStandard_Namespaces_AlphabeticallySortedUses",
-  "title" : "Namespaces: Alphabetically Sorted Uses"
+  "title" : "Namespaces: Alphabetically Sorted Uses",
+  "parameters" : [ {
+    "name" : "psr12Compatible",
+    "description" : "psr12Compatible"
+  }, {
+    "name" : "caseSensitive",
+    "description" : "caseSensitive"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Namespaces_DisallowGroupUse",
   "title" : "Namespaces: Disallow Group Use"
@@ -1855,7 +2311,11 @@
   "title" : "Namespaces: Fully Qualified Global Constants"
 }, {
   "patternId" : "SlevomatCodingStandard_Namespaces_FullyQualifiedGlobalFunctions",
-  "title" : "Namespaces: Fully Qualified Global Functions"
+  "title" : "Namespaces: Fully Qualified Global Functions",
+  "parameters" : [ {
+    "name" : "includeSpecialFunctions",
+    "description" : "includeSpecialFunctions"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Namespaces_MultipleUsesPerLine",
   "title" : "Namespaces: Multiple Uses Per Line"
@@ -1864,16 +2324,61 @@
   "title" : "Namespaces: Namespace Declaration"
 }, {
   "patternId" : "SlevomatCodingStandard_Namespaces_NamespaceSpacing",
-  "title" : "Namespaces: Namespace Spacing"
+  "title" : "Namespaces: Namespace Spacing",
+  "parameters" : [ {
+    "name" : "linesCountBeforeNamespace",
+    "description" : "linesCountBeforeNamespace"
+  }, {
+    "name" : "linesCountAfterNamespace",
+    "description" : "linesCountAfterNamespace"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Namespaces_ReferenceUsedNamesOnly",
-  "title" : "Namespaces: Reference Used Names Only"
+  "title" : "Namespaces: Reference Used Names Only",
+  "parameters" : [ {
+    "name" : "searchAnnotations",
+    "description" : "searchAnnotations"
+  }, {
+    "name" : "allowFullyQualifiedExceptions",
+    "description" : "allowFullyQualifiedExceptions"
+  }, {
+    "name" : "allowFullyQualifiedGlobalFunctions",
+    "description" : "allowFullyQualifiedGlobalFunctions"
+  }, {
+    "name" : "allowFullyQualifiedNameForCollidingClasses",
+    "description" : "allowFullyQualifiedNameForCollidingClasses"
+  }, {
+    "name" : "allowFallbackGlobalFunctions",
+    "description" : "allowFallbackGlobalFunctions"
+  }, {
+    "name" : "allowFullyQualifiedGlobalClasses",
+    "description" : "allowFullyQualifiedGlobalClasses"
+  }, {
+    "name" : "allowFallbackGlobalConstants",
+    "description" : "allowFallbackGlobalConstants"
+  }, {
+    "name" : "allowFullyQualifiedGlobalConstants",
+    "description" : "allowFullyQualifiedGlobalConstants"
+  }, {
+    "name" : "allowFullyQualifiedNameForCollidingConstants",
+    "description" : "allowFullyQualifiedNameForCollidingConstants"
+  }, {
+    "name" : "allowFullyQualifiedNameForCollidingFunctions",
+    "description" : "allowFullyQualifiedNameForCollidingFunctions"
+  }, {
+    "name" : "allowPartialUses",
+    "description" : "allowPartialUses"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Namespaces_RequireOneNamespaceInFile",
   "title" : "Namespaces: Require One Namespace In File"
 }, {
   "patternId" : "SlevomatCodingStandard_Namespaces_UnusedUses",
-  "title" : "Namespaces: Unused Uses"
+  "title" : "Namespaces: Unused Uses",
+  "parameters" : [ {
+    "name" : "searchAnnotations",
+    "description" : "searchAnnotations"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Namespaces_UseDoesNotStartWithBackslash",
   "title" : "Namespaces: Use Does Not Start With Backslash"
@@ -1882,10 +2387,24 @@
   "title" : "Namespaces: Use From Same Namespace"
 }, {
   "patternId" : "SlevomatCodingStandard_Namespaces_UseOnlyWhitelistedNamespaces",
-  "title" : "Namespaces: Use Only Whitelisted Namespaces"
+  "title" : "Namespaces: Use Only Whitelisted Namespaces",
+  "parameters" : [ {
+    "name" : "allowUseFromRootNamespace",
+    "description" : "allowUseFromRootNamespace"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Namespaces_UseSpacing",
-  "title" : "Namespaces: Use Spacing"
+  "title" : "Namespaces: Use Spacing",
+  "parameters" : [ {
+    "name" : "linesCountBeforeFirstUse",
+    "description" : "linesCountBeforeFirstUse"
+  }, {
+    "name" : "linesCountBetweenUseTypes",
+    "description" : "linesCountBetweenUseTypes"
+  }, {
+    "name" : "linesCountAfterLastUse",
+    "description" : "linesCountAfterLastUse"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Namespaces_UselessAlias",
   "title" : "Namespaces: Useless Alias"
@@ -1894,7 +2413,17 @@
   "title" : "Numbers: Disallow Numeric Literal Separator"
 }, {
   "patternId" : "SlevomatCodingStandard_Numbers_RequireNumericLiteralSeparator",
-  "title" : "Numbers: Require Numeric Literal Separator"
+  "title" : "Numbers: Require Numeric Literal Separator",
+  "parameters" : [ {
+    "name" : "enable",
+    "description" : "enable"
+  }, {
+    "name" : "minDigitsBeforeDecimalPoint",
+    "description" : "minDigitsBeforeDecimalPoint"
+  }, {
+    "name" : "minDigitsAfterDecimalPoint",
+    "description" : "minDigitsAfterDecimalPoint"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Operators_DisallowEqualOperators",
   "title" : "Operators: Disallow Equal Operators"
@@ -1903,7 +2432,11 @@
   "title" : "Operators: Disallow Increment And Decrement Operators"
 }, {
   "patternId" : "SlevomatCodingStandard_Operators_NegationOperatorSpacing",
-  "title" : "Operators: Negation Operator Spacing"
+  "title" : "Operators: Negation Operator Spacing",
+  "parameters" : [ {
+    "name" : "spacesCount",
+    "description" : "spacesCount"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Operators_RequireCombinedAssignmentOperator",
   "title" : "Operators: Require Combined Assignment Operator"
@@ -1912,7 +2445,11 @@
   "title" : "Operators: Require Only Standalone Increment And Decrement Operators"
 }, {
   "patternId" : "SlevomatCodingStandard_Operators_SpreadOperatorSpacing",
-  "title" : "Operators: Spread Operator Spacing"
+  "title" : "Operators: Spread Operator Spacing",
+  "parameters" : [ {
+    "name" : "spacesCountAfterOperator",
+    "description" : "spacesCountAfterOperator"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_PHP_DisallowDirectMagicInvokeCall",
   "title" : "PHP: Disallow Direct Magic Invoke Call"
@@ -1927,7 +2464,11 @@
   "title" : "PHP: Optimized Functions Without Unpacking"
 }, {
   "patternId" : "SlevomatCodingStandard_PHP_ReferenceSpacing",
-  "title" : "PHP: Reference Spacing"
+  "title" : "PHP: Reference Spacing",
+  "parameters" : [ {
+    "name" : "spacesCountAfterReference",
+    "description" : "spacesCountAfterReference"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_PHP_RequireExplicitAssertion",
   "title" : "PHP: Require Explicit Assertion"
@@ -1942,13 +2483,27 @@
   "title" : "PHP: Type Cast"
 }, {
   "patternId" : "SlevomatCodingStandard_PHP_UselessParentheses",
-  "title" : "PHP: Useless Parentheses"
+  "title" : "PHP: Useless Parentheses",
+  "parameters" : [ {
+    "name" : "ignoreComplexTernaryConditions",
+    "description" : "ignoreComplexTernaryConditions"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_PHP_UselessSemicolon",
   "title" : "PHP: Useless Semicolon"
 }, {
   "patternId" : "SlevomatCodingStandard_TypeHints_DeclareStrictTypes",
-  "title" : "Type Hints: Declare Strict Types"
+  "title" : "Type Hints: Declare Strict Types",
+  "parameters" : [ {
+    "name" : "newlinesCountBetweenOpenTagAndDeclare",
+    "description" : "newlinesCountBetweenOpenTagAndDeclare"
+  }, {
+    "name" : "newlinesCountAfterDeclare",
+    "description" : "newlinesCountAfterDeclare"
+  }, {
+    "name" : "spacesCountAroundEqualsSign",
+    "description" : "spacesCountAroundEqualsSign"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_TypeHints_DisallowArrayTypeHintSyntax",
   "title" : "Type Hints: Disallow Array Type Hint Syntax"
@@ -1966,22 +2521,38 @@
   "title" : "Type Hints: Nullable Type For Null Default Value"
 }, {
   "patternId" : "SlevomatCodingStandard_TypeHints_ParameterTypeHint",
-  "title" : "Type Hints: Parameter Type Hint"
+  "title" : "Type Hints: Parameter Type Hint",
+  "parameters" : [ {
+    "name" : "enableObjectTypeHint",
+    "description" : "enableObjectTypeHint"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_TypeHints_ParameterTypeHintSpacing",
   "title" : "Type Hints: Parameter Type Hint Spacing"
 }, {
   "patternId" : "SlevomatCodingStandard_TypeHints_PropertyTypeHint",
-  "title" : "Type Hints: Property Type Hint"
+  "title" : "Type Hints: Property Type Hint",
+  "parameters" : [ {
+    "name" : "enableNativeTypeHint",
+    "description" : "enableNativeTypeHint"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_TypeHints_PropertyTypeHintSpacing",
   "title" : "Type Hints: Property Type Hint Spacing"
 }, {
   "patternId" : "SlevomatCodingStandard_TypeHints_ReturnTypeHint",
-  "title" : "Type Hints: Return Type Hint"
+  "title" : "Type Hints: Return Type Hint",
+  "parameters" : [ {
+    "name" : "enableObjectTypeHint",
+    "description" : "enableObjectTypeHint"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_TypeHints_ReturnTypeHintSpacing",
-  "title" : "Type Hints: Return Type Hint Spacing"
+  "title" : "Type Hints: Return Type Hint Spacing",
+  "parameters" : [ {
+    "name" : "spacesCountBeforeColon",
+    "description" : "spacesCountBeforeColon"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_TypeHints_UselessConstantTypeHint",
   "title" : "Type Hints: Useless Constant Type Hint"
@@ -1993,13 +2564,27 @@
   "title" : "Variables: Duplicate Assignment To Variable"
 }, {
   "patternId" : "SlevomatCodingStandard_Variables_UnusedVariable",
-  "title" : "Variables: Unused Variable"
+  "title" : "Variables: Unused Variable",
+  "parameters" : [ {
+    "name" : "ignoreUnusedValuesWhenOnlyKeysAreUsedInForeach",
+    "description" : "ignoreUnusedValuesWhenOnlyKeysAreUsedInForeach"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Variables_UselessVariable",
   "title" : "Variables: Useless Variable"
 }, {
   "patternId" : "SlevomatCodingStandard_Whitespaces_DuplicateSpaces",
-  "title" : "Whitespaces: Duplicate Spaces"
+  "title" : "Whitespaces: Duplicate Spaces",
+  "parameters" : [ {
+    "name" : "ignoreSpacesBeforeAssignment",
+    "description" : "ignoreSpacesBeforeAssignment"
+  }, {
+    "name" : "ignoreSpacesInAnnotation",
+    "description" : "ignoreSpacesInAnnotation"
+  }, {
+    "name" : "ignoreSpacesInComment",
+    "description" : "ignoreSpacesInComment"
+  } ]
 }, {
   "patternId" : "Squiz_Arrays_ArrayBracketSpacing",
   "title" : "Array Bracket Spacing",
@@ -2040,10 +2625,18 @@
   "title" : "CSS: Empty Style Definition"
 }, {
   "patternId" : "Squiz_CSS_ForbiddenStyles",
-  "title" : "CSS: Forbidden Styles"
+  "title" : "CSS: Forbidden Styles",
+  "parameters" : [ {
+    "name" : "error",
+    "description" : "error"
+  } ]
 }, {
   "patternId" : "Squiz_CSS_Indentation",
-  "title" : "CSS: Indentation"
+  "title" : "CSS: Indentation",
+  "parameters" : [ {
+    "name" : "indent",
+    "description" : "indent"
+  } ]
 }, {
   "patternId" : "Squiz_CSS_LowercaseStyleDefinition",
   "title" : "CSS: Lowercase Style Definition"
@@ -2113,7 +2706,14 @@
   "title" : "Commenting: Inline Comment"
 }, {
   "patternId" : "Squiz_Commenting_LongConditionClosingComment",
-  "title" : "Commenting: Long Condition Closing Comment"
+  "title" : "Commenting: Long Condition Closing Comment",
+  "parameters" : [ {
+    "name" : "lineLimit",
+    "description" : "lineLimit"
+  }, {
+    "name" : "commentFormat",
+    "description" : "commentFormat"
+  } ]
 }, {
   "patternId" : "Squiz_Commenting_PostStatementComment",
   "title" : "Commenting: Post Statement Comment"
@@ -2122,18 +2722,39 @@
   "title" : "Commenting: Variable Comment"
 }, {
   "patternId" : "Squiz_ControlStructures_ControlSignature",
-  "title" : "Control Structures: Control Signature"
+  "title" : "Control Structures: Control Signature",
+  "parameters" : [ {
+    "name" : "requiredSpacesBeforeColon",
+    "description" : "requiredSpacesBeforeColon"
+  } ]
 }, {
   "patternId" : "Squiz_ControlStructures_ElseIfDeclaration",
   "title" : "Control Structures: Else If Declaration"
 }, {
   "patternId" : "Squiz_ControlStructures_ForEachLoopDeclaration",
   "title" : "Foreach Loop Declarations",
-  "description" : "There should be a space between each element of a foreach loop and the as keyword should be lowercase."
+  "description" : "There should be a space between each element of a foreach loop and the as keyword should be lowercase.",
+  "parameters" : [ {
+    "name" : "requiredSpacesAfterOpen",
+    "description" : "requiredSpacesAfterOpen"
+  }, {
+    "name" : "requiredSpacesBeforeClose",
+    "description" : "requiredSpacesBeforeClose"
+  } ]
 }, {
   "patternId" : "Squiz_ControlStructures_ForLoopDeclaration",
   "title" : "For Loop Declarations",
-  "description" : "In a for loop declaration, there should be no space inside the brackets and there should be 0 spaces before and 1 space after semicolons."
+  "description" : "In a for loop declaration, there should be no space inside the brackets and there should be 0 spaces before and 1 space after semicolons.",
+  "parameters" : [ {
+    "name" : "requiredSpacesAfterOpen",
+    "description" : "requiredSpacesAfterOpen"
+  }, {
+    "name" : "requiredSpacesBeforeClose",
+    "description" : "requiredSpacesBeforeClose"
+  }, {
+    "name" : "ignoreNewlines",
+    "description" : "ignoreNewlines"
+  } ]
 }, {
   "patternId" : "Squiz_ControlStructures_InlineIfDeclaration",
   "title" : "Control Structures: Inline If Declaration"
@@ -2143,7 +2764,11 @@
   "description" : "The php keywords if, else, elseif, foreach, for, do, switch, while, try, and catch should be lowercase."
 }, {
   "patternId" : "Squiz_ControlStructures_SwitchDeclaration",
-  "title" : "Control Structures: Switch Declaration"
+  "title" : "Control Structures: Switch Declaration",
+  "parameters" : [ {
+    "name" : "indent",
+    "description" : "indent"
+  } ]
 }, {
   "patternId" : "Squiz_Debug_JSLint",
   "title" : "Debug: JS Lint"
@@ -2161,7 +2786,17 @@
   "title" : "Functions: Function Declaration"
 }, {
   "patternId" : "Squiz_Functions_FunctionDeclarationArgumentSpacing",
-  "title" : "Functions: Function Declaration Argument Spacing"
+  "title" : "Functions: Function Declaration Argument Spacing",
+  "parameters" : [ {
+    "name" : "equalsSpacing",
+    "description" : "equalsSpacing"
+  }, {
+    "name" : "requiredSpacesAfterOpen",
+    "description" : "requiredSpacesAfterOpen"
+  }, {
+    "name" : "requiredSpacesBeforeClose",
+    "description" : "requiredSpacesBeforeClose"
+  } ]
 }, {
   "patternId" : "Squiz_Functions_FunctionDuplicateArgument",
   "title" : "Lowercase Built-In functions",
@@ -2202,7 +2837,11 @@
   "title" : "Operators: Valid Logical Operators"
 }, {
   "patternId" : "Squiz_PHP_CommentedOutCode",
-  "title" : "PHP: Commented Out Code"
+  "title" : "PHP: Commented Out Code",
+  "parameters" : [ {
+    "name" : "maxPercentage",
+    "description" : "maxPercentage"
+  } ]
 }, {
   "patternId" : "Squiz_PHP_DisallowBooleanStatement",
   "title" : "PHP: Disallow Boolean Statement"
@@ -2220,7 +2859,11 @@
   "title" : "PHP: Disallow Size Functions In Loops"
 }, {
   "patternId" : "Squiz_PHP_DiscouragedFunctions",
-  "title" : "PHP: Discouraged Functions"
+  "title" : "PHP: Discouraged Functions",
+  "parameters" : [ {
+    "name" : "error",
+    "description" : "error"
+  } ]
 }, {
   "patternId" : "Squiz_PHP_EmbeddedPhp",
   "title" : "PHP: Embedded Php"
@@ -2254,7 +2897,14 @@
   "description" : "Static methods should not use $this."
 }, {
   "patternId" : "Squiz_Strings_ConcatenationSpacing",
-  "title" : "Strings: Concatenation Spacing"
+  "title" : "Strings: Concatenation Spacing",
+  "parameters" : [ {
+    "name" : "spacing",
+    "description" : "spacing"
+  }, {
+    "name" : "ignoreNewlines",
+    "description" : "ignoreNewlines"
+  } ]
 }, {
   "patternId" : "Squiz_Strings_DoubleQuoteUsage",
   "title" : "Strings: Double Quote Usage"
@@ -2277,7 +2927,17 @@
   "title" : "White Space: Function Opening Brace Space"
 }, {
   "patternId" : "Squiz_WhiteSpace_FunctionSpacing",
-  "title" : "White Space: Function Spacing"
+  "title" : "White Space: Function Spacing",
+  "parameters" : [ {
+    "name" : "spacing",
+    "description" : "spacing"
+  }, {
+    "name" : "spacingBeforeFirst",
+    "description" : "spacingBeforeFirst"
+  }, {
+    "name" : "spacingAfterLast",
+    "description" : "spacingAfterLast"
+  } ]
 }, {
   "patternId" : "Squiz_WhiteSpace_LanguageConstructSpacing",
   "title" : "Language Construct Whitespace",
@@ -2287,14 +2947,32 @@
   "title" : "White Space: Logical Operator Spacing"
 }, {
   "patternId" : "Squiz_WhiteSpace_MemberVarSpacing",
-  "title" : "White Space: Member Var Spacing"
+  "title" : "White Space: Member Var Spacing",
+  "parameters" : [ {
+    "name" : "spacing",
+    "description" : "spacing"
+  }, {
+    "name" : "spacingBeforeFirst",
+    "description" : "spacingBeforeFirst"
+  } ]
 }, {
   "patternId" : "Squiz_WhiteSpace_ObjectOperatorSpacing",
   "title" : "Object Operator Spacing",
-  "description" : "The object operator (->) should not have any space around it."
+  "description" : "The object operator (->) should not have any space around it.",
+  "parameters" : [ {
+    "name" : "ignoreNewlines",
+    "description" : "ignoreNewlines"
+  } ]
 }, {
   "patternId" : "Squiz_WhiteSpace_OperatorSpacing",
-  "title" : "White Space: Operator Spacing"
+  "title" : "White Space: Operator Spacing",
+  "parameters" : [ {
+    "name" : "ignoreNewlines",
+    "description" : "ignoreNewlines"
+  }, {
+    "name" : "ignoreSpacingBeforeAssignments",
+    "description" : "ignoreSpacingBeforeAssignments"
+  } ]
 }, {
   "patternId" : "Squiz_WhiteSpace_PropertyLabelSpacing",
   "title" : "White Space: Property Label Spacing"
@@ -2311,7 +2989,11 @@
   "description" : "Semicolons should not have spaces before them."
 }, {
   "patternId" : "Squiz_WhiteSpace_SuperfluousWhitespace",
-  "title" : "White Space: Superfluous Whitespace"
+  "title" : "White Space: Superfluous Whitespace",
+  "parameters" : [ {
+    "name" : "ignoreBlankLines",
+    "description" : "ignoreBlankLines"
+  } ]
 }, {
   "patternId" : "Symfony_Arrays_MultiLineArrayComma",
   "title" : "Arrays: Multi Line Array Comma",
@@ -2571,7 +3253,11 @@
 }, {
   "patternId" : "WordPressVIPMinimum_UserExperience_AdminBarRemoval",
   "title" : "User Experience: Admin Bar Removal",
-  "description" : "Discourages removal of the admin bar."
+  "description" : "Discourages removal of the admin bar.",
+  "parameters" : [ {
+    "name" : "remove_only",
+    "description" : "remove_only"
+  } ]
 }, {
   "patternId" : "WordPressVIPMinimum_Variables_RestrictedVariables",
   "title" : "Variables: Restricted Variables",
@@ -2583,15 +3269,30 @@
 }, {
   "patternId" : "WordPressVIPMinimum_Variables_VariableAnalysis",
   "title" : "Variables: Variable Analysis",
-  "description" : "Checks the for undefined function variables."
+  "description" : "Checks the for undefined function variables.",
+  "parameters" : [ {
+    "name" : "allowUnusedCaughtExceptions",
+    "description" : "allowUnusedCaughtExceptions"
+  }, {
+    "name" : "allowUnusedFunctionParameters",
+    "description" : "allowUnusedFunctionParameters"
+  } ]
 }, {
   "patternId" : "WordPress_Arrays_ArrayDeclarationSpacing",
   "title" : "Arrays: Array Declaration Spacing",
-  "description" : "Enforces WordPress array spacing format."
+  "description" : "Enforces WordPress array spacing format.",
+  "parameters" : [ {
+    "name" : "allow_single_item_single_line_associative_arrays",
+    "description" : "allow_single_item_single_line_associative_arrays"
+  } ]
 }, {
   "patternId" : "WordPress_Arrays_ArrayIndentation",
   "title" : "Arrays: Array Indentation",
-  "description" : "Enforces WordPress array indentation for multi-line arrays."
+  "description" : "Enforces WordPress array indentation for multi-line arrays.",
+  "parameters" : [ {
+    "name" : "tabIndent",
+    "description" : "tabIndent"
+  } ]
 }, {
   "patternId" : "WordPress_Arrays_ArrayKeySpacingRestrictions",
   "title" : "Arrays: Array Key Spacing Restrictions",
@@ -2603,7 +3304,20 @@
 }, {
   "patternId" : "WordPress_Arrays_MultipleStatementAlignment",
   "title" : "Arrays: Multiple Statement Alignment",
-  "description" : "Enforces alignment of the double arrow assignment operator for multi-item, multi-line arrays."
+  "description" : "Enforces alignment of the double arrow assignment operator for multi-item, multi-line arrays.",
+  "parameters" : [ {
+    "name" : "ignoreNewlines",
+    "description" : "ignoreNewlines"
+  }, {
+    "name" : "exact",
+    "description" : "exact"
+  }, {
+    "name" : "maxColumn",
+    "description" : "maxColumn"
+  }, {
+    "name" : "alignMultilineItems",
+    "description" : "alignMultilineItems"
+  } ]
 }, {
   "patternId" : "WordPress_Classes_ClassInstantiation",
   "title" : "Classes: Class Instantiation",
@@ -2655,11 +3369,22 @@
 }, {
   "patternId" : "WordPress_Files_FileName",
   "title" : "Files: File Name",
-  "description" : "Ensures filenames do not contain underscores."
+  "description" : "Ensures filenames do not contain underscores.",
+  "parameters" : [ {
+    "name" : "is_theme",
+    "description" : "is_theme"
+  }, {
+    "name" : "strict_class_file_names",
+    "description" : "strict_class_file_names"
+  } ]
 }, {
   "patternId" : "WordPress_NamingConventions_PrefixAllGlobals",
   "title" : "Naming Conventions: Prefix All Globals (Deprecated)",
-  "description" : "Verify that everything defined in the global namespace is prefixed with a theme/plugin specific prefix."
+  "description" : "Verify that everything defined in the global namespace is prefixed with a theme/plugin specific prefix.",
+  "parameters" : [ {
+    "name" : "prefixes",
+    "description" : "prefixes"
+  } ]
 }, {
   "patternId" : "WordPress_NamingConventions_ValidFunctionName",
   "title" : "Naming Conventions: Valid Function Name (Deprecated)",
@@ -2667,7 +3392,11 @@
 }, {
   "patternId" : "WordPress_NamingConventions_ValidHookName",
   "title" : "Naming Conventions: Valid Hook Name",
-  "description" : "Use lowercase letters in action and filter names. Separate words via underscores."
+  "description" : "Use lowercase letters in action and filter names. Separate words via underscores.",
+  "parameters" : [ {
+    "name" : "additionalWordDelimiters",
+    "description" : "additionalWordDelimiters"
+  } ]
 }, {
   "patternId" : "WordPress_NamingConventions_ValidPostTypeSlug",
   "title" : "Naming Conventions: Valid Post Type Slug",
@@ -2699,7 +3428,14 @@
 }, {
   "patternId" : "WordPress_PHP_NoSilencedErrors",
   "title" : "PHP: No Silenced Errors",
-  "description" : "Discourage the use of the PHP error silencing operator."
+  "description" : "Discourage the use of the PHP error silencing operator.",
+  "parameters" : [ {
+    "name" : "context_length",
+    "description" : "context_length"
+  }, {
+    "name" : "use_default_whitelist",
+    "description" : "use_default_whitelist"
+  } ]
 }, {
   "patternId" : "WordPress_PHP_POSIXFunctions",
   "title" : "PHP: POSIX Functions",
@@ -2747,11 +3483,19 @@
 }, {
   "patternId" : "WordPress_Security_ValidatedSanitizedInput",
   "title" : "Security: Validated Sanitized Input",
-  "description" : "Flag any non-validated/sanitized input ( _GET / _POST / etc. )."
+  "description" : "Flag any non-validated/sanitized input ( _GET / _POST / etc. ).",
+  "parameters" : [ {
+    "name" : "check_validation_in_scope_only",
+    "description" : "check_validation_in_scope_only"
+  } ]
 }, {
   "patternId" : "WordPress_Utils_I18nTextDomainFixer",
   "title" : "Utils: I18n Text Domain Fixer",
-  "description" : "Comprehensive I18n text domain fixer tool."
+  "description" : "Comprehensive I18n text domain fixer tool.",
+  "parameters" : [ {
+    "name" : "new_text_domain",
+    "description" : "new_text_domain"
+  } ]
 }, {
   "patternId" : "WordPress_WP_AlternativeFunctions",
   "title" : "WP: Alternative Functions",
@@ -2763,7 +3507,11 @@
 }, {
   "patternId" : "WordPress_WP_CronInterval",
   "title" : "WP: Cron Interval",
-  "description" : "Flag cron schedules less than 15 minutes."
+  "description" : "Flag cron schedules less than 15 minutes.",
+  "parameters" : [ {
+    "name" : "min_interval",
+    "description" : "min_interval"
+  } ]
 }, {
   "patternId" : "WordPress_WP_DeprecatedClasses",
   "title" : "WP: Deprecated Classes",
@@ -2799,15 +3547,27 @@
 }, {
   "patternId" : "WordPress_WP_GlobalVariablesOverride",
   "title" : "WP: Global Variables Override",
-  "description" : "Warns about overwriting WordPress native global variables."
+  "description" : "Warns about overwriting WordPress native global variables.",
+  "parameters" : [ {
+    "name" : "treat_files_as_scoped",
+    "description" : "treat_files_as_scoped"
+  } ]
 }, {
   "patternId" : "WordPress_WP_I18n",
   "title" : "WP: I18n",
-  "description" : "Makes sure WP internationalization functions are used properly."
+  "description" : "Makes sure WP internationalization functions are used properly.",
+  "parameters" : [ {
+    "name" : "check_translator_comments",
+    "description" : "check_translator_comments"
+  } ]
 }, {
   "patternId" : "WordPress_WP_PostsPerPage",
   "title" : "WP: Posts Per Page",
-  "description" : "Flag returning high or infinite posts_per_page."
+  "description" : "Flag returning high or infinite posts_per_page.",
+  "parameters" : [ {
+    "name" : "posts_per_page",
+    "description" : "posts_per_page"
+  } ]
 }, {
   "patternId" : "WordPress_WP_TimezoneChange",
   "title" : "WP: Timezone Change (Deprecated)",
@@ -2819,7 +3579,20 @@
 }, {
   "patternId" : "WordPress_WhiteSpace_ControlStructureSpacing",
   "title" : "White Space: Control Structure Spacing",
-  "description" : "Enforces spacing around logical operators and assignments, based upon Squiz code."
+  "description" : "Enforces spacing around logical operators and assignments, based upon Squiz code.",
+  "parameters" : [ {
+    "name" : "blank_line_check",
+    "description" : "blank_line_check"
+  }, {
+    "name" : "blank_line_after_check",
+    "description" : "blank_line_after_check"
+  }, {
+    "name" : "space_before_colon",
+    "description" : "space_before_colon"
+  }, {
+    "name" : "spaces_before_closure_open_paren",
+    "description" : "spaces_before_closure_open_paren"
+  } ]
 }, {
   "patternId" : "WordPress_WhiteSpace_DisallowInlineTabs",
   "title" : "White Space: Disallow Inline Tabs",
@@ -2827,7 +3600,11 @@
 }, {
   "patternId" : "WordPress_WhiteSpace_OperatorSpacing",
   "title" : "White Space: Operator Spacing",
-  "description" : "Verify operator spacing, uses the Squiz sniff, but additionally also sniffs for the `!` (boolean not) operator."
+  "description" : "Verify operator spacing, uses the Squiz sniff, but additionally also sniffs for the `!` (boolean not) operator.",
+  "parameters" : [ {
+    "name" : "ignoreNewlines",
+    "description" : "ignoreNewlines"
+  } ]
 }, {
   "patternId" : "WordPress_WhiteSpace_PrecisionAlignment",
   "title" : "White Space: Precision Alignment",

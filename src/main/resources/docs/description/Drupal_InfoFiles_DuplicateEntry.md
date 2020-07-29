@@ -1,0 +1,1 @@
+Make sure that entries in info files are specified only once.

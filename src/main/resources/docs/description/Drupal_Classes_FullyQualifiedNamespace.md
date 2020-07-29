@@ -1,0 +1,1 @@
+Checks that class references do not use FQN but use statements.

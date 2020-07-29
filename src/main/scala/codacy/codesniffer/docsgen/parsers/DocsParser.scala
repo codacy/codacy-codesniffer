@@ -8,6 +8,7 @@ import com.codacy.plugins.api.results.Pattern.DescriptionText
 import com.codacy.plugins.api.results.{Parameter, Pattern, Result}
 import com.codacy.tools.scala.seed.utils.CommandRunner
 
+import scala.annotation.tailrec
 import scala.util.matching.Regex
 import scala.xml.{Elem, NodeSeq, XML}
 
@@ -36,6 +37,15 @@ trait DocsParser {
     withRepo(repositoryURL, checkoutCommit)(handleRepo)
       .fold(a => throw a, identity)
 
+  @tailrec
+  final private def descriptionTrim(description: String): String = {
+    if (description.length < 500) {
+      description
+    } else {
+      descriptionTrim(description.substring(0, description.lastIndexOf(".")))
+    }
+  }
+
   private[this] def handleRepo(dir: File): Set[PatternDocs] = {
     (for {
       sourceFile <- dir
@@ -46,15 +56,22 @@ trait DocsParser {
 
       val (category, subcategory) = CategoriesMapper.categoryFor(idParts, fallBackCategory)
 
+      val parametersList = parseParameters(sourceFile)
       val spec = Pattern.Specification(idParts.patternId,
                                        issueTypeFor(category, sourceFile, Result.Level.Info),
                                        category,
                                        subcategory,
-                                       parseParameters(sourceFile))
+                                       parametersList)
 
       val (description, docs) = descriptionWithDocs(dir, idParts, sourceFile)
+      val parametersDescription = parametersList
+        .map(_.map(param => Parameter.Description(param.name, Parameter.DescriptionText(param.name.value))))
+      val descriptionWithinLength =
+        description.description.map(descOpt => Pattern.DescriptionText(descriptionTrim(descOpt.value)))
 
-      PatternDocs(spec, description, docs)
+      PatternDocs(spec,
+                  description.copy(parameters = parametersDescription, description = descriptionWithinLength),
+                  docs)
     }).to(Set)
   }
 

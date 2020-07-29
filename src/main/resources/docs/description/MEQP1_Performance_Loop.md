@@ -1,0 +1,2 @@
+Class LoopSniff
+Detects possible data load in the loop.

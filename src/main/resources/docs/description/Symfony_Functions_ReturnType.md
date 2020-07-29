@@ -1,0 +1,1 @@
+Checks whether a function returns the appropriate return type
