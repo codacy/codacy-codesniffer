@@ -49,6 +49,13 @@ class Generator() {
     parallel
   }
 
+  private[this] def fullDescription(patternDocs: PatternDocs) = {
+    // fallbacks: full description -> pattern description -> pattern title
+    patternDocs.docs.getOrElse(
+      patternDocs.description.description.map(_.value).getOrElse(patternDocs.description.title.value)
+    )
+  }
+
   private[this] def writeToFiles(toolName: Tool.Name,
                                  toolVersion: Option[Tool.Version],
                                  docs: Seq[PatternDocs]): Unit = {
@@ -61,7 +68,7 @@ class Generator() {
 
     for {
       patternDoc <- sortedDocs
-      content <- patternDoc.docs
+      content = fullDescription(patternDoc)
     } {
       (descriptionsDir / s"${patternDoc.pattern.patternId}.md")
         .overwrite(content)

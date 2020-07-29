@@ -1,0 +1,1 @@
+Detects possible usage of $this variable files.

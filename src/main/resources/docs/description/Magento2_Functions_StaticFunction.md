@@ -1,0 +1,1 @@
+Detects static function definitions.

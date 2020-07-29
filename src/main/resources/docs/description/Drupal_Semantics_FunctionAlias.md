@@ -1,0 +1,1 @@
+Checks that no PHP function name aliases are used.

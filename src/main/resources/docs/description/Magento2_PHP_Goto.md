@@ -1,0 +1,1 @@
+Detects use of GOTO.

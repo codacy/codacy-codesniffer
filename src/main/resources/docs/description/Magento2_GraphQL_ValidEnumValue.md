@@ -1,0 +1,1 @@
+Detects enum values that are not specified in <kbd>SCREAMING_SNAKE_CASE</kbd>.

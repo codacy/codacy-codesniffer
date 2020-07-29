@@ -1,0 +1,2 @@
+Ensure that there is only one space after the function keyword and no space
+before the opening parenthesis.

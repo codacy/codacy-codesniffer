@@ -1,0 +1,1 @@
+Methods: Function Closing Brace

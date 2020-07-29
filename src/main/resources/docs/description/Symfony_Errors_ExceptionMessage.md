@@ -1,0 +1,1 @@
+Checks whether functions are defined on one line.

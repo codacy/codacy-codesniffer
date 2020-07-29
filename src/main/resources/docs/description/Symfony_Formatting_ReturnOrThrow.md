@@ -1,0 +1,1 @@
+Checks whether there are (else)if or break statements after return or throw

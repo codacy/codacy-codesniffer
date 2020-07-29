@@ -1,0 +1,1 @@
+This sniff ensures proper tag stripping.

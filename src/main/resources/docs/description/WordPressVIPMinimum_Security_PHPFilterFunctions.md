@@ -1,0 +1,1 @@
+This sniff ensures that proper sanitization is occurring when PHP's filter_* functions are used.

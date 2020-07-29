@@ -1,0 +1,1 @@
+Defines an abstract base class for GraphQL sniffs.

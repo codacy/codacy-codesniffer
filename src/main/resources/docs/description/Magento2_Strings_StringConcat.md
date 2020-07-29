@@ -1,0 +1,1 @@
+Detects string concatenation via '+' operator.

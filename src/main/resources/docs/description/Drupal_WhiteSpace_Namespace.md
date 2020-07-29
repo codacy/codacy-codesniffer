@@ -1,0 +1,1 @@
+Checks that there is exactly one space after the namespace keyword.

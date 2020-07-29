@@ -1,0 +1,1 @@
+Discourages removal of the admin bar.

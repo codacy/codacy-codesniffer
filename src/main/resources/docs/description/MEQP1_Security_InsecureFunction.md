@@ -1,0 +1,1 @@
+Detects the use of insecure functions.

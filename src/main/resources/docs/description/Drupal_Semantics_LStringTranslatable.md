@@ -1,0 +1,1 @@
+Checks that string literals passed to l() are translatable.

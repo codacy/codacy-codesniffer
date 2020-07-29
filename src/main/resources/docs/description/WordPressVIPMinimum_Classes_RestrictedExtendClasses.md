@@ -1,0 +1,1 @@
+WordPressVIPMinimum_Sniffs_Classes_RestrictedExtendClassesSniff.
