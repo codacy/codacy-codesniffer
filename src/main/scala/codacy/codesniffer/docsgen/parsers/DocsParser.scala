@@ -68,7 +68,7 @@ trait DocsParser {
         .map(_.map(param => Parameter.Description(param.name, Parameter.DescriptionText(param.name.value))))
       val descriptionWithinLength =
         description.description.map(desc => {
-          val descriptionWithoutNewLines = desc.value.replaceAll("\n", " ")
+          val descriptionWithoutNewLines = desc.value.replace("\n", " ")
           Pattern.DescriptionText(descriptionTrim(descriptionWithoutNewLines))
         })
 
