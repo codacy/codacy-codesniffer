@@ -18,7 +18,6 @@
         <error source="Squiz_ControlStructures_ControlSignature" line="57" message="Expected 1 space(s) after FOR keyword; 0 found" severity="info" />
         <error source="Squiz_ControlStructures_ControlSignature" line="57" message="Expected 1 space(s) after closing parenthesis; found 0" severity="info" />
         <error source="Squiz_ControlStructures_ControlSignature" line="62" message="Newline required after opening brace" severity="info" />
-        <error source="Generic_Formatting_DisallowMultipleStatements" line="62" message="Each PHP statement must be on a line by itself" severity="info" />
         <error source="Squiz_WhiteSpace_ScopeClosingBrace" line="62" message="Closing brace must be on a line by itself" severity="info" />
         <error source="Squiz_ControlStructures_ControlSignature" line="72" message="Expected 1 space(s) after FOREACH keyword; 0 found" severity="info" />
         <error source="Squiz_ControlStructures_ControlSignature" line="72" message="Expected 1 space(s) after closing parenthesis; found 0" severity="info" />
