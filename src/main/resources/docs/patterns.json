@@ -1,6 +1,6 @@
 {
   "name" : "phpcs",
-  "version" : "3.5.5",
+  "version" : "3.5.6",
   "patterns" : [ {
     "patternId" : "Drupal_Arrays_Array",
     "level" : "Info",
