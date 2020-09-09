@@ -45,6 +45,10 @@
   "title" : "Classes: Unused Use Statement",
   "description" : "Checks for \"use\" statements that are not needed in a file."
 }, {
+  "patternId" : "Drupal_Classes_UseGlobalClass",
+  "title" : "Classes: Use Global Class",
+  "description" : "Checks non-namespaced classes are referenced by FQN, not imported."
+}, {
   "patternId" : "Drupal_Classes_UseLeadingBackslash",
   "title" : "Classes: Use Leading Backslash",
   "description" : "Use statements to import classes must not begin with \"\\\"."
@@ -91,6 +95,10 @@
 }, {
   "patternId" : "Drupal_Commenting_InlineComment",
   "title" : "Commenting: Inline Comment"
+}, {
+  "patternId" : "Drupal_Commenting_InlineVariableComment",
+  "title" : "Commenting: Inline Variable Comment",
+  "description" : "Checks for the correct usage of inline variable type declarations."
 }, {
   "patternId" : "Drupal_Commenting_PostStatementComment",
   "title" : "Commenting: Post Statement Comment",
@@ -1982,6 +1990,9 @@
   "patternId" : "SlevomatCodingStandard_Classes_SuperfluousAbstractClassNaming",
   "title" : "Classes: Superfluous Abstract Class Naming"
 }, {
+  "patternId" : "SlevomatCodingStandard_Classes_SuperfluousErrorNaming",
+  "title" : "Classes: Superfluous Error Naming"
+}, {
   "patternId" : "SlevomatCodingStandard_Classes_SuperfluousExceptionNaming",
   "title" : "Classes: Superfluous Exception Naming"
 }, {
@@ -2018,6 +2029,9 @@
 }, {
   "patternId" : "SlevomatCodingStandard_Classes_UselessLateStaticBinding",
   "title" : "Classes: Useless Late Static Binding"
+}, {
+  "patternId" : "SlevomatCodingStandard_Commenting_DeprecatedAnnotationDeclaration",
+  "title" : "Commenting: Deprecated Annotation Declaration"
 }, {
   "patternId" : "SlevomatCodingStandard_Commenting_DisallowCommentAfterCode",
   "title" : "Commenting: Disallow Comment After Code"
@@ -2058,6 +2072,9 @@
   "parameters" : [ {
     "name" : "allowDocCommentAboveReturn",
     "description" : "allowDocCommentAboveReturn"
+  }, {
+    "name" : "allowAboveNonAssignment",
+    "description" : "allowAboveNonAssignment"
   } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Commenting_RequireOneLineDocComment",
@@ -2161,6 +2178,19 @@
   "patternId" : "SlevomatCodingStandard_ControlStructures_NewWithoutParentheses",
   "title" : "Control Structures: New Without Parentheses"
 }, {
+  "patternId" : "SlevomatCodingStandard_ControlStructures_RequireMultiLineCondition",
+  "title" : "Control Structures: Require Multi Line Condition",
+  "parameters" : [ {
+    "name" : "minLineLength",
+    "description" : "minLineLength"
+  }, {
+    "name" : "booleanOperatorOnPreviousLine",
+    "description" : "booleanOperatorOnPreviousLine"
+  }, {
+    "name" : "alwaysSplitAllConditionParts",
+    "description" : "alwaysSplitAllConditionParts"
+  } ]
+}, {
   "patternId" : "SlevomatCodingStandard_ControlStructures_RequireMultiLineTernaryOperator",
   "title" : "Control Structures: Require Multi Line Ternary Operator",
   "parameters" : [ {
@@ -2180,6 +2210,16 @@
 }, {
   "patternId" : "SlevomatCodingStandard_ControlStructures_RequireShortTernaryOperator",
   "title" : "Control Structures: Require Short Ternary Operator"
+}, {
+  "patternId" : "SlevomatCodingStandard_ControlStructures_RequireSingleLineCondition",
+  "title" : "Control Structures: Require Single Line Condition",
+  "parameters" : [ {
+    "name" : "maxLineLength",
+    "description" : "maxLineLength"
+  }, {
+    "name" : "alwaysForSimpleConditions",
+    "description" : "alwaysForSimpleConditions"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_ControlStructures_RequireTernaryOperator",
   "title" : "Control Structures: Require Ternary Operator",
@@ -2261,6 +2301,23 @@
   }, {
     "name" : "enable",
     "description" : "enable"
+  } ]
+}, {
+  "patternId" : "SlevomatCodingStandard_Functions_RequireMultiLineCall",
+  "title" : "Functions: Require Multi Line Call",
+  "parameters" : [ {
+    "name" : "minLineLength",
+    "description" : "minLineLength"
+  } ]
+}, {
+  "patternId" : "SlevomatCodingStandard_Functions_RequireSingleLineCall",
+  "title" : "Functions: Require Single Line Call",
+  "parameters" : [ {
+    "name" : "maxLineLength",
+    "description" : "maxLineLength"
+  }, {
+    "name" : "ignoreWithComplexParameter",
+    "description" : "ignoreWithComplexParameter"
   } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Functions_StaticClosure",
@@ -2584,6 +2641,9 @@
   }, {
     "name" : "ignoreSpacesInComment",
     "description" : "ignoreSpacesInComment"
+  }, {
+    "name" : "ignoreSpacesInParameters",
+    "description" : "ignoreSpacesInParameters"
   } ]
 }, {
   "patternId" : "Squiz_Arrays_ArrayBracketSpacing",
@@ -3268,15 +3328,8 @@
   "description" : "Restricts usage of some server variables."
 }, {
   "patternId" : "WordPressVIPMinimum_Variables_VariableAnalysis",
-  "title" : "Variables: Variable Analysis",
-  "description" : "Checks the for undefined function variables.",
-  "parameters" : [ {
-    "name" : "allowUnusedCaughtExceptions",
-    "description" : "allowUnusedCaughtExceptions"
-  }, {
-    "name" : "allowUnusedFunctionParameters",
-    "description" : "allowUnusedFunctionParameters"
-  } ]
+  "title" : "Variables: Variable Analysis (Deprecated)",
+  "description" : "Checks the for undefined function variables."
 }, {
   "patternId" : "WordPress_Arrays_ArrayDeclarationSpacing",
   "title" : "Arrays: Array Declaration Spacing",

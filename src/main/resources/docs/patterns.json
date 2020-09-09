@@ -50,6 +50,10 @@
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
+    "patternId" : "Drupal_Classes_UseGlobalClass",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
     "patternId" : "Drupal_Classes_UseLeadingBackslash",
     "level" : "Info",
     "category" : "CodeStyle"
@@ -95,6 +99,10 @@
     "category" : "CodeStyle"
   }, {
     "patternId" : "Drupal_Commenting_InlineComment",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "Drupal_Commenting_InlineVariableComment",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
@@ -2099,6 +2107,10 @@
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
+    "patternId" : "SlevomatCodingStandard_Classes_SuperfluousErrorNaming",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
     "patternId" : "SlevomatCodingStandard_Classes_SuperfluousExceptionNaming",
     "level" : "Info",
     "category" : "CodeStyle"
@@ -2140,6 +2152,10 @@
     "category" : "CodeStyle"
   }, {
     "patternId" : "SlevomatCodingStandard_Classes_UselessLateStaticBinding",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_Commenting_DeprecatedAnnotationDeclaration",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
@@ -2188,6 +2204,9 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "allowDocCommentAboveReturn",
+      "default" : false
+    }, {
+      "name" : "allowAboveNonAssignment",
       "default" : false
     } ]
   }, {
@@ -2307,6 +2326,20 @@
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
+    "patternId" : "SlevomatCodingStandard_ControlStructures_RequireMultiLineCondition",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "minLineLength",
+      "default" : 121
+    }, {
+      "name" : "booleanOperatorOnPreviousLine",
+      "default" : false
+    }, {
+      "name" : "alwaysSplitAllConditionParts",
+      "default" : false
+    } ]
+  }, {
     "patternId" : "SlevomatCodingStandard_ControlStructures_RequireMultiLineTernaryOperator",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -2330,6 +2363,17 @@
     "patternId" : "SlevomatCodingStandard_ControlStructures_RequireShortTernaryOperator",
     "level" : "Info",
     "category" : "CodeStyle"
+  }, {
+    "patternId" : "SlevomatCodingStandard_ControlStructures_RequireSingleLineCondition",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "maxLineLength",
+      "default" : 120
+    }, {
+      "name" : "alwaysForSimpleConditions",
+      "default" : true
+    } ]
   }, {
     "patternId" : "SlevomatCodingStandard_ControlStructures_RequireTernaryOperator",
     "level" : "Info",
@@ -2423,6 +2467,25 @@
     }, {
       "name" : "enable",
       "default" : null
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_Functions_RequireMultiLineCall",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "minLineLength",
+      "default" : 121
+    } ]
+  }, {
+    "patternId" : "SlevomatCodingStandard_Functions_RequireSingleLineCall",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "maxLineLength",
+      "default" : 120
+    }, {
+      "name" : "ignoreWithComplexParameter",
+      "default" : true
     } ]
   }, {
     "patternId" : "SlevomatCodingStandard_Functions_StaticClosure",
@@ -2806,6 +2869,9 @@
       "default" : false
     }, {
       "name" : "ignoreSpacesInComment",
+      "default" : false
+    }, {
+      "name" : "ignoreSpacesInParameters",
       "default" : false
     } ]
   }, {
@@ -3572,14 +3638,7 @@
   }, {
     "patternId" : "WordPressVIPMinimum_Variables_VariableAnalysis",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "allowUnusedCaughtExceptions",
-      "default" : false
-    }, {
-      "name" : "allowUnusedFunctionParameters",
-      "default" : true
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "WordPress_Arrays_ArrayDeclarationSpacing",
     "level" : "Info",
