@@ -6,6 +6,4 @@
     <rule ref="WordPressVIPMinimum.Security.StaticStrreplace">
         <type>error</type>
     </rule>
-
-    <rule ref="WordPressVIPMinimum.Variables.VariableAnalysis"></rule>
 </ruleset>

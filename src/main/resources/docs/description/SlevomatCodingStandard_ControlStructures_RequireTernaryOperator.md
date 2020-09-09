@@ -4,4 +4,4 @@ Requires ternary operator when possible.
 
 Sniff provides the following settings:
 
-* `ignoreMultiLine` (defaults to `false`): ignores multiLine statements.
+* `ignoreMultiLine` (defaults to `false`): ignores multi-line statements.

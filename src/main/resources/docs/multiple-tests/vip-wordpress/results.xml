@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <checkstyle version="4.3">
     <file name="User.php">
-        <error source="WordPressVIPMinimum_Variables_VariableAnalysis" line="9" message="Unused variable `$notUsed`." severity="info" />
         <error source="WordPressVIPMinimum_Security_StaticStrreplace" line="11" message="This code pattern is often used to run a very dangerous shell programs on your server. The code in these files needs to be reviewed, and possibly cleaned." severity="error" />
     </file>
 </checkstyle>

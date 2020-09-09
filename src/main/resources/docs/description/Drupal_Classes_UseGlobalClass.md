@@ -1,0 +1,1 @@
+Checks non-namespaced classes are referenced by FQN, not imported.
