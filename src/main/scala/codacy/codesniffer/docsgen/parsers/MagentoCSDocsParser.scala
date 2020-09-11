@@ -31,6 +31,6 @@ class MagentoCSDocsParser extends DocsParser {
     val sniffName = caseRegexPattern.replaceAllIn(patternIdParts.sniffType, " $1").trim
     val title = Pattern.Title(s"$sniffName: $patternName")
     val description = this.parseDescription("Magento2\\Sniffs", patternIdParts, rootDir)
-    Pattern.Description(patternIdParts.patternId, title, description, None, None)
+    Pattern.Description(patternIdParts.patternId, title, description, None, Set.empty)
   }
 }

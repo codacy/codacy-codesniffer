@@ -35,7 +35,7 @@ class PHPCompatibilityDocsParser extends DocsParser {
     val sniffName = caseRegexPattern.replaceAllIn(patternIdParts.sniffType, " $1").trim
     val title = Pattern.Title(s"PHP Compatibility related issue ($sniffName): $patternName")
     val extended = this.parseDescription("PHPCompatibility\\Sniffs", patternIdParts, rootDir)
-    Pattern.Description(patternIdParts.patternId, title, extended, None, None)
+    Pattern.Description(patternIdParts.patternId, title, extended, None, Set.empty)
   }
 
 }

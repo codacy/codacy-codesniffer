@@ -123,11 +123,8 @@ object CodeSniffer extends Tool {
   }
 
   private[this] def generateRule(patternIdentifier: Pattern.Id,
-                                 configuredParameters: Option[Set[Parameter.Definition]]): String = {
-    val parameters =
-      configuredParameters.getOrElse(Set.empty[Parameter.Definition])
-
-    val params = parameters
+                                 configuredParameters: Set[Parameter.Definition]): String = {
+    val params = configuredParameters
       .map { param =>
         s"""<property name="${param.name}" value="${jsValueAsSimpleString(param.value)}" />"""
       }

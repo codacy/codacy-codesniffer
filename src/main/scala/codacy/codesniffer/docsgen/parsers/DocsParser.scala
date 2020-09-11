@@ -3,7 +3,7 @@ package codacy.codesniffer.docsgen.parsers
 import java.nio.file.Files
 
 import better.files.File
-import codacy.codesniffer.docsgen.CategoriesMapper
+import codacy.codesniffer.docsgen.{CategoriesMapper, DefaultPatterns}
 import com.codacy.plugins.api.results.Pattern.DescriptionText
 import com.codacy.plugins.api.results.{Parameter, Pattern, Result}
 import com.codacy.tools.scala.seed.utils.CommandRunner
@@ -56,16 +56,20 @@ trait DocsParser {
 
       val (category, subcategory) = CategoriesMapper.categoryFor(idParts, fallBackCategory)
 
+      val enabledByDefault = DefaultPatterns.list.contains(idParts.patternId.value)
+
       val parametersList = parseParameters(sourceFile)
       val spec = Pattern.Specification(idParts.patternId,
                                        issueTypeFor(category, sourceFile, Result.Level.Info),
                                        category,
                                        subcategory,
-                                       parametersList)
+                                       parametersList,
+                                       Set.empty,
+                                       enabledByDefault)
 
       val (description, docs) = descriptionWithDocs(dir, idParts, sourceFile)
       val parametersDescription = parametersList
-        .map(_.map(param => Parameter.Description(param.name, Parameter.DescriptionText(param.name.value))))
+        .map(param => Parameter.Description(param.name, Parameter.DescriptionText(param.name.value)))
       val descriptionWithinLength =
         description.description.map(desc => {
           val descriptionWithoutNewLines = desc.value.replace("\n", " ")
@@ -96,7 +100,7 @@ trait DocsParser {
     }
   }
 
-  private def parseParameters(patternFile: File): Option[Set[Parameter.Specification]] = {
+  private def parseParameters(patternFile: File): Set[Parameter.Specification] = {
     val patternRegex = """.*?\spublic.*?\$(.*?)=(.*?);""".r
 
     Option(patternFile.lineIterator.to(LazyList).collect {
@@ -104,6 +108,7 @@ trait DocsParser {
         Parameter.Specification(Parameter.Name(name.trim), Parameter.Value(defaultValue.trim))
     }).filter(_.nonEmpty)
       .map(_.toSet)
+      .getOrElse(Set.empty)
   }
 
   private def valueIsArray(value: String): Boolean = {
