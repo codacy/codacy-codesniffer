@@ -30,7 +30,7 @@ class MagentoEQPDocsParser extends DocsParser {
     val sniffName = caseRegexPattern.replaceAllIn(patternIdParts.sniffType, " $1").trim
     val title = Pattern.Title(s"$sniffName: $patternName")
     val extended = this.parseDescription("MEQP1\\Sniffs", patternIdParts, rootDir)
-    Pattern.Description(patternIdParts.patternId, title, extended, None, None)
+    Pattern.Description(patternIdParts.patternId, title, extended, None, Set.empty)
   }
 
 }

@@ -38,7 +38,7 @@ class PHPCSDocsParser extends DocsParser {
     val patternName = caseRegexPattern.replaceAllIn(patternIdParts.patternName, " $1").trim
     val sniffName = caseRegexPattern.replaceAllIn(patternIdParts.sniffType, " $1").trim
     val title = Pattern.Title(s"$sniffName: $patternName")
-    Pattern.Description(patternIdParts.patternId, title, None, None, None)
+    Pattern.Description(patternIdParts.patternId, title, None, None, Set.empty)
   }
 
   private[this] def parseDocsFile(patternId: Pattern.Id, file: File): (Pattern.Description, Option[String]) = {
@@ -59,7 +59,11 @@ class PHPCSDocsParser extends DocsParser {
 
     val doc = Option((textOpt ++ codeExamples).mkString("", "\n", "\n")).filter(_.nonEmpty)
     val description =
-      Pattern.Description(patternId, Pattern.Title(xml \@ "title"), textOpt.map(Pattern.DescriptionText), None, None)
+      Pattern.Description(patternId,
+                          Pattern.Title(xml \@ "title"),
+                          textOpt.map(Pattern.DescriptionText),
+                          None,
+                          Set.empty)
 
     (description, doc)
   }

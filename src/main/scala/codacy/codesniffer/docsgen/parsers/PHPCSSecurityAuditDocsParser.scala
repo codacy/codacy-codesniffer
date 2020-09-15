@@ -33,7 +33,7 @@ class PHPCSSecurityAuditDocsParser extends DocsParser {
     val sniffName = caseRegexPattern.replaceAllIn(patternIdParts.sniffType, " $1").trim
     val title = Pattern.Title(s"${patternIdParts.prefix} $sniffName related issue: $patternName")
     val extended = this.parseDescription("PHPCS_SecurityAudit\\Security\\Sniffs", patternIdParts, rootDir)
-    Pattern.Description(patternIdParts.patternId, title, extended, None, None)
+    Pattern.Description(patternIdParts.patternId, title, extended, None, Set.empty)
   }
 
 }

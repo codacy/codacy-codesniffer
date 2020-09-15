@@ -51,7 +51,7 @@ class SlevomatCSDocsParser extends DocsParser {
     val patternName = caseRegexPattern.replaceAllIn(patternIdParts.patternName, " $1").trim
     val sniffName = caseRegexPattern.replaceAllIn(patternIdParts.sniffType, " $1").trim
     val title = Pattern.Title(s"$sniffName: $patternName")
-    Pattern.Description(patternIdParts.patternId, title, None, None, None)
+    Pattern.Description(patternIdParts.patternId, title, None, None, Set.empty)
   }
 
 }
