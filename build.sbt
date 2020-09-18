@@ -8,7 +8,7 @@ scalaVersion := "2.13.1"
 
 libraryDependencies ++= Seq("org.scala-lang.modules" %% "scala-xml" % "1.2.0",
                             "org.scala-lang.modules" %% "scala-parallel-collections" % "0.2.0",
-                            "com.codacy" %% "codacy-engine-scala-seed" % "5.0.0",
+                            "com.codacy" %% "codacy-engine-scala-seed" % "5.0.1",
                             "com.lihaoyi" %% "ujson" % "1.0.0",
                             "com.github.pathikrit" %% "better-files" % "3.8.0")
 
