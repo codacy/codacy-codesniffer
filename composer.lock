@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d19b26f7229f063ef9e56c320fd9df1b",
+    "content-hash": "1be95059121127e078c4ac05d29c9650",
     "packages": [
         {
             "name": "automattic/vipwpcs",
@@ -487,16 +487,16 @@
         },
         {
             "name": "slevomat/coding-standard",
-            "version": "7.0.3",
+            "version": "7.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/slevomat/coding-standard.git",
-                "reference": "ce75dc28e6c4c9850844bdfd3b5641973ad6e721"
+                "reference": "5a78b787e65c4420e7821692aaa781cdc93ab29d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/ce75dc28e6c4c9850844bdfd3b5641973ad6e721",
-                "reference": "ce75dc28e6c4c9850844bdfd3b5641973ad6e721",
+                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/5a78b787e65c4420e7821692aaa781cdc93ab29d",
+                "reference": "5a78b787e65c4420e7821692aaa781cdc93ab29d",
                 "shasum": ""
             },
             "require": {
@@ -540,7 +540,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-04-16T12:07:02+00:00"
+            "time": "2021-04-19T07:27:32+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
