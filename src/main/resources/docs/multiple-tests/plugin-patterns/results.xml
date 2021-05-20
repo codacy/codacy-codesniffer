@@ -33,9 +33,4 @@
                message="Function create_function() is deprecated since PHP 7.2; Use an anonymous function instead"
                severity="warning"/>
     </file>
-    <file name="PHPCompatibility.php">
-        <error source="PHPCompatibility_FunctionUse_ArgumentFunctionsUsage" line="2"
-               message="Use of func_get_arg() outside of a user-defined function is only supported if the file is included from within a user-defined function in another file prior to PHP 5.3. As of PHP 5.3, it is no longer supported at all."
-               severity="warning"/>
-    </file>
 </checkstyle>
