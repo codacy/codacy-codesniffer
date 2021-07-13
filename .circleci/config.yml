@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
   codacy: codacy/base@2.14.8
-  codacy_plugins_test: codacy/plugins-test@0.14.5
+  codacy_plugins_test: codacy/plugins-test@0.15.4
 
 workflows:
   version: 2
@@ -31,6 +31,7 @@ workflows:
                  docker:publishLocal"
             docker save --output docker-image.tar $CIRCLE_PROJECT_REPONAME:latest
           persist_to_workspace: true
+          cache_prefix: sbt-cache-26012021
           requires:
             - codacy/checkout_and_version
       - codacy_plugins_test/run:
