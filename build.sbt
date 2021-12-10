@@ -2,9 +2,7 @@ import com.typesafe.sbt.packager.docker.Cmd
 
 name := "codacy-codesniffer"
 
-version := "1.0-SNAPSHOT"
-
-scalaVersion := "2.13.1"
+scalaVersion := "2.13.7"
 
 libraryDependencies ++= Seq("org.scala-lang.modules" %% "scala-xml" % "1.2.0",
                             "org.scala-lang.modules" %% "scala-parallel-collections" % "0.2.0",

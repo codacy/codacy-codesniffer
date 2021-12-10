@@ -5,6 +5,7 @@ import codacy.codesniffer.docsgen.VersionsHelper
 import com.codacy.plugins.api.results.Pattern
 
 import scala.util.matching.Regex
+import scala.annotation.nowarn
 
 class PHPCompatibilityDocsParser extends DocsParser {
 
@@ -18,6 +19,7 @@ class PHPCompatibilityDocsParser extends DocsParser {
 
   private[this] val patternsPrefix = "PHPCompatibility"
 
+  @nowarn("msg=match may not be exhaustive")
   override def patternIdPartsFor(relativizedFilePath: String): PatternIdParts = {
     val sniffRegex(sniffType, patternName) = relativizedFilePath
     PatternIdParts(patternsPrefix, sniffType, patternName)

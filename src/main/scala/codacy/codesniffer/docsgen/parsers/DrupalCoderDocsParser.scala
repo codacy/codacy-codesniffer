@@ -5,6 +5,7 @@ import codacy.codesniffer.docsgen.VersionsHelper
 import com.codacy.plugins.api.results.Pattern
 
 import scala.util.matching.Regex
+import scala.annotation.nowarn
 
 class DrupalCoderDocsParser extends DocsParser {
 
@@ -14,6 +15,7 @@ class DrupalCoderDocsParser extends DocsParser {
 
   override val sniffRegex: Regex = """.*coder_sniffer\/(Drupal)\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
 
+  @nowarn("msg=match may not be exhaustive")
   override def patternIdPartsFor(relativizedFilePath: String): PatternIdParts = {
     val sniffRegex(drupalCoderVersion, sniffType, patternName) = relativizedFilePath
     PatternIdParts(drupalCoderVersion, sniffType, patternName)
