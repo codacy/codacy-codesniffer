@@ -6,6 +6,7 @@ import com.codacy.plugins.api.results.Pattern
 
 import scala.util.matching.Regex
 import scala.xml.XML
+import scala.annotation.nowarn
 
 class PHPCSDocsParser extends DocsParser {
 
@@ -15,6 +16,7 @@ class PHPCSDocsParser extends DocsParser {
 
   override val sniffRegex: Regex = """.*src\/Standards\/(.*?)\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
 
+  @nowarn("msg=match may not be exhaustive")
   override def patternIdPartsFor(relativizedFilePath: String): PatternIdParts = {
     val sniffRegex(standard, sniffType, patternName) = relativizedFilePath
     PatternIdParts(standard, sniffType, patternName)

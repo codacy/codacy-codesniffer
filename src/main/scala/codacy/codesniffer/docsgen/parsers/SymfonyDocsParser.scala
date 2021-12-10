@@ -5,15 +5,17 @@ import codacy.codesniffer.docsgen.VersionsHelper
 import com.codacy.plugins.api.results.Pattern
 
 import scala.util.matching.Regex
+import scala.annotation.nowarn
 
 class SymfonyDocsParser extends DocsParser {
 
-  override val repositoryURL = "https://github.com/escapestudios/symfony2-coding-standard.git"
+  override val repositoryURL = "git@github.com:djoos/Symfony2-coding-standard.git"
 
   override val checkoutCommit: String = VersionsHelper.symfony
 
   override val sniffRegex: Regex = """.*Symfony\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
 
+  @nowarn("msg=match may not be exhaustive")
   override def patternIdPartsFor(relativizedFilePath: String): PatternIdParts = {
     val sniffRegex(sniffType, patternName) = relativizedFilePath
     PatternIdParts("Symfony", sniffType, patternName)
