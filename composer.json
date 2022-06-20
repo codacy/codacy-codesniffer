@@ -1,6 +1,6 @@
 {
     "require": {
-        "squizlabs/php_codesniffer": "3.6.2",
+        "squizlabs/php_codesniffer": "3.7.1",
         "slevomat/coding-standard": "7.2.0",
         "pheromone/phpcs-security-audit": "2.0.1",
         "magento/magento-coding-standard": "v6",
