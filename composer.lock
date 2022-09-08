@@ -180,16 +180,16 @@
         },
         {
             "name": "escapestudios/symfony2-coding-standard",
-            "version": "3.12.0",
+            "version": "3.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/djoos/Symfony-coding-standard.git",
-                "reference": "1524e573f5061555af3c363f0948c444d8522499"
+                "reference": "46d5387bc9e2fca44d46642550ffbaea22ebaf86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/djoos/Symfony-coding-standard/zipball/1524e573f5061555af3c363f0948c444d8522499",
-                "reference": "1524e573f5061555af3c363f0948c444d8522499",
+                "url": "https://api.github.com/repos/djoos/Symfony-coding-standard/zipball/46d5387bc9e2fca44d46642550ffbaea22ebaf86",
+                "reference": "46d5387bc9e2fca44d46642550ffbaea22ebaf86",
                 "shasum": ""
             },
             "require": {
@@ -227,13 +227,14 @@
                 "Coding Standard",
                 "Symfony2",
                 "phpcs",
+                "static analysis",
                 "symfony"
             ],
             "support": {
                 "issues": "https://github.com/djoos/Symfony-coding-standard/issues",
                 "source": "https://github.com/djoos/Symfony-coding-standard"
             },
-            "time": "2021-01-18T12:40:14+00:00"
+            "time": "2022-09-08T09:37:16+00:00"
         },
         {
             "name": "magento/magento-coding-standard",
