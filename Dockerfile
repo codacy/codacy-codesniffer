@@ -1,4 +1,4 @@
-FROM alpine:latest as alpine
+FROM php:8.1-rc-fpm-alpine3.17
 
 WORKDIR /opt/docker/app
 
