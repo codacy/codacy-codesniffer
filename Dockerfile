@@ -11,7 +11,7 @@ RUN apk --no-cache add curl git php81 php81-openssl php81-phar php81-simplexml \
     php81-xmlwriter php81-mbstring php81-xml php81-dom php81-xmlreader openjdk8-jre \
     openssh-client && \
     ln -s /etc/php81/php.ini /etc/php81/conf.d/php.ini && sed 's/.*short_open_tag.*=.*/short_open_tag=On/' /etc/php81/php.ini -i && \
-    curl -sS https://getcomposer.org/installer | php8 && \
+    curl -sS https://getcomposer.org/installer | php81 && \
     mkdir -p /opt/docker/app/.composer && \
     ln -sf /usr/bin/php81 /usr/bin/php && \
     php composer.phar global install && \
