@@ -16,5 +16,10 @@
             "type": "vcs",
             "url": "https://github.com/magento/marketplace-eqp.git"
         }
-    ]
+    ],
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": false
+        }
+    }
 }
