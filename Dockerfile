@@ -1,4 +1,4 @@
-FROM alpine:3.13
+FROM alpine:3.17.3
 
 WORKDIR /opt/docker/app
 
