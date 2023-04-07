@@ -541,16 +541,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.5.1",
+            "version": "1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "981cc368a216c988e862a75e526b6076987d1b50"
+                "reference": "22dcdfd725ddf99583bfe398fc624ad6c5004a0f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/981cc368a216c988e862a75e526b6076987d1b50",
-                "reference": "981cc368a216c988e862a75e526b6076987d1b50",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/22dcdfd725ddf99583bfe398fc624ad6c5004a0f",
+                "reference": "22dcdfd725ddf99583bfe398fc624ad6c5004a0f",
                 "shasum": ""
             },
             "require": {
@@ -560,6 +560,7 @@
                 "php-parallel-lint/php-parallel-lint": "^1.2",
                 "phpstan/extension-installer": "^1.0",
                 "phpstan/phpstan": "^1.5",
+                "phpstan/phpstan-phpunit": "^1.1",
                 "phpstan/phpstan-strict-rules": "^1.0",
                 "phpunit/phpunit": "^9.5",
                 "symfony/process": "^5.2"
@@ -579,9 +580,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.5.1"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.18.1"
             },
-            "time": "2022-05-05T11:32:40+00:00"
+            "time": "2023-04-07T11:51:11+00:00"
         },
         {
             "name": "sirbrillig/phpcs-variable-analysis",
