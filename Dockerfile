@@ -25,5 +25,5 @@ RUN apk --no-cache --update add \
     mkdir -p /opt/docker/app/.composer && \
     php composer.phar global install && \
     ln -s ${COMPOSER_HOME}/vendor/bin/phpcs /usr/bin/phpcs && \
-    php8.1 composer.phar global require dealerdirect/phpcodesniffer-composer-installer && \
+    php composer.phar global require dealerdirect/phpcodesniffer-composer-installer && \
     apk del curl git && rm -rf /tmp/* && rm -rf /var/cache/apk/*
