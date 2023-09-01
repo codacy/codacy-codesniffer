@@ -6,10 +6,8 @@
 /target/
 .idea
 .DS_Store
-
+.phpdoc
 .vscode
-
 .bloop
 .metals
-
 vendor/

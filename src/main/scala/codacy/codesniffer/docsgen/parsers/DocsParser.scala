@@ -90,7 +90,7 @@ trait DocsParser {
           .exec(List("git", "clone", repositoryURL, dir.toString))
       )
       _ <- CommandRunner.exec(List("git", "checkout", checkoutCommit), Some(dir.toFile))
-      _ <- CommandRunner.exec(List("phpdoc", "-t", "docs", "-d", ".", "--template", "checkstyle,xml,clean"),
+      _ <- CommandRunner.exec(List("phpdoc", "--template=\"checkstyle,clean,xml\"", "-t", "docs", "-d", "."),
                               Some(dir.toFile))
 
       res = f(dir)
