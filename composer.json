@@ -12,7 +12,8 @@
         "drupal/coder": "^8.3.21",
         "automattic/vipwpcs": "^2.3.4",
         "escapestudios/symfony2-coding-standard": "^3.13.0",
-        "dealerdirect/phpcodesniffer-composer-installer": "^1.0.0"
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0.0",
+        "symfony/flex": "v1.20.2"
     },
     "repositories": [
         {
@@ -26,12 +27,5 @@
             "symfony/flex": true,
             "phpdocumentor/unified-asset-installer": true
         }
-    },
-    "require-dev": {
-        "phpdocumentor/reflection": "^5.2",
-        "phpdocumentor/phpdocumentor": "*",
-        "phpdocumentor/template-clean": "*",
-        "phpdocumentor/template-checkstyle": "*",
-        "phpdocumentor/template-xml": "*"
     }
 }

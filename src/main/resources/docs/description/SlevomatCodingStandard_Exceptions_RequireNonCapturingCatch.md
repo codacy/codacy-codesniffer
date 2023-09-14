@@ -1,0 +1,1 @@
+Exceptions: Require Non Capturing Catch

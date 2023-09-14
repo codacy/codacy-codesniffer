@@ -1,1 +1,1 @@
-Ensures standard format of @ deprecated tag text in docblock.
+Commenting: Deprecated

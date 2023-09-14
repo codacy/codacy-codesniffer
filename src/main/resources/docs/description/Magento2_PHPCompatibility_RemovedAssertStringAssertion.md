@@ -1,0 +1,1 @@
+PHP Compatibility: Removed Assert String Assertion

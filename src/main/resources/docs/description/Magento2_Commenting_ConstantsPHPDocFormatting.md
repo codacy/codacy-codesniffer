@@ -1,1 +1,1 @@
-Detects PHPDoc formatting for constants.
+Commenting: Constants PHP Doc Formatting

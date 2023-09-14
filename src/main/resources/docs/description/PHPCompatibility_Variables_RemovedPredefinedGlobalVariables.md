@@ -1,2 +1,1 @@
-Detect the use of removed global variables. Suggests alternatives if available.
-PHP version 5. 3+
+PHP Compatibility related issue (Variables): Removed Predefined Global Variables

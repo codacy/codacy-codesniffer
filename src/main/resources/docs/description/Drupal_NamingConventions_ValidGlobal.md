@@ -1,1 +1,1 @@
-Ensures that global variables start with an underscore.
+Naming Conventions: Valid Global

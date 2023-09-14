@@ -1,2 +1,1 @@
-Detect using `break` and/or `continue` statements outside of a looping structure.
-PHP version 7. 0
+PHP Compatibility related issue (Control Structures): Forbidden Break Continue Outside Loop

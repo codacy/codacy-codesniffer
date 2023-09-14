@@ -1,0 +1,1 @@
+PHP Compatibility: Removed Get Defined Functions Exclude Disabled False

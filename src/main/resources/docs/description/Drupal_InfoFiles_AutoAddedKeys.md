@@ -1,1 +1,1 @@
-"version", "project" and "timestamp" are added automatically by drupal.org packaging scripts.
+Info Files: Auto Added Keys

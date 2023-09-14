@@ -1,0 +1,1 @@
+PHP Compatibility: Removed Spl Autoload Register Throw False

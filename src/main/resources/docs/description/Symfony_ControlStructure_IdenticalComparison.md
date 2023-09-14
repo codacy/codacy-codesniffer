@@ -1,1 +1,1 @@
-Checks for identical comparison and adds warning if not used.
+Control Structure: Identical Comparison

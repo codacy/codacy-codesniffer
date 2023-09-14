@@ -1,0 +1,1 @@
+Classes: Require Constructor Property Promotion

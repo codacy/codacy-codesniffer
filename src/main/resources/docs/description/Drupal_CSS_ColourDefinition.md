@@ -1,1 +1,1 @@
-Ensure colours are defined in lower-case.
+CSS: Colour Definition

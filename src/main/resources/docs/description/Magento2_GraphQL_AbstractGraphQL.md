@@ -1,1 +1,1 @@
-Defines an abstract base class for GraphQL sniffs.
+Graph QL: Abstract Graph QL

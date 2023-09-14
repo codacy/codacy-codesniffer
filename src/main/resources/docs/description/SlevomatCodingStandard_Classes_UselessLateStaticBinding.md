@@ -1,3 +1,1 @@
-# SlevomatCodingStandard_Classes_UselessLateStaticBinding
-
-Reports useless late static binding.
+Classes: Useless Late Static Binding

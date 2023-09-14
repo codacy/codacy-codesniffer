@@ -1,0 +1,1 @@
+PHP Compatibility: Removed Calling Destruct After Constructor Exit

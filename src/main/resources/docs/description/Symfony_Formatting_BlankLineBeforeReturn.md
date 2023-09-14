@@ -1,1 +1,1 @@
-BlankLineBeforeReturnSniff.
+Formatting: Blank Line Before Return

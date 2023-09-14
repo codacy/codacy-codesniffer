@@ -1,1 +1,1 @@
-Detects string concatenation via '+' operator.
+Strings: String Concat

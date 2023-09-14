@@ -1,0 +1,1 @@
+PHP Compatibility: Changed Int To Bool Param Type

@@ -1,1 +1,1 @@
-Checks for proper type hinting.
+Commenting: Type Hinting

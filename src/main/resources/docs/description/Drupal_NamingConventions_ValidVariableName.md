@@ -1,1 +1,1 @@
-Checks the naming of member variables.
+Naming Conventions: Valid Variable Name

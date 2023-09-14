@@ -5,13 +5,10 @@ Valid: no spaces on the inside of a set of arbitrary parentheses.
 $a = (null !== $extra);
 ```
 
-Invalid: spaces on the inside of a set of arbitrary parentheses.
+Invalid: spaces or new lines on the inside of a set of arbitrary parentheses.
 ```
 $a = ( null !== $extra );
-```
 
-Invalid: new lines on the inside of a set of arbitrary parentheses.
-```
 $a = (
     null !== $extra
 );

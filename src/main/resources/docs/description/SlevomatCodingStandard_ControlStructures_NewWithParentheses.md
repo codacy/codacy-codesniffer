@@ -1,3 +1,1 @@
-# SlevomatCodingStandard_ControlStructures_NewWithParentheses
-
-Requires `new` with parentheses.
+Control Structures: New With Parentheses

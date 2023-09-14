@@ -1,0 +1,1 @@
+Strings: Disallow Variable Parsing

@@ -1,1 +1,1 @@
-Checks whether E_USER_DEPRECATED errors are silenced by default.
+Errors: User Deprecated
