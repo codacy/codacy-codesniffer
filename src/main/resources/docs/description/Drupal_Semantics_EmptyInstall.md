@@ -1,1 +1,1 @@
-Throws an error if hook_install() or hook_uninstall() definitions are empty.
+Semantics: Empty Install

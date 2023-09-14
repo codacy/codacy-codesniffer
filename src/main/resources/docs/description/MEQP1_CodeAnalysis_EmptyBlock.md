@@ -1,1 +1,1 @@
-Class EmptyBlockSniff Detects possible empty blocks.
+Code Analysis: Empty Block

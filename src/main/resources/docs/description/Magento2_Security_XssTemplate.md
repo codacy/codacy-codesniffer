@@ -1,1 +1,1 @@
-Detects not escaped output in phtml templates.
+Security: Xss Template

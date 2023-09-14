@@ -1,1 +1,1 @@
-Checks whether unary operators are adjacent to the affected variable.
+Control Structure: Unary Operators

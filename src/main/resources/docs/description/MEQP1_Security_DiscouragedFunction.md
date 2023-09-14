@@ -1,1 +1,1 @@
-Class DiscouragedFunctionSniff Detects possible usage of discouraged functions.
+Security: Discouraged Function

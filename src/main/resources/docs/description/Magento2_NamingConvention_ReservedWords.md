@@ -1,1 +1,1 @@
-Validates that class name is not reserved word.
+Naming Convention: Reserved Words

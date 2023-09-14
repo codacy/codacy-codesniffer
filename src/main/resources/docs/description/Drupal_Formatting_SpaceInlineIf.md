@@ -1,1 +1,1 @@
-Checks that there is no space between "?" and ":" inline if/else statements.
+Formatting: Space Inline If

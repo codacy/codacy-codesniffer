@@ -1,1 +1,1 @@
-Checks that two strings are not concatenated together; suggests using one string instead.
+Strings: Unnecessary String Concat

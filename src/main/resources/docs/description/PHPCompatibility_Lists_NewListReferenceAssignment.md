@@ -1,2 +1,1 @@
-Detect reference assignments in array destructuring using (short) list.
-PHP version 7. 3
+PHP Compatibility related issue (Lists): New List Reference Assignment

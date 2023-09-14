@@ -1,2 +1,1 @@
-Warns for non-magic behaviour of magic methods prior to becoming magic.
-PHP version 5. 0+
+PHP Compatibility related issue (Function Name Restrictions): New Magic Methods

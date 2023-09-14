@@ -1,1 +1,1 @@
-Detects possible usage of multiple blank lines in a row.
+Whitespace: Multiple Empty Lines

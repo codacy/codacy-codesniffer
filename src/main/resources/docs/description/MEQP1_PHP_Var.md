@@ -1,1 +1,1 @@
-Class VarSniff Detects possible usage of 'var' language construction.
+PHP: Var

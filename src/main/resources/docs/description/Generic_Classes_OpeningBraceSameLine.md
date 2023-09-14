@@ -13,6 +13,12 @@ class Foo
 }
 ```
 
+Valid: Opening brace is the last thing on the line.
+```
+class Foo {
+}
+```
+
 Invalid: Opening brace not last thing on the line.
 ```
 class Foo { // Start of class.
