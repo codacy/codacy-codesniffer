@@ -19,8 +19,7 @@ workflows:
             sudo mv phpDocumentor.phar /usr/local/bin/phpdoc
             sudo chmod +x /usr/local/bin/phpdoc
 
-            sbt "set scalafmtUseIvy in ThisBuild := false;
-                 scalafmt::test;
+            sbt "scalafmt::test;
                  test:scalafmt::test;
                  sbt:scalafmt::test;
                  set version in Docker := \"latest\";
