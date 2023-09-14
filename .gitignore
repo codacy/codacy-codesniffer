@@ -13,8 +13,3 @@
 .metals
 
 vendor/
-
-###> squizlabs/php_codesniffer ###
-/.phpcs-cache
-/phpcs.xml
-###< squizlabs/php_codesniffer ###
