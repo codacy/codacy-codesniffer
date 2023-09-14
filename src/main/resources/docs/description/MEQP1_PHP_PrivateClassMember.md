@@ -1,1 +1,1 @@
-PHP: Private Class Member
+Class PrivateClassMemberSniff Detects possible usage of 'private' scope modifiers.

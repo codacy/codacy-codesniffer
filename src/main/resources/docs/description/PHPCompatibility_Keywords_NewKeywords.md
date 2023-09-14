@@ -1,1 +1,2 @@
-PHP Compatibility related issue (Keywords): New Keywords
+Detect use of new PHP keywords.
+PHP version All

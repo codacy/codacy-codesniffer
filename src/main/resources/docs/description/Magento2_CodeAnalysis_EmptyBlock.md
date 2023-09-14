@@ -1,1 +1,1 @@
-Code Analysis: Empty Block
+Detects possible empty blocks.

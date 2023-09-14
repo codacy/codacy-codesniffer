@@ -1,1 +1,2 @@
-Performance: Regexp Compare
+Flag REGEXP and NOT REGEXP in meta compare
+@package VIPCS\WordPressVIPMinimum

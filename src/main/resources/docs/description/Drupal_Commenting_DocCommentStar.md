@@ -1,1 +1,1 @@
-Commenting: Doc Comment Star
+Checks that a doc comment block has a doc comment star on every line.

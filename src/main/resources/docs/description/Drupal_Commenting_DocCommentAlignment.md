@@ -1,1 +1,1 @@
-Commenting: Doc Comment Alignment
+Largely copied from \PHP_CodeSniffer\Standards\Squiz\Sniffs\Commenting\DocCommentAlignmentSniff to also handle the "var" keyword. See https://github.com/squizlabs/PHP_CodeSniffer/pull/1212

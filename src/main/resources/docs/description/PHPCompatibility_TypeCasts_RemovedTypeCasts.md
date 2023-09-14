@@ -1,1 +1,2 @@
-PHP Compatibility related issue (Type Casts): Removed Type Casts
+Detect use of deprecated/removed type casts.
+PHP version All

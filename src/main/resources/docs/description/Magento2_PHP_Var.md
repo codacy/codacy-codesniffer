@@ -1,1 +1,1 @@
-PHP: Var
+Detects possible usage of 'var' language construction.

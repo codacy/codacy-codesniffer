@@ -1,1 +1,2 @@
-PHP Compatibility related issue (Constants): New Constants
+Detect use of new PHP native global constants.
+PHP version All

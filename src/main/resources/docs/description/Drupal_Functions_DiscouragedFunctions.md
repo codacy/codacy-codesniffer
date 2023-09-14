@@ -1,1 +1,1 @@
-Functions: Discouraged Functions
+Discourage the use of debug functions.

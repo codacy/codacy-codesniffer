@@ -1,1 +1,1 @@
-SQL: Raw Query
+Detects possible raw SQL queries.

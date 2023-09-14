@@ -1,1 +1,4 @@
-Classes: Property Declaration
+PropertyDeclarationSniff.
+Throws warnings if properties are declared after methods
+
+PHP version 5

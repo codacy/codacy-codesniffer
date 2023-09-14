@@ -1,1 +1,2 @@
-Performance: Taxonomy Meta In Options
+Restricts the implementation of taxonomy term meta via options.
+@package VIPCS\WordPressVIPMinimum

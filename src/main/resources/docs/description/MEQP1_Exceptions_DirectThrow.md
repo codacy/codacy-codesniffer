@@ -1,1 +1,1 @@
-Exceptions: Direct Throw
+Class DirectThrowSniff Detects possible direct throws of Exceptions.

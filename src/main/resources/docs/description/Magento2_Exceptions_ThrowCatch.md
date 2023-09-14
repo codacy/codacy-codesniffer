@@ -1,1 +1,1 @@
-Exceptions: Throw Catch
+Detects exceptions must not be handled in same function

@@ -1,1 +1,2 @@
-PHP Compatibility related issue (Language Constructs): New Language Constructs
+Detect use of new PHP language constructs.
+PHP version All

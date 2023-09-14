@@ -1,1 +1,1 @@
-SQL: Slow Query
+Class SlowQuerySniff Detects possible slow SQL queries.

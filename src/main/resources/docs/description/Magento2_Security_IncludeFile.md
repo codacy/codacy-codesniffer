@@ -1,1 +1,1 @@
-Security: Include File
+Detects possible improper usage of include functions.

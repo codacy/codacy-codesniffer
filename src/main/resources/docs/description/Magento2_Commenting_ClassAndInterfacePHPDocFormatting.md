@@ -1,1 +1,1 @@
-Commenting: Class And Interface PHP Doc Formatting
+Detects PHPDoc formatting for classes and interfaces.

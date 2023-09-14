@@ -1,1 +1,1 @@
-Exceptions: Direct Throw
+Detects possible direct throws of Exceptions.

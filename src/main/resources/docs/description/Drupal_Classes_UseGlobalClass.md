@@ -1,1 +1,1 @@
-Classes: Use Global Class
+Checks non-namespaced classes are referenced by FQN, not imported.

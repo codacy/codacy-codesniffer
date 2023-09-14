@@ -172,10 +172,9 @@ trait DocsParser {
   }
 
   protected def parseExtendedDescription(namespace: String,
-                                         rulesFolder: String, 
                                          patternIdParts: PatternIdParts,
                                          rootDir: File): Option[String] = {
-    val docsFile = rootDir / rulesFolder / "ruleset.xml"
+    val docsFile = rootDir / "docs" / "structure.xml"
 
     val structureXML = XML.loadString(docsFile.contentAsString)
 
@@ -189,12 +188,9 @@ trait DocsParser {
   }
 
   protected def parseDescription(namespace: String,
-                                 rulesFolder: String,
                                  patternIdParts: PatternIdParts,
                                  rootDir: File): Option[DescriptionText] = {
-
-
-    val docsFile = rootDir / rulesFolder / "ruleset.xml"
+    val docsFile = rootDir / "docs" / "structure.xml"
 
     val structureXML = XML.loadString(docsFile.contentAsString)
 

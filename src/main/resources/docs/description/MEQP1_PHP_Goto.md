@@ -1,1 +1,1 @@
-PHP: Goto
+Class GotoSniff Detects use of GOTO.

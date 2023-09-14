@@ -1,1 +1,1 @@
-Commenting: Gender Neutral Comment
+Parses and verifies that comments use gender neutral language.

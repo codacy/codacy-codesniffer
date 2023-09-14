@@ -1,1 +1,1 @@
-Formatting: Multi Line Assignment
+If an assignment goes over two lines, ensure the equal sign is indented.

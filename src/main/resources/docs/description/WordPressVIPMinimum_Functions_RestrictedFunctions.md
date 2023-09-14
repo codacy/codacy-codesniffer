@@ -1,1 +1,1 @@
-Functions: Restricted Functions
+Restricts usage of some functions in VIP context.

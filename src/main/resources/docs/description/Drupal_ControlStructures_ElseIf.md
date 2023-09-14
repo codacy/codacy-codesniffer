@@ -1,1 +1,1 @@
-Control Structures: Else If
+Checks that "elseif" is used instead of "else if".

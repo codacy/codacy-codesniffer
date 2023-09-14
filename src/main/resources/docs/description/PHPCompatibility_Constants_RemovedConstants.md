@@ -1,1 +1,2 @@
-PHP Compatibility related issue (Constants): Removed Constants
+Detect use of deprecated and/or removed PHP native global constants.
+PHP version All

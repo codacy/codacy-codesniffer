@@ -1,1 +1,1 @@
-Naming Conventions: Valid Variable Name
+Checks the naming of variables and member variables.

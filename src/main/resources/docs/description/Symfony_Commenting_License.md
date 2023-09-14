@@ -1,1 +1,1 @@
-Commenting: License
+Checks for the presence of a license comment prior to the namespace.

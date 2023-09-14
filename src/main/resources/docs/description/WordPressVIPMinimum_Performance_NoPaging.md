@@ -1,1 +1,1 @@
-Performance: No Paging
+Flag returning high or infinite posts_per_page.

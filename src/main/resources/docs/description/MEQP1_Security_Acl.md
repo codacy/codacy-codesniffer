@@ -1,1 +1,1 @@
-Security: Acl
+Class AclSniff Detects possible improper usage of adminhtml actions.

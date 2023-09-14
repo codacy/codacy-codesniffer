@@ -1,1 +1,1 @@
-Classes: Use Leading Backslash
+Use statements to import classes must not begin with "\".

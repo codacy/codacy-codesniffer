@@ -1,1 +1,2 @@
-PHP Compatibility related issue (Keywords): Forbidden Names As Invoked Functions
+Prohibits the use of reserved keywords invoked as functions.
+PHP version All

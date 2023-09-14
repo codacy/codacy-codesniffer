@@ -1,1 +1,1 @@
-Info Files: Class Files
+Checks files[] entries in info files. Only files containing classes/interfaces should be listed.

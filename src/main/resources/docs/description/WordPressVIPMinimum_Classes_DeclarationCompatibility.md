@@ -1,1 +1,1 @@
-Classes: Declaration Compatibility
+Class WordPressVIPMinimum_Sniffs_Classes_DeclarationCompatibilitySniff

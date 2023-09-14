@@ -1,1 +1,1 @@
-Classes: Abstract Api
+Detects api annotation for an abstract class.

@@ -1,1 +1,1 @@
-Strings: Reg Ex
+Class RegExSniff Detects executable regular expressions.

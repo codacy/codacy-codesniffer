@@ -1,1 +1,1 @@
-Functions: Static Function
+Detects static function definitions.

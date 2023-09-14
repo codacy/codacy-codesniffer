@@ -1,1 +1,1 @@
-Security: Insecure Function
+Detects the use of insecure functions.

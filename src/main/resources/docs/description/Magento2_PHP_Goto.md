@@ -1,1 +1,1 @@
-PHP: Goto
+Detects use of GOTO.

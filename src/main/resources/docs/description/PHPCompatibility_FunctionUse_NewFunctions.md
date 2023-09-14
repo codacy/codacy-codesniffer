@@ -1,1 +1,2 @@
-PHP Compatibility related issue (Function Use): New Functions
+Detect calls to new native PHP functions.
+PHP version All

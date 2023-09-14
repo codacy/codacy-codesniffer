@@ -1,1 +1,2 @@
-PHP Compatibility related issue (Operators): New Operators
+Detect use of new PHP operators.
+PHP version All

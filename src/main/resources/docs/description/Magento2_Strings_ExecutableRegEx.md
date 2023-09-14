@@ -1,1 +1,1 @@
-Strings: Executable Reg Ex
+Detects executable regular expressions.

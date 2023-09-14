@@ -1,1 +1,1 @@
-Commenting: Inline Variable Comment
+Checks for the correct usage of inline variable type declarations.

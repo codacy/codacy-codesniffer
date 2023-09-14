@@ -1,1 +1,1 @@
-Commenting: Class Comment
+Checks that comment doc blocks exist on classes, interfaces and traits. Largely copied from PHP_CodeSniffer\Standards\Squiz\Sniffs\Commenting\ClassCommentSniff.

@@ -1,1 +1,1 @@
-Semantics: Function Watchdog
+Checks that the second argument to watchdog() is not enclosed with t().

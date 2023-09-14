@@ -1,1 +1,1 @@
-White Space: Comma
+Checks that there is one space after a comma.

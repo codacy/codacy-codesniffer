@@ -1,1 +1,2 @@
-PHP Compatibility related issue (Control Structures): Forbidden Switch With Multiple Default Blocks
+Switch statements can not have multiple default blocks since PHP 7.0.
+PHP version 7. 0

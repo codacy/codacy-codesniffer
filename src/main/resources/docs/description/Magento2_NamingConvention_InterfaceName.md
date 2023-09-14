@@ -1,1 +1,1 @@
-Naming Convention: Interface Name
+Detects possible interface declaration without 'Interface' suffix.

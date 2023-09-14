@@ -1,1 +1,1 @@
-Templates: This In Template
+Detects possible usage of $this variable files.

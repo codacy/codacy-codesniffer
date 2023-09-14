@@ -1,1 +1,1 @@
-Graph QL: Abstract Graph QL
+Defines an abstract base class for GraphQL sniffs.

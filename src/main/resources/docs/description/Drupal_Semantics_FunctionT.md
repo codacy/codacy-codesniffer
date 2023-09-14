@@ -1,1 +1,1 @@
-Semantics: Function T
+Check the usage of the t() function to not escape translateable strings with back slashes. Also checks that the first argument does not use string concatenation.

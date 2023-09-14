@@ -1,1 +1,1 @@
-Commenting: Post Statement Comment
+Largely copied from \PHP_CodeSniffer\Standards\Squiz\Sniffs\Commenting\PostStatementCommentSniff but we want the fixer to move the comment to the previous line.

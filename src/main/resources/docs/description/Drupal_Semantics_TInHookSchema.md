@@ -1,1 +1,1 @@
-Semantics: T In Hook Schema
+Checks that t() is not used in hook_schema().
