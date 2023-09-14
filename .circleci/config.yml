@@ -22,7 +22,7 @@ workflows:
             sbt "scalafmtSbt;
                  scalafmtAll;
                  scalafmtCheckAll;
-                 set version in Docker := \"latest\";
+                 Docker / version := \"latest\";
                  runMain codacy.codesniffer.docsgen.GeneratorMain;
                  clean;
                  docker:publishLocal"
