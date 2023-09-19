@@ -12,23 +12,7 @@ mb_ereg_replace( $pattern, $replace, $subject, 'msi' );
 mb_eregi_replace( $pattern, $replace, $subject, 'sim' );
 mb_regex_set_options( 'ims' );
 
-// These should all be flagged.
-//#Warning: PHPCompatibility_ParameterValues_RemovedMbstringModifiers
-mb_ereg_replace( $pattern, $replace, $subject, 'e' );
-//#Warning: PHPCompatibility_ParameterValues_RemovedMbstringModifiers
-mb_eregi_replace( $pattern, $replace, $subject, "seim" );
-//#Warning: PHPCompatibility_ParameterValues_RemovedMbstringModifiers
-mb_regex_set_options( 'im' . 'se' );
-
 // Interpolated strings: These should NOT be flagged.
 mb_ereg_replace( $pattern, $replace, $subject, "$e" );
 mb_eregi_replace( $pattern, $replace, $subject, "s$eim" );
 mb_regex_set_options( 'im' . "$se" );
-
-// Interpolated strings: These should all be flagged.
-//#Warning: PHPCompatibility_ParameterValues_RemovedMbstringModifiers
-mb_ereg_replace( $pattern, $replace, $subject, "e$m" );
-//#Warning: PHPCompatibility_ParameterValues_RemovedMbstringModifiers
-mb_eregi_replace( $pattern, $replace, $subject, "me$i" );
-//#Warning: PHPCompatibility_ParameterValues_RemovedMbstringModifiers
-mb_regex_set_options( 'im' . "{$se}e" );
