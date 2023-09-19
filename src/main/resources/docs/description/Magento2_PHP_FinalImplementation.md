@@ -1,1 +1,1 @@
-Magento is a highly extensible and customizable platform. The use of final classes and methods is prohibited.
+PHP: Final Implementation

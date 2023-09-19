@@ -1,1 +1,1 @@
-Checks whether annotations of a different type are separated with newlines.
+Commenting: Annotations

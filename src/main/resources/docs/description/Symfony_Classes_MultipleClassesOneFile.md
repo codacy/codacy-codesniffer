@@ -1,1 +1,1 @@
-MultipleClassesOneFileSniff.
+Classes: Multiple Classes One File

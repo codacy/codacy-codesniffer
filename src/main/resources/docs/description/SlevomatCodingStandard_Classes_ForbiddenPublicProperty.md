@@ -1,0 +1,3 @@
+# SlevomatCodingStandard_Classes_ForbiddenPublicProperty
+
+Disallows using public properties.

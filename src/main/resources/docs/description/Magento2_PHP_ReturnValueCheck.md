@@ -1,1 +1,1 @@
-Detects misusing of IS_IDENTICAL operators.
+PHP: Return Value Check

@@ -1,1 +1,1 @@
-Detects possible usage of super global variables.
+Security: Superglobal

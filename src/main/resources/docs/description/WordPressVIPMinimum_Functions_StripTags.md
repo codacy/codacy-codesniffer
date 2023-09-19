@@ -1,1 +1,1 @@
-This sniff ensures proper tag stripping.
+Functions: Strip Tags

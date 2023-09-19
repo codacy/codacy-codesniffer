@@ -1,2 +1,1 @@
-Detect the use of newly introduced hash algorithms.
-PHP version 5. 2+
+PHP Compatibility related issue (Parameter Values): New Hash Algorithms

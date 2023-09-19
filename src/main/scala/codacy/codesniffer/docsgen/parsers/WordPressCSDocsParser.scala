@@ -32,7 +32,7 @@ class WordPressCSDocsParser extends DocsParser {
       descriptionFromParts
     }
 
-    (description, this.parseExtendedDescription("WordPressCS\\WordPress\\Sniffs", patternIdParts, rootDir))
+    (description, this.parseExtendedDescription("WordPressCS\\WordPress\\Sniffs", "WordPress", patternIdParts, rootDir))
   }
 
   private[this] def isDeprecated(patternFile: File): Boolean = {
@@ -48,7 +48,7 @@ class WordPressCSDocsParser extends DocsParser {
     val patternName = caseRegexPattern.replaceAllIn(patternIdParts.patternName, " $1").trim
     val sniffName = caseRegexPattern.replaceAllIn(patternIdParts.sniffType, " $1").trim
     val title = Pattern.Title(s"$sniffName: $patternName")
-    val extended = this.parseDescription("WordPressCS\\WordPress\\Sniffs", patternIdParts, rootDir)
+    val extended = this.parseDescription("WordPressCS\\WordPress\\Sniffs", "WordPress", patternIdParts, rootDir)
     Pattern.Description(patternIdParts.patternId, title, extended, None, Set.empty)
   }
 

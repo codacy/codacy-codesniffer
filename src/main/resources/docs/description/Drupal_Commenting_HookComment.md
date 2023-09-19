@@ -1,1 +1,1 @@
-Ensures hook comments on function are correct.
+Commenting: Hook Comment

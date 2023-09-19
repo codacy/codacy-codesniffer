@@ -1,1 +1,1 @@
-Detects typical Magento 1.x classes constructions.
+Legacy: Mage Entity

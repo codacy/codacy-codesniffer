@@ -1,4 +1,1 @@
-Detect missing required function parameters in calls to native PHP functions.
-Specifically when those function parameters are no longer required in more recent PHP versions. 
-
-PHP version All
+PHP Compatibility related issue (Function Use): Required To Optional Function Parameters

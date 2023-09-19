@@ -5,13 +5,10 @@ Valid: A NOT operator followed by one space.
 if (! $someVar || ! $x instanceOf stdClass) {};
 ```
 
-Invalid: A NOT operator not followed by whitespace.
+Invalid: A NOT operator not followed by whitespace or followed by too much whitespace.
 ```
 if (!$someVar || !$x instanceOf stdClass) {};
-```
 
-Invalid: A NOT operator followed by a new line or more than one space.
-```
 if (!     $someVar || !
     $x instanceOf stdClass) {};
 ```

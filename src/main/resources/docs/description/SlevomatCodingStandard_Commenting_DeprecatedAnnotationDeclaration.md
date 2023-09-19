@@ -1,1 +1,3 @@
-Commenting: Deprecated Annotation Declaration
+# SlevomatCodingStandard_Commenting_DeprecatedAnnotationDeclaration
+
+Reports `@deprecated` annotations without description.

@@ -1,1 +1,1 @@
-Detects possible usage of discouraged functions.
+Functions: Discouraged Function

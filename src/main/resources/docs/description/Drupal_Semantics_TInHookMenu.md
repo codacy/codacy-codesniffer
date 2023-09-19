@@ -1,1 +1,1 @@
-Checks that t() is not used in hook_menu().
+Semantics: T In Hook Menu

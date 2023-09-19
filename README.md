@@ -5,7 +5,7 @@ You can also create a docker to integrate the tool and language of your choice!
 See the [codacy-engine-scala-seed](https://github.com/codacy/codacy-engine-scala-seed) repository for more information.
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b695e76adcfa48749a8eaa33f2f2f626)](https://www.codacy.com/gh/codacy/codacy-codesniffer?utm_source=github.com&utm_medium=referral&utm_content=codacy/codacy-codesniffer&utm_campaign=Badge_Grade)
-[![Build Status](https://circleci.com/gh/codacy/codacy-codesniffer.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/codacy/codacy-codesniffer)
+[![Build Status](https://circleci.com/gh/codacy/codacy-codesniffer.svg)](https://circleci.com/gh/codacy/codacy-codesniffer)
 
 ## Usage
 

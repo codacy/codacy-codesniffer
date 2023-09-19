@@ -1,1 +1,1 @@
-Discourages removal of the admin bar.
+User Experience: Admin Bar Removal

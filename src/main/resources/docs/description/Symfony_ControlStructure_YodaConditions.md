@@ -1,1 +1,1 @@
-Checks whether variables are properly compared to expressions.
+Control Structure: Yoda Conditions

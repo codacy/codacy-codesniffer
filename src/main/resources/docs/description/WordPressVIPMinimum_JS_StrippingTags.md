@@ -1,2 +1,1 @@
-WordPressVIPMinimum_Sniffs_JS_StrippingTagsSniff.
-Looks for incorrect way of stripping tags.
+JS: Stripping Tags
