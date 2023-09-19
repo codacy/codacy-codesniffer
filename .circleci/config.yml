@@ -18,9 +18,7 @@ workflows:
             sudo mv phpDocumentor.phar /usr/local/bin/phpdoc
             sudo chmod +x /usr/local/bin/phpdoc
 
-            sbt "scalafmtCheckAll;
-                 scalafmtSbtCheck;
-                 set Docker / version := \"latest\";
+            sbt "set Docker / version := \"latest\";
                  runMain codacy.codesniffer.docsgen.GeneratorMain;
                  clean;
                  docker:publishLocal"
