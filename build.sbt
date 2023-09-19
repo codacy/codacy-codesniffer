@@ -14,8 +14,8 @@ enablePlugins(AshScriptPlugin)
 
 enablePlugins(DockerPlugin)
 
-mappings in Universal ++= {
-  (resourceDirectory in Compile).map { (resourceDir: File) =>
+Universal / mappings ++= {
+  (Compile / resourceDirectory).map { (resourceDir: File) =>
     val src = resourceDir / "docs"
     val dest = "/docs"
 
@@ -28,15 +28,15 @@ mappings in Universal ++= {
 val dockerUser = "docker"
 val dockerGroup = "docker"
 
-version in Docker := "1.0"
+Docker / version := "1.0"
 
-daemonUser in Docker := dockerUser
+Docker / daemonUser := dockerUser
 
-daemonGroup in Docker := dockerGroup
+Docker / daemonGroup := dockerGroup
 
 dockerBaseImage := "codacy-codesniffer-base"
 
-mainClass in Compile := Some("codacy.Engine")
+Compile / mainClass := Some("codacy.Engine")
 
 dockerCommands := dockerCommands.value.flatMap {
   case cmd @ Cmd("ADD", _) =>

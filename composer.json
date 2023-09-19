@@ -12,7 +12,8 @@
         "drupal/coder": "8.3.15",
         "automattic/vipwpcs": "2.3.3",
         "escapestudios/symfony2-coding-standard": "^3.11",
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.7"
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
+        "symfony/flex": "v1.20.2"
     },
     "repositories": [
         {
