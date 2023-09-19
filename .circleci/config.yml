@@ -1,11 +1,10 @@
 version: 2.1
 
 orbs:
-  codacy: codacy/base@10.2.0
-  codacy_plugins_test: codacy/plugins-test@1.1.1
+  codacy: codacy/base@10.8.0
+  codacy_plugins_test: codacy/plugins-test@2.0.0
 
 workflows:
-  version: 2
   compile_test_deploy:
     jobs:
       - codacy/checkout_and_version:
@@ -15,23 +14,20 @@ workflows:
           cmd: |
             docker build -t codacy-codesniffer-base .
 
-            sudo apt-get update
-            sudo apt-get install php php-xml php-dom
-            wget https://github.com/phpDocumentor/phpDocumentor2/releases/download/v2.9.1/phpDocumentor.phar
+            wget https://github.com/phpDocumentor/phpDocumentor/releases/download/v3.4.1/phpDocumentor.phar
             sudo mv phpDocumentor.phar /usr/local/bin/phpdoc
             sudo chmod +x /usr/local/bin/phpdoc
 
-            sbt "set scalafmtUseIvy in ThisBuild := false;
-                 scalafmt::test;
-                 test:scalafmt::test;
-                 sbt:scalafmt::test;
+            sbt "ThisBuild / scalafmtUseIvy := false;
+                 scalafmtSbt;
+                 scalafmtAll;
+                 scalafmtCheckAll;
                  set version in Docker := \"latest\";
                  runMain codacy.codesniffer.docsgen.GeneratorMain;
                  clean;
                  docker:publishLocal"
             docker save --output docker-image.tar $CIRCLE_PROJECT_REPONAME:latest
           persist_to_workspace: true
-          cache_prefix: sbt-cache-26012021
           requires:
             - codacy/checkout_and_version
       - codacy_plugins_test/run:
