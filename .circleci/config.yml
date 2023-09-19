@@ -19,9 +19,8 @@ workflows:
             sudo chmod +x /usr/local/bin/phpdoc
 
             sbt "set ThisBuild / scalafmtUseIvy := false;
-                 scalafmtSbt;
-                 scalafmtAll;
                  scalafmtCheckAll;
+                 scalafmtSbtCheck;
                  set Docker / version := \"latest\";
                  runMain codacy.codesniffer.docsgen.GeneratorMain;
                  clean;
