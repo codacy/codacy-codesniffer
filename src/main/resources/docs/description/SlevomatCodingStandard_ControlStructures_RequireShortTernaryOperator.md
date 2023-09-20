@@ -1,3 +1,1 @@
-# SlevomatCodingStandard_ControlStructures_RequireShortTernaryOperator
-
-Requires short ternary operator `?:` when possible.
+Control Structures: Require Short Ternary Operator

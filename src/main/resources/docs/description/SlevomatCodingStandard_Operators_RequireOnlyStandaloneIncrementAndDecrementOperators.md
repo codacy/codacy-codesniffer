@@ -1,3 +1,1 @@
-# SlevomatCodingStandard_Operators_RequireOnlyStandaloneIncrementAndDecrementOperators
-
-Reports `++` and `--` operators not used standalone.
+Operators: Require Only Standalone Increment And Decrement Operators

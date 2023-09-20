@@ -1,3 +1,1 @@
-# SlevomatCodingStandard_ControlStructures_DisallowNullSafeObjectOperator
-
-Disallows using `?->` operator.
+Control Structures: Disallow Null Safe Object Operator

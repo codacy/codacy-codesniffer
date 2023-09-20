@@ -1,3 +1,1 @@
-# SlevomatCodingStandard_Functions_UselessParameterDefaultValue
-
-Looks for useless parameter default value.
+Functions: Useless Parameter Default Value

@@ -24,7 +24,10 @@
 }, {
   "patternId" : "Drupal_Classes_ClassDeclaration",
   "title" : "Classes: Class Declaration",
-  "parameters" : [ ]
+  "parameters" : [ {
+    "name" : "indent",
+    "description" : "indent"
+  } ]
 }, {
   "patternId" : "Drupal_Classes_ClassFileName",
   "title" : "Classes: Class File Name",
@@ -72,6 +75,10 @@
 }, {
   "patternId" : "Drupal_Commenting_DocCommentAlignment",
   "title" : "Commenting: Doc Comment Alignment",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Drupal_Commenting_DocCommentLongArraySyntax",
+  "title" : "Commenting: Doc Comment Long Array Syntax",
   "parameters" : [ ]
 }, {
   "patternId" : "Drupal_Commenting_DocCommentStar",
@@ -184,6 +191,10 @@
 }, {
   "patternId" : "Drupal_InfoFiles_ClassFiles",
   "title" : "Info Files: Class Files",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Drupal_InfoFiles_DependenciesArray",
+  "title" : "Info Files: Dependencies Array",
   "parameters" : [ ]
 }, {
   "patternId" : "Drupal_InfoFiles_DuplicateEntry",
@@ -931,6 +942,14 @@
   "title" : "Templates: Xss Template",
   "parameters" : [ ]
 }, {
+  "patternId" : "Magento2_Annotation_MethodAnnotationStructure",
+  "title" : "Annotation: Method Annotation Structure",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Annotation_MethodArguments",
+  "title" : "Annotation: Method Arguments",
+  "parameters" : [ ]
+}, {
   "patternId" : "Magento2_Classes_AbstractApi",
   "title" : "Classes: Abstract Api",
   "parameters" : [ ]
@@ -945,6 +964,10 @@
 }, {
   "patternId" : "Magento2_Commenting_ClassAndInterfacePHPDocFormatting",
   "title" : "Commenting: Class And Interface PHP Doc Formatting",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Commenting_ClassPropertyPHPDocFormatting",
+  "title" : "Commenting: Class Property PHP Doc Formatting",
   "parameters" : [ ]
 }, {
   "patternId" : "Magento2_Commenting_ConstantsPHPDocFormatting",
@@ -969,6 +992,10 @@
     "name" : "error",
     "description" : "error"
   } ]
+}, {
+  "patternId" : "Magento2_Functions_FunctionsDeprecatedWithoutArgument",
+  "title" : "Functions: Functions Deprecated Without Argument",
+  "parameters" : [ ]
 }, {
   "patternId" : "Magento2_Functions_StaticFunction",
   "title" : "Functions: Static Function",
@@ -998,8 +1025,170 @@
   "title" : "Graph QL: Valid Type Name",
   "parameters" : [ ]
 }, {
+  "patternId" : "Magento2_Html_HtmlBinding",
+  "title" : "Html: Html Binding",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Html_HtmlClosingVoidTags",
+  "title" : "Html: Html Closing Void Tags",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Html_HtmlCollapsibleAttribute",
+  "title" : "Html: Html Collapsible Attribute",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Html_HtmlDirective",
+  "title" : "Html: Html Directive",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Html_HtmlSelfClosingTags",
+  "title" : "Html: Html Self Closing Tags",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Legacy_AbstractBlock",
+  "title" : "Legacy: Abstract Block",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Legacy_ClassReferencesInConfigurationFiles",
+  "title" : "Legacy: Class References In Configuration Files",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Legacy_DiConfig",
+  "title" : "Legacy: Di Config",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Legacy_EmailTemplate",
+  "title" : "Legacy: Email Template",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Legacy_InstallUpgrade",
+  "title" : "Legacy: Install Upgrade",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Legacy_Layout",
+  "title" : "Legacy: Layout",
+  "parameters" : [ ]
+}, {
   "patternId" : "Magento2_Legacy_MageEntity",
   "title" : "Legacy: Mage Entity",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Legacy_ModuleXML",
+  "title" : "Legacy: Module XML",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Legacy_ObsoleteAcl",
+  "title" : "Legacy: Obsolete Acl",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Legacy_ObsoleteConfigNodes",
+  "title" : "Legacy: Obsolete Config Nodes",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Legacy_ObsoleteConnection",
+  "title" : "Legacy: Obsolete Connection",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Legacy_ObsoleteMenu",
+  "title" : "Legacy: Obsolete Menu",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Legacy_ObsoleteSystemConfiguration",
+  "title" : "Legacy: Obsolete System Configuration",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Legacy_PhtmlTemplate",
+  "title" : "Legacy: Phtml Template",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Legacy_RestrictedCode",
+  "title" : "Legacy: Restricted Code",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Legacy_TableName",
+  "title" : "Legacy: Table Name",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Legacy_WidgetXML",
+  "title" : "Legacy: Widget XML",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Less_AvoidId",
+  "title" : "Less: Avoid Id",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Less_BracesFormatting",
+  "title" : "Less: Braces Formatting",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Less_ClassNaming",
+  "title" : "Less: Class Naming",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Less_ColonSpacing",
+  "title" : "Less: Colon Spacing",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Less_ColourDefinition",
+  "title" : "Less: Colour Definition",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Less_CombinatorIndentation",
+  "title" : "Less: Combinator Indentation",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Less_CommentLevels",
+  "title" : "Less: Comment Levels",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Less_ImportantProperty",
+  "title" : "Less: Important Property",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Less_Indentation",
+  "title" : "Less: Indentation",
+  "parameters" : [ {
+    "name" : "indent",
+    "description" : "indent"
+  }, {
+    "name" : "maxIndentLevel",
+    "description" : "maxIndentLevel"
+  } ]
+}, {
+  "patternId" : "Magento2_Less_PropertiesLineBreak",
+  "title" : "Less: Properties Line Break",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Less_PropertiesSorting",
+  "title" : "Less: Properties Sorting",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Less_Quotes",
+  "title" : "Less: Quotes",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Less_SelectorDelimiter",
+  "title" : "Less: Selector Delimiter",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Less_SemicolonSpacing",
+  "title" : "Less: Semicolon Spacing",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Less_TypeSelectorConcatenation",
+  "title" : "Less: Type Selector Concatenation",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Less_TypeSelectors",
+  "title" : "Less: Type Selectors",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Less_Variables",
+  "title" : "Less: Variables",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_Less_ZeroUnits",
+  "title" : "Less: Zero Units",
   "parameters" : [ ]
 }, {
   "patternId" : "Magento2_Methods_DeprecatedModelMethod",
@@ -1016,6 +1205,14 @@
 }, {
   "patternId" : "Magento2_NamingConvention_ReservedWords",
   "title" : "Naming Convention: Reserved Words",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_PHP_ArrayAutovivification",
+  "title" : "PHP: Array Autovivification",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2_PHP_AutogeneratedClassNotInConstructor",
+  "title" : "PHP: Autogenerated Class Not In Constructor",
   "parameters" : [ ]
 }, {
   "patternId" : "Magento2_PHP_FinalImplementation",
@@ -2057,8 +2254,20 @@
   "title" : "Security Misc related issue: Include Mismatch",
   "parameters" : [ ]
 }, {
+  "patternId" : "SlevomatCodingStandard_Arrays_AlphabeticallySortedByKeys",
+  "title" : "Arrays: Alphabetically Sorted By Keys",
+  "parameters" : [ ]
+}, {
+  "patternId" : "SlevomatCodingStandard_Arrays_ArrayAccess",
+  "title" : "Arrays: Array Access",
+  "parameters" : [ ]
+}, {
   "patternId" : "SlevomatCodingStandard_Arrays_DisallowImplicitArrayCreation",
   "title" : "Arrays: Disallow Implicit Array Creation",
+  "parameters" : [ ]
+}, {
+  "patternId" : "SlevomatCodingStandard_Arrays_DisallowPartiallyKeyed",
+  "title" : "Arrays: Disallow Partially Keyed",
   "parameters" : [ ]
 }, {
   "patternId" : "SlevomatCodingStandard_Arrays_MultiLineArrayEndBracketPlacement",
@@ -2082,11 +2291,63 @@
     "description" : "enableAfterHeredoc"
   } ]
 }, {
+  "patternId" : "SlevomatCodingStandard_Attributes_AttributeAndTargetSpacing",
+  "title" : "Attributes: Attribute And Target Spacing",
+  "parameters" : [ {
+    "name" : "linesCount",
+    "description" : "linesCount"
+  }, {
+    "name" : "allowOnSameLine",
+    "description" : "allowOnSameLine"
+  } ]
+}, {
+  "patternId" : "SlevomatCodingStandard_Attributes_AttributesOrder",
+  "title" : "Attributes: Attributes Order",
+  "parameters" : [ {
+    "name" : "orderAlphabetically",
+    "description" : "orderAlphabetically"
+  } ]
+}, {
+  "patternId" : "SlevomatCodingStandard_Attributes_DisallowAttributesJoining",
+  "title" : "Attributes: Disallow Attributes Joining",
+  "parameters" : [ ]
+}, {
+  "patternId" : "SlevomatCodingStandard_Attributes_DisallowMultipleAttributesPerLine",
+  "title" : "Attributes: Disallow Multiple Attributes Per Line",
+  "parameters" : [ ]
+}, {
+  "patternId" : "SlevomatCodingStandard_Attributes_RequireAttributeAfterDocComment",
+  "title" : "Attributes: Require Attribute After Doc Comment",
+  "parameters" : [ ]
+}, {
+  "patternId" : "SlevomatCodingStandard_Classes_BackedEnumTypeSpacing",
+  "title" : "Classes: Backed Enum Type Spacing",
+  "parameters" : [ {
+    "name" : "spacesCountBeforeColon",
+    "description" : "spacesCountBeforeColon"
+  }, {
+    "name" : "spacesCountBeforeType",
+    "description" : "spacesCountBeforeType"
+  } ]
+}, {
   "patternId" : "SlevomatCodingStandard_Classes_ClassConstantVisibility",
   "title" : "Classes: Class Constant Visibility",
   "parameters" : [ {
     "name" : "fixable",
     "description" : "fixable"
+  } ]
+}, {
+  "patternId" : "SlevomatCodingStandard_Classes_ClassLength",
+  "title" : "Classes: Class Length",
+  "parameters" : [ {
+    "name" : "maxLinesLength",
+    "description" : "maxLinesLength"
+  }, {
+    "name" : "includeComments",
+    "description" : "includeComments"
+  }, {
+    "name" : "includeWhitespace",
+    "description" : "includeWhitespace"
   } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Classes_ClassMemberSpacing",
@@ -2098,10 +2359,7 @@
 }, {
   "patternId" : "SlevomatCodingStandard_Classes_ClassStructure",
   "title" : "Classes: Class Structure",
-  "parameters" : [ {
-    "name" : "enableFinalMethods",
-    "description" : "enableFinalMethods"
-  } ]
+  "parameters" : [ ]
 }, {
   "patternId" : "SlevomatCodingStandard_Classes_ConstantSpacing",
   "title" : "Classes: Constant Spacing",
@@ -2123,6 +2381,10 @@
   "title" : "Classes: Disallow Multi Property Definition",
   "parameters" : [ ]
 }, {
+  "patternId" : "SlevomatCodingStandard_Classes_DisallowStringExpressionPropertyFetch",
+  "title" : "Classes: Disallow String Expression Property Fetch",
+  "parameters" : [ ]
+}, {
   "patternId" : "SlevomatCodingStandard_Classes_EmptyLinesAroundClassBraces",
   "title" : "Classes: Empty Lines Around Class Braces",
   "parameters" : [ {
@@ -2133,9 +2395,16 @@
     "description" : "linesCountBeforeClosingBrace"
   } ]
 }, {
+  "patternId" : "SlevomatCodingStandard_Classes_EnumCaseSpacing",
+  "title" : "Classes: Enum Case Spacing",
+  "parameters" : [ ]
+}, {
   "patternId" : "SlevomatCodingStandard_Classes_ForbiddenPublicProperty",
   "title" : "Classes: Forbidden Public Property",
-  "parameters" : [ ]
+  "parameters" : [ {
+    "name" : "checkPromoted",
+    "description" : "checkPromoted"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Classes_MethodSpacing",
   "title" : "Classes: Method Spacing",
@@ -2170,6 +2439,16 @@
     "description" : "linesCountAfterLast"
   } ]
 }, {
+  "patternId" : "SlevomatCodingStandard_Classes_PropertyDeclaration",
+  "title" : "Classes: Property Declaration",
+  "parameters" : [ {
+    "name" : "checkPromoted",
+    "description" : "checkPromoted"
+  }, {
+    "name" : "enableMultipleSpacesBetweenModifiersCheck",
+    "description" : "enableMultipleSpacesBetweenModifiersCheck"
+  } ]
+}, {
   "patternId" : "SlevomatCodingStandard_Classes_PropertySpacing",
   "title" : "Classes: Property Spacing",
   "parameters" : [ ]
@@ -2190,7 +2469,14 @@
   "parameters" : [ {
     "name" : "minLineLength",
     "description" : "minLineLength"
+  }, {
+    "name" : "minParametersCount",
+    "description" : "minParametersCount"
   } ]
+}, {
+  "patternId" : "SlevomatCodingStandard_Classes_RequireSelfReference",
+  "title" : "Classes: Require Self Reference",
+  "parameters" : [ ]
 }, {
   "patternId" : "SlevomatCodingStandard_Classes_RequireSingleLineMethodSignature",
   "title" : "Classes: Require Single Line Method Signature",
@@ -2244,6 +2530,10 @@
 }, {
   "patternId" : "SlevomatCodingStandard_Classes_UselessLateStaticBinding",
   "title" : "Classes: Useless Late Static Binding",
+  "parameters" : [ ]
+}, {
+  "patternId" : "SlevomatCodingStandard_Commenting_AnnotationName",
+  "title" : "Commenting: Annotation Name",
   "parameters" : [ ]
 }, {
   "patternId" : "SlevomatCodingStandard_Commenting_DeprecatedAnnotationDeclaration",
@@ -2315,6 +2605,19 @@
   "title" : "Commenting: Useless Inherit Doc Comment",
   "parameters" : [ ]
 }, {
+  "patternId" : "SlevomatCodingStandard_Complexity_Cognitive",
+  "title" : "Complexity: Cognitive",
+  "parameters" : [ {
+    "name" : "maxComplexity",
+    "description" : "maxComplexity"
+  }, {
+    "name" : "warningThreshold",
+    "description" : "warningThreshold"
+  }, {
+    "name" : "errorThreshold",
+    "description" : "errorThreshold"
+  } ]
+}, {
   "patternId" : "SlevomatCodingStandard_ControlStructures_AssignmentInCondition",
   "title" : "Control Structures: Assignment In Condition",
   "parameters" : [ {
@@ -2356,6 +2659,10 @@
     "name" : "fixable",
     "description" : "fixable"
   } ]
+}, {
+  "patternId" : "SlevomatCodingStandard_ControlStructures_DisallowTrailingMultiLineTernaryOperator",
+  "title" : "Control Structures: Disallow Trailing Multi Line Ternary Operator",
+  "parameters" : [ ]
 }, {
   "patternId" : "SlevomatCodingStandard_ControlStructures_DisallowYodaComparison",
   "title" : "Control Structures: Disallow Yoda Comparison",
@@ -2514,6 +2821,19 @@
   "parameters" : [ {
     "name" : "enable",
     "description" : "enable"
+  } ]
+}, {
+  "patternId" : "SlevomatCodingStandard_Files_FileLength",
+  "title" : "Files: File Length",
+  "parameters" : [ {
+    "name" : "maxLinesLength",
+    "description" : "maxLinesLength"
+  }, {
+    "name" : "includeComments",
+    "description" : "includeComments"
+  }, {
+    "name" : "includeWhitespace",
+    "description" : "includeWhitespace"
   } ]
 }, {
   "patternId" : "SlevomatCodingStandard_Files_FunctionLength",
@@ -2873,7 +3193,13 @@
 }, {
   "patternId" : "SlevomatCodingStandard_PHP_RequireExplicitAssertion",
   "title" : "PHP: Require Explicit Assertion",
-  "parameters" : [ ]
+  "parameters" : [ {
+    "name" : "enableIntegerRanges",
+    "description" : "enableIntegerRanges"
+  }, {
+    "name" : "enableAdvancedStringTypes",
+    "description" : "enableAdvancedStringTypes"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_PHP_RequireNowdoc",
   "title" : "PHP: Require Nowdoc",
@@ -2897,6 +3223,19 @@
   "patternId" : "SlevomatCodingStandard_PHP_UselessSemicolon",
   "title" : "PHP: Useless Semicolon",
   "parameters" : [ ]
+}, {
+  "patternId" : "SlevomatCodingStandard_Strings_DisallowVariableParsing",
+  "title" : "Strings: Disallow Variable Parsing",
+  "parameters" : [ {
+    "name" : "disallowDollarCurlySyntax",
+    "description" : "disallowDollarCurlySyntax"
+  }, {
+    "name" : "disallowCurlyDollarSyntax",
+    "description" : "disallowCurlyDollarSyntax"
+  }, {
+    "name" : "disallowSimpleSyntax",
+    "description" : "disallowSimpleSyntax"
+  } ]
 }, {
   "patternId" : "SlevomatCodingStandard_TypeHints_DeclareStrictTypes",
   "title" : "Type Hints: Declare Strict Types",
@@ -2937,14 +3276,20 @@
   "patternId" : "SlevomatCodingStandard_TypeHints_ParameterTypeHint",
   "title" : "Type Hints: Parameter Type Hint",
   "parameters" : [ {
-    "name" : "enableObjectTypeHint",
-    "description" : "enableObjectTypeHint"
-  }, {
-    "name" : "enableMixedTypeHint",
-    "description" : "enableMixedTypeHint"
+    "name" : "enableStandaloneNullTrueFalseTypeHints",
+    "description" : "enableStandaloneNullTrueFalseTypeHints"
   }, {
     "name" : "enableUnionTypeHint",
     "description" : "enableUnionTypeHint"
+  }, {
+    "name" : "enableObjectTypeHint",
+    "description" : "enableObjectTypeHint"
+  }, {
+    "name" : "enableIntersectionTypeHint",
+    "description" : "enableIntersectionTypeHint"
+  }, {
+    "name" : "enableMixedTypeHint",
+    "description" : "enableMixedTypeHint"
   } ]
 }, {
   "patternId" : "SlevomatCodingStandard_TypeHints_ParameterTypeHintSpacing",
@@ -2954,25 +3299,36 @@
   "patternId" : "SlevomatCodingStandard_TypeHints_PropertyTypeHint",
   "title" : "Type Hints: Property Type Hint",
   "parameters" : [ {
-    "name" : "enableNativeTypeHint",
-    "description" : "enableNativeTypeHint"
+    "name" : "enableStandaloneNullTrueFalseTypeHints",
+    "description" : "enableStandaloneNullTrueFalseTypeHints"
+  }, {
+    "name" : "enableUnionTypeHint",
+    "description" : "enableUnionTypeHint"
+  }, {
+    "name" : "enableIntersectionTypeHint",
+    "description" : "enableIntersectionTypeHint"
   }, {
     "name" : "enableMixedTypeHint",
     "description" : "enableMixedTypeHint"
   }, {
-    "name" : "enableUnionTypeHint",
-    "description" : "enableUnionTypeHint"
+    "name" : "enableNativeTypeHint",
+    "description" : "enableNativeTypeHint"
   } ]
-}, {
-  "patternId" : "SlevomatCodingStandard_TypeHints_PropertyTypeHintSpacing",
-  "title" : "Type Hints: Property Type Hint Spacing",
-  "parameters" : [ ]
 }, {
   "patternId" : "SlevomatCodingStandard_TypeHints_ReturnTypeHint",
   "title" : "Type Hints: Return Type Hint",
   "parameters" : [ {
+    "name" : "enableStandaloneNullTrueFalseTypeHints",
+    "description" : "enableStandaloneNullTrueFalseTypeHints"
+  }, {
+    "name" : "enableUnionTypeHint",
+    "description" : "enableUnionTypeHint"
+  }, {
     "name" : "enableObjectTypeHint",
     "description" : "enableObjectTypeHint"
+  }, {
+    "name" : "enableIntersectionTypeHint",
+    "description" : "enableIntersectionTypeHint"
   }, {
     "name" : "enableStaticTypeHint",
     "description" : "enableStaticTypeHint"
@@ -2980,8 +3336,8 @@
     "name" : "enableMixedTypeHint",
     "description" : "enableMixedTypeHint"
   }, {
-    "name" : "enableUnionTypeHint",
-    "description" : "enableUnionTypeHint"
+    "name" : "enableNeverTypeHint",
+    "description" : "enableNeverTypeHint"
   } ]
 }, {
   "patternId" : "SlevomatCodingStandard_TypeHints_ReturnTypeHintSpacing",
@@ -3013,6 +3369,10 @@
 }, {
   "patternId" : "SlevomatCodingStandard_Variables_DisallowSuperGlobalVariable",
   "title" : "Variables: Disallow Super Global Variable",
+  "parameters" : [ ]
+}, {
+  "patternId" : "SlevomatCodingStandard_Variables_DisallowVariableVariable",
+  "title" : "Variables: Disallow Variable Variable",
   "parameters" : [ ]
 }, {
   "patternId" : "SlevomatCodingStandard_Variables_DuplicateAssignmentToVariable",
@@ -3651,10 +4011,6 @@
   "title" : "Classes: Restricted Extend Classes",
   "parameters" : [ ]
 }, {
-  "patternId" : "WordPressVIPMinimum_Compatibility_Zoninator",
-  "title" : "Compatibility: Zoninator",
-  "parameters" : [ ]
-}, {
   "patternId" : "WordPressVIPMinimum_Constants_ConstantString",
   "title" : "Constants: Constant String",
   "parameters" : [ ]
@@ -3721,10 +4077,6 @@
 }, {
   "patternId" : "WordPressVIPMinimum_JS_Window",
   "title" : "JS: Window",
-  "parameters" : [ ]
-}, {
-  "patternId" : "WordPressVIPMinimum_Performance_BatcacheWhitelistedParams",
-  "title" : "Performance: Batcache Whitelisted Params",
   "parameters" : [ ]
 }, {
   "patternId" : "WordPressVIPMinimum_Performance_CacheValueOverride",
@@ -3814,10 +4166,6 @@
   "title" : "Variables: Server Variables",
   "parameters" : [ ]
 }, {
-  "patternId" : "WordPressVIPMinimum_Variables_VariableAnalysis",
-  "title" : "Variables: Variable Analysis (Deprecated)",
-  "parameters" : [ ]
-}, {
   "patternId" : "WordPress_Arrays_ArrayDeclarationSpacing",
   "title" : "Arrays: Array Declaration Spacing",
   "parameters" : [ {
@@ -3836,10 +4184,6 @@
   "title" : "Arrays: Array Key Spacing Restrictions",
   "parameters" : [ ]
 }, {
-  "patternId" : "WordPress_Arrays_CommaAfterArrayItem",
-  "title" : "Arrays: Comma After Array Item",
-  "parameters" : [ ]
-}, {
   "patternId" : "WordPress_Arrays_MultipleStatementAlignment",
   "title" : "Arrays: Multiple Statement Alignment",
   "parameters" : [ {
@@ -3856,16 +4200,8 @@
     "description" : "alignMultilineItems"
   } ]
 }, {
-  "patternId" : "WordPress_Classes_ClassInstantiation",
-  "title" : "Classes: Class Instantiation",
-  "parameters" : [ ]
-}, {
-  "patternId" : "WordPress_CodeAnalysis_AssignmentInCondition",
-  "title" : "Code Analysis: Assignment In Condition",
-  "parameters" : [ ]
-}, {
-  "patternId" : "WordPress_CodeAnalysis_EmptyStatement",
-  "title" : "Code Analysis: Empty Statement",
+  "patternId" : "WordPress_CodeAnalysis_AssignmentInTernaryCondition",
+  "title" : "Code Analysis: Assignment In Ternary Condition",
   "parameters" : [ ]
 }, {
   "patternId" : "WordPress_CodeAnalysis_EscapedNotTranslated",
@@ -3916,10 +4252,7 @@
 }, {
   "patternId" : "WordPress_NamingConventions_PrefixAllGlobals",
   "title" : "Naming Conventions: Prefix All Globals (Deprecated)",
-  "parameters" : [ {
-    "name" : "prefixes",
-    "description" : "prefixes"
-  } ]
+  "parameters" : [ ]
 }, {
   "patternId" : "WordPress_NamingConventions_ValidFunctionName",
   "title" : "Naming Conventions: Valid Function Name (Deprecated)",
@@ -3944,10 +4277,6 @@
   "title" : "PHP: Development Functions",
   "parameters" : [ ]
 }, {
-  "patternId" : "WordPress_PHP_DisallowShortTernary",
-  "title" : "PHP: Disallow Short Ternary",
-  "parameters" : [ ]
-}, {
   "patternId" : "WordPress_PHP_DiscouragedPHPFunctions",
   "title" : "PHP: Discouraged PHP Functions",
   "parameters" : [ ]
@@ -3966,8 +4295,8 @@
     "name" : "context_length",
     "description" : "context_length"
   }, {
-    "name" : "use_default_whitelist",
-    "description" : "use_default_whitelist"
+    "name" : "usePHPFunctionsList",
+    "description" : "usePHPFunctionsList"
   } ]
 }, {
   "patternId" : "WordPress_PHP_POSIXFunctions",
@@ -3980,10 +4309,6 @@
 }, {
   "patternId" : "WordPress_PHP_RestrictedPHPFunctions",
   "title" : "PHP: Restricted PHP Functions",
-  "parameters" : [ ]
-}, {
-  "patternId" : "WordPress_PHP_StrictComparisons",
-  "title" : "PHP: Strict Comparisons",
   "parameters" : [ ]
 }, {
   "patternId" : "WordPress_PHP_StrictInArray",
@@ -4032,8 +4357,16 @@
   "title" : "WP: Alternative Functions",
   "parameters" : [ ]
 }, {
+  "patternId" : "WordPress_WP_Capabilities",
+  "title" : "WP: Capabilities",
+  "parameters" : [ ]
+}, {
   "patternId" : "WordPress_WP_CapitalPDangit",
   "title" : "WP: Capital P Dangit",
+  "parameters" : [ ]
+}, {
+  "patternId" : "WordPress_WP_ClassNameCase",
+  "title" : "WP: Class Name Case",
   "parameters" : [ ]
 }, {
   "patternId" : "WordPress_WP_CronInterval",
@@ -4084,10 +4417,7 @@
 }, {
   "patternId" : "WordPress_WP_I18n",
   "title" : "WP: I18n",
-  "parameters" : [ {
-    "name" : "check_translator_comments",
-    "description" : "check_translator_comments"
-  } ]
+  "parameters" : [ ]
 }, {
   "patternId" : "WordPress_WP_PostsPerPage",
   "title" : "WP: Posts Per Page",
@@ -4095,10 +4425,6 @@
     "name" : "posts_per_page",
     "description" : "posts_per_page"
   } ]
-}, {
-  "patternId" : "WordPress_WP_TimezoneChange",
-  "title" : "WP: Timezone Change (Deprecated)",
-  "parameters" : [ ]
 }, {
   "patternId" : "WordPress_WhiteSpace_CastStructureSpacing",
   "title" : "White Space: Cast Structure Spacing",
@@ -4115,13 +4441,10 @@
   }, {
     "name" : "space_before_colon",
     "description" : "space_before_colon"
-  }, {
-    "name" : "spaces_before_closure_open_paren",
-    "description" : "spaces_before_closure_open_paren"
   } ]
 }, {
-  "patternId" : "WordPress_WhiteSpace_DisallowInlineTabs",
-  "title" : "White Space: Disallow Inline Tabs",
+  "patternId" : "WordPress_WhiteSpace_ObjectOperatorSpacing",
+  "title" : "White Space: Object Operator Spacing",
   "parameters" : [ ]
 }, {
   "patternId" : "WordPress_WhiteSpace_OperatorSpacing",
@@ -4130,10 +4453,6 @@
     "name" : "ignoreNewlines",
     "description" : "ignoreNewlines"
   } ]
-}, {
-  "patternId" : "WordPress_WhiteSpace_PrecisionAlignment",
-  "title" : "White Space: Precision Alignment",
-  "parameters" : [ ]
 }, {
   "patternId" : "Zend_Debug_CodeAnalyzer",
   "title" : "Zend Code Analyzer",

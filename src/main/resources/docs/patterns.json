@@ -43,7 +43,10 @@
     "patternId" : "Drupal_Classes_ClassDeclaration",
     "level" : "Info",
     "category" : "CodeStyle",
-    "parameters" : [ ],
+    "parameters" : [ {
+      "name" : "indent",
+      "default" : 2
+    } ],
     "languages" : [ ],
     "enabled" : false
   }, {
@@ -125,6 +128,13 @@
     "enabled" : false
   }, {
     "patternId" : "Drupal_Commenting_DocCommentAlignment",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Drupal_Commenting_DocCommentLongArraySyntax",
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ ],
@@ -312,6 +322,13 @@
     "enabled" : false
   }, {
     "patternId" : "Drupal_InfoFiles_ClassFiles",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Drupal_InfoFiles_DependenciesArray",
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ ],
@@ -1415,6 +1432,20 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "Magento2_Annotation_MethodAnnotationStructure",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Annotation_MethodArguments",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "Magento2_Classes_AbstractApi",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -1437,6 +1468,13 @@
     "enabled" : false
   }, {
     "patternId" : "Magento2_Commenting_ClassAndInterfacePHPDocFormatting",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Commenting_ClassPropertyPHPDocFormatting",
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ ],
@@ -1478,6 +1516,13 @@
       "name" : "error",
       "default" : false
     } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Functions_FunctionsDeprecatedWithoutArgument",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
   }, {
@@ -1530,7 +1575,286 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "Magento2_Html_HtmlBinding",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Html_HtmlClosingVoidTags",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Html_HtmlCollapsibleAttribute",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Html_HtmlDirective",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Html_HtmlSelfClosingTags",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Legacy_AbstractBlock",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Legacy_ClassReferencesInConfigurationFiles",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Legacy_DiConfig",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Legacy_EmailTemplate",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Legacy_InstallUpgrade",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Legacy_Layout",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "Magento2_Legacy_MageEntity",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Legacy_ModuleXML",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Legacy_ObsoleteAcl",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Legacy_ObsoleteConfigNodes",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Legacy_ObsoleteConnection",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Legacy_ObsoleteMenu",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Legacy_ObsoleteSystemConfiguration",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Legacy_PhtmlTemplate",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Legacy_RestrictedCode",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Legacy_TableName",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Legacy_WidgetXML",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Less_AvoidId",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Less_BracesFormatting",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Less_ClassNaming",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Less_ColonSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Less_ColourDefinition",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Less_CombinatorIndentation",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Less_CommentLevels",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Less_ImportantProperty",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Less_Indentation",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "indent",
+      "default" : 4
+    }, {
+      "name" : "maxIndentLevel",
+      "default" : 3
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Less_PropertiesLineBreak",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Less_PropertiesSorting",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Less_Quotes",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Less_SelectorDelimiter",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Less_SemicolonSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Less_TypeSelectorConcatenation",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Less_TypeSelectors",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Less_Variables",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_Less_ZeroUnits",
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ ],
@@ -1559,6 +1883,20 @@
     "enabled" : false
   }, {
     "patternId" : "Magento2_NamingConvention_ReservedWords",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_PHP_ArrayAutovivification",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2_PHP_AutogeneratedClassNotInConstructor",
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ ],
@@ -3275,7 +3613,28 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "SlevomatCodingStandard_Arrays_AlphabeticallySortedByKeys",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "SlevomatCodingStandard_Arrays_ArrayAccess",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "SlevomatCodingStandard_Arrays_DisallowImplicitArrayCreation",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "SlevomatCodingStandard_Arrays_DisallowPartiallyKeyed",
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ ],
@@ -3312,11 +3671,84 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "SlevomatCodingStandard_Attributes_AttributeAndTargetSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "linesCount",
+      "default" : 0
+    }, {
+      "name" : "allowOnSameLine",
+      "default" : false
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "SlevomatCodingStandard_Attributes_AttributesOrder",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "orderAlphabetically",
+      "default" : false
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "SlevomatCodingStandard_Attributes_DisallowAttributesJoining",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "SlevomatCodingStandard_Attributes_DisallowMultipleAttributesPerLine",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "SlevomatCodingStandard_Attributes_RequireAttributeAfterDocComment",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "SlevomatCodingStandard_Classes_BackedEnumTypeSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "spacesCountBeforeColon",
+      "default" : 0
+    }, {
+      "name" : "spacesCountBeforeType",
+      "default" : 1
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "SlevomatCodingStandard_Classes_ClassConstantVisibility",
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "fixable",
+      "default" : false
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "SlevomatCodingStandard_Classes_ClassLength",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "maxLinesLength",
+      "default" : 250
+    }, {
+      "name" : "includeComments",
+      "default" : false
+    }, {
+      "name" : "includeWhitespace",
       "default" : false
     } ],
     "languages" : [ ],
@@ -3335,10 +3767,7 @@
     "patternId" : "SlevomatCodingStandard_Classes_ClassStructure",
     "level" : "Info",
     "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "enableFinalMethods",
-      "default" : false
-    } ],
+    "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
   }, {
@@ -3377,6 +3806,13 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "SlevomatCodingStandard_Classes_DisallowStringExpressionPropertyFetch",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "SlevomatCodingStandard_Classes_EmptyLinesAroundClassBraces",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -3390,10 +3826,20 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "SlevomatCodingStandard_Classes_ForbiddenPublicProperty",
+    "patternId" : "SlevomatCodingStandard_Classes_EnumCaseSpacing",
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "SlevomatCodingStandard_Classes_ForbiddenPublicProperty",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "checkPromoted",
+      "default" : false
+    } ],
     "languages" : [ ],
     "enabled" : false
   }, {
@@ -3439,6 +3885,19 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "SlevomatCodingStandard_Classes_PropertyDeclaration",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "checkPromoted",
+      "default" : false
+    }, {
+      "name" : "enableMultipleSpacesBetweenModifiersCheck",
+      "default" : false
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "SlevomatCodingStandard_Classes_PropertySpacing",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -3468,8 +3927,18 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "minLineLength",
-      "default" : 121
+      "default" : null
+    }, {
+      "name" : "minParametersCount",
+      "default" : null
     } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "SlevomatCodingStandard_Classes_RequireSelfReference",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
   }, {
@@ -3548,6 +4017,13 @@
     "enabled" : false
   }, {
     "patternId" : "SlevomatCodingStandard_Classes_UselessLateStaticBinding",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "SlevomatCodingStandard_Commenting_AnnotationName",
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ ],
@@ -3659,6 +4135,22 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "SlevomatCodingStandard_Complexity_Cognitive",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "maxComplexity",
+      "default" : null
+    }, {
+      "name" : "warningThreshold",
+      "default" : 6
+    }, {
+      "name" : "errorThreshold",
+      "default" : 6
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "SlevomatCodingStandard_ControlStructures_AssignmentInCondition",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -3716,6 +4208,13 @@
       "name" : "fixable",
       "default" : true
     } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "SlevomatCodingStandard_ControlStructures_DisallowTrailingMultiLineTernaryOperator",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
   }, {
@@ -3937,6 +4436,22 @@
     "parameters" : [ {
       "name" : "enable",
       "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "SlevomatCodingStandard_Files_FileLength",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "maxLinesLength",
+      "default" : 250
+    }, {
+      "name" : "includeComments",
+      "default" : false
+    }, {
+      "name" : "includeWhitespace",
+      "default" : false
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -4455,7 +4970,13 @@
     "patternId" : "SlevomatCodingStandard_PHP_RequireExplicitAssertion",
     "level" : "Info",
     "category" : "CodeStyle",
-    "parameters" : [ ],
+    "parameters" : [ {
+      "name" : "enableIntegerRanges",
+      "default" : false
+    }, {
+      "name" : "enableAdvancedStringTypes",
+      "default" : false
+    } ],
     "languages" : [ ],
     "enabled" : false
   }, {
@@ -4494,6 +5015,22 @@
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "SlevomatCodingStandard_Strings_DisallowVariableParsing",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "disallowDollarCurlySyntax",
+      "default" : true
+    }, {
+      "name" : "disallowCurlyDollarSyntax",
+      "default" : false
+    }, {
+      "name" : "disallowSimpleSyntax",
+      "default" : false
+    } ],
     "languages" : [ ],
     "enabled" : false
   }, {
@@ -4555,13 +5092,19 @@
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
-      "name" : "enableObjectTypeHint",
-      "default" : null
-    }, {
       "name" : "enableMixedTypeHint",
       "default" : null
     }, {
+      "name" : "enableIntersectionTypeHint",
+      "default" : null
+    }, {
       "name" : "enableUnionTypeHint",
+      "default" : null
+    }, {
+      "name" : "enableStandaloneNullTrueFalseTypeHints",
+      "default" : null
+    }, {
+      "name" : "enableObjectTypeHint",
       "default" : null
     } ],
     "languages" : [ ],
@@ -4584,16 +5127,15 @@
       "name" : "enableMixedTypeHint",
       "default" : null
     }, {
+      "name" : "enableIntersectionTypeHint",
+      "default" : null
+    }, {
+      "name" : "enableStandaloneNullTrueFalseTypeHints",
+      "default" : null
+    }, {
       "name" : "enableUnionTypeHint",
       "default" : null
     } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "SlevomatCodingStandard_TypeHints_PropertyTypeHintSpacing",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
   }, {
@@ -4601,16 +5143,25 @@
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
-      "name" : "enableObjectTypeHint",
-      "default" : null
-    }, {
-      "name" : "enableStaticTypeHint",
+      "name" : "enableNeverTypeHint",
       "default" : null
     }, {
       "name" : "enableMixedTypeHint",
       "default" : null
     }, {
+      "name" : "enableIntersectionTypeHint",
+      "default" : null
+    }, {
       "name" : "enableUnionTypeHint",
+      "default" : null
+    }, {
+      "name" : "enableStaticTypeHint",
+      "default" : null
+    }, {
+      "name" : "enableStandaloneNullTrueFalseTypeHints",
+      "default" : null
+    }, {
+      "name" : "enableObjectTypeHint",
       "default" : null
     } ],
     "languages" : [ ],
@@ -4653,6 +5204,13 @@
     "enabled" : false
   }, {
     "patternId" : "SlevomatCodingStandard_Variables_DisallowSuperGlobalVariable",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "SlevomatCodingStandard_Variables_DisallowVariableVariable",
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ ],
@@ -5664,13 +6222,6 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "WordPressVIPMinimum_Compatibility_Zoninator",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "WordPressVIPMinimum_Constants_ConstantString",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -5784,13 +6335,6 @@
     "enabled" : false
   }, {
     "patternId" : "WordPressVIPMinimum_JS_Window",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "WordPressVIPMinimum_Performance_BatcacheWhitelistedParams",
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ ],
@@ -5947,13 +6491,6 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "WordPressVIPMinimum_Variables_VariableAnalysis",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "WordPress_Arrays_ArrayDeclarationSpacing",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -5981,13 +6518,6 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "WordPress_Arrays_CommaAfterArrayItem",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "WordPress_Arrays_MultipleStatementAlignment",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -6007,21 +6537,7 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "WordPress_Classes_ClassInstantiation",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "WordPress_CodeAnalysis_AssignmentInCondition",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "WordPress_CodeAnalysis_EmptyStatement",
+    "patternId" : "WordPress_CodeAnalysis_AssignmentInTernaryCondition",
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ ],
@@ -6108,10 +6624,7 @@
     "patternId" : "WordPress_NamingConventions_PrefixAllGlobals",
     "level" : "Info",
     "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "prefixes",
-      "default" : "''"
-    } ],
+    "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
   }, {
@@ -6153,13 +6666,6 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "WordPress_PHP_DisallowShortTernary",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "WordPress_PHP_DiscouragedPHPFunctions",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -6188,7 +6694,7 @@
       "name" : "context_length",
       "default" : 6
     }, {
-      "name" : "use_default_whitelist",
+      "name" : "usePHPFunctionsList",
       "default" : true
     } ],
     "languages" : [ ],
@@ -6209,13 +6715,6 @@
     "enabled" : false
   }, {
     "patternId" : "WordPress_PHP_RestrictedPHPFunctions",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "WordPress_PHP_StrictComparisons",
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ ],
@@ -6302,7 +6801,21 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "WordPress_WP_Capabilities",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "WordPress_WP_CapitalPDangit",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "WordPress_WP_ClassNameCase",
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ ],
@@ -6388,10 +6901,7 @@
     "patternId" : "WordPress_WP_I18n",
     "level" : "Info",
     "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "check_translator_comments",
-      "default" : true
-    } ],
+    "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
   }, {
@@ -6402,13 +6912,6 @@
       "name" : "posts_per_page",
       "default" : 100
     } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "WordPress_WP_TimezoneChange",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
   }, {
@@ -6431,14 +6934,11 @@
     }, {
       "name" : "space_before_colon",
       "default" : "'required'"
-    }, {
-      "name" : "spaces_before_closure_open_paren",
-      "default" : -1
     } ],
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "WordPress_WhiteSpace_DisallowInlineTabs",
+    "patternId" : "WordPress_WhiteSpace_ObjectOperatorSpacing",
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ ],
@@ -6452,13 +6952,6 @@
       "name" : "ignoreNewlines",
       "default" : true
     } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "WordPress_WhiteSpace_PrecisionAlignment",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
   }, {

@@ -1,3 +1,1 @@
-# SlevomatCodingStandard_Classes_DisallowLateStaticBindingForConstants
-
-Disallows late static binding for constants.
+Classes: Disallow Late Static Binding For Constants

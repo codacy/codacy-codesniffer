@@ -1,3 +1,1 @@
-# SlevomatCodingStandard_TypeHints_DisallowMixedTypeHint
-
-Disallows usage of "mixed" type hint in phpDocs.
+Type Hints: Disallow Mixed Type Hint

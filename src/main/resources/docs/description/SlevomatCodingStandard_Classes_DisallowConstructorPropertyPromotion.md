@@ -1,3 +1,1 @@
-# SlevomatCodingStandard_Classes_DisallowConstructorPropertyPromotion
-
-Disallows usage of constructor property promotion.
+Classes: Disallow Constructor Property Promotion

@@ -1,3 +1,1 @@
-# SlevomatCodingStandard_Commenting_DisallowCommentAfterCode
-
-Disallows comments after code at the same line.
+Commenting: Disallow Comment After Code
