@@ -1,3 +1,1 @@
-# SlevomatCodingStandard_Operators_DisallowEqualOperators
-
-Disallows using loose `==` and `!=` comparison operators. Use `===` and `!==` instead, they are much more secure and predictable.
+Operators: Disallow Equal Operators

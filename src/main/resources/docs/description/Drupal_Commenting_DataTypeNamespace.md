@@ -1,1 +1,1 @@
-Checks that data types in param, return, var, and throws tags are fully namespaced.
+Commenting: Data Type Namespace

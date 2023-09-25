@@ -1,3 +1,1 @@
-# SlevomatCodingStandard_Arrays_DisallowImplicitArrayCreation
-
-Disallows implicit array creation.
+Arrays: Disallow Implicit Array Creation

@@ -1,2 +1,1 @@
-Restricts usage of rewrite rules flushing
-@package VIPCS\WordPressVIPMinimum
+Performance: Fetching Remote Data

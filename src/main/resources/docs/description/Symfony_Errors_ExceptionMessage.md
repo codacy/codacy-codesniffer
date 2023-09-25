@@ -1,1 +1,1 @@
-Checks whether functions are defined on one line.
+Errors: Exception Message

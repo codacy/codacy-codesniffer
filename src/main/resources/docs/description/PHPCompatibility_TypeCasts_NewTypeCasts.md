@@ -1,2 +1,1 @@
-Detect use of newly introduced type casts.
-PHP version All
+PHP Compatibility related issue (Type Casts): New Type Casts

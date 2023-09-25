@@ -1,3 +1,1 @@
-# SlevomatCodingStandard_PHP_DisallowDirectMagicInvokeCall
-
-Disallows direct call of `__invoke()`.
+PHP: Disallow Direct Magic Invoke Call

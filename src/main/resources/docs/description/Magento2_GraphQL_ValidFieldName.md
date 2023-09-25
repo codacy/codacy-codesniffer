@@ -1,1 +1,1 @@
-Detects field names the are not specified in <kbd>snake_case</kbd>.
+Graph QL: Valid Field Name

@@ -1,3 +1,1 @@
-# SlevomatCodingStandard_Variables_DuplicateAssignmentToVariable
-
-Looks for duplicate assignments to a variable.
+Variables: Duplicate Assignment To Variable

@@ -1,0 +1,1 @@
+WP: Class Name Case

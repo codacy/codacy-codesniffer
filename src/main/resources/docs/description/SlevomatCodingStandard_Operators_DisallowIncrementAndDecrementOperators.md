@@ -1,3 +1,1 @@
-# SlevomatCodingStandard_Operators_DisallowIncrementAndDecrementOperators
-
-Disallows using `++` and `--` operators.
+Operators: Disallow Increment And Decrement Operators

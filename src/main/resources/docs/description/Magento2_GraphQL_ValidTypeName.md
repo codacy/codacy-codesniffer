@@ -1,1 +1,1 @@
-Detects types (<kbd>type</kbd>, <kbd>interface</kbd> and <kbd>enum</kbd>) that are not specified in <kbd>UpperCamelCase</kbd>.
+Graph QL: Valid Type Name

@@ -1,1 +1,1 @@
-Class DateTimeSniff Detects overcomplicated Date/Time handling.
+Stdlib: Date Time

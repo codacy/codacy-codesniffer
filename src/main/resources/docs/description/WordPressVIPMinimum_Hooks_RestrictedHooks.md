@@ -1,1 +1,1 @@
-This sniff restricts usage of some action and filter hooks.
+Hooks: Restricted Hooks

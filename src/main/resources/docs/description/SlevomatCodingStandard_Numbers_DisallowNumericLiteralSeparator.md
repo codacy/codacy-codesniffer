@@ -1,3 +1,1 @@
-# SlevomatCodingStandard_Numbers_DisallowNumericLiteralSeparator
-
-Disallows numeric literal separators.
+Numbers: Disallow Numeric Literal Separator

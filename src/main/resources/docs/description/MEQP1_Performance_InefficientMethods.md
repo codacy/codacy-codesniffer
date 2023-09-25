@@ -1,1 +1,1 @@
-Class InefficientMethodsSniff Detects use of inefficient methods.
+Performance: Inefficient Methods

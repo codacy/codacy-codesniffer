@@ -1,3 +1,1 @@
-# SlevomatCodingStandard_Classes_DisallowMultiPropertyDefinition
-
-Disallows multi property definition.
+Classes: Disallow Multi Property Definition

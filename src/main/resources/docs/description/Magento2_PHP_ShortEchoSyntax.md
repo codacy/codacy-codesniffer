@@ -1,1 +1,1 @@
-Validate short echo syntax is used.
+PHP: Short Echo Syntax

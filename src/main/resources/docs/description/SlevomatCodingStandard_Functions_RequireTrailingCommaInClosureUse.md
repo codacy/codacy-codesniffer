@@ -1,0 +1,1 @@
+Functions: Require Trailing Comma In Closure Use

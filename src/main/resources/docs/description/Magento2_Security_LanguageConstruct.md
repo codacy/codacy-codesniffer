@@ -1,1 +1,1 @@
-Detects possible usage of discouraged language constructs.
+Security: Language Construct

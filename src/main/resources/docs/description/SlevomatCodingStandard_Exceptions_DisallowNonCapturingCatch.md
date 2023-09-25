@@ -1,0 +1,1 @@
+Exceptions: Disallow Non Capturing Catch

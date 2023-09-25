@@ -1,3 +1,1 @@
-# SlevomatCodingStandard_PHP_UselessSemicolon
-
-Looks for useless semicolons.
+PHP: Useless Semicolon

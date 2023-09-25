@@ -1,3 +1,1 @@
-# SlevomatCodingStandard_Functions_UnusedParameter
-
-Looks for unused parameters.
+Functions: Unused Parameter

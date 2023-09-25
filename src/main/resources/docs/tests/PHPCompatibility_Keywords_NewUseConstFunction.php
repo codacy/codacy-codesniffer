@@ -67,13 +67,3 @@ trait Foobar {
 trait Foobar {
     use function Baz;
 }
-
-/*
- * Incorrect use, but covered by ForbiddenNames sniff, should not be reported here.
- */
- //#Warn: PHPCompatibility_Keywords_ForbiddenNames
-use const as Baz;
-//#Warn: PHPCompatibility_Keywords_ForbiddenNames
-use function as Baz;
-//#Warn: PHPCompatibility_Keywords_ForbiddenNames
-use const, function, somethingElse;

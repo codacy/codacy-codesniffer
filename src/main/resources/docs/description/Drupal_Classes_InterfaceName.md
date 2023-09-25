@@ -1,1 +1,1 @@
-Checks that interface names end with "Interface".
+Classes: Interface Name

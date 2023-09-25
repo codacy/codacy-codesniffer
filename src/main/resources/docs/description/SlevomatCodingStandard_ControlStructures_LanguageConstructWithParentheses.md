@@ -1,3 +1,1 @@
-# SlevomatCodingStandard_ControlStructures_LanguageConstructWithParentheses
-
-`LanguageConstructWithParenthesesSniff` checks and fixes language construct used with parentheses.
+Control Structures: Language Construct With Parentheses

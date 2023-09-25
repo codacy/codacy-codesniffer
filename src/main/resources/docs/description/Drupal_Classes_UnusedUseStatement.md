@@ -1,1 +1,1 @@
-Checks for "use" statements that are not needed in a file.
+Classes: Unused Use Statement

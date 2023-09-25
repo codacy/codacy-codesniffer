@@ -1,3 +1,1 @@
-# SlevomatCodingStandard_Classes_DisallowMultiConstantDefinition
-
-Disallows multi constant definition.
+Classes: Disallow Multi Constant Definition
