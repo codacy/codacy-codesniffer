@@ -1,4 +1,4 @@
-FROM php:8.2-alpine
+FROM php:8.3-rc-alpine
 
 WORKDIR /opt/docker/app
 
