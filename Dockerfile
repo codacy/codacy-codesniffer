@@ -13,7 +13,6 @@ RUN apk --no-cache add curl git php82 php82-openssl php82-phar php82-simplexml \
     ln -s /etc/php82/php.ini /etc/php82/conf.d/php.ini && sed 's/.*short_open_tag.*=.*/short_open_tag=On/' /etc/php82/php.ini -i && \
     curl -sS https://getcomposer.org/installer | php82 && \
     mkdir -p /opt/docker/app/.composer && \
-    ln -s /usr/bin/php82 /usr/bin/php && \
     php composer.phar global install && \
     ln -s ${COMPOSER_HOME}/vendor/bin/phpcs /usr/bin/phpcs && \
     php composer.phar global require dealerdirect/phpcodesniffer-composer-installer && \
