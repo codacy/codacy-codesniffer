@@ -13,7 +13,8 @@
         "automattic/vipwpcs": "3.0.0",
         "escapestudios/symfony2-coding-standard": "^3.13.0",
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
-        "symfony/flex": "v2.2.2"
+        "symfony/flex": "v2.2.2",
+        "doctrine/coding-standard": "^12.0"
     },
     "repositories": [
         {
@@ -27,8 +28,5 @@
             "symfony/flex": true,
             "phpdocumentor/unified-asset-installer": true
         }
-    },
-    "require-dev": {
-        "doctrine/coding-standard": "^12.0"
     }
 }
