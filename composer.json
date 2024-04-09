@@ -27,5 +27,8 @@
             "symfony/flex": true,
             "phpdocumentor/unified-asset-installer": true
         }
+    },
+    "require-dev": {
+        "doctrine/coding-standard": "^12.0"
     }
 }
