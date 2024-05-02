@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9d5b46b9188c0fdb4b7a8743feaa33de",
+    "content-hash": "9bce7cfe1a0f32e8b65e668525924c87",
     "packages": [
         {
             "name": "automattic/vipwpcs",
@@ -1429,33 +1429,34 @@
         },
         {
             "name": "vaimo/phpcs-rulesets",
-            "version": "1.3.0",
+            "version": "dev-codacy",
             "source": {
                 "type": "git",
                 "url": "https://bitbucket.org/vaimo/phpcs-rulesets.git",
-                "reference": "745f2a7622ecf2e011912a556397fa3e6a2157b0"
+                "reference": "a419bea54e2dc52f29ec38f74ebef82c36cdc37e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://bitbucket.org/vaimo/phpcs-rulesets/get/745f2a7622ecf2e011912a556397fa3e6a2157b0.zip",
-                "reference": "745f2a7622ecf2e011912a556397fa3e6a2157b0",
+                "url": "https://bitbucket.org/vaimo/phpcs-rulesets/get/a419bea54e2dc52f29ec38f74ebef82c36cdc37e.zip",
+                "reference": "a419bea54e2dc52f29ec38f74ebef82c36cdc37e",
                 "shasum": ""
             },
             "require": {
-                "doctrine/coding-standard": "~9.0",
-                "magento/magento-coding-standard": ">=6 <32@stable",
+                "doctrine/coding-standard": ">=9.0,<=12.0",
+                "magento/magento-coding-standard": ">=6,<=33",
                 "php": "~7.4 | ~8.1",
-                "phpstan/phpdoc-parser": "~1.5.1",
-                "slevomat/coding-standard": "~7.0",
-                "squizlabs/php_codesniffer": "^3.6.2"
+                "phpstan/phpdoc-parser": ">=1.5.1,<=1.28.0",
+                "slevomat/coding-standard": ">=7.0,<=8.15.0",
+                "squizlabs/php_codesniffer": "^3.9.2"
             },
             "require-dev": {
                 "captainhook/captainhook": "^5.10",
                 "captainhook/plugin-composer": "^5.3",
                 "ext-json": "*",
                 "ext-simplexml": "*",
+                "phpcsstandards/phpcsextra": "~1.2",
                 "phpunit/phpunit": "~9.5",
-                "rector/rector": "^0.15.10",
+                "rector/rector": "^0.17",
                 "vaimo/composer-changelogs": "~1.0"
             },
             "suggest": {
@@ -1491,10 +1492,10 @@
             "description": "Vaimo Code Quality phpcs rulesets",
             "homepage": "https://bitbucket.org/vaimo/phpcs-rulesets",
             "support": {
-                "source": "https://bitbucket.org/vaimo/phpcs-rulesets/src/745f2a7622ecf2e011912a556397fa3e6a2157b0/?at=1.3.0",
+                "source": "https://bitbucket.org/vaimo/phpcs-rulesets/src/a419bea54e2dc52f29ec38f74ebef82c36cdc37e/?at=codacy",
                 "issues": "https://bitbucket.org/vaimo/phpcs-rulesets/issues"
             },
-            "time": "2023-11-28T15:58:19+00:00"
+            "time": "2024-05-02T11:40:44+00:00"
         },
         {
             "name": "webonyx/graphql-php",
@@ -1638,34 +1639,11 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [
-        {
-            "package": "doctrine/coding-standard",
-            "version": "12.0.0.0",
-            "alias": "9.0.0",
-            "alias_normalized": "9.0.0.0"
-        },
-        {
-            "package": "magento/magento-coding-standard",
-            "version": "32.0.0.0",
-            "alias": "31.0",
-            "alias_normalized": "31.0.0.0"
-        },
-        {
-            "package": "phpstan/phpdoc-parser",
-            "version": "1.28.0.0",
-            "alias": "1.5.1",
-            "alias_normalized": "1.5.1.0"
-        },
-        {
-            "package": "slevomat/coding-standard",
-            "version": "8.15.0.0",
-            "alias": "7.0",
-            "alias_normalized": "7.0.0.0"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "vaimo/phpcs-rulesets": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

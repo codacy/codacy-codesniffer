@@ -185,6 +185,13 @@
   "title" : "Functions: Function Declaration",
   "parameters" : [ ]
 }, {
+  "patternId" : "Drupal_Functions_MultiLineFunctionDeclaration",
+  "title" : "Functions: Multi Line Function Declaration",
+  "parameters" : [ {
+    "name" : "indent",
+    "description" : "indent"
+  } ]
+}, {
   "patternId" : "Drupal_InfoFiles_AutoAddedKeys",
   "title" : "Info Files: Auto Added Keys",
   "parameters" : [ ]
@@ -275,6 +282,10 @@
 }, {
   "patternId" : "Drupal_Semantics_TInHookSchema",
   "title" : "Semantics: T In Hook Schema",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Drupal_Semantics_UnsilencedDeprecation",
+  "title" : "Semantics: Unsilenced Deprecation",
   "parameters" : [ ]
 }, {
   "patternId" : "Drupal_Strings_UnnecessaryStringConcat",
@@ -1061,6 +1072,10 @@
   "title" : "Legacy: Email Template",
   "parameters" : [ ]
 }, {
+  "patternId" : "Magento2_Legacy_EscapeMethodsOnBlockClass",
+  "title" : "Legacy: Escape Methods On Block Class",
+  "parameters" : [ ]
+}, {
   "patternId" : "Magento2_Legacy_InstallUpgrade",
   "title" : "Legacy: Install Upgrade",
   "parameters" : [ ]
@@ -1477,8 +1492,12 @@
   "description" : "Any scope openers except for switch statements should be indented 1 level.  This includes classes, functions, and control structures.",
   "parameters" : [ ]
 }, {
-  "patternId" : "PHPCompatibility_Classes_ForbiddenAbstractPrivateMethods",
-  "title" : "PHP Compatibility related issue (Classes): Forbidden Abstract Private Methods",
+  "patternId" : "PHPCompatibility_Attributes_NewAttributes",
+  "title" : "PHP Compatibility related issue (Attributes): New Attributes",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_Classes_ForbiddenExtendingFinalPHPClass",
+  "title" : "PHP Compatibility related issue (Classes): Forbidden Extending Final PHP Class",
   "parameters" : [ ]
 }, {
   "patternId" : "PHPCompatibility_Classes_NewAnonymousClasses",
@@ -1493,12 +1512,32 @@
   "title" : "PHP Compatibility related issue (Classes): New Const Visibility",
   "parameters" : [ ]
 }, {
+  "patternId" : "PHPCompatibility_Classes_NewConstructorPropertyPromotion",
+  "title" : "PHP Compatibility related issue (Classes): New Constructor Property Promotion",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_Classes_NewFinalConstants",
+  "title" : "PHP Compatibility related issue (Classes): New Final Constants",
+  "parameters" : [ ]
+}, {
   "patternId" : "PHPCompatibility_Classes_NewLateStaticBinding",
   "title" : "PHP Compatibility related issue (Classes): New Late Static Binding",
   "parameters" : [ ]
 }, {
+  "patternId" : "PHPCompatibility_Classes_NewReadonlyClasses",
+  "title" : "PHP Compatibility related issue (Classes): New Readonly Classes",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_Classes_NewReadonlyProperties",
+  "title" : "PHP Compatibility related issue (Classes): New Readonly Properties",
+  "parameters" : [ ]
+}, {
   "patternId" : "PHPCompatibility_Classes_NewTypedProperties",
   "title" : "PHP Compatibility related issue (Classes): New Typed Properties",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_Classes_RemovedClasses",
+  "title" : "PHP Compatibility related issue (Classes): Removed Classes",
   "parameters" : [ ]
 }, {
   "patternId" : "PHPCompatibility_Classes_RemovedOrphanedParent",
@@ -1507,6 +1546,10 @@
 }, {
   "patternId" : "PHPCompatibility_Constants_NewConstants",
   "title" : "PHP Compatibility related issue (Constants): New Constants",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_Constants_NewConstantsInTraits",
+  "title" : "PHP Compatibility related issue (Constants): New Constants In Traits",
   "parameters" : [ ]
 }, {
   "patternId" : "PHPCompatibility_Constants_NewMagicClassConstant",
@@ -1549,8 +1592,20 @@
   "title" : "PHP Compatibility related issue (Control Structures): New Multi Catch",
   "parameters" : [ ]
 }, {
+  "patternId" : "PHPCompatibility_ControlStructures_NewNonCapturingCatch",
+  "title" : "PHP Compatibility related issue (Control Structures): New Non Capturing Catch",
+  "parameters" : [ ]
+}, {
   "patternId" : "PHPCompatibility_Extensions_RemovedExtensions",
   "title" : "PHP Compatibility related issue (Extensions): Removed Extensions",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_FunctionDeclarations_AbstractPrivateMethods",
+  "title" : "PHP Compatibility related issue (Function Declarations): Abstract Private Methods",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_FunctionDeclarations_ForbiddenFinalPrivateMethods",
+  "title" : "PHP Compatibility related issue (Function Declarations): Forbidden Final Private Methods",
   "parameters" : [ ]
 }, {
   "patternId" : "PHPCompatibility_FunctionDeclarations_ForbiddenParameterShadowSuperGlobals",
@@ -1589,8 +1644,28 @@
   "title" : "PHP Compatibility related issue (Function Declarations): New Return Type Declarations",
   "parameters" : [ ]
 }, {
+  "patternId" : "PHPCompatibility_FunctionDeclarations_NewTrailingComma",
+  "title" : "PHP Compatibility related issue (Function Declarations): New Trailing Comma",
+  "parameters" : [ ]
+}, {
   "patternId" : "PHPCompatibility_FunctionDeclarations_NonStaticMagicMethods",
   "title" : "PHP Compatibility related issue (Function Declarations): Non Static Magic Methods",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_FunctionDeclarations_RemovedCallingDestructAfterConstructorExit",
+  "title" : "PHP Compatibility related issue (Function Declarations): Removed Calling Destruct After Constructor Exit",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_FunctionDeclarations_RemovedImplicitlyNullableParam",
+  "title" : "PHP Compatibility related issue (Function Declarations): Removed Implicitly Nullable Param",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_FunctionDeclarations_RemovedOptionalBeforeRequiredParam",
+  "title" : "PHP Compatibility related issue (Function Declarations): Removed Optional Before Required Param",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_FunctionDeclarations_RemovedReturnByReferenceFromVoid",
+  "title" : "PHP Compatibility related issue (Function Declarations): Removed Return By Reference From Void",
   "parameters" : [ ]
 }, {
   "patternId" : "PHPCompatibility_FunctionNameRestrictions_NewMagicMethods",
@@ -1627,6 +1702,10 @@
 }, {
   "patternId" : "PHPCompatibility_FunctionUse_NewFunctions",
   "title" : "PHP Compatibility related issue (Function Use): New Functions",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_FunctionUse_NewNamedParameters",
+  "title" : "PHP Compatibility related issue (Function Use): New Named Parameters",
   "parameters" : [ ]
 }, {
   "patternId" : "PHPCompatibility_FunctionUse_OptionalToRequiredFunctionParameters",
@@ -1673,6 +1752,14 @@
   "title" : "PHP Compatibility related issue (Initial Value): New Heredoc",
   "parameters" : [ ]
 }, {
+  "patternId" : "PHPCompatibility_InitialValue_NewNewInDefine",
+  "title" : "PHP Compatibility related issue (Initial Value): New New In Define",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_InitialValue_NewNewInInitializers",
+  "title" : "PHP Compatibility related issue (Initial Value): New New In Initializers",
+  "parameters" : [ ]
+}, {
   "patternId" : "PHPCompatibility_Interfaces_InternalInterfaces",
   "title" : "PHP Compatibility related issue (Interfaces): Internal Interfaces",
   "parameters" : [ ]
@@ -1681,20 +1768,16 @@
   "title" : "PHP Compatibility related issue (Interfaces): New Interfaces",
   "parameters" : [ ]
 }, {
+  "patternId" : "PHPCompatibility_Interfaces_RemovedSerializable",
+  "title" : "PHP Compatibility related issue (Interfaces): Removed Serializable",
+  "parameters" : [ ]
+}, {
   "patternId" : "PHPCompatibility_Keywords_CaseSensitiveKeywords",
   "title" : "PHP Compatibility related issue (Keywords): Case Sensitive Keywords",
   "parameters" : [ ]
 }, {
   "patternId" : "PHPCompatibility_Keywords_ForbiddenNames",
   "title" : "PHP Compatibility related issue (Keywords): Forbidden Names",
-  "parameters" : [ ]
-}, {
-  "patternId" : "PHPCompatibility_Keywords_ForbiddenNamesAsDeclared",
-  "title" : "PHP Compatibility related issue (Keywords): Forbidden Names As Declared",
-  "parameters" : [ ]
-}, {
-  "patternId" : "PHPCompatibility_Keywords_ForbiddenNamesAsInvokedFunctions",
-  "title" : "PHP Compatibility related issue (Keywords): Forbidden Names As Invoked Functions",
   "parameters" : [ ]
 }, {
   "patternId" : "PHPCompatibility_Keywords_NewKeywords",
@@ -1745,8 +1828,24 @@
   "title" : "PHP Compatibility related issue (Miscellaneous): Removed Alternative PHP Tags",
   "parameters" : [ ]
 }, {
-  "patternId" : "PHPCompatibility_Miscellaneous_ValidIntegers",
-  "title" : "PHP Compatibility related issue (Miscellaneous): Valid Integers",
+  "patternId" : "PHPCompatibility_Namespaces_ReservedNames",
+  "title" : "PHP Compatibility related issue (Namespaces): Reserved Names",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_Numbers_NewExplicitOctalNotation",
+  "title" : "PHP Compatibility related issue (Numbers): New Explicit Octal Notation",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_Numbers_NewNumericLiteralSeparator",
+  "title" : "PHP Compatibility related issue (Numbers): New Numeric Literal Separator",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_Numbers_RemovedHexadecimalNumericStrings",
+  "title" : "PHP Compatibility related issue (Numbers): Removed Hexadecimal Numeric Strings",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_Numbers_ValidIntegers",
+  "title" : "PHP Compatibility related issue (Numbers): Valid Integers",
   "parameters" : [ ]
 }, {
   "patternId" : "PHPCompatibility_Operators_ChangedConcatOperatorPrecedence",
@@ -1769,16 +1868,40 @@
   "title" : "PHP Compatibility related issue (Operators): Removed Ternary Associativity",
   "parameters" : [ ]
 }, {
+  "patternId" : "PHPCompatibility_ParameterValues_ChangedIntToBoolParamType",
+  "title" : "PHP Compatibility related issue (Parameter Values): Changed Int To Bool Param Type",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_ParameterValues_ChangedObStartEraseFlags",
+  "title" : "PHP Compatibility related issue (Parameter Values): Changed Ob Start Erase Flags",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_ParameterValues_ForbiddenGetClassNoArgsOutsideOO",
+  "title" : "PHP Compatibility related issue (Parameter Values): Forbidden Get Class No Args Outside OO",
+  "parameters" : [ ]
+}, {
   "patternId" : "PHPCompatibility_ParameterValues_ForbiddenGetClassNull",
   "title" : "PHP Compatibility related issue (Parameter Values): Forbidden Get Class Null",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_ParameterValues_ForbiddenSessionModuleNameUser",
+  "title" : "PHP Compatibility related issue (Parameter Values): Forbidden Session Module Name User",
   "parameters" : [ ]
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_ForbiddenStripTagsSelfClosingXHTML",
   "title" : "PHP Compatibility related issue (Parameter Values): Forbidden Strip Tags Self Closing XHTML",
   "parameters" : [ ]
 }, {
+  "patternId" : "PHPCompatibility_ParameterValues_NewArrayMergeRecursiveWithGlobalsVar",
+  "title" : "PHP Compatibility related issue (Parameter Values): New Array Merge Recursive With Globals Var",
+  "parameters" : [ ]
+}, {
   "patternId" : "PHPCompatibility_ParameterValues_NewArrayReduceInitialType",
   "title" : "PHP Compatibility related issue (Parameter Values): New Array Reduce Initial Type",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_ParameterValues_NewAssertCustomException",
+  "title" : "PHP Compatibility related issue (Parameter Values): New Assert Custom Exception",
   "parameters" : [ ]
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_NewFopenModes",
@@ -1787,6 +1910,10 @@
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_NewHTMLEntitiesEncodingDefault",
   "title" : "PHP Compatibility related issue (Parameter Values): New HTML Entities Encoding Default",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_ParameterValues_NewHTMLEntitiesFlagsDefault",
+  "title" : "PHP Compatibility related issue (Parameter Values): New HTML Entities Flags Default",
   "parameters" : [ ]
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_NewHashAlgorithms",
@@ -1803,6 +1930,10 @@
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_NewNegativeStringOffset",
   "title" : "PHP Compatibility related issue (Parameter Values): New Negative String Offset",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_ParameterValues_NewNumberFormatMultibyteSeparators",
+  "title" : "PHP Compatibility related issue (Parameter Values): New Number Format Multibyte Separators",
   "parameters" : [ ]
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_NewPCREModifiers",
@@ -1825,6 +1956,18 @@
   "title" : "PHP Compatibility related issue (Parameter Values): New Strip Tags Allowable Tags Array",
   "parameters" : [ ]
 }, {
+  "patternId" : "PHPCompatibility_ParameterValues_RemovedAssertStringAssertion",
+  "title" : "PHP Compatibility related issue (Parameter Values): Removed Assert String Assertion",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_ParameterValues_RemovedGetClassNoArgs",
+  "title" : "PHP Compatibility related issue (Parameter Values): Removed Get Class No Args",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_ParameterValues_RemovedGetDefinedFunctionsExcludeDisabledFalse",
+  "title" : "PHP Compatibility related issue (Parameter Values): Removed Get Defined Functions Exclude Disabled False",
+  "parameters" : [ ]
+}, {
   "patternId" : "PHPCompatibility_ParameterValues_RemovedHashAlgorithms",
   "title" : "PHP Compatibility related issue (Parameter Values): Removed Hash Algorithms",
   "parameters" : [ ]
@@ -1835,6 +1978,18 @@
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_RemovedImplodeFlexibleParamOrder",
   "title" : "PHP Compatibility related issue (Parameter Values): Removed Implode Flexible Param Order",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_ParameterValues_RemovedLdapConnectSignatures",
+  "title" : "PHP Compatibility related issue (Parameter Values): Removed Ldap Connect Signatures",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_ParameterValues_RemovedMbCheckEncodingNoArgs",
+  "title" : "PHP Compatibility related issue (Parameter Values): Removed Mb Check Encoding No Args",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_ParameterValues_RemovedMbStrimWidthNegativeWidth",
+  "title" : "PHP Compatibility related issue (Parameter Values): Removed Mb Strim Width Negative Width",
   "parameters" : [ ]
 }, {
   "patternId" : "PHPCompatibility_ParameterValues_RemovedMbStrrposEncodingThirdParam",
@@ -1857,6 +2012,14 @@
   "title" : "PHP Compatibility related issue (Parameter Values): Removed Setlocale String",
   "parameters" : [ ]
 }, {
+  "patternId" : "PHPCompatibility_ParameterValues_RemovedSplAutoloadRegisterThrowFalse",
+  "title" : "PHP Compatibility related issue (Parameter Values): Removed Spl Autoload Register Throw False",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_ParameterValues_RemovedVersionCompareOperators",
+  "title" : "PHP Compatibility related issue (Parameter Values): Removed Version Compare Operators",
+  "parameters" : [ ]
+}, {
   "patternId" : "PHPCompatibility_Syntax_ForbiddenCallTimePassByReference",
   "title" : "PHP Compatibility related issue (Syntax): Forbidden Call Time Pass By Reference",
   "parameters" : [ ]
@@ -1877,6 +2040,10 @@
   "title" : "PHP Compatibility related issue (Syntax): New Dynamic Access To Static",
   "parameters" : [ ]
 }, {
+  "patternId" : "PHPCompatibility_Syntax_NewFirstClassCallables",
+  "title" : "PHP Compatibility related issue (Syntax): New First Class Callables",
+  "parameters" : [ ]
+}, {
   "patternId" : "PHPCompatibility_Syntax_NewFlexibleHeredocNowdoc",
   "title" : "PHP Compatibility related issue (Syntax): New Flexible Heredoc Nowdoc",
   "parameters" : [ ]
@@ -1887,6 +2054,18 @@
 }, {
   "patternId" : "PHPCompatibility_Syntax_NewFunctionCallTrailingComma",
   "title" : "PHP Compatibility related issue (Syntax): New Function Call Trailing Comma",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_Syntax_NewInterpolatedStringDereferencing",
+  "title" : "PHP Compatibility related issue (Syntax): New Interpolated String Dereferencing",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_Syntax_NewMagicConstantDereferencing",
+  "title" : "PHP Compatibility related issue (Syntax): New Magic Constant Dereferencing",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_Syntax_NewNestedStaticAccess",
+  "title" : "PHP Compatibility related issue (Syntax): New Nested Static Access",
   "parameters" : [ ]
 }, {
   "patternId" : "PHPCompatibility_Syntax_NewShortArray",
@@ -1905,6 +2084,10 @@
   "title" : "PHP Compatibility related issue (Text Strings): New Unicode Escape Sequence",
   "parameters" : [ ]
 }, {
+  "patternId" : "PHPCompatibility_TextStrings_RemovedDollarBraceStringEmbeds",
+  "title" : "PHP Compatibility related issue (Text Strings): Removed Dollar Brace String Embeds",
+  "parameters" : [ ]
+}, {
   "patternId" : "PHPCompatibility_TypeCasts_NewTypeCasts",
   "title" : "PHP Compatibility related issue (Type Casts): New Type Casts",
   "parameters" : [ ]
@@ -1915,10 +2098,6 @@
 }, {
   "patternId" : "PHPCompatibility_Upgrade_LowPHP",
   "title" : "PHP Compatibility related issue (Upgrade): Low PHP",
-  "parameters" : [ ]
-}, {
-  "patternId" : "PHPCompatibility_Upgrade_LowPHPCS",
-  "title" : "PHP Compatibility related issue (Upgrade): Low PHPCS",
   "parameters" : [ ]
 }, {
   "patternId" : "PHPCompatibility_UseDeclarations_NewGroupUseDeclarations",
@@ -1939,6 +2118,10 @@
 }, {
   "patternId" : "PHPCompatibility_Variables_NewUniformVariableSyntax",
   "title" : "PHP Compatibility related issue (Variables): New Uniform Variable Syntax",
+  "parameters" : [ ]
+}, {
+  "patternId" : "PHPCompatibility_Variables_RemovedIndirectModificationOfGlobals",
+  "title" : "PHP Compatibility related issue (Variables): Removed Indirect Modification Of Globals",
   "parameters" : [ ]
 }, {
   "patternId" : "PHPCompatibility_Variables_RemovedPredefinedGlobalVariables",
@@ -2080,7 +2263,8 @@
   } ]
 }, {
   "patternId" : "PSR2_Files_ClosingTag",
-  "title" : "Files: Closing Tag",
+  "title" : "Closing Tag",
+  "description" : "Checks that the file does not end with a closing tag.",
   "parameters" : [ ]
 }, {
   "patternId" : "PSR2_Files_EndFileNewline",
@@ -2089,14 +2273,16 @@
   "parameters" : [ ]
 }, {
   "patternId" : "PSR2_Methods_FunctionCallSignature",
-  "title" : "Methods: Function Call Signature",
+  "title" : "Function Call Signature",
+  "description" : "Checks that the function call format is correct.",
   "parameters" : [ {
     "name" : "allowMultipleArguments",
     "description" : "allowMultipleArguments"
   } ]
 }, {
   "patternId" : "PSR2_Methods_FunctionClosingBrace",
-  "title" : "Methods: Function Closing Brace",
+  "title" : "Function Closing Brace",
+  "description" : "Checks that the closing brace of a function goes directly after the body.",
   "parameters" : [ ]
 }, {
   "patternId" : "PSR2_Methods_MethodDeclaration",
@@ -2181,12 +2367,12 @@
   "title" : "Security Bad Functions related issue: System Exec Functions",
   "parameters" : [ ]
 }, {
-  "patternId" : "Security_CVE_20132110",
-  "title" : "Security CVE related issue: 20132110",
+  "patternId" : "Security_CVE_CVE20132110",
+  "title" : "Security CVE related issue: CVE20132110",
   "parameters" : [ ]
 }, {
-  "patternId" : "Security_CVE_20134113",
-  "title" : "Security CVE related issue: 20134113",
+  "patternId" : "Security_CVE_CVE20134113",
+  "title" : "Security CVE related issue: CVE20134113",
   "parameters" : [ ]
 }, {
   "patternId" : "Security_Drupal7_AESModule",
@@ -2252,6 +2438,10 @@
 }, {
   "patternId" : "Security_Misc_IncludeMismatch",
   "title" : "Security Misc related issue: Include Mismatch",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Security_Misc_TypeJuggle",
+  "title" : "Security Misc related issue: Type Juggle",
   "parameters" : [ ]
 }, {
   "patternId" : "SlevomatCodingStandard_Arrays_AlphabeticallySortedByKeys",
@@ -2836,10 +3026,6 @@
     "description" : "includeWhitespace"
   } ]
 }, {
-  "patternId" : "SlevomatCodingStandard_Files_FunctionLength",
-  "title" : "Files: Function Length",
-  "parameters" : [ ]
-}, {
   "patternId" : "SlevomatCodingStandard_Files_LineLength",
   "title" : "Files: Line Length",
   "parameters" : [ {
@@ -2918,6 +3104,10 @@
     "name" : "includeWhitespace",
     "description" : "includeWhitespace"
   } ]
+}, {
+  "patternId" : "SlevomatCodingStandard_Functions_NamedArgumentSpacing",
+  "title" : "Functions: Named Argument Spacing",
+  "parameters" : [ ]
 }, {
   "patternId" : "SlevomatCodingStandard_Functions_RequireArrowFunction",
   "title" : "Functions: Require Arrow Function",

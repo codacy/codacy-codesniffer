@@ -29,18 +29,15 @@ You can follow the instructions there to make sure your tool is working as expec
 
 ## Generating the documentation
 
-Requirements:
+Requires `phpdoc`
 
--   phpdoc
+```bash
+wget https://github.com/phpDocumentor/phpDocumentor/releases/download/v3.4.3/phpDocumentor.phar
+sudo mv phpDocumentor.phar /usr/local/bin/phpdoc
+sudo chmod +x /usr/local/bin/phpdoc
+```
 
-    ```bash
-    curl -s http://getcomposer.org/installer | php
-    php composer install
-    composer global require phpdocumentor/phpdocumentor
-    export PATH=$PATH:~/.composer/vendor/bin/
-    ```
-
-Update the versions in `composer.json` and run:
+Update the versions in `composer.json` and run
 
 ```bash
 sbt "runMain codacy.codesniffer.docsgen.GeneratorMain"

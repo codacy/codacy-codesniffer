@@ -1,22 +1,22 @@
 {
   "require": {
     "squizlabs/php_codesniffer": "^3.9.2",
-    "slevomat/coding-standard": "8.15.0 as 7.0",
-    "pheromone/phpcs-security-audit": "*",
-    "magento/magento-coding-standard": "32.0 as 31.0",
-    "wp-coding-standards/wpcs": "*",
-    "phpcompatibility/php-compatibility": "*",
-    "phpcompatibility/phpcompatibility-wp": "*",
-    "phpcompatibility/phpcompatibility-paragonie": "*",
-    "magento/marketplace-eqp": "*",
-    "drupal/coder": "*",
-    "automattic/vipwpcs": "*",
-    "escapestudios/symfony2-coding-standard": "*",
-    "dealerdirect/phpcodesniffer-composer-installer": "*",
-    "symfony/flex": "*",
-    "doctrine/coding-standard": "12.0.0 as 9.0.0",
-    "vaimo/phpcs-rulesets": "1.3.0",
-    "phpstan/phpdoc-parser": "1.28.0 as 1.5.1"
+    "slevomat/coding-standard": "^8.15.0",
+    "pheromone/phpcs-security-audit": "^2.0.1",
+    "magento/magento-coding-standard": "^32.0",
+    "wp-coding-standards/wpcs": "^3.1.0",
+    "phpcompatibility/php-compatibility": "^9.3.5",
+    "phpcompatibility/phpcompatibility-wp": "^2.1.5",
+    "phpcompatibility/phpcompatibility-paragonie": "^1.3.3",
+    "magento/marketplace-eqp": "^4.0.0",
+    "drupal/coder": "^8.3.24",
+    "automattic/vipwpcs": "^3.0.0",
+    "escapestudios/symfony2-coding-standard": "^3.13.0",
+    "dealerdirect/phpcodesniffer-composer-installer": "^1.0.0",
+    "symfony/flex": "^2.4.5",
+    "doctrine/coding-standard": "^12.0.0",
+    "vaimo/phpcs-rulesets": "dev-codacy",
+    "phpstan/phpdoc-parser": "^1.28.0"
   },
   "repositories": [
     {
@@ -27,8 +27,6 @@
       "type": "vcs",
       "url": "https://bitbucket.org/vaimo/phpcs-rulesets.git"
     }
-
-
   ],
   "config": {
     "allow-plugins": {
