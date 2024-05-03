@@ -1,1 +1,3 @@
-PHP: Useless Semicolon
+## PHP: Useless Semicolon
+
+Looks for useless semicolons.

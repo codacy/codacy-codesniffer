@@ -1,1 +1,3 @@
-Control Structures: Disallow Null Safe Object Operator
+## ControlStructures: Disallow Null Safe Object Operator
+
+Disallows using `?->` operator.

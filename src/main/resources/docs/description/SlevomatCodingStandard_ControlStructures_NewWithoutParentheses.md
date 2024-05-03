@@ -1,1 +1,3 @@
-Control Structures: New Without Parentheses
+## ControlStructures: New Without Parentheses
+
+Reports `new` with useless parentheses.

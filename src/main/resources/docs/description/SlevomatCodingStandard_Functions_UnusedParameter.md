@@ -1,1 +1,3 @@
-Functions: Unused Parameter
+## Functions: Unused Parameter
+
+Looks for unused parameters.

@@ -1,1 +1,3 @@
-Arrays: Disallow Implicit Array Creation
+## Arrays: Disallow Implicit Array Creation
+
+Disallows implicit array creation.

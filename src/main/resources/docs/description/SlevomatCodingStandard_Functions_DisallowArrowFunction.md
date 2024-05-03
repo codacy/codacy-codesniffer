@@ -1,1 +1,3 @@
-Functions: Disallow Arrow Function
+## Functions: Disallow Arrow Function
+
+Disallows arrow functions.

@@ -1,1 +1,3 @@
-Commenting: Empty Comment
+## Commenting: Empty Comment
+
+Reports empty comments.

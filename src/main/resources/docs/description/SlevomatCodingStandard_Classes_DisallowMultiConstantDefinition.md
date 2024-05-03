@@ -1,1 +1,3 @@
-Classes: Disallow Multi Constant Definition
+## Classes: Disallow Multi Constant Definition
+
+Disallows multi constant definition.

@@ -11,8 +11,11 @@
 
 .bloop
 .metals
+*metals.sbt
 
 vendor/
+
+.phpdoc/
 
 ###> squizlabs/php_codesniffer ###
 /.phpcs-cache

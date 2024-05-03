@@ -1,1 +1,3 @@
-Numbers: Disallow Numeric Literal Separator
+## Numbers: Disallow Numeric Literal Separator
+
+Disallows numeric literal separators.

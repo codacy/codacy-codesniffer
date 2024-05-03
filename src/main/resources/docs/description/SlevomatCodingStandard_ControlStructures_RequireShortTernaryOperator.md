@@ -1,1 +1,3 @@
-Control Structures: Require Short Ternary Operator
+## ControlStructures: Require Short Ternary Operator
+
+Requires short ternary operator `?:` when possible.

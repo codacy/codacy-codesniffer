@@ -1,1 +1,3 @@
-Control Structures: New With Parentheses
+## ControlStructures: New With Parentheses
+
+Requires `new` with parentheses.

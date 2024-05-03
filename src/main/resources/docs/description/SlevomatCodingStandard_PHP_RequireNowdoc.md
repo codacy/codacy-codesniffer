@@ -1,1 +1,3 @@
-PHP: Require Nowdoc
+## PHP: Require Nowdoc
+
+Requires nowdoc syntax instead of heredoc when possible.

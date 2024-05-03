@@ -1,1 +1,3 @@
-Variables: Useless Variable
+## Variables: Useless Variable
+
+Looks for useless variables.

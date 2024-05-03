@@ -1,1 +1,3 @@
-Classes: Require Self Reference
+## Classes: Require Self Reference
+
+Requires `self` for local reference.

@@ -1,1 +1,3 @@
-Classes: Useless Late Static Binding
+## Classes: Useless Late Static Binding
+
+Reports useless late static binding.

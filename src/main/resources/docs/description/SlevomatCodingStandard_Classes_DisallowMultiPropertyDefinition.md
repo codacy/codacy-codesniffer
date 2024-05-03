@@ -1,1 +1,3 @@
-Classes: Disallow Multi Property Definition
+## Classes: Disallow Multi Property Definition
+
+Disallows multi property definition.

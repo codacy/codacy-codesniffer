@@ -1,1 +1,3 @@
-Control Structures: Disallow Empty
+## ControlStructures: Disallow Empty
+
+Disallows use of `empty()`.
