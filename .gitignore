@@ -25,3 +25,5 @@ vendor/
 ###> phpstan/phpstan ###
 phpstan.neon
 ###< phpstan/phpstan ###
+
+src/main/resources/docs/tests

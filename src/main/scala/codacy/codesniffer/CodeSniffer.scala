@@ -82,14 +82,11 @@ object CodeSniffer extends Tool {
   private[this] def getCommandFor(configFile: Option[Path],
                                   outputFile: Path,
                                   filesToLint: List[String]): List[String] = {
-    /*val configurationFile = configFile.map { config =>
+    val configurationFile = configFile.map { config =>
       s"--standard=$config,${generateCrossCompatibilityAliasesStandard()}"
-    }*/
-    //val standardsString = s"PEAR,PSR1,PSR2,PSR12,Squiz,Zend,WordPress-VIP-Go,WordPressVIPMinimum,Doctrine,Drupal,DrupalPractice,Symfony,Magento2,Magento2Framework,MEQP1,Security,PHPCompatibility,PHPCompatibilityParagonieRandomCompat,PHPCompatibilityParagonieSodiumCompat,PHPCompatibilityWP,Modernize,NormalizedArrays,Universal,PHPCSUtils,VariableAnalysis,SlevomatCodingStandard,Vaimo,WordPress,WordPress-Core,WordPress-Docs,WordPress-Extra,${generateCrossCompatibilityAliasesStandard()}"
-    //val standardsList = standardsString.split(",").toList
+    }
 
-    //List("phpcs", "-d", "memory_limit=-1", "--report=xml", "--encoding=utf-8", s"--report-file=$outputFile") ++ standardsList ++ filesToLint
-    List("phpcs", "-d", "memory_limit=-1", "--report=xml", "--encoding=utf-8", s"--report-file=$outputFile", s"--standard=PEAR,PSR1,PSR2,PSR12,Squiz,Zend,WordPress-VIP-Go,WordPressVIPMinimum,Doctrine,Drupal,DrupalPractice,Symfony,Magento2,Magento2Framework,MEQP1,Security,PHPCompatibility,PHPCompatibilityParagonieRandomCompat,PHPCompatibilityParagonieSodiumCompat,PHPCompatibilityWP,Modernize,NormalizedArrays,Universal,PHPCSUtils,VariableAnalysis,SlevomatCodingStandard,Vaimo,WordPress,WordPress-Core,WordPress-Docs,WordPress-Extra,${generateCrossCompatibilityAliasesStandard()}") ++ filesToLint
+    List("phpcs", "-d", "memory_limit=-1", "--report=xml", "--encoding=utf-8", s"--report-file=$outputFile") ++ configurationFile ++ filesToLint
   }
 
   private[this] def generateConfig(configurationOpt: Option[List[Pattern.Definition]],
