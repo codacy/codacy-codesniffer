@@ -12,14 +12,14 @@ See the [codacy-engine-scala-seed](https://github.com/codacy/codacy-engine-scala
 You can create the docker by doing:
 
 ```bash
-docker build -t codacy-codesniffer-base .
-sbt docker:publishLocal
+sbt Docker / publishLocal
+docker build -t codacy-codesniffer .
 ```
 
 The docker is ran with the following command:
 
 ```bash
-docker run -it -v $srcDir:/src  <DOCKER_NAME>:<DOCKER_VERSION>
+docker run -it -v $srcDir:/src <DOCKER_NAME>:<DOCKER_VERSION>
 ```
 
 ## Test

@@ -1,44 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <checkstyle version="4.3">
-    <file name="Squiz_ControlStructures.php">
-        <error source="Squiz_ControlStructures_ControlSignature" line="11" message="Expected 1 space after DO keyword; newline found" severity="info" />
-        <error source="Squiz_ControlStructures_ControlSignature" line="17" message="Expected 1 space after DO keyword; newline found" severity="info" />
-        <error source="Squiz_ControlStructures_ControlSignature" line="21" message="Expected 1 space after closing brace; newline found" severity="info" />
-        <error source="Squiz_ControlStructures_ControlSignature" line="25" message="Newline required after opening brace" severity="info" />
-        <error source="Squiz_WhiteSpace_ScopeClosingBrace" line="25" message="Closing brace must be on a line by itself" severity="info" />
-        <error source="Generic_Formatting_DisallowMultipleStatements" line="25" message="Each PHP statement must be on a line by itself" severity="info" />
-        <error source="Squiz_ControlStructures_ControlSignature" line="28" message="Expected 1 space after DO keyword; 0 found" severity="info" />
-        <error source="Generic_WhiteSpace_ScopeIndent" line="29" message="Line indented incorrectly; expected at least 4 spaces, found 3" severity="info" />
-        <error source="Squiz_ControlStructures_ControlSignature" line="32" message="Expected 1 space after closing brace; 0 found" severity="info" />
-        <error source="Squiz_ControlStructures_ControlSignature" line="32" message="Expected 1 space after WHILE keyword; 0 found" severity="info" />
-        <error source="Squiz_ControlStructures_ControlSignature" line="42" message="Expected 1 space after WHILE keyword; 0 found" severity="info" />
-        <error source="Squiz_ControlStructures_ControlSignature" line="42" message="Expected 1 space after closing parenthesis; found 0" severity="info" />
-        <error source="Squiz_ControlStructures_ControlSignature" line="47" message="Newline required after opening brace" severity="info" />
-        <error source="Squiz_WhiteSpace_ScopeClosingBrace" line="47" message="Closing brace must be on a line by itself" severity="info" />
-        <error source="Squiz_ControlStructures_ControlSignature" line="57" message="Expected 1 space after FOR keyword; 0 found" severity="info" />
-        <error source="Squiz_ControlStructures_ControlSignature" line="57" message="Expected 1 space after closing parenthesis; found 0" severity="info" />
-        <error source="Squiz_ControlStructures_ControlSignature" line="62" message="Newline required after opening brace" severity="info" />
-        <error source="Squiz_WhiteSpace_ScopeClosingBrace" line="62" message="Closing brace must be on a line by itself" severity="info" />
-        <error source="Squiz_ControlStructures_ControlSignature" line="72" message="Expected 1 space after FOREACH keyword; 0 found" severity="info" />
-        <error source="Squiz_ControlStructures_ControlSignature" line="72" message="Expected 1 space after closing parenthesis; found 0" severity="info" />
-        <error source="Squiz_ControlStructures_ControlSignature" line="77" message="Newline required after opening brace" severity="info" />
-        <error source="Squiz_WhiteSpace_ScopeClosingBrace" line="77" message="Closing brace must be on a line by itself" severity="info" />
-        <error source="Squiz_ControlStructures_ControlSignature" line="87" message="Expected 1 space after IF keyword; 0 found" severity="info" />
-        <error source="Squiz_ControlStructures_ControlSignature" line="87" message="Expected 1 space after closing parenthesis; found 0" severity="info" />
-        <error source="Squiz_ControlStructures_ControlSignature" line="92" message="Newline required after opening brace" severity="info" />
-        <error source="Squiz_WhiteSpace_ScopeClosingBrace" line="92" message="Closing brace must be on a line by itself" severity="info" />
-        <error source="Squiz_ControlStructures_ControlSignature" line="106" message="Expected 1 space after closing brace; 0 found" severity="info" />
-        <error source="Squiz_ControlStructures_ControlSignature" line="106" message="Expected 1 space after ELSE keyword; 0 found" severity="info" />
-        <error source="Squiz_ControlStructures_ControlSignature" line="111" message="Newline required after opening brace" severity="info" />
-        <error source="Squiz_WhiteSpace_ScopeClosingBrace" line="111" message="Closing brace must be on a line by itself" severity="info" />
-        <error source="Squiz_ControlStructures_ControlSignature" line="111" message="Newline required after opening brace" severity="info" />
-        <error source="Generic_Formatting_DisallowMultipleStatements" line="111" message="Each PHP statement must be on a line by itself" severity="info" />
-        <error source="Squiz_WhiteSpace_ScopeClosingBrace" line="111" message="Closing brace must be on a line by itself" severity="info" />
-        <error source="Squiz_ControlStructures_ControlSignature" line="120" message="Newline required after opening brace" severity="info" />
-        <error source="Squiz_WhiteSpace_ScopeClosingBrace" line="120" message="Closing brace must be on a line by itself" severity="info" />
-        <error source="Squiz_ControlStructures_ControlSignature" line="125" message="Newline required after opening brace" severity="info" />
-    </file>
-    <file name="Generic_Lines.php">
-        <error source="Generic_Files_LineLength" line="5" message="Line exceeds 120 characters; contains 121 characters" severity="info" />
-    </file>
+  <file name="Squiz_ControlStructures.php">
+    <error source="Generic_Formatting_DisallowMultipleStatements" line="19" message="Each PHP statement must be on a line by itself" severity="info" />
+    <error source="Generic_Formatting_DisallowMultipleStatements" line="85" message="Each PHP statement must be on a line by itself" severity="info" />
+    <error source="Generic_WhiteSpace_ScopeIndent" line="22" message="Line indented incorrectly; expected at least 4 spaces, found 3" severity="info" />
+    <error source="Squiz_ControlStructures_ControlSignature" line="21" message="Expected 1 space after DO keyword; 0 found" severity="info" />
+    <error source="Squiz_ControlStructures_ControlSignature" line="8" message="Expected 1 space after DO keyword; newline found" severity="info" />
+    <error source="Squiz_ControlStructures_ControlSignature" line="13" message="Expected 1 space after DO keyword; newline found" severity="info" />
+    <error source="Squiz_ControlStructures_ControlSignature" line="81" message="Expected 1 space after ELSE keyword; 0 found" severity="info" />
+    <error source="Squiz_ControlStructures_ControlSignature" line="42" message="Expected 1 space after FOR keyword; 0 found" severity="info" />
+    <error source="Squiz_ControlStructures_ControlSignature" line="53" message="Expected 1 space after FOREACH keyword; 0 found" severity="info" />
+    <error source="Squiz_ControlStructures_ControlSignature" line="65" message="Expected 1 space after IF keyword; 0 found" severity="info" />
+    <error source="Squiz_ControlStructures_ControlSignature" line="23" message="Expected 1 space after WHILE keyword; 0 found" severity="info" />
+    <error source="Squiz_ControlStructures_ControlSignature" line="31" message="Expected 1 space after WHILE keyword; 0 found" severity="info" />
+    <error source="Squiz_ControlStructures_ControlSignature" line="23" message="Expected 1 space after closing brace; 0 found" severity="info" />
+    <error source="Squiz_ControlStructures_ControlSignature" line="81" message="Expected 1 space after closing brace; 0 found" severity="info" />
+    <error source="Squiz_ControlStructures_ControlSignature" line="16" message="Expected 1 space after closing brace; newline found" severity="info" />
+    <error source="Squiz_ControlStructures_ControlSignature" line="31" message="Expected 1 space after closing parenthesis; found 0" severity="info" />
+    <error source="Squiz_ControlStructures_ControlSignature" line="42" message="Expected 1 space after closing parenthesis; found 0" severity="info" />
+    <error source="Squiz_ControlStructures_ControlSignature" line="53" message="Expected 1 space after closing parenthesis; found 0" severity="info" />
+    <error source="Squiz_ControlStructures_ControlSignature" line="65" message="Expected 1 space after closing parenthesis; found 0" severity="info" />
+    <error source="Squiz_ControlStructures_ControlSignature" line="19" message="Newline required after opening brace" severity="info" />
+    <error source="Squiz_ControlStructures_ControlSignature" line="35" message="Newline required after opening brace" severity="info" />
+    <error source="Squiz_ControlStructures_ControlSignature" line="46" message="Newline required after opening brace" severity="info" />
+    <error source="Squiz_ControlStructures_ControlSignature" line="57" message="Newline required after opening brace" severity="info" />
+    <error source="Squiz_ControlStructures_ControlSignature" line="69" message="Newline required after opening brace" severity="info" />
+    <error source="Squiz_ControlStructures_ControlSignature" line="85" message="Newline required after opening brace" severity="info" />
+    <error source="Squiz_ControlStructures_ControlSignature" line="85" message="Newline required after opening brace" severity="info" />
+    <error source="Squiz_ControlStructures_ControlSignature" line="93" message="Newline required after opening brace" severity="info" />
+    <error source="Squiz_ControlStructures_ControlSignature" line="97" message="Newline required after opening brace" severity="info" />
+    <error source="Squiz_WhiteSpace_ScopeClosingBrace" line="19" message="Closing brace must be on a line by itself" severity="info" />
+    <error source="Squiz_WhiteSpace_ScopeClosingBrace" line="35" message="Closing brace must be on a line by itself" severity="info" />
+    <error source="Squiz_WhiteSpace_ScopeClosingBrace" line="46" message="Closing brace must be on a line by itself" severity="info" />
+    <error source="Squiz_WhiteSpace_ScopeClosingBrace" line="57" message="Closing brace must be on a line by itself" severity="info" />
+    <error source="Squiz_WhiteSpace_ScopeClosingBrace" line="69" message="Closing brace must be on a line by itself" severity="info" />
+    <error source="Squiz_WhiteSpace_ScopeClosingBrace" line="85" message="Closing brace must be on a line by itself" severity="info" />
+    <error source="Squiz_WhiteSpace_ScopeClosingBrace" line="85" message="Closing brace must be on a line by itself" severity="info" />
+    <error source="Squiz_WhiteSpace_ScopeClosingBrace" line="93" message="Closing brace must be on a line by itself" severity="info" />
+  </file>
+  <file name="Generic_Lines.php">
+    <error source="Generic_Files_LineLength" line="2" message="Line exceeds 120 characters; contains 121 characters" severity="info" />
+  </file>
 </checkstyle>

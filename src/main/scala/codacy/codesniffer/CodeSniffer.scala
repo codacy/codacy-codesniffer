@@ -86,7 +86,7 @@ object CodeSniffer extends Tool {
       s"--standard=$config,${generateCrossCompatibilityAliasesStandard()}"
     }
 
-    List("phpcs", "-d", "memory_limit=-1", "--report=xml", "--encoding=utf-8", s"--report-file=$outputFile") ++ configurationFile ++ filesToLint
+    List("phpcs", "-d", "memory_limit=2048M", "--report=xml", "--encoding=utf-8", s"--report-file=$outputFile") ++ configurationFile ++ filesToLint
   }
 
   private[this] def generateConfig(configurationOpt: Option[List[Pattern.Definition]],

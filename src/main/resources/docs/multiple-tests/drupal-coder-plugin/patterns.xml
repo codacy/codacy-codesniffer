@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
+<?xml version="1.0" encoding="utf-8"?>
 <module name="root">
-    <module name="BeforeExecutionExclusionFileFilter">
-        <property name="fileNamePattern" value="phpcs\.xml|phpcs\.xml\.dist" />
-    </module>
+  <module name="Drupal.Commenting.FileComment" />
 </module>
