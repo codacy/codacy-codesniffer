@@ -1,1 +1,0 @@
-Naming Convention: Reserved Words

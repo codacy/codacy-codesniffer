@@ -14,7 +14,7 @@ class Generator() {
   private[this] val toolName = Tool.Name("phpcs")
   private[this] val toolVersion = Option(Tool.Version(VersionsHelper.codesniffer))
 
-  val docsDir = File("src/main/resources/docs")
+  val docsDir = File("docs")
   val patternsFile: File = docsDir / "patterns.json"
   val descriptionsDir: File = docsDir / "description"
   val descriptionFile: File = descriptionsDir / "description.json"
@@ -29,7 +29,8 @@ class Generator() {
          new SlevomatCSDocsParser(),
          new DrupalCoderDocsParser(),
          new VipWordPressDocsParser(),
-         new SymfonyDocsParser())
+         new SymfonyDocsParser()
+    )
 
   def run(): Unit = {
     docsDir.createDirectories()
@@ -39,7 +40,8 @@ class Generator() {
                  toolVersion,
                  parallelParsers
                    .flatMap(_.patterns)
-                   .seq)
+                   .seq
+    )
   }
 
   private[this] def parallelParsers: ParSeq[DocsParser] = {
@@ -52,13 +54,14 @@ class Generator() {
   private[this] def fullDescription(patternDocs: PatternDocs) = {
     // fallbacks: full description -> pattern description -> pattern title
     patternDocs.docs.getOrElse(
-      patternDocs.description.description.map(_.value).getOrElse(patternDocs.description.title.value)
+      patternDocs.description.description.map(_.value).getOrElse(patternDocs.description.title.value + "\n")
     )
   }
 
   private[this] def writeToFiles(toolName: Tool.Name,
                                  toolVersion: Option[Tool.Version],
-                                 docs: Seq[PatternDocs]): Unit = {
+                                 docs: Seq[PatternDocs]
+  ): Unit = {
     val sortedDocs = docs.sortBy(_.pattern.patternId.value)
 
     val toolSpecification = Tool.Specification(toolName, toolVersion, sortedDocs.view.map(_.pattern).to(Set))

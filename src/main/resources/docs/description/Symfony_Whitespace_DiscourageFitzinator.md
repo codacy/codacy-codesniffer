@@ -1,1 +1,0 @@
-Whitespace: Discourage Fitzinator

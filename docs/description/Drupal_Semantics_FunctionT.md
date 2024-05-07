@@ -1,0 +1,1 @@
+Semantics: Function T

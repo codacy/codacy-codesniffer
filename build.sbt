@@ -12,17 +12,6 @@ enablePlugins(AshScriptPlugin)
 
 enablePlugins(DockerPlugin)
 
-Universal / mappings ++= {
-  (Compile / resourceDirectory).map { (resourceDir: File) =>
-    val src = resourceDir / "docs"
-    val dest = "/docs"
-
-    for {
-      path <- src.allPaths.get if !path.isDirectory
-    } yield path -> path.toString.replaceFirst(src.toString, dest)
-  }
-}.value
-
 val dockerUser = "docker"
 val dockerGroup = "docker"
 

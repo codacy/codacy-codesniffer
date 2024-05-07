@@ -29,7 +29,8 @@ trait DocsParser {
 
   def descriptionWithDocs(rootDir: File,
                           patternIdParts: PatternIdParts,
-                          patternFile: File): (Pattern.Description, Option[String])
+                          patternFile: File
+  ): (Pattern.Description, Option[String])
 
   def fallBackCategory: Pattern.Category.Value = Pattern.Category.CodeStyle
 
@@ -65,7 +66,8 @@ trait DocsParser {
                                        subcategory,
                                        parametersList,
                                        Set.empty,
-                                       enabledByDefault)
+                                       enabledByDefault
+      )
 
       val (description, docs) = descriptionWithDocs(dir, idParts, sourceFile)
       val parametersDescription = parametersList
@@ -78,7 +80,8 @@ trait DocsParser {
 
       PatternDocs(spec,
                   description.copy(parameters = parametersDescription, description = descriptionWithinLength),
-                  docs)
+                  docs
+      )
     }).to(Set)
   }
 
@@ -91,7 +94,8 @@ trait DocsParser {
       )
       _ <- CommandRunner.exec(List("git", "checkout", checkoutCommit), Some(dir.toFile))
       _ <- CommandRunner.exec(List("phpdoc", "-t", "docs", "-d", ".", "--template", "checkstyle,xml,clean"),
-                              Some(dir.toFile))
+                              Some(dir.toFile)
+      )
 
       res = f(dir)
       _ <- CommandRunner.exec(List("rm", "-rf", dir.toString))
@@ -117,7 +121,8 @@ trait DocsParser {
 
   private[this] def issueTypeFor(category: Pattern.Category,
                                  patternFile: File,
-                                 fallback: Result.Level): Result.Level = {
+                                 fallback: Result.Level
+  ): Result.Level = {
     Option(category)
       .collect {
         case Pattern.Category.CodeStyle => Result.Level.Info
@@ -174,7 +179,8 @@ trait DocsParser {
   protected def parseExtendedDescription(namespace: String,
                                          rulesFolder: String,
                                          patternIdParts: PatternIdParts,
-                                         rootDir: File): Option[String] = {
+                                         rootDir: File
+  ): Option[String] = {
     val docsFile = rootDir / rulesFolder / "ruleset.xml"
 
     val structureXML = XML.loadString(docsFile.contentAsString)
@@ -191,7 +197,8 @@ trait DocsParser {
   protected def parseDescription(namespace: String,
                                  rulesFolder: String,
                                  patternIdParts: PatternIdParts,
-                                 rootDir: File): Option[DescriptionText] = {
+                                 rootDir: File
+  ): Option[DescriptionText] = {
     val docsFile = rootDir / rulesFolder / "ruleset.xml"
 
     val structureXML = XML.loadString(docsFile.contentAsString)

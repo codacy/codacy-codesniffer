@@ -23,9 +23,11 @@ class MagentoCSDocsParser extends DocsParser {
 
   override def descriptionWithDocs(rootDir: File,
                                    patternIdParts: PatternIdParts,
-                                   patternFile: File): (Pattern.Description, Option[String]) =
+                                   patternFile: File
+  ): (Pattern.Description, Option[String]) =
     (description(patternIdParts, rootDir: File),
-     this.parseExtendedDescription("Magento2\\Sniffs", "Magento2", patternIdParts, rootDir))
+     this.parseExtendedDescription("Magento2\\Sniffs", "Magento2", patternIdParts, rootDir)
+    )
 
   private[this] def description(patternIdParts: PatternIdParts, rootDir: File): Pattern.Description = {
     val caseRegexPattern = """((?<=\p{Ll})\p{Lu}|\p{Lu}(?=\p{Ll}))""".r

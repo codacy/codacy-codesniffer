@@ -1,1 +1,0 @@
-Performance: WP Query Params

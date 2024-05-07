@@ -1,1 +1,0 @@
-Strings: Executable Reg Ex

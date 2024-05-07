@@ -1,0 +1,1 @@
+Security: Plugin Menu Slug

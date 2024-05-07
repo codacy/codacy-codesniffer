@@ -1,1 +1,0 @@
-PHP: Disallow Comparison Assignment

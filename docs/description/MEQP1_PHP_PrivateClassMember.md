@@ -1,0 +1,1 @@
+PHP: Private Class Member

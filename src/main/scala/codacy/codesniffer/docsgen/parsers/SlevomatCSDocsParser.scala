@@ -20,34 +20,46 @@ class SlevomatCSDocsParser extends DocsParser {
     val sniffRegex(packageName, sniffType, patternName) = relativizedFilePath
     PatternIdParts(packageName, sniffType, patternName)
   }
+
   private object Docs {
     private var patternIdsToDocs: Map[String, String] = null
 
     def get(rootDir: File, patternId: String): Option[String] = {
       if (patternIdsToDocs == null) {
         val readmeFile = rootDir / "README.md"
-        val pattern: Regex = "- \\[SlevomatCodingStandard[^\\]]+\\]\\(doc/[a-z\\-]+\\.md#slevomatcodingstandard[^\\)]+\\)".r
-        patternIdsToDocs = readmeFile.contentAsString.linesIterator.toList.view.flatMap(line => pattern.findFirstIn(line)).flatMap { line =>
-          val docFile = rootDir / line.substring(line.indexOf('(') + 1, line.indexOf('#'))
-          val sectionTitle = line.substring(line.indexOf('[') + 1, line.indexOf(']'))
-          val sections = docFile.contentAsString.split("####").map(_.trim).filter(_.nonEmpty)
-          sections.find { section =>
-            val lines = section.split("\n")
-            val sectionKey = lines.head.takeWhile(c => c.isLetterOrDigit || c == '.')
-            sectionKey == sectionTitle
-          }.map { section =>
-            val sectionKeySplitted = sectionTitle.split("\\.")
-            val docTitle = "## " + sectionKeySplitted(1) + ": " + sectionKeySplitted(2).replaceAll("(\\p{Ll})(\\p{Lu})", "$1 $2") + "\n"
-            (sectionTitle.replace(".", "_"),  docTitle + section.split("\n").tail.mkString("\n"))
+        val pattern: Regex = new Regex(
+          """- \[SlevomatCodingStandard[^\]]+\]\(doc/[a-z0-9_\-]+\.md#slevomatcodingstandard[^\)]+\)"""
+        )
+        patternIdsToDocs = readmeFile.contentAsString.linesIterator.toList.view
+          .flatMap(line => pattern.findFirstIn(line))
+          .flatMap { line =>
+            val docFile = rootDir / line.substring(line.indexOf('(') + 1, line.indexOf('#'))
+            val sectionTitle = line.substring(line.indexOf('[') + 1, line.indexOf(']'))
+            val sections = docFile.contentAsString.split("####").map(_.trim).filter(_.nonEmpty)
+            sections
+              .find { section =>
+                val lines = section.split("\n")
+                val sectionKey = lines.head.takeWhile(c => c.isLetterOrDigit || c == '.')
+                sectionKey == sectionTitle
+              }
+              .map { section =>
+                val sectionKeySplitted = sectionTitle.split("\\.")
+                val docTitle =
+                  "## " + sectionKeySplitted(1) + ": " + sectionKeySplitted(2).replaceAll("(\\p{Ll})(\\p{Lu})", "$1 $2")
+                val sectionContent = section.split("\n").tail.mkString("\n").replaceAll("(\\*\\s*)", "*   ")
+                (sectionTitle.replace(".", "_"), docTitle + "\n" + sectionContent + "\n")
+              }
           }
-        }.toMap
+          .toMap
       }
       patternIdsToDocs.get(patternId)
     }
   }
+
   override def descriptionWithDocs(rootDir: File,
                                    patternIdParts: PatternIdParts,
-                                   patternFile: File): (Pattern.Description, Option[String]) = {
+                                   patternFile: File
+  ): (Pattern.Description, Option[String]) = {
     val docs = Docs.get(rootDir, patternIdParts.patternId.value)
     (description(patternIdParts), docs)
   }

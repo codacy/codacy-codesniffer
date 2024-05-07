@@ -23,7 +23,8 @@ class VipWordPressDocsParser extends DocsParser {
 
   override def descriptionWithDocs(rootDir: File,
                                    patternIdParts: PatternIdParts,
-                                   patternFile: File): (Pattern.Description, Option[String]) = {
+                                   patternFile: File
+  ): (Pattern.Description, Option[String]) = {
     val descriptionFromParts = descriptionFor(patternIdParts, rootDir)
     val description = if (isDeprecated(patternFile)) {
       val newTitle = Pattern.Title(s"${descriptionFromParts.title.value} (Deprecated)")
@@ -32,7 +33,9 @@ class VipWordPressDocsParser extends DocsParser {
       descriptionFromParts
     }
 
-    (description, this.parseExtendedDescription("WordPressVIPMinimum\\Sniffs", "WordPressVIPMinimum", patternIdParts, rootDir))
+    (description,
+     this.parseExtendedDescription("WordPressVIPMinimum\\Sniffs", "WordPressVIPMinimum", patternIdParts, rootDir)
+    )
   }
 
   private[this] def isDeprecated(patternFile: File): Boolean = {

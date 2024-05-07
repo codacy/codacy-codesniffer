@@ -21,7 +21,7 @@ RUN ln -s /etc/php82/php.ini /etc/php82/conf.d/php.ini && \
 RUN curl -sS https://getcomposer.org/installer | php
 
 # Install packages
-ADD composer.* ${COMPOSER_HOME}
+COPY composer.* ${COMPOSER_HOME}
 RUN php composer.phar global install
 
 # Clean up temporary files and cache
@@ -29,8 +29,8 @@ RUN rm -rf /tmp/* && \
     adduser -u 2004 -D docker
 
 # Copy codacy-codesniffer binary and docs
-ADD --chown=docker:docker target/docker/stage/opt /opt
-ADD --chown=docker:docker src/main/resources/docs /docs
+COPY --chown=docker:docker target/docker/stage/opt /opt
+COPY --chown=docker:docker docs /docs
 
 WORKDIR /src
 

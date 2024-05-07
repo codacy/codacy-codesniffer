@@ -22,11 +22,14 @@ class PHPCSSecurityAuditDocsParser extends DocsParser {
     val sniffRegex(sniffType, patternName) = relativizedFilePath
     PatternIdParts("Security", sniffType, patternName)
   }
+
   override def descriptionWithDocs(rootDir: File,
                                    patternIdParts: PatternIdParts,
-                                   patternFile: File): (Pattern.Description, Option[String]) = {
+                                   patternFile: File
+  ): (Pattern.Description, Option[String]) = {
     (descriptionFor(patternIdParts, rootDir),
-     this.parseExtendedDescription("PHPCS_SecurityAudit\\Security\\Sniffs", "Security", patternIdParts, rootDir))
+     this.parseExtendedDescription("PHPCS_SecurityAudit\\Security\\Sniffs", "Security", patternIdParts, rootDir)
+    )
   }
 
   private[this] def descriptionFor(patternIdParts: PatternIdParts, rootDir: File): Pattern.Description = {

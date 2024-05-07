@@ -24,7 +24,8 @@ object CodeSniffer extends Tool {
   def apply(source: Source.Directory,
             configuration: Option[List[Pattern.Definition]],
             files: Option[Set[Source.File]],
-            options: Map[Options.Key, Options.Value])(implicit specification: Tool.Specification): Try[List[Result]] = {
+            options: Map[Options.Key, Options.Value]
+  )(implicit specification: Tool.Specification): Try[List[Result]] = {
     Try {
       val fullConfig = configuration.withDefaultParameters
       val filesToLint: List[String] = files.fold(List(source.toString)) { paths =>
@@ -63,34 +64,41 @@ object CodeSniffer extends Tool {
     (xmlResult \ "file").flatMap { file =>
       file.child
         .filterNot(codeMatch => codeMatch.text.matches(deprecatedPropertyRegex))
-        .collect {
-          case codeMatch: Elem =>
-            val filePath = (file \ "@name").toString()
-            val line = (codeMatch \ "@line").toString().toInt
-            val message = codeMatch.text
-            val rule = (codeMatch \ "@source")
-              .toString()
-              .split('.')
-              .dropRight(1)
-              .mkString("_")
-              .replace("PHPCS_SecurityAudit", "Security")
-            Result.Issue(Source.File(filePath), Result.Message(message), Pattern.Id(rule), Source.Line(line))
+        .collect { case codeMatch: Elem =>
+          val filePath = (file \ "@name").toString()
+          val line = (codeMatch \ "@line").toString().toInt
+          val message = codeMatch.text
+          val rule = (codeMatch \ "@source")
+            .toString()
+            .split('.')
+            .dropRight(1)
+            .mkString("_")
+            .replace("PHPCS_SecurityAudit", "Security")
+          Result.Issue(Source.File(filePath), Result.Message(message), Pattern.Id(rule), Source.Line(line))
         }
     }.toList
   }
 
   private[this] def getCommandFor(configFile: Option[Path],
                                   outputFile: Path,
-                                  filesToLint: List[String]): List[String] = {
+                                  filesToLint: List[String]
+  ): List[String] = {
     val configurationFile = configFile.map { config =>
       s"--standard=$config,${generateCrossCompatibilityAliasesStandard()}"
     }
 
-    List("phpcs", "-d", "memory_limit=2048M", "--report=xml", "--encoding=utf-8", s"--report-file=$outputFile") ++ configurationFile ++ filesToLint
+    List("phpcs",
+         "-d",
+         "memory_limit=2048M",
+         "--report=xml",
+         "--encoding=utf-8",
+         s"--report-file=$outputFile"
+    ) ++ configurationFile ++ filesToLint
   }
 
   private[this] def generateConfig(configurationOpt: Option[List[Pattern.Definition]],
-                                   phpVersion: Option[Options.Value]): Option[Path] = {
+                                   phpVersion: Option[Options.Value]
+  ): Option[Path] = {
     configurationOpt.map { config =>
       val configParams = phpVersion
         .map { version =>
@@ -123,7 +131,8 @@ object CodeSniffer extends Tool {
   }
 
   private[this] def generateRule(patternIdentifier: Pattern.Id,
-                                 configuredParameters: Set[Parameter.Definition]): String = {
+                                 configuredParameters: Set[Parameter.Definition]
+  ): String = {
     val params = configuredParameters
       .map { param =>
         s"""<property name="${param.name}" value="${jsValueAsSimpleString(param.value)}" />"""

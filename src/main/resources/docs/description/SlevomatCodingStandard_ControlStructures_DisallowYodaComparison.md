@@ -1,1 +1,0 @@
-## ControlStructures: Disallow Yoda Comparison

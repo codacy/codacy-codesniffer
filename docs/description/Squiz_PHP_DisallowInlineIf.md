@@ -1,0 +1,1 @@
+PHP: Disallow Inline If

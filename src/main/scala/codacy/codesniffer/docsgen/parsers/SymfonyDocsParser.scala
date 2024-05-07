@@ -23,8 +23,11 @@ class SymfonyDocsParser extends DocsParser {
 
   override def descriptionWithDocs(rootDir: File,
                                    patternIdParts: PatternIdParts,
-                                   patternFile: File): (Pattern.Description, Option[String]) = {
-    (description(patternIdParts, rootDir), this.parseExtendedDescription("Symfony\\Sniffs", "Symfony", patternIdParts, rootDir))
+                                   patternFile: File
+  ): (Pattern.Description, Option[String]) = {
+    (description(patternIdParts, rootDir),
+     this.parseExtendedDescription("Symfony\\Sniffs", "Symfony", patternIdParts, rootDir)
+    )
   }
 
   private[this] def description(patternIdParts: PatternIdParts, rootDir: File): Pattern.Description = {

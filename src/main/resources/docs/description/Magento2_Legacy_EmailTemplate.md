@@ -1,1 +1,0 @@
-Legacy: Email Template
