@@ -1,0 +1,1 @@
+Functions: Closure Declaration

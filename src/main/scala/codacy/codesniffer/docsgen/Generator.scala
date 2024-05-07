@@ -20,16 +20,17 @@ class Generator() {
   val descriptionFile: File = descriptionsDir / "description.json"
 
   private[this] val parsers: List[DocsParser] =
-    List(new PHPCSDocsParser(),
-         new WordPressCSDocsParser(),
-         new MagentoEQPDocsParser(),
+    List(new CakePHPDocsParser(),
+         new DrupalCoderDocsParser(),
          new MagentoCSDocsParser(),
+         new MagentoEQPDocsParser(),
          new PHPCompatibilityDocsParser(),
+         new PHPCSDocsParser(),
          new PHPCSSecurityAuditDocsParser(),
          new SlevomatCSDocsParser(),
-         new DrupalCoderDocsParser(),
+         new SymfonyDocsParser(),
          new VipWordPressDocsParser(),
-         new SymfonyDocsParser()
+         new WordPressCSDocsParser()
     )
 
   def run(): Unit = {

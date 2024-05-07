@@ -57,13 +57,13 @@ To add a new plugin to Codesniffer:
 
 1.  Add the plugin dependency to `require` inside `composer.json`. This depedency must be available on [Packagist](https://packagist.org/)
 
-2.  Add to `scala/codacy/codesniffer/docsgen/VersionsHelper.scala` the plugin version:
+2.  Add to `src/main/scala/codacy/codesniffer/docsgen/VersionsHelper.scala` the plugin version:
 
     ```scala
     lazy val newPlugin = properties("pluginNamespace/pluginName").str
     ```
 
-3.  Implement the plugin documentation parser inside `scala/codacy/codesniffer/docsgen/parsers`. The parser must extend `DocsParser` and override the following:
+3.  Implement the plugin documentation parser inside `src/main/scala/codacy/codesniffer/docsgen/parsers`. The parser must extend `DocsParser` and override the following:
 
     | Name                                                                                                                                        | Description                                                                                     |
     | ------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
@@ -108,7 +108,7 @@ To add a new plugin to Codesniffer:
     }
     ```
 
-4.  Add the new parser to the list of parsers inside `scala/codacy/codesniffer/docsgen/Generator.scala`.
+4.  Add the new parser to the list of parsers inside `src/main/scala/codacy/codesniffer/docsgen/Generator.scala`.
 
     ```scala
     private[this] val parsers: List[DocsParser] = List(new PHPCSDocsParser(), ...)
