@@ -1,1 +1,0 @@
-Functions: Disallow Named Arguments

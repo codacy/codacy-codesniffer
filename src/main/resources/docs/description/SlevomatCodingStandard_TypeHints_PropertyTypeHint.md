@@ -1,1 +1,0 @@
-Type Hints: Property Type Hint

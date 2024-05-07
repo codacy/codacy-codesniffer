@@ -1,1 +1,0 @@
-Strings: Unnecessary String Concat

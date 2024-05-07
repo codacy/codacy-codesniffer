@@ -1,1 +1,0 @@
-Classes: Disallow String Expression Property Fetch

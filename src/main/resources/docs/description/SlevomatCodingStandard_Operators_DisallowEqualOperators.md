@@ -1,1 +1,0 @@
-Operators: Disallow Equal Operators

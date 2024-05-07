@@ -1,1 +1,0 @@
-Namespaces: Require One Namespace In File

@@ -1,1 +1,0 @@
-Control Structures: Require Multi Line Ternary Operator

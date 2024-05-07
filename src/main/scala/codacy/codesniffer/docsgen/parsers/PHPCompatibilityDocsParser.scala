@@ -27,16 +27,25 @@ class PHPCompatibilityDocsParser extends DocsParser {
 
   override def descriptionWithDocs(rootDir: File,
                                    patternIdParts: PatternIdParts,
-                                   patternFile: File): (Pattern.Description, Option[String]) =
+                                   patternFile: File
+  ): (Pattern.Description, Option[String]) =
     (description(patternIdParts, rootDir),
-     this.parseExtendedDescription("PHPCompatibility\\Sniffs", "PHPCompatibility", patternIdParts, rootDir))
+     this.parseExtendedDescription("PHPCompatibility\\Sniffs", "PHPCompatibility", patternIdParts, rootDir)
+    )
 
   private[this] def description(patternIdParts: PatternIdParts, rootDir: File): Pattern.Description = {
     val caseRegexPattern = """((?<=\p{Ll})\p{Lu}|\p{Lu}(?=\p{Ll}))""".r
     val patternName = caseRegexPattern.replaceAllIn(patternIdParts.patternName, " $1").trim
     val sniffName = caseRegexPattern.replaceAllIn(patternIdParts.sniffType, " $1").trim
+
+    // println(s"patternIdParts: $patternIdParts")
+    // println(s"patternName: $patternName, sniffName: $sniffName")
+
     val title = Pattern.Title(s"PHP Compatibility related issue ($sniffName): $patternName")
     val extended = this.parseDescription("PHPCompatibility\\Sniffs", "PHPCompatibility", patternIdParts, rootDir)
+
+    // println(s"title: $title, extended: $extended")
+
     Pattern.Description(patternIdParts.patternId, title, extended, None, Set.empty)
   }
 

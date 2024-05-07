@@ -23,8 +23,11 @@ class MagentoEQPDocsParser extends DocsParser {
 
   override def descriptionWithDocs(rootDir: File,
                                    patternIdParts: PatternIdParts,
-                                   patternFile: File): (Pattern.Description, Option[String]) =
-    (description(patternIdParts, rootDir), this.parseExtendedDescription("MEQP1\\Sniffs", "MEQP1", patternIdParts, rootDir))
+                                   patternFile: File
+  ): (Pattern.Description, Option[String]) =
+    (description(patternIdParts, rootDir),
+     this.parseExtendedDescription("MEQP1\\Sniffs", "MEQP1", patternIdParts, rootDir)
+    )
 
   private[this] def description(patternIdParts: PatternIdParts, rootDir: File): Pattern.Description = {
     val caseRegexPattern = """((?<=\p{Ll})\p{Lu}|\p{Lu}(?=\p{Ll}))""".r

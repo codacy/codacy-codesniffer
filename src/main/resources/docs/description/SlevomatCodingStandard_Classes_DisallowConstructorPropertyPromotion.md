@@ -1,1 +1,0 @@
-Classes: Disallow Constructor Property Promotion

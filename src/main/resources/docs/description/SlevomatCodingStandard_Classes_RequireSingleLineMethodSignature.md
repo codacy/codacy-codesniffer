@@ -1,1 +1,0 @@
-Classes: Require Single Line Method Signature

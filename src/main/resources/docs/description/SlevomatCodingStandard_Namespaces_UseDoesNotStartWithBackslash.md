@@ -1,1 +1,0 @@
-Namespaces: Use Does Not Start With Backslash

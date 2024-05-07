@@ -1,0 +1,1 @@
+PHP: Short Echo Syntax

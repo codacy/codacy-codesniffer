@@ -1,1 +1,0 @@
-Functions: Require Single Line Call

@@ -1,1 +1,0 @@
-Functions: Arrow Function Declaration

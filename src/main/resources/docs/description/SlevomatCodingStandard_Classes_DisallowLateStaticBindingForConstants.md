@@ -1,1 +1,0 @@
-Classes: Disallow Late Static Binding For Constants

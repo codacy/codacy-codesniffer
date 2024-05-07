@@ -1,1 +1,0 @@
-Control Structures: Disallow Continue Without Integer Operand In Switch

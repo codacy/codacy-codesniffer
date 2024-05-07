@@ -1,8 +1,8 @@
 version: 2.1
 
 orbs:
-  codacy: codacy/base@10.9.1
-  codacy_plugins_test: codacy/plugins-test@1.1.1
+  codacy: codacy/base@12.0.0
+  codacy_plugins_test: codacy/plugins-test@2.0.11
 
 workflows:
   compile_test_deploy:
@@ -12,17 +12,17 @@ workflows:
       - codacy/sbt:
           name: publish_docker_local
           cmd: |
-            docker build -t codacy-codesniffer-base .
-
-            wget https://github.com/phpDocumentor/phpDocumentor/releases/download/v3.4.1/phpDocumentor.phar
+            wget https://github.com/phpDocumentor/phpDocumentor/releases/download/v3.4.3/phpDocumentor.phar
             sudo mv phpDocumentor.phar /usr/local/bin/phpdoc
             sudo chmod +x /usr/local/bin/phpdoc
 
             sbt "set Docker / version := \"latest\";
                  runMain codacy.codesniffer.docsgen.GeneratorMain;
                  clean;
-                 docker:publishLocal"
-            docker save --output docker-image.tar $CIRCLE_PROJECT_REPONAME:latest
+                 Docker / publishLocal"
+
+            docker build -t $CIRCLE_PROJECT_REPONAME .
+            docker save --output docker-image.tar $CIRCLE_PROJECT_REPONAME
           persist_to_workspace: true
           requires:
             - codacy/checkout_and_version

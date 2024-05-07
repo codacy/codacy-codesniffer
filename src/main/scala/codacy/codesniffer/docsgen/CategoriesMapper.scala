@@ -1,13 +1,13 @@
 package codacy.codesniffer.docsgen
+
 import codacy.codesniffer.docsgen.parsers.PatternIdParts
 import com.codacy.plugins.api.results.Pattern
 import com.codacy.plugins.api.results.Pattern.{Category, Subcategory}
 
 object CategoriesMapper {
 
-  def categoryFor(
-    patternIdParts: PatternIdParts,
-    fallback: Pattern.Category.Value = Pattern.Category.CodeStyle
+  def categoryFor(patternIdParts: PatternIdParts,
+                  fallback: Pattern.Category.Value = Pattern.Category.CodeStyle
   ): (Pattern.Category.Value, Option[Pattern.Subcategory.Value]) = {
     patternIdParts.patternId.value match {
       case "WordPress_DB_PreparedSQL" => (Category.Security, Some(Subcategory.SQLInjection))

@@ -1,1 +1,0 @@
-Type Hints: Useless Constant Type Hint

@@ -1,1 +1,0 @@
-Arrays: Multi Line Array End Bracket Placement

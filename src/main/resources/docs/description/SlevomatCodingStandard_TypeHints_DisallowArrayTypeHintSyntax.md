@@ -1,1 +1,0 @@
-Type Hints: Disallow Array Type Hint Syntax

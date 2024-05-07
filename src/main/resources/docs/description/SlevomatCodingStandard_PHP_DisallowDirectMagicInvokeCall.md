@@ -1,1 +1,0 @@
-PHP: Disallow Direct Magic Invoke Call

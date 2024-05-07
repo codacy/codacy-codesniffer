@@ -1,1 +1,0 @@
-Classes: Disallow Multi Constant Definition

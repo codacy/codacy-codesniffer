@@ -1,1 +1,0 @@
-Functions: Unused Inherited Variable Passed To Closure

@@ -1,1 +1,0 @@
-Control Structures: Require Short Ternary Operator

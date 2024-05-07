@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module name="root">
+  <module name="WordPressVIPMinimum_Security_StaticStrreplace" />
+</module>

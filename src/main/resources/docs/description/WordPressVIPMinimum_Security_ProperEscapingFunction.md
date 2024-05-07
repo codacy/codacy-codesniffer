@@ -1,1 +1,0 @@
-Security: Proper Escaping Function

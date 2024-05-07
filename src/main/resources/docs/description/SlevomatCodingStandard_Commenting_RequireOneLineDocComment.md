@@ -1,1 +1,0 @@
-Commenting: Require One Line Doc Comment

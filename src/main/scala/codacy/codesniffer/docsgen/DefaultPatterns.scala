@@ -67,5 +67,6 @@ object DefaultPatterns {
                   "WordPress_Security_NonceVerification",
                   "WordPress_Security_PluginMenuSlug",
                   "WordPress_Security_SafeRedirect",
-                  "WordPress_Security_ValidatedSanitizedInput")
+                  "WordPress_Security_ValidatedSanitizedInput"
+  )
 }

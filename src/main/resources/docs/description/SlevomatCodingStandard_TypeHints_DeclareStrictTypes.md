@@ -1,1 +1,0 @@
-Type Hints: Declare Strict Types

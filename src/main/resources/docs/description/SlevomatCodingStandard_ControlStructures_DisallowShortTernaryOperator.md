@@ -1,1 +1,0 @@
-Control Structures: Disallow Short Ternary Operator

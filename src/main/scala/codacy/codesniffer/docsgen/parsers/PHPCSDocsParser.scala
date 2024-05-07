@@ -24,7 +24,8 @@ class PHPCSDocsParser extends DocsParser {
 
   override def descriptionWithDocs(rootDir: File,
                                    patternIdParts: PatternIdParts,
-                                   patternFile: File): (Pattern.Description, Option[String]) = {
+                                   patternFile: File
+  ): (Pattern.Description, Option[String]) = {
     val docsFile =
       rootDir / "src/Standards" / patternIdParts.prefix / "Docs" / patternIdParts.sniffType / s"${patternIdParts.patternName}Standard.xml"
 
@@ -65,7 +66,8 @@ class PHPCSDocsParser extends DocsParser {
                           Pattern.Title(xml \@ "title"),
                           textOpt.map(Pattern.DescriptionText),
                           None,
-                          Set.empty)
+                          Set.empty
+      )
 
     (description, doc)
   }

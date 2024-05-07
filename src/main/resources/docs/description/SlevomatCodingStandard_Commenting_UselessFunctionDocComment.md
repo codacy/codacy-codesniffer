@@ -1,1 +1,0 @@
-Commenting: Useless Function Doc Comment

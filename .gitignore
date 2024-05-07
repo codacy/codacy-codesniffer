@@ -9,14 +9,17 @@
 
 .vscode
 
+.bsp
 .bloop
 .metals
+*metals.sbt
 
 vendor/
 
+.phpdoc/
+
 ###> squizlabs/php_codesniffer ###
 /.phpcs-cache
-/phpcs.xml
 ###< squizlabs/php_codesniffer ###
 
 ###> phpstan/phpstan ###

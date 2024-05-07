@@ -1,1 +1,0 @@
-Functions: Disallow Trailing Comma In Declaration

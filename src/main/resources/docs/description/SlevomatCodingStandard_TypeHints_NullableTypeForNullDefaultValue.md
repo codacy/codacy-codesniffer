@@ -1,1 +1,0 @@
-Type Hints: Nullable Type For Null Default Value

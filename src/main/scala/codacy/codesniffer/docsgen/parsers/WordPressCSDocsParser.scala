@@ -23,7 +23,8 @@ class WordPressCSDocsParser extends DocsParser {
 
   override def descriptionWithDocs(rootDir: File,
                                    patternIdParts: PatternIdParts,
-                                   patternFile: File): (Pattern.Description, Option[String]) = {
+                                   patternFile: File
+  ): (Pattern.Description, Option[String]) = {
     val descriptionFromParts = descriptionFor(patternIdParts, rootDir)
     val description = if (isDeprecated(patternFile)) {
       val newTitle = Pattern.Title(s"${descriptionFromParts.title.value} (Deprecated)")

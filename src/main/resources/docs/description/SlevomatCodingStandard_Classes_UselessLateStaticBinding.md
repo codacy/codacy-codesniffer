@@ -1,1 +1,0 @@
-Classes: Useless Late Static Binding

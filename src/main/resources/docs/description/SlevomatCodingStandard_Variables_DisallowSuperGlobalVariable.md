@@ -1,1 +1,0 @@
-Variables: Disallow Super Global Variable

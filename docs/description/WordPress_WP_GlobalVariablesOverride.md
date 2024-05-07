@@ -1,0 +1,1 @@
+WP: Global Variables Override

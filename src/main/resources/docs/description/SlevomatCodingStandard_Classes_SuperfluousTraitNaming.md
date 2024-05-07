@@ -1,1 +1,0 @@
-Classes: Superfluous Trait Naming

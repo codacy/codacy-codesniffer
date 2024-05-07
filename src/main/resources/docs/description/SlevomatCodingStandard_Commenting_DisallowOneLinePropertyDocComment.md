@@ -1,1 +1,0 @@
-Commenting: Disallow One Line Property Doc Comment

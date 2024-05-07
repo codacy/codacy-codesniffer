@@ -1,1 +1,0 @@
-Namespaces: Fully Qualified Class Name In Annotation

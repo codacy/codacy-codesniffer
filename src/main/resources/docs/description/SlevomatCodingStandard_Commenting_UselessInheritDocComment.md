@@ -1,1 +1,0 @@
-Commenting: Useless Inherit Doc Comment

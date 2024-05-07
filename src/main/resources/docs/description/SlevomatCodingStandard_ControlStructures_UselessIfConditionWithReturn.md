@@ -1,1 +1,0 @@
-Control Structures: Useless If Condition With Return

@@ -1,1 +1,0 @@
-Numbers: Require Numeric Literal Separator
