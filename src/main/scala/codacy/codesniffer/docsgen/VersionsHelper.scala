@@ -11,6 +11,7 @@ object VersionsHelper {
   }
 
   lazy val vipWordpress = properties("automattic/vipwpcs").str
+  lazy val cakephp = properties("cakephp/cakephp-codesniffer").str
   lazy val doctrine = properties("doctrine/coding-standard").str
   lazy val drupalCoder = properties("drupal/coder").str
   lazy val symfony = properties("escapestudios/symfony2-coding-standard").str

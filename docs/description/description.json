@@ -1,4 +1,83 @@
 [ {
+  "patternId" : "CakePHP_Classes_ReturnTypeHint",
+  "title" : "Classes: Return Type Hint",
+  "parameters" : [ ]
+}, {
+  "patternId" : "CakePHP_Commenting_DocBlockAlignment",
+  "title" : "Commenting: Doc Block Alignment",
+  "parameters" : [ ]
+}, {
+  "patternId" : "CakePHP_Commenting_FunctionComment",
+  "title" : "Commenting: Function Comment",
+  "parameters" : [ {
+    "name" : "minimumVisibility",
+    "description" : "minimumVisibility"
+  } ]
+}, {
+  "patternId" : "CakePHP_Commenting_InheritDoc",
+  "title" : "Commenting: Inherit Doc",
+  "parameters" : [ ]
+}, {
+  "patternId" : "CakePHP_ControlStructures_ControlStructures",
+  "title" : "Control Structures: Control Structures",
+  "parameters" : [ ]
+}, {
+  "patternId" : "CakePHP_ControlStructures_ElseIfDeclaration",
+  "title" : "Control Structures: Else If Declaration",
+  "parameters" : [ ]
+}, {
+  "patternId" : "CakePHP_ControlStructures_WhileStructures",
+  "title" : "Control Structures: While Structures",
+  "parameters" : [ ]
+}, {
+  "patternId" : "CakePHP_Formatting_BlankLineBeforeReturn",
+  "title" : "Formatting: Blank Line Before Return",
+  "parameters" : [ ]
+}, {
+  "patternId" : "CakePHP_Functions_ClosureDeclaration",
+  "title" : "Functions: Closure Declaration",
+  "parameters" : [ ]
+}, {
+  "patternId" : "CakePHP_NamingConventions_ValidFunctionName",
+  "title" : "Naming Conventions: Valid Function Name",
+  "parameters" : [ ]
+}, {
+  "patternId" : "CakePHP_NamingConventions_ValidTraitName",
+  "title" : "Naming Conventions: Valid Trait Name",
+  "parameters" : [ ]
+}, {
+  "patternId" : "CakePHP_PHP_DisallowShortOpenTag",
+  "title" : "PHP: Disallow Short Open Tag",
+  "parameters" : [ ]
+}, {
+  "patternId" : "CakePHP_PHP_SingleQuote",
+  "title" : "PHP: Single Quote",
+  "parameters" : [ ]
+}, {
+  "patternId" : "CakePHP_WhiteSpace_EmptyLines",
+  "title" : "White Space: Empty Lines",
+  "parameters" : [ ]
+}, {
+  "patternId" : "CakePHP_WhiteSpace_FunctionCallSpacing",
+  "title" : "White Space: Function Call Spacing",
+  "parameters" : [ ]
+}, {
+  "patternId" : "CakePHP_WhiteSpace_FunctionClosingBraceSpace",
+  "title" : "White Space: Function Closing Brace Space",
+  "parameters" : [ ]
+}, {
+  "patternId" : "CakePHP_WhiteSpace_FunctionOpeningBraceSpace",
+  "title" : "White Space: Function Opening Brace Space",
+  "parameters" : [ ]
+}, {
+  "patternId" : "CakePHP_WhiteSpace_FunctionSpacing",
+  "title" : "White Space: Function Spacing",
+  "parameters" : [ ]
+}, {
+  "patternId" : "CakePHP_WhiteSpace_TabAndSpace",
+  "title" : "White Space: Tab And Space",
+  "parameters" : [ ]
+}, {
   "patternId" : "Drupal_Arrays_Array",
   "title" : "Arrays: Array",
   "parameters" : [ {

@@ -1,7 +1,143 @@
 {
   "name" : "phpcs",
-  "version" : "^3.9.2",
+  "version" : "3.9.2",
   "patterns" : [ {
+    "patternId" : "CakePHP_Classes_ReturnTypeHint",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "CakePHP_Commenting_DocBlockAlignment",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "CakePHP_Commenting_FunctionComment",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "minimumVisibility",
+      "default" : "'private'"
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "CakePHP_Commenting_InheritDoc",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "CakePHP_ControlStructures_ControlStructures",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "CakePHP_ControlStructures_ElseIfDeclaration",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "CakePHP_ControlStructures_WhileStructures",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "CakePHP_Formatting_BlankLineBeforeReturn",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "CakePHP_Functions_ClosureDeclaration",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "CakePHP_NamingConventions_ValidFunctionName",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "CakePHP_NamingConventions_ValidTraitName",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "CakePHP_PHP_DisallowShortOpenTag",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "CakePHP_PHP_SingleQuote",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "CakePHP_WhiteSpace_EmptyLines",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "CakePHP_WhiteSpace_FunctionCallSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "CakePHP_WhiteSpace_FunctionClosingBraceSpace",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "CakePHP_WhiteSpace_FunctionOpeningBraceSpace",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "CakePHP_WhiteSpace_FunctionSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "CakePHP_WhiteSpace_TabAndSpace",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "Drupal_Arrays_Array",
     "level" : "Info",
     "category" : "CodeStyle",
