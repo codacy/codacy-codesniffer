@@ -1,9 +1,16 @@
+FROM sbtscala/scala-sbt:eclipse-temurin-jammy-11.0.22_7_1.9.9_2.13.13 as builder
+WORKDIR /app
+COPY project project
+COPY src src
+COPY build.sbt build.sbt
+RUN sbt stage
+
 FROM php:8.2-alpine
 
-WORKDIR /opt/docker/app
+WORKDIR /app
 
 # Set environment variables
-ENV COMPOSER_HOME /opt/docker/app/.composer
+ENV COMPOSER_HOME /app/.composer
 ENV COMPOSER_ALLOW_SUPERUSER 1 
 ENV PATH ${COMPOSER_HOME}/vendor/bin:${PATH}
 
@@ -29,10 +36,11 @@ RUN rm -rf /tmp/* && \
     adduser -u 2004 -D docker
 
 # Copy codacy-codesniffer binary and docs
-COPY --chown=docker:docker target/docker/stage/opt /opt
+COPY --chown=docker:docker --from=builder /app/target/universal/stage/bin /app/scala/bin
+COPY --chown=docker:docker --from=builder /app/target/universal/stage/lib /app/scala/lib
 COPY --chown=docker:docker docs /docs
 
 WORKDIR /src
 
 USER docker
-ENTRYPOINT ["/opt/docker/bin/codacy-codesniffer"]
+ENTRYPOINT ["/app/scala/bin/codacy-codesniffer"]
