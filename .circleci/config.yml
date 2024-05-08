@@ -10,16 +10,13 @@ workflows:
       - codacy/checkout_and_version:
           write_sbt_version: true
       - codacy/sbt:
-          name: publish_docker_local
+          name: build_docs_and_docker
           cmd: |
             wget https://github.com/phpDocumentor/phpDocumentor/releases/download/v3.4.3/phpDocumentor.phar
             sudo mv phpDocumentor.phar /usr/local/bin/phpdoc
             sudo chmod +x /usr/local/bin/phpdoc
 
-            sbt "set Docker / version := \"latest\";
-                 runMain codacy.codesniffer.docsgen.GeneratorMain;
-                 clean;
-                 Docker / publishLocal"
+            sbt "runMain codacy.codesniffer.docsgen.GeneratorMain"
 
             docker build -t $CIRCLE_PROJECT_REPONAME .
             docker save --output docker-image.tar $CIRCLE_PROJECT_REPONAME
@@ -30,7 +27,7 @@ workflows:
           name: plugins_test
           run_multiple_tests: true
           requires:
-            - publish_docker_local
+            - build_docs_and_docker
       - codacy/publish_docker:
           context: CodacyDocker
           requires:
