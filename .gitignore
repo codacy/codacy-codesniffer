@@ -1,27 +1,17 @@
-/RUNNING_PID
-/logs/
-/project/*-shim.sbt
-/project/project/
-/project/target/
-/target/
-.idea
-.DS_Store
-
-.vscode
-
-.bsp
 .bloop
+.bsp
+.DS_Store
+.idea
 .metals
-*metals.sbt
+.phpcs-cache
+.phpdoc
+.vscode
+RUNNING_PID
+target
+vendor
 
-vendor/
+project/*
+!project/build.properties
+!project/plugins.sbt
 
-.phpdoc/
-
-###> squizlabs/php_codesniffer ###
-/.phpcs-cache
-###< squizlabs/php_codesniffer ###
-
-###> phpstan/phpstan ###
 phpstan.neon
-###< phpstan/phpstan ###
