@@ -1,6 +1,6 @@
 name := "codacy-codesniffer"
 
-scalaVersion := "2.13.11"
+scalaVersion := "2.13.13"
 
 libraryDependencies ++= Seq("org.scala-lang.modules" %% "scala-xml" % "2.2.0",
                             "org.scala-lang.modules" %% "scala-parallel-collections" % "1.0.4",
@@ -9,18 +9,5 @@ libraryDependencies ++= Seq("org.scala-lang.modules" %% "scala-xml" % "2.2.0",
                             "com.github.pathikrit" %% "better-files" % "3.9.2")
 
 enablePlugins(AshScriptPlugin)
-
-enablePlugins(DockerPlugin)
-
-val dockerUser = "docker"
-val dockerGroup = "docker"
-
-dockerBaseImage := "eclipse-temurin:11-jdk-alpine"
-
-Docker / version := "1.0"
-
-Docker / daemonUser := dockerUser
-
-Docker / daemonGroup := dockerGroup
 
 Compile / mainClass := Some("codacy.Engine")
