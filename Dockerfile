@@ -1,8 +1,14 @@
 FROM sbtscala/scala-sbt:eclipse-temurin-jammy-11.0.22_7_1.9.9_2.13.13 as builder
 WORKDIR /app
+COPY build.sbt .
+COPY docs /docs
 COPY project project
 COPY src src
-COPY build.sbt .
+
+RUN wget https://github.com/phpDocumentor/phpDocumentor/releases/download/v3.4.3/phpDocumentor.phar && \
+    mv phpDocumentor.phar /usr/local/bin/phpdoc && \
+    chmod +x /usr/local/bin/phpdoc && \
+    sbt 'runMain codacy.codesniffer.docsgen.GeneratorMain'
 RUN sbt stage
 
 FROM php:8.2-alpine
@@ -15,30 +21,23 @@ ENV COMPOSER_ALLOW_SUPERUSER 1
 ENV PATH ${COMPOSER_HOME}/vendor/bin:${PATH}
 
 # Install necessary packages
-RUN apk --no-cache add git openssh-client openjdk11-jre-headless \
-    php82-openssl php82-phar php82-simplexml php82-json php82-curl \
-    php82-iconv php82-zlib php82-simplexml php82-tokenizer \
-    php82-xmlwriter php82-mbstring php82-xml php82-dom php82-xmlreader
+RUN apk --no-cache add php82 openjdk11-jre-headless
 
 # Configure PHP settings
-RUN ln -s /etc/php82/php.ini /etc/php82/conf.d/php.ini && \
-    sed 's/.*short_open_tag.*=.*/short_open_tag=On/' /etc/php82/php.ini -i
+RUN sed 's/.*short_open_tag.*=.*/short_open_tag=On/' /etc/php82/php.ini -i
 
-# Install Composer
+# Install Composer and packages
 RUN curl -sS https://getcomposer.org/installer | php
-
-# Install packages
 COPY composer.* ${COMPOSER_HOME}
 RUN php composer.phar global install
 
-# Clean up temporary files and cache
+# Cleanup and miscellaneous  
 RUN rm -rf /tmp/* && \
     adduser -u 2004 -D docker
 
-# Copy codacy-codesniffer binary and docs
-COPY --chown=docker:docker --from=builder /app/target/universal/stage/bin /app/scala/bin
-COPY --chown=docker:docker --from=builder /app/target/universal/stage/lib /app/scala/lib
-COPY --chown=docker:docker docs /docs
+# Copy codacy-codesniffer and docs
+COPY --chown=docker:docker --from=builder /app/target/universal/stage scala
+COPY --chown=docker:docker --from=builder /docs /docs
 
 WORKDIR /src
 

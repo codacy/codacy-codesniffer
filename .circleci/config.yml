@@ -7,19 +7,12 @@ orbs:
 workflows:
   compile_test_deploy:
     jobs:
-      - codacy/checkout_and_version:
-          write_sbt_version: true
-      - codacy/sbt:
-          name: build_docs_and_docker
+      - codacy/checkout_and_version
+      - codacy/shell:
+          name: publish_docker_local
           cmd: |
-            wget https://github.com/phpDocumentor/phpDocumentor/releases/download/v3.4.3/phpDocumentor.phar
-            sudo mv phpDocumentor.phar /usr/local/bin/phpdoc
-            sudo chmod +x /usr/local/bin/phpdoc
-
-            sbt "runMain codacy.codesniffer.docsgen.GeneratorMain"
-
-            docker build -t $CIRCLE_PROJECT_REPONAME .
-            docker save --output docker-image.tar $CIRCLE_PROJECT_REPONAME
+            docker build -t $CIRCLE_PROJECT_REPONAME:latest .
+            docker save --output docker-image.tar $CIRCLE_PROJECT_REPONAME:latest
           persist_to_workspace: true
           requires:
             - codacy/checkout_and_version
@@ -27,7 +20,7 @@ workflows:
           name: plugins_test
           run_multiple_tests: true
           requires:
-            - build_docs_and_docker
+            - publish_docker_local
       - codacy/publish_docker:
           context: CodacyDocker
           requires:
