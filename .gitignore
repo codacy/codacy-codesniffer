@@ -1,6 +1,7 @@
 .bloop
 .bsp
 .DS_Store
+.env*
 .idea
 .metals
 .phpcs-cache
@@ -9,9 +10,16 @@
 RUNNING_PID
 target
 vendor
+tests
 
 project/*
 !project/build.properties
 !project/plugins.sbt
 
 phpstan.neon
+
+###> phpunit/phpunit ###
+/phpunit.xml
+/phpunit.xml.dist
+.phpunit.result.cache
+###< phpunit/phpunit ###

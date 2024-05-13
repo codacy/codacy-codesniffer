@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<checkstyle version="4.3">
+  <file name="Generic_Lines.php">
+    <error source="CakePHP_PHP_SingleQuote" line="2" message="Use single instead of double quotes for simple strings." severity="info" />
+    <error source="CakePHP_PHP_SingleQuote" line="3" message="Use single instead of double quotes for simple strings." severity="info" />
+    <error source="CakePHP_PHP_SingleQuote" line="4" message="Use single instead of double quotes for simple strings." severity="info" />
+    <error source="Drupal_Commenting_FileComment" line="1" message="Missing file doc comment" severity="info" />
+    <error source="Drupal_WhiteSpace_OpenTagNewline" line="1" message="The PHP open tag must be followed by exactly one blank line" severity="info" />
+    <error source="Generic_Files_LineLength" line="2" message="Line exceeds 120 characters; contains 121 characters" severity="info" />
+    <error source="Generic_PHP_RequireStrictTypes" line="1" message="Missing required strict_types declaration" severity="info" />
+    <error source="Magento2Framework_Header_Copyright" line="1" message="Copyright is missing" severity="info" />
+    <error source="Magento2_Security_LanguageConstruct" line="2" message="Use of echo language construct is discouraged." severity="error" />
+    <error source="Magento2_Security_LanguageConstruct" line="3" message="Use of echo language construct is discouraged." severity="error" />
+    <error source="Magento2_Security_LanguageConstruct" line="4" message="Use of echo language construct is discouraged." severity="error" />
+    <error source="MEQP1_Security_LanguageConstruct" line="2" message="Use of echo language construct is discouraged." severity="error" />
+    <error source="MEQP1_Security_LanguageConstruct" line="3" message="Use of echo language construct is discouraged." severity="error" />
+    <error source="MEQP1_Security_LanguageConstruct" line="4" message="Use of echo language construct is discouraged." severity="error" />
+    <error source="PEAR_Commenting_FileComment" line="2" message="Missing file doc comment" severity="info" />
+    <error source="SlevomatCodingStandard_Files_LineLength" line="2" message="Line exceeds maximum limit of 120 characters, contains 121 characters." severity="info" />
+    <error source="Squiz_Commenting_FileComment" line="1" message="Missing file doc comment" severity="info" />
+    <error source="Squiz_Strings_DoubleQuoteUsage" line="2" message="String &quot;asdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaadadaasdadaasdadaasdadaasdadaasdada&quot; does not require double quotes; use single quotes instead" severity="info" />
+    <error source="Squiz_Strings_DoubleQuoteUsage" line="3" message="String &quot;asdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasda&quot; does not require double quotes; use single quotes instead" severity="info" />
+    <error source="Squiz_Strings_DoubleQuoteUsage" line="4" message="String &quot;asdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasdadaasdad&quot; does not require double quotes; use single quotes instead" severity="info" />
+    <error source="Vaimo_CodeAnalysis_Copyright" line="2" message="Copyright is missing on file header" severity="info" />
+    <error source="WordPress_Files_FileName" line="1" message="Filenames should be all lowercase with hyphens as word separators. Expected generic-lines.php, but found Generic_Lines.php." severity="info" />
+  </file>
+</checkstyle>

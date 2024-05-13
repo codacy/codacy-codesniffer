@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<ruleset name="Codacy Test Standard" namespace="Codacy\CS">
+  <rule ref="PSR12" />
+</ruleset>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<ruleset name="Codacy Test Standard" namespace="Codacy\CS">
+  <rule ref="PEAR" />
+  <rule ref="PSR1" />
+  <rule ref="PSR2" />
+  <rule ref="PSR12" />
+  <rule ref="Squiz" />
+  <rule ref="Zend" />
+  <rule ref="WordPress-VIP-Go" />
+  <rule ref="WordPressVIPMinimum" />
+  <rule ref="Doctrine" />
+  <rule ref="Drupal" />
+  <rule ref="DrupalPractice" />
+  <rule ref="Symfony" />
+  <rule ref="Magento2" />
+  <rule ref="Magento2Framework" />
+  <rule ref="MEQP1" />
+  <rule ref="Security" />
+  <rule ref="PHPCompatibility" />
+  <rule ref="PHPCompatibilityParagonieRandomCompat" />
+  <rule ref="PHPCompatibilityParagonieSodiumCompat" />
+  <rule ref="PHPCompatibilityWP" />
+  <rule ref="Modernize" />
+  <rule ref="NormalizedArrays" />
+  <rule ref="Universal" />
+  <rule ref="PHPCSUtils" />
+  <rule ref="VariableAnalysis" />
+  <rule ref="SlevomatCodingStandard" />
+  <rule ref="Vaimo" />
+  <rule ref="WordPress" />
+  <rule ref="WordPress-Core" />
+  <rule ref="WordPress-Docs" />
+  <rule ref="WordPress-Extra" />
+  <rule ref="CakePHP" />
+</ruleset>
