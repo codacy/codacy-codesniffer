@@ -1,0 +1,23 @@
+name: Review pattern documentation
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  run-patpatbot:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Run PatPatBot Action
+      uses: nicklem/patpatbot@main
+      env:
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+    - uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: 'gpt: Automated pattern documentation updates'
