@@ -14,7 +14,7 @@ class Generator() {
   private[this] val toolName = Tool.Name("phpcs")
   private[this] val toolVersion = Option(Tool.Version(VersionsHelper.codesniffer))
 
-  val docsDir = File("/docs")
+  val docsDir = File("./docs")
   val patternsFile: File = docsDir / "patterns.json"
   val descriptionsDir: File = docsDir / "description"
   val descriptionFile: File = descriptionsDir / "description.json"

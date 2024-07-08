@@ -9,7 +9,7 @@ import scala.annotation.nowarn
 
 class SymfonyDocsParser extends DocsParser {
 
-  override val repositoryURL = "git@github.com:djoos/Symfony2-coding-standard.git"
+  override val repositoryURL = "https://github.com/djoos/Symfony-coding-standard.git"
 
   override val checkoutCommit: String = VersionsHelper.symfony
 
