@@ -39,9 +39,5 @@
   "require-dev": {
     "phpunit/phpunit": "^11.1",
     "phpcompatibility/php-compatibility": "*"
-  },
-  "scripts": {
-    "post-install-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths vendor/phpcompatibility/php-compatibility",
-    "post-update-cmd" : "\"vendor/bin/phpcs\" --config-set installed_paths vendor/phpcompatibility/php-compatibility"
-}
+  }
 }

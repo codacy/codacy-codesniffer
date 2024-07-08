@@ -30,6 +30,7 @@ RUN sed 's/.*short_open_tag.*=.*/short_open_tag=On/' /etc/php82/php.ini -i
 RUN curl -sS https://getcomposer.org/installer | php
 COPY composer.* ${COMPOSER_HOME}
 RUN php composer.phar global install
+RUN ${COMPOSER_HOME}/vendor/bin/phpcs --config-set installed_paths ${COMPOSER_HOME}/vendor/phpcompatibility/php-compatibility
 
 # Cleanup and miscellaneous  
 RUN rm -rf /tmp/* && \
