@@ -1,5 +1,6 @@
 FROM sbtscala/scala-sbt:eclipse-temurin-jammy-11.0.22_7_1.9.9_2.13.13 as builder
 WORKDIR /app
+COPY composer.json .
 COPY build.sbt .
 COPY docs /docs
 COPY project project
