@@ -1,5 +1,6 @@
 FROM sbtscala/scala-sbt:eclipse-temurin-jammy-11.0.22_7_1.9.9_2.13.13 as builder
 WORKDIR /app
+COPY composer.json .
 COPY build.sbt .
 COPY docs /docs
 COPY project project
@@ -30,7 +31,6 @@ RUN sed 's/.*short_open_tag.*=.*/short_open_tag=On/' /etc/php82/php.ini -i
 RUN curl -sS https://getcomposer.org/installer | php
 COPY composer.* ${COMPOSER_HOME}
 RUN php composer.phar global install
-RUN ${COMPOSER_HOME}/vendor/bin/phpcs --config-set installed_paths ${COMPOSER_HOME}/vendor/phpcompatibility/php-compatibility
 
 # Cleanup and miscellaneous  
 RUN rm -rf /tmp/* && \
