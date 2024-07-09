@@ -2278,12 +2278,12 @@
   "title" : "Security Bad Functions related issue: System Exec Functions",
   "parameters" : [ ]
 }, {
-  "patternId" : "Security_CVE_CVE20132110",
-  "title" : "Security CVE related issue: CVE20132110",
+  "patternId" : "Security_CVE_20132110",
+  "title" : "Security CVE related issue: 20132110",
   "parameters" : [ ]
 }, {
-  "patternId" : "Security_CVE_CVE20134113",
-  "title" : "Security CVE related issue: CVE20134113",
+  "patternId" : "Security_CVE_20134113",
+  "title" : "Security CVE related issue: 20134113",
   "parameters" : [ ]
 }, {
   "patternId" : "Security_Drupal7_AESModule",
@@ -2349,10 +2349,6 @@
 }, {
   "patternId" : "Security_Misc_IncludeMismatch",
   "title" : "Security Misc related issue: Include Mismatch",
-  "parameters" : [ ]
-}, {
-  "patternId" : "Security_Misc_TypeJuggle",
-  "title" : "Security Misc related issue: Type Juggle",
   "parameters" : [ ]
 }, {
   "patternId" : "SlevomatCodingStandard_Arrays_AlphabeticallySortedByKeys",
