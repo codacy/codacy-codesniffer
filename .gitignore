@@ -11,6 +11,7 @@ RUNNING_PID
 target
 vendor
 tests
+.codacyrc
 
 project/*
 !project/build.properties
