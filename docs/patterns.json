@@ -3648,14 +3648,14 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "Security_CVE_CVE20132110",
+    "patternId" : "Security_CVE_20132110",
     "level" : "Warning",
     "category" : "Security",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "Security_CVE_CVE20134113",
+    "patternId" : "Security_CVE_20134113",
     "level" : "Warning",
     "category" : "Security",
     "parameters" : [ ],
@@ -3768,13 +3768,6 @@
   }, {
     "patternId" : "Security_Misc_IncludeMismatch",
     "level" : "Error",
-    "category" : "Security",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "Security_Misc_TypeJuggle",
-    "level" : "Warning",
     "category" : "Security",
     "parameters" : [ ],
     "languages" : [ ],

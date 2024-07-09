@@ -59,7 +59,7 @@ To add a new plugin to Codesniffer:
 2.  Add to `src/main/scala/codacy/codesniffer/docsgen/VersionsHelper.scala` the plugin version:
 
     ```scala
-    lazy val newPlugin = properties("pluginNamespace/pluginName").str
+    lazy val newPlugin = properties("pluginNamespace/pluginName").str.replace("^","")
     ```
 
 3.  Implement the plugin documentation parser inside `src/main/scala/codacy/codesniffer/docsgen/parsers`. The parser must extend `DocsParser` and override the following:
