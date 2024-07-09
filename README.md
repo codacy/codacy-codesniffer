@@ -12,7 +12,6 @@ See the [codacy-engine-scala-seed](https://github.com/codacy/codacy-engine-scala
 You can create the docker by doing:
 
 ```bash
-sbt Docker / publishLocal
 docker build -t codacy-codesniffer .
 ```
 
@@ -40,7 +39,7 @@ sudo chmod +x /usr/local/bin/phpdoc
 Update the versions in `composer.json` and run
 
 ```bash
-sbt "runMain codacy.codesniffer.docsgen.GeneratorMain"
+sbt "doc-generator/runMain codacy.codesniffer.docsgen.GeneratorMain"
 ```
 
 This will create updated `patterns.json`, `description.json` and the individual documentation Markdown files.
