@@ -2465,14 +2465,7 @@
     "languages" : [ ],
     "enabled" : true
   }, {
-    "patternId" : "PHPCompatibility_Attributes_NewAttributes",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_Classes_ForbiddenExtendingFinalPHPClass",
+    "patternId" : "PHPCompatibility_Classes_ForbiddenAbstractPrivateMethods",
     "level" : "Warning",
     "category" : "Compatibility",
     "parameters" : [ ],
@@ -2500,20 +2493,6 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "PHPCompatibility_Classes_NewConstructorPropertyPromotion",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_Classes_NewFinalConstants",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "PHPCompatibility_Classes_NewLateStaticBinding",
     "level" : "Warning",
     "category" : "Compatibility",
@@ -2521,28 +2500,7 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "PHPCompatibility_Classes_NewReadonlyClasses",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_Classes_NewReadonlyProperties",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "PHPCompatibility_Classes_NewTypedProperties",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_Classes_RemovedClasses",
     "level" : "Warning",
     "category" : "Compatibility",
     "parameters" : [ ],
@@ -2557,13 +2515,6 @@
     "enabled" : false
   }, {
     "patternId" : "PHPCompatibility_Constants_NewConstants",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_Constants_NewConstantsInTraits",
     "level" : "Warning",
     "category" : "Compatibility",
     "parameters" : [ ],
@@ -2640,28 +2591,7 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "PHPCompatibility_ControlStructures_NewNonCapturingCatch",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "PHPCompatibility_Extensions_RemovedExtensions",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_FunctionDeclarations_AbstractPrivateMethods",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_FunctionDeclarations_ForbiddenFinalPrivateMethods",
     "level" : "Warning",
     "category" : "Compatibility",
     "parameters" : [ ],
@@ -2731,42 +2661,7 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "PHPCompatibility_FunctionDeclarations_NewTrailingComma",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "PHPCompatibility_FunctionDeclarations_NonStaticMagicMethods",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_FunctionDeclarations_RemovedCallingDestructAfterConstructorExit",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_FunctionDeclarations_RemovedImplicitlyNullableParam",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_FunctionDeclarations_RemovedOptionalBeforeRequiredParam",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_FunctionDeclarations_RemovedReturnByReferenceFromVoid",
     "level" : "Warning",
     "category" : "Compatibility",
     "parameters" : [ ],
@@ -2830,13 +2725,6 @@
     "enabled" : false
   }, {
     "patternId" : "PHPCompatibility_FunctionUse_NewFunctions",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_FunctionUse_NewNamedParameters",
     "level" : "Warning",
     "category" : "Compatibility",
     "parameters" : [ ],
@@ -2920,20 +2808,6 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "PHPCompatibility_InitialValue_NewNewInDefine",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_InitialValue_NewNewInInitializers",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "PHPCompatibility_Interfaces_InternalInterfaces",
     "level" : "Warning",
     "category" : "Compatibility",
@@ -2948,13 +2822,6 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "PHPCompatibility_Interfaces_RemovedSerializable",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "PHPCompatibility_Keywords_CaseSensitiveKeywords",
     "level" : "Warning",
     "category" : "Compatibility",
@@ -2963,6 +2830,20 @@
     "enabled" : false
   }, {
     "patternId" : "PHPCompatibility_Keywords_ForbiddenNames",
+    "level" : "Warning",
+    "category" : "Compatibility",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "PHPCompatibility_Keywords_ForbiddenNamesAsDeclared",
+    "level" : "Warning",
+    "category" : "Compatibility",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "PHPCompatibility_Keywords_ForbiddenNamesAsInvokedFunctions",
     "level" : "Warning",
     "category" : "Compatibility",
     "parameters" : [ ],
@@ -3053,35 +2934,7 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "PHPCompatibility_Namespaces_ReservedNames",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_Numbers_NewExplicitOctalNotation",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_Numbers_NewNumericLiteralSeparator",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_Numbers_RemovedHexadecimalNumericStrings",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_Numbers_ValidIntegers",
+    "patternId" : "PHPCompatibility_Miscellaneous_ValidIntegers",
     "level" : "Warning",
     "category" : "Compatibility",
     "parameters" : [ ],
@@ -3123,35 +2976,7 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "PHPCompatibility_ParameterValues_ChangedIntToBoolParamType",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_ParameterValues_ChangedObStartEraseFlags",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_ParameterValues_ForbiddenGetClassNoArgsOutsideOO",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "PHPCompatibility_ParameterValues_ForbiddenGetClassNull",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_ParameterValues_ForbiddenSessionModuleNameUser",
     "level" : "Warning",
     "category" : "Compatibility",
     "parameters" : [ ],
@@ -3165,21 +2990,7 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "PHPCompatibility_ParameterValues_NewArrayMergeRecursiveWithGlobalsVar",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "PHPCompatibility_ParameterValues_NewArrayReduceInitialType",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_ParameterValues_NewAssertCustomException",
     "level" : "Warning",
     "category" : "Compatibility",
     "parameters" : [ ],
@@ -3194,13 +3005,6 @@
     "enabled" : false
   }, {
     "patternId" : "PHPCompatibility_ParameterValues_NewHTMLEntitiesEncodingDefault",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_ParameterValues_NewHTMLEntitiesFlagsDefault",
     "level" : "Warning",
     "category" : "Compatibility",
     "parameters" : [ ],
@@ -3229,13 +3033,6 @@
     "enabled" : false
   }, {
     "patternId" : "PHPCompatibility_ParameterValues_NewNegativeStringOffset",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_ParameterValues_NewNumberFormatMultibyteSeparators",
     "level" : "Warning",
     "category" : "Compatibility",
     "parameters" : [ ],
@@ -3277,27 +3074,6 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "PHPCompatibility_ParameterValues_RemovedAssertStringAssertion",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_ParameterValues_RemovedGetClassNoArgs",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_ParameterValues_RemovedGetDefinedFunctionsExcludeDisabledFalse",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "PHPCompatibility_ParameterValues_RemovedHashAlgorithms",
     "level" : "Warning",
     "category" : "Compatibility",
@@ -3313,27 +3089,6 @@
     "enabled" : false
   }, {
     "patternId" : "PHPCompatibility_ParameterValues_RemovedImplodeFlexibleParamOrder",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_ParameterValues_RemovedLdapConnectSignatures",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_ParameterValues_RemovedMbCheckEncodingNoArgs",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_ParameterValues_RemovedMbStrimWidthNegativeWidth",
     "level" : "Warning",
     "category" : "Compatibility",
     "parameters" : [ ],
@@ -3375,20 +3130,6 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "PHPCompatibility_ParameterValues_RemovedSplAutoloadRegisterThrowFalse",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_ParameterValues_RemovedVersionCompareOperators",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "PHPCompatibility_Syntax_ForbiddenCallTimePassByReference",
     "level" : "Warning",
     "category" : "Compatibility",
@@ -3424,13 +3165,6 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "PHPCompatibility_Syntax_NewFirstClassCallables",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "PHPCompatibility_Syntax_NewFlexibleHeredocNowdoc",
     "level" : "Warning",
     "category" : "Compatibility",
@@ -3446,27 +3180,6 @@
     "enabled" : false
   }, {
     "patternId" : "PHPCompatibility_Syntax_NewFunctionCallTrailingComma",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_Syntax_NewInterpolatedStringDereferencing",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_Syntax_NewMagicConstantDereferencing",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_Syntax_NewNestedStaticAccess",
     "level" : "Warning",
     "category" : "Compatibility",
     "parameters" : [ ],
@@ -3501,13 +3214,6 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "PHPCompatibility_TextStrings_RemovedDollarBraceStringEmbeds",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "PHPCompatibility_TypeCasts_NewTypeCasts",
     "level" : "Warning",
     "category" : "Compatibility",
@@ -3523,6 +3229,13 @@
     "enabled" : false
   }, {
     "patternId" : "PHPCompatibility_Upgrade_LowPHP",
+    "level" : "Warning",
+    "category" : "Compatibility",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "PHPCompatibility_Upgrade_LowPHPCS",
     "level" : "Warning",
     "category" : "Compatibility",
     "parameters" : [ ],
@@ -3558,13 +3271,6 @@
     "enabled" : false
   }, {
     "patternId" : "PHPCompatibility_Variables_NewUniformVariableSyntax",
-    "level" : "Warning",
-    "category" : "Compatibility",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "PHPCompatibility_Variables_RemovedIndirectModificationOfGlobals",
     "level" : "Warning",
     "category" : "Compatibility",
     "parameters" : [ ],
