@@ -2170,6 +2170,13 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "Magento2_Templates_ObjectManager",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "Magento2_Templates_ThisInTemplate",
     "level" : "Info",
     "category" : "CodeStyle",

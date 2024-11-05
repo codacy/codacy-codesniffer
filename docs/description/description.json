@@ -1369,6 +1369,10 @@
   "title" : "Strings: String Concat",
   "parameters" : [ ]
 }, {
+  "patternId" : "Magento2_Templates_ObjectManager",
+  "title" : "Templates: Object Manager",
+  "parameters" : [ ]
+}, {
   "patternId" : "Magento2_Templates_ThisInTemplate",
   "title" : "Templates: This In Template",
   "parameters" : [ ]
