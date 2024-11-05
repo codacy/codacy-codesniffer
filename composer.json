@@ -17,7 +17,8 @@
     "squizlabs/php_codesniffer": "3.10.1",
     "symfony/flex": "^2.4.5",
     "vaimo/phpcs-rulesets": "dev-codacy",
-    "wp-coding-standards/wpcs": "^3.1.0"
+    "wp-coding-standards/wpcs": "^3.1.0",
+    "vaimo/uk-phpcs-standards": "dev-master"
   },
   "repositories": [
     {
@@ -27,6 +28,10 @@
     {
       "type": "vcs",
       "url": "https://bitbucket.org/vaimo/phpcs-rulesets.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://bitbucket.org/vaimo/uk-phpcs-standards.git"
     }
   ],
   "config": {

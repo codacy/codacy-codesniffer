@@ -24,3 +24,6 @@ phpstan.neon
 /phpunit.xml.dist
 .phpunit.result.cache
 ###< phpunit/phpunit ###
+
+
+composer.phar

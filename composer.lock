@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "88a4faee3ab8f0e3ef79c0ff168d1c12",
+    "content-hash": "c432a6a428685b7dfceff4dd6fe09da7",
     "packages": [
         {
             "name": "automattic/vipwpcs",
@@ -1550,6 +1550,51 @@
                 "issues": "https://bitbucket.org/vaimo/phpcs-rulesets/issues"
             },
             "time": "2024-05-02T11:40:44+00:00"
+        },
+        {
+            "name": "vaimo/uk-phpcs-standards",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/vaimo/uk-phpcs-standards.git",
+                "reference": "54b4dcfa87af2823c199f9b51e751d6171e1c4f1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/vaimo/uk-phpcs-standards/get/54b4dcfa87af2823c199f9b51e751d6171e1c4f1.zip",
+                "reference": "54b4dcfa87af2823c199f9b51e751d6171e1c4f1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "slevomat/coding-standard": "^8.15",
+                "squizlabs/php_codesniffer": "^3.10",
+                "vaimo/composer-changelogs": "^1.0"
+            },
+            "default-branch": true,
+            "type": "phpcodesniffer-standard",
+            "autoload": {
+                "psr-4": {
+                    "Vaimo\\UkPhpcsStandards\\": "Vaimo/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Piero Bernardi",
+                    "email": "piero.bernardi@vaimo.com"
+                }
+            ],
+            "description": "Custom PHP_CodeSniffer rules",
+            "homepage": "https://bitbucket.org/vaimo/uk-phpcs-standards",
+            "support": {
+                "source": "https://bitbucket.org/vaimo/uk-phpcs-standards/src/54b4dcfa87af2823c199f9b51e751d6171e1c4f1/?at=master"
+            },
+            "time": "2024-10-24T09:33:18+00:00"
         },
         {
             "name": "webonyx/graphql-php",
@@ -3329,11 +3374,12 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "vaimo/phpcs-rulesets": 20
+        "vaimo/phpcs-rulesets": 20,
+        "vaimo/uk-phpcs-standards": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
+    "platform": {},
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
