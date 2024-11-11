@@ -4104,6 +4104,22 @@
   "title" : "Whitespace: Discourage Fitzinator",
   "parameters" : [ ]
 }, {
+  "patternId" : "Vaimo_Custom_ArrayAccess",
+  "title" : "Custom: Array Access",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Vaimo_Custom_FixMultilineIf",
+  "title" : "Custom: Fix Multiline If",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Vaimo_Custom_LegacyDocblockTags",
+  "title" : "Custom: Legacy Docblock Tags",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Vaimo_Custom_NoPhpCsDisable",
+  "title" : "Custom: No Php Cs Disable",
+  "parameters" : [ ]
+}, {
   "patternId" : "WordPressVIPMinimum_Classes_DeclarationCompatibility",
   "title" : "Classes: Declaration Compatibility",
   "parameters" : [ ]

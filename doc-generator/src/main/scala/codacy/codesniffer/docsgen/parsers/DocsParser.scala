@@ -87,6 +87,7 @@ trait DocsParser {
 
   private[this] def withRepo[A](repositoryURL: String, checkoutCommit: String)(f: File => A): Either[Throwable, A] = {
     val dir = Files.createTempDirectory("")
+    println(s"Cloning $repositoryURL into $dir")
     for {
       _ <- Right(
         CommandRunner
