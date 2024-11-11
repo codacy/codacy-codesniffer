@@ -6375,6 +6375,34 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "Vaimo_Custom_ArrayAccess",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Vaimo_Custom_FixMultilineIf",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Vaimo_Custom_LegacyDocblockTags",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Vaimo_Custom_NoPhpCsDisable",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "WordPressVIPMinimum_Classes_DeclarationCompatibility",
     "level" : "Info",
     "category" : "CodeStyle",

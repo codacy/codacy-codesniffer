@@ -29,6 +29,7 @@ class Generator() {
          new PHPCSSecurityAuditDocsParser(),
          new SlevomatCSDocsParser(),
          new SymfonyDocsParser(),
+         new VaimoUKParser(),
          new VipWordPressDocsParser(),
          new WordPressCSDocsParser()
     )
