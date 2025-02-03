@@ -19,10 +19,7 @@
     "patternId" : "CakePHP_Commenting_FunctionComment",
     "level" : "Info",
     "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "minimumVisibility",
-      "default" : "'private'"
-    } ],
+    "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
   }, {
@@ -30,6 +27,19 @@
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "CakePHP_Commenting_TypeHint",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "convertArraysToGenerics",
+      "default" : true
+    }, {
+      "name" : "ignorePhpStormGenerics",
+      "default" : false
+    } ],
     "languages" : [ ],
     "enabled" : false
   }, {
@@ -6375,6 +6385,134 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "Vaimo_Classes_ConstantDeclarationOrder",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Vaimo_Classes_ObjectInstantiation",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "allowAnonymousClasses",
+      "default" : true
+    }, {
+      "name" : "reportReflectionError",
+      "default" : false
+    }, {
+      "name" : "considerFinalInstantiationOnReflectionError",
+      "default" : false
+    }, {
+      "name" : "allowInstantiateFinalClasses",
+      "default" : true
+    }, {
+      "name" : "allowNamedConstructors",
+      "default" : true
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Vaimo_Classes_PropertyUnderscore",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "allowInherited",
+      "default" : true
+    }, {
+      "name" : "skipOnReflectionError",
+      "default" : false
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Vaimo_Classes_ProtectedMember",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "considerInheritedOnReflectionError",
+      "default" : false
+    }, {
+      "name" : "allowProtectedPropertyInAbstractClass",
+      "default" : false
+    }, {
+      "name" : "allowInherited",
+      "default" : true
+    }, {
+      "name" : "allowAbstract",
+      "default" : true
+    }, {
+      "name" : "allowProtectedFunctionInAbstractClass",
+      "default" : true
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Vaimo_Classes_UndefinedProperty",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "skipOnReflectionError",
+      "default" : false
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Vaimo_CodeAnalysis_Copyright",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Vaimo_CodeAnalysis_UnusedFunctionParameter",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "allowUnusedInheritedParameters",
+      "default" : true
+    }, {
+      "name" : "considerInheritedOnReflectionError",
+      "default" : false
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Vaimo_Comments_DeprecationNotice",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Vaimo_ControlStructures_NestedIf",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "maxAllowedNesting",
+      "default" : 0
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Vaimo_ControlStructures_TernaryOperator",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Vaimo_ControlStructures_TernaryOperatorPlacement",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "allowOnly",
+      "default" : "self::PLACEMENT_FIRST"
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "Vaimo_Custom_ArrayAccess",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -6397,6 +6535,88 @@
     "enabled" : false
   }, {
     "patternId" : "Vaimo_Custom_NoPhpCsDisable",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Vaimo_Exceptions_TryProcessSystemResources",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Vaimo_NamingConventions_AndOrInClassName",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Vaimo_NamingConventions_AndOrInMethodName",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Vaimo_NamingConventions_AndOrInVariableName",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Vaimo_NamingConventions_IllegalWordInClassName",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Vaimo_NamingConventions_IllegalWordInMethodName",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "allowInheritedMethods",
+      "default" : true
+    }, {
+      "name" : "considerInheritedOnReflectionError",
+      "default" : false
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Vaimo_NamingConventions_IllegalWordInVariableName",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "allowInheritedProperties",
+      "default" : true
+    }, {
+      "name" : "considerInheritedOnReflectionError",
+      "default" : false
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Vaimo_NamingConventions_VariablesCamelCase",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Vaimo_PHP_NoSilencedErrors",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Vaimo_TypeHints_IllegalReturnTypeAnnotation",
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ ],

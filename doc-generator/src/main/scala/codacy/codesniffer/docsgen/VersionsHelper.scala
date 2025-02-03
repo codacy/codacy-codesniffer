@@ -23,4 +23,5 @@ object VersionsHelper {
   lazy val codesniffer = properties("squizlabs/php_codesniffer").str.replace("^","")
   lazy val wordpress = properties("wp-coding-standards/wpcs").str.replace("^","")
   lazy val vaimoUK = properties("vaimo/uk-phpcs-standards").str.replace("^","")
+  lazy val vaimo = properties("vaimo/phpcs-rulesets").str.replace("^","")
 }
