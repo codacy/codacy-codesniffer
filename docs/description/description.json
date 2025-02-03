@@ -9,14 +9,21 @@
 }, {
   "patternId" : "CakePHP_Commenting_FunctionComment",
   "title" : "Commenting: Function Comment",
-  "parameters" : [ {
-    "name" : "minimumVisibility",
-    "description" : "minimumVisibility"
-  } ]
+  "parameters" : [ ]
 }, {
   "patternId" : "CakePHP_Commenting_InheritDoc",
   "title" : "Commenting: Inherit Doc",
   "parameters" : [ ]
+}, {
+  "patternId" : "CakePHP_Commenting_TypeHint",
+  "title" : "Commenting: Type Hint",
+  "parameters" : [ {
+    "name" : "convertArraysToGenerics",
+    "description" : "convertArraysToGenerics"
+  }, {
+    "name" : "ignorePhpStormGenerics",
+    "description" : "ignorePhpStormGenerics"
+  } ]
 }, {
   "patternId" : "CakePHP_ControlStructures_ControlStructures",
   "title" : "Control Structures: Control Structures",
@@ -4104,6 +4111,101 @@
   "title" : "Whitespace: Discourage Fitzinator",
   "parameters" : [ ]
 }, {
+  "patternId" : "Vaimo_Classes_ConstantDeclarationOrder",
+  "title" : "Classes: Constant Declaration Order",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Vaimo_Classes_ObjectInstantiation",
+  "title" : "Classes: Object Instantiation",
+  "parameters" : [ {
+    "name" : "allowNamedConstructors",
+    "description" : "allowNamedConstructors"
+  }, {
+    "name" : "allowInstantiateFinalClasses",
+    "description" : "allowInstantiateFinalClasses"
+  }, {
+    "name" : "reportReflectionError",
+    "description" : "reportReflectionError"
+  }, {
+    "name" : "considerFinalInstantiationOnReflectionError",
+    "description" : "considerFinalInstantiationOnReflectionError"
+  }, {
+    "name" : "allowAnonymousClasses",
+    "description" : "allowAnonymousClasses"
+  } ]
+}, {
+  "patternId" : "Vaimo_Classes_PropertyUnderscore",
+  "title" : "Classes: Property Underscore",
+  "parameters" : [ {
+    "name" : "allowInherited",
+    "description" : "allowInherited"
+  }, {
+    "name" : "skipOnReflectionError",
+    "description" : "skipOnReflectionError"
+  } ]
+}, {
+  "patternId" : "Vaimo_Classes_ProtectedMember",
+  "title" : "Classes: Protected Member",
+  "parameters" : [ {
+    "name" : "considerInheritedOnReflectionError",
+    "description" : "considerInheritedOnReflectionError"
+  }, {
+    "name" : "allowAbstract",
+    "description" : "allowAbstract"
+  }, {
+    "name" : "allowProtectedPropertyInAbstractClass",
+    "description" : "allowProtectedPropertyInAbstractClass"
+  }, {
+    "name" : "allowProtectedFunctionInAbstractClass",
+    "description" : "allowProtectedFunctionInAbstractClass"
+  }, {
+    "name" : "allowInherited",
+    "description" : "allowInherited"
+  } ]
+}, {
+  "patternId" : "Vaimo_Classes_UndefinedProperty",
+  "title" : "Classes: Undefined Property",
+  "parameters" : [ {
+    "name" : "skipOnReflectionError",
+    "description" : "skipOnReflectionError"
+  } ]
+}, {
+  "patternId" : "Vaimo_CodeAnalysis_Copyright",
+  "title" : "Code Analysis: Copyright",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Vaimo_CodeAnalysis_UnusedFunctionParameter",
+  "title" : "Code Analysis: Unused Function Parameter",
+  "parameters" : [ {
+    "name" : "allowUnusedInheritedParameters",
+    "description" : "allowUnusedInheritedParameters"
+  }, {
+    "name" : "considerInheritedOnReflectionError",
+    "description" : "considerInheritedOnReflectionError"
+  } ]
+}, {
+  "patternId" : "Vaimo_Comments_DeprecationNotice",
+  "title" : "Comments: Deprecation Notice",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Vaimo_ControlStructures_NestedIf",
+  "title" : "Control Structures: Nested If",
+  "parameters" : [ {
+    "name" : "maxAllowedNesting",
+    "description" : "maxAllowedNesting"
+  } ]
+}, {
+  "patternId" : "Vaimo_ControlStructures_TernaryOperator",
+  "title" : "Control Structures: Ternary Operator",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Vaimo_ControlStructures_TernaryOperatorPlacement",
+  "title" : "Control Structures: Ternary Operator Placement",
+  "parameters" : [ {
+    "name" : "allowOnly",
+    "description" : "allowOnly"
+  } ]
+}, {
   "patternId" : "Vaimo_Custom_ArrayAccess",
   "title" : "Custom: Array Access",
   "parameters" : [ ]
@@ -4118,6 +4220,58 @@
 }, {
   "patternId" : "Vaimo_Custom_NoPhpCsDisable",
   "title" : "Custom: No Php Cs Disable",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Vaimo_Exceptions_TryProcessSystemResources",
+  "title" : "Exceptions: Try Process System Resources",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Vaimo_NamingConventions_AndOrInClassName",
+  "title" : "Naming Conventions: And Or In Class Name",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Vaimo_NamingConventions_AndOrInMethodName",
+  "title" : "Naming Conventions: And Or In Method Name",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Vaimo_NamingConventions_AndOrInVariableName",
+  "title" : "Naming Conventions: And Or In Variable Name",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Vaimo_NamingConventions_IllegalWordInClassName",
+  "title" : "Naming Conventions: Illegal Word In Class Name",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Vaimo_NamingConventions_IllegalWordInMethodName",
+  "title" : "Naming Conventions: Illegal Word In Method Name",
+  "parameters" : [ {
+    "name" : "allowInheritedMethods",
+    "description" : "allowInheritedMethods"
+  }, {
+    "name" : "considerInheritedOnReflectionError",
+    "description" : "considerInheritedOnReflectionError"
+  } ]
+}, {
+  "patternId" : "Vaimo_NamingConventions_IllegalWordInVariableName",
+  "title" : "Naming Conventions: Illegal Word In Variable Name",
+  "parameters" : [ {
+    "name" : "allowInheritedProperties",
+    "description" : "allowInheritedProperties"
+  }, {
+    "name" : "considerInheritedOnReflectionError",
+    "description" : "considerInheritedOnReflectionError"
+  } ]
+}, {
+  "patternId" : "Vaimo_NamingConventions_VariablesCamelCase",
+  "title" : "Naming Conventions: Variables Camel Case",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Vaimo_PHP_NoSilencedErrors",
+  "title" : "PHP: No Silenced Errors",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Vaimo_TypeHints_IllegalReturnTypeAnnotation",
+  "title" : "Type Hints: Illegal Return Type Annotation",
   "parameters" : [ ]
 }, {
   "patternId" : "WordPressVIPMinimum_Classes_DeclarationCompatibility",
