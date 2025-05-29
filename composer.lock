@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c432a6a428685b7dfceff4dd6fe09da7",
+    "content-hash": "86ce6f342ac7e0ab521dd4035c6d1a7f",
     "packages": [
         {
             "name": "automattic/vipwpcs",
@@ -1229,6 +1229,73 @@
             "time": "2024-05-22T21:24:41+00:00"
         },
         {
+            "name": "symfony/deprecation-contracts",
+            "version": "v3.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/deprecation-contracts.git",
+                "reference": "63afe740e99a13ba87ec199bb07bbdee937a5b62"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/63afe740e99a13ba87ec199bb07bbdee937a5b62",
+                "reference": "63afe740e99a13ba87ec199bb07bbdee937a5b62",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "type": "library",
+            "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
+                "branch-alias": {
+                    "dev-main": "3.6-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "function.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "A generic function and convention to trigger deprecation notices",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.6.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-09-25T14:21:43+00:00"
+        },
+        {
             "name": "symfony/flex",
             "version": "v2.4.5",
             "source": {
@@ -1295,20 +1362,20 @@
         },
         {
             "name": "symfony/polyfill",
-            "version": "v1.30.0",
+            "version": "v1.32.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill.git",
-                "reference": "697a1da855a225b57f1b2ee3640380b46787f854"
+                "reference": "c4ee386e95ccdbea59cea802ea776d806319d506"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill/zipball/697a1da855a225b57f1b2ee3640380b46787f854",
-                "reference": "697a1da855a225b57f1b2ee3640380b46787f854",
+                "url": "https://api.github.com/repos/symfony/polyfill/zipball/c4ee386e95ccdbea59cea802ea776d806319d506",
+                "reference": "c4ee386e95ccdbea59cea802ea776d806319d506",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=7.2"
             },
             "replace": {
                 "symfony/polyfill-apcu": "self.version",
@@ -1320,7 +1387,6 @@
                 "symfony/polyfill-intl-messageformatter": "self.version",
                 "symfony/polyfill-intl-normalizer": "self.version",
                 "symfony/polyfill-mbstring": "self.version",
-                "symfony/polyfill-php72": "self.version",
                 "symfony/polyfill-php73": "self.version",
                 "symfony/polyfill-php74": "self.version",
                 "symfony/polyfill-php80": "self.version",
@@ -1328,14 +1394,14 @@
                 "symfony/polyfill-php82": "self.version",
                 "symfony/polyfill-php83": "self.version",
                 "symfony/polyfill-php84": "self.version",
+                "symfony/polyfill-php85": "self.version",
                 "symfony/polyfill-util": "self.version",
-                "symfony/polyfill-uuid": "self.version",
-                "symfony/polyfill-xml": "self.version"
+                "symfony/polyfill-uuid": "self.version"
             },
             "require-dev": {
-                "symfony/intl": "^4.4|^5.0|^6.0",
-                "symfony/phpunit-bridge": "^5.3|^6.0",
-                "symfony/var-dumper": "^4.4|^5.1|^6.0"
+                "symfony/intl": "^5.4|^6.4",
+                "symfony/phpunit-bridge": "^6.4",
+                "symfony/var-dumper": "^5.4|^6.4"
             },
             "type": "library",
             "autoload": {
@@ -1359,6 +1425,7 @@
                     "src/Intl/Icu/Resources/stubs",
                     "src/Intl/MessageFormatter/Resources/stubs",
                     "src/Intl/Normalizer/Resources/stubs",
+                    "src/Php85/Resources/stubs",
                     "src/Php84/Resources/stubs",
                     "src/Php83/Resources/stubs",
                     "src/Php82/Resources/stubs",
@@ -1392,7 +1459,7 @@
             ],
             "support": {
                 "issues": "https://github.com/symfony/polyfill/issues",
-                "source": "https://github.com/symfony/polyfill/tree/v1.30.0"
+                "source": "https://github.com/symfony/polyfill/tree/v1.32.0"
             },
             "funding": [
                 {
@@ -1408,24 +1475,25 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-06-19T12:51:52+00:00"
+            "time": "2025-05-02T09:40:28+00:00"
         },
         {
             "name": "symfony/yaml",
-            "version": "v7.1.1",
+            "version": "v7.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "fa34c77015aa6720469db7003567b9f772492bf2"
+                "reference": "cea40a48279d58dc3efee8112634cb90141156c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/fa34c77015aa6720469db7003567b9f772492bf2",
-                "reference": "fa34c77015aa6720469db7003567b9f772492bf2",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/cea40a48279d58dc3efee8112634cb90141156c2",
+                "reference": "cea40a48279d58dc3efee8112634cb90141156c2",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.2",
+                "symfony/deprecation-contracts": "^2.5|^3.0",
                 "symfony/polyfill-ctype": "^1.8"
             },
             "conflict": {
@@ -1463,7 +1531,7 @@
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/yaml/tree/v7.1.1"
+                "source": "https://github.com/symfony/yaml/tree/v7.3.0"
             },
             "funding": [
                 {
@@ -1479,7 +1547,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-05-31T14:57:53+00:00"
+            "time": "2025-04-04T10:10:33+00:00"
         },
         {
             "name": "vaimo/phpcs-rulesets",
@@ -3379,7 +3447,7 @@
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": {},
-    "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
 }
