@@ -41,10 +41,6 @@
   "title" : "Formatting: Blank Line Before Return",
   "parameters" : [ ]
 }, {
-  "patternId" : "CakePHP_Functions_ClosureDeclaration",
-  "title" : "Functions: Closure Declaration",
-  "parameters" : [ ]
-}, {
   "patternId" : "CakePHP_NamingConventions_ValidFunctionName",
   "title" : "Naming Conventions: Valid Function Name",
   "parameters" : [ ]
@@ -1037,6 +1033,22 @@
 }, {
   "patternId" : "MEQP1_Templates_XssTemplate",
   "title" : "Templates: Xss Template",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2Framework_Header_Copyright",
+  "title" : "Header: Copyright",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2Framework_Header_CopyrightAnotherExtensionsFiles",
+  "title" : "Header: Copyright Another Extensions Files",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2Framework_Header_CopyrightGraphQL",
+  "title" : "Header: Copyright Graph QL",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Magento2Framework_Header_License",
+  "title" : "Header: License",
   "parameters" : [ ]
 }, {
   "patternId" : "Magento2_Annotation_MethodAnnotationStructure",

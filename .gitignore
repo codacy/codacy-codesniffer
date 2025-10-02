@@ -27,3 +27,6 @@ phpstan.neon
 
 
 composer.phar
+
+#Ignore vscode AI rules
+.github/instructions/codacy.instructions.md

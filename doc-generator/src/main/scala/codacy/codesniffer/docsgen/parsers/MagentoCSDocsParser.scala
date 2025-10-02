@@ -13,7 +13,7 @@ class MagentoCSDocsParser extends DocsParser {
 
   override val checkoutCommit: String = VersionsHelper.magentoCS
 
-  override val sniffRegex: Regex = """.*(Magento2)\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
+  override val sniffRegex: Regex = """.*(Magento2(?:Framework)?)\/Sniffs\/(.*?)\/(.*?)Sniff.php""".r
 
   @nowarn("msg=match may not be exhaustive")
   override def patternIdPartsFor(relativizedFilePath: String): PatternIdParts = {

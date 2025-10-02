@@ -71,13 +71,6 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "CakePHP_Functions_ClosureDeclaration",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "CakePHP_NamingConventions_ValidFunctionName",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -1589,6 +1582,34 @@
     "enabled" : false
   }, {
     "patternId" : "MEQP1_Templates_XssTemplate",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2Framework_Header_Copyright",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2Framework_Header_CopyrightAnotherExtensionsFiles",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2Framework_Header_CopyrightGraphQL",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Magento2Framework_Header_License",
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ ],
