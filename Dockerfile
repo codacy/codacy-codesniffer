@@ -1,4 +1,4 @@
-FROM sbtscala/scala-sbt:eclipse-temurin-jammy-11.0.22_7_1.9.9_3.4.0 as doc-generator
+FROM sbtscala/scala-sbt:eclipse-temurin-jammy-11.0.22_7_1.9.9_2.13.13 as doc-generator
 
 WORKDIR /app
 
@@ -13,7 +13,7 @@ COPY doc-generator doc-generator
 
 RUN sbt 'doc-generator/runMain codacy.codesniffer.docsgen.GeneratorMain'
 
-FROM sbtscala/scala-sbt:graalvm-ce-22.3.3-b1-java17_1.12.11_3.8.4 AS builder
+FROM sbtscala/scala-sbt:graalvm-ce-22.3.3-b1-java17_1.9.9_3.4.0 AS builder
 
 WORKDIR /app
 
