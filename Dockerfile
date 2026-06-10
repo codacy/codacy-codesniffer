@@ -24,7 +24,7 @@ COPY src src
 RUN --mount=type=cache,target=/root/.cache/coursier \
     sbt nativeImage
 
-FROM php:8.2-alpine
+FROM php:8.4-alpine3.22
 
 WORKDIR /app
 
@@ -34,10 +34,10 @@ ENV COMPOSER_ALLOW_SUPERUSER 1
 ENV PATH ${COMPOSER_HOME}/vendor/bin:${PATH}
 
 # Install necessary packages
-RUN apk --no-cache add php82
+RUN apk --no-cache add php84
 
 # Configure PHP settings
-RUN sed 's/.*short_open_tag.*=.*/short_open_tag=On/' /etc/php82/php.ini -i
+RUN sed 's/.*short_open_tag.*=.*/short_open_tag=On/' /etc/php84/php.ini -i
 
 # Install Composer and packages
 RUN curl -sS https://getcomposer.org/installer | php
