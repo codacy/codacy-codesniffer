@@ -1,1 +1,0 @@
-Templates: Object Manager

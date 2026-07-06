@@ -1,1 +1,0 @@
-WP: Posts Per Page

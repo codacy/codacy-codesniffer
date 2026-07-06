@@ -1,1 +1,0 @@
-Classes: Resource Model

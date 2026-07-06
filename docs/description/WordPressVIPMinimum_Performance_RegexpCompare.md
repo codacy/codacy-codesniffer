@@ -1,1 +1,0 @@
-Performance: Regexp Compare

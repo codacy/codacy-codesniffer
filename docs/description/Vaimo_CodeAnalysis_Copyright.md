@@ -1,1 +1,0 @@
-Code Analysis: Copyright

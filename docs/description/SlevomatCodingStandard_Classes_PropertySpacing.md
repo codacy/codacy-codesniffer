@@ -8,3 +8,5 @@ Sniff provides the following settings:
 *   `maxLinesCountBeforeWithComment`: maximum number of lines before property with a documentation comment or attribute
 *   `minLinesCountBeforeWithoutComment`: minimum number of lines before property without a documentation comment or attribute
 *   `maxLinesCountBeforeWithoutComment`: maximum number of lines before property without a documentation comment or attribute
+*   `minLinesCountBeforeMultiline` (default: `null`): minimum number of lines before multiline property
+*   `maxLinesCountBeforeMultiline` (default: `null`): maximum number of lines before multiline property

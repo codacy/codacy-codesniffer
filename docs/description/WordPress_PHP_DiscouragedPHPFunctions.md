@@ -1,1 +1,0 @@
-PHP: Discouraged PHP Functions
