@@ -1,4 +1,4 @@
-FROM sbtscala/scala-sbt:eclipse-temurin-alpine-25.0.3_9_1.12.13_3.8.4 as doc-generator
+FROM sbtscala/scala-sbt:eclipse-temurin-alpine-25.0.3_9_1.12.13_3.8.4 AS doc-generator
 
 WORKDIR /app
 
@@ -21,17 +21,16 @@ COPY build.sbt .
 COPY project project
 COPY src src
 
-RUN --mount=type=cache,target=/root/.cache/coursier \
-    sbt nativeImage
+RUN sbt nativeImage
 
 FROM php:8.5-alpine
 
 WORKDIR /app
 
 # Set environment variables
-ENV COMPOSER_HOME /app/.composer
-ENV COMPOSER_ALLOW_SUPERUSER 1 
-ENV PATH ${COMPOSER_HOME}/vendor/bin:${PATH}
+ENV COMPOSER_HOME=/app/.composer
+ENV COMPOSER_ALLOW_SUPERUSER=1 
+ENV PATH=${COMPOSER_HOME}/vendor/bin:${PATH}
 
 # Install necessary packages
 RUN apk --no-cache add php85
