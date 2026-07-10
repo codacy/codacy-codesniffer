@@ -64,6 +64,7 @@ trait DocsParser {
                                        issueTypeFor(category, sourceFile, Result.Level.Info),
                                        category,
                                        subcategory,
+                                       Option.empty,
                                        parametersList,
                                        Set.empty,
                                        enabledByDefault
