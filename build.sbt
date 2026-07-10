@@ -20,7 +20,10 @@ lazy val root = project
             nativeImageOptions ++= List("-O1",
                                         "-H:+ReportExceptionStackTraces",
                                         "--no-fallback",
-                                        "--no-server"
+                                        "--no-server",
+                                        "--static",
+                                        "-J-Xmx8G",
+                                        "-J-XX:ActiveProcessorCount=8"
             )
   )
   .enablePlugins(NativeImagePlugin)

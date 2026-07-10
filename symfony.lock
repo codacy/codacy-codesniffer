@@ -1,0 +1,27 @@
+{
+    "squizlabs/php_codesniffer": {
+        "version": "4.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "3.6",
+            "ref": "3868461a63d8cc781a00c008baea09b6594871a6"
+        },
+        "files": [
+            "phpcs.xml.dist"
+        ]
+    },
+    "symfony/flex": {
+        "version": "2.11",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "2.4",
+            "ref": "52e9754527a15e2b79d9a610f98185a1fe46622a"
+        },
+        "files": [
+            ".env",
+            ".env.dev"
+        ]
+    }
+}

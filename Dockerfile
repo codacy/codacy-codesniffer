@@ -10,6 +10,7 @@ COPY build.sbt .
 COPY docs /docs
 COPY project project
 COPY doc-generator doc-generator
+COPY composer.json /app/composer.json
 
 RUN sbt 'doc-generator/runMain codacy.codesniffer.docsgen.GeneratorMain'
 
@@ -17,11 +18,19 @@ FROM sbtscala/scala-sbt:graalvm-ce-22.3.3-b1-java17_1.12.11_3.8.4 AS builder
 
 WORKDIR /app
 
+ENV JAVA_HOME=/opt/graalvm-ce-java17-22.3.3
+
+RUN gu install native-image
+ENV NATIVE_IMAGE_INSTALLED=true
+
 COPY build.sbt .
 COPY project project
 COPY src src
 
-RUN sbt nativeImage
+RUN --mount=type=cache,target=/root/.cache/coursier,id=coursier-v2 \
+    --mount=type=cache,target=/root/.sbt \
+    --mount=type=cache,target=/root/.ivy2/cache \
+    sbt nativeImage
 
 FROM php:8.5-alpine
 
