@@ -1,4 +1,4 @@
-The php keywords class, interface, trait, extends, implements, abstract, final, var, and const should be lowercase.
+The PHP keywords class, interface, trait, extends, implements, abstract, final, var, and const should be lowercase.
 
 Valid: Lowercase class keywords.
 ```

@@ -1,6 +1,6 @@
-All opening php tags should have a corresponding closing tag.
+All opening PHP tags should have a corresponding closing tag.
 
-Valid: A closing tag paired with it's opening tag.
+Valid: A closing tag paired with its opening tag.
 ```
 <?php
 echo 'Foo';

@@ -1,8 +1,8 @@
-Methods should not be defined that only call the parent method.
+It is discouraged to override a method if the overriding method only calls the parent method.
 
-Valid: A method that extends functionality on a parent method.
+Valid: A method that extends functionality of a parent method.
 ```
-final class Foo
+final class Foo extends Baz
 {
     public function bar()
     {
@@ -12,9 +12,9 @@ final class Foo
 }
 ```
 
-Invalid: An overriding method that only calls the parent.
+Invalid: An overriding method that only calls the parent method.
 ```
-final class Foo
+final class Foo extends Baz
 {
     public function bar()
     {

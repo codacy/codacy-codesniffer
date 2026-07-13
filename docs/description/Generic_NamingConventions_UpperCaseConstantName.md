@@ -1,6 +1,6 @@
 Constants should always be all-uppercase, with underscores to separate words.
 
-Valid: all uppercase
+Valid: All uppercase constant name.
 ```
 define('FOO_CONSTANT', 'foo');
 
@@ -10,7 +10,7 @@ class FooClass
 }
 ```
 
-Invalid: mixed case
+Invalid: Mixed case or lowercase constant name.
 ```
 define('Foo_Constant', 'foo');
 

@@ -10,7 +10,7 @@ import scala.annotation.nowarn
 
 class PHPCSDocsParser extends DocsParser {
 
-  override val repositoryURL = "https://github.com/squizlabs/PHP_CodeSniffer.git"
+  override val repositoryURL = "https://github.com/PHPCSStandards/PHP_CodeSniffer.git"
 
   override val checkoutCommit: String = VersionsHelper.codesniffer
 

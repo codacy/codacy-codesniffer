@@ -1,4 +1,4 @@
-A php file should either contain declarations with no side effects, or should just have logic (including side effects) with no declarations.
+A PHP file should either contain declarations with no side effects, or should just have logic (including side effects) with no declarations.
 
 Valid: A class defined in a file by itself.
 ```
@@ -15,5 +15,5 @@ class Foo
 {
 }
 
-echo "Class Foo loaded."
+echo "Class Foo loaded.";
 ```

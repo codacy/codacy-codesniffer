@@ -12,7 +12,7 @@ function foo(&...$spread) {
 }
 ```
 
-Invalid: space found between the spread operator and the variable/function call it applies to.
+Invalid: Space found between the spread operator and the variable/function call it applies to.
 ```
 function bar(... $spread) {
     bar(...
@@ -20,7 +20,7 @@ function bar(... $spread) {
     );
 
     bar(
-        [...  $foo ],.../*comment*/array_values($keyedArray)
+        [... $foo ],.../*@*/array_values($keyed)
     );
 }
 ```

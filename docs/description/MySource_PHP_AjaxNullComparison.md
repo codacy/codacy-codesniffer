@@ -1,1 +1,0 @@
-PHP: Ajax Null Comparison

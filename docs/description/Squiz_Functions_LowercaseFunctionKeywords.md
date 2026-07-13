@@ -1,4 +1,4 @@
-The php keywords function, public, private, protected, and static should be lowercase.
+The PHP keywords function, public, private, protected, and static should be lowercase.
 
 Valid: Lowercase function keyword.
 ```

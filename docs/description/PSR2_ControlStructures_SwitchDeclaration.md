@@ -1,38 +1,6 @@
-Case statements should be indented 4 spaces from the switch keyword.  It should also be followed by a space.  Colons in switch declarations should not be preceded by whitespace.  Break statements should be indented 4 more spaces from the case statement.  There must be a comment when falling through from one case into the next.
+Case and default keywords must be lowercase.
 
-Valid: Case statement indented correctly.
-```
-switch ($foo) {
-    case 'bar':
-        break;
-}
-```
-
-Invalid: Case statement not indented 4 spaces.
-```
-switch ($foo) {
-case 'bar':
-    break;
-}
-```
-
-Valid: Case statement followed by 1 space.
-```
-switch ($foo) {
-    case 'bar':
-        break;
-}
-```
-
-Invalid: Case statement not followed by 1 space.
-```
-switch ($foo) {
-    case'bar':
-        break;
-}
-```
-
-Valid: Colons not prefixed by whitespace.
+Valid: Keywords in lowercase.
 ```
 switch ($foo) {
     case 'bar':
@@ -42,13 +10,81 @@ switch ($foo) {
 }
 ```
 
-Invalid: Colons prefixed by whitespace.
+Invalid: Keywords not in lowercase.
+```
+switch ($foo) {
+    CASE 'bar':
+        break;
+    Default:
+        break;
+}
+```
+
+Valid: Case statement followed by one space.
+```
+switch ($foo) {
+    case 'bar':
+        break;
+}
+```
+
+Invalid: Case statement not followed by one space.
+```
+switch ($foo) {
+    case'bar':
+        break;
+}
+```
+
+Valid: Colons not preceded by whitespace.
+```
+switch ($foo) {
+    case 'bar':
+        break;
+    default:
+        break;
+}
+```
+
+Invalid: Colons preceded by whitespace.
 ```
 switch ($foo) {
     case 'bar' :
         break;
     default :
         break;
+}
+```
+
+Valid: Body starts on the next line.
+```
+switch ($foo) {
+    case 'bar':
+        break;
+}
+```
+
+Invalid: Body on the same line as the case statement.
+```
+switch ($foo) {
+    case 'bar': break;
+}
+```
+
+Valid: Terminating statement on its own line.
+```
+switch ($foo) {
+    case 'bar':
+        echo $foo;
+        return;
+}
+```
+
+Invalid: Terminating statement not on its own line.
+```
+switch ($foo) {
+    case 'bar':
+        echo $foo; return;
 }
 ```
 
@@ -60,7 +96,7 @@ switch ($foo) {
 }
 ```
 
-Invalid: Break statement not indented 4 spaces.
+Invalid: Break statement not indented four spaces.
 ```
 switch ($foo) {
     case 'bar':
@@ -68,20 +104,43 @@ switch ($foo) {
 }
 ```
 
-Valid: Comment marking intentional fall-through.
+Valid: Using a colon for case and default statements.
 ```
 switch ($foo) {
     case 'bar':
-    // no break
+        break;
     default:
         break;
 }
 ```
 
-Invalid: No comment marking intentional fall-through.
+Invalid: Using a semi-colon or colon followed by braces.
+```
+switch ($foo) {
+    case 'bar';
+        break;
+    default: {
+        break;
+    }
+}
+```
+
+Valid: Comment marking intentional fall-through in a non-empty case body.
 ```
 switch ($foo) {
     case 'bar':
+        echo $foo;
+        // no break
+    default:
+        break;
+}
+```
+
+Invalid: No comment marking intentional fall-through in a non-empty case body.
+```
+switch ($foo) {
+    case 'bar':
+        echo $foo;
     default:
         break;
 }

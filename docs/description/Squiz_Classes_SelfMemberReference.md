@@ -1,35 +1,47 @@
-The self keyword should be used instead of the current class name, should be lowercase, and should not have spaces before or after it.
+The self keyword must be lowercase.
 
 Valid: Lowercase self used.
 ```
-self::foo();
+class Bar {
+    public function baz() {
+        self::foo();
+    }
+}
 ```
 
 Invalid: Uppercase self used.
 ```
-SELF::foo();
+class Bar {
+    public function baz() {
+        SELF::foo();
+    }
+}
 ```
 
-Valid: Correct spacing used.
+Valid: No spaces around the double colon operator.
 ```
-self::foo();
+class Bar {
+    public function baz() {
+        self::foo();
+    }
+}
 ```
 
-Invalid: Incorrect spacing used.
+Invalid: Spaces around double colon operator.
 ```
-self :: foo();
+class Bar {
+    public function baz() {
+        self :: foo();
+    }
+}
 ```
 
 Valid: Self used as reference.
 ```
-class Foo
-{
-    public static function bar()
-    {
-    }
+class Foo {
+    public function bar() {}
 
-    public static function baz()
-    {
+    public function baz() {
         self::bar();
     }
 }
@@ -37,14 +49,10 @@ class Foo
 
 Invalid: Local class name used as reference.
 ```
-class Foo
-{
-    public static function bar()
-    {
-    }
+class Foo {
+    public function bar() {}
 
-    public static function baz()
-    {
+    public function baz() {
         Foo::bar();
     }
 }

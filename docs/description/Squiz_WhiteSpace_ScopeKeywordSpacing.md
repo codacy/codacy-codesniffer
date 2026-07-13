@@ -1,4 +1,4 @@
-The php keywords static, public, private, and protected should have one space after them.
+The PHP keywords static, public, private, and protected should have one space after them.
 
 Valid: A single space following the keywords.
 ```

@@ -1,16 +1,16 @@
 This standard covers all array declarations, regardless of the number and type of values contained within the array.
 
-Valid: array keyword lowercase
+Valid: Array keyword lowercase.
 ```
 $array = array('val1', 'val2');
 ```
 
-Invalid: first letter capitalised
+Invalid: First letter capitalised.
 ```
 $array = Array('val1', 'val2');
 ```
 
-Valid: first key on second line
+Valid: First key on second line.
 ```
 $array = array(
           'key1' => 'value1',
@@ -18,14 +18,14 @@ $array = array(
          );
 ```
 
-Invalid: first key on same line
+Invalid: First key on same line.
 ```
 $array = array('key1' => 'value1',
           'key2' => 'value2',
          );
 ```
 
-Valid: aligned correctly
+Valid: Aligned correctly.
 ```
 $array = array(
           'key1' => 'value1',
@@ -33,7 +33,7 @@ $array = array(
          );
 ```
 
-Invalid: keys and parenthesis aligned incorrectly
+Invalid: Keys and parenthesis aligned incorrectly.
 ```
 $array = array(
          'key1' => 'value1',
@@ -41,7 +41,7 @@ $array = array(
 );
 ```
 
-Valid: keys and values aligned
+Valid: Keys and values aligned.
 ```
 $array = array(
           'keyTen'    => 'ValueTen',
@@ -49,7 +49,7 @@ $array = array(
          );
 ```
 
-Invalid: alignment incorrect
+Invalid: Alignment incorrect.
 ```
 $array = array(
           'keyTen' => 'ValueTen',
@@ -57,7 +57,7 @@ $array = array(
          );
 ```
 
-Valid: comma after each value
+Valid: Comma after each value.
 ```
 $array = array(
           'key1' => 'value1',
@@ -66,7 +66,7 @@ $array = array(
          );
 ```
 
-Invalid: no comma after last value
+Invalid: No comma after last value.
 ```
 $array = array(
           'key1' => 'value1',

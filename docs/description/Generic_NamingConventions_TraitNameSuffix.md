@@ -1,13 +1,13 @@
 Trait names must be suffixed with "Trait", e.g. BarTrait.
 
-Valid:
+Valid: Trait name ends on 'Trait'.
 ```
 trait BarTrait
 {
 }
 ```
 
-Invalid:
+Invalid: Trait name does not end on 'Trait'.
 ```
 trait Bar
 {

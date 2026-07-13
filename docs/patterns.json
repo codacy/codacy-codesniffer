@@ -713,6 +713,13 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "Generic_CodeAnalysis_RequireExplicitBooleanOperatorPrecedence",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "Generic_CodeAnalysis_UnconditionalIfStatement",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -778,37 +785,6 @@
     } ],
     "languages" : [ ],
     "enabled" : true
-  }, {
-    "patternId" : "Generic_Debug_CSSLint",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "Generic_Debug_ClosureLinter",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "Generic_Debug_ESLint",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "configFile",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "Generic_Debug_JSHint",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
   }, {
     "patternId" : "Generic_Files_ByteOrderMark",
     "level" : "Info",
@@ -917,22 +893,12 @@
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
-      "name" : "error",
-      "default" : false
-    }, {
       "name" : "maxPadding",
       "default" : 1000
     }, {
       "name" : "alignAtEnd",
       "default" : true
     } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "Generic_Formatting_NoSpaceAfterCast",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
   }, {
@@ -963,13 +929,6 @@
     "enabled" : false
   }, {
     "patternId" : "Generic_Formatting_SpaceBeforeCast",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "Generic_Functions_CallTimePassByReference",
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ ],
@@ -1205,13 +1164,17 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "Generic_Strings_UnnecessaryHeredoc",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "Generic_Strings_UnnecessaryStringConcat",
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
-      "name" : "error",
-      "default" : true
-    }, {
       "name" : "allowMultiline",
       "default" : false
     } ],
@@ -1259,6 +1222,20 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "Generic_WhiteSpace_GotoTargetSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "Generic_WhiteSpace_HereNowdocIdentifierSpacing",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "Generic_WhiteSpace_IncrementDecrementSpacing",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -1299,118 +1276,6 @@
       "name" : "ignoreNewlines",
       "default" : false
     } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "MySource_CSS_BrowserSpecificStyles",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "MySource_Channels_DisallowSelfActions",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "MySource_Channels_IncludeOwnSystem",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "MySource_Channels_IncludeSystem",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "MySource_Channels_UnusedSystem",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "MySource_Commenting_FunctionComment",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "MySource_Debug_DebugCode",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "MySource_Debug_FirebugConsole",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "MySource_Objects_AssignThis",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "MySource_Objects_CreateWidgetTypeCallback",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "MySource_Objects_DisallowNewWidget",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "MySource_PHP_AjaxNullComparison",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "MySource_PHP_EvalObjectFactory",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "MySource_PHP_GetRequestData",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "MySource_PHP_ReturnFunctionValue",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "MySource_Strings_JoinStrings",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
   }, {
@@ -4854,138 +4719,6 @@
     "languages" : [ ],
     "enabled" : true
   }, {
-    "patternId" : "Squiz_CSS_ClassDefinitionClosingBraceSpace",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "Squiz_CSS_ClassDefinitionNameSpacing",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "Squiz_CSS_ClassDefinitionOpeningBraceSpace",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "Squiz_CSS_ColonSpacing",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "Squiz_CSS_ColourDefinition",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "Squiz_CSS_DisallowMultipleStyleDefinitions",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "Squiz_CSS_DuplicateClassDefinition",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "Squiz_CSS_DuplicateStyleDefinition",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "Squiz_CSS_EmptyClassDefinition",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "Squiz_CSS_EmptyStyleDefinition",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "Squiz_CSS_ForbiddenStyles",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "error",
-      "default" : true
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "Squiz_CSS_Indentation",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "indent",
-      "default" : 4
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "Squiz_CSS_LowercaseStyleDefinition",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "Squiz_CSS_MissingColon",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "Squiz_CSS_NamedColours",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "Squiz_CSS_Opacity",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "Squiz_CSS_SemicolonSpacing",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "Squiz_CSS_ShorthandSize",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "Squiz_Classes_ClassDeclaration",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -4994,13 +4727,6 @@
     "enabled" : false
   }, {
     "patternId" : "Squiz_Classes_ClassFileName",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "Squiz_Classes_DuplicateProperty",
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ ],
@@ -5191,20 +4917,6 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "Squiz_Debug_JSLint",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "Squiz_Debug_JavaScriptLint",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "Squiz_Files_FileExtension",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -5284,21 +4996,7 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "Squiz_Objects_DisallowObjectStringIndex",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "Squiz_Objects_ObjectInstantiation",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "Squiz_Objects_ObjectMemberComma",
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ ],
@@ -5522,13 +5220,6 @@
     "languages" : [ ],
     "enabled" : true
   }, {
-    "patternId" : "Squiz_WhiteSpace_LanguageConstructSpacing",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "Squiz_WhiteSpace_LogicalOperatorSpacing",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -5571,13 +5262,6 @@
     } ],
     "languages" : [ ],
     "enabled" : true
-  }, {
-    "patternId" : "Squiz_WhiteSpace_PropertyLabelSpacing",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
   }, {
     "patternId" : "Squiz_WhiteSpace_ScopeClosingBrace",
     "level" : "Info",
@@ -5779,13 +5463,6 @@
     "enabled" : false
   }, {
     "patternId" : "Symfony_Whitespace_DiscourageFitzinator",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "Zend_Debug_CodeAnalyzer",
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ ],

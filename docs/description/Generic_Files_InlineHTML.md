@@ -1,13 +1,13 @@
-Files that contain php code should only have php code and should not have any "inline html".
+Files that contain PHP code should only have PHP code and should not have any "inline html".
 
-Valid: A php file with only php code in it.
+Valid: A PHP file with only PHP code in it.
 ```
 <?php
 $foo = 'bar';
 echo $foo . 'baz';
 ```
 
-Invalid: A php file with html in it outside of the php tags.
+Invalid: A PHP file with html in it outside of the PHP tags.
 ```
 some string here
 <?php

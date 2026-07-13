@@ -1,13 +1,13 @@
 Interface names must be suffixed with "Interface", e.g. BarInterface.
 
-Valid:
+Valid: Interface name ends on 'Interface'.
 ```
 interface BarInterface
 {
 }
 ```
 
-Invalid:
+Invalid: Interface name does not end on 'Interface'.
 ```
 interface Bar
 {

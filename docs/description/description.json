@@ -378,7 +378,8 @@
   } ]
 }, {
   "patternId" : "Generic_Arrays_ArrayIndent",
-  "title" : "Arrays: Array Indent",
+  "title" : "Array Indent",
+  "description" : "The opening brace of a multi-line array must be indented at least to the same level as the start of the statement.",
   "parameters" : [ {
     "name" : "indent",
     "description" : "indent"
@@ -410,7 +411,8 @@
   "parameters" : [ ]
 }, {
   "patternId" : "Generic_CodeAnalysis_EmptyPHPStatement",
-  "title" : "Code Analysis: Empty PHP Statement",
+  "title" : "Empty PHP Statement",
+  "description" : "Empty PHP tags are not allowed.",
   "parameters" : [ ]
 }, {
   "patternId" : "Generic_CodeAnalysis_EmptyStatement",
@@ -433,6 +435,11 @@
   "description" : "Incrementers in nested loops should use different variable names.",
   "parameters" : [ ]
 }, {
+  "patternId" : "Generic_CodeAnalysis_RequireExplicitBooleanOperatorPrecedence",
+  "title" : "Require Explicit Boolean Operator Precedence",
+  "description" : "Forbids mixing different binary boolean operators (&&, ||, and, or, xor) within a single expression without making precedence clear using parentheses.",
+  "parameters" : [ ]
+}, {
   "patternId" : "Generic_CodeAnalysis_UnconditionalIfStatement",
   "title" : "Unconditional If Statements",
   "description" : "If statements that are always evaluated should not be used.",
@@ -449,12 +456,13 @@
   "parameters" : [ ]
 }, {
   "patternId" : "Generic_CodeAnalysis_UselessOverridingMethod",
-  "title" : "Useless Overriding Methods",
-  "description" : "Methods should not be defined that only call the parent method.",
+  "title" : "Useless Overriding Method",
+  "description" : "It is discouraged to override a method if the overriding method only calls the parent method.",
   "parameters" : [ ]
 }, {
   "patternId" : "Generic_Commenting_DocComment",
-  "title" : "Commenting: Doc Comment",
+  "title" : "Doc Comment",
+  "description" : "Enforces rules related to the formatting of DocBlocks (\"Doc Comments\") in PHP code.      DocBlocks are a special type of comment that can provide information about a structural element. In the context of DocBlocks, the following are considered structural elements:     class, interface, trait, enum, function, property, constant, variable declarations and require/include[_once] statements.      DocBlocks start with a `/**` marker and end on `*/`",
   "parameters" : [ ]
 }, {
   "patternId" : "Generic_Commenting_Fixme",
@@ -480,28 +488,6 @@
     "description" : "error"
   } ]
 }, {
-  "patternId" : "Generic_Debug_CSSLint",
-  "title" : "CSSLint",
-  "description" : "All css files should pass the basic csslint tests.",
-  "parameters" : [ ]
-}, {
-  "patternId" : "Generic_Debug_ClosureLinter",
-  "title" : "Closure Linter",
-  "description" : "All javascript files should pass basic Closure Linter tests.",
-  "parameters" : [ ]
-}, {
-  "patternId" : "Generic_Debug_ESLint",
-  "title" : "Debug: ES Lint",
-  "parameters" : [ {
-    "name" : "configFile",
-    "description" : "configFile"
-  } ]
-}, {
-  "patternId" : "Generic_Debug_JSHint",
-  "title" : "JSHint",
-  "description" : "All javascript files should pass basic JSHint tests.",
-  "parameters" : [ ]
-}, {
   "patternId" : "Generic_Files_ByteOrderMark",
   "title" : "Byte Order Marks",
   "description" : "Byte Order Marks that may corrupt your application should not be used.  These include 0xefbbbf (UTF-8), 0xfeff (UTF-16 BE) and 0xfffe (UTF-16 LE).",
@@ -524,7 +510,7 @@
 }, {
   "patternId" : "Generic_Files_InlineHTML",
   "title" : "Inline HTML",
-  "description" : "Files that contain php code should only have php code and should not have any \"inline html\".",
+  "description" : "Files that contain PHP code should only have PHP code and should not have any \"inline html\".",
   "parameters" : [ ]
 }, {
   "patternId" : "Generic_Files_LineEndings",
@@ -583,9 +569,6 @@
   "title" : "Aligning Blocks of Assignments",
   "description" : "There should be one space on either side of an equals sign used to assign a value to a variable. In the case of a block of related assignments, more space may be inserted to promote readability.",
   "parameters" : [ {
-    "name" : "error",
-    "description" : "error"
-  }, {
     "name" : "maxPadding",
     "description" : "maxPadding"
   }, {
@@ -593,13 +576,8 @@
     "description" : "alignAtEnd"
   } ]
 }, {
-  "patternId" : "Generic_Formatting_NoSpaceAfterCast",
-  "title" : "Space After Casts",
-  "description" : "Spaces are not allowed after casting operators.",
-  "parameters" : [ ]
-}, {
   "patternId" : "Generic_Formatting_SpaceAfterCast",
-  "title" : "Space After Casts",
+  "title" : "Space After Cast",
   "description" : "Exactly one space is allowed after a cast.",
   "parameters" : [ {
     "name" : "spacing",
@@ -621,22 +599,18 @@
   } ]
 }, {
   "patternId" : "Generic_Formatting_SpaceBeforeCast",
-  "title" : "Formatting: Space Before Cast",
-  "parameters" : [ ]
-}, {
-  "patternId" : "Generic_Functions_CallTimePassByReference",
-  "title" : "Call-Time Pass-By-Reference",
-  "description" : "Call-time pass-by-reference is not allowed. It should be declared in the function definition.",
+  "title" : "Space Before Cast",
+  "description" : "There should be exactly one space before a cast operator.",
   "parameters" : [ ]
 }, {
   "patternId" : "Generic_Functions_FunctionCallArgumentSpacing",
-  "title" : "Function Argument Spacing",
-  "description" : "Function arguments should have one space after a comma, and single spaces surrounding the equals sign for default values.",
+  "title" : "Function Call Argument Spacing",
+  "description" : "There should be no space before and exactly one space, or a new line, after a comma when passing arguments to a function or method.",
   "parameters" : [ ]
 }, {
   "patternId" : "Generic_Functions_OpeningFunctionBraceBsdAllman",
-  "title" : "Opening Brace in Function Declarations",
-  "description" : "Function declarations follow the \"BSD/Allman style\". The function brace is on the line following the function declaration and is indented to the same column as the start of the function declaration.",
+  "title" : "Opening Function Brace Bsd Allman",
+  "description" : "Function declarations must follow the \"BSD/Allman style\". The opening brace is on the line     following the function declaration and is indented to the same column as the start of the     function declaration. The brace must be the last content on the line.",
   "parameters" : [ {
     "name" : "checkFunctions",
     "description" : "checkFunctions"
@@ -646,8 +620,8 @@
   } ]
 }, {
   "patternId" : "Generic_Functions_OpeningFunctionBraceKernighanRitchie",
-  "title" : "Opening Brace in Function Declarations",
-  "description" : "Function declarations follow the \"Kernighan/Ritchie style\". The function brace is on the same line as the function declaration. One space is required between the closing parenthesis and the brace.",
+  "title" : "Opening Function Brace Kerninghan Ritchie",
+  "description" : "The function opening brace must be on the same line as the end of the function declaration, with     exactly one space between the end of the declaration and the brace. The brace must be the last     content on the line.",
   "parameters" : [ {
     "name" : "checkFunctions",
     "description" : "checkFunctions"
@@ -718,12 +692,12 @@
 }, {
   "patternId" : "Generic_PHP_CharacterBeforePHPOpeningTag",
   "title" : "Opening Tag at Start of File",
-  "description" : "The opening php tag should be the first item in the file.",
+  "description" : "The opening PHP tag should be the first item in the file.",
   "parameters" : [ ]
 }, {
   "patternId" : "Generic_PHP_ClosingPHPTag",
   "title" : "Closing PHP Tags",
-  "description" : "All opening php tags should have a corresponding closing tag.",
+  "description" : "All opening PHP tags should have a corresponding closing tag.",
   "parameters" : [ ]
 }, {
   "patternId" : "Generic_PHP_DeprecatedFunctions",
@@ -783,7 +757,8 @@
   } ]
 }, {
   "patternId" : "Generic_PHP_RequireStrictTypes",
-  "title" : "PHP: Require Strict Types",
+  "title" : "Require Strict Types",
+  "description" : "The strict_types declaration must be present.",
   "parameters" : [ ]
 }, {
   "patternId" : "Generic_PHP_SAPIUsage",
@@ -792,7 +767,8 @@
   "parameters" : [ ]
 }, {
   "patternId" : "Generic_PHP_Syntax",
-  "title" : "PHP: Syntax",
+  "title" : "PHP Syntax",
+  "description" : "The code should use valid PHP syntax.",
   "parameters" : [ ]
 }, {
   "patternId" : "Generic_PHP_UpperCaseConstant",
@@ -800,13 +776,15 @@
   "description" : "The <em>true</em>, <em>false</em> and <em>null</em> constants must always be uppercase.",
   "parameters" : [ ]
 }, {
+  "patternId" : "Generic_Strings_UnnecessaryHeredoc",
+  "title" : "Unnecessary Heredoc",
+  "description" : "If no interpolation or expressions are used in the body of a heredoc, nowdoc syntax should be used instead.",
+  "parameters" : [ ]
+}, {
   "patternId" : "Generic_Strings_UnnecessaryStringConcat",
   "title" : "Unnecessary String Concatenation",
   "description" : "Strings should not be concatenated together.",
   "parameters" : [ {
-    "name" : "error",
-    "description" : "error"
-  }, {
     "name" : "allowMultiline",
     "description" : "allowMultiline"
   } ]
@@ -817,7 +795,7 @@
 }, {
   "patternId" : "Generic_VersionControl_SubversionProperties",
   "title" : "Subversion Properties",
-  "description" : "All php files in a subversion repository should have the svn:keywords property set to 'Author Id Revision' and the svn:eol-style property set to 'native'.",
+  "description" : "All PHP files in a subversion repository should have the svn:keywords property set to 'Author Id Revision' and the svn:eol-style property set to 'native'.",
   "parameters" : [ ]
 }, {
   "patternId" : "Generic_WhiteSpace_ArbitraryParenthesesSpacing",
@@ -841,12 +819,24 @@
   "description" : "Spaces should be used for indentation instead of tabs.",
   "parameters" : [ ]
 }, {
+  "patternId" : "Generic_WhiteSpace_GotoTargetSpacing",
+  "title" : "Goto Target Spacing",
+  "description" : "There should be no space between the label for a goto target and the colon following it.",
+  "parameters" : [ ]
+}, {
+  "patternId" : "Generic_WhiteSpace_HereNowdocIdentifierSpacing",
+  "title" : "Heredoc Nowdoc Identifier Spacing",
+  "description" : "There should be no space between the <<< and the heredoc/nowdoc identifier string.",
+  "parameters" : [ ]
+}, {
   "patternId" : "Generic_WhiteSpace_IncrementDecrementSpacing",
-  "title" : "White Space: Increment Decrement Spacing",
+  "title" : "Increment Decrement Spacing",
+  "description" : "There should be no whitespace between variables and increment/decrement operators.",
   "parameters" : [ ]
 }, {
   "patternId" : "Generic_WhiteSpace_LanguageConstructSpacing",
-  "title" : "White Space: Language Construct Spacing",
+  "title" : "Language Construct Spacing",
+  "description" : "Language constructs that can be used without parentheses, must have a single space between the language construct keyword and its content.",
   "parameters" : [ ]
 }, {
   "patternId" : "Generic_WhiteSpace_ScopeIndent",
@@ -874,73 +864,9 @@
     "description" : "ignoreNewlines"
   } ]
 }, {
-  "patternId" : "MySource_CSS_BrowserSpecificStyles",
-  "title" : "CSS: Browser Specific Styles",
-  "parameters" : [ ]
-}, {
-  "patternId" : "MySource_Channels_DisallowSelfActions",
-  "title" : "Channels: Disallow Self Actions",
-  "parameters" : [ ]
-}, {
-  "patternId" : "MySource_Channels_IncludeOwnSystem",
-  "title" : "Channels: Include Own System",
-  "parameters" : [ ]
-}, {
-  "patternId" : "MySource_Channels_IncludeSystem",
-  "title" : "Channels: Include System",
-  "parameters" : [ ]
-}, {
-  "patternId" : "MySource_Channels_UnusedSystem",
-  "title" : "Channels: Unused System",
-  "parameters" : [ ]
-}, {
-  "patternId" : "MySource_Commenting_FunctionComment",
-  "title" : "Commenting: Function Comment",
-  "parameters" : [ ]
-}, {
-  "patternId" : "MySource_Debug_DebugCode",
-  "title" : "Debug: Debug Code",
-  "parameters" : [ ]
-}, {
-  "patternId" : "MySource_Debug_FirebugConsole",
-  "title" : "Debug: Firebug Console",
-  "parameters" : [ ]
-}, {
-  "patternId" : "MySource_Objects_AssignThis",
-  "title" : "Objects: Assign This",
-  "parameters" : [ ]
-}, {
-  "patternId" : "MySource_Objects_CreateWidgetTypeCallback",
-  "title" : "Objects: Create Widget Type Callback",
-  "parameters" : [ ]
-}, {
-  "patternId" : "MySource_Objects_DisallowNewWidget",
-  "title" : "Objects: Disallow New Widget",
-  "parameters" : [ ]
-}, {
-  "patternId" : "MySource_PHP_AjaxNullComparison",
-  "title" : "PHP: Ajax Null Comparison",
-  "parameters" : [ ]
-}, {
-  "patternId" : "MySource_PHP_EvalObjectFactory",
-  "title" : "PHP: Eval Object Factory",
-  "parameters" : [ ]
-}, {
-  "patternId" : "MySource_PHP_GetRequestData",
-  "title" : "PHP: Get Request Data",
-  "parameters" : [ ]
-}, {
-  "patternId" : "MySource_PHP_ReturnFunctionValue",
-  "title" : "PHP: Return Function Value",
-  "parameters" : [ ]
-}, {
-  "patternId" : "MySource_Strings_JoinStrings",
-  "title" : "Strings: Join Strings",
-  "parameters" : [ ]
-}, {
   "patternId" : "PEAR_Classes_ClassDeclaration",
-  "title" : "Class Declarations",
-  "description" : "The opening brace of a class must be on the line after the definition by itself.",
+  "title" : "Class Declaration",
+  "description" : "The opening brace of an OO structure must be on the line directly after the OO signature. The opening brace must be on a line by itself.",
   "parameters" : [ ]
 }, {
   "patternId" : "PEAR_Commenting_ClassComment",
@@ -950,7 +876,7 @@
 }, {
   "patternId" : "PEAR_Commenting_FileComment",
   "title" : "File Comments",
-  "description" : "Files must have a non-empty doc comment.  The short description must be on the second line of the comment.  Each description must have one blank comment line before and after.  There must be one blank line before the tags in the comments.  There must be a category, package, author, license, and link tag.  There may only be one category, package, subpackage, license, version, since and deprecated tag",
+  "description" : "Files must have a non-empty doc comment.     The short description must be on the second line of the comment.     Each description must have one blank comment line before and after.     There must be one blank line before the tags in the comments.     There must be a category, package, author, license, and link tag.     There may only be one category, package, subpackage, license, version, since and deprecated tag",
   "parameters" : [ ]
 }, {
   "patternId" : "PEAR_Commenting_FunctionComment",
@@ -1778,22 +1704,26 @@
   "parameters" : [ ]
 }, {
   "patternId" : "PSR12_Classes_ClosingBrace",
-  "title" : "Classes: Closing Brace",
+  "title" : "Closing Brace",
+  "description" : "The closing brace of object-oriented constructs and functions must not be followed by any comment or statement on the same line.",
   "parameters" : [ ]
 }, {
   "patternId" : "PSR12_Classes_OpeningBraceSpace",
-  "title" : "Classes: Opening Brace Space",
+  "title" : "Opening Brace Space",
+  "description" : "The opening brace of an object-oriented construct must not be followed by a blank line.",
   "parameters" : [ ]
 }, {
   "patternId" : "PSR12_ControlStructures_BooleanOperatorPlacement",
-  "title" : "Control Structures: Boolean Operator Placement",
+  "title" : "Boolean Operator Placement",
+  "description" : "Boolean operators between conditions in control structures must always be at the beginning or at the end of the line, not a mix of both.      This rule applies to if/else conditions, while loops and switch/match statements.",
   "parameters" : [ {
     "name" : "allowOnly",
     "description" : "allowOnly"
   } ]
 }, {
   "patternId" : "PSR12_ControlStructures_ControlStructureSpacing",
-  "title" : "Control Structures: Control Structure Spacing",
+  "title" : "Control Structure Spacing",
+  "description" : "Single line control structures must have no spaces after the condition opening parenthesis and before the condition closing parenthesis.",
   "parameters" : [ {
     "name" : "indent",
     "description" : "indent"
@@ -1808,11 +1738,13 @@
   "parameters" : [ ]
 }, {
   "patternId" : "PSR12_Files_ImportStatement",
-  "title" : "Files: Import Statement",
+  "title" : "Import Statement",
+  "description" : "Import use statements must not begin with a leading backslash.",
   "parameters" : [ ]
 }, {
   "patternId" : "PSR12_Files_OpenTag",
-  "title" : "Files: Open Tag",
+  "title" : "Open PHP Tag",
+  "description" : "When the opening <?php tag is on the first line of the file, it must be on its own line with no other statements unless it is a file containing markup outside of PHP opening and closing tags.",
   "parameters" : [ ]
 }, {
   "patternId" : "PSR12_Functions_NullableTypeDeclaration",
@@ -1821,7 +1753,8 @@
   "parameters" : [ ]
 }, {
   "patternId" : "PSR12_Functions_ReturnTypeDeclaration",
-  "title" : "Functions: Return Type Declaration",
+  "title" : "Return Type Declaration",
+  "description" : "For function and closure return type declarations, there must be one space after the colon followed by the type declaration, and no space before the colon.      The colon and the return type declaration have to be on the same line as the argument list closing parenthesis.",
   "parameters" : [ ]
 }, {
   "patternId" : "PSR12_Keywords_ShortFormTypeKeywords",
@@ -1843,7 +1776,8 @@
   "parameters" : [ ]
 }, {
   "patternId" : "PSR12_Properties_ConstantVisibility",
-  "title" : "Properties: Constant Visibility",
+  "title" : "Constant Visibility",
+  "description" : "Visibility must be declared on all class constants if your project PHP minimum version supports constant visibilities (PHP 7.1 or later).      The term \"class\" refers to all classes, interfaces, enums and traits.",
   "parameters" : [ ]
 }, {
   "patternId" : "PSR12_Traits_UseDeclaration",
@@ -1857,7 +1791,7 @@
 }, {
   "patternId" : "PSR1_Files_SideEffects",
   "title" : "Side Effects",
-  "description" : "A php file should either contain declarations with no side effects, or should just have logic (including side effects) with no declarations.",
+  "description" : "A PHP file should either contain declarations with no side effects, or should just have logic (including side effects) with no declarations.",
   "parameters" : [ ]
 }, {
   "patternId" : "PSR1_Methods_CamelCapsMethodName",
@@ -1895,8 +1829,8 @@
   "parameters" : [ ]
 }, {
   "patternId" : "PSR2_ControlStructures_SwitchDeclaration",
-  "title" : "Switch Declarations",
-  "description" : "Case statements should be indented 4 spaces from the switch keyword.  It should also be followed by a space.  Colons in switch declarations should not be preceded by whitespace.  Break statements should be indented 4 more spaces from the case statement.  There must be a comment when falling through from one case into the next.",
+  "title" : "Switch Declaration",
+  "description" : "Case and default keywords must be lowercase.",
   "parameters" : [ {
     "name" : "indent",
     "description" : "indent"
@@ -1931,7 +1865,7 @@
   "parameters" : [ ]
 }, {
   "patternId" : "PSR2_Namespaces_NamespaceDeclaration",
-  "title" : "Namespace Declarations",
+  "title" : "Namespace Declaration",
   "description" : "There must be one blank line after the namespace declaration.",
   "parameters" : [ ]
 }, {
@@ -3215,112 +3149,33 @@
   "description" : "This standard covers all array declarations, regardless of the number and type of values contained within the array.",
   "parameters" : [ ]
 }, {
-  "patternId" : "Squiz_CSS_ClassDefinitionClosingBraceSpace",
-  "title" : "CSS: Class Definition Closing Brace Space",
-  "parameters" : [ ]
-}, {
-  "patternId" : "Squiz_CSS_ClassDefinitionNameSpacing",
-  "title" : "CSS: Class Definition Name Spacing",
-  "parameters" : [ ]
-}, {
-  "patternId" : "Squiz_CSS_ClassDefinitionOpeningBraceSpace",
-  "title" : "CSS: Class Definition Opening Brace Space",
-  "parameters" : [ ]
-}, {
-  "patternId" : "Squiz_CSS_ColonSpacing",
-  "title" : "CSS: Colon Spacing",
-  "parameters" : [ ]
-}, {
-  "patternId" : "Squiz_CSS_ColourDefinition",
-  "title" : "CSS: Colour Definition",
-  "parameters" : [ ]
-}, {
-  "patternId" : "Squiz_CSS_DisallowMultipleStyleDefinitions",
-  "title" : "CSS: Disallow Multiple Style Definitions",
-  "parameters" : [ ]
-}, {
-  "patternId" : "Squiz_CSS_DuplicateClassDefinition",
-  "title" : "CSS: Duplicate Class Definition",
-  "parameters" : [ ]
-}, {
-  "patternId" : "Squiz_CSS_DuplicateStyleDefinition",
-  "title" : "CSS: Duplicate Style Definition",
-  "parameters" : [ ]
-}, {
-  "patternId" : "Squiz_CSS_EmptyClassDefinition",
-  "title" : "CSS: Empty Class Definition",
-  "parameters" : [ ]
-}, {
-  "patternId" : "Squiz_CSS_EmptyStyleDefinition",
-  "title" : "CSS: Empty Style Definition",
-  "parameters" : [ ]
-}, {
-  "patternId" : "Squiz_CSS_ForbiddenStyles",
-  "title" : "CSS: Forbidden Styles",
-  "parameters" : [ {
-    "name" : "error",
-    "description" : "error"
-  } ]
-}, {
-  "patternId" : "Squiz_CSS_Indentation",
-  "title" : "CSS: Indentation",
-  "parameters" : [ {
-    "name" : "indent",
-    "description" : "indent"
-  } ]
-}, {
-  "patternId" : "Squiz_CSS_LowercaseStyleDefinition",
-  "title" : "CSS: Lowercase Style Definition",
-  "parameters" : [ ]
-}, {
-  "patternId" : "Squiz_CSS_MissingColon",
-  "title" : "CSS: Missing Colon",
-  "parameters" : [ ]
-}, {
-  "patternId" : "Squiz_CSS_NamedColours",
-  "title" : "CSS: Named Colours",
-  "parameters" : [ ]
-}, {
-  "patternId" : "Squiz_CSS_Opacity",
-  "title" : "CSS: Opacity",
-  "parameters" : [ ]
-}, {
-  "patternId" : "Squiz_CSS_SemicolonSpacing",
-  "title" : "CSS: Semicolon Spacing",
-  "parameters" : [ ]
-}, {
-  "patternId" : "Squiz_CSS_ShorthandSize",
-  "title" : "CSS: Shorthand Size",
-  "parameters" : [ ]
-}, {
   "patternId" : "Squiz_Classes_ClassDeclaration",
   "title" : "Classes: Class Declaration",
   "parameters" : [ ]
 }, {
   "patternId" : "Squiz_Classes_ClassFileName",
-  "title" : "Classes: Class File Name",
-  "parameters" : [ ]
-}, {
-  "patternId" : "Squiz_Classes_DuplicateProperty",
-  "title" : "Classes: Duplicate Property",
+  "title" : "Class File Name",
+  "description" : "The file name and the name of the class defined within the file must match exactly, including case.",
   "parameters" : [ ]
 }, {
   "patternId" : "Squiz_Classes_LowercaseClassKeywords",
   "title" : "Lowercase Class Keywords",
-  "description" : "The php keywords class, interface, trait, extends, implements, abstract, final, var, and const should be lowercase.",
+  "description" : "The PHP keywords class, interface, trait, extends, implements, abstract, final, var, and const should be lowercase.",
   "parameters" : [ ]
 }, {
   "patternId" : "Squiz_Classes_SelfMemberReference",
   "title" : "Self Member Reference",
-  "description" : "The self keyword should be used instead of the current class name, should be lowercase, and should not have spaces before or after it.",
+  "description" : "The self keyword must be lowercase.",
   "parameters" : [ ]
 }, {
   "patternId" : "Squiz_Classes_ValidClassName",
-  "title" : "Classes: Valid Class Name",
+  "title" : "Valid Class Name",
+  "description" : "Class names must be written in Pascal case. This means that it starts with a capital letter, and the first letter of each word in the class name is capitalized. Only letters and numbers are allowed.",
   "parameters" : [ ]
 }, {
   "patternId" : "Squiz_Commenting_BlockComment",
-  "title" : "Commenting: Block Comment",
+  "title" : "Block Comment",
+  "description" : "A block comment is a multi-line comment delimited by an opener \"/*\" and a closer \"*/\" which are each on their own line with the comment text in between.",
   "parameters" : [ ]
 }, {
   "patternId" : "Squiz_Commenting_ClassComment",
@@ -3420,7 +3275,7 @@
 }, {
   "patternId" : "Squiz_ControlStructures_LowercaseDeclaration",
   "title" : "Lowercase Control Structure Keywords",
-  "description" : "The php keywords if, else, elseif, foreach, for, do, switch, while, try, and catch should be lowercase.",
+  "description" : "The PHP keywords if, else, elseif, foreach, for, do, switch, while, try, and catch should be lowercase.",
   "parameters" : [ ]
 }, {
   "patternId" : "Squiz_ControlStructures_SwitchDeclaration",
@@ -3429,14 +3284,6 @@
     "name" : "indent",
     "description" : "indent"
   } ]
-}, {
-  "patternId" : "Squiz_Debug_JSLint",
-  "title" : "Debug: JS Lint",
-  "parameters" : [ ]
-}, {
-  "patternId" : "Squiz_Debug_JavaScriptLint",
-  "title" : "Debug: Java Script Lint",
-  "parameters" : [ ]
 }, {
   "patternId" : "Squiz_Files_FileExtension",
   "title" : "Files: File Extension",
@@ -3464,8 +3311,7 @@
   } ]
 }, {
   "patternId" : "Squiz_Functions_FunctionDuplicateArgument",
-  "title" : "Lowercase Built-In functions",
-  "description" : "All PHP built-in functions should be lowercased when called.",
+  "title" : "Functions: Function Duplicate Argument",
   "parameters" : [ ]
 }, {
   "patternId" : "Squiz_Functions_GlobalFunction",
@@ -3474,7 +3320,7 @@
 }, {
   "patternId" : "Squiz_Functions_LowercaseFunctionKeywords",
   "title" : "Lowercase Function Keywords",
-  "description" : "The php keywords function, public, private, protected, and static should be lowercase.",
+  "description" : "The PHP keywords function, public, private, protected, and static should be lowercase.",
   "parameters" : [ ]
 }, {
   "patternId" : "Squiz_Functions_MultiLineFunctionDeclaration",
@@ -3489,16 +3335,8 @@
   "title" : "Naming Conventions: Valid Variable Name",
   "parameters" : [ ]
 }, {
-  "patternId" : "Squiz_Objects_DisallowObjectStringIndex",
-  "title" : "Objects: Disallow Object String Index",
-  "parameters" : [ ]
-}, {
   "patternId" : "Squiz_Objects_ObjectInstantiation",
   "title" : "Objects: Object Instantiation",
-  "parameters" : [ ]
-}, {
-  "patternId" : "Squiz_Objects_ObjectMemberComma",
-  "title" : "Objects: Object Member Comma",
   "parameters" : [ ]
 }, {
   "patternId" : "Squiz_Operators_ComparisonOperatorUsage",
@@ -3560,7 +3398,8 @@
   "parameters" : [ ]
 }, {
   "patternId" : "Squiz_PHP_Heredoc",
-  "title" : "PHP: Heredoc",
+  "title" : "Heredoc",
+  "description" : "Forbids the use of heredoc and nowdoc syntax.",
   "parameters" : [ ]
 }, {
   "patternId" : "Squiz_PHP_InnerFunctions",
@@ -3617,11 +3456,13 @@
   "parameters" : [ ]
 }, {
   "patternId" : "Squiz_WhiteSpace_FunctionClosingBraceSpace",
-  "title" : "White Space: Function Closing Brace Space",
+  "title" : "Function Closing Brace Space",
+  "description" : "There should be a single blank line before the function closing brace.",
   "parameters" : [ ]
 }, {
   "patternId" : "Squiz_WhiteSpace_FunctionOpeningBraceSpace",
-  "title" : "White Space: Function Opening Brace Space",
+  "title" : "Function Opening Brace Space",
+  "description" : "There should be no blank lines after the opening brace of a function.",
   "parameters" : [ ]
 }, {
   "patternId" : "Squiz_WhiteSpace_FunctionSpacing",
@@ -3637,17 +3478,13 @@
     "description" : "spacingAfterLast"
   } ]
 }, {
-  "patternId" : "Squiz_WhiteSpace_LanguageConstructSpacing",
-  "title" : "Language Construct Whitespace",
-  "description" : "The php constructs echo, print, return, include, include_once, require, require_once, and new should have one space after them.",
-  "parameters" : [ ]
-}, {
   "patternId" : "Squiz_WhiteSpace_LogicalOperatorSpacing",
   "title" : "White Space: Logical Operator Spacing",
   "parameters" : [ ]
 }, {
   "patternId" : "Squiz_WhiteSpace_MemberVarSpacing",
-  "title" : "White Space: Member Var Spacing",
+  "title" : "Member Var Spacing",
+  "description" : "There should be exactly one blank line before the first property (member variable).",
   "parameters" : [ {
     "name" : "spacing",
     "description" : "spacing"
@@ -3674,17 +3511,14 @@
     "description" : "ignoreSpacingBeforeAssignments"
   } ]
 }, {
-  "patternId" : "Squiz_WhiteSpace_PropertyLabelSpacing",
-  "title" : "White Space: Property Label Spacing",
-  "parameters" : [ ]
-}, {
   "patternId" : "Squiz_WhiteSpace_ScopeClosingBrace",
-  "title" : "White Space: Scope Closing Brace",
+  "title" : "Scope Closing Brace",
+  "description" : "Indentation of a closing brace must match the indentation of the line containing the opening brace.",
   "parameters" : [ ]
 }, {
   "patternId" : "Squiz_WhiteSpace_ScopeKeywordSpacing",
   "title" : "Scope Keyword Spacing",
-  "description" : "The php keywords static, public, private, and protected should have one space after them.",
+  "description" : "The PHP keywords static, public, private, and protected should have one space after them.",
   "parameters" : [ ]
 }, {
   "patternId" : "Squiz_WhiteSpace_SemicolonSpacing",
@@ -3693,7 +3527,8 @@
   "parameters" : [ ]
 }, {
   "patternId" : "Squiz_WhiteSpace_SuperfluousWhitespace",
-  "title" : "White Space: Superfluous Whitespace",
+  "title" : "Superfluous Whitespace",
+  "description" : "There should be no superfluous whitespace at the start of a file.",
   "parameters" : [ {
     "name" : "ignoreBlankLines",
     "description" : "ignoreBlankLines"
@@ -3799,14 +3634,9 @@
   "title" : "Whitespace: Discourage Fitzinator",
   "parameters" : [ ]
 }, {
-  "patternId" : "Zend_Debug_CodeAnalyzer",
-  "title" : "Zend Code Analyzer",
-  "description" : "PHP Code should pass the zend code analyzer.",
-  "parameters" : [ ]
-}, {
   "patternId" : "Zend_Files_ClosingTag",
   "title" : "Closing PHP Tags",
-  "description" : "Files should not have closing php tags.",
+  "description" : "Files should not have closing PHP tags.",
   "parameters" : [ ]
 }, {
   "patternId" : "Zend_NamingConventions_ValidVariableName",

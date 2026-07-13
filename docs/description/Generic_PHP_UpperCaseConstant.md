@@ -1,13 +1,13 @@
 The <em>true</em>, <em>false</em> and <em>null</em> constants must always be uppercase.
 
-Valid: uppercase constants
+Valid: Uppercase constants.
 ```
 if ($var === FALSE || $var === NULL) {
     $var = TRUE;
 }
 ```
 
-Invalid: lowercase constants
+Invalid: Lowercase constants.
 ```
 if ($var === false || $var === null) {
     $var = true;
