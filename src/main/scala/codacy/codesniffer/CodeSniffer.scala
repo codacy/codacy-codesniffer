@@ -43,7 +43,7 @@ object CodeSniffer extends Tool {
       // 2 - Fixed some fixable errors, but others failed to fix.
       // others - errors
       CommandRunner.exec(command, Option(new File(source.path))) match {
-        case Right(resultFromTool) if resultFromTool.exitCode <= 3q =>
+        case Right(resultFromTool) if resultFromTool.exitCode <= 3 =>
           parseToolResult(outputFile)
         case Right(resultFromTool) =>
           val msg =
