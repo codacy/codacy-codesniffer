@@ -1,1 +1,0 @@
-PHP: No Silenced Errors

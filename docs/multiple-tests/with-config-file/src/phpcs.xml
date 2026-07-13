@@ -17,11 +17,6 @@
   <rule ref="Generic.Functions.FunctionCallArgumentSpacing"/>
   <rule ref="Generic.PHP.LowerCaseKeyword"/>
   <rule ref="Generic.PHP.LowerCaseConstant"/>
-  <rule ref="Generic.WhiteSpace.ScopeIndent">
-    <properties>
-      <property name="ignoreIndentationTokens" type="array" value="T_COMMENT,T_DOC_COMMENT_OPEN_TAG"/>
-    </properties>
-  </rule>
   <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
   <rule ref="PEAR.Functions.ValidDefaultValue"/>
   <rule ref="Squiz.Functions.FunctionDeclaration"/>

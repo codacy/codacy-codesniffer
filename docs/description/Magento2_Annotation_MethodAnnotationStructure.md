@@ -1,1 +1,0 @@
-Annotation: Method Annotation Structure

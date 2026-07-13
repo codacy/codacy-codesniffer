@@ -22,17 +22,10 @@ class Generator() {
   private[this] val parsers: List[DocsParser] =
     List(new CakePHPDocsParser(),
          new DrupalCoderDocsParser(),
-         new MagentoCSDocsParser(),
-         new MagentoEQPDocsParser(),
          new PHPCompatibilityDocsParser(),
          new PHPCSDocsParser(),
-         new PHPCSSecurityAuditDocsParser(),
          new SlevomatCSDocsParser(),
-         new SymfonyDocsParser(),
-         new VaimoParser(),
-         new VaimoUKParser(),
-         new VipWordPressDocsParser(),
-         new WordPressCSDocsParser()
+         new SymfonyDocsParser()
     )
 
   def run(): Unit = {

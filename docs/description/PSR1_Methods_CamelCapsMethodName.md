@@ -1,6 +1,6 @@
 Method names MUST be declared in camelCase.
 
-Valid: method name in camelCase.
+Valid: Method name in camelCase.
 ```
 class Foo
 {
@@ -10,7 +10,7 @@ class Foo
 }
 ```
 
-Invalid: method name not in camelCase.
+Invalid: Method name not in camelCase.
 ```
 class Foo
 {

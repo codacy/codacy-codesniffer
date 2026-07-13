@@ -1,1 +1,0 @@
-DB: Prepared SQL

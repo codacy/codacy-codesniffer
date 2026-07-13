@@ -1,1 +1,0 @@
-Channels: Disallow Self Actions

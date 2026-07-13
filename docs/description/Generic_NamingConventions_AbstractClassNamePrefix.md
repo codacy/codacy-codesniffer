@@ -1,13 +1,13 @@
 Abstract class names must be prefixed with "Abstract", e.g. AbstractBar.
 
-Valid:
+Valid: Class name starts with 'Abstract'.
 ```
 abstract class AbstractBar
 {
 }
 ```
 
-Invalid:
+Invalid: Class name does not start with 'Abstract'.
 ```
 abstract class Bar
 {

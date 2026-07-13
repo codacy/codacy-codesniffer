@@ -5,4 +5,4 @@ Checks whitespace in single line array declarations (whitespace between brackets
 Sniff provides the following settings:
 
 *   `spacesAroundBrackets`: number of spaces you require to have around array brackets
-*   `enableEmptyArrayCheck` (defaults to `false`): enables check for empty arrays
+*   `enableEmptyArrayCheck` (default: `false`): enables check for empty arrays

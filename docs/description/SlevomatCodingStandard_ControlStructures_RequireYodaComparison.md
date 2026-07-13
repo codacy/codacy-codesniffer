@@ -4,7 +4,7 @@
 
 Sniff provides the following settings:
 
-*   `alwaysVariableOnRight` (defaults to `false`): moves variables always to right.
+*   `alwaysVariableOnRight` (default: `false`): moves variables always to right.
 
 `DisallowYodaComparison` looks for and fixes such comparisons not only in `if` statements but in the whole code.
 

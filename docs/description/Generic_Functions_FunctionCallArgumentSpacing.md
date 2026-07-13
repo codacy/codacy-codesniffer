@@ -1,29 +1,11 @@
-Function arguments should have one space after a comma, and single spaces surrounding the equals sign for default values.
+There should be no space before and exactly one space, or a new line, after a comma when passing arguments to a function or method.
 
-Valid: Single spaces after a comma.
+Valid: No space before and exactly one space after a comma.
 ```
-function foo($bar, $baz)
-{
-}
+foo($bar, $baz);
 ```
 
-Invalid: No spaces after a comma.
+Invalid: A space before and no space after a comma.
 ```
-function foo($bar,$baz)
-{
-}
-```
-
-Valid: Single spaces around an equals sign in function declaration.
-```
-function foo($bar, $baz = true)
-{
-}
-```
-
-Invalid: No spaces around an equals sign in function declaration.
-```
-function foo($bar, $baz=true)
-{
-}
+foo($bar ,$baz);
 ```

@@ -10,7 +10,7 @@ class Foo
 }
 ```
 
-Invalid: underscores used on public/protected variables and not used on private variables.
+Invalid: Underscores used on public/protected variables and not used on private variables.
 ```
 class Foo
 {

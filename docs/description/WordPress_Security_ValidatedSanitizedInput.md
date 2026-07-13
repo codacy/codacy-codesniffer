@@ -1,1 +1,0 @@
-Security: Validated Sanitized Input

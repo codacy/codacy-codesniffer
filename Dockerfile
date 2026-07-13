@@ -1,8 +1,8 @@
-FROM sbtscala/scala-sbt:eclipse-temurin-jammy-11.0.22_7_1.9.9_2.13.13 as doc-generator
+FROM sbtscala/scala-sbt:eclipse-temurin-alpine-25.0.3_9_1.12.13_3.8.4 AS doc-generator
 
 WORKDIR /app
 
-RUN wget https://github.com/phpDocumentor/phpDocumentor/releases/download/v3.4.3/phpDocumentor.phar && \
+RUN wget https://github.com/phpDocumentor/phpDocumentor/releases/download/v3.10.0/phpDocumentor.phar && \
     mv phpDocumentor.phar /usr/local/bin/phpdoc && \
     chmod +x /usr/local/bin/phpdoc
 
@@ -10,34 +10,42 @@ COPY build.sbt .
 COPY docs /docs
 COPY project project
 COPY doc-generator doc-generator
+COPY composer.json /app/composer.json
 
 RUN sbt 'doc-generator/runMain codacy.codesniffer.docsgen.GeneratorMain'
 
-FROM sbtscala/scala-sbt:graalvm-ce-22.3.3-b1-java17_1.9.9_3.4.0 AS builder
+FROM sbtscala/scala-sbt:graalvm-ce-22.3.3-b1-java17_1.12.11_3.8.4 AS builder
 
 WORKDIR /app
+
+ENV JAVA_HOME=/opt/graalvm-ce-java17-22.3.3
+
+RUN gu install native-image
+ENV NATIVE_IMAGE_INSTALLED=true
 
 COPY build.sbt .
 COPY project project
 COPY src src
 
-RUN --mount=type=cache,target=/root/.cache/coursier \
+RUN --mount=type=cache,target=/root/.cache/coursier,id=coursier-v2 \
+    --mount=type=cache,target=/root/.sbt \
+    --mount=type=cache,target=/root/.ivy2/cache \
     sbt nativeImage
 
-FROM php:8.2-alpine
+FROM php:8.5-alpine
 
 WORKDIR /app
 
 # Set environment variables
-ENV COMPOSER_HOME /app/.composer
-ENV COMPOSER_ALLOW_SUPERUSER 1 
-ENV PATH ${COMPOSER_HOME}/vendor/bin:${PATH}
+ENV COMPOSER_HOME=/app/.composer
+ENV COMPOSER_ALLOW_SUPERUSER=1 
+ENV PATH=${COMPOSER_HOME}/vendor/bin:${PATH}
 
 # Install necessary packages
-RUN apk --no-cache add php82
+RUN apk --no-cache add php85
 
 # Configure PHP settings
-RUN sed 's/.*short_open_tag.*=.*/short_open_tag=On/' /etc/php82/php.ini -i
+RUN sed 's/.*short_open_tag.*=.*/short_open_tag=On/' /etc/php85/php.ini -i
 
 # Install Composer and packages
 RUN curl -sS https://getcomposer.org/installer | php

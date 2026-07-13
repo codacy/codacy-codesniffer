@@ -1,1 +1,0 @@
-Debug: Java Script Lint

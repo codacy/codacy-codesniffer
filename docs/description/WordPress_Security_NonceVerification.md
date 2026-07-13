@@ -1,1 +1,0 @@
-Security: Nonce Verification

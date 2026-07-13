@@ -1,4 +1,4 @@
-Files should not have closing php tags.
+Files should not have closing PHP tags.
 
 Valid: No closing tag at the end of the file.
 ```
@@ -6,7 +6,7 @@ Valid: No closing tag at the end of the file.
 $var = 1;
 ```
 
-Invalid: A closing php tag is included at the end of the file.
+Invalid: A closing PHP tag is included at the end of the file.
 ```
 <?php
 $var = 1;

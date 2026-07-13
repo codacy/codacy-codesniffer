@@ -1,6 +1,6 @@
 In nullable type declarations there MUST NOT be a space between the question mark and the type.
 
-Valid: no whitespace used.
+Valid: No whitespace used.
 ```
 public function functionName(
     ?string $arg1,
@@ -9,7 +9,7 @@ public function functionName(
 }
 ```
 
-Invalid: superfluous whitespace used.
+Invalid: Superfluous whitespace used.
 ```
 public function functionName(
     ? string $arg1,
@@ -18,14 +18,14 @@ public function functionName(
 }
 ```
 
-Valid: no unexpected characters.
+Valid: No unexpected characters.
 ```
 public function foo(?int $arg): ?string
 {
 }
 ```
 
-Invalid: unexpected characters used.
+Invalid: Unexpected characters used.
 ```
 public function bar(? /* comment */ int $arg): ?
     // nullable for a reason

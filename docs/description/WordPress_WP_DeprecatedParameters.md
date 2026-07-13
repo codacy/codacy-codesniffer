@@ -1,1 +1,0 @@
-WP: Deprecated Parameters

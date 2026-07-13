@@ -7,7 +7,7 @@ if (PHP_SAPI === 'cli') {
 }
 ```
 
-Invalid: php_sapi_name() is used.
+Invalid: Function call to php_sapi_name() is used.
 ```
 if (php_sapi_name() === 'cli') {
     echo "Hello, CLI user.";

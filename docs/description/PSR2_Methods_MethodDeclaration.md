@@ -30,7 +30,7 @@ class Foo
 }
 ```
 
-Invalid: static keyword used before visibility and final used after.
+Invalid: `static` keyword used before visibility and final used after.
 ```
 class Foo
 {

@@ -14,7 +14,7 @@ use LogStandard;
 Sniff provides the following settings:
 
 
-*   `psr12Compatible` (defaults to `true`): sets the required order to `classes`, `functions` and `constants`. `false` sets the required order to `classes`, `constants` and `functions`.
+*   `psr12Compatible` (default: `true`): sets the required order to `classes`, `functions` and `constants`. `false` sets the required order to `classes`, `constants` and `functions`.
 *   `caseSensitive`: compare namespaces case sensitively, which makes this order correct:
 
 ```php

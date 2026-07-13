@@ -1,4 +1,4 @@
-The php keywords if, else, elseif, foreach, for, do, switch, while, try, and catch should be lowercase.
+The PHP keywords if, else, elseif, foreach, for, do, switch, while, try, and catch should be lowercase.
 
 Valid: Lowercase if keyword.
 ```
