@@ -1,1 +1,0 @@
-Whitespace: Binary Operator Spacing

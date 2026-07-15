@@ -1,1 +1,0 @@
-PHP: Lowercase PHP Functions

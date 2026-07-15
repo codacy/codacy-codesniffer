@@ -36,3 +36,6 @@ composer.phar
 /phpcs.xml
 /phpcs.xml.dist
 ###< squizlabs/php_codesniffer ###
+
+docs/description/
+docs/patterns.json

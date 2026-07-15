@@ -1,1 +1,0 @@
-PHP: Disallow Boolean Statement
