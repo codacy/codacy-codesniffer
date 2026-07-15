@@ -18,21 +18,14 @@ FROM sbtscala/scala-sbt:graalvm-ce-22.3.3-b1-java17_1.12.11_3.8.4 AS builder
 
 WORKDIR /app
 
-ENV JAVA_HOME=/opt/graalvm-ce-java17-22.3.3
-
-RUN gu install native-image
-ENV NATIVE_IMAGE_INSTALLED=true
-
 COPY build.sbt .
 COPY project project
 COPY src src
 
-RUN --mount=type=cache,target=/root/.cache/coursier,id=coursier-v2 \
-    --mount=type=cache,target=/root/.sbt \
-    --mount=type=cache,target=/root/.ivy2/cache \
+RUN --mount=type=cache,target=/root/.cache/coursier \
     sbt nativeImage
 
-FROM php:8.5-alpine
+FROM php:8.5-cli
 
 WORKDIR /app
 
@@ -41,11 +34,13 @@ ENV COMPOSER_HOME=/app/.composer
 ENV COMPOSER_ALLOW_SUPERUSER=1 
 ENV PATH=${COMPOSER_HOME}/vendor/bin:${PATH}
 
-# Install necessary packages
-RUN apk --no-cache add php85
-
-# Configure PHP settings
-RUN sed 's/.*short_open_tag.*=.*/short_open_tag=On/' /etc/php85/php.ini -i
+# Update package manager and install necessary packages
+RUN apt-get update && apt-get install -y \
+    curl \
+    git \
+    unzip \
+    zlib1g \
+    && rm -rf /var/lib/apt/lists/*
 
 # Install Composer and packages
 RUN curl -sS https://getcomposer.org/installer | php
@@ -54,11 +49,12 @@ RUN php composer.phar global install
 
 # Cleanup and miscellaneous
 RUN rm -rf /tmp/* && \
-    adduser -u 2004 -D docker
+    useradd -m -u 2004 docker
 
 # Copy codacy-codesniffer and docs
 COPY --chown=docker:docker --from=builder /app/target/native-image/codacy-codesniffer bin/codacy-codesniffer
-COPY --chown=docker:docker --from=doc-generator /docs /docs
+COPY --chown=docker:docker --from=doc-generator /docs/ /docs/
+COPY --chown=docker:docker --from=doc-generator app/docs/ /docs/
 
 WORKDIR /src
 

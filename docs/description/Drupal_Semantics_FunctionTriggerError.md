@@ -1,1 +1,0 @@
-Semantics: Function Trigger Error

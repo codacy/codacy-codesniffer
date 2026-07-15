@@ -1,1 +1,0 @@
-All PHP files in a subversion repository should have the svn:keywords property set to 'Author Id Revision' and the svn:eol-style property set to 'native'.

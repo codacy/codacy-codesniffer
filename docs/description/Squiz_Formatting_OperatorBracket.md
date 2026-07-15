@@ -1,1 +1,0 @@
-Formatting: Operator Bracket

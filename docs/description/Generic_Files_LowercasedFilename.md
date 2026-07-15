@@ -1,1 +1,0 @@
-Lowercase filenames are required.

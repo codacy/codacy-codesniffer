@@ -21,7 +21,6 @@ lazy val root = project
                                         "-H:+ReportExceptionStackTraces",
                                         "--no-fallback",
                                         "--no-server",
-                                        "--static",
                                         "-J-Xmx8G",
                                         "-J-XX:ActiveProcessorCount=8"
             )

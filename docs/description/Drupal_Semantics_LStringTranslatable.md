@@ -1,1 +1,0 @@
-Semantics: L String Translatable

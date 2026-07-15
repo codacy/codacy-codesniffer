@@ -1,1 +1,0 @@
-Commenting: Doc Comment Star

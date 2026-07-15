@@ -1,1 +1,0 @@
-Scope: Member Var Scope
