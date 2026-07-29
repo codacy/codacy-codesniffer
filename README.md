@@ -115,6 +115,59 @@ To add a new plugin to Codesniffer:
 
 5.  [Generate the documentation](#generating-the-documentation)
 
+## Agent Playbook: Updating This Repository End-to-End
+
+This section is written for an AI coding agent (or a human) tasked with updating this repo — most commonly bumping the wrapped `squizlabs/php_codesniffer` version or one of its coding-standard plugins, but also base image / orb / dependency bumps. Follow it top to bottom; it tells you what to change, how to regenerate derived files, how to test locally, and how to interpret CI so you can iterate on failures without guessing.
+
+### 1. What this repository is
+
+This is a **Codacy engine**: a Scala wrapper (`src/main/scala/codacy/Engine.scala`, built on `codacy-engine-scala-seed` and compiled to a native binary via `sbt nativeImage`/GraalVM) that packages [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) — plus a bundle of PHPCS coding-standard plugins (CakePHP, Drupal Coder, Symfony2, Slevomat, PHPCompatibility, Doctrine, etc., all installed via Composer) — as a Docker image Codacy's platform can run against a customer's source code. The final Docker stage is `php:8.5-cli`, since the actual analysis at runtime is executed by PHP_CodeSniffer itself; the Scala native binary is only the Codacy-protocol wrapper.
+
+Unlike some Codacy engines, `docs/patterns.json` and `docs/description/*` are **not committed to git** — they are listed in `.gitignore` and are generated fresh inside the Docker build's `doc-generator` stage, then copied into the final image. There is a dedicated `doc-generator` sbt subproject (`doc-generator/src/main/scala/codacy/codesniffer/docsgen/`) whose `GeneratorMain` (calling `Generator.run()`) clones/scrapes documentation for each wrapped standard via one `DocsParser` subclass per plugin (`PHPCSDocsParser`, `CakePHPDocsParser`, `DrupalCoderDocsParser`, `SlevomatCSDocsParser`, `SymfonyDocsParser`, `PHPCompatibilityDocsParser`, etc. — see `doc-generator/src/main/scala/codacy/codesniffer/docsgen/parsers/`). Each parser reads the target version from `VersionsHelper.scala`, which itself parses `composer.json`'s `require` block. This means regenerating docs needs **network access** (parsers clone/fetch upstream repos), **sbt**, and **phpdoc** (`phpDocumentor.phar`) installed locally, matching the `doc-generator` stage of the `Dockerfile`.
+
+`docs/tests/*` and `docs/multiple-tests/*` are fixtures used by `codacy-plugins-test` to validate the engine actually produces the results it claims to for real PHP code samples. `docs/tool-description.md` is a short hand-maintained blurb about the tool.
+
+### 2. Files that encode versions — check all of these on every update
+
+| File | What it controls | What to check |
+|---|---|---|
+| `composer.json` → `require` block | The exact version of `squizlabs/php_codesniffer` and every wrapped coding-standard plugin (`cakephp/cakephp-codesniffer`, `drupal/coder`, `escapestudios/symfony2-coding-standard`, `slevomat/coding-standard`, `phpcompatibility/php-compatibility`, `doctrine/coding-standard`, etc.) | Bump the target package's version pin here. `composer.lock` must then be regenerated (`composer update <package>`) to match — see step-by-step below. |
+| `doc-generator/.../VersionsHelper.scala` | Reads the same versions back out of `composer.json` for each `DocsParser` to know which upstream tag/commit to scrape docs from | Only needs a code change if you're adding a brand-new plugin (a `lazy val` per package); existing entries read `composer.json` automatically, no separate bump needed. |
+| `build.sbt` → `com.codacy %% codacy-engine-scala-seed` (both `root` and `doc-generator` projects) | Codacy's engine SDK/base library | Check Maven Central for newer versions if asked to update it; keep both occurrences in sync. Also carries `scala-xml`, `scala-parallel-collections`, `ujson`, `better-files` versions used only by the doc generator. |
+| `Dockerfile` → `doc-generator` base image (`sbtscala/scala-sbt:eclipse-temurin-alpine-...`) and `builder` base image (`sbtscala/scala-sbt:graalvm-ce-...`) | The sbt/Scala/JDK/GraalVM toolchain used to build the doc generator and the native image | Bump together with `build.sbt`'s `scalaVersion` if doing a Scala/sbt upgrade; check `git log -p Dockerfile` for the shape of prior bumps (see `50db415`). |
+| `Dockerfile` → `phpDocumentor.phar` release URL | The `phpdoc` version used to render extended plugin docs | Bump the version in the `wget` URL when asked to update phpdoc. |
+| `Dockerfile` → final-stage base image (`php:8.5-cli`) | The PHP runtime version PHP_CodeSniffer actually executes under | Bump when PHP_CodeSniffer or a plugin requires a newer PHP, or when explicitly asked — don't bump opportunistically. |
+| `.circleci/config.yml` → `codacy/base` orb | Shared CircleCI steps (checkout, versioning, docker build/publish, tagging) | Check the latest published orb version (CircleCI orb registry, or `git log -p .circleci/config.yml` for the bump history as a fallback reference). |
+| `.circleci/config.yml` → `codacy/plugins-test` orb | Runs `codacy-plugins-test` in CI after the image is built | Same as above. |
+
+### 3. Step-by-step update procedure
+
+1. **Bump the version(s)** in `composer.json`'s `require` block (and `.circleci/config.yml` orbs / `Dockerfile` base images / `build.sbt`, if applicable) as scoped by the task.
+2. **Regenerate `composer.lock`** to match: `composer update <package/name> --with-dependencies` (requires PHP + Composer locally, or run inside the `php:8.5-cli` stage). Commit the updated lock file alongside `composer.json`.
+3. **Regenerate the docs.** Requires `phpdoc` on `PATH` (see the `wget`/`phpDocumentor.phar` block at the top of the existing "Generating the documentation" section above), plus network access for the parsers to reach upstream plugin repositories: `sbt "doc-generator/runMain codacy.codesniffer.docsgen.GeneratorMain"`. This produces (locally, not committed) `docs/patterns.json`, `docs/description/description.json`, and the per-pattern `docs/description/*.md` files. Review the diff for new/removed/renamed patterns.
+4. **Build the Docker image**: `docker build -t codacy-codesniffer .` — this exercises the same doc-generation step plus the native-image build plus the final PHP runtime assembly, so a successful build is a strong local signal.
+5. **Run `codacy-plugins-test` locally** before pushing — clone https://github.com/codacy/codacy-plugins-test and run its multiple-tests / pattern / json DockerTest commands against your local image tag (CI runs `run_multiple_tests: true`, i.e. the `docs/multiple-tests/*` fixtures, via the `codacy_plugins_test/run` job).
+6. **Iterate on failures**, re-running only the relevant DockerTest command after each fix.
+7. **Commit** the version bump(s) together with `composer.lock` in one change (note: unlike some Codacy engines, the generated `docs/patterns.json`/`docs/description/*` are gitignored here and should NOT be committed).
+8. **Push and open a PR.** CI (`.circleci/config.yml`) runs `codacy/checkout_and_version` -> `publish_docker_local` (builds and saves the image) -> `plugins_test` (`codacy_plugins_test/run` with `run_multiple_tests: true`) -> `codacy/publish_docker` (master only) -> `codacy/tag_version`.
+9. **Poll the PR's real CI checks until they all pass — local validation is NOT the finish line.** After every push, run `gh pr checks <pr-url>` and keep re-polling (short sleep while any check is `pending`) until all checks finish. If a check fails, fetch its actual log (CircleCI API/UI for the failing job — don't guess), find the true root cause, fix it, push again (never `--no-verify`, never force-push), and re-poll. Repeat until every check is green. **The CI environment's toolchain can differ from your local one**, so a clean local `docker build` does not guarantee CI passes (e.g. a Composer resolution that succeeds with a stale local cache but fails fresh in CI). Only stop iterating when every check passes, or you hit a genuine product/infra decision that needs a human — in which case explain it in the PR rather than guessing.
+
+### 4. Common failure modes and fixes
+
+| Symptom | Likely cause | Fix |
+|---|---|---|
+| `composer update`/Docker build fails to resolve dependencies | New version pin conflicts with another plugin's version constraint (this repo bundles many coding standards in one `composer.json`) | Check which plugin's constraint conflicts and bump/relax it too; see `composer.lock`'s diff history for prior resolutions (e.g. commit `50db415`, which bumped `squizlabs/php_codesniffer` to v4 and dropped several no-longer-compatible parsers/plugins). |
+| Doc generation step in the Docker build fails to fetch a plugin's upstream docs | The target version tag/commit referenced by that plugin's `DocsParser` (via `VersionsHelper`) doesn't exist upstream, or the upstream doc repository moved | Verify the tag exists in the plugin's real repository; update the parser's `repositoryURL`/regexes if the upstream doc structure changed (this happened for PHP_CodeSniffer itself in `50db415`, where the parser was pointed at a different upstream repo). |
+| `plugins_test` / multiple-tests DockerTest fails | A sniff/rule was renamed, removed, or added upstream between versions, or plugin removal changed the pattern set | Re-run doc generation locally and diff the pattern list; update `docs/multiple-tests/*` fixtures to match verified-correct new output. |
+
+### 5. Definition of done
+
+- Version bump(s) reflected in `composer.json` (and `composer.lock` regenerated), plus any CI orb / Dockerfile base image bumps in scope.
+- Docs regenerated locally (via `doc-generator/runMain ... GeneratorMain` or a full `docker build`) and reviewed for pattern drift, without committing the gitignored `docs/patterns.json` / `docs/description/*` output.
+- Docker image builds successfully end to end (doc-generator stage, native-image builder stage, final PHP runtime stage).
+- `codacy-plugins-test` commands (including multiple-tests) all pass locally against the freshly built image.
+- **After pushing and opening/updating the PR, every CI check on it is green.** Poll `gh pr checks <pr-url>` and iterate on any failure (fetch the real CI log, fix, push, re-poll) until all pass — a passing local build is not sufficient, because the CI toolchain can differ from your local one (see step 9).
+
 ## What is Codacy?
 
 [Codacy](https://www.codacy.com/) is an Automated Code Review Tool that monitors your technical debt, helps you improve your code quality, teaches best practices to your developers, and helps you save time in Code Reviews.
