@@ -1,0 +1,33 @@
+# Automatically merge (using squash) dependency update PRs, opened by Dependabot, under the following conditions:
+#
+#   - PR was opened by dependabot[bot].
+#   - Dependency update is a minor or patch update. This is determined based on Dependabot's metadata.
+#   - Configured required checks pass.
+#
+# PRs are approved and merged by user codacybeta (https://github.com/orgs/codacy/people/codacybeta), using its
+# AUTO_MERGE_TOKEN.
+name: Auto-merge Dependabot dependency updates
+
+on:
+  pull_request:
+
+jobs:
+  auto-merge:
+    name: Auto-merge Dependabot dependency updates
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+      - name: Get Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@21025c705c08248db411dc16f3619e6b5f9ea21a # v2
+        with:
+          github-token: ${{ secrets.AUTO_MERGE_TOKEN }}
+      - name: Approve PR and set it to auto-merge
+        if: steps.metadata.outputs.update-type == 'version-update:semver-patch' || steps.metadata.outputs.update-type == 'version-update:semver-minor'
+        run: |
+          gh pr review --approve ${{ github.event.pull_request.number }}
+          gh pr merge --squash --auto ${{ github.event.pull_request.number }}
+        env:
+          GH_TOKEN: ${{ secrets.AUTO_MERGE_TOKEN }}
